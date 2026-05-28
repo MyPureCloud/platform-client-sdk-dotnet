@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Id** | **string** | The globally unique identifier for the object. | |
 | **Name** | **string** |  | [optional] |
 | **Active** | **bool?** | Whether this activity code is active or has been deleted | [optional] |
 | **DefaultCode** | **bool?** | Whether this is a default activity code | [optional] |
@@ -25,4 +25,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 263.0.0_
+_PureCloudPlatform.Client.V2 264.0.0_

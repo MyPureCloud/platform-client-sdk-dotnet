@@ -232,7 +232,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="MaxAttemptsPerContact">The maximum number of times a contact can be called within the resetPeriod. Required if maxAttemptsPerNumber is not defined..</param>
         /// <param name="MaxAttemptsPerNumber">The maximum number of times a phone number can be called within the resetPeriod. Required if maxAttemptsPerContact is not defined..</param>
-        /// <param name="TimeZoneId">If the resetPeriod is TODAY, this specifies the timezone in which TODAY occurs. Required if the resetPeriod is TODAY..</param>
+        /// <param name="TimeZoneId">If the resetPeriod is TODAY, this specifies the timezone in which TODAY occurs. Required if the resetPeriod is TODAY. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London.</param>
         /// <param name="ResetPeriod">After how long the number of attempts will be set back to 0. Defaults to NEVER..</param>
         /// <param name="RecallEntries">Configuration for recall attempts..</param>
         public AttemptLimits(string Name = null, int? Version = null, int? MaxAttemptsPerContact = null, int? MaxAttemptsPerNumber = null, string TimeZoneId = null, ResetPeriodEnum? ResetPeriod = null, Dictionary<string, RecallEntry> RecallEntries = null)
@@ -312,9 +312,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// If the resetPeriod is TODAY, this specifies the timezone in which TODAY occurs. Required if the resetPeriod is TODAY.
+        /// If the resetPeriod is TODAY, this specifies the timezone in which TODAY occurs. Required if the resetPeriod is TODAY. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
         /// </summary>
-        /// <value>If the resetPeriod is TODAY, this specifies the timezone in which TODAY occurs. Required if the resetPeriod is TODAY.</value>
+        /// <value>If the resetPeriod is TODAY, this specifies the timezone in which TODAY occurs. Required if the resetPeriod is TODAY. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London</value>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
 

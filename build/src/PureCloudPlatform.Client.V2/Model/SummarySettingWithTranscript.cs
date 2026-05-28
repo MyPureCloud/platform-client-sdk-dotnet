@@ -28,13 +28,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SummarySettingWithTranscript" /> class.
         /// </summary>
         /// <param name="Transcript">Example transcript to preview with the setting. (required).</param>
-        /// <param name="SummarySetting">Summary setting to preview on the transcript. (required).</param>
         /// <param name="SummaryPreviewSessionId">Session identifier of the summary preview. (required).</param>
-        public SummarySettingWithTranscript(string Transcript = null, SummarySetting SummarySetting = null, string SummaryPreviewSessionId = null)
+        /// <param name="SummarySetting">Summary setting to preview on the transcript. (required).</param>
+        public SummarySettingWithTranscript(string Transcript = null, string SummaryPreviewSessionId = null, SummarySetting SummarySetting = null)
         {
             this.Transcript = Transcript;
-            this.SummarySetting = SummarySetting;
             this.SummaryPreviewSessionId = SummaryPreviewSessionId;
+            this.SummarySetting = SummarySetting;
             
         }
         
@@ -50,20 +50,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Summary setting to preview on the transcript.
-        /// </summary>
-        /// <value>Summary setting to preview on the transcript.</value>
-        [DataMember(Name="summarySetting", EmitDefaultValue=false)]
-        public SummarySetting SummarySetting { get; set; }
-
-
-
-        /// <summary>
         /// Session identifier of the summary preview.
         /// </summary>
         /// <value>Session identifier of the summary preview.</value>
         [DataMember(Name="summaryPreviewSessionId", EmitDefaultValue=false)]
         public string SummaryPreviewSessionId { get; set; }
+
+
+
+        /// <summary>
+        /// Summary setting to preview on the transcript.
+        /// </summary>
+        /// <value>Summary setting to preview on the transcript.</value>
+        [DataMember(Name="summarySetting", EmitDefaultValue=false)]
+        public SummarySetting SummarySetting { get; set; }
 
 
         /// <summary>
@@ -76,8 +76,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class SummarySettingWithTranscript {\n");
 
             sb.Append("  Transcript: ").Append(Transcript).Append("\n");
-            sb.Append("  SummarySetting: ").Append(SummarySetting).Append("\n");
             sb.Append("  SummaryPreviewSessionId: ").Append(SummaryPreviewSessionId).Append("\n");
+            sb.Append("  SummarySetting: ").Append(SummarySetting).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,14 +124,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Transcript.Equals(other.Transcript)
                 ) &&
                 (
-                    this.SummarySetting == other.SummarySetting ||
-                    this.SummarySetting != null &&
-                    this.SummarySetting.Equals(other.SummarySetting)
-                ) &&
-                (
                     this.SummaryPreviewSessionId == other.SummaryPreviewSessionId ||
                     this.SummaryPreviewSessionId != null &&
                     this.SummaryPreviewSessionId.Equals(other.SummaryPreviewSessionId)
+                ) &&
+                (
+                    this.SummarySetting == other.SummarySetting ||
+                    this.SummarySetting != null &&
+                    this.SummarySetting.Equals(other.SummarySetting)
                 );
         }
 
@@ -149,11 +149,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Transcript != null)
                     hash = hash * 59 + this.Transcript.GetHashCode();
 
-                if (this.SummarySetting != null)
-                    hash = hash * 59 + this.SummarySetting.GetHashCode();
-
                 if (this.SummaryPreviewSessionId != null)
                     hash = hash * 59 + this.SummaryPreviewSessionId.GetHashCode();
+
+                if (this.SummarySetting != null)
+                    hash = hash * 59 + this.SummarySetting.GetHashCode();
 
                 return hash;
             }

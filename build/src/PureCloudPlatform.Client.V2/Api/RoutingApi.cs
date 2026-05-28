@@ -360,6 +360,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteRoutingSkillWithHttpInfo (string skillId);
 
         /// <summary>
+        /// Archive a skill expression to remove it from the set of active expressions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <returns></returns>
+        
+        void DeleteRoutingSkillexpression (string expressionId);
+
+        /// <summary>
+        /// Archive a skill expression to remove it from the set of active expressions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteRoutingSkillexpressionWithHttpInfo (string expressionId);
+
+        /// <summary>
+        /// Archive a set of skill expressions to remove them from the set of active expressions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns></returns>
+        
+        void DeleteRoutingSkillexpressions (List<string> id = null);
+
+        /// <summary>
+        /// Archive a set of skill expressions to remove them from the set of active expressions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteRoutingSkillexpressionsWithHttpInfo (List<string> id = null);
+
+        /// <summary>
         /// Remove skill group definition
         /// </summary>
         /// <remarks>
@@ -526,34 +574,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         
         ApiResponse<Object> DeleteRoutingUtilizationLabelWithHttpInfo (string labelId, bool? forceDelete = null);
-
-        /// <summary>
-        /// Delete an utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// DeleteRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
-        /// <returns></returns>
-        
-        void DeleteRoutingUtilizationTag (string tagId, bool? forceDelete = null);
-
-        /// <summary>
-        /// Delete an utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// DeleteRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        
-        ApiResponse<Object> DeleteRoutingUtilizationTagWithHttpInfo (string tagId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete wrap-up code
@@ -1930,6 +1950,90 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<RoutingSkill> GetRoutingSkillWithHttpInfo (string skillId);
 
         /// <summary>
+        /// Get a skill expression by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <returns>SkillExpression</returns>
+        
+        SkillExpression GetRoutingSkillexpression (string expressionId, bool? includeArchived = null, string format = null);
+
+        /// <summary>
+        /// Get a skill expression by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <returns>ApiResponse of SkillExpression</returns>
+        
+        ApiResponse<SkillExpression> GetRoutingSkillexpressionWithHttpInfo (string expressionId, bool? includeArchived = null, string format = null);
+
+        /// <summary>
+        /// Get skill expressions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>SkillExpressionEntityListing</returns>
+        
+        SkillExpressionEntityListing GetRoutingSkillexpressions (string format = null, bool? includeArchived = null, List<string> id = null);
+
+        /// <summary>
+        /// Get skill expressions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>ApiResponse of SkillExpressionEntityListing</returns>
+        
+        ApiResponse<SkillExpressionEntityListing> GetRoutingSkillexpressionsWithHttpInfo (string format = null, bool? includeArchived = null, List<string> id = null);
+
+        /// <summary>
+        /// Get skill expressions associated with a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <returns>SkillExpressionEntityListing</returns>
+        
+        SkillExpressionEntityListing GetRoutingSkillexpressionsQueueQueueId (string queueId, string format = null, bool? includeArchived = null);
+
+        /// <summary>
+        /// Get skill expressions associated with a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <returns>ApiResponse of SkillExpressionEntityListing</returns>
+        
+        ApiResponse<SkillExpressionEntityListing> GetRoutingSkillexpressionsQueueQueueIdWithHttpInfo (string queueId, string format = null, bool? includeArchived = null);
+
+        /// <summary>
         /// Get skill group
         /// </summary>
         /// <remarks>
@@ -2400,90 +2504,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of UtilizationLabelEntityListing</returns>
         
         ApiResponse<UtilizationLabelEntityListing> GetRoutingUtilizationLabelsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
-
-        /// <summary>
-        /// Get details about this utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// GetRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>UtilizationTag</returns>
-        
-        UtilizationTag GetRoutingUtilizationTag (string tagId);
-
-        /// <summary>
-        /// Get details about this utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// GetRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>ApiResponse of UtilizationTag</returns>
-        
-        ApiResponse<UtilizationTag> GetRoutingUtilizationTagWithHttpInfo (string tagId);
-
-        /// <summary>
-        /// Get list of agent ids associated with a utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// GetRoutingUtilizationTagAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>List&lt;Object&gt;</returns>
-        
-        List<Object> GetRoutingUtilizationTagAgents (string tagId);
-
-        /// <summary>
-        /// Get list of agent ids associated with a utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// GetRoutingUtilizationTagAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
-        
-        ApiResponse<List<Object>> GetRoutingUtilizationTagAgentsWithHttpInfo (string tagId);
-
-        /// <summary>
-        /// Get list of utilization tags
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// GetRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
-        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
-        /// <returns>UtilizationTagEntityListing</returns>
-        
-        UtilizationTagEntityListing GetRoutingUtilizationTags (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
-
-        /// <summary>
-        /// Get list of utilization tags
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// GetRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
-        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
-        /// <returns>ApiResponse of UtilizationTagEntityListing</returns>
-        
-        ApiResponse<UtilizationTagEntityListing> GetRoutingUtilizationTagsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get details about this wrap-up code.
@@ -3758,6 +3778,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Queue> PostRoutingQueuesWithHttpInfo (CreateQueueRequest body);
 
         /// <summary>
+        /// Validate and normalize a skill expression
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill expression data to validate</param>
+        /// <returns>SkillExpressionValidationResult</returns>
+        
+        SkillExpressionValidationResult PostRoutingSkillexpressionsValidate (SkillExpressionData body);
+
+        /// <summary>
+        /// Validate and normalize a skill expression
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill expression data to validate</param>
+        /// <returns>ApiResponse of SkillExpressionValidationResult</returns>
+        
+        ApiResponse<SkillExpressionValidationResult> PostRoutingSkillexpressionsValidateWithHttpInfo (SkillExpressionData body);
+
+        /// <summary>
         /// Add or remove member divisions for this skill group.
         /// </summary>
         /// <remarks>
@@ -3952,32 +3996,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of UtilizationLabel</returns>
         
         ApiResponse<UtilizationLabel> PostRoutingUtilizationLabelsWithHttpInfo (CreateUtilizationLabelRequest body);
-
-        /// <summary>
-        /// Create an utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// PostRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UtilizationTag</param>
-        /// <returns>UtilizationTag</returns>
-        
-        UtilizationTag PostRoutingUtilizationTags (CreateUtilizationTagRequest body);
-
-        /// <summary>
-        /// Create an utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// PostRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UtilizationTag</param>
-        /// <returns>ApiResponse of UtilizationTag</returns>
-        
-        ApiResponse<UtilizationTag> PostRoutingUtilizationTagsWithHttpInfo (CreateUtilizationTagRequest body);
 
         /// <summary>
         /// Create a wrap-up code
@@ -4842,6 +4860,54 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSkillAsyncWithHttpInfo (string skillId);
 
         /// <summary>
+        /// Archive a skill expression to remove it from the set of active expressions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteRoutingSkillexpressionAsync (string expressionId);
+
+        /// <summary>
+        /// Archive a skill expression to remove it from the set of active expressions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSkillexpressionAsyncWithHttpInfo (string expressionId);
+
+        /// <summary>
+        /// Archive a set of skill expressions to remove them from the set of active expressions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteRoutingSkillexpressionsAsync (List<string> id = null);
+
+        /// <summary>
+        /// Archive a set of skill expressions to remove them from the set of active expressions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSkillexpressionsAsyncWithHttpInfo (List<string> id = null);
+
+        /// <summary>
         /// Remove skill group definition
         /// </summary>
         /// <remarks>
@@ -5008,34 +5074,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUtilizationLabelAsyncWithHttpInfo (string labelId, bool? forceDelete = null);
-
-        /// <summary>
-        /// Delete an utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// DeleteRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
-        /// <returns>Task of void</returns>
-        
-        System.Threading.Tasks.Task DeleteRoutingUtilizationTagAsync (string tagId, bool? forceDelete = null);
-
-        /// <summary>
-        /// Delete an utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// DeleteRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
-        /// <returns>Task of ApiResponse</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUtilizationTagAsyncWithHttpInfo (string tagId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete wrap-up code
@@ -6412,6 +6450,90 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> GetRoutingSkillAsyncWithHttpInfo (string skillId);
 
         /// <summary>
+        /// Get a skill expression by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <returns>Task of SkillExpression</returns>
+        
+        System.Threading.Tasks.Task<SkillExpression> GetRoutingSkillexpressionAsync (string expressionId, bool? includeArchived = null, string format = null);
+
+        /// <summary>
+        /// Get a skill expression by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <returns>Task of ApiResponse (SkillExpression)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SkillExpression>> GetRoutingSkillexpressionAsyncWithHttpInfo (string expressionId, bool? includeArchived = null, string format = null);
+
+        /// <summary>
+        /// Get skill expressions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>Task of SkillExpressionEntityListing</returns>
+        
+        System.Threading.Tasks.Task<SkillExpressionEntityListing> GetRoutingSkillexpressionsAsync (string format = null, bool? includeArchived = null, List<string> id = null);
+
+        /// <summary>
+        /// Get skill expressions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>Task of ApiResponse (SkillExpressionEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SkillExpressionEntityListing>> GetRoutingSkillexpressionsAsyncWithHttpInfo (string format = null, bool? includeArchived = null, List<string> id = null);
+
+        /// <summary>
+        /// Get skill expressions associated with a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <returns>Task of SkillExpressionEntityListing</returns>
+        
+        System.Threading.Tasks.Task<SkillExpressionEntityListing> GetRoutingSkillexpressionsQueueQueueIdAsync (string queueId, string format = null, bool? includeArchived = null);
+
+        /// <summary>
+        /// Get skill expressions associated with a queue
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (SkillExpressionEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SkillExpressionEntityListing>> GetRoutingSkillexpressionsQueueQueueIdAsyncWithHttpInfo (string queueId, string format = null, bool? includeArchived = null);
+
+        /// <summary>
         /// Get skill group
         /// </summary>
         /// <remarks>
@@ -6882,90 +7004,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (UtilizationLabelEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<UtilizationLabelEntityListing>> GetRoutingUtilizationLabelsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
-
-        /// <summary>
-        /// Get details about this utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// GetRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>Task of UtilizationTag</returns>
-        
-        System.Threading.Tasks.Task<UtilizationTag> GetRoutingUtilizationTagAsync (string tagId);
-
-        /// <summary>
-        /// Get details about this utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// GetRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>Task of ApiResponse (UtilizationTag)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<UtilizationTag>> GetRoutingUtilizationTagAsyncWithHttpInfo (string tagId);
-
-        /// <summary>
-        /// Get list of agent ids associated with a utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// GetRoutingUtilizationTagAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>Task of List&lt;Object&gt;</returns>
-        
-        System.Threading.Tasks.Task<List<Object>> GetRoutingUtilizationTagAgentsAsync (string tagId);
-
-        /// <summary>
-        /// Get list of agent ids associated with a utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// GetRoutingUtilizationTagAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<List<Object>>> GetRoutingUtilizationTagAgentsAsyncWithHttpInfo (string tagId);
-
-        /// <summary>
-        /// Get list of utilization tags
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// GetRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
-        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
-        /// <returns>Task of UtilizationTagEntityListing</returns>
-        
-        System.Threading.Tasks.Task<UtilizationTagEntityListing> GetRoutingUtilizationTagsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
-
-        /// <summary>
-        /// Get list of utilization tags
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// GetRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
-        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
-        /// <returns>Task of ApiResponse (UtilizationTagEntityListing)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<UtilizationTagEntityListing>> GetRoutingUtilizationTagsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get details about this wrap-up code.
@@ -8240,6 +8278,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Queue>> PostRoutingQueuesAsyncWithHttpInfo (CreateQueueRequest body);
 
         /// <summary>
+        /// Validate and normalize a skill expression
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill expression data to validate</param>
+        /// <returns>Task of SkillExpressionValidationResult</returns>
+        
+        System.Threading.Tasks.Task<SkillExpressionValidationResult> PostRoutingSkillexpressionsValidateAsync (SkillExpressionData body);
+
+        /// <summary>
+        /// Validate and normalize a skill expression
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill expression data to validate</param>
+        /// <returns>Task of ApiResponse (SkillExpressionValidationResult)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SkillExpressionValidationResult>> PostRoutingSkillexpressionsValidateAsyncWithHttpInfo (SkillExpressionData body);
+
+        /// <summary>
         /// Add or remove member divisions for this skill group.
         /// </summary>
         /// <remarks>
@@ -8434,32 +8496,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (UtilizationLabel)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<UtilizationLabel>> PostRoutingUtilizationLabelsAsyncWithHttpInfo (CreateUtilizationLabelRequest body);
-
-        /// <summary>
-        /// Create an utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// PostRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UtilizationTag</param>
-        /// <returns>Task of UtilizationTag</returns>
-        
-        System.Threading.Tasks.Task<UtilizationTag> PostRoutingUtilizationTagsAsync (CreateUtilizationTagRequest body);
-
-        /// <summary>
-        /// Create an utilization tag
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// PostRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UtilizationTag</param>
-        /// <returns>Task of ApiResponse (UtilizationTag)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<UtilizationTag>> PostRoutingUtilizationTagsAsyncWithHttpInfo (CreateUtilizationTagRequest body);
 
         /// <summary>
         /// Create a wrap-up code
@@ -11946,6 +11982,405 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Archive a skill expression to remove it from the set of active expressions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <returns></returns>
+        
+        public void DeleteRoutingSkillexpression (string expressionId)
+        {
+             DeleteRoutingSkillexpressionWithHttpInfo(expressionId);
+        }
+
+        /// <summary>
+        /// Archive a skill expression to remove it from the set of active expressions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteRoutingSkillexpressionWithHttpInfo (string expressionId)
+        { 
+            // verify the required parameter 'expressionId' is set
+            if (expressionId == null)
+                throw new ApiException(400, "Missing required parameter 'expressionId' when calling RoutingApi->DeleteRoutingSkillexpression");
+
+            var localVarPath = "/api/v2/routing/skillexpressions/{expressionId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (expressionId != null) localVarPathParams.Add("expressionId", this.Configuration.ApiClient.ParameterToString(expressionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingSkillexpression: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteRoutingSkillexpression: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingSkillexpression: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Archive a skill expression to remove it from the set of active expressions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteRoutingSkillexpressionAsync (string expressionId)
+        {
+             await DeleteRoutingSkillexpressionAsyncWithHttpInfo(expressionId);
+
+        }
+
+        /// <summary>
+        /// Archive a skill expression to remove it from the set of active expressions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSkillexpressionAsyncWithHttpInfo (string expressionId)
+        { 
+            // verify the required parameter 'expressionId' is set
+            if (expressionId == null)
+                throw new ApiException(400, "Missing required parameter 'expressionId' when calling RoutingApi->DeleteRoutingSkillexpression");
+            
+
+            var localVarPath = "/api/v2/routing/skillexpressions/{expressionId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (expressionId != null) localVarPathParams.Add("expressionId", this.Configuration.ApiClient.ParameterToString(expressionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingSkillexpression: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteRoutingSkillexpression: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingSkillexpression: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Archive a set of skill expressions to remove them from the set of active expressions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns></returns>
+        
+        public void DeleteRoutingSkillexpressions (List<string> id = null)
+        {
+             DeleteRoutingSkillexpressionsWithHttpInfo(id);
+        }
+
+        /// <summary>
+        /// Archive a set of skill expressions to remove them from the set of active expressions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteRoutingSkillexpressionsWithHttpInfo (List<string> id = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/skillexpressions";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingSkillexpressions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteRoutingSkillexpressions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingSkillexpressions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Archive a set of skill expressions to remove them from the set of active expressions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteRoutingSkillexpressionsAsync (List<string> id = null)
+        {
+             await DeleteRoutingSkillexpressionsAsyncWithHttpInfo(id);
+
+        }
+
+        /// <summary>
+        /// Archive a set of skill expressions to remove them from the set of active expressions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSkillexpressionsAsyncWithHttpInfo (List<string> id = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/skillexpressions";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingSkillexpressions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteRoutingSkillexpressions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingSkillexpressions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Remove skill group definition 
         /// 
         /// </summary>
@@ -13349,219 +13784,6 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteRoutingUtilizationLabel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilizationLabel: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null,
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Delete an utilization tag 
-        /// 
-        /// DeleteRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
-        /// <returns></returns>
-        
-        public void DeleteRoutingUtilizationTag (string tagId, bool? forceDelete = null)
-        {
-             DeleteRoutingUtilizationTagWithHttpInfo(tagId, forceDelete);
-        }
-
-        /// <summary>
-        /// Delete an utilization tag 
-        /// 
-        /// DeleteRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        
-        public ApiResponse<Object> DeleteRoutingUtilizationTagWithHttpInfo (string tagId, bool? forceDelete = null)
-        { 
-            // verify the required parameter 'tagId' is set
-            if (tagId == null)
-                throw new ApiException(400, "Missing required parameter 'tagId' when calling RoutingApi->DeleteRoutingUtilizationTag");
-
-            var localVarPath = "/api/v2/routing/utilization/tags/{tagId}";
-            var localVarHttpMethod = "Delete";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (tagId != null) localVarPathParams.Add("tagId", this.Configuration.ApiClient.ParameterToString(tagId));
-
-            // Query params
-            if (forceDelete != null) localVarQueryParams.Add(new Tuple<string, string>("forceDelete", this.Configuration.ApiClient.ParameterToString(forceDelete)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilizationTag: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
-                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteRoutingUtilizationTag: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilizationTag: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null,
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Delete an utilization tag 
-        /// 
-        /// DeleteRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
-        /// <returns>Task of void</returns>
-        
-        public async System.Threading.Tasks.Task DeleteRoutingUtilizationTagAsync (string tagId, bool? forceDelete = null)
-        {
-             await DeleteRoutingUtilizationTagAsyncWithHttpInfo(tagId, forceDelete);
-
-        }
-
-        /// <summary>
-        /// Delete an utilization tag 
-        /// 
-        /// DeleteRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <param name="forceDelete">Remove all tag usages (if found) without warning (optional, default to false)</param>
-        /// <returns>Task of ApiResponse</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUtilizationTagAsyncWithHttpInfo (string tagId, bool? forceDelete = null)
-        { 
-            // verify the required parameter 'tagId' is set
-            if (tagId == null)
-                throw new ApiException(400, "Missing required parameter 'tagId' when calling RoutingApi->DeleteRoutingUtilizationTag");
-            
-
-            var localVarPath = "/api/v2/routing/utilization/tags/{tagId}";
-            var localVarHttpMethod = "Delete";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (tagId != null) localVarPathParams.Add("tagId", this.Configuration.ApiClient.ParameterToString(tagId));
-
-            // Query params
-            if (forceDelete != null) localVarQueryParams.Add(new Tuple<string, string>("forceDelete", this.Configuration.ApiClient.ParameterToString(forceDelete)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilizationTag: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
-                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteRoutingUtilizationTag: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilizationTag: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -24251,6 +24473,650 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a skill expression by ID 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <returns>SkillExpression</returns>
+        
+        public SkillExpression GetRoutingSkillexpression (string expressionId, bool? includeArchived = null, string format = null)
+        {
+             ApiResponse<SkillExpression> localVarResponse = GetRoutingSkillexpressionWithHttpInfo(expressionId, includeArchived, format);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a skill expression by ID 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <returns>ApiResponse of SkillExpression</returns>
+        
+        public ApiResponse< SkillExpression > GetRoutingSkillexpressionWithHttpInfo (string expressionId, bool? includeArchived = null, string format = null)
+        { 
+            // verify the required parameter 'expressionId' is set
+            if (expressionId == null)
+                throw new ApiException(400, "Missing required parameter 'expressionId' when calling RoutingApi->GetRoutingSkillexpression");
+
+            var localVarPath = "/api/v2/routing/skillexpressions/{expressionId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (expressionId != null) localVarPathParams.Add("expressionId", this.Configuration.ApiClient.ParameterToString(expressionId));
+
+            // Query params
+            if (includeArchived != null) localVarQueryParams.Add(new Tuple<string, string>("includeArchived", this.Configuration.ApiClient.ParameterToString(includeArchived)));
+            if (format != null) localVarQueryParams.Add(new Tuple<string, string>("format", this.Configuration.ApiClient.ParameterToString(format)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSkillexpression: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingSkillexpression: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSkillexpression: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SkillExpression>(localVarStatusCode,
+                localVarHeaders,
+                (SkillExpression) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SkillExpression)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a skill expression by ID 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <returns>Task of SkillExpression</returns>
+        
+        public async System.Threading.Tasks.Task<SkillExpression> GetRoutingSkillexpressionAsync (string expressionId, bool? includeArchived = null, string format = null)
+        {
+             ApiResponse<SkillExpression> localVarResponse = await GetRoutingSkillexpressionAsyncWithHttpInfo(expressionId, includeArchived, format);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a skill expression by ID 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expressionId">Expression ID</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <returns>Task of ApiResponse (SkillExpression)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SkillExpression>> GetRoutingSkillexpressionAsyncWithHttpInfo (string expressionId, bool? includeArchived = null, string format = null)
+        { 
+            // verify the required parameter 'expressionId' is set
+            if (expressionId == null)
+                throw new ApiException(400, "Missing required parameter 'expressionId' when calling RoutingApi->GetRoutingSkillexpression");
+            
+
+            var localVarPath = "/api/v2/routing/skillexpressions/{expressionId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (expressionId != null) localVarPathParams.Add("expressionId", this.Configuration.ApiClient.ParameterToString(expressionId));
+
+            // Query params
+            if (includeArchived != null) localVarQueryParams.Add(new Tuple<string, string>("includeArchived", this.Configuration.ApiClient.ParameterToString(includeArchived)));
+            if (format != null) localVarQueryParams.Add(new Tuple<string, string>("format", this.Configuration.ApiClient.ParameterToString(format)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSkillexpression: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingSkillexpression: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSkillexpression: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SkillExpression>(localVarStatusCode,
+                localVarHeaders,
+                (SkillExpression) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SkillExpression)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get skill expressions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>SkillExpressionEntityListing</returns>
+        
+        public SkillExpressionEntityListing GetRoutingSkillexpressions (string format = null, bool? includeArchived = null, List<string> id = null)
+        {
+             ApiResponse<SkillExpressionEntityListing> localVarResponse = GetRoutingSkillexpressionsWithHttpInfo(format, includeArchived, id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get skill expressions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>ApiResponse of SkillExpressionEntityListing</returns>
+        
+        public ApiResponse< SkillExpressionEntityListing > GetRoutingSkillexpressionsWithHttpInfo (string format = null, bool? includeArchived = null, List<string> id = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/skillexpressions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (format != null) localVarQueryParams.Add(new Tuple<string, string>("format", this.Configuration.ApiClient.ParameterToString(format)));
+            if (includeArchived != null) localVarQueryParams.Add(new Tuple<string, string>("includeArchived", this.Configuration.ApiClient.ParameterToString(includeArchived)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSkillexpressions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingSkillexpressions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSkillexpressions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SkillExpressionEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SkillExpressionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SkillExpressionEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get skill expressions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>Task of SkillExpressionEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<SkillExpressionEntityListing> GetRoutingSkillexpressionsAsync (string format = null, bool? includeArchived = null, List<string> id = null)
+        {
+             ApiResponse<SkillExpressionEntityListing> localVarResponse = await GetRoutingSkillexpressionsAsyncWithHttpInfo(format, includeArchived, id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get skill expressions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <param name="id">Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)</param>
+        /// <returns>Task of ApiResponse (SkillExpressionEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SkillExpressionEntityListing>> GetRoutingSkillexpressionsAsyncWithHttpInfo (string format = null, bool? includeArchived = null, List<string> id = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/skillexpressions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (format != null) localVarQueryParams.Add(new Tuple<string, string>("format", this.Configuration.ApiClient.ParameterToString(format)));
+            if (includeArchived != null) localVarQueryParams.Add(new Tuple<string, string>("includeArchived", this.Configuration.ApiClient.ParameterToString(includeArchived)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSkillexpressions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingSkillexpressions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSkillexpressions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SkillExpressionEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SkillExpressionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SkillExpressionEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get skill expressions associated with a queue 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <returns>SkillExpressionEntityListing</returns>
+        
+        public SkillExpressionEntityListing GetRoutingSkillexpressionsQueueQueueId (string queueId, string format = null, bool? includeArchived = null)
+        {
+             ApiResponse<SkillExpressionEntityListing> localVarResponse = GetRoutingSkillexpressionsQueueQueueIdWithHttpInfo(queueId, format, includeArchived);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get skill expressions associated with a queue 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <returns>ApiResponse of SkillExpressionEntityListing</returns>
+        
+        public ApiResponse< SkillExpressionEntityListing > GetRoutingSkillexpressionsQueueQueueIdWithHttpInfo (string queueId, string format = null, bool? includeArchived = null)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetRoutingSkillexpressionsQueueQueueId");
+
+            var localVarPath = "/api/v2/routing/skillexpressions/queue/{queueId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+            if (format != null) localVarQueryParams.Add(new Tuple<string, string>("format", this.Configuration.ApiClient.ParameterToString(format)));
+            if (includeArchived != null) localVarQueryParams.Add(new Tuple<string, string>("includeArchived", this.Configuration.ApiClient.ParameterToString(includeArchived)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSkillexpressionsQueueQueueId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingSkillexpressionsQueueQueueId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSkillexpressionsQueueQueueId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SkillExpressionEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SkillExpressionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SkillExpressionEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get skill expressions associated with a queue 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <returns>Task of SkillExpressionEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<SkillExpressionEntityListing> GetRoutingSkillexpressionsQueueQueueIdAsync (string queueId, string format = null, bool? includeArchived = null)
+        {
+             ApiResponse<SkillExpressionEntityListing> localVarResponse = await GetRoutingSkillexpressionsQueueQueueIdAsyncWithHttpInfo(queueId, format, includeArchived);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get skill expressions associated with a queue 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="format">Response format: raw expression or normalized (optional, default to Raw)</param>
+        /// <param name="includeArchived">Include archived (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (SkillExpressionEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SkillExpressionEntityListing>> GetRoutingSkillexpressionsQueueQueueIdAsyncWithHttpInfo (string queueId, string format = null, bool? includeArchived = null)
+        { 
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetRoutingSkillexpressionsQueueQueueId");
+            
+
+            var localVarPath = "/api/v2/routing/skillexpressions/queue/{queueId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+            if (format != null) localVarQueryParams.Add(new Tuple<string, string>("format", this.Configuration.ApiClient.ParameterToString(format)));
+            if (includeArchived != null) localVarQueryParams.Add(new Tuple<string, string>("includeArchived", this.Configuration.ApiClient.ParameterToString(includeArchived)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSkillexpressionsQueueQueueId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingSkillexpressionsQueueQueueId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingSkillexpressionsQueueQueueId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SkillExpressionEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SkillExpressionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SkillExpressionEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get skill group 
         /// 
         /// </summary>
@@ -27886,644 +28752,6 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UtilizationLabelEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (UtilizationLabelEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationLabelEntityListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get details about this utilization tag 
-        /// 
-        /// GetRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>UtilizationTag</returns>
-        
-        public UtilizationTag GetRoutingUtilizationTag (string tagId)
-        {
-             ApiResponse<UtilizationTag> localVarResponse = GetRoutingUtilizationTagWithHttpInfo(tagId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get details about this utilization tag 
-        /// 
-        /// GetRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>ApiResponse of UtilizationTag</returns>
-        
-        public ApiResponse< UtilizationTag > GetRoutingUtilizationTagWithHttpInfo (string tagId)
-        { 
-            // verify the required parameter 'tagId' is set
-            if (tagId == null)
-                throw new ApiException(400, "Missing required parameter 'tagId' when calling RoutingApi->GetRoutingUtilizationTag");
-
-            var localVarPath = "/api/v2/routing/utilization/tags/{tagId}";
-            var localVarHttpMethod = "Get";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (tagId != null) localVarPathParams.Add("tagId", this.Configuration.ApiClient.ParameterToString(tagId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTag: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
-                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingUtilizationTag: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTag: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<UtilizationTag>(localVarStatusCode,
-                localVarHeaders,
-                (UtilizationTag) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationTag)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get details about this utilization tag 
-        /// 
-        /// GetRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>Task of UtilizationTag</returns>
-        
-        public async System.Threading.Tasks.Task<UtilizationTag> GetRoutingUtilizationTagAsync (string tagId)
-        {
-             ApiResponse<UtilizationTag> localVarResponse = await GetRoutingUtilizationTagAsyncWithHttpInfo(tagId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get details about this utilization tag 
-        /// 
-        /// GetRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>Task of ApiResponse (UtilizationTag)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<UtilizationTag>> GetRoutingUtilizationTagAsyncWithHttpInfo (string tagId)
-        { 
-            // verify the required parameter 'tagId' is set
-            if (tagId == null)
-                throw new ApiException(400, "Missing required parameter 'tagId' when calling RoutingApi->GetRoutingUtilizationTag");
-            
-
-            var localVarPath = "/api/v2/routing/utilization/tags/{tagId}";
-            var localVarHttpMethod = "Get";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (tagId != null) localVarPathParams.Add("tagId", this.Configuration.ApiClient.ParameterToString(tagId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTag: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
-                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingUtilizationTag: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTag: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<UtilizationTag>(localVarStatusCode,
-                localVarHeaders,
-                (UtilizationTag) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationTag)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get list of agent ids associated with a utilization tag 
-        /// 
-        /// GetRoutingUtilizationTagAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>List&lt;Object&gt;</returns>
-        
-        public List<Object> GetRoutingUtilizationTagAgents (string tagId)
-        {
-             ApiResponse<List<Object>> localVarResponse = GetRoutingUtilizationTagAgentsWithHttpInfo(tagId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get list of agent ids associated with a utilization tag 
-        /// 
-        /// GetRoutingUtilizationTagAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
-        
-        public ApiResponse< List<Object> > GetRoutingUtilizationTagAgentsWithHttpInfo (string tagId)
-        { 
-            // verify the required parameter 'tagId' is set
-            if (tagId == null)
-                throw new ApiException(400, "Missing required parameter 'tagId' when calling RoutingApi->GetRoutingUtilizationTagAgents");
-
-            var localVarPath = "/api/v2/routing/utilization/tags/{tagId}/agents";
-            var localVarHttpMethod = "Get";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (tagId != null) localVarPathParams.Add("tagId", this.Configuration.ApiClient.ParameterToString(tagId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTagAgents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
-                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingUtilizationTagAgents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTagAgents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<List<Object>>(localVarStatusCode,
-                localVarHeaders,
-                (List<Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Object>)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get list of agent ids associated with a utilization tag 
-        /// 
-        /// GetRoutingUtilizationTagAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>Task of List&lt;Object&gt;</returns>
-        
-        public async System.Threading.Tasks.Task<List<Object>> GetRoutingUtilizationTagAgentsAsync (string tagId)
-        {
-             ApiResponse<List<Object>> localVarResponse = await GetRoutingUtilizationTagAgentsAsyncWithHttpInfo(tagId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get list of agent ids associated with a utilization tag 
-        /// 
-        /// GetRoutingUtilizationTagAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagId">Utilization Tag ID</param>
-        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<List<Object>>> GetRoutingUtilizationTagAgentsAsyncWithHttpInfo (string tagId)
-        { 
-            // verify the required parameter 'tagId' is set
-            if (tagId == null)
-                throw new ApiException(400, "Missing required parameter 'tagId' when calling RoutingApi->GetRoutingUtilizationTagAgents");
-            
-
-            var localVarPath = "/api/v2/routing/utilization/tags/{tagId}/agents";
-            var localVarHttpMethod = "Get";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (tagId != null) localVarPathParams.Add("tagId", this.Configuration.ApiClient.ParameterToString(tagId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTagAgents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
-                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingUtilizationTagAgents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTagAgents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<List<Object>>(localVarStatusCode,
-                localVarHeaders,
-                (List<Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Object>)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get list of utilization tags 
-        /// 
-        /// GetRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
-        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
-        /// <returns>UtilizationTagEntityListing</returns>
-        
-        public UtilizationTagEntityListing GetRoutingUtilizationTags (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
-        {
-             ApiResponse<UtilizationTagEntityListing> localVarResponse = GetRoutingUtilizationTagsWithHttpInfo(pageSize, pageNumber, sortOrder, name);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get list of utilization tags 
-        /// 
-        /// GetRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
-        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
-        /// <returns>ApiResponse of UtilizationTagEntityListing</returns>
-        
-        public ApiResponse< UtilizationTagEntityListing > GetRoutingUtilizationTagsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
-        { 
-
-            var localVarPath = "/api/v2/routing/utilization/tags";
-            var localVarHttpMethod = "Get";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
-                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingUtilizationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTags: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<UtilizationTagEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (UtilizationTagEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationTagEntityListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get list of utilization tags 
-        /// 
-        /// GetRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
-        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
-        /// <returns>Task of UtilizationTagEntityListing</returns>
-        
-        public async System.Threading.Tasks.Task<UtilizationTagEntityListing> GetRoutingUtilizationTagsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
-        {
-             ApiResponse<UtilizationTagEntityListing> localVarResponse = await GetRoutingUtilizationTagsAsyncWithHttpInfo(pageSize, pageNumber, sortOrder, name);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get list of utilization tags 
-        /// 
-        /// GetRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
-        /// <param name="name">Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) (optional)</param>
-        /// <returns>Task of ApiResponse (UtilizationTagEntityListing)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<UtilizationTagEntityListing>> GetRoutingUtilizationTagsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
-        { 
-
-            var localVarPath = "/api/v2/routing/utilization/tags";
-            var localVarHttpMethod = "Get";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
-                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingUtilizationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationTags: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<UtilizationTagEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (UtilizationTagEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationTagEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -39237,6 +39465,221 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Validate and normalize a skill expression 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill expression data to validate</param>
+        /// <returns>SkillExpressionValidationResult</returns>
+        
+        public SkillExpressionValidationResult PostRoutingSkillexpressionsValidate (SkillExpressionData body)
+        {
+             ApiResponse<SkillExpressionValidationResult> localVarResponse = PostRoutingSkillexpressionsValidateWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate and normalize a skill expression 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill expression data to validate</param>
+        /// <returns>ApiResponse of SkillExpressionValidationResult</returns>
+        
+        public ApiResponse< SkillExpressionValidationResult > PostRoutingSkillexpressionsValidateWithHttpInfo (SkillExpressionData body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingSkillexpressionsValidate");
+
+            var localVarPath = "/api/v2/routing/skillexpressions/validate";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingSkillexpressionsValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostRoutingSkillexpressionsValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingSkillexpressionsValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SkillExpressionValidationResult>(localVarStatusCode,
+                localVarHeaders,
+                (SkillExpressionValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SkillExpressionValidationResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Validate and normalize a skill expression 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill expression data to validate</param>
+        /// <returns>Task of SkillExpressionValidationResult</returns>
+        
+        public async System.Threading.Tasks.Task<SkillExpressionValidationResult> PostRoutingSkillexpressionsValidateAsync (SkillExpressionData body)
+        {
+             ApiResponse<SkillExpressionValidationResult> localVarResponse = await PostRoutingSkillexpressionsValidateAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate and normalize a skill expression 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill expression data to validate</param>
+        /// <returns>Task of ApiResponse (SkillExpressionValidationResult)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SkillExpressionValidationResult>> PostRoutingSkillexpressionsValidateAsyncWithHttpInfo (SkillExpressionData body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingSkillexpressionsValidate");
+            
+
+            var localVarPath = "/api/v2/routing/skillexpressions/validate";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingSkillexpressionsValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostRoutingSkillexpressionsValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingSkillexpressionsValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SkillExpressionValidationResult>(localVarStatusCode,
+                localVarHeaders,
+                (SkillExpressionValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SkillExpressionValidationResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Add or remove member divisions for this skill group. 
         /// 
         /// </summary>
@@ -40958,225 +41401,6 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UtilizationLabel>(localVarStatusCode,
                 localVarHeaders,
                 (UtilizationLabel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationLabel)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Create an utilization tag 
-        /// 
-        /// PostRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UtilizationTag</param>
-        /// <returns>UtilizationTag</returns>
-        
-        public UtilizationTag PostRoutingUtilizationTags (CreateUtilizationTagRequest body)
-        {
-             ApiResponse<UtilizationTag> localVarResponse = PostRoutingUtilizationTagsWithHttpInfo(body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create an utilization tag 
-        /// 
-        /// PostRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UtilizationTag</param>
-        /// <returns>ApiResponse of UtilizationTag</returns>
-        
-        public ApiResponse< UtilizationTag > PostRoutingUtilizationTagsWithHttpInfo (CreateUtilizationTagRequest body)
-        { 
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingUtilizationTags");
-
-            var localVarPath = "/api/v2/routing/utilization/tags";
-            var localVarHttpMethod = "Post";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostRoutingUtilizationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
-                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostRoutingUtilizationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostRoutingUtilizationTags: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<UtilizationTag>(localVarStatusCode,
-                localVarHeaders,
-                (UtilizationTag) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationTag)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Create an utilization tag 
-        /// 
-        /// PostRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UtilizationTag</param>
-        /// <returns>Task of UtilizationTag</returns>
-        
-        public async System.Threading.Tasks.Task<UtilizationTag> PostRoutingUtilizationTagsAsync (CreateUtilizationTagRequest body)
-        {
-             ApiResponse<UtilizationTag> localVarResponse = await PostRoutingUtilizationTagsAsyncWithHttpInfo(body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Create an utilization tag 
-        /// 
-        /// PostRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UtilizationTag</param>
-        /// <returns>Task of ApiResponse (UtilizationTag)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<UtilizationTag>> PostRoutingUtilizationTagsAsyncWithHttpInfo (CreateUtilizationTagRequest body)
-        { 
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingUtilizationTags");
-            
-
-            var localVarPath = "/api/v2/routing/utilization/tags";
-            var localVarHttpMethod = "Post";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostRoutingUtilizationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
-                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostRoutingUtilizationTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostRoutingUtilizationTags: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<UtilizationTag>(localVarStatusCode,
-                localVarHeaders,
-                (UtilizationTag) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationTag)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

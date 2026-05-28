@@ -79,7 +79,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Listpicker for "ListPicker"
             /// </summary>
             [EnumMember(Value = "ListPicker")]
-            Listpicker
+            Listpicker,
+            
+            /// <summary>
+            /// Enum Form for "Form"
+            /// </summary>
+            [EnumMember(Value = "Form")]
+            Form
         }
         /// <summary>
         /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.
@@ -97,7 +103,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Carousel">Carousel content.</param>
         /// <param name="DatePicker">DatePicker content.</param>
         /// <param name="ListPicker">ListPicker content.</param>
-        public WebMessagingContent(WebMessagingQuickReply QuickReply = null, WebMessagingButtonResponse ButtonResponse = null, WebMessagingGeneric Generic = null, ContentCard Card = null, ContentCarousel Carousel = null, ContentDatePicker DatePicker = null, ConversationContentListPicker ListPicker = null)
+        /// <param name="Form">Form content.</param>
+        public WebMessagingContent(WebMessagingQuickReply QuickReply = null, WebMessagingButtonResponse ButtonResponse = null, WebMessagingGeneric Generic = null, ContentCard Card = null, ContentCarousel Carousel = null, ContentDatePicker DatePicker = null, ConversationContentListPicker ListPicker = null, ConversationContentForm Form = null)
         {
             this.QuickReply = QuickReply;
             this.ButtonResponse = ButtonResponse;
@@ -106,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Carousel = Carousel;
             this.DatePicker = DatePicker;
             this.ListPicker = ListPicker;
+            this.Form = Form;
             
         }
         
@@ -184,6 +192,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationContentListPicker ListPicker { get; set; }
 
 
+
+        /// <summary>
+        /// Form content
+        /// </summary>
+        /// <value>Form content</value>
+        [DataMember(Name="form", EmitDefaultValue=false)]
+        public ConversationContentForm Form { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -202,6 +219,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Carousel: ").Append(Carousel).Append("\n");
             sb.Append("  DatePicker: ").Append(DatePicker).Append("\n");
             sb.Append("  ListPicker: ").Append(ListPicker).Append("\n");
+            sb.Append("  Form: ").Append(Form).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -286,6 +304,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ListPicker == other.ListPicker ||
                     this.ListPicker != null &&
                     this.ListPicker.Equals(other.ListPicker)
+                ) &&
+                (
+                    this.Form == other.Form ||
+                    this.Form != null &&
+                    this.Form.Equals(other.Form)
                 );
         }
 
@@ -326,6 +349,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ListPicker != null)
                     hash = hash * 59 + this.ListPicker.GetHashCode();
+
+                if (this.Form != null)
+                    hash = hash * 59 + this.Form.GetHashCode();
 
                 return hash;
             }

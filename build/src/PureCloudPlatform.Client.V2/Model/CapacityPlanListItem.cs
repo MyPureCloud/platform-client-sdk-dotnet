@@ -27,12 +27,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CapacityPlanListItem" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">Name.</param>
         /// <param name="StartBusinessUnitDate">The start date for the capacity plan relative to the business unit time zone in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="EndBusinessUnitDate">The end date for the capacity plan relative to the business unit time zone in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="Metadata">The metadata of this capacity plan (required).</param>
-        public CapacityPlanListItem(string Name = null, String StartBusinessUnitDate = null, String EndBusinessUnitDate = null, CapacityPlanMetadata Metadata = null)
+        public CapacityPlanListItem(string Id = null, string Name = null, String StartBusinessUnitDate = null, String EndBusinessUnitDate = null, CapacityPlanMetadata Metadata = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.StartBusinessUnitDate = StartBusinessUnitDate;
             this.EndBusinessUnitDate = EndBusinessUnitDate;
@@ -47,7 +49,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

@@ -18,12 +18,20 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CapacityPlanReference :  IEquatable<CapacityPlanReference>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CapacityPlanReference" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected CapacityPlanReference() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CapacityPlanReference" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">Name.</param>
-        public CapacityPlanReference(string Name = null)
+        public CapacityPlanReference(string Id = null, string Name = null)
         {
+            this.Id = Id;
             this.Name = Name;
             
         }
@@ -35,7 +43,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

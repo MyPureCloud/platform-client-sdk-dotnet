@@ -64,12 +64,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastSuccessfulSessionId">Last successful session ID of the business unit.</param>
         /// <param name="State">State of the latest session.</param>
         /// <param name="ErrorCode">Failed session error code.</param>
-        public ContinuousForecastGetSessionResponse(string SessionId = null, string LastSuccessfulSessionId = null, StateEnum? State = null, string ErrorCode = null)
+        /// <param name="RetrainInProgress">True if a model retrain is currently running for the organization, false if not.</param>
+        public ContinuousForecastGetSessionResponse(string SessionId = null, string LastSuccessfulSessionId = null, StateEnum? State = null, string ErrorCode = null, bool? RetrainInProgress = null)
         {
             this.SessionId = SessionId;
             this.LastSuccessfulSessionId = LastSuccessfulSessionId;
             this.State = State;
             this.ErrorCode = ErrorCode;
+            this.RetrainInProgress = RetrainInProgress;
             
         }
         
@@ -103,6 +105,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ErrorCode { get; set; }
 
 
+
+        /// <summary>
+        /// True if a model retrain is currently running for the organization, false if not
+        /// </summary>
+        /// <value>True if a model retrain is currently running for the organization, false if not</value>
+        [DataMember(Name="retrainInProgress", EmitDefaultValue=false)]
+        public bool? RetrainInProgress { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -116,6 +127,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LastSuccessfulSessionId: ").Append(LastSuccessfulSessionId).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  RetrainInProgress: ").Append(RetrainInProgress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -175,6 +187,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
                     this.ErrorCode.Equals(other.ErrorCode)
+                ) &&
+                (
+                    this.RetrainInProgress == other.RetrainInProgress ||
+                    this.RetrainInProgress != null &&
+                    this.RetrainInProgress.Equals(other.RetrainInProgress)
                 );
         }
 
@@ -200,6 +217,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
+
+                if (this.RetrainInProgress != null)
+                    hash = hash * 59 + this.RetrainInProgress.GetHashCode();
 
                 return hash;
             }

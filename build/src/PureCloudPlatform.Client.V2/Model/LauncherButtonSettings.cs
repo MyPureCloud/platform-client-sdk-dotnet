@@ -52,22 +52,76 @@ namespace PureCloudPlatform.Client.V2.Model
             Ondemand
         }
         /// <summary>
+        /// The display type of the launcher button
+        /// </summary>
+        /// <value>The display type of the launcher button</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DisplayTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Iconandtext for "IconAndText"
+            /// </summary>
+            [EnumMember(Value = "IconAndText")]
+            Iconandtext,
+            
+            /// <summary>
+            /// Enum Icon for "Icon"
+            /// </summary>
+            [EnumMember(Value = "Icon")]
+            Icon,
+            
+            /// <summary>
+            /// Enum Text for "Text"
+            /// </summary>
+            [EnumMember(Value = "Text")]
+            Text
+        }
+        /// <summary>
         /// The visibility settings for the button
         /// </summary>
         /// <value>The visibility settings for the button</value>
         [DataMember(Name="visibility", EmitDefaultValue=false)]
         public VisibilityEnum? Visibility { get; set; }
         /// <summary>
+        /// The display type of the launcher button
+        /// </summary>
+        /// <value>The display type of the launcher button</value>
+        [DataMember(Name="displayType", EmitDefaultValue=false)]
+        public DisplayTypeEnum? DisplayType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="LauncherButtonSettings" /> class.
         /// </summary>
         /// <param name="Visibility">The visibility settings for the button.</param>
-        public LauncherButtonSettings(VisibilityEnum? Visibility = null)
+        /// <param name="DisplayType">The display type of the launcher button.</param>
+        /// <param name="Icon">The icon for the launcher button.</param>
+        public LauncherButtonSettings(VisibilityEnum? Visibility = null, DisplayTypeEnum? DisplayType = null, Icon Icon = null)
         {
             this.Visibility = Visibility;
+            this.DisplayType = DisplayType;
+            this.Icon = Icon;
             
         }
         
 
+
+
+
+
+
+        /// <summary>
+        /// The icon for the launcher button
+        /// </summary>
+        /// <value>The icon for the launcher button</value>
+        [DataMember(Name="icon", EmitDefaultValue=false)]
+        public Icon Icon { get; set; }
 
 
         /// <summary>
@@ -80,6 +134,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class LauncherButtonSettings {\n");
 
             sb.Append("  Visibility: ").Append(Visibility).Append("\n");
+            sb.Append("  DisplayType: ").Append(DisplayType).Append("\n");
+            sb.Append("  Icon: ").Append(Icon).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,6 +180,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Visibility == other.Visibility ||
                     this.Visibility != null &&
                     this.Visibility.Equals(other.Visibility)
+                ) &&
+                (
+                    this.DisplayType == other.DisplayType ||
+                    this.DisplayType != null &&
+                    this.DisplayType.Equals(other.DisplayType)
+                ) &&
+                (
+                    this.Icon == other.Icon ||
+                    this.Icon != null &&
+                    this.Icon.Equals(other.Icon)
                 );
         }
 
@@ -140,6 +206,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Visibility != null)
                     hash = hash * 59 + this.Visibility.GetHashCode();
+
+                if (this.DisplayType != null)
+                    hash = hash * 59 + this.DisplayType.GetHashCode();
+
+                if (this.Icon != null)
+                    hash = hash * 59 + this.Icon.GetHashCode();
 
                 return hash;
             }

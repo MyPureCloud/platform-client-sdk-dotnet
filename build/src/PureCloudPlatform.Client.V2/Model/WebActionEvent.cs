@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Action">The action that triggered the event. (required).</param>
         /// <param name="ActionMap">The action map that triggered the action. (required).</param>
-        /// <param name="ActionTarget">The target for engagement actions. (required).</param>
+        /// <param name="ActionTarget">Deprecated. The target for engagement actions. (required).</param>
         /// <param name="TimeToDisposition">Milliseconds elapsed until the action is disposed..</param>
         /// <param name="ErrorCode">Code of the error returned when the action fails..</param>
         /// <param name="ErrorMessage">Message of the error returned when the action fails..</param>
@@ -81,9 +81,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The target for engagement actions.
+        /// Deprecated. The target for engagement actions.
         /// </summary>
-        /// <value>The target for engagement actions.</value>
+        /// <value>Deprecated. The target for engagement actions.</value>
         [DataMember(Name="actionTarget", EmitDefaultValue=false)]
         public AddressableEntityRef ActionTarget { get; set; }
 

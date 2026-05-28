@@ -83,15 +83,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">A description of the data ingestion rule..</param>
         /// <param name="Status">The status of the data ingestion rule..</param>
         /// <param name="Version">The version number of the data ingestion rule..</param>
+        /// <param name="IngestionRuleInfo">The Info about ingestion rule..</param>
         /// <param name="IntegrationId">The Integration Id from which public social posts are ingested. This entity is created using the /conversations/messaging/integrations/open/extensions/googlebusinessprofile resource.</param>
         /// <param name="ExternalSource">The external source associated with this data ingestion rule, which is used when performing identity resolution.</param>
-        public GoogleBusinessProfileDataIngestionRuleVersionResponse(string Id = null, string Name = null, string Description = null, StatusEnum? Status = null, int? Version = null, string IntegrationId = null, DomainEntityRef ExternalSource = null)
+        public GoogleBusinessProfileDataIngestionRuleVersionResponse(string Id = null, string Name = null, string Description = null, StatusEnum? Status = null, int? Version = null, MessageInfo IngestionRuleInfo = null, string IntegrationId = null, DomainEntityRef ExternalSource = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Description = Description;
             this.Status = Status;
             this.Version = Version;
+            this.IngestionRuleInfo = IngestionRuleInfo;
             this.IntegrationId = IntegrationId;
             this.ExternalSource = ExternalSource;
             
@@ -165,6 +167,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The Info about ingestion rule.
+        /// </summary>
+        /// <value>The Info about ingestion rule.</value>
+        [DataMember(Name="ingestionRuleInfo", EmitDefaultValue=false)]
+        public MessageInfo IngestionRuleInfo { get; set; }
+
+
+
+        /// <summary>
         /// The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide.
         /// </summary>
         /// <value>The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide.</value>
@@ -216,6 +227,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Platform: ").Append(Platform).Append("\n");
+            sb.Append("  IngestionRuleInfo: ").Append(IngestionRuleInfo).Append("\n");
             sb.Append("  Countries: ").Append(Countries).Append("\n");
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
             sb.Append("  ExternalSource: ").Append(ExternalSource).Append("\n");
@@ -301,6 +313,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Platform.Equals(other.Platform)
                 ) &&
                 (
+                    this.IngestionRuleInfo == other.IngestionRuleInfo ||
+                    this.IngestionRuleInfo != null &&
+                    this.IngestionRuleInfo.Equals(other.IngestionRuleInfo)
+                ) &&
+                (
                     this.Countries == other.Countries ||
                     this.Countries != null &&
                     this.Countries.SequenceEqual(other.Countries)
@@ -356,6 +373,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Platform != null)
                     hash = hash * 59 + this.Platform.GetHashCode();
+
+                if (this.IngestionRuleInfo != null)
+                    hash = hash * 59 + this.IngestionRuleInfo.GetHashCode();
 
                 if (this.Countries != null)
                     hash = hash * 59 + this.Countries.GetHashCode();

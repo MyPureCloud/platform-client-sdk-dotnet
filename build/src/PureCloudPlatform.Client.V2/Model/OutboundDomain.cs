@@ -138,6 +138,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The DMARC verification status for this domain.
+        /// </summary>
+        /// <value>The DMARC verification status for this domain.</value>
+        [DataMember(Name="dmarcVerificationResult", EmitDefaultValue=false)]
+        public DmarcResult DmarcVerificationResult { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -160,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DkimVerificationResult: ").Append(DkimVerificationResult).Append("\n");
             sb.Append("  SenderType: ").Append(SenderType).Append("\n");
             sb.Append("  EmailSetting: ").Append(EmailSetting).Append("\n");
+            sb.Append("  DmarcVerificationResult: ").Append(DmarcVerificationResult).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -232,6 +242,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EmailSetting.Equals(other.EmailSetting)
                 ) &&
                 (
+                    this.DmarcVerificationResult == other.DmarcVerificationResult ||
+                    this.DmarcVerificationResult != null &&
+                    this.DmarcVerificationResult.Equals(other.DmarcVerificationResult)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -266,6 +281,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EmailSetting != null)
                     hash = hash * 59 + this.EmailSetting.GetHashCode();
+
+                if (this.DmarcVerificationResult != null)
+                    hash = hash * 59 + this.DmarcVerificationResult.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

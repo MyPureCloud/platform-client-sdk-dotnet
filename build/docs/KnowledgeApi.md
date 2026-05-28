@@ -39,6 +39,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetKnowledgeKnowledgebaseDocumentVersionVariations**](#GetKnowledgeKnowledgebaseDocumentVersionVariations) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations | Get variations for the given document version. |
 | [**GetKnowledgeKnowledgebaseDocumentVersions**](#GetKnowledgeKnowledgebaseDocumentVersions) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions | Get document versions. |
 | [**GetKnowledgeKnowledgebaseDocuments**](#GetKnowledgeKnowledgebaseDocuments) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents | Get documents. |
+| [**GetKnowledgeKnowledgebaseDocumentsFeedback**](#GetKnowledgeKnowledgebaseDocumentsFeedback) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/feedback | Get a list of feedback records given on documents in a knowledge base |
 | [**GetKnowledgeKnowledgebaseExportJob**](#GetKnowledgeKnowledgebaseExportJob) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId} | Get export job report |
 | [**GetKnowledgeKnowledgebaseImportJob**](#GetKnowledgeKnowledgebaseImportJob) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId} | Get import job report |
 | [**GetKnowledgeKnowledgebaseLabel**](#GetKnowledgeKnowledgebaseLabel) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId} | Get label |
@@ -2320,6 +2321,90 @@ namespace Example
 ### Return type
 
 [**KnowledgeDocumentResponseListing**](KnowledgeDocumentResponseListing)
+
+
+## GetKnowledgeKnowledgebaseDocumentsFeedback
+
+> [**KnowledgeDocumentFeedbackResponseListing**](KnowledgeDocumentFeedbackResponseListing) GetKnowledgeKnowledgebaseDocumentsFeedback (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, bool? onlyCommented = null, string documentVersionId = null, string documentVariationId = null, string appType = null, string queryType = null, string userId = null, string queueId = null, string state = null)
+
+
+Get a list of feedback records given on documents in a knowledge base
+
+Requires ANY permissions: 
+
+* knowledge:feedback:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseDocumentsFeedbackExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID.
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var onlyCommented = true;  // bool? | If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional) 
+            var documentVersionId = documentVersionId_example;  // string | Document version ID to filter by. Supported only if onlyCommented=true is set. (optional) 
+            var documentVariationId = documentVariationId_example;  // string | Document variation ID to filter by. Supported only if onlyCommented=true is set. (optional) 
+            var appType = appType_example;  // string | Application type to filter by. Supported only if onlyCommented=true is set. (optional) 
+            var queryType = queryType_example;  // string | Query type to filter by. Supported only if onlyCommented=true is set. (optional) 
+            var userId = userId_example;  // string | The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented=true is set. (optional) 
+            var queueId = queueId_example;  // string | Queue ID to filter by. Supported only if onlyCommented=true is set. (optional) 
+            var state = state_example;  // string | State to filter by. Supported only if onlyCommented=true is set. Default: Final (optional) 
+
+            try
+            { 
+                // Get a list of feedback records given on documents in a knowledge base
+                KnowledgeDocumentFeedbackResponseListing result = apiInstance.GetKnowledgeKnowledgebaseDocumentsFeedback(knowledgeBaseId, before, after, pageSize, onlyCommented, documentVersionId, documentVariationId, appType, queryType, userId, queueId, state);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseDocumentsFeedback: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID. |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **onlyCommented** | **bool?**| If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. | [optional]  |
+| **documentVersionId** | **string**| Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional]  |
+| **documentVariationId** | **string**| Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional]  |
+| **appType** | **string**| Application type to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional] <br />**Values**: Assistant, BotFlow, MessengerKnowledgeApp, SmartAdvisor, SupportCenter |
+| **queryType** | **string**| Query type to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional] <br />**Values**: Unknown, Article, AutoSearch, Category, ManualSearch, Recommendation, Suggestion, ExpandedArticle |
+| **userId** | **string**| The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional]  |
+| **queueId** | **string**| Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional]  |
+| **state** | **string**| State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final | [optional] <br />**Values**: All, Draft, Final |
+
+### Return type
+
+[**KnowledgeDocumentFeedbackResponseListing**](KnowledgeDocumentFeedbackResponseListing)
 
 
 ## GetKnowledgeKnowledgebaseExportJob
@@ -7881,4 +7966,4 @@ namespace Example
 [**V3SourceDetailedResponse**](V3SourceDetailedResponse)
 
 
-_PureCloudPlatform.Client.V2 263.0.0_
+_PureCloudPlatform.Client.V2 264.0.0_

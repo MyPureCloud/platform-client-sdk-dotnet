@@ -24,14 +24,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateStart">DateStart.</param>
         /// <param name="DateScheduleStart">DateScheduleStart.</param>
         /// <param name="ActivityCode">ActivityCode.</param>
+        /// <param name="ActivityCodeId">ActivityCodeId.</param>
         /// <param name="ActivityColor">ActivityColor.</param>
         /// <param name="ActivityName">ActivityName.</param>
         /// <param name="Points">Points.</param>
-        public GamificationScorecardChangeTopicPunctualityEvent(string DateStart = null, string DateScheduleStart = null, string ActivityCode = null, string ActivityColor = null, string ActivityName = null, long? Points = null)
+        public GamificationScorecardChangeTopicPunctualityEvent(string DateStart = null, string DateScheduleStart = null, string ActivityCode = null, string ActivityCodeId = null, string ActivityColor = null, string ActivityName = null, long? Points = null)
         {
             this.DateStart = DateStart;
             this.DateScheduleStart = DateScheduleStart;
             this.ActivityCode = ActivityCode;
+            this.ActivityCodeId = ActivityCodeId;
             this.ActivityColor = ActivityColor;
             this.ActivityName = ActivityName;
             this.Points = Points;
@@ -61,6 +63,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="activityCode", EmitDefaultValue=false)]
         public string ActivityCode { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ActivityCodeId
+        /// </summary>
+        [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
+        public string ActivityCodeId { get; set; }
 
 
 
@@ -99,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateStart: ").Append(DateStart).Append("\n");
             sb.Append("  DateScheduleStart: ").Append(DateScheduleStart).Append("\n");
             sb.Append("  ActivityCode: ").Append(ActivityCode).Append("\n");
+            sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  ActivityColor: ").Append(ActivityColor).Append("\n");
             sb.Append("  ActivityName: ").Append(ActivityName).Append("\n");
             sb.Append("  Points: ").Append(Points).Append("\n");
@@ -158,6 +169,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActivityCode.Equals(other.ActivityCode)
                 ) &&
                 (
+                    this.ActivityCodeId == other.ActivityCodeId ||
+                    this.ActivityCodeId != null &&
+                    this.ActivityCodeId.Equals(other.ActivityCodeId)
+                ) &&
+                (
                     this.ActivityColor == other.ActivityColor ||
                     this.ActivityColor != null &&
                     this.ActivityColor.Equals(other.ActivityColor)
@@ -193,6 +209,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ActivityCode != null)
                     hash = hash * 59 + this.ActivityCode.GetHashCode();
+
+                if (this.ActivityCodeId != null)
+                    hash = hash * 59 + this.ActivityCodeId.GetHashCode();
 
                 if (this.ActivityColor != null)
                     hash = hash * 59 + this.ActivityColor.GetHashCode();

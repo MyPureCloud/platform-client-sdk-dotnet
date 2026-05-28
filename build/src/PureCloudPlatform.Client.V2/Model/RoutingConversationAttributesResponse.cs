@@ -26,13 +26,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Language">Current language on in-queue conversation.</param>
         /// <param name="Label">Current label on in-queue conversation.</param>
         /// <param name="ScoredAgents">Current scored agents on in-queue conversation.</param>
-        public RoutingConversationAttributesResponse(int? Priority = null, List<RoutingSkill> Skills = null, Language Language = null, UtilizationLabel Label = null, List<ScoredAgent> ScoredAgents = null)
+        /// <param name="SkillExpression">Current skill expression on in-queue conversation.</param>
+        /// <param name="SkillExpressionId">Current skill expression ID on in-queue conversation.</param>
+        public RoutingConversationAttributesResponse(int? Priority = null, List<RoutingSkill> Skills = null, Language Language = null, UtilizationLabel Label = null, List<ScoredAgent> ScoredAgents = null, string SkillExpression = null, string SkillExpressionId = null)
         {
             this.Priority = Priority;
             this.Skills = Skills;
             this.Language = Language;
             this.Label = Label;
             this.ScoredAgents = ScoredAgents;
+            this.SkillExpression = SkillExpression;
+            this.SkillExpressionId = SkillExpressionId;
             
         }
         
@@ -82,6 +86,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ScoredAgent> ScoredAgents { get; set; }
 
 
+
+        /// <summary>
+        /// Current skill expression on in-queue conversation
+        /// </summary>
+        /// <value>Current skill expression on in-queue conversation</value>
+        [DataMember(Name="skillExpression", EmitDefaultValue=false)]
+        public string SkillExpression { get; set; }
+
+
+
+        /// <summary>
+        /// Current skill expression ID on in-queue conversation
+        /// </summary>
+        /// <value>Current skill expression ID on in-queue conversation</value>
+        [DataMember(Name="skillExpressionId", EmitDefaultValue=false)]
+        public string SkillExpressionId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +118,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
+            sb.Append("  SkillExpression: ").Append(SkillExpression).Append("\n");
+            sb.Append("  SkillExpressionId: ").Append(SkillExpressionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +184,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScoredAgents == other.ScoredAgents ||
                     this.ScoredAgents != null &&
                     this.ScoredAgents.SequenceEqual(other.ScoredAgents)
+                ) &&
+                (
+                    this.SkillExpression == other.SkillExpression ||
+                    this.SkillExpression != null &&
+                    this.SkillExpression.Equals(other.SkillExpression)
+                ) &&
+                (
+                    this.SkillExpressionId == other.SkillExpressionId ||
+                    this.SkillExpressionId != null &&
+                    this.SkillExpressionId.Equals(other.SkillExpressionId)
                 );
         }
 
@@ -188,6 +222,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ScoredAgents != null)
                     hash = hash * 59 + this.ScoredAgents.GetHashCode();
+
+                if (this.SkillExpression != null)
+                    hash = hash * 59 + this.SkillExpression.GetHashCode();
+
+                if (this.SkillExpressionId != null)
+                    hash = hash * 59 + this.SkillExpressionId.GetHashCode();
 
                 return hash;
             }

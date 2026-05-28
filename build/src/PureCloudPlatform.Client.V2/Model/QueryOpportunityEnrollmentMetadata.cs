@@ -1,0 +1,235 @@
+using System;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using PureCloudPlatform.Client.V2.Client;
+
+namespace PureCloudPlatform.Client.V2.Model
+{
+    /// <summary>
+    /// QueryOpportunityEnrollmentMetadata
+    /// </summary>
+    [DataContract]
+    public partial class QueryOpportunityEnrollmentMetadata :  IEquatable<QueryOpportunityEnrollmentMetadata>
+    {
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QueryOpportunityEnrollmentMetadata" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected QueryOpportunityEnrollmentMetadata() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QueryOpportunityEnrollmentMetadata" /> class.
+        /// </summary>
+        /// <param name="Version">The version of the associated entity.  Used to prevent conflicts on concurrent edits (required).</param>
+        /// <param name="ReviewedBy">The user who reviewed the enrollment.</param>
+        /// <param name="DateReviewed">The date the enrollment was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public QueryOpportunityEnrollmentMetadata(int? Version = null, UserReference ReviewedBy = null, DateTime? DateReviewed = null)
+        {
+            this.Version = Version;
+            this.ReviewedBy = ReviewedBy;
+            this.DateReviewed = DateReviewed;
+            
+        }
+        
+
+
+        /// <summary>
+        /// The user who last modified the associated entity. The id may be &#39;System&#39; if it was an automated process
+        /// </summary>
+        /// <value>The user who last modified the associated entity. The id may be &#39;System&#39; if it was an automated process</value>
+        [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
+        public UserReference ModifiedBy { get; private set; }
+
+
+
+        /// <summary>
+        /// The date the associated entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date the associated entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; private set; }
+
+
+
+        /// <summary>
+        /// The user who created the associated entity, if available. The id may be &#39;System&#39; if it was an automated process
+        /// </summary>
+        /// <value>The user who created the associated entity, if available. The id may be &#39;System&#39; if it was an automated process</value>
+        [DataMember(Name="createdBy", EmitDefaultValue=false)]
+        public UserReference CreatedBy { get; private set; }
+
+
+
+        /// <summary>
+        /// The date the associated entity was created, if available. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date the associated entity was created, if available. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; private set; }
+
+
+
+        /// <summary>
+        /// The version of the associated entity.  Used to prevent conflicts on concurrent edits
+        /// </summary>
+        /// <value>The version of the associated entity.  Used to prevent conflicts on concurrent edits</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; set; }
+
+
+
+        /// <summary>
+        /// The user who reviewed the enrollment
+        /// </summary>
+        /// <value>The user who reviewed the enrollment</value>
+        [DataMember(Name="reviewedBy", EmitDefaultValue=false)]
+        public UserReference ReviewedBy { get; set; }
+
+
+
+        /// <summary>
+        /// The date the enrollment was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date the enrollment was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateReviewed", EmitDefaultValue=false)]
+        public DateTime? DateReviewed { get; set; }
+
+
+        /// <summary>
+        /// Returns the string presentation of the object
+        /// </summary>
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.Append("class QueryOpportunityEnrollmentMetadata {\n");
+
+            sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  ReviewedBy: ").Append(ReviewedBy).Append("\n");
+            sb.Append("  DateReviewed: ").Append(DateReviewed).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
+        }
+  
+        /// <summary>
+        /// Returns the JSON string presentation of the object
+        /// </summary>
+        /// <returns>JSON string presentation of the object</returns>
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this, new JsonSerializerSettings
+            {
+                MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+                Formatting = Formatting.Indented
+            });
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="obj">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object obj)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            return this.Equals(obj as QueryOpportunityEnrollmentMetadata);
+        }
+
+        /// <summary>
+        /// Returns true if QueryOpportunityEnrollmentMetadata instances are equal
+        /// </summary>
+        /// <param name="other">Instance of QueryOpportunityEnrollmentMetadata to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(QueryOpportunityEnrollmentMetadata other)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            if (other == null)
+                return false;
+
+            return true &&
+                (
+                    this.ModifiedBy == other.ModifiedBy ||
+                    this.ModifiedBy != null &&
+                    this.ModifiedBy.Equals(other.ModifiedBy)
+                ) &&
+                (
+                    this.DateModified == other.DateModified ||
+                    this.DateModified != null &&
+                    this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.CreatedBy == other.CreatedBy ||
+                    this.CreatedBy != null &&
+                    this.CreatedBy.Equals(other.CreatedBy)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
+                ) &&
+                (
+                    this.ReviewedBy == other.ReviewedBy ||
+                    this.ReviewedBy != null &&
+                    this.ReviewedBy.Equals(other.ReviewedBy)
+                ) &&
+                (
+                    this.DateReviewed == other.DateReviewed ||
+                    this.DateReviewed != null &&
+                    this.DateReviewed.Equals(other.DateReviewed)
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            // credit: http://stackoverflow.com/a/263416/677735
+            unchecked // Overflow is fine, just wrap
+            {
+                int hash = 41;
+                // Suitable nullity checks etc, of course :)
+                if (this.ModifiedBy != null)
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
+
+                if (this.DateModified != null)
+                    hash = hash * 59 + this.DateModified.GetHashCode();
+
+                if (this.CreatedBy != null)
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
+
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
+
+                if (this.ReviewedBy != null)
+                    hash = hash * 59 + this.ReviewedBy.GetHashCode();
+
+                if (this.DateReviewed != null)
+                    hash = hash * 59 + this.DateReviewed.GetHashCode();
+
+                return hash;
+            }
+        }
+    }
+
+}

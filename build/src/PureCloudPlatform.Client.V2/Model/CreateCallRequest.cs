@@ -31,12 +31,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Attributes">The list of attributes to associate with the customer participant..</param>
         /// <param name="LanguageId">The language skill ID to use for routing this call (if calling a queue)..</param>
         /// <param name="RoutingSkillsIds">The skill ID&#39;s to use for routing this call (if calling a queue)..</param>
+        /// <param name="RoutingSkillExpression">The skill expression to use for routing this call (if calling a queue)..</param>
         /// <param name="ConversationIds">The list of existing call conversations to merge into a new ad-hoc conference..</param>
         /// <param name="Participants">The list of participants to call to create a new ad-hoc conference..</param>
         /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
         /// <param name="ExternalContactId">The external contact with which to associate the call..</param>
         /// <param name="Label">An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level.</param>
-        public CreateCallRequest(string PhoneNumber = null, string CallerId = null, string CallerIdName = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, Dictionary<string, string> Attributes = null, string LanguageId = null, List<string> RoutingSkillsIds = null, List<string> ConversationIds = null, List<Destination> Participants = null, string UuiData = null, string ExternalContactId = null, string Label = null)
+        public CreateCallRequest(string PhoneNumber = null, string CallerId = null, string CallerIdName = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, Dictionary<string, string> Attributes = null, string LanguageId = null, List<string> RoutingSkillsIds = null, string RoutingSkillExpression = null, List<string> ConversationIds = null, List<Destination> Participants = null, string UuiData = null, string ExternalContactId = null, string Label = null)
         {
             this.PhoneNumber = PhoneNumber;
             this.CallerId = CallerId;
@@ -48,6 +49,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Attributes = Attributes;
             this.LanguageId = LanguageId;
             this.RoutingSkillsIds = RoutingSkillsIds;
+            this.RoutingSkillExpression = RoutingSkillExpression;
             this.ConversationIds = ConversationIds;
             this.Participants = Participants;
             this.UuiData = UuiData;
@@ -149,6 +151,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The skill expression to use for routing this call (if calling a queue).
+        /// </summary>
+        /// <value>The skill expression to use for routing this call (if calling a queue).</value>
+        [DataMember(Name="routingSkillExpression", EmitDefaultValue=false)]
+        public string RoutingSkillExpression { get; set; }
+
+
+
+        /// <summary>
         /// The list of existing call conversations to merge into a new ad-hoc conference.
         /// </summary>
         /// <value>The list of existing call conversations to merge into a new ad-hoc conference.</value>
@@ -211,6 +222,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  RoutingSkillsIds: ").Append(RoutingSkillsIds).Append("\n");
+            sb.Append("  RoutingSkillExpression: ").Append(RoutingSkillExpression).Append("\n");
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
@@ -307,6 +319,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoutingSkillsIds.SequenceEqual(other.RoutingSkillsIds)
                 ) &&
                 (
+                    this.RoutingSkillExpression == other.RoutingSkillExpression ||
+                    this.RoutingSkillExpression != null &&
+                    this.RoutingSkillExpression.Equals(other.RoutingSkillExpression)
+                ) &&
+                (
                     this.ConversationIds == other.ConversationIds ||
                     this.ConversationIds != null &&
                     this.ConversationIds.SequenceEqual(other.ConversationIds)
@@ -373,6 +390,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RoutingSkillsIds != null)
                     hash = hash * 59 + this.RoutingSkillsIds.GetHashCode();
+
+                if (this.RoutingSkillExpression != null)
+                    hash = hash * 59 + this.RoutingSkillExpression.GetHashCode();
 
                 if (this.ConversationIds != null)
                     hash = hash * 59 + this.ConversationIds.GetHashCode();

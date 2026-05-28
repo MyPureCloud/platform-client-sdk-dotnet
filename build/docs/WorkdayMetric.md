@@ -12,8 +12,9 @@
 | **MaxPoints** | **int?** | The maximum Gamification points a user may earn for this metric | [optional] |
 | **Value** | **double?** | Value of this metric | [optional] |
 | **PunctualityEvents** | [**List&lt;PunctualityEvent&gt;**](PunctualityEvent) | List of schedule activity events for punctuality metrics | [optional] |
+| **BusinessUnitId** | **string** | The id of the business unit associated with this metric, only returned for metrics with punctuality events | [optional] |
 | **EvaluationDetails** | [**List&lt;QualityEvaluationScoreItem&gt;**](QualityEvaluationScoreItem) | List of evaluations for quality evaluation score metrics | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 263.0.0_
+_PureCloudPlatform.Client.V2 264.0.0_

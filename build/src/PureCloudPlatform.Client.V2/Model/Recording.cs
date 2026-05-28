@@ -254,7 +254,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecordingErrorStatus">Status of a recording that cannot be returned because of an error.</param>
         /// <param name="OriginalRecordingStartTime">The start time of the full recording, before any segment access restrictions are applied. Null when there is no playable media. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreationTime">The creation time of the recording. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, MediaSubtypeEnum? MediaSubtype = null, string MediaSubject = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, List<RecordingMessagingMessage> MessagingTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, DateTime? ExportedDate = null, int? OutputDurationMs = null, int? OutputSizeInBytes = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null, RecordingFileRoleEnum? RecordingFileRole = null, RecordingErrorStatusEnum? RecordingErrorStatus = null, DateTime? OriginalRecordingStartTime = null, DateTime? CreationTime = null)
+        /// <param name="AssociatedConversationIds">List of associated conversation IDs.</param>
+        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, MediaSubtypeEnum? MediaSubtype = null, string MediaSubject = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, List<RecordingMessagingMessage> MessagingTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, DateTime? ExportedDate = null, int? OutputDurationMs = null, int? OutputSizeInBytes = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null, RecordingFileRoleEnum? RecordingFileRole = null, RecordingErrorStatusEnum? RecordingErrorStatus = null, DateTime? OriginalRecordingStartTime = null, DateTime? CreationTime = null, List<string> AssociatedConversationIds = null)
         {
             this.Name = Name;
             this.ConversationId = ConversationId;
@@ -288,6 +289,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RecordingErrorStatus = RecordingErrorStatus;
             this.OriginalRecordingStartTime = OriginalRecordingStartTime;
             this.CreationTime = CreationTime;
+            this.AssociatedConversationIds = AssociatedConversationIds;
             
         }
         
@@ -551,6 +553,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// List of associated conversation IDs
+        /// </summary>
+        /// <value>List of associated conversation IDs</value>
+        [DataMember(Name="associatedConversationIds", EmitDefaultValue=false)]
+        public List<string> AssociatedConversationIds { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -600,6 +611,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RecordingErrorStatus: ").Append(RecordingErrorStatus).Append("\n");
             sb.Append("  OriginalRecordingStartTime: ").Append(OriginalRecordingStartTime).Append("\n");
             sb.Append("  CreationTime: ").Append(CreationTime).Append("\n");
+            sb.Append("  AssociatedConversationIds: ").Append(AssociatedConversationIds).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -807,6 +819,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CreationTime.Equals(other.CreationTime)
                 ) &&
                 (
+                    this.AssociatedConversationIds == other.AssociatedConversationIds ||
+                    this.AssociatedConversationIds != null &&
+                    this.AssociatedConversationIds.SequenceEqual(other.AssociatedConversationIds)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -922,6 +939,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CreationTime != null)
                     hash = hash * 59 + this.CreationTime.GetHashCode();
+
+                if (this.AssociatedConversationIds != null)
+                    hash = hash * 59 + this.AssociatedConversationIds.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

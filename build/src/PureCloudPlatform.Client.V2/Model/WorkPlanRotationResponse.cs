@@ -18,9 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkPlanRotationResponse :  IEquatable<WorkPlanRotationResponse>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanRotationResponse" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected WorkPlanRotationResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WorkPlanRotationResponse" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">Name.</param>
         /// <param name="Enabled">Whether the work plan rotation is enabled for scheduling.</param>
         /// <param name="DateRange">The date range to which this work plan rotation applies.</param>
@@ -28,8 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentCount">Number of agents in this work plan rotation.</param>
         /// <param name="Agents">Agents in this work plan rotation. Populate with expand&#x3D;agents for GET WorkPlanRotationsList (defaults to empty list).</param>
         /// <param name="Metadata">Version metadata for this work plan rotation.</param>
-        public WorkPlanRotationResponse(string Name = null, bool? Enabled = null, DateRangeWithOptionalEnd DateRange = null, WorkPlanPatternResponse Pattern = null, int? AgentCount = null, List<WorkPlanRotationAgentResponse> Agents = null, WfmVersionedEntityMetadata Metadata = null)
+        public WorkPlanRotationResponse(string Id = null, string Name = null, bool? Enabled = null, DateRangeWithOptionalEnd DateRange = null, WorkPlanPatternResponse Pattern = null, int? AgentCount = null, List<WorkPlanRotationAgentResponse> Agents = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Enabled = Enabled;
             this.DateRange = DateRange;
@@ -47,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

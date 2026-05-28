@@ -170,7 +170,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum OutboundContactAddressUncontactableSkipped for "OUTBOUND_CONTACT_ADDRESS_UNCONTACTABLE_SKIPPED"
             /// </summary>
             [EnumMember(Value = "OUTBOUND_CONTACT_ADDRESS_UNCONTACTABLE_SKIPPED")]
-            OutboundContactAddressUncontactableSkipped
+            OutboundContactAddressUncontactableSkipped,
+            
+            /// <summary>
+            /// Enum IninOutboundNotCallableTime for "ININ_OUTBOUND_NOT_CALLABLE_TIME"
+            /// </summary>
+            [EnumMember(Value = "ININ_OUTBOUND_NOT_CALLABLE_TIME")]
+            IninOutboundNotCallableTime,
+            
+            /// <summary>
+            /// Enum OutboundMessageBodyParameterValueTooLong for "OUTBOUND_MESSAGE_BODY_PARAMETER_VALUE_TOO_LONG"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_MESSAGE_BODY_PARAMETER_VALUE_TOO_LONG")]
+            OutboundMessageBodyParameterValueTooLong,
+            
+            /// <summary>
+            /// Enum OutboundInvalidContentTemplate for "OUTBOUND_INVALID_CONTENT_TEMPLATE"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_INVALID_CONTENT_TEMPLATE")]
+            OutboundInvalidContentTemplate,
+            
+            /// <summary>
+            /// Enum OutboundContentTemplateNotAuthorized for "OUTBOUND_CONTENT_TEMPLATE_NOT_AUTHORIZED"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_CONTENT_TEMPLATE_NOT_AUTHORIZED")]
+            OutboundContentTemplateNotAuthorized
         }
         /// <summary>
         /// Gets or Sets OutboundCampaignType

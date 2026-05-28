@@ -97,18 +97,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name of the checklist item. (required).</param>
         /// <param name="Description">Description of the checklist item..</param>
         /// <param name="AutomatedCheckEnabled">Flag to indicate whether automated check is enabled for this checklist item..</param>
+        /// <param name="ExactPhraseMatch">Flag to indicate whether exact phrase matching is applicable for this checklist item..</param>
         /// <param name="Important">Flag to indicate whether this checklist item is marked as important..</param>
         /// <param name="StateFromModel">Checklist state as evaluated by the model..</param>
         /// <param name="StateFromAgent">Checklist state as evaluated by the agent..</param>
         /// <param name="DateLastModifiedByModel">Date when the checklist item was last modified by the model. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateLastModifiedByAgent">Date when the checklist item was last modified by the agent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="LastModifiedInAcw">Flag to indicate whether this checklist item was modified in ACW..</param>
-        public ChecklistItem(string Id = null, string Name = null, string Description = null, bool? AutomatedCheckEnabled = null, bool? Important = null, StateFromModelEnum? StateFromModel = null, StateFromAgentEnum? StateFromAgent = null, DateTime? DateLastModifiedByModel = null, DateTime? DateLastModifiedByAgent = null, bool? LastModifiedInAcw = null)
+        public ChecklistItem(string Id = null, string Name = null, string Description = null, bool? AutomatedCheckEnabled = null, bool? ExactPhraseMatch = null, bool? Important = null, StateFromModelEnum? StateFromModel = null, StateFromAgentEnum? StateFromAgent = null, DateTime? DateLastModifiedByModel = null, DateTime? DateLastModifiedByAgent = null, bool? LastModifiedInAcw = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Description = Description;
             this.AutomatedCheckEnabled = AutomatedCheckEnabled;
+            this.ExactPhraseMatch = ExactPhraseMatch;
             this.Important = Important;
             this.StateFromModel = StateFromModel;
             this.StateFromAgent = StateFromAgent;
@@ -153,6 +155,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Flag to indicate whether automated check is enabled for this checklist item.</value>
         [DataMember(Name="automatedCheckEnabled", EmitDefaultValue=false)]
         public bool? AutomatedCheckEnabled { get; set; }
+
+
+
+        /// <summary>
+        /// Flag to indicate whether exact phrase matching is applicable for this checklist item.
+        /// </summary>
+        /// <value>Flag to indicate whether exact phrase matching is applicable for this checklist item.</value>
+        [DataMember(Name="exactPhraseMatch", EmitDefaultValue=false)]
+        public bool? ExactPhraseMatch { get; set; }
 
 
 
@@ -217,6 +228,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  AutomatedCheckEnabled: ").Append(AutomatedCheckEnabled).Append("\n");
+            sb.Append("  ExactPhraseMatch: ").Append(ExactPhraseMatch).Append("\n");
             sb.Append("  Important: ").Append(Important).Append("\n");
             sb.Append("  StateFromModel: ").Append(StateFromModel).Append("\n");
             sb.Append("  StateFromAgent: ").Append(StateFromAgent).Append("\n");
@@ -285,6 +297,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AutomatedCheckEnabled.Equals(other.AutomatedCheckEnabled)
                 ) &&
                 (
+                    this.ExactPhraseMatch == other.ExactPhraseMatch ||
+                    this.ExactPhraseMatch != null &&
+                    this.ExactPhraseMatch.Equals(other.ExactPhraseMatch)
+                ) &&
+                (
                     this.Important == other.Important ||
                     this.Important != null &&
                     this.Important.Equals(other.Important)
@@ -343,6 +360,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AutomatedCheckEnabled != null)
                     hash = hash * 59 + this.AutomatedCheckEnabled.GetHashCode();
+
+                if (this.ExactPhraseMatch != null)
+                    hash = hash * 59 + this.ExactPhraseMatch.GetHashCode();
 
                 if (this.Important != null)
                     hash = hash * 59 + this.Important.GetHashCode();

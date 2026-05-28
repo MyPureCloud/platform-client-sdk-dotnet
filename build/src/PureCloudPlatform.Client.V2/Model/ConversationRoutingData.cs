@@ -25,14 +25,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Language">The language to use for routing decisions.</param>
         /// <param name="Priority">The priority of the conversation to use for routing decisions.</param>
         /// <param name="Skills">The skills to use for routing decisions.</param>
+        /// <param name="SkillExpression">The string with skill expression requested by the caller for routing decisions.</param>
+        /// <param name="SkillExpressionId">The internal id of the skill expression, if any, that is currently in use for routing decisions.</param>
         /// <param name="ScoredAgents">A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents.</param>
         /// <param name="Label">An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level.</param>
-        public ConversationRoutingData(AddressableEntityRef Queue = null, AddressableEntityRef Language = null, int? Priority = null, List<AddressableEntityRef> Skills = null, List<ScoredAgent> ScoredAgents = null, string Label = null)
+        public ConversationRoutingData(AddressableEntityRef Queue = null, AddressableEntityRef Language = null, int? Priority = null, List<AddressableEntityRef> Skills = null, string SkillExpression = null, string SkillExpressionId = null, List<ScoredAgent> ScoredAgents = null, string Label = null)
         {
             this.Queue = Queue;
             this.Language = Language;
             this.Priority = Priority;
             this.Skills = Skills;
+            this.SkillExpression = SkillExpression;
+            this.SkillExpressionId = SkillExpressionId;
             this.ScoredAgents = ScoredAgents;
             this.Label = Label;
             
@@ -77,6 +81,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The string with skill expression requested by the caller for routing decisions
+        /// </summary>
+        /// <value>The string with skill expression requested by the caller for routing decisions</value>
+        [DataMember(Name="skillExpression", EmitDefaultValue=false)]
+        public string SkillExpression { get; set; }
+
+
+
+        /// <summary>
+        /// The internal id of the skill expression, if any, that is currently in use for routing decisions
+        /// </summary>
+        /// <value>The internal id of the skill expression, if any, that is currently in use for routing decisions</value>
+        [DataMember(Name="skillExpressionId", EmitDefaultValue=false)]
+        public string SkillExpressionId { get; set; }
+
+
+
+        /// <summary>
         /// A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents
         /// </summary>
         /// <value>A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents</value>
@@ -106,6 +128,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  Skills: ").Append(Skills).Append("\n");
+            sb.Append("  SkillExpression: ").Append(SkillExpression).Append("\n");
+            sb.Append("  SkillExpressionId: ").Append(SkillExpressionId).Append("\n");
             sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("}\n");
@@ -169,6 +193,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Skills.SequenceEqual(other.Skills)
                 ) &&
                 (
+                    this.SkillExpression == other.SkillExpression ||
+                    this.SkillExpression != null &&
+                    this.SkillExpression.Equals(other.SkillExpression)
+                ) &&
+                (
+                    this.SkillExpressionId == other.SkillExpressionId ||
+                    this.SkillExpressionId != null &&
+                    this.SkillExpressionId.Equals(other.SkillExpressionId)
+                ) &&
+                (
                     this.ScoredAgents == other.ScoredAgents ||
                     this.ScoredAgents != null &&
                     this.ScoredAgents.SequenceEqual(other.ScoredAgents)
@@ -202,6 +236,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Skills != null)
                     hash = hash * 59 + this.Skills.GetHashCode();
+
+                if (this.SkillExpression != null)
+                    hash = hash * 59 + this.SkillExpression.GetHashCode();
+
+                if (this.SkillExpressionId != null)
+                    hash = hash * 59 + this.SkillExpressionId.GetHashCode();
 
                 if (this.ScoredAgents != null)
                     hash = hash * 59 + this.ScoredAgents.GetHashCode();

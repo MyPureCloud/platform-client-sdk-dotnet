@@ -62,6 +62,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId**](#GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}/snapshot/{snapshotId} | Get the snapshot details for the snapshot ID |
 | [**GetWorkforcemanagementBusinessunitManagementunits**](#GetWorkforcemanagementBusinessunitManagementunits) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/managementunits | Get all authorized management units in the business unit |
 | [**GetWorkforcemanagementBusinessunitMinimumstaffingSettings**](#GetWorkforcemanagementBusinessunitMinimumstaffingSettings) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/minimumstaffing/settings | Get minimum staffing settings for a business unit |
+| [**GetWorkforcemanagementBusinessunitOpportunity**](#GetWorkforcemanagementBusinessunitOpportunity) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/{opportunityId} | Get opportunity details |
 | [**GetWorkforcemanagementBusinessunitPlanninggroup**](#GetWorkforcemanagementBusinessunitPlanninggroup) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Get a planning group |
 | [**GetWorkforcemanagementBusinessunitPlanninggroups**](#GetWorkforcemanagementBusinessunitPlanninggroups) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups | Gets list of planning groups |
 | [**GetWorkforcemanagementBusinessunitSchedulerSettings**](#GetWorkforcemanagementBusinessunitSchedulerSettings) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduler/settings | Get scheduler settings for a business unit |
@@ -164,6 +165,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings**](#PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings | Update alternative shifts settings for a business unit |
 | [**PatchWorkforcemanagementBusinessunitCapacityplan**](#PatchWorkforcemanagementBusinessunitCapacityplan) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId} | Update a capacity plan configuration |
 | [**PatchWorkforcemanagementBusinessunitMinimumstaffingSettings**](#PatchWorkforcemanagementBusinessunitMinimumstaffingSettings) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/minimumstaffing/settings | Update minimum staffing settings for a business unit |
+| [**PatchWorkforcemanagementBusinessunitOpportunity**](#PatchWorkforcemanagementBusinessunitOpportunity) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/{opportunityId} | Update the opportunity |
 | [**PatchWorkforcemanagementBusinessunitPlanninggroup**](#PatchWorkforcemanagementBusinessunitPlanninggroup) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Updates the planning group |
 | [**PatchWorkforcemanagementBusinessunitSchedulerSettings**](#PatchWorkforcemanagementBusinessunitSchedulerSettings) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduler/settings | Update scheduler settings for a business unit |
 | [**PatchWorkforcemanagementBusinessunitSchedulingRun**](#PatchWorkforcemanagementBusinessunitSchedulingRun) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Mark a schedule run as applied |
@@ -191,7 +193,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementWorkplanbidPreferences**](#PatchWorkforcemanagementWorkplanbidPreferences) | **Patch** /api/v2/workforcemanagement/workplanbids/{bidId}/preferences | Update an agent&#39;s work plan bidding preference |
 | [**PostWorkforcemanagementAdherenceExplanations**](#PostWorkforcemanagementAdherenceExplanations) | **Post** /api/v2/workforcemanagement/adherence/explanations | Submit an adherence explanation for the current user |
 | [**PostWorkforcemanagementAdherenceExplanationsQuery**](#PostWorkforcemanagementAdherenceExplanationsQuery) | **Post** /api/v2/workforcemanagement/adherence/explanations/query | Query adherence explanations for the current user |
-| [**PostWorkforcemanagementAdherenceHistorical**](#PostWorkforcemanagementAdherenceHistorical) | **Post** /api/v2/workforcemanagement/adherence/historical | Deprecated. Use bulk routes instead (/adherence/historical/bulk) |
 | [**PostWorkforcemanagementAdherenceHistoricalBulk**](#PostWorkforcemanagementAdherenceHistoricalBulk) | **Post** /api/v2/workforcemanagement/adherence/historical/bulk | Request a historical adherence report in bulk |
 | [**PostWorkforcemanagementAgentAdherenceExplanations**](#PostWorkforcemanagementAgentAdherenceExplanations) | **Post** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations | Add an adherence explanation for the requested user |
 | [**PostWorkforcemanagementAgentAdherenceExplanationsQuery**](#PostWorkforcemanagementAgentAdherenceExplanationsQuery) | **Post** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/query | Query adherence explanations for the given agent across a specified range |
@@ -200,6 +201,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementAgentsIntegrationsHrisQuery**](#PostWorkforcemanagementAgentsIntegrationsHrisQuery) | **Post** /api/v2/workforcemanagement/agents/integrations/hris/query | Query integrations for agents |
 | [**PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs**](#PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs) | **Post** /api/v2/workforcemanagement/agents/me/adherence/historical/jobs | Request an agent historical adherence report |
 | [**PostWorkforcemanagementAgentsMePossibleworkshifts**](#PostWorkforcemanagementAgentsMePossibleworkshifts) | **Post** /api/v2/workforcemanagement/agents/me/possibleworkshifts | Get agent possible work shifts for requested time frame |
+| [**PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkAdd**](#PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkAdd) | **Post** /api/v2/workforcemanagement/agents/opportunities/enrollments/bulk/add | Bulk add enrollments to opportunities for the authenticated agent |
+| [**PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkStatusesUpdate**](#PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkStatusesUpdate) | **Post** /api/v2/workforcemanagement/agents/opportunities/enrollments/bulk/statuses/update | Bulk update enrollment status for the authenticated agent |
+| [**PostWorkforcemanagementAgentsOpportunitiesQuery**](#PostWorkforcemanagementAgentsOpportunitiesQuery) | **Post** /api/v2/workforcemanagement/agents/opportunities/query | Query opportunities for the authenticated agent |
 | [**PostWorkforcemanagementAgentschedulesManagementunitsMine**](#PostWorkforcemanagementAgentschedulesManagementunitsMine) | **Post** /api/v2/workforcemanagement/agentschedules/managementunits/mine | Fetch agent schedules for the logged in user&#39;s management unit |
 | [**PostWorkforcemanagementAgentschedulesMine**](#PostWorkforcemanagementAgentschedulesMine) | **Post** /api/v2/workforcemanagement/agentschedules/mine | Get published schedule for the current user |
 | [**PostWorkforcemanagementAlternativeshiftsOffersJobs**](#PostWorkforcemanagementAlternativeshiftsOffersJobs) | **Post** /api/v2/workforcemanagement/alternativeshifts/offers/jobs | Request a list of alternative shift offers for a given schedule |
@@ -219,6 +223,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitCapacityplans**](#PostWorkforcemanagementBusinessunitCapacityplans) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans | Create a new capacity plan |
 | [**PostWorkforcemanagementBusinessunitCapacityplansBulkRemove**](#PostWorkforcemanagementBusinessunitCapacityplansBulkRemove) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/bulk/remove | Delete capacity plans in a business unit |
 | [**PostWorkforcemanagementBusinessunitIntraday**](#PostWorkforcemanagementBusinessunitIntraday) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday | Get intraday data for the given date for the requested planningGroupIds |
+| [**PostWorkforcemanagementBusinessunitOpportunitiesBulkAdd**](#PostWorkforcemanagementBusinessunitOpportunitiesBulkAdd) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/add | Bulk add opportunities |
+| [**PostWorkforcemanagementBusinessunitOpportunitiesBulkPublish**](#PostWorkforcemanagementBusinessunitOpportunitiesBulkPublish) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/publish | Bulk publish opportunities |
+| [**PostWorkforcemanagementBusinessunitOpportunitiesBulkRemove**](#PostWorkforcemanagementBusinessunitOpportunitiesBulkRemove) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/remove | Bulk remove opportunities |
+| [**PostWorkforcemanagementBusinessunitOpportunitiesBulkStatusesUpdate**](#PostWorkforcemanagementBusinessunitOpportunitiesBulkStatusesUpdate) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/statuses/update | Bulk update opportunities status |
+| [**PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsBulkStatusesUpdate**](#PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsBulkStatusesUpdate) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/enrollments/bulk/statuses/update | Bulk update enrollment status |
+| [**PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQuery**](#PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/enrollments/query | Query enrollments |
+| [**PostWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQuery**](#PostWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/externalactivities/query | Query opportunities by external activity IDs |
+| [**PostWorkforcemanagementBusinessunitOpportunitiesQuery**](#PostWorkforcemanagementBusinessunitOpportunitiesQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/query | Query opportunities within the specified date range |
 | [**PostWorkforcemanagementBusinessunitPlanninggroups**](#PostWorkforcemanagementBusinessunitPlanninggroups) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups | Adds a new planning group |
 | [**PostWorkforcemanagementBusinessunitServicegoaltemplates**](#PostWorkforcemanagementBusinessunitServicegoaltemplates) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates | Adds a new service goal template |
 | [**PostWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs**](#PostWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/evaluate/jobs | Queries and evaluates against shift trade configuration shift trades in a management unit per week |
@@ -2080,6 +2092,12 @@ Requires ANY permissions:
 * wfm:workPlanRotation:delete
 * wfm:workPlanRotation:edit
 * wfm:workPlanRotation:view
+* wfm:agentSchedulingPreferencesQuery:view
+* wfm:agentSchedulingPreferences:edit
+* wfm:agentSchedulingPreferencesSettings:view
+* wfm:schedulingPreferencesQuery:view
+* wfm:schedulingPreferencesSettings:view
+* wfm:schedulingPreferencesSettings:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -2646,6 +2664,12 @@ Requires ANY permissions:
 * coaching:appointment:edit
 * learning:assignment:add
 * learning:assignment:reschedule
+* wfm:agentSchedulingPreferencesQuery:view
+* wfm:agentSchedulingPreferences:edit
+* wfm:agentSchedulingPreferencesSettings:view
+* wfm:schedulingPreferencesQuery:view
+* wfm:schedulingPreferencesSettings:view
+* wfm:schedulingPreferencesSettings:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -2834,6 +2858,12 @@ Requires ANY permissions:
 * wfm:workPlanRotation:delete
 * wfm:workPlanRotation:edit
 * wfm:workPlanRotation:view
+* wfm:agentSchedulingPreferencesQuery:view
+* wfm:agentSchedulingPreferences:edit
+* wfm:agentSchedulingPreferencesSettings:view
+* wfm:schedulingPreferencesQuery:view
+* wfm:schedulingPreferencesSettings:view
+* wfm:schedulingPreferencesSettings:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -3979,7 +4009,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
-| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentAdherenceAdjustments, AgentAdherenceAdjustmentsQuery, AgentTimeOffRequest, AgentWorkPlanBid, AgentScheduleBid, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, AgentOpportunitiesQuery, AgentOpportunitiesEnrollments, AgentOpportunitiesEnrollmentsStatuses, ActivityCodes, ActivityPlans, AdherenceAdjustmentsSettings, AdherenceAdjustmentsReasonCodes, AdherenceAdjustments, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, CapacityPlanForecastInputs, ContinuousForecast, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans, ScheduleBid, ScheduleBidGroup, Opportunities, OpportunitiesQuery, OpportunitiesEnrollmentsQuery, OpportunitiesExternalActivitiesQuery, OpportunitiesStatuses, OpportunitiesEnrollmentsStatuses |
+| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentAdherenceAdjustments, AgentTimeOffRequest, AgentWorkPlanBid, AgentScheduleBid, AgentShiftTrade, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, AgentOpportunitiesQuery, AgentOpportunitiesEnrollments, AgentOpportunitiesEnrollmentsStatuses, AgentSchedulingPreferencesQuery, AgentSchedulingPreferences, AgentSchedulingPreferencesSettings, ActivityCodes, ActivityPlans, AdherenceAdjustmentsSettings, AdherenceAdjustmentsReasonCodes, AdherenceAdjustments, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, CapacityPlanForecastInputs, CapacityPlanPerformancePrediction, ContinuousForecast, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans, ScheduleBid, ScheduleBidGroup, Opportunities, OpportunitiesQuery, OpportunitiesEnrollmentsQuery, OpportunitiesExternalActivitiesQuery, OpportunitiesStatuses, OpportunitiesEnrollmentsStatuses, SchedulingPreferencesQuery, SchedulingPreferencesSettings, DecisionMetrics |
 | **divisionId** | **string**| If specified, the list of management units belonging to the specified division will be returned | [optional]  |
 
 ### Return type
@@ -4047,6 +4077,72 @@ namespace Example
 ### Return type
 
 [**MinimumStaffingResponse**](MinimumStaffingResponse)
+
+
+## GetWorkforcemanagementBusinessunitOpportunity
+
+> [**OpportunityResultWithAgentIds**](OpportunityResultWithAgentIds) GetWorkforcemanagementBusinessunitOpportunity (string businessUnitId, string opportunityId, string expand = null)
+
+
+Get opportunity details
+
+Requires ANY permissions: 
+
+* wfm:opportunity:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitOpportunityExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var opportunityId = opportunityId_example;  // string | The ID of the opportunity
+            var expand = expand_example;  // string | List of resources to expand (optional) 
+
+            try
+            { 
+                // Get opportunity details
+                OpportunityResultWithAgentIds result = apiInstance.GetWorkforcemanagementBusinessunitOpportunity(businessUnitId, opportunityId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitOpportunity: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **opportunityId** | **string**| The ID of the opportunity |  |
+| **expand** | **string**| List of resources to expand | [optional] <br />**Values**: agentIds |
+
+### Return type
+
+[**OpportunityResultWithAgentIds**](OpportunityResultWithAgentIds)
 
 
 ## GetWorkforcemanagementBusinessunitPlanninggroup
@@ -6698,7 +6794,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **feature** | **string**| If specified, the list of business units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentAdherenceAdjustments, AgentAdherenceAdjustmentsQuery, AgentTimeOffRequest, AgentWorkPlanBid, AgentScheduleBid, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, AgentOpportunitiesQuery, AgentOpportunitiesEnrollments, AgentOpportunitiesEnrollmentsStatuses, ActivityCodes, ActivityPlans, AdherenceAdjustmentsSettings, AdherenceAdjustmentsReasonCodes, AdherenceAdjustments, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, CapacityPlanForecastInputs, ContinuousForecast, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans, ScheduleBid, ScheduleBidGroup, Opportunities, OpportunitiesQuery, OpportunitiesEnrollmentsQuery, OpportunitiesExternalActivitiesQuery, OpportunitiesStatuses, OpportunitiesEnrollmentsStatuses |
+| **feature** | **string**| If specified, the list of business units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentAdherenceAdjustments, AgentTimeOffRequest, AgentWorkPlanBid, AgentScheduleBid, AgentShiftTrade, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, AgentOpportunitiesQuery, AgentOpportunitiesEnrollments, AgentOpportunitiesEnrollmentsStatuses, AgentSchedulingPreferencesQuery, AgentSchedulingPreferences, AgentSchedulingPreferencesSettings, ActivityCodes, ActivityPlans, AdherenceAdjustmentsSettings, AdherenceAdjustmentsReasonCodes, AdherenceAdjustments, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, CapacityPlanForecastInputs, CapacityPlanPerformancePrediction, ContinuousForecast, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans, ScheduleBid, ScheduleBidGroup, Opportunities, OpportunitiesQuery, OpportunitiesEnrollmentsQuery, OpportunitiesExternalActivitiesQuery, OpportunitiesStatuses, OpportunitiesEnrollmentsStatuses, SchedulingPreferencesQuery, SchedulingPreferencesSettings, DecisionMetrics |
 | **divisionId** | **string**| If specified, the list of business units belonging to the specified division will be returned | [optional]  |
 
 ### Return type
@@ -7312,6 +7408,12 @@ Requires ANY permissions:
 * wfm:workPlanRotation:delete
 * wfm:workPlanRotation:edit
 * wfm:workPlanRotation:view
+* wfm:agentSchedulingPreferencesQuery:view
+* wfm:agentSchedulingPreferences:edit
+* wfm:agentSchedulingPreferencesSettings:view
+* wfm:schedulingPreferencesQuery:view
+* wfm:schedulingPreferencesSettings:view
+* wfm:schedulingPreferencesSettings:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -7419,6 +7521,12 @@ Requires ANY permissions:
 * wfm:workPlanRotation:delete
 * wfm:workPlanRotation:edit
 * wfm:workPlanRotation:view
+* wfm:agentSchedulingPreferencesQuery:view
+* wfm:agentSchedulingPreferences:edit
+* wfm:agentSchedulingPreferencesSettings:view
+* wfm:schedulingPreferencesQuery:view
+* wfm:schedulingPreferencesSettings:view
+* wfm:schedulingPreferencesSettings:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -7607,8 +7715,13 @@ namespace Example
 
 > [**ShiftTradeListResponse**](ShiftTradeListResponse) GetWorkforcemanagementManagementunitAgentShifttrades (string managementUnitId, string agentId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Gets all the shift trades for a given agent
+
+Deprecated. Use new route instead (/businessunits/{businessUnitId}/shifttrading/trades/query/jobs)
 
 Requires ANY permissions: 
 
@@ -7672,8 +7785,13 @@ namespace Example
 
 > [**ShiftTradeMatchesSummaryResponse**](ShiftTradeMatchesSummaryResponse) GetWorkforcemanagementManagementunitShifttradesMatched (string managementUnitId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Gets a summary of all shift trades in the matched state
+
+Deprecated. Use new route instead (/businessunits/{businessUnitId}/shifttrading/weeks/summary/jobs)
 
 Requires ANY permissions: 
 
@@ -8469,8 +8587,13 @@ namespace Example
 
 > [**WeekShiftTradeListResponse**](WeekShiftTradeListResponse) GetWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, bool? evaluateMatches = null, bool? includeCrossWeekShifts = null, bool? forceDownloadService = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Gets all the shift trades for a given week
+
+Deprecated. Use new route instead (/businessunits/{businessUnitId}/shifttrading/trades/evaluate/jobs)
 
 Requires ANY permissions: 
 
@@ -8866,7 +8989,7 @@ namespace Example
 | **pageSize** | **int?**| Deprecated, paging is not supported | [optional]  |
 | **pageNumber** | **int?**| Deprecated, paging is not supported | [optional]  |
 | **expand** | **string**| Deprecated, expand settings on the single MU route | [optional] <br />**Values**: details |
-| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentAdherenceAdjustments, AgentAdherenceAdjustmentsQuery, AgentTimeOffRequest, AgentWorkPlanBid, AgentScheduleBid, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, AgentOpportunitiesQuery, AgentOpportunitiesEnrollments, AgentOpportunitiesEnrollmentsStatuses, ActivityCodes, ActivityPlans, AdherenceAdjustmentsSettings, AdherenceAdjustmentsReasonCodes, AdherenceAdjustments, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, CapacityPlanForecastInputs, ContinuousForecast, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans, ScheduleBid, ScheduleBidGroup, Opportunities, OpportunitiesQuery, OpportunitiesEnrollmentsQuery, OpportunitiesExternalActivitiesQuery, OpportunitiesStatuses, OpportunitiesEnrollmentsStatuses |
+| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentAdherenceAdjustments, AgentTimeOffRequest, AgentWorkPlanBid, AgentScheduleBid, AgentShiftTrade, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, AgentOpportunitiesQuery, AgentOpportunitiesEnrollments, AgentOpportunitiesEnrollmentsStatuses, AgentSchedulingPreferencesQuery, AgentSchedulingPreferences, AgentSchedulingPreferencesSettings, ActivityCodes, ActivityPlans, AdherenceAdjustmentsSettings, AdherenceAdjustmentsReasonCodes, AdherenceAdjustments, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, CapacityPlanForecastInputs, CapacityPlanPerformancePrediction, ContinuousForecast, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans, ScheduleBid, ScheduleBidGroup, Opportunities, OpportunitiesQuery, OpportunitiesEnrollmentsQuery, OpportunitiesExternalActivitiesQuery, OpportunitiesStatuses, OpportunitiesEnrollmentsStatuses, SchedulingPreferencesQuery, SchedulingPreferencesSettings, DecisionMetrics |
 | **divisionId** | **string**| If specified, the list of management units belonging to the specified division will be returned | [optional]  |
 
 ### Return type
@@ -9060,8 +9183,13 @@ namespace Example
 
 > [**ShiftTradeListResponse**](ShiftTradeListResponse) GetWorkforcemanagementShifttrades ()
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Gets all of my shift trades
+
+Deprecated. Use new route instead (/shifttrading/trades/mine/query/jobs)
 
 Requires ANY permissions: 
 
@@ -10756,6 +10884,74 @@ namespace Example
 [**MinimumStaffingResponse**](MinimumStaffingResponse)
 
 
+## PatchWorkforcemanagementBusinessunitOpportunity
+
+> [**OpportunityResult**](OpportunityResult) PatchWorkforcemanagementBusinessunitOpportunity (string businessUnitId, string opportunityId, PatchOpportunityRequest body)
+
+
+Update the opportunity
+
+Only opportunities with Draft status can be updated.
+
+Requires ANY permissions: 
+
+* wfm:opportunity:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitOpportunityExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var opportunityId = opportunityId_example;  // string | The ID of the opportunity
+            var body = new PatchOpportunityRequest(); // PatchOpportunityRequest | body
+
+            try
+            { 
+                // Update the opportunity
+                OpportunityResult result = apiInstance.PatchWorkforcemanagementBusinessunitOpportunity(businessUnitId, opportunityId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitOpportunity: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **opportunityId** | **string**| The ID of the opportunity |  |
+| **body** | [**PatchOpportunityRequest**](PatchOpportunityRequest)| body |  |
+
+### Return type
+
+[**OpportunityResult**](OpportunityResult)
+
+
 ## PatchWorkforcemanagementBusinessunitPlanninggroup
 
 > [**PlanningGroup**](PlanningGroup) PatchWorkforcemanagementBusinessunitPlanninggroup (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body)
@@ -10763,9 +10959,12 @@ namespace Example
 
 Updates the planning group
 
-Requires ANY permissions: 
+If the request body contains queue references in route paths, routing:queue:view is required in each referenced queue's division.
+
+Requires ALL permissions: 
 
 * wfm:planningGroup:edit
+* routing:queue:view
 
 ### Example
 ```{"language":"csharp"}
@@ -11880,8 +12079,13 @@ namespace Example
 
 > [**ShiftTradeResponse**](ShiftTradeResponse) PatchWorkforcemanagementManagementunitWeekShifttrade (string managementUnitId, String weekDateId, string tradeId, PatchShiftTradeRequest body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Updates a shift trade. This route can only be called by the initiating agent
+
+Deprecated. Use new route instead (/shifttrading/trades/{tradeId}/jobs)
 
 Requires ANY permissions: 
 
@@ -12522,71 +12726,6 @@ namespace Example
 [**QueryAdherenceExplanationsResponse**](QueryAdherenceExplanationsResponse)
 
 
-## PostWorkforcemanagementAdherenceHistorical
-
-> [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse) PostWorkforcemanagementAdherenceHistorical (WfmHistoricalAdherenceQueryForUsers body = null)
-
-:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
-This resource has been deprecated
-:::
-
-Deprecated. Use bulk routes instead (/adherence/historical/bulk)
-
-Requires ANY permissions: 
-
-* wfm:historicalAdherence:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostWorkforcemanagementAdherenceHistoricalExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new WorkforceManagementApi();
-            var body = new WfmHistoricalAdherenceQueryForUsers(); // WfmHistoricalAdherenceQueryForUsers | body (optional) 
-
-            try
-            { 
-                // Deprecated. Use bulk routes instead (/adherence/historical/bulk)
-                WfmHistoricalAdherenceResponse result = apiInstance.PostWorkforcemanagementAdherenceHistorical(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAdherenceHistorical: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**WfmHistoricalAdherenceQueryForUsers**](WfmHistoricalAdherenceQueryForUsers)| body | [optional]  |
-
-### Return type
-
-[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse)
-
-
 ## PostWorkforcemanagementAdherenceHistoricalBulk
 
 > [**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse) PostWorkforcemanagementAdherenceHistoricalBulk (WfmHistoricalAdherenceBulkQuery body)
@@ -13096,6 +13235,202 @@ namespace Example
 ### Return type
 
 [**AgentPossibleWorkShiftsResponse**](AgentPossibleWorkShiftsResponse)
+
+
+## PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkAdd
+
+> [**AgentBulkAddOpportunityEnrollmentsResponse**](AgentBulkAddOpportunityEnrollmentsResponse) PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkAdd (AgentBulkAddOpportunityEnrollmentsRequest body)
+
+
+Bulk add enrollments to opportunities for the authenticated agent
+
+Allows an agent to enroll in opportunities. This endpoint can return partial success.
+
+Requires ANY permissions: 
+
+* wfm:agentOpportunitiesEnrollments:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkAddExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new AgentBulkAddOpportunityEnrollmentsRequest(); // AgentBulkAddOpportunityEnrollmentsRequest | body
+
+            try
+            { 
+                // Bulk add enrollments to opportunities for the authenticated agent
+                AgentBulkAddOpportunityEnrollmentsResponse result = apiInstance.PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkAdd(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkAdd: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AgentBulkAddOpportunityEnrollmentsRequest**](AgentBulkAddOpportunityEnrollmentsRequest)| body |  |
+
+### Return type
+
+[**AgentBulkAddOpportunityEnrollmentsResponse**](AgentBulkAddOpportunityEnrollmentsResponse)
+
+
+## PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkStatusesUpdate
+
+> [**AgentBulkStatusUpdateOpportunityEnrollmentsResponse**](AgentBulkStatusUpdateOpportunityEnrollmentsResponse) PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkStatusesUpdate (AgentBulkStatusUpdateOpportunityEnrollmentsRequest body)
+
+
+Bulk update enrollment status for the authenticated agent
+
+Allows an agent to update the status of their enrollments (e.g. withdraw). Returns partial success if some enrollments cannot be updated.
+
+Requires ANY permissions: 
+
+* wfm:agentOpportunitiesEnrollmentsStatuses:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkStatusesUpdateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new AgentBulkStatusUpdateOpportunityEnrollmentsRequest(); // AgentBulkStatusUpdateOpportunityEnrollmentsRequest | body
+
+            try
+            { 
+                // Bulk update enrollment status for the authenticated agent
+                AgentBulkStatusUpdateOpportunityEnrollmentsResponse result = apiInstance.PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkStatusesUpdate(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkStatusesUpdate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AgentBulkStatusUpdateOpportunityEnrollmentsRequest**](AgentBulkStatusUpdateOpportunityEnrollmentsRequest)| body |  |
+
+### Return type
+
+[**AgentBulkStatusUpdateOpportunityEnrollmentsResponse**](AgentBulkStatusUpdateOpportunityEnrollmentsResponse)
+
+
+## PostWorkforcemanagementAgentsOpportunitiesQuery
+
+> [**AgentQueryOpportunitiesResponse**](AgentQueryOpportunitiesResponse) PostWorkforcemanagementAgentsOpportunitiesQuery (QueryOpportunitiesRequest body, string expand = null, bool? forceDownloadService = null)
+
+
+Query opportunities for the authenticated agent
+
+Queries within the specified date range. Each opportunity includes the agent's enrollment details if they have enrolled.
+
+Requires ANY permissions: 
+
+* wfm:agentOpportunitiesQuery:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAgentsOpportunitiesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new QueryOpportunitiesRequest(); // QueryOpportunitiesRequest | body
+            var expand = expand_example;  // string | List of resources to expand (optional) 
+            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) 
+
+            try
+            { 
+                // Query opportunities for the authenticated agent
+                AgentQueryOpportunitiesResponse result = apiInstance.PostWorkforcemanagementAgentsOpportunitiesQuery(body, expand, forceDownloadService);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAgentsOpportunitiesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**QueryOpportunitiesRequest**](QueryOpportunitiesRequest)| body |  |
+| **expand** | **string**| List of resources to expand | [optional] <br />**Values**: enrollment |
+| **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional]  |
+
+### Return type
+
+[**AgentQueryOpportunitiesResponse**](AgentQueryOpportunitiesResponse)
 
 
 ## PostWorkforcemanagementAgentschedulesManagementunitsMine
@@ -14330,6 +14665,534 @@ namespace Example
 [**AsyncIntradayResponse**](AsyncIntradayResponse)
 
 
+## PostWorkforcemanagementBusinessunitOpportunitiesBulkAdd
+
+> [**BulkAddOpportunitiesResponse**](BulkAddOpportunitiesResponse) PostWorkforcemanagementBusinessunitOpportunitiesBulkAdd (string businessUnitId, BulkAddOpportunitiesRequest body)
+
+
+Bulk add opportunities
+
+Requires ANY permissions: 
+
+* wfm:opportunities:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitOpportunitiesBulkAddExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new BulkAddOpportunitiesRequest(); // BulkAddOpportunitiesRequest | body
+
+            try
+            { 
+                // Bulk add opportunities
+                BulkAddOpportunitiesResponse result = apiInstance.PostWorkforcemanagementBusinessunitOpportunitiesBulkAdd(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitOpportunitiesBulkAdd: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**BulkAddOpportunitiesRequest**](BulkAddOpportunitiesRequest)| body |  |
+
+### Return type
+
+[**BulkAddOpportunitiesResponse**](BulkAddOpportunitiesResponse)
+
+
+## PostWorkforcemanagementBusinessunitOpportunitiesBulkPublish
+
+> [**BulkPublishOpportunitiesResponse**](BulkPublishOpportunitiesResponse) PostWorkforcemanagementBusinessunitOpportunitiesBulkPublish (string businessUnitId, BulkOpportunitiesRequest body)
+
+
+Bulk publish opportunities
+
+Published opportunities become available for agent enrollment when they open. Returns partial success if some opportunities cannot be published.
+
+Requires ANY permissions: 
+
+* wfm:opportunities:publish
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitOpportunitiesBulkPublishExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new BulkOpportunitiesRequest(); // BulkOpportunitiesRequest | body
+
+            try
+            { 
+                // Bulk publish opportunities
+                BulkPublishOpportunitiesResponse result = apiInstance.PostWorkforcemanagementBusinessunitOpportunitiesBulkPublish(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitOpportunitiesBulkPublish: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**BulkOpportunitiesRequest**](BulkOpportunitiesRequest)| body |  |
+
+### Return type
+
+[**BulkPublishOpportunitiesResponse**](BulkPublishOpportunitiesResponse)
+
+
+## PostWorkforcemanagementBusinessunitOpportunitiesBulkRemove
+
+> [**BulkRemoveOpportunitiesResponse**](BulkRemoveOpportunitiesResponse) PostWorkforcemanagementBusinessunitOpportunitiesBulkRemove (string businessUnitId, BulkOpportunitiesRequest body)
+
+
+Bulk remove opportunities
+
+This operation is permanent and cannot be undone. Returns partial success if some opportunities cannot be removed.
+
+Requires ANY permissions: 
+
+* wfm:opportunities:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitOpportunitiesBulkRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new BulkOpportunitiesRequest(); // BulkOpportunitiesRequest | body
+
+            try
+            { 
+                // Bulk remove opportunities
+                BulkRemoveOpportunitiesResponse result = apiInstance.PostWorkforcemanagementBusinessunitOpportunitiesBulkRemove(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitOpportunitiesBulkRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**BulkOpportunitiesRequest**](BulkOpportunitiesRequest)| body |  |
+
+### Return type
+
+[**BulkRemoveOpportunitiesResponse**](BulkRemoveOpportunitiesResponse)
+
+
+## PostWorkforcemanagementBusinessunitOpportunitiesBulkStatusesUpdate
+
+> [**BulkOpportunitiesStatusUpdateResponse**](BulkOpportunitiesStatusUpdateResponse) PostWorkforcemanagementBusinessunitOpportunitiesBulkStatusesUpdate (string businessUnitId, BulkOpportunitiesStatusUpdateRequest body)
+
+
+Bulk update opportunities status
+
+If status is Closed, pending enrollments are automatically denied; approved enrollments remain in schedules. Returns partial success if some opportunities cannot be updated.
+
+Requires ANY permissions: 
+
+* wfm:opportunitiesStatuses:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitOpportunitiesBulkStatusesUpdateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new BulkOpportunitiesStatusUpdateRequest(); // BulkOpportunitiesStatusUpdateRequest | body
+
+            try
+            { 
+                // Bulk update opportunities status
+                BulkOpportunitiesStatusUpdateResponse result = apiInstance.PostWorkforcemanagementBusinessunitOpportunitiesBulkStatusesUpdate(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitOpportunitiesBulkStatusesUpdate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**BulkOpportunitiesStatusUpdateRequest**](BulkOpportunitiesStatusUpdateRequest)| body |  |
+
+### Return type
+
+[**BulkOpportunitiesStatusUpdateResponse**](BulkOpportunitiesStatusUpdateResponse)
+
+
+## PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsBulkStatusesUpdate
+
+> [**BulkUpdateOpportunityEnrollmentsStatusResponse**](BulkUpdateOpportunityEnrollmentsStatusResponse) PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsBulkStatusesUpdate (string businessUnitId, BulkOpportunityEnrollmentsStatusUpdateRequest body)
+
+
+Bulk update enrollment status
+
+Updates the status of enrollments (approve/deny). Returns partial success if some enrollments cannot be updated.
+
+Requires ANY permissions: 
+
+* wfm:opportunitiesEnrollmentsStatuses:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsBulkStatusesUpdateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new BulkOpportunityEnrollmentsStatusUpdateRequest(); // BulkOpportunityEnrollmentsStatusUpdateRequest | body
+
+            try
+            { 
+                // Bulk update enrollment status
+                BulkUpdateOpportunityEnrollmentsStatusResponse result = apiInstance.PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsBulkStatusesUpdate(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsBulkStatusesUpdate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**BulkOpportunityEnrollmentsStatusUpdateRequest**](BulkOpportunityEnrollmentsStatusUpdateRequest)| body |  |
+
+### Return type
+
+[**BulkUpdateOpportunityEnrollmentsStatusResponse**](BulkUpdateOpportunityEnrollmentsStatusResponse)
+
+
+## PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQuery
+
+> [**QueryOpportunityEnrollmentsResponse**](QueryOpportunityEnrollmentsResponse) PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQuery (string businessUnitId, QueryOpportunityEnrollmentsRequest body, string expand = null, bool? forceDownloadService = null)
+
+
+Query enrollments
+
+For more information about opportunities, use the expand parameter.
+
+Requires ANY permissions: 
+
+* wfm:opportunitiesEnrollmentsQuery:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new QueryOpportunityEnrollmentsRequest(); // QueryOpportunityEnrollmentsRequest | body
+            var expand = expand_example;  // string | List of resources to expand (optional) 
+            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) 
+
+            try
+            { 
+                // Query enrollments
+                QueryOpportunityEnrollmentsResponse result = apiInstance.PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQuery(businessUnitId, body, expand, forceDownloadService);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**QueryOpportunityEnrollmentsRequest**](QueryOpportunityEnrollmentsRequest)| body |  |
+| **expand** | **string**| List of resources to expand | [optional] <br />**Values**: opportunities |
+| **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional]  |
+
+### Return type
+
+[**QueryOpportunityEnrollmentsResponse**](QueryOpportunityEnrollmentsResponse)
+
+
+## PostWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQuery
+
+> [**QueryExternalActivityOpportunitiesResponse**](QueryExternalActivityOpportunitiesResponse) PostWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQuery (string businessUnitId, BulkOpportunitiesExternalActivitiesRequest body)
+
+
+Query opportunities by external activity IDs
+
+Requires ANY permissions: 
+
+* wfm:opportunitiesExternalActivitiesQuery:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new BulkOpportunitiesExternalActivitiesRequest(); // BulkOpportunitiesExternalActivitiesRequest | body
+
+            try
+            { 
+                // Query opportunities by external activity IDs
+                QueryExternalActivityOpportunitiesResponse result = apiInstance.PostWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQuery(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**BulkOpportunitiesExternalActivitiesRequest**](BulkOpportunitiesExternalActivitiesRequest)| body |  |
+
+### Return type
+
+[**QueryExternalActivityOpportunitiesResponse**](QueryExternalActivityOpportunitiesResponse)
+
+
+## PostWorkforcemanagementBusinessunitOpportunitiesQuery
+
+> [**QueryOpportunitiesResponse**](QueryOpportunitiesResponse) PostWorkforcemanagementBusinessunitOpportunitiesQuery (string businessUnitId, QueryOpportunitiesRequest body, bool? forceDownloadService = null)
+
+
+Query opportunities within the specified date range
+
+Requires ANY permissions: 
+
+* wfm:opportunitiesQuery:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitOpportunitiesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new QueryOpportunitiesRequest(); // QueryOpportunitiesRequest | body
+            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) 
+
+            try
+            { 
+                // Query opportunities within the specified date range
+                QueryOpportunitiesResponse result = apiInstance.PostWorkforcemanagementBusinessunitOpportunitiesQuery(businessUnitId, body, forceDownloadService);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitOpportunitiesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**QueryOpportunitiesRequest**](QueryOpportunitiesRequest)| body |  |
+| **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional]  |
+
+### Return type
+
+[**QueryOpportunitiesResponse**](QueryOpportunitiesResponse)
+
+
 ## PostWorkforcemanagementBusinessunitPlanninggroups
 
 > [**PlanningGroup**](PlanningGroup) PostWorkforcemanagementBusinessunitPlanninggroups (string businessUnitId, CreatePlanningGroupRequest body)
@@ -14337,9 +15200,12 @@ namespace Example
 
 Adds a new planning group
 
-Requires ANY permissions: 
+If the request body contains queue references in route paths, routing:queue:view is required in each referenced queue's division.
+
+Requires ALL permissions: 
 
 * wfm:planningGroup:add
+* routing:queue:view
 
 ### Example
 ```{"language":"csharp"}
@@ -17908,8 +18774,13 @@ namespace Example
 
 > [**MatchShiftTradeResponse**](MatchShiftTradeResponse) PostWorkforcemanagementManagementunitWeekShifttradeMatch (string managementUnitId, String weekDateId, string tradeId, MatchShiftTradeRequest body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Matches a shift trade. This route can only be called by the receiving agent
+
+Deprecated. Use new route instead (/shifttrading/trades/{tradeId}/match/jobs)
 
 Requires ANY permissions: 
 
@@ -17976,8 +18847,13 @@ namespace Example
 
 > [**ShiftTradeResponse**](ShiftTradeResponse) PostWorkforcemanagementManagementunitWeekShifttrades (string managementUnitId, String weekDateId, AddShiftTradeRequest body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Adds a shift trade
+
+Deprecated. Use new route instead (/shifttrading/trades/jobs)
 
 Requires ANY permissions: 
 
@@ -18042,8 +18918,13 @@ namespace Example
 
 > [**SearchShiftTradesResponse**](SearchShiftTradesResponse) PostWorkforcemanagementManagementunitWeekShifttradesSearch (string managementUnitId, String weekDateId, SearchShiftTradesRequest body, bool? forceDownloadService = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Searches for potential shift trade matches for the current agent
+
+Deprecated. Use new route instead (/businessunits/{businessUnitId}/shifttrading/unmatched/search/jobs)
 
 Requires ANY permissions: 
 
@@ -18110,10 +18991,13 @@ namespace Example
 
 > [**BulkUpdateShiftTradeStateResponse**](BulkUpdateShiftTradeStateResponse) PostWorkforcemanagementManagementunitWeekShifttradesStateBulk (string managementUnitId, String weekDateId, BulkShiftTradeStateUpdateRequest body, bool? forceAsync = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Updates the state of a batch of shift trades
 
-Admin functionality is not supported with \"mine\".
+Admin functionality is not supported with \"mine\". Deprecated. Use new route instead (/businessunits/{buId}/shifttrading/trades/state/bulk/jobs)
 
 Requires ANY permissions: 
 
@@ -19792,4 +20676,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 263.0.0_
+_PureCloudPlatform.Client.V2 264.0.0_

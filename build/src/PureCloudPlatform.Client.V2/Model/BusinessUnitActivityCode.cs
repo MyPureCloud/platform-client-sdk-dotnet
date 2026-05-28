@@ -87,9 +87,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The category of the activity code</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessUnitActivityCode" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected BusinessUnitActivityCode() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BusinessUnitActivityCode" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">Name.</param>
         /// <param name="Active">Whether this activity code is active or has been deleted.</param>
         /// <param name="DefaultCode">Whether this is a default activity code.</param>
@@ -104,8 +111,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SecondaryPresences">The secondary presences of this activity code.</param>
         /// <param name="PlanningGroups">Planning groups associated with this activity code.</param>
         /// <param name="Metadata">Version metadata of this activity code.</param>
-        public BusinessUnitActivityCode(string Name = null, bool? Active = null, bool? DefaultCode = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, bool? CountsTowardShrinkage = null, bool? PlannedShrinkage = null, bool? Interruptible = null, List<SecondaryPresence> SecondaryPresences = null, List<PlanningGroupReference> PlanningGroups = null, WfmVersionedEntityMetadata Metadata = null)
+        public BusinessUnitActivityCode(string Id = null, string Name = null, bool? Active = null, bool? DefaultCode = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, bool? CountsTowardShrinkage = null, bool? PlannedShrinkage = null, bool? Interruptible = null, List<SecondaryPresence> SecondaryPresences = null, List<PlanningGroupReference> PlanningGroups = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Active = Active;
             this.DefaultCode = DefaultCode;
@@ -130,7 +138,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

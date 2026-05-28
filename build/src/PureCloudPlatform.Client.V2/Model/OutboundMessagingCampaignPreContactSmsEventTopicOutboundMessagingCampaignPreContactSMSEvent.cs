@@ -194,7 +194,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum OutboundStuckContact for "OUTBOUND_STUCK_CONTACT"
             /// </summary>
             [EnumMember(Value = "OUTBOUND_STUCK_CONTACT")]
-            OutboundStuckContact
+            OutboundStuckContact,
+            
+            /// <summary>
+            /// Enum OutboundInvalidContentTemplate for "OUTBOUND_INVALID_CONTENT_TEMPLATE"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_INVALID_CONTENT_TEMPLATE")]
+            OutboundInvalidContentTemplate,
+            
+            /// <summary>
+            /// Enum OutboundContentTemplateNotAuthorized for "OUTBOUND_CONTENT_TEMPLATE_NOT_AUTHORIZED"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_CONTENT_TEMPLATE_NOT_AUTHORIZED")]
+            OutboundContentTemplateNotAuthorized
         }
         /// <summary>
         /// Gets or Sets OutboundCampaignType

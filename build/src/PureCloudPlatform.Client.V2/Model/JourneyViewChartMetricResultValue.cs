@@ -33,7 +33,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Value for this metric</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
-        public int? Value { get; private set; }
+        public Number Value { get; private set; }
 
 
 

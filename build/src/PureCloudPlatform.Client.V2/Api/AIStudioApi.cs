@@ -94,15 +94,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
-        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
-        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
-        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
         /// <param name="pageNumber">Page number. (optional, default to 1)</param>
         /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
         /// <returns>SummarySettingEntityListing</returns>
         
-        SummarySettingEntityListing GetConversationsSummariesSettings (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null);
+        SummarySettingEntityListing GetConversationsSummariesSettings (int? pageNumber = null, int? pageSize = null, string name = null, string sortOrder = null, string language = null, string sortBy = null);
 
         /// <summary>
         /// Get all summary settings.
@@ -111,15 +111,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
-        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
-        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
-        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
         /// <param name="pageNumber">Page number. (optional, default to 1)</param>
         /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
         /// <returns>ApiResponse of SummarySettingEntityListing</returns>
         
-        ApiResponse<SummarySettingEntityListing> GetConversationsSummariesSettingsWithHttpInfo (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null);
+        ApiResponse<SummarySettingEntityListing> GetConversationsSummariesSettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string sortOrder = null, string language = null, string sortBy = null);
 
         /// <summary>
         /// Get guide.
@@ -650,15 +650,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
-        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
-        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
-        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
         /// <param name="pageNumber">Page number. (optional, default to 1)</param>
         /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
         /// <returns>Task of SummarySettingEntityListing</returns>
         
-        System.Threading.Tasks.Task<SummarySettingEntityListing> GetConversationsSummariesSettingsAsync (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<SummarySettingEntityListing> GetConversationsSummariesSettingsAsync (int? pageNumber = null, int? pageSize = null, string name = null, string sortOrder = null, string language = null, string sortBy = null);
 
         /// <summary>
         /// Get all summary settings.
@@ -667,15 +667,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
-        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
-        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
-        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
         /// <param name="pageNumber">Page number. (optional, default to 1)</param>
         /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
         /// <returns>Task of ApiResponse (SummarySettingEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SummarySettingEntityListing>> GetConversationsSummariesSettingsAsyncWithHttpInfo (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<SummarySettingEntityListing>> GetConversationsSummariesSettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string sortOrder = null, string language = null, string sortBy = null);
 
         /// <summary>
         /// Get guide.
@@ -1833,17 +1833,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
-        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
-        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
-        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
         /// <param name="pageNumber">Page number. (optional, default to 1)</param>
         /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
         /// <returns>SummarySettingEntityListing</returns>
         
-        public SummarySettingEntityListing GetConversationsSummariesSettings (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
+        public SummarySettingEntityListing GetConversationsSummariesSettings (int? pageNumber = null, int? pageSize = null, string name = null, string sortOrder = null, string language = null, string sortBy = null)
         {
-             ApiResponse<SummarySettingEntityListing> localVarResponse = GetConversationsSummariesSettingsWithHttpInfo(language, name, sortBy, sortOrder, pageNumber, pageSize);
+             ApiResponse<SummarySettingEntityListing> localVarResponse = GetConversationsSummariesSettingsWithHttpInfo(pageNumber, pageSize, name, sortOrder, language, sortBy);
              return localVarResponse.Data;
         }
 
@@ -1852,15 +1852,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
-        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
-        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
-        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
         /// <param name="pageNumber">Page number. (optional, default to 1)</param>
         /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
         /// <returns>ApiResponse of SummarySettingEntityListing</returns>
         
-        public ApiResponse< SummarySettingEntityListing > GetConversationsSummariesSettingsWithHttpInfo (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
+        public ApiResponse< SummarySettingEntityListing > GetConversationsSummariesSettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string sortOrder = null, string language = null, string sortBy = null)
         { 
 
             var localVarPath = "/api/v2/conversations/summaries/settings";
@@ -1896,12 +1896,12 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
 
             // Header params
 
@@ -1946,17 +1946,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
-        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
-        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
-        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
         /// <param name="pageNumber">Page number. (optional, default to 1)</param>
         /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
         /// <returns>Task of SummarySettingEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<SummarySettingEntityListing> GetConversationsSummariesSettingsAsync (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<SummarySettingEntityListing> GetConversationsSummariesSettingsAsync (int? pageNumber = null, int? pageSize = null, string name = null, string sortOrder = null, string language = null, string sortBy = null)
         {
-             ApiResponse<SummarySettingEntityListing> localVarResponse = await GetConversationsSummariesSettingsAsyncWithHttpInfo(language, name, sortBy, sortOrder, pageNumber, pageSize);
+             ApiResponse<SummarySettingEntityListing> localVarResponse = await GetConversationsSummariesSettingsAsyncWithHttpInfo(pageNumber, pageSize, name, sortOrder, language, sortBy);
              return localVarResponse.Data;
 
         }
@@ -1966,15 +1966,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
-        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
-        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
-        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
         /// <param name="pageNumber">Page number. (optional, default to 1)</param>
         /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
         /// <returns>Task of ApiResponse (SummarySettingEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SummarySettingEntityListing>> GetConversationsSummariesSettingsAsyncWithHttpInfo (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SummarySettingEntityListing>> GetConversationsSummariesSettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string sortOrder = null, string language = null, string sortBy = null)
         { 
 
             var localVarPath = "/api/v2/conversations/summaries/settings";
@@ -2010,12 +2010,12 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
 
             // Header params
 

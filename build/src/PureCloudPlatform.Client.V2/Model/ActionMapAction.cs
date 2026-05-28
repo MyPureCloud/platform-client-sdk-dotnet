@@ -80,9 +80,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ActionTemplate">Action template associated with the action map..</param>
         /// <param name="MediaType">Media type of action..</param>
-        /// <param name="ActionTargetId">Action target ID..</param>
-        /// <param name="IsPacingEnabled">Whether this action should be throttled..</param>
-        /// <param name="Props">Additional properties..</param>
+        /// <param name="ActionTargetId">Deprecated. Action target ID..</param>
+        /// <param name="IsPacingEnabled">Deprecated. Whether this action should be throttled..</param>
+        /// <param name="Props">Deprecated. Additional properties..</param>
         /// <param name="ArchitectFlowFields">Architect Flow Id and input contract..</param>
         /// <param name="WebMessagingOfferFields">Admin-configurable fields of a web messaging offer action..</param>
         /// <param name="OpenActionFields">Admin-configurable fields of an open action..</param>
@@ -113,27 +113,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Action target ID.
+        /// Deprecated. Action target ID.
         /// </summary>
-        /// <value>Action target ID.</value>
+        /// <value>Deprecated. Action target ID.</value>
         [DataMember(Name="actionTargetId", EmitDefaultValue=false)]
         public string ActionTargetId { get; set; }
 
 
 
         /// <summary>
-        /// Whether this action should be throttled.
+        /// Deprecated. Whether this action should be throttled.
         /// </summary>
-        /// <value>Whether this action should be throttled.</value>
+        /// <value>Deprecated. Whether this action should be throttled.</value>
         [DataMember(Name="isPacingEnabled", EmitDefaultValue=false)]
         public bool? IsPacingEnabled { get; set; }
 
 
 
         /// <summary>
-        /// Additional properties.
+        /// Deprecated. Additional properties.
         /// </summary>
-        /// <value>Additional properties.</value>
+        /// <value>Deprecated. Additional properties.</value>
         [DataMember(Name="props", EmitDefaultValue=false)]
         public ActionProperties Props { get; set; }
 

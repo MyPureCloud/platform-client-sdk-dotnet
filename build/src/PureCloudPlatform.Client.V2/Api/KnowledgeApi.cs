@@ -988,6 +988,52 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<KnowledgeDocumentResponseListing> GetKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null, List<string> externalIds = null);
 
         /// <summary>
+        /// Get a list of feedback records given on documents in a knowledge base
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="onlyCommented">If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional)</param>
+        /// <param name="documentVersionId">Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="documentVariationId">Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="appType">Application type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queryType">Query type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="userId">The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queueId">Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="state">State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final (optional)</param>
+        /// <returns>KnowledgeDocumentFeedbackResponseListing</returns>
+        
+        KnowledgeDocumentFeedbackResponseListing GetKnowledgeKnowledgebaseDocumentsFeedback (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, bool? onlyCommented = null, string documentVersionId = null, string documentVariationId = null, string appType = null, string queryType = null, string userId = null, string queueId = null, string state = null);
+
+        /// <summary>
+        /// Get a list of feedback records given on documents in a knowledge base
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="onlyCommented">If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional)</param>
+        /// <param name="documentVersionId">Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="documentVariationId">Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="appType">Application type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queryType">Query type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="userId">The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queueId">Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="state">State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final (optional)</param>
+        /// <returns>ApiResponse of KnowledgeDocumentFeedbackResponseListing</returns>
+        
+        ApiResponse<KnowledgeDocumentFeedbackResponseListing> GetKnowledgeKnowledgebaseDocumentsFeedbackWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, bool? onlyCommented = null, string documentVersionId = null, string documentVariationId = null, string appType = null, string queryType = null, string userId = null, string queueId = null, string state = null);
+
+        /// <summary>
         /// Get export job report
         /// </summary>
         /// <remarks>
@@ -4324,6 +4370,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (KnowledgeDocumentResponseListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponseListing>> GetKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null, List<string> externalIds = null);
+
+        /// <summary>
+        /// Get a list of feedback records given on documents in a knowledge base
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="onlyCommented">If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional)</param>
+        /// <param name="documentVersionId">Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="documentVariationId">Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="appType">Application type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queryType">Query type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="userId">The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queueId">Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="state">State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final (optional)</param>
+        /// <returns>Task of KnowledgeDocumentFeedbackResponseListing</returns>
+        
+        System.Threading.Tasks.Task<KnowledgeDocumentFeedbackResponseListing> GetKnowledgeKnowledgebaseDocumentsFeedbackAsync (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, bool? onlyCommented = null, string documentVersionId = null, string documentVariationId = null, string appType = null, string queryType = null, string userId = null, string queueId = null, string state = null);
+
+        /// <summary>
+        /// Get a list of feedback records given on documents in a knowledge base
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="onlyCommented">If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional)</param>
+        /// <param name="documentVersionId">Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="documentVariationId">Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="appType">Application type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queryType">Query type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="userId">The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queueId">Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="state">State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final (optional)</param>
+        /// <returns>Task of ApiResponse (KnowledgeDocumentFeedbackResponseListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentFeedbackResponseListing>> GetKnowledgeKnowledgebaseDocumentsFeedbackAsyncWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, bool? onlyCommented = null, string documentVersionId = null, string documentVariationId = null, string appType = null, string queryType = null, string userId = null, string queueId = null, string state = null);
 
         /// <summary>
         /// Get export job report
@@ -14200,6 +14292,277 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<KnowledgeDocumentResponseListing>(localVarStatusCode,
                 localVarHeaders,
                 (KnowledgeDocumentResponseListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeDocumentResponseListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of feedback records given on documents in a knowledge base 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="onlyCommented">If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional)</param>
+        /// <param name="documentVersionId">Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="documentVariationId">Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="appType">Application type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queryType">Query type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="userId">The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queueId">Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="state">State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final (optional)</param>
+        /// <returns>KnowledgeDocumentFeedbackResponseListing</returns>
+        
+        public KnowledgeDocumentFeedbackResponseListing GetKnowledgeKnowledgebaseDocumentsFeedback (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, bool? onlyCommented = null, string documentVersionId = null, string documentVariationId = null, string appType = null, string queryType = null, string userId = null, string queueId = null, string state = null)
+        {
+             ApiResponse<KnowledgeDocumentFeedbackResponseListing> localVarResponse = GetKnowledgeKnowledgebaseDocumentsFeedbackWithHttpInfo(knowledgeBaseId, before, after, pageSize, onlyCommented, documentVersionId, documentVariationId, appType, queryType, userId, queueId, state);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of feedback records given on documents in a knowledge base 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="onlyCommented">If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional)</param>
+        /// <param name="documentVersionId">Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="documentVariationId">Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="appType">Application type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queryType">Query type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="userId">The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queueId">Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="state">State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final (optional)</param>
+        /// <returns>ApiResponse of KnowledgeDocumentFeedbackResponseListing</returns>
+        
+        public ApiResponse< KnowledgeDocumentFeedbackResponseListing > GetKnowledgeKnowledgebaseDocumentsFeedbackWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, bool? onlyCommented = null, string documentVersionId = null, string documentVariationId = null, string appType = null, string queryType = null, string userId = null, string queueId = null, string state = null)
+        { 
+            // verify the required parameter 'knowledgeBaseId' is set
+            if (knowledgeBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentsFeedback");
+
+            var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/feedback";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (knowledgeBaseId != null) localVarPathParams.Add("knowledgeBaseId", this.Configuration.ApiClient.ParameterToString(knowledgeBaseId));
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (onlyCommented != null) localVarQueryParams.Add(new Tuple<string, string>("onlyCommented", this.Configuration.ApiClient.ParameterToString(onlyCommented)));
+            if (documentVersionId != null) localVarQueryParams.Add(new Tuple<string, string>("documentVersionId", this.Configuration.ApiClient.ParameterToString(documentVersionId)));
+            if (documentVariationId != null) localVarQueryParams.Add(new Tuple<string, string>("documentVariationId", this.Configuration.ApiClient.ParameterToString(documentVariationId)));
+            if (appType != null) localVarQueryParams.Add(new Tuple<string, string>("appType", this.Configuration.ApiClient.ParameterToString(appType)));
+            if (queryType != null) localVarQueryParams.Add(new Tuple<string, string>("queryType", this.Configuration.ApiClient.ParameterToString(queryType)));
+            if (userId != null) localVarQueryParams.Add(new Tuple<string, string>("userId", this.Configuration.ApiClient.ParameterToString(userId)));
+            if (queueId != null) localVarQueryParams.Add(new Tuple<string, string>("queueId", this.Configuration.ApiClient.ParameterToString(queueId)));
+            if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentsFeedback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeKnowledgebaseDocumentsFeedback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentsFeedback: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KnowledgeDocumentFeedbackResponseListing>(localVarStatusCode,
+                localVarHeaders,
+                (KnowledgeDocumentFeedbackResponseListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeDocumentFeedbackResponseListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of feedback records given on documents in a knowledge base 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="onlyCommented">If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional)</param>
+        /// <param name="documentVersionId">Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="documentVariationId">Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="appType">Application type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queryType">Query type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="userId">The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queueId">Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="state">State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final (optional)</param>
+        /// <returns>Task of KnowledgeDocumentFeedbackResponseListing</returns>
+        
+        public async System.Threading.Tasks.Task<KnowledgeDocumentFeedbackResponseListing> GetKnowledgeKnowledgebaseDocumentsFeedbackAsync (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, bool? onlyCommented = null, string documentVersionId = null, string documentVariationId = null, string appType = null, string queryType = null, string userId = null, string queueId = null, string state = null)
+        {
+             ApiResponse<KnowledgeDocumentFeedbackResponseListing> localVarResponse = await GetKnowledgeKnowledgebaseDocumentsFeedbackAsyncWithHttpInfo(knowledgeBaseId, before, after, pageSize, onlyCommented, documentVersionId, documentVariationId, appType, queryType, userId, queueId, state);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of feedback records given on documents in a knowledge base 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="onlyCommented">If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional)</param>
+        /// <param name="documentVersionId">Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="documentVariationId">Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="appType">Application type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queryType">Query type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="userId">The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="queueId">Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)</param>
+        /// <param name="state">State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final (optional)</param>
+        /// <returns>Task of ApiResponse (KnowledgeDocumentFeedbackResponseListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentFeedbackResponseListing>> GetKnowledgeKnowledgebaseDocumentsFeedbackAsyncWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, bool? onlyCommented = null, string documentVersionId = null, string documentVariationId = null, string appType = null, string queryType = null, string userId = null, string queueId = null, string state = null)
+        { 
+            // verify the required parameter 'knowledgeBaseId' is set
+            if (knowledgeBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentsFeedback");
+            
+
+            var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/feedback";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (knowledgeBaseId != null) localVarPathParams.Add("knowledgeBaseId", this.Configuration.ApiClient.ParameterToString(knowledgeBaseId));
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (onlyCommented != null) localVarQueryParams.Add(new Tuple<string, string>("onlyCommented", this.Configuration.ApiClient.ParameterToString(onlyCommented)));
+            if (documentVersionId != null) localVarQueryParams.Add(new Tuple<string, string>("documentVersionId", this.Configuration.ApiClient.ParameterToString(documentVersionId)));
+            if (documentVariationId != null) localVarQueryParams.Add(new Tuple<string, string>("documentVariationId", this.Configuration.ApiClient.ParameterToString(documentVariationId)));
+            if (appType != null) localVarQueryParams.Add(new Tuple<string, string>("appType", this.Configuration.ApiClient.ParameterToString(appType)));
+            if (queryType != null) localVarQueryParams.Add(new Tuple<string, string>("queryType", this.Configuration.ApiClient.ParameterToString(queryType)));
+            if (userId != null) localVarQueryParams.Add(new Tuple<string, string>("userId", this.Configuration.ApiClient.ParameterToString(userId)));
+            if (queueId != null) localVarQueryParams.Add(new Tuple<string, string>("queueId", this.Configuration.ApiClient.ParameterToString(queueId)));
+            if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentsFeedback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeKnowledgebaseDocumentsFeedback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseDocumentsFeedback: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KnowledgeDocumentFeedbackResponseListing>(localVarStatusCode,
+                localVarHeaders,
+                (KnowledgeDocumentFeedbackResponseListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeDocumentFeedbackResponseListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

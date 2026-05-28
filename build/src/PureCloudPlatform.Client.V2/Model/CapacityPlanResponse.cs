@@ -27,6 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CapacityPlanResponse" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description of the capacity plan.</param>
         /// <param name="Forecast">The selected forecast for this capacity plan. Null when main forecast is used in the future.</param>
@@ -34,8 +35,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndBusinessUnitDate">The end date for the capacity plan relative to the business unit time zone in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="FullTimeEquivalentWeeklyHours">The weekly hours used to calculate full time equivalent agents (required).</param>
         /// <param name="Metadata">The metadata of this capacity plan (required).</param>
-        public CapacityPlanResponse(string Name = null, string Description = null, BuShortTermForecastReference Forecast = null, String StartBusinessUnitDate = null, String EndBusinessUnitDate = null, double? FullTimeEquivalentWeeklyHours = null, CapacityPlanMetadata Metadata = null)
+        public CapacityPlanResponse(string Id = null, string Name = null, string Description = null, BuShortTermForecastReference Forecast = null, String StartBusinessUnitDate = null, String EndBusinessUnitDate = null, double? FullTimeEquivalentWeeklyHours = null, CapacityPlanMetadata Metadata = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Description = Description;
             this.Forecast = Forecast;
@@ -53,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

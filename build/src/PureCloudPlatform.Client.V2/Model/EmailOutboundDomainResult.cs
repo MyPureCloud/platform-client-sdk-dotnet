@@ -168,6 +168,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public EmailSetting EmailSetting { get; set; }
 
 
+
+        /// <summary>
+        /// The DMARC verification status for this domain.
+        /// </summary>
+        /// <value>The DMARC verification status for this domain.</value>
+        [DataMember(Name="dmarcVerificationResult", EmitDefaultValue=false)]
+        public DmarcResult DmarcVerificationResult { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -183,6 +192,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SenderStatus: ").Append(SenderStatus).Append("\n");
             sb.Append("  SenderType: ").Append(SenderType).Append("\n");
             sb.Append("  EmailSetting: ").Append(EmailSetting).Append("\n");
+            sb.Append("  DmarcVerificationResult: ").Append(DmarcVerificationResult).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -252,6 +262,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EmailSetting == other.EmailSetting ||
                     this.EmailSetting != null &&
                     this.EmailSetting.Equals(other.EmailSetting)
+                ) &&
+                (
+                    this.DmarcVerificationResult == other.DmarcVerificationResult ||
+                    this.DmarcVerificationResult != null &&
+                    this.DmarcVerificationResult.Equals(other.DmarcVerificationResult)
                 );
         }
 
@@ -283,6 +298,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EmailSetting != null)
                     hash = hash * 59 + this.EmailSetting.GetHashCode();
+
+                if (this.DmarcVerificationResult != null)
+                    hash = hash * 59 + this.DmarcVerificationResult.GetHashCode();
 
                 return hash;
             }

@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Value** | **int?** | Value for this metric | [optional] |
+| **Value** | [**Number**](Number) | Value for this metric | [optional] |
 | **GroupByAttributes** | [**List&lt;GroupByAttribute&gt;**](GroupByAttribute) | Group by attributes for this metric | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 263.0.0_
+_PureCloudPlatform.Client.V2 264.0.0_

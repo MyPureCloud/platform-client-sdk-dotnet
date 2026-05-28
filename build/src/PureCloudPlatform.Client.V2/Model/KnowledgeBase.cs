@@ -357,11 +357,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Description">Knowledge base description.</param>
         /// <param name="CoreLanguage">Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with &#39;early preview&#39; language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA] which might have a lower accuracy. (required).</param>
-        public KnowledgeBase(string Name = null, string Description = null, CoreLanguageEnum? CoreLanguage = null)
+        /// <param name="ContentSearchEnabled">Flag that indicates the search on content is enabled for the knowledge base..</param>
+        public KnowledgeBase(string Name = null, string Description = null, CoreLanguageEnum? CoreLanguage = null, bool? ContentSearchEnabled = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.CoreLanguage = CoreLanguage;
+            this.ContentSearchEnabled = ContentSearchEnabled;
             
         }
         
@@ -450,6 +452,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Flag that indicates the search on content is enabled for the knowledge base.
+        /// </summary>
+        /// <value>Flag that indicates the search on content is enabled for the knowledge base.</value>
+        [DataMember(Name="contentSearchEnabled", EmitDefaultValue=false)]
+        public bool? ContentSearchEnabled { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -476,6 +487,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateDocumentLastModified: ").Append(DateDocumentLastModified).Append("\n");
             sb.Append("  ArticleCount: ").Append(ArticleCount).Append("\n");
             sb.Append("  Published: ").Append(Published).Append("\n");
+            sb.Append("  ContentSearchEnabled: ").Append(ContentSearchEnabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -568,6 +580,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Published.Equals(other.Published)
                 ) &&
                 (
+                    this.ContentSearchEnabled == other.ContentSearchEnabled ||
+                    this.ContentSearchEnabled != null &&
+                    this.ContentSearchEnabled.Equals(other.ContentSearchEnabled)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -614,6 +631,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Published != null)
                     hash = hash * 59 + this.Published.GetHashCode();
+
+                if (this.ContentSearchEnabled != null)
+                    hash = hash * 59 + this.ContentSearchEnabled.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

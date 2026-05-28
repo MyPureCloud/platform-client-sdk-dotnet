@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="TimeSpan">Exact date, time and length of the unavailability time span (required).</param>
         /// <param name="Notes">Comments explaining the unavailability time span.</param>
-        public AgentScheduleUnavailableTime(UnavailableTimesTimeSpan TimeSpan = null, string Notes = null)
+        public AgentScheduleUnavailableTime(WfmTimeSpan TimeSpan = null, string Notes = null)
         {
             this.TimeSpan = TimeSpan;
             this.Notes = Notes;
@@ -43,7 +43,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Exact date, time and length of the unavailability time span</value>
         [DataMember(Name="timeSpan", EmitDefaultValue=false)]
-        public UnavailableTimesTimeSpan TimeSpan { get; set; }
+        public WfmTimeSpan TimeSpan { get; set; }
 
 
 

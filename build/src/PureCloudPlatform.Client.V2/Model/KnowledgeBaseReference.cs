@@ -356,10 +356,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The globally unique identifier for the knowledge base. (required).</param>
         /// <param name="LanguageCode">Language of the knowledge base.</param>
-        public KnowledgeBaseReference(string Id = null, LanguageCodeEnum? LanguageCode = null)
+        /// <param name="ContentSearchEnabled">Flag that indicates the search on content is enabled for the knowledge base..</param>
+        public KnowledgeBaseReference(string Id = null, LanguageCodeEnum? LanguageCode = null, bool? ContentSearchEnabled = null)
         {
             this.Id = Id;
             this.LanguageCode = LanguageCode;
+            this.ContentSearchEnabled = ContentSearchEnabled;
             
         }
         
@@ -373,6 +375,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Id { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// Flag that indicates the search on content is enabled for the knowledge base.
+        /// </summary>
+        /// <value>Flag that indicates the search on content is enabled for the knowledge base.</value>
+        [DataMember(Name="contentSearchEnabled", EmitDefaultValue=false)]
+        public bool? ContentSearchEnabled { get; set; }
 
 
 
@@ -395,6 +406,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  LanguageCode: ").Append(LanguageCode).Append("\n");
+            sb.Append("  ContentSearchEnabled: ").Append(ContentSearchEnabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -447,6 +459,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LanguageCode.Equals(other.LanguageCode)
                 ) &&
                 (
+                    this.ContentSearchEnabled == other.ContentSearchEnabled ||
+                    this.ContentSearchEnabled != null &&
+                    this.ContentSearchEnabled.Equals(other.ContentSearchEnabled)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -469,6 +486,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LanguageCode != null)
                     hash = hash * 59 + this.LanguageCode.GetHashCode();
+
+                if (this.ContentSearchEnabled != null)
+                    hash = hash * 59 + this.ContentSearchEnabled.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

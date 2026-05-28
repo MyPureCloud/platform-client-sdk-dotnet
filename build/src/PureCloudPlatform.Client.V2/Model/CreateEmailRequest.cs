@@ -64,6 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlowId">The ID of the flow to use for routing email conversation. This field is mutually exclusive with queueId.</param>
         /// <param name="Provider">The name of the provider that is sourcing the emails. The Provider \&quot;PureCloud Email\&quot; is reserved for native emails. (required).</param>
         /// <param name="SkillIds">The list of skill ID&#39;s to use for routing..</param>
+        /// <param name="SkillExpression">The skill expression to use for routing the email conversation (when using queueId)..</param>
         /// <param name="LanguageId">The ID of the language to use for routing..</param>
         /// <param name="Priority">The priority to assign to the conversation for routing..</param>
         /// <param name="Attributes">The list of attributes to associate with the customer participant..</param>
@@ -77,12 +78,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TextBody">A text body content of the email..</param>
         /// <param name="ExternalContactId">The external contact with which the email should be associated. This field is only valid for OUTBOUND email..</param>
         /// <param name="UtilizationLabel">Optional. The ID of the label to controls the number of agent interactions for INBOUND communications.</param>
-        public CreateEmailRequest(string QueueId = null, string FlowId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string ToAddress = null, string ToName = null, string FromAddress = null, string FromName = null, string Subject = null, DirectionEnum? Direction = null, string HtmlBody = null, string TextBody = null, string ExternalContactId = null, string UtilizationLabel = null)
+        public CreateEmailRequest(string QueueId = null, string FlowId = null, string Provider = null, List<string> SkillIds = null, string SkillExpression = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string ToAddress = null, string ToName = null, string FromAddress = null, string FromName = null, string Subject = null, DirectionEnum? Direction = null, string HtmlBody = null, string TextBody = null, string ExternalContactId = null, string UtilizationLabel = null)
         {
             this.QueueId = QueueId;
             this.FlowId = FlowId;
             this.Provider = Provider;
             this.SkillIds = SkillIds;
+            this.SkillExpression = SkillExpression;
             this.LanguageId = LanguageId;
             this.Priority = Priority;
             this.Attributes = Attributes;
@@ -134,6 +136,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The list of skill ID&#39;s to use for routing.</value>
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
         public List<string> SkillIds { get; set; }
+
+
+
+        /// <summary>
+        /// The skill expression to use for routing the email conversation (when using queueId).
+        /// </summary>
+        /// <value>The skill expression to use for routing the email conversation (when using queueId).</value>
+        [DataMember(Name="skillExpression", EmitDefaultValue=false)]
+        public string SkillExpression { get; set; }
 
 
 
@@ -259,6 +270,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FlowId: ").Append(FlowId).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
+            sb.Append("  SkillExpression: ").Append(SkillExpression).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
@@ -331,6 +343,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SkillIds == other.SkillIds ||
                     this.SkillIds != null &&
                     this.SkillIds.SequenceEqual(other.SkillIds)
+                ) &&
+                (
+                    this.SkillExpression == other.SkillExpression ||
+                    this.SkillExpression != null &&
+                    this.SkillExpression.Equals(other.SkillExpression)
                 ) &&
                 (
                     this.LanguageId == other.LanguageId ||
@@ -421,6 +438,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();
+
+                if (this.SkillExpression != null)
+                    hash = hash * 59 + this.SkillExpression.GetHashCode();
 
                 if (this.LanguageId != null)
                     hash = hash * 59 + this.LanguageId.GetHashCode();

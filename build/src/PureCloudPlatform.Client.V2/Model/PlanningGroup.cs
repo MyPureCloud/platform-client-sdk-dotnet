@@ -18,15 +18,23 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PlanningGroup :  IEquatable<PlanningGroup>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PlanningGroup" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected PlanningGroup() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PlanningGroup" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">Name.</param>
         /// <param name="ServiceGoalTemplate">The ID of the service goal template associated with this planning group.</param>
         /// <param name="RoutePaths">Set of route paths associated with the planning group.</param>
         /// <param name="Metadata">Version metadata for the planning group.</param>
-        public PlanningGroup(string Name = null, ServiceGoalTemplateReference ServiceGoalTemplate = null, List<RoutePathResponse> RoutePaths = null, WfmVersionedEntityMetadata Metadata = null)
+        public PlanningGroup(string Id = null, string Name = null, ServiceGoalTemplateReference ServiceGoalTemplate = null, List<RoutePathResponse> RoutePaths = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.ServiceGoalTemplate = ServiceGoalTemplate;
             this.RoutePaths = RoutePaths;
@@ -41,7 +49,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

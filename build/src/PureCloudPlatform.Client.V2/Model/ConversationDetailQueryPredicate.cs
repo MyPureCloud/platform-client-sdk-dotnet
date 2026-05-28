@@ -178,6 +178,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ncallbackscheduled,
             
             /// <summary>
+            /// Enum Ncfcoffered for "nCfcOffered"
+            /// </summary>
+            [EnumMember(Value = "nCfcOffered")]
+            Ncfcoffered,
+            
+            /// <summary>
             /// Enum Ncobrowsesessions for "nCobrowseSessions"
             /// </summary>
             [EnumMember(Value = "nCobrowseSessions")]
@@ -416,6 +422,30 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "tBarging")]
             Tbarging,
+            
+            /// <summary>
+            /// Enum Tcfcabandon for "tCfcAbandon"
+            /// </summary>
+            [EnumMember(Value = "tCfcAbandon")]
+            Tcfcabandon,
+            
+            /// <summary>
+            /// Enum Tcfcacd for "tCfcAcd"
+            /// </summary>
+            [EnumMember(Value = "tCfcAcd")]
+            Tcfcacd,
+            
+            /// <summary>
+            /// Enum Tcfcanswered for "tCfcAnswered"
+            /// </summary>
+            [EnumMember(Value = "tCfcAnswered")]
+            Tcfcanswered,
+            
+            /// <summary>
+            /// Enum Tcfcflowout for "tCfcFlowOut"
+            /// </summary>
+            [EnumMember(Value = "tCfcFlowOut")]
+            Tcfcflowout,
             
             /// <summary>
             /// Enum Tcoaching for "tCoaching"

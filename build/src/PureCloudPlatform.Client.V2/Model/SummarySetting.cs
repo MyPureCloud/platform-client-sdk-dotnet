@@ -19,6 +19,33 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class SummarySetting :  IEquatable<SummarySetting>
     {
         /// <summary>
+        /// The interaction type the setting can be used for
+        /// </summary>
+        /// <value>The interaction type the setting can be used for</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InteractionTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Live for "Live"
+            /// </summary>
+            [EnumMember(Value = "Live")]
+            Live,
+            
+            /// <summary>
+            /// Enum Email for "Email"
+            /// </summary>
+            [EnumMember(Value = "Email")]
+            Email
+        }
+        /// <summary>
         /// Level of detail of the generated summary.
         /// </summary>
         /// <value>Level of detail of the generated summary.</value>
@@ -171,6 +198,12 @@ namespace PureCloudPlatform.Client.V2.Model
             External
         }
         /// <summary>
+        /// The interaction type the setting can be used for
+        /// </summary>
+        /// <value>The interaction type the setting can be used for</value>
+        [DataMember(Name="interactionType", EmitDefaultValue=false)]
+        public InteractionTypeEnum? InteractionType { get; private set; }
+        /// <summary>
         /// Level of detail of the generated summary.
         /// </summary>
         /// <value>Level of detail of the generated summary.</value>
@@ -255,6 +288,17 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The date and time the setting was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date and time the setting was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; private set; }
+
+
+
+
+
+        /// <summary>
         /// Language of the generated summary, e.g. en-US, it-IT.
         /// </summary>
         /// <value>Language of the generated summary, e.g. en-US, it-IT.</value>
@@ -273,6 +317,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Displaying PII in the generated summary.</value>
         [DataMember(Name="maskPII", EmitDefaultValue=false)]
         public SummarySettingPII MaskPII { get; set; }
+
+
+
+        /// <summary>
+        /// The date and time the setting was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date and time the setting was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; private set; }
 
 
 
@@ -335,24 +388,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The date and time the setting was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>The date and time the setting was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; private set; }
-
-
-
-        /// <summary>
-        /// The date and time the setting was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>The date and time the setting was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; private set; }
-
-
-
-        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -371,10 +406,13 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  InteractionType: ").Append(InteractionType).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  SummaryType: ").Append(SummaryType).Append("\n");
             sb.Append("  Format: ").Append(Format).Append("\n");
             sb.Append("  MaskPII: ").Append(MaskPII).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  ParticipantLabels: ").Append(ParticipantLabels).Append("\n");
             sb.Append("  PredefinedInsights: ").Append(PredefinedInsights).Append("\n");
             sb.Append("  CustomEntities: ").Append(CustomEntities).Append("\n");
@@ -383,8 +421,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ServiceType: ").Append(ServiceType).Append("\n");
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
             sb.Append("  TimeoutDuration: ").Append(TimeoutDuration).Append("\n");
-            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -437,6 +473,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.DateModified == other.DateModified ||
+                    this.DateModified != null &&
+                    this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.InteractionType == other.InteractionType ||
+                    this.InteractionType != null &&
+                    this.InteractionType.Equals(other.InteractionType)
+                ) &&
+                (
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
@@ -455,6 +501,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaskPII == other.MaskPII ||
                     this.MaskPII != null &&
                     this.MaskPII.Equals(other.MaskPII)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
                     this.ParticipantLabels == other.ParticipantLabels ||
@@ -497,16 +548,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeoutDuration.Equals(other.TimeoutDuration)
                 ) &&
                 (
-                    this.DateCreated == other.DateCreated ||
-                    this.DateCreated != null &&
-                    this.DateCreated.Equals(other.DateCreated)
-                ) &&
-                (
-                    this.DateModified == other.DateModified ||
-                    this.DateModified != null &&
-                    this.DateModified.Equals(other.DateModified)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -530,6 +571,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
 
+                if (this.DateModified != null)
+                    hash = hash * 59 + this.DateModified.GetHashCode();
+
+                if (this.InteractionType != null)
+                    hash = hash * 59 + this.InteractionType.GetHashCode();
+
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
 
@@ -541,6 +588,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MaskPII != null)
                     hash = hash * 59 + this.MaskPII.GetHashCode();
+
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
 
                 if (this.ParticipantLabels != null)
                     hash = hash * 59 + this.ParticipantLabels.GetHashCode();
@@ -565,12 +615,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TimeoutDuration != null)
                     hash = hash * 59 + this.TimeoutDuration.GetHashCode();
-
-                if (this.DateCreated != null)
-                    hash = hash * 59 + this.DateCreated.GetHashCode();
-
-                if (this.DateModified != null)
-                    hash = hash * 59 + this.DateModified.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -30,12 +30,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name of the checklist item. (required).</param>
         /// <param name="Description">Description of the checklist item..</param>
         /// <param name="AutomatedCheckEnabled">Flag to indicate whether automated check is enabled for this checklist item..</param>
+        /// <param name="ExactPhraseMatch">Flag to indicate whether exact phrase matching is applicable for this checklist item..</param>
         /// <param name="Important">Flag to indicate whether this checklist item is marked as important..</param>
-        public AgentChecklistItem(string Name = null, string Description = null, bool? AutomatedCheckEnabled = null, bool? Important = null)
+        public AgentChecklistItem(string Name = null, string Description = null, bool? AutomatedCheckEnabled = null, bool? ExactPhraseMatch = null, bool? Important = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.AutomatedCheckEnabled = AutomatedCheckEnabled;
+            this.ExactPhraseMatch = ExactPhraseMatch;
             this.Important = Important;
             
         }
@@ -79,6 +81,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Flag to indicate whether exact phrase matching is applicable for this checklist item.
+        /// </summary>
+        /// <value>Flag to indicate whether exact phrase matching is applicable for this checklist item.</value>
+        [DataMember(Name="exactPhraseMatch", EmitDefaultValue=false)]
+        public bool? ExactPhraseMatch { get; set; }
+
+
+
+        /// <summary>
         /// Flag to indicate whether this checklist item is marked as important.
         /// </summary>
         /// <value>Flag to indicate whether this checklist item is marked as important.</value>
@@ -108,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  AutomatedCheckEnabled: ").Append(AutomatedCheckEnabled).Append("\n");
+            sb.Append("  ExactPhraseMatch: ").Append(ExactPhraseMatch).Append("\n");
             sb.Append("  Important: ").Append(Important).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -171,6 +183,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AutomatedCheckEnabled.Equals(other.AutomatedCheckEnabled)
                 ) &&
                 (
+                    this.ExactPhraseMatch == other.ExactPhraseMatch ||
+                    this.ExactPhraseMatch != null &&
+                    this.ExactPhraseMatch.Equals(other.ExactPhraseMatch)
+                ) &&
+                (
                     this.Important == other.Important ||
                     this.Important != null &&
                     this.Important.Equals(other.Important)
@@ -204,6 +221,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AutomatedCheckEnabled != null)
                     hash = hash * 59 + this.AutomatedCheckEnabled.GetHashCode();
+
+                if (this.ExactPhraseMatch != null)
+                    hash = hash * 59 + this.ExactPhraseMatch.GetHashCode();
 
                 if (this.Important != null)
                     hash = hash * 59 + this.Important.GetHashCode();

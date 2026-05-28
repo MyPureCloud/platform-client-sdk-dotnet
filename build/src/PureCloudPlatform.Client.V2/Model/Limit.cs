@@ -33,10 +33,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Workforcemanagementforecast for "workforce.management.forecast"
+            /// Enum Webchat for "webchat"
             /// </summary>
-            [EnumMember(Value = "workforce.management.forecast")]
-            Workforcemanagementforecast,
+            [EnumMember(Value = "webchat")]
+            Webchat,
+            
+            /// <summary>
+            /// Enum Webhooks for "webhooks"
+            /// </summary>
+            [EnumMember(Value = "webhooks")]
+            Webhooks,
             
             /// <summary>
             /// Enum Agentassistant for "agent.assistant"
@@ -85,6 +91,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "analytics.reporting.settings")]
             Analyticsreportingsettings,
+            
+            /// <summary>
+            /// Enum Anomalydetection for "anomaly.detection"
+            /// </summary>
+            [EnumMember(Value = "anomaly.detection")]
+            Anomalydetection,
             
             /// <summary>
             /// Enum Architect for "architect"
@@ -151,6 +163,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "callback")]
             Callback,
+            
+            /// <summary>
+            /// Enum Casemanagement for "case.management"
+            /// </summary>
+            [EnumMember(Value = "case.management")]
+            Casemanagement,
             
             /// <summary>
             /// Enum Cobrowse for "cobrowse"
@@ -325,6 +343,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "marketplace")]
             Marketplace,
+            
+            /// <summary>
+            /// Enum Mcp for "mcp"
+            /// </summary>
+            [EnumMember(Value = "mcp")]
+            Mcp,
             
             /// <summary>
             /// Enum Mediacommunications for "media.communications"
@@ -507,22 +531,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Webmessaging,
             
             /// <summary>
-            /// Enum Webchat for "webchat"
-            /// </summary>
-            [EnumMember(Value = "webchat")]
-            Webchat,
-            
-            /// <summary>
-            /// Enum Webhooks for "webhooks"
-            /// </summary>
-            [EnumMember(Value = "webhooks")]
-            Webhooks,
-            
-            /// <summary>
             /// Enum Workforcemanagementagentavailability for "workforce.management.agent.availability"
             /// </summary>
             [EnumMember(Value = "workforce.management.agent.availability")]
             Workforcemanagementagentavailability,
+            
+            /// <summary>
+            /// Enum Workforcemanagementforecast for "workforce.management.forecast"
+            /// </summary>
+            [EnumMember(Value = "workforce.management.forecast")]
+            Workforcemanagementforecast,
             
             /// <summary>
             /// Enum Workforcemanagement for "workforce.management"

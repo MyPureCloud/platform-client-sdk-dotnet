@@ -32,16 +32,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Label">An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level.</param>
         /// <param name="Priority">The priority for routing.</param>
         /// <param name="SkillIds">A list of skill identifiers to be considered in routing.</param>
+        /// <param name="SkillExpression">Optional skill expression for routing when skillIds are present. Used to match agents by a logical expression over skills..</param>
         /// <param name="PreferredAgentIds">A list of agents to be preferred in routing.</param>
         /// <param name="ScoredAgents">A list of scored agents for routing decisions. For Agent Owned Callbacks use one scored agent with a score of 100..</param>
         /// <param name="RoutingFlags">An array of flags indicating how the conversation should be routed. Use \&quot;AGENT_OWNED_CALLBACK\&quot; when creating an Agent Owned Callback..</param>
-        public RoutingData(string QueueId = null, string LanguageId = null, string Label = null, int? Priority = null, List<string> SkillIds = null, List<string> PreferredAgentIds = null, List<ScoredAgent> ScoredAgents = null, List<string> RoutingFlags = null)
+        public RoutingData(string QueueId = null, string LanguageId = null, string Label = null, int? Priority = null, List<string> SkillIds = null, string SkillExpression = null, List<string> PreferredAgentIds = null, List<ScoredAgent> ScoredAgents = null, List<string> RoutingFlags = null)
         {
             this.QueueId = QueueId;
             this.LanguageId = LanguageId;
             this.Label = Label;
             this.Priority = Priority;
             this.SkillIds = SkillIds;
+            this.SkillExpression = SkillExpression;
             this.PreferredAgentIds = PreferredAgentIds;
             this.ScoredAgents = ScoredAgents;
             this.RoutingFlags = RoutingFlags;
@@ -96,6 +98,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Optional skill expression for routing when skillIds are present. Used to match agents by a logical expression over skills.
+        /// </summary>
+        /// <value>Optional skill expression for routing when skillIds are present. Used to match agents by a logical expression over skills.</value>
+        [DataMember(Name="skillExpression", EmitDefaultValue=false)]
+        public string SkillExpression { get; set; }
+
+
+
+        /// <summary>
         /// A list of agents to be preferred in routing
         /// </summary>
         /// <value>A list of agents to be preferred in routing</value>
@@ -135,6 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
+            sb.Append("  SkillExpression: ").Append(SkillExpression).Append("\n");
             sb.Append("  PreferredAgentIds: ").Append(PreferredAgentIds).Append("\n");
             sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
             sb.Append("  RoutingFlags: ").Append(RoutingFlags).Append("\n");
@@ -204,6 +216,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SkillIds.SequenceEqual(other.SkillIds)
                 ) &&
                 (
+                    this.SkillExpression == other.SkillExpression ||
+                    this.SkillExpression != null &&
+                    this.SkillExpression.Equals(other.SkillExpression)
+                ) &&
+                (
                     this.PreferredAgentIds == other.PreferredAgentIds ||
                     this.PreferredAgentIds != null &&
                     this.PreferredAgentIds.SequenceEqual(other.PreferredAgentIds)
@@ -245,6 +262,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();
+
+                if (this.SkillExpression != null)
+                    hash = hash * 59 + this.SkillExpression.GetHashCode();
 
                 if (this.PreferredAgentIds != null)
                     hash = hash * 59 + this.PreferredAgentIds.GetHashCode();

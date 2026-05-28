@@ -161,7 +161,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EvaluationLastModifiedDate">Date when the checklist was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EvaluationFinalizedDate">Date when the checklist was finalized. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EvaluationFinalizedWithAcwDate">Date when the checklist was finalized with ACW. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public AgentChecklistResponse(string Id = null, string Name = null, List<ChecklistItem> ChecklistItems = null, List<ActivationTrigger> ActivationTriggers = null, StatusEnum? Status = null, string ExitReason = null, string Language = null, string AgentId = null, string ParticipantId = null, string QueueId = null, string AssistantId = null, MediaTypeEnum? MediaType = null, DirectionEnum? Direction = null, DateTime? EvaluationStartDate = null, DateTime? EvaluationLastModifiedDate = null, DateTime? EvaluationFinalizedDate = null, DateTime? EvaluationFinalizedWithAcwDate = null)
+        /// <param name="Success">Whether activation succeeded for this checklist (bulk activation). Omitted for non-bulk responses..</param>
+        /// <param name="ErrorCode">Error code when success is false..</param>
+        /// <param name="ErrorMessage">Error message when success is false..</param>
+        public AgentChecklistResponse(string Id = null, string Name = null, List<ChecklistItem> ChecklistItems = null, List<ActivationTrigger> ActivationTriggers = null, StatusEnum? Status = null, string ExitReason = null, string Language = null, string AgentId = null, string ParticipantId = null, string QueueId = null, string AssistantId = null, MediaTypeEnum? MediaType = null, DirectionEnum? Direction = null, DateTime? EvaluationStartDate = null, DateTime? EvaluationLastModifiedDate = null, DateTime? EvaluationFinalizedDate = null, DateTime? EvaluationFinalizedWithAcwDate = null, bool? Success = null, string ErrorCode = null, string ErrorMessage = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -180,6 +183,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EvaluationLastModifiedDate = EvaluationLastModifiedDate;
             this.EvaluationFinalizedDate = EvaluationFinalizedDate;
             this.EvaluationFinalizedWithAcwDate = EvaluationFinalizedWithAcwDate;
+            this.Success = Success;
+            this.ErrorCode = ErrorCode;
+            this.ErrorMessage = ErrorMessage;
             
         }
         
@@ -318,6 +324,33 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether activation succeeded for this checklist (bulk activation). Omitted for non-bulk responses.
+        /// </summary>
+        /// <value>Whether activation succeeded for this checklist (bulk activation). Omitted for non-bulk responses.</value>
+        [DataMember(Name="success", EmitDefaultValue=false)]
+        public bool? Success { get; set; }
+
+
+
+        /// <summary>
+        /// Error code when success is false.
+        /// </summary>
+        /// <value>Error code when success is false.</value>
+        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        public string ErrorCode { get; set; }
+
+
+
+        /// <summary>
+        /// Error message when success is false.
+        /// </summary>
+        /// <value>Error message when success is false.</value>
+        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
+        public string ErrorMessage { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -351,6 +384,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EvaluationLastModifiedDate: ").Append(EvaluationLastModifiedDate).Append("\n");
             sb.Append("  EvaluationFinalizedDate: ").Append(EvaluationFinalizedDate).Append("\n");
             sb.Append("  EvaluationFinalizedWithAcwDate: ").Append(EvaluationFinalizedWithAcwDate).Append("\n");
+            sb.Append("  Success: ").Append(Success).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -478,6 +514,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EvaluationFinalizedWithAcwDate.Equals(other.EvaluationFinalizedWithAcwDate)
                 ) &&
                 (
+                    this.Success == other.Success ||
+                    this.Success != null &&
+                    this.Success.Equals(other.Success)
+                ) &&
+                (
+                    this.ErrorCode == other.ErrorCode ||
+                    this.ErrorCode != null &&
+                    this.ErrorCode.Equals(other.ErrorCode)
+                ) &&
+                (
+                    this.ErrorMessage == other.ErrorMessage ||
+                    this.ErrorMessage != null &&
+                    this.ErrorMessage.Equals(other.ErrorMessage)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -545,6 +596,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EvaluationFinalizedWithAcwDate != null)
                     hash = hash * 59 + this.EvaluationFinalizedWithAcwDate.GetHashCode();
+
+                if (this.Success != null)
+                    hash = hash * 59 + this.Success.GetHashCode();
+
+                if (this.ErrorCode != null)
+                    hash = hash * 59 + this.ErrorCode.GetHashCode();
+
+                if (this.ErrorMessage != null)
+                    hash = hash * 59 + this.ErrorMessage.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

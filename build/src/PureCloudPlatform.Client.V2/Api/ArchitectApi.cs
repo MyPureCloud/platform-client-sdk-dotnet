@@ -3698,9 +3698,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
         /// <returns>RegisterArchitectJobResponse</returns>
         
-        RegisterArchitectJobResponse PostFlowsJobs ();
+        RegisterArchitectJobResponse PostFlowsJobs (Object body = null);
 
         /// <summary>
         /// Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
@@ -3709,9 +3710,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of RegisterArchitectJobResponse</returns>
         
-        ApiResponse<RegisterArchitectJobResponse> PostFlowsJobsWithHttpInfo ();
+        ApiResponse<RegisterArchitectJobResponse> PostFlowsJobsWithHttpInfo (Object body = null);
 
         /// <summary>
         /// Create a flow milestone
@@ -7848,9 +7850,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
         /// <returns>Task of RegisterArchitectJobResponse</returns>
         
-        System.Threading.Tasks.Task<RegisterArchitectJobResponse> PostFlowsJobsAsync ();
+        System.Threading.Tasks.Task<RegisterArchitectJobResponse> PostFlowsJobsAsync (Object body = null);
 
         /// <summary>
         /// Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
@@ -7859,9 +7862,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (RegisterArchitectJobResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<RegisterArchitectJobResponse>> PostFlowsJobsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<RegisterArchitectJobResponse>> PostFlowsJobsAsyncWithHttpInfo (Object body = null);
 
         /// <summary>
         /// Create a flow milestone
@@ -37036,11 +37040,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
         /// <returns>RegisterArchitectJobResponse</returns>
         
-        public RegisterArchitectJobResponse PostFlowsJobs ()
+        public RegisterArchitectJobResponse PostFlowsJobs (Object body = null)
         {
-             ApiResponse<RegisterArchitectJobResponse> localVarResponse = PostFlowsJobsWithHttpInfo();
+             ApiResponse<RegisterArchitectJobResponse> localVarResponse = PostFlowsJobsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -37049,9 +37054,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of RegisterArchitectJobResponse</returns>
         
-        public ApiResponse< RegisterArchitectJobResponse > PostFlowsJobsWithHttpInfo ()
+        public ApiResponse< RegisterArchitectJobResponse > PostFlowsJobsWithHttpInfo (Object body = null)
         { 
 
             var localVarPath = "/api/v2/flows/jobs";
@@ -37066,6 +37072,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json"
+                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -37093,6 +37100,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
 
 
             // authentication (PureCloud OAuth) required
@@ -37131,11 +37143,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
         /// <returns>Task of RegisterArchitectJobResponse</returns>
         
-        public async System.Threading.Tasks.Task<RegisterArchitectJobResponse> PostFlowsJobsAsync ()
+        public async System.Threading.Tasks.Task<RegisterArchitectJobResponse> PostFlowsJobsAsync (Object body = null)
         {
-             ApiResponse<RegisterArchitectJobResponse> localVarResponse = await PostFlowsJobsAsyncWithHttpInfo();
+             ApiResponse<RegisterArchitectJobResponse> localVarResponse = await PostFlowsJobsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -37145,9 +37158,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (RegisterArchitectJobResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<RegisterArchitectJobResponse>> PostFlowsJobsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<RegisterArchitectJobResponse>> PostFlowsJobsAsyncWithHttpInfo (Object body = null)
         { 
 
             var localVarPath = "/api/v2/flows/jobs";
@@ -37162,6 +37176,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json"
+                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -37189,6 +37204,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
 
 
             // authentication (PureCloud OAuth) required

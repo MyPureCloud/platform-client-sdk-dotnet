@@ -23,13 +23,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Priority">Priority for the conversation.  Each point of priority is equivalent to one minute of time in queue.  Range:[-25000000, 25000000].  To reset, specify 0..</param>
         /// <param name="SkillIds">Skill requirements for the conversation.  To remove all skill requirements, specify an empty list, i.e. []..</param>
+        /// <param name="SkillExpression">Skill requirements in form of expression for the conversation.  To remove the skill expression, specify an empty string, i.e., \&quot;\&quot;..</param>
         /// <param name="LanguageId">Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \&quot;\&quot;..</param>
         /// <param name="LabelId">Label requirement for the conversation.  To remove the label requirement (setting it to System Default Label), specify an empty string, i.e., \&quot;\&quot;..</param>
         /// <param name="RequestScoredAgents">RequestScoredAgents.</param>
-        public RoutingConversationAttributesRequest(int? Priority = null, List<string> SkillIds = null, string LanguageId = null, string LabelId = null, List<RequestScoredAgent> RequestScoredAgents = null)
+        public RoutingConversationAttributesRequest(int? Priority = null, List<string> SkillIds = null, string SkillExpression = null, string LanguageId = null, string LabelId = null, List<RequestScoredAgent> RequestScoredAgents = null)
         {
             this.Priority = Priority;
             this.SkillIds = SkillIds;
+            this.SkillExpression = SkillExpression;
             this.LanguageId = LanguageId;
             this.LabelId = LabelId;
             this.RequestScoredAgents = RequestScoredAgents;
@@ -53,6 +55,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Skill requirements for the conversation.  To remove all skill requirements, specify an empty list, i.e. [].</value>
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
         public List<string> SkillIds { get; set; }
+
+
+
+        /// <summary>
+        /// Skill requirements in form of expression for the conversation.  To remove the skill expression, specify an empty string, i.e., \&quot;\&quot;.
+        /// </summary>
+        /// <value>Skill requirements in form of expression for the conversation.  To remove the skill expression, specify an empty string, i.e., \&quot;\&quot;.</value>
+        [DataMember(Name="skillExpression", EmitDefaultValue=false)]
+        public string SkillExpression { get; set; }
 
 
 
@@ -92,6 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
+            sb.Append("  SkillExpression: ").Append(SkillExpression).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  LabelId: ").Append(LabelId).Append("\n");
             sb.Append("  RequestScoredAgents: ").Append(RequestScoredAgents).Append("\n");
@@ -146,6 +158,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SkillIds.SequenceEqual(other.SkillIds)
                 ) &&
                 (
+                    this.SkillExpression == other.SkillExpression ||
+                    this.SkillExpression != null &&
+                    this.SkillExpression.Equals(other.SkillExpression)
+                ) &&
+                (
                     this.LanguageId == other.LanguageId ||
                     this.LanguageId != null &&
                     this.LanguageId.Equals(other.LanguageId)
@@ -178,6 +195,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();
+
+                if (this.SkillExpression != null)
+                    hash = hash * 59 + this.SkillExpression.GetHashCode();
 
                 if (this.LanguageId != null)
                     hash = hash * 59 + this.LanguageId.GetHashCode();

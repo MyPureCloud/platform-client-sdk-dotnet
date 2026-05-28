@@ -217,7 +217,7 @@ namespace Example
 
 ## GetConversationsSummariesSettings
 
-> [**SummarySettingEntityListing**](SummarySettingEntityListing) GetConversationsSummariesSettings (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
+> [**SummarySettingEntityListing**](SummarySettingEntityListing) GetConversationsSummariesSettings (int? pageNumber = null, int? pageSize = null, string name = null, string sortOrder = null, string language = null, string sortBy = null)
 
 
 Get all summary settings.
@@ -248,17 +248,17 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new AIStudioApi();
-            var language = language_example;  // string | Filter by matching language - case insensitive. (optional) 
-            var name = name_example;  // string | Filter by partially matching name - case insensitive. (optional) 
-            var sortBy = sortBy_example;  // string | Sort by. Default value dateModified. (optional)  (default to dateModified)
-            var sortOrder = sortOrder_example;  // string | Sort Order. Default value desc. (optional)  (default to desc)
             var pageNumber = 56;  // int? | Page number. (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size. The maximum page size is 100. (optional)  (default to 25)
+            var name = name_example;  // string | Filter by partially matching name - case insensitive. (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort Order. Default value desc. (optional)  (default to desc)
+            var language = language_example;  // string | Filter by matching language - case insensitive. (optional) 
+            var sortBy = sortBy_example;  // string | Sort by. Default value dateModified. (optional)  (default to dateModified)
 
             try
             { 
                 // Get all summary settings.
-                SummarySettingEntityListing result = apiInstance.GetConversationsSummariesSettings(language, name, sortBy, sortOrder, pageNumber, pageSize);
+                SummarySettingEntityListing result = apiInstance.GetConversationsSummariesSettings(pageNumber, pageSize, name, sortOrder, language, sortBy);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -275,12 +275,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **language** | **string**| Filter by matching language - case insensitive. | [optional]  |
-| **name** | **string**| Filter by partially matching name - case insensitive. | [optional]  |
-| **sortBy** | **string**| Sort by. Default value dateModified. | [optional] [default to dateModified]<br />**Values**: dateModified, name |
-| **sortOrder** | **string**| Sort Order. Default value desc. | [optional] [default to desc]<br />**Values**: asc, desc |
 | **pageNumber** | **int?**| Page number. | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size. The maximum page size is 100. | [optional] [default to 25] |
+| **name** | **string**| Filter by partially matching name - case insensitive. | [optional]  |
+| **sortOrder** | **string**| Sort Order. Default value desc. | [optional] [default to desc]<br />**Values**: asc, desc |
+| **language** | **string**| Filter by matching language - case insensitive. | [optional]  |
+| **sortBy** | **string**| Sort by. Default value dateModified. | [optional] [default to dateModified]<br />**Values**: dateModified, name |
 
 ### Return type
 
@@ -1380,4 +1380,4 @@ namespace Example
 [**SummarySetting**](SummarySetting)
 
 
-_PureCloudPlatform.Client.V2 263.0.0_
+_PureCloudPlatform.Client.V2 264.0.0_

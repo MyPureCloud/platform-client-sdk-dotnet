@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Listpicker for "ListPicker"
             /// </summary>
             [EnumMember(Value = "ListPicker")]
-            Listpicker
+            Listpicker,
+            
+            /// <summary>
+            /// Enum Form for "Form"
+            /// </summary>
+            [EnumMember(Value = "Form")]
+            Form
         }
         /// <summary>
         /// Describes the button that resulted in the Button Response.

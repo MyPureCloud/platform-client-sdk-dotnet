@@ -126,6 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityPlanListItem" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">The name of the activity plan (required).</param>
         /// <param name="ManagementUnits">The management units to which this activity plan applies. Empty list or null means this activity plan applies to all management units in the business unit.</param>
         /// <param name="Description">The description of this activity plan (required).</param>
@@ -140,8 +141,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedBy">The user who created this activity plan (required).</param>
         /// <param name="ModifiedDate">The date the activity plan was modified, in ISO-8601 format (required).</param>
         /// <param name="ModifiedBy">The last user to modify this activity plan. The id may be &#39;System&#39; if it was an automated process (required).</param>
-        public ActivityPlanListItem(string Name = null, List<ManagementUnitReference> ManagementUnits = null, string Description = null, ActivityCodeReference ActivityCode = null, TypeEnum? Type = null, OptimizationObjectiveEnum? OptimizationObjective = null, RecurrenceSettings RecurrenceSettings = null, StateEnum? State = null, DateTime? LastRunDate = null, UserReference LastRunBy = null, DateTime? CreatedDate = null, UserReference CreatedBy = null, DateTime? ModifiedDate = null, UserReference ModifiedBy = null)
+        public ActivityPlanListItem(string Id = null, string Name = null, List<ManagementUnitReference> ManagementUnits = null, string Description = null, ActivityCodeReference ActivityCode = null, TypeEnum? Type = null, OptimizationObjectiveEnum? OptimizationObjective = null, RecurrenceSettings RecurrenceSettings = null, StateEnum? State = null, DateTime? LastRunDate = null, UserReference LastRunBy = null, DateTime? CreatedDate = null, UserReference CreatedBy = null, DateTime? ModifiedDate = null, UserReference ModifiedBy = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.ManagementUnits = ManagementUnits;
             this.Description = Description;
@@ -166,7 +168,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

@@ -118,7 +118,37 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum QueryString for "QUERY_STRING"
             /// </summary>
             [EnumMember(Value = "QUERY_STRING")]
-            QueryString
+            QueryString,
+            
+            /// <summary>
+            /// Enum Range for "RANGE"
+            /// </summary>
+            [EnumMember(Value = "RANGE")]
+            Range,
+            
+            /// <summary>
+            /// Enum LessThan for "LESS_THAN"
+            /// </summary>
+            [EnumMember(Value = "LESS_THAN")]
+            LessThan,
+            
+            /// <summary>
+            /// Enum LessThanEqualTo for "LESS_THAN_EQUAL_TO"
+            /// </summary>
+            [EnumMember(Value = "LESS_THAN_EQUAL_TO")]
+            LessThanEqualTo,
+            
+            /// <summary>
+            /// Enum GreaterThan for "GREATER_THAN"
+            /// </summary>
+            [EnumMember(Value = "GREATER_THAN")]
+            GreaterThan,
+            
+            /// <summary>
+            /// Enum GreaterThanEqualTo for "GREATER_THAN_EQUAL_TO"
+            /// </summary>
+            [EnumMember(Value = "GREATER_THAN_EQUAL_TO")]
+            GreaterThanEqualTo
         }
         /// <summary>
         /// How to apply this search criteria against other criteria

@@ -305,9 +305,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional)</param>
         /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <param name="agentChecklistIds">Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters. (optional)</param>
         /// <returns>AgentChecklistListing</returns>
         
-        AgentChecklistListing GetAssistantsAgentchecklists (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null);
+        AgentChecklistListing GetAssistantsAgentchecklists (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null, List<string> agentChecklistIds = null);
 
         /// <summary>
         /// Get the list of agent checklists
@@ -323,9 +324,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional)</param>
         /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <param name="agentChecklistIds">Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters. (optional)</param>
         /// <returns>ApiResponse of AgentChecklistListing</returns>
         
-        ApiResponse<AgentChecklistListing> GetAssistantsAgentchecklistsWithHttpInfo (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null);
+        ApiResponse<AgentChecklistListing> GetAssistantsAgentchecklistsWithHttpInfo (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null, List<string> agentChecklistIds = null);
 
         /// <summary>
         /// Get the list of supported languages
@@ -943,9 +945,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional)</param>
         /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <param name="agentChecklistIds">Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters. (optional)</param>
         /// <returns>Task of AgentChecklistListing</returns>
         
-        System.Threading.Tasks.Task<AgentChecklistListing> GetAssistantsAgentchecklistsAsync (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null);
+        System.Threading.Tasks.Task<AgentChecklistListing> GetAssistantsAgentchecklistsAsync (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null, List<string> agentChecklistIds = null);
 
         /// <summary>
         /// Get the list of agent checklists
@@ -961,9 +964,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional)</param>
         /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <param name="agentChecklistIds">Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters. (optional)</param>
         /// <returns>Task of ApiResponse (AgentChecklistListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AgentChecklistListing>> GetAssistantsAgentchecklistsAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null);
+        System.Threading.Tasks.Task<ApiResponse<AgentChecklistListing>> GetAssistantsAgentchecklistsAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null, List<string> agentChecklistIds = null);
 
         /// <summary>
         /// Get the list of supported languages
@@ -3562,11 +3566,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional)</param>
         /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <param name="agentChecklistIds">Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters. (optional)</param>
         /// <returns>AgentChecklistListing</returns>
         
-        public AgentChecklistListing GetAssistantsAgentchecklists (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null)
+        public AgentChecklistListing GetAssistantsAgentchecklists (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null, List<string> agentChecklistIds = null)
         {
-             ApiResponse<AgentChecklistListing> localVarResponse = GetAssistantsAgentchecklistsWithHttpInfo(before, after, pageSize, namePrefix, language, sortOrder, sortBy);
+             ApiResponse<AgentChecklistListing> localVarResponse = GetAssistantsAgentchecklistsWithHttpInfo(before, after, pageSize, namePrefix, language, sortOrder, sortBy, agentChecklistIds);
              return localVarResponse.Data;
         }
 
@@ -3582,9 +3587,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional)</param>
         /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <param name="agentChecklistIds">Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters. (optional)</param>
         /// <returns>ApiResponse of AgentChecklistListing</returns>
         
-        public ApiResponse< AgentChecklistListing > GetAssistantsAgentchecklistsWithHttpInfo (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null)
+        public ApiResponse< AgentChecklistListing > GetAssistantsAgentchecklistsWithHttpInfo (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null, List<string> agentChecklistIds = null)
         { 
 
             var localVarPath = "/api/v2/assistants/agentchecklists";
@@ -3627,6 +3633,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (agentChecklistIds != null) agentChecklistIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("agentChecklistIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -3678,11 +3685,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional)</param>
         /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <param name="agentChecklistIds">Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters. (optional)</param>
         /// <returns>Task of AgentChecklistListing</returns>
         
-        public async System.Threading.Tasks.Task<AgentChecklistListing> GetAssistantsAgentchecklistsAsync (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<AgentChecklistListing> GetAssistantsAgentchecklistsAsync (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null, List<string> agentChecklistIds = null)
         {
-             ApiResponse<AgentChecklistListing> localVarResponse = await GetAssistantsAgentchecklistsAsyncWithHttpInfo(before, after, pageSize, namePrefix, language, sortOrder, sortBy);
+             ApiResponse<AgentChecklistListing> localVarResponse = await GetAssistantsAgentchecklistsAsyncWithHttpInfo(before, after, pageSize, namePrefix, language, sortOrder, sortBy, agentChecklistIds);
              return localVarResponse.Data;
 
         }
@@ -3699,9 +3707,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
         /// <param name="sortOrder">The sort order for the listing (optional)</param>
         /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <param name="agentChecklistIds">Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters. (optional)</param>
         /// <returns>Task of ApiResponse (AgentChecklistListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AgentChecklistListing>> GetAssistantsAgentchecklistsAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AgentChecklistListing>> GetAssistantsAgentchecklistsAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null, List<string> agentChecklistIds = null)
         { 
 
             var localVarPath = "/api/v2/assistants/agentchecklists";
@@ -3744,6 +3753,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (agentChecklistIds != null) agentChecklistIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("agentChecklistIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

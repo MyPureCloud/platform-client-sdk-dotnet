@@ -131,6 +131,70 @@ namespace PureCloudPlatform.Client.V2.Model
             Email
         }
         /// <summary>
+        /// Gets or Sets SummarySourceType
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SummarySourceTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "UNKNOWN"
+            /// </summary>
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum GenesysNativeService for "GENESYS_NATIVE_SERVICE"
+            /// </summary>
+            [EnumMember(Value = "GENESYS_NATIVE_SERVICE")]
+            GenesysNativeService,
+            
+            /// <summary>
+            /// Enum ExternalService for "EXTERNAL_SERVICE"
+            /// </summary>
+            [EnumMember(Value = "EXTERNAL_SERVICE")]
+            ExternalService
+        }
+        /// <summary>
+        /// Gets or Sets TriggerType
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TriggerTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "UNKNOWN"
+            /// </summary>
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum OnDemand for "ON_DEMAND"
+            /// </summary>
+            [EnumMember(Value = "ON_DEMAND")]
+            OnDemand,
+            
+            /// <summary>
+            /// Enum AfterDisconnect for "AFTER_DISCONNECT"
+            /// </summary>
+            [EnumMember(Value = "AFTER_DISCONNECT")]
+            AfterDisconnect
+        }
+        /// <summary>
         /// Gets or Sets ErrorType
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
@@ -179,6 +243,16 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
         /// <summary>
+        /// Gets or Sets SummarySourceType
+        /// </summary>
+        [DataMember(Name="summarySourceType", EmitDefaultValue=false)]
+        public SummarySourceTypeEnum? SummarySourceType { get; set; }
+        /// <summary>
+        /// Gets or Sets TriggerType
+        /// </summary>
+        [DataMember(Name="triggerType", EmitDefaultValue=false)]
+        public TriggerTypeEnum? TriggerType { get; set; }
+        /// <summary>
         /// Gets or Sets ErrorType
         /// </summary>
         [DataMember(Name="errorType", EmitDefaultValue=false)]
@@ -203,10 +277,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExtractedEntities">ExtractedEntities.</param>
         /// <param name="WrapUpCodes">WrapUpCodes.</param>
         /// <param name="TriggerSource">TriggerSource.</param>
+        /// <param name="SummarySourceType">SummarySourceType.</param>
+        /// <param name="TriggerType">TriggerType.</param>
         /// <param name="LastEditedBy">LastEditedBy.</param>
         /// <param name="ErrorType">ErrorType.</param>
         /// <param name="DurationMs">DurationMs.</param>
-        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationFollowupAction> FollowupActions = null, List<ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity> ExtractedEntities = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null)
+        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationFollowupAction> FollowupActions = null, List<ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity> ExtractedEntities = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, SummarySourceTypeEnum? SummarySourceType = null, TriggerTypeEnum? TriggerType = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null)
         {
             this.ConversationId = ConversationId;
             this.QueueId = QueueId;
@@ -225,6 +301,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExtractedEntities = ExtractedEntities;
             this.WrapUpCodes = WrapUpCodes;
             this.TriggerSource = TriggerSource;
+            this.SummarySourceType = SummarySourceType;
+            this.TriggerType = TriggerType;
             this.LastEditedBy = LastEditedBy;
             this.ErrorType = ErrorType;
             this.DurationMs = DurationMs;
@@ -357,6 +435,10 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+
+
         /// <summary>
         /// Gets or Sets LastEditedBy
         /// </summary>
@@ -400,6 +482,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExtractedEntities: ").Append(ExtractedEntities).Append("\n");
             sb.Append("  WrapUpCodes: ").Append(WrapUpCodes).Append("\n");
             sb.Append("  TriggerSource: ").Append(TriggerSource).Append("\n");
+            sb.Append("  SummarySourceType: ").Append(SummarySourceType).Append("\n");
+            sb.Append("  TriggerType: ").Append(TriggerType).Append("\n");
             sb.Append("  LastEditedBy: ").Append(LastEditedBy).Append("\n");
             sb.Append("  ErrorType: ").Append(ErrorType).Append("\n");
             sb.Append("  DurationMs: ").Append(DurationMs).Append("\n");
@@ -529,6 +613,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TriggerSource.Equals(other.TriggerSource)
                 ) &&
                 (
+                    this.SummarySourceType == other.SummarySourceType ||
+                    this.SummarySourceType != null &&
+                    this.SummarySourceType.Equals(other.SummarySourceType)
+                ) &&
+                (
+                    this.TriggerType == other.TriggerType ||
+                    this.TriggerType != null &&
+                    this.TriggerType.Equals(other.TriggerType)
+                ) &&
+                (
                     this.LastEditedBy == other.LastEditedBy ||
                     this.LastEditedBy != null &&
                     this.LastEditedBy.Equals(other.LastEditedBy)
@@ -606,6 +700,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TriggerSource != null)
                     hash = hash * 59 + this.TriggerSource.GetHashCode();
+
+                if (this.SummarySourceType != null)
+                    hash = hash * 59 + this.SummarySourceType.GetHashCode();
+
+                if (this.TriggerType != null)
+                    hash = hash * 59 + this.TriggerType.GetHashCode();
 
                 if (this.LastEditedBy != null)
                     hash = hash * 59 + this.LastEditedBy.GetHashCode();

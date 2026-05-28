@@ -18,17 +18,25 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ServiceGoalTemplate :  IEquatable<ServiceGoalTemplate>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceGoalTemplate" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected ServiceGoalTemplate() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ServiceGoalTemplate" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">Name.</param>
         /// <param name="ServiceLevel">Service level targets for this service goal template.</param>
         /// <param name="AverageSpeedOfAnswer">Average speed of answer targets for this service goal template.</param>
         /// <param name="AbandonRate">Abandon rate targets for this service goal template.</param>
         /// <param name="Metadata">Version metadata for the service goal template.</param>
         /// <param name="ImpactOverride">Settings controlling max percent increase and decrease of service goals for this service goal template.</param>
-        public ServiceGoalTemplate(string Name = null, BuServiceLevel ServiceLevel = null, BuAverageSpeedOfAnswer AverageSpeedOfAnswer = null, BuAbandonRate AbandonRate = null, WfmVersionedEntityMetadata Metadata = null, ServiceGoalTemplateImpactOverride ImpactOverride = null)
+        public ServiceGoalTemplate(string Id = null, string Name = null, BuServiceLevel ServiceLevel = null, BuAverageSpeedOfAnswer AverageSpeedOfAnswer = null, BuAbandonRate AbandonRate = null, WfmVersionedEntityMetadata Metadata = null, ServiceGoalTemplateImpactOverride ImpactOverride = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.ServiceLevel = ServiceLevel;
             this.AverageSpeedOfAnswer = AverageSpeedOfAnswer;
@@ -45,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

@@ -126,6 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityPlanResponse" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">The name of the activity plan (required).</param>
         /// <param name="ManagementUnits">The management units to which this activity plan applies. Empty list or null means this activity plan applies to the entire business unit.</param>
         /// <param name="Description">The description of this activity plan (required).</param>
@@ -150,8 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">The last user to modify this activity plan. The id may be &#39;System&#39; if it was an automated process (required).</param>
         /// <param name="LastRunDate">The date on which the activity plan was last manually run, in ISO-8601 format.</param>
         /// <param name="LastRunBy">The last user to run this activity plan.</param>
-        public ActivityPlanResponse(string Name = null, List<ManagementUnitReference> ManagementUnits = null, string Description = null, ActivityCodeReference ActivityCode = null, TypeEnum? Type = null, SchedulingPeriod InitialSchedulePeriod = null, int? LengthMinutes = null, GroupSettings GroupSettings = null, RecurrenceSettings RecurrenceSettings = null, UserSearchRule AttendeesSearchRule = null, bool? Facilitated = null, UserSearchRule FacilitatorsSearchRule = null, int? TransitionTimeMinutes = null, ActivityPlanServiceGoalImpactOverrides ServiceGoalImpactOverrides = null, OptimizationObjectiveEnum? OptimizationObjective = null, List<FixedAvailability> FixedAvailability = null, StateEnum? State = null, bool? CountsAsPaidTime = null, DateTime? CreatedDate = null, UserReference CreatedBy = null, DateTime? ModifiedDate = null, UserReference ModifiedBy = null, DateTime? LastRunDate = null, UserReference LastRunBy = null)
+        public ActivityPlanResponse(string Id = null, string Name = null, List<ManagementUnitReference> ManagementUnits = null, string Description = null, ActivityCodeReference ActivityCode = null, TypeEnum? Type = null, SchedulingPeriod InitialSchedulePeriod = null, int? LengthMinutes = null, GroupSettings GroupSettings = null, RecurrenceSettings RecurrenceSettings = null, UserSearchRule AttendeesSearchRule = null, bool? Facilitated = null, UserSearchRule FacilitatorsSearchRule = null, int? TransitionTimeMinutes = null, ActivityPlanServiceGoalImpactOverrides ServiceGoalImpactOverrides = null, OptimizationObjectiveEnum? OptimizationObjective = null, List<FixedAvailability> FixedAvailability = null, StateEnum? State = null, bool? CountsAsPaidTime = null, DateTime? CreatedDate = null, UserReference CreatedBy = null, DateTime? ModifiedDate = null, UserReference ModifiedBy = null, DateTime? LastRunDate = null, UserReference LastRunBy = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.ManagementUnits = ManagementUnits;
             this.Description = Description;
@@ -186,7 +188,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

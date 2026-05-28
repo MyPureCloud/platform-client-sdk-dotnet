@@ -1633,6 +1633,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Knowledgesearchfeedback,
             
             /// <summary>
+            /// Enum Knowledgebasesource for "KnowledgeBaseSource"
+            /// </summary>
+            [EnumMember(Value = "KnowledgeBaseSource")]
+            Knowledgebasesource,
+            
+            /// <summary>
+            /// Enum Knowledgefabricsource for "KnowledgeFabricSource"
+            /// </summary>
+            [EnumMember(Value = "KnowledgeFabricSource")]
+            Knowledgefabricsource,
+            
+            /// <summary>
             /// Enum Transcriptionsettings for "TranscriptionSettings"
             /// </summary>
             [EnumMember(Value = "TranscriptionSettings")]

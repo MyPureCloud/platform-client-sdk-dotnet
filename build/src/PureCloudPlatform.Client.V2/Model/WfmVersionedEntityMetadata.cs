@@ -37,15 +37,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The version of the associated entity.  Used to prevent conflicts on concurrent edits
-        /// </summary>
-        /// <value>The version of the associated entity.  Used to prevent conflicts on concurrent edits</value>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
-
-
-
-        /// <summary>
         /// The user who last modified the associated entity. The id may be &#39;System&#39; if it was an automated process
         /// </summary>
         /// <value>The user who last modified the associated entity. The id may be &#39;System&#39; if it was an automated process</value>
@@ -80,6 +71,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? DateCreated { get; private set; }
 
 
+
+        /// <summary>
+        /// The version of the associated entity.  Used to prevent conflicts on concurrent edits
+        /// </summary>
+        /// <value>The version of the associated entity.  Used to prevent conflicts on concurrent edits</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -89,11 +89,11 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class WfmVersionedEntityMetadata {\n");
 
-            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -135,11 +135,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
-                ) &&
-                (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
@@ -158,6 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
                 );
         }
 
@@ -172,9 +172,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
-
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
 
@@ -186,6 +183,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
 
                 return hash;
             }

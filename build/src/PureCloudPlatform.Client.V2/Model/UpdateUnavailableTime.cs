@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeSpan">Exact date, time and length of the unavailability time in granularity of minutes. Must be specified when creating a new unavailable time span.</param>
         /// <param name="Notes">Comments explaining the unavailability time span.</param>
         /// <param name="Delete">Whether the unavailable time should be deleted.</param>
-        public UpdateUnavailableTime(string Id = null, UnavailableTimesTimeSpan TimeSpan = null, string Notes = null, bool? Delete = null)
+        public UpdateUnavailableTime(string Id = null, WfmTimeSpan TimeSpan = null, string Notes = null, bool? Delete = null)
         {
             this.Id = Id;
             this.TimeSpan = TimeSpan;
@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Exact date, time and length of the unavailability time in granularity of minutes. Must be specified when creating a new unavailable time span</value>
         [DataMember(Name="timeSpan", EmitDefaultValue=false)]
-        public UnavailableTimesTimeSpan TimeSpan { get; set; }
+        public WfmTimeSpan TimeSpan { get; set; }
 
 
 

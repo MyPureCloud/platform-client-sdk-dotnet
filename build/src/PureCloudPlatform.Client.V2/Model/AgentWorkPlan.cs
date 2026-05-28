@@ -27,6 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentWorkPlan" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">Name.</param>
         /// <param name="ConstrainWeeklyPaidTime">Whether the weekly paid time constraint is enabled for this work plan (required).</param>
         /// <param name="FlexibleWeeklyPaidTime">Whether the weekly paid time constraint is flexible for this work plan (required).</param>
@@ -35,8 +36,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WeeklyMaximumPaidMinutes">Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true (required).</param>
         /// <param name="OptionalDays">Optional days to schedule for this work plan.</param>
         /// <param name="Shifts">Shifts in this work plan (required).</param>
-        public AgentWorkPlan(string Name = null, bool? ConstrainWeeklyPaidTime = null, bool? FlexibleWeeklyPaidTime = null, int? WeeklyExactPaidMinutes = null, int? WeeklyMinimumPaidMinutes = null, int? WeeklyMaximumPaidMinutes = null, SetWrapperDayOfWeek OptionalDays = null, List<AgentWorkPlanShift> Shifts = null)
+        public AgentWorkPlan(string Id = null, string Name = null, bool? ConstrainWeeklyPaidTime = null, bool? FlexibleWeeklyPaidTime = null, int? WeeklyExactPaidMinutes = null, int? WeeklyMinimumPaidMinutes = null, int? WeeklyMaximumPaidMinutes = null, SetWrapperDayOfWeek OptionalDays = null, List<AgentWorkPlanShift> Shifts = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.ConstrainWeeklyPaidTime = ConstrainWeeklyPaidTime;
             this.FlexibleWeeklyPaidTime = FlexibleWeeklyPaidTime;
@@ -55,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

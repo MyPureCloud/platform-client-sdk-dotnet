@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CallableTime" /> class.
         /// </summary>
         /// <param name="TimeSlots">The time intervals for which it is acceptable to place outbound calls. (required).</param>
-        /// <param name="TimeZoneId">The time zone for the time slots; for example, Africa/Abidjan (required).</param>
+        /// <param name="TimeZoneId">The time zone for the time slots; for example, Africa/Abidjan. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London (required).</param>
         public CallableTime(List<CampaignTimeSlot> TimeSlots = null, string TimeZoneId = null)
         {
             this.TimeSlots = TimeSlots;
@@ -48,9 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The time zone for the time slots; for example, Africa/Abidjan
+        /// The time zone for the time slots; for example, Africa/Abidjan. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
         /// </summary>
-        /// <value>The time zone for the time slots; for example, Africa/Abidjan</value>
+        /// <value>The time zone for the time slots; for example, Africa/Abidjan. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London</value>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
 

@@ -482,53 +482,53 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ActionMapEstimateResult> GetJourneyActionmapsEstimatesJobResultsWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Retrieve a single action target.
+        /// Deprecated. Retrieve a single action target.
         /// </summary>
         /// <remarks>
-        /// 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>ActionTarget</returns>
-        
+        [Obsolete]
         ActionTarget GetJourneyActiontarget (string actionTargetId);
 
         /// <summary>
-        /// Retrieve a single action target.
+        /// Deprecated. Retrieve a single action target.
         /// </summary>
         /// <remarks>
-        /// 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>ApiResponse of ActionTarget</returns>
-        
+        [Obsolete]
         ApiResponse<ActionTarget> GetJourneyActiontargetWithHttpInfo (string actionTargetId);
 
         /// <summary>
-        /// Retrieve all action targets.
+        /// Deprecated. Retrieve all action targets.
         /// </summary>
         /// <remarks>
-        /// 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ActionTargetListing</returns>
-        
+        [Obsolete]
         ActionTargetListing GetJourneyActiontargets (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
-        /// Retrieve all action targets.
+        /// Deprecated. Retrieve all action targets.
         /// </summary>
         /// <remarks>
-        /// 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of ActionTargetListing</returns>
-        
+        [Obsolete]
         ApiResponse<ActionTargetListing> GetJourneyActiontargetsWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -1480,6 +1480,50 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<JourneyEventDefinitionListing> GetJourneyViewsEventdefinitionsWithHttpInfo ();
 
         /// <summary>
+        /// Get external events for journey views
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>GetExternalEventsResponse</returns>
+        
+        GetExternalEventsResponse GetJourneyViewsEventdefinitionsExternal ();
+
+        /// <summary>
+        /// Get external events for journey views
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of GetExternalEventsResponse</returns>
+        
+        ApiResponse<GetExternalEventsResponse> GetJourneyViewsEventdefinitionsExternalWithHttpInfo ();
+
+        /// <summary>
+        /// Get changes in external event definitions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ExternalEventChangesResponse</returns>
+        
+        ExternalEventChangesResponse GetJourneyViewsEventdefinitionsExternalChanges ();
+
+        /// <summary>
+        /// Get changes in external event definitions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ExternalEventChangesResponse</returns>
+        
+        ApiResponse<ExternalEventChangesResponse> GetJourneyViewsEventdefinitionsExternalChangesWithHttpInfo ();
+
+        /// <summary>
         /// Get the jobs for an organization.
         /// </summary>
         /// <remarks>
@@ -1592,29 +1636,29 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ActionMap> PatchJourneyActionmapWithHttpInfo (string actionMapId, PatchActionMap body = null);
 
         /// <summary>
-        /// Update a single action target.
+        /// Deprecated. Update a single action target.
         /// </summary>
         /// <remarks>
-        /// 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ActionTarget</returns>
-        
+        [Obsolete]
         ActionTarget PatchJourneyActiontarget (string actionTargetId, PatchActionTarget body = null);
 
         /// <summary>
-        /// Update a single action target.
+        /// Deprecated. Update a single action target.
         /// </summary>
         /// <remarks>
-        /// 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ActionTarget</returns>
-        
+        [Obsolete]
         ApiResponse<ActionTarget> PatchJourneyActiontargetWithHttpInfo (string actionTargetId, PatchActionTarget body = null);
 
         /// <summary>
@@ -2379,6 +2423,58 @@ namespace PureCloudPlatform.Client.V2.Api
         
         ApiResponse<JourneyView> PutJourneyViewVersionWithHttpInfo (string viewId, string versionId, JourneyView body);
 
+        /// <summary>
+        /// Update external event for journey views
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>UpdateExternalEventResponse</returns>
+        
+        UpdateExternalEventResponse PutJourneyViewsEventdefinition (string eventDefinitionId, UpdateExternalEventRequest body = null);
+
+        /// <summary>
+        /// Update external event for journey views
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of UpdateExternalEventResponse</returns>
+        
+        ApiResponse<UpdateExternalEventResponse> PutJourneyViewsEventdefinitionWithHttpInfo (string eventDefinitionId, UpdateExternalEventRequest body = null);
+
+        /// <summary>
+        /// Activate external event for journey views
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ActivateExternalEventResponse</returns>
+        
+        ActivateExternalEventResponse PutJourneyViewsEventdefinitionActivate (string eventDefinitionId, ActivateExternalEventRequest body = null);
+
+        /// <summary>
+        /// Activate external event for journey views
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of ActivateExternalEventResponse</returns>
+        
+        ApiResponse<ActivateExternalEventResponse> PutJourneyViewsEventdefinitionActivateWithHttpInfo (string eventDefinitionId, ActivateExternalEventRequest body = null);
+
         #endregion Synchronous Operations
 
         #region Asynchronous Operations
@@ -2850,53 +2946,53 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ActionMapEstimateResult>> GetJourneyActionmapsEstimatesJobResultsAsyncWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Retrieve a single action target.
+        /// Deprecated. Retrieve a single action target.
         /// </summary>
         /// <remarks>
-        /// 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>Task of ActionTarget</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ActionTarget> GetJourneyActiontargetAsync (string actionTargetId);
 
         /// <summary>
-        /// Retrieve a single action target.
+        /// Deprecated. Retrieve a single action target.
         /// </summary>
         /// <remarks>
-        /// 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>Task of ApiResponse (ActionTarget)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ActionTarget>> GetJourneyActiontargetAsyncWithHttpInfo (string actionTargetId);
 
         /// <summary>
-        /// Retrieve all action targets.
+        /// Deprecated. Retrieve all action targets.
         /// </summary>
         /// <remarks>
-        /// 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ActionTargetListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ActionTargetListing> GetJourneyActiontargetsAsync (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
-        /// Retrieve all action targets.
+        /// Deprecated. Retrieve all action targets.
         /// </summary>
         /// <remarks>
-        /// 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ActionTargetListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ActionTargetListing>> GetJourneyActiontargetsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -3848,6 +3944,50 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<JourneyEventDefinitionListing>> GetJourneyViewsEventdefinitionsAsyncWithHttpInfo ();
 
         /// <summary>
+        /// Get external events for journey views
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of GetExternalEventsResponse</returns>
+        
+        System.Threading.Tasks.Task<GetExternalEventsResponse> GetJourneyViewsEventdefinitionsExternalAsync ();
+
+        /// <summary>
+        /// Get external events for journey views
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (GetExternalEventsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GetExternalEventsResponse>> GetJourneyViewsEventdefinitionsExternalAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Get changes in external event definitions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ExternalEventChangesResponse</returns>
+        
+        System.Threading.Tasks.Task<ExternalEventChangesResponse> GetJourneyViewsEventdefinitionsExternalChangesAsync ();
+
+        /// <summary>
+        /// Get changes in external event definitions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ExternalEventChangesResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ExternalEventChangesResponse>> GetJourneyViewsEventdefinitionsExternalChangesAsyncWithHttpInfo ();
+
+        /// <summary>
         /// Get the jobs for an organization.
         /// </summary>
         /// <remarks>
@@ -3960,29 +4100,29 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ActionMap>> PatchJourneyActionmapAsyncWithHttpInfo (string actionMapId, PatchActionMap body = null);
 
         /// <summary>
-        /// Update a single action target.
+        /// Deprecated. Update a single action target.
         /// </summary>
         /// <remarks>
-        /// 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ActionTarget</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ActionTarget> PatchJourneyActiontargetAsync (string actionTargetId, PatchActionTarget body = null);
 
         /// <summary>
-        /// Update a single action target.
+        /// Deprecated. Update a single action target.
         /// </summary>
         /// <remarks>
-        /// 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ActionTarget)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ActionTarget>> PatchJourneyActiontargetAsyncWithHttpInfo (string actionTargetId, PatchActionTarget body = null);
 
         /// <summary>
@@ -4746,6 +4886,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (JourneyView)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<JourneyView>> PutJourneyViewVersionAsyncWithHttpInfo (string viewId, string versionId, JourneyView body);
+
+        /// <summary>
+        /// Update external event for journey views
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of UpdateExternalEventResponse</returns>
+        
+        System.Threading.Tasks.Task<UpdateExternalEventResponse> PutJourneyViewsEventdefinitionAsync (string eventDefinitionId, UpdateExternalEventRequest body = null);
+
+        /// <summary>
+        /// Update external event for journey views
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (UpdateExternalEventResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UpdateExternalEventResponse>> PutJourneyViewsEventdefinitionAsyncWithHttpInfo (string eventDefinitionId, UpdateExternalEventRequest body = null);
+
+        /// <summary>
+        /// Activate external event for journey views
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ActivateExternalEventResponse</returns>
+        
+        System.Threading.Tasks.Task<ActivateExternalEventResponse> PutJourneyViewsEventdefinitionActivateAsync (string eventDefinitionId, ActivateExternalEventRequest body = null);
+
+        /// <summary>
+        /// Activate external event for journey views
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (ActivateExternalEventResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivateExternalEventResponse>> PutJourneyViewsEventdefinitionActivateAsyncWithHttpInfo (string eventDefinitionId, ActivateExternalEventRequest body = null);
 
         #endregion Asynchronous Operations
 
@@ -8601,13 +8793,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve a single action target. 
-        /// 
+        /// Deprecated. Retrieve a single action target. 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>ActionTarget</returns>
-        
+        [Obsolete]
         public ActionTarget GetJourneyActiontarget (string actionTargetId)
         {
              ApiResponse<ActionTarget> localVarResponse = GetJourneyActiontargetWithHttpInfo(actionTargetId);
@@ -8615,13 +8807,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve a single action target. 
-        /// 
+        /// Deprecated. Retrieve a single action target. 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>ApiResponse of ActionTarget</returns>
-        
+        [Obsolete]
         public ApiResponse< ActionTarget > GetJourneyActiontargetWithHttpInfo (string actionTargetId)
         { 
             // verify the required parameter 'actionTargetId' is set
@@ -8702,13 +8894,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve a single action target. 
-        /// 
+        /// Deprecated. Retrieve a single action target. 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>Task of ActionTarget</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ActionTarget> GetJourneyActiontargetAsync (string actionTargetId)
         {
              ApiResponse<ActionTarget> localVarResponse = await GetJourneyActiontargetAsyncWithHttpInfo(actionTargetId);
@@ -8717,13 +8909,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve a single action target. 
-        /// 
+        /// Deprecated. Retrieve a single action target. 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <returns>Task of ApiResponse (ActionTarget)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ActionTarget>> GetJourneyActiontargetAsyncWithHttpInfo (string actionTargetId)
         { 
             // verify the required parameter 'actionTargetId' is set
@@ -8806,14 +8998,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve all action targets. 
-        /// 
+        /// Deprecated. Retrieve all action targets. 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ActionTargetListing</returns>
-        
+        [Obsolete]
         public ActionTargetListing GetJourneyActiontargets (int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<ActionTargetListing> localVarResponse = GetJourneyActiontargetsWithHttpInfo(pageNumber, pageSize);
@@ -8821,14 +9013,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve all action targets. 
-        /// 
+        /// Deprecated. Retrieve all action targets. 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of ActionTargetListing</returns>
-        
+        [Obsolete]
         public ApiResponse< ActionTargetListing > GetJourneyActiontargetsWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
 
@@ -8907,14 +9099,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve all action targets. 
-        /// 
+        /// Deprecated. Retrieve all action targets. 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ActionTargetListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ActionTargetListing> GetJourneyActiontargetsAsync (int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<ActionTargetListing> localVarResponse = await GetJourneyActiontargetsAsyncWithHttpInfo(pageNumber, pageSize);
@@ -8923,14 +9115,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve all action targets. 
-        /// 
+        /// Deprecated. Retrieve all action targets. 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ActionTargetListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ActionTargetListing>> GetJourneyActiontargetsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
 
@@ -16659,6 +16851,390 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get external events for journey views 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>GetExternalEventsResponse</returns>
+        
+        public GetExternalEventsResponse GetJourneyViewsEventdefinitionsExternal ()
+        {
+             ApiResponse<GetExternalEventsResponse> localVarResponse = GetJourneyViewsEventdefinitionsExternalWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get external events for journey views 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of GetExternalEventsResponse</returns>
+        
+        public ApiResponse< GetExternalEventsResponse > GetJourneyViewsEventdefinitionsExternalWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/journey/views/eventdefinitions/external";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinitionsExternal: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyViewsEventdefinitionsExternal: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinitionsExternal: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GetExternalEventsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GetExternalEventsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetExternalEventsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get external events for journey views 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of GetExternalEventsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<GetExternalEventsResponse> GetJourneyViewsEventdefinitionsExternalAsync ()
+        {
+             ApiResponse<GetExternalEventsResponse> localVarResponse = await GetJourneyViewsEventdefinitionsExternalAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get external events for journey views 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (GetExternalEventsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GetExternalEventsResponse>> GetJourneyViewsEventdefinitionsExternalAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/journey/views/eventdefinitions/external";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinitionsExternal: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyViewsEventdefinitionsExternal: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinitionsExternal: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GetExternalEventsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GetExternalEventsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetExternalEventsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get changes in external event definitions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ExternalEventChangesResponse</returns>
+        
+        public ExternalEventChangesResponse GetJourneyViewsEventdefinitionsExternalChanges ()
+        {
+             ApiResponse<ExternalEventChangesResponse> localVarResponse = GetJourneyViewsEventdefinitionsExternalChangesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get changes in external event definitions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ExternalEventChangesResponse</returns>
+        
+        public ApiResponse< ExternalEventChangesResponse > GetJourneyViewsEventdefinitionsExternalChangesWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/journey/views/eventdefinitions/external/changes";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinitionsExternalChanges: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyViewsEventdefinitionsExternalChanges: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinitionsExternalChanges: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalEventChangesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalEventChangesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalEventChangesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get changes in external event definitions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ExternalEventChangesResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ExternalEventChangesResponse> GetJourneyViewsEventdefinitionsExternalChangesAsync ()
+        {
+             ApiResponse<ExternalEventChangesResponse> localVarResponse = await GetJourneyViewsEventdefinitionsExternalChangesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get changes in external event definitions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ExternalEventChangesResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalEventChangesResponse>> GetJourneyViewsEventdefinitionsExternalChangesAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/journey/views/eventdefinitions/external/changes";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinitionsExternalChanges: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyViewsEventdefinitionsExternalChanges: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinitionsExternalChanges: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalEventChangesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalEventChangesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalEventChangesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get the jobs for an organization. 
         /// 
         /// </summary>
@@ -17516,14 +18092,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a single action target. 
-        /// 
+        /// Deprecated. Update a single action target. 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ActionTarget</returns>
-        
+        [Obsolete]
         public ActionTarget PatchJourneyActiontarget (string actionTargetId, PatchActionTarget body = null)
         {
              ApiResponse<ActionTarget> localVarResponse = PatchJourneyActiontargetWithHttpInfo(actionTargetId, body);
@@ -17531,14 +18107,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a single action target. 
-        /// 
+        /// Deprecated. Update a single action target. 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ActionTarget</returns>
-        
+        [Obsolete]
         public ApiResponse< ActionTarget > PatchJourneyActiontargetWithHttpInfo (string actionTargetId, PatchActionTarget body = null)
         { 
             // verify the required parameter 'actionTargetId' is set
@@ -17625,14 +18201,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a single action target. 
-        /// 
+        /// Deprecated. Update a single action target. 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ActionTarget</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ActionTarget> PatchJourneyActiontargetAsync (string actionTargetId, PatchActionTarget body = null)
         {
              ApiResponse<ActionTarget> localVarResponse = await PatchJourneyActiontargetAsyncWithHttpInfo(actionTargetId, body);
@@ -17641,14 +18217,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a single action target. 
-        /// 
+        /// Deprecated. Update a single action target. 
+        /// ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="actionTargetId">ID of the action target.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ActionTarget)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ActionTarget>> PatchJourneyActiontargetAsyncWithHttpInfo (string actionTargetId, PatchActionTarget body = null)
         { 
             // verify the required parameter 'actionTargetId' is set
@@ -24262,6 +24838,448 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<JourneyView>(localVarStatusCode,
                 localVarHeaders,
                 (JourneyView) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyView)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update external event for journey views 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>UpdateExternalEventResponse</returns>
+        
+        public UpdateExternalEventResponse PutJourneyViewsEventdefinition (string eventDefinitionId, UpdateExternalEventRequest body = null)
+        {
+             ApiResponse<UpdateExternalEventResponse> localVarResponse = PutJourneyViewsEventdefinitionWithHttpInfo(eventDefinitionId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update external event for journey views 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of UpdateExternalEventResponse</returns>
+        
+        public ApiResponse< UpdateExternalEventResponse > PutJourneyViewsEventdefinitionWithHttpInfo (string eventDefinitionId, UpdateExternalEventRequest body = null)
+        { 
+            // verify the required parameter 'eventDefinitionId' is set
+            if (eventDefinitionId == null)
+                throw new ApiException(400, "Missing required parameter 'eventDefinitionId' when calling JourneyApi->PutJourneyViewsEventdefinition");
+
+            var localVarPath = "/api/v2/journey/views/eventdefinitions/{eventDefinitionId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (eventDefinitionId != null) localVarPathParams.Add("eventDefinitionId", this.Configuration.ApiClient.ParameterToString(eventDefinitionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutJourneyViewsEventdefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutJourneyViewsEventdefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutJourneyViewsEventdefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UpdateExternalEventResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UpdateExternalEventResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdateExternalEventResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update external event for journey views 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of UpdateExternalEventResponse</returns>
+        
+        public async System.Threading.Tasks.Task<UpdateExternalEventResponse> PutJourneyViewsEventdefinitionAsync (string eventDefinitionId, UpdateExternalEventRequest body = null)
+        {
+             ApiResponse<UpdateExternalEventResponse> localVarResponse = await PutJourneyViewsEventdefinitionAsyncWithHttpInfo(eventDefinitionId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update external event for journey views 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (UpdateExternalEventResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UpdateExternalEventResponse>> PutJourneyViewsEventdefinitionAsyncWithHttpInfo (string eventDefinitionId, UpdateExternalEventRequest body = null)
+        { 
+            // verify the required parameter 'eventDefinitionId' is set
+            if (eventDefinitionId == null)
+                throw new ApiException(400, "Missing required parameter 'eventDefinitionId' when calling JourneyApi->PutJourneyViewsEventdefinition");
+            
+
+            var localVarPath = "/api/v2/journey/views/eventdefinitions/{eventDefinitionId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (eventDefinitionId != null) localVarPathParams.Add("eventDefinitionId", this.Configuration.ApiClient.ParameterToString(eventDefinitionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutJourneyViewsEventdefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutJourneyViewsEventdefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutJourneyViewsEventdefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UpdateExternalEventResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UpdateExternalEventResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdateExternalEventResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Activate external event for journey views 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ActivateExternalEventResponse</returns>
+        
+        public ActivateExternalEventResponse PutJourneyViewsEventdefinitionActivate (string eventDefinitionId, ActivateExternalEventRequest body = null)
+        {
+             ApiResponse<ActivateExternalEventResponse> localVarResponse = PutJourneyViewsEventdefinitionActivateWithHttpInfo(eventDefinitionId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Activate external event for journey views 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of ActivateExternalEventResponse</returns>
+        
+        public ApiResponse< ActivateExternalEventResponse > PutJourneyViewsEventdefinitionActivateWithHttpInfo (string eventDefinitionId, ActivateExternalEventRequest body = null)
+        { 
+            // verify the required parameter 'eventDefinitionId' is set
+            if (eventDefinitionId == null)
+                throw new ApiException(400, "Missing required parameter 'eventDefinitionId' when calling JourneyApi->PutJourneyViewsEventdefinitionActivate");
+
+            var localVarPath = "/api/v2/journey/views/eventdefinitions/{eventDefinitionId}/activate";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (eventDefinitionId != null) localVarPathParams.Add("eventDefinitionId", this.Configuration.ApiClient.ParameterToString(eventDefinitionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutJourneyViewsEventdefinitionActivate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutJourneyViewsEventdefinitionActivate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutJourneyViewsEventdefinitionActivate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivateExternalEventResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivateExternalEventResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivateExternalEventResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Activate external event for journey views 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ActivateExternalEventResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ActivateExternalEventResponse> PutJourneyViewsEventdefinitionActivateAsync (string eventDefinitionId, ActivateExternalEventRequest body = null)
+        {
+             ApiResponse<ActivateExternalEventResponse> localVarResponse = await PutJourneyViewsEventdefinitionActivateAsyncWithHttpInfo(eventDefinitionId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Activate external event for journey views 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (ActivateExternalEventResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivateExternalEventResponse>> PutJourneyViewsEventdefinitionActivateAsyncWithHttpInfo (string eventDefinitionId, ActivateExternalEventRequest body = null)
+        { 
+            // verify the required parameter 'eventDefinitionId' is set
+            if (eventDefinitionId == null)
+                throw new ApiException(400, "Missing required parameter 'eventDefinitionId' when calling JourneyApi->PutJourneyViewsEventdefinitionActivate");
+            
+
+            var localVarPath = "/api/v2/journey/views/eventdefinitions/{eventDefinitionId}/activate";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (eventDefinitionId != null) localVarPathParams.Add("eventDefinitionId", this.Configuration.ApiClient.ParameterToString(eventDefinitionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutJourneyViewsEventdefinitionActivate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutJourneyViewsEventdefinitionActivate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutJourneyViewsEventdefinitionActivate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivateExternalEventResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivateExternalEventResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivateExternalEventResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
