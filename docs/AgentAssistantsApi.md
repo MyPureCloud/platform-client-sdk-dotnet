@@ -686,7 +686,7 @@ namespace Example
 
 ## GetAssistantsAgentchecklists
 
-> [**AgentChecklistListing**](AgentChecklistListing) GetAssistantsAgentchecklists (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null)
+> [**AgentChecklistListing**](AgentChecklistListing) GetAssistantsAgentchecklists (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null, List<string> agentChecklistIds = null)
 
 
 Get the list of agent checklists
@@ -724,11 +724,12 @@ namespace Example
             var language = language_example;  // string | The agent checklist language filter applied to the listing. (optional) 
             var sortOrder = sortOrder_example;  // string | The sort order for the listing (optional) 
             var sortBy = sortBy_example;  // string | The field to sort by for the listing. (optional) 
+            var agentChecklistIds = new List<string>(); // List<string> | Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters. (optional) 
 
             try
             { 
                 // Get the list of agent checklists
-                AgentChecklistListing result = apiInstance.GetAssistantsAgentchecklists(before, after, pageSize, namePrefix, language, sortOrder, sortBy);
+                AgentChecklistListing result = apiInstance.GetAssistantsAgentchecklists(before, after, pageSize, namePrefix, language, sortOrder, sortBy, agentChecklistIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -752,6 +753,7 @@ namespace Example
 | **language** | **string**| The agent checklist language filter applied to the listing. | [optional]  |
 | **sortOrder** | **string**| The sort order for the listing | [optional] <br />**Values**: asc, desc |
 | **sortBy** | **string**| The field to sort by for the listing. | [optional] <br />**Values**: dateModified, language, name |
+| **agentChecklistIds** | [**List<string>**](string)| Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters. | [optional]  |
 
 ### Return type
 
@@ -1533,4 +1535,4 @@ namespace Example
 [**AgentChecklist**](AgentChecklist)
 
 
-_PureCloudPlatform.Client.V2 263.0.0_
+_PureCloudPlatform.Client.V2 264.0.0_

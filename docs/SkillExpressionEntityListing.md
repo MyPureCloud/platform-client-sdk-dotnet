@@ -1,12 +1,12 @@
-# UtilizationTagEntityListing
+# SkillExpressionEntityListing
 
-## ININ.PureCloudApi.Model.UtilizationTagEntityListing
+## ININ.PureCloudApi.Model.SkillExpressionEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;UtilizationTag&gt;**](UtilizationTag) |  | [optional] |
+| **Entities** | [**List&lt;SkillExpression&gt;**](SkillExpression) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 263.0.0_
+_PureCloudPlatform.Client.V2 264.0.0_

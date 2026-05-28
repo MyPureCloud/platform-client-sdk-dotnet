@@ -8865,7 +8865,7 @@ namespace Example
 
 ## PostFlowsJobs
 
-> [**RegisterArchitectJobResponse**](RegisterArchitectJobResponse) PostFlowsJobs ()
+> [**RegisterArchitectJobResponse**](RegisterArchitectJobResponse) PostFlowsJobs (Object body = null)
 
 
 Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
@@ -8896,11 +8896,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
+            var body = ;  // Object |  (optional) 
 
             try
             { 
                 // Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
-                RegisterArchitectJobResponse result = apiInstance.PostFlowsJobs();
+                RegisterArchitectJobResponse result = apiInstance.PostFlowsJobs(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8913,7 +8914,11 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does require any parameters.
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | **Object**|  | [optional]  |
 
 ### Return type
 
@@ -10028,4 +10033,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 263.0.0_
+_PureCloudPlatform.Client.V2 264.0.0_

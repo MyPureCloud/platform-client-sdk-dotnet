@@ -1,0 +1,14 @@
+# QueryOpportunitiesResponse
+
+## ININ.PureCloudApi.Model.QueryOpportunitiesResponse
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Result** | [**OpportunitiesResultWithPagination**](OpportunitiesResultWithPagination) | The query result. Null if downloadUrl is populated | [optional] |
+| **DownloadUrl** | **string** | The URL used to retrieve large datasets. If present, the response conforms to the schema for the result field | [optional] |
+
+
+
+_PureCloudPlatform.Client.V2 264.0.0_

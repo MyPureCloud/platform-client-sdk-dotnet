@@ -10,7 +10,8 @@
 | **LastSuccessfulSessionId** | **string** | Last successful session ID of the business unit | [optional] |
 | **State** | **string** | State of the latest session | [optional] |
 | **ErrorCode** | **string** | Failed session error code | [optional] |
+| **RetrainInProgress** | **bool?** | True if a model retrain is currently running for the organization, false if not | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 263.0.0_
+_PureCloudPlatform.Client.V2 264.0.0_

@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Id** | **string** | The globally unique identifier for the object. | |
 | **Name** | **string** |  | [optional] |
 | **ServiceLevel** | [**BuServiceLevel**](BuServiceLevel) | Service level targets for this service goal template | [optional] |
 | **AverageSpeedOfAnswer** | [**BuAverageSpeedOfAnswer**](BuAverageSpeedOfAnswer) | Average speed of answer targets for this service goal template | [optional] |
@@ -17,4 +17,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 263.0.0_
+_PureCloudPlatform.Client.V2 264.0.0_

@@ -24,8 +24,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneyActionmaps**](#GetJourneyActionmaps) | **Get** /api/v2/journey/actionmaps | Retrieve all action maps. |
 | [**GetJourneyActionmapsEstimatesJob**](#GetJourneyActionmapsEstimatesJob) | **Get** /api/v2/journey/actionmaps/estimates/jobs/{jobId} | Deprecated. Get status of job. |
 | [**GetJourneyActionmapsEstimatesJobResults**](#GetJourneyActionmapsEstimatesJobResults) | **Get** /api/v2/journey/actionmaps/estimates/jobs/{jobId}/results | Deprecated. Get estimates from completed job. |
-| [**GetJourneyActiontarget**](#GetJourneyActiontarget) | **Get** /api/v2/journey/actiontargets/{actionTargetId} | Retrieve a single action target. |
-| [**GetJourneyActiontargets**](#GetJourneyActiontargets) | **Get** /api/v2/journey/actiontargets | Retrieve all action targets. |
+| [**GetJourneyActiontarget**](#GetJourneyActiontarget) | **Get** /api/v2/journey/actiontargets/{actionTargetId} | Deprecated. Retrieve a single action target. |
+| [**GetJourneyActiontargets**](#GetJourneyActiontargets) | **Get** /api/v2/journey/actiontargets | Deprecated. Retrieve all action targets. |
 | [**GetJourneyActiontemplate**](#GetJourneyActiontemplate) | **Get** /api/v2/journey/actiontemplates/{actionTemplateId} | Retrieve a single action template. |
 | [**GetJourneyActiontemplates**](#GetJourneyActiontemplates) | **Get** /api/v2/journey/actiontemplates | Retrieve all action templates. |
 | [**GetJourneyDeploymentCustomerPing**](#GetJourneyDeploymentCustomerPing) | **Get** /api/v2/journey/deployments/{deploymentId}/customers/{customerCookieId}/ping | Send a ping. |
@@ -62,11 +62,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneyViewsDataDetails**](#GetJourneyViewsDataDetails) | **Get** /api/v2/journey/views/data/details | Get details about the data available for journey queries including oldest and newest event dates |
 | [**GetJourneyViewsEventdefinition**](#GetJourneyViewsEventdefinition) | **Get** /api/v2/journey/views/eventdefinitions/{eventDefinitionId} | Get an Event Definition |
 | [**GetJourneyViewsEventdefinitions**](#GetJourneyViewsEventdefinitions) | **Get** /api/v2/journey/views/eventdefinitions | Get a list of Event Definitions |
+| [**GetJourneyViewsEventdefinitionsExternal**](#GetJourneyViewsEventdefinitionsExternal) | **Get** /api/v2/journey/views/eventdefinitions/external | Get external events for journey views |
+| [**GetJourneyViewsEventdefinitionsExternalChanges**](#GetJourneyViewsEventdefinitionsExternalChanges) | **Get** /api/v2/journey/views/eventdefinitions/external/changes | Get changes in external event definitions |
 | [**GetJourneyViewsJobs**](#GetJourneyViewsJobs) | **Get** /api/v2/journey/views/jobs | Get the jobs for an organization. |
 | [**GetJourneyViewsJobsMe**](#GetJourneyViewsJobsMe) | **Get** /api/v2/journey/views/jobs/me | Get my jobs |
 | [**GetJourneyViewsSchedules**](#GetJourneyViewsSchedules) | **Get** /api/v2/journey/views/schedules | Get the journey schedules for an organization. |
 | [**PatchJourneyActionmap**](#PatchJourneyActionmap) | **Patch** /api/v2/journey/actionmaps/{actionMapId} | Update single action map. |
-| [**PatchJourneyActiontarget**](#PatchJourneyActiontarget) | **Patch** /api/v2/journey/actiontargets/{actionTargetId} | Update a single action target. |
+| [**PatchJourneyActiontarget**](#PatchJourneyActiontarget) | **Patch** /api/v2/journey/actiontargets/{actionTargetId} | Deprecated. Update a single action target. |
 | [**PatchJourneyActiontemplate**](#PatchJourneyActiontemplate) | **Patch** /api/v2/journey/actiontemplates/{actionTemplateId} | Update a single action template. |
 | [**PatchJourneyExternaleventsConfiguration**](#PatchJourneyExternaleventsConfiguration) | **Patch** /api/v2/journey/externalevents/configurations/{configId} | Update an external events configuration. |
 | [**PatchJourneyOutcome**](#PatchJourneyOutcome) | **Patch** /api/v2/journey/outcomes/{outcomeId} | Deprecated. Update an outcome. |
@@ -97,6 +99,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutJourneyExternaleventsSchema**](#PutJourneyExternaleventsSchema) | **Put** /api/v2/journey/externalevents/schemas/{schemaId} | Update a schema |
 | [**PutJourneyViewSchedules**](#PutJourneyViewSchedules) | **Put** /api/v2/journey/views/{viewId}/schedules | Update the Schedule for a JourneyView |
 | [**PutJourneyViewVersion**](#PutJourneyViewVersion) | **Put** /api/v2/journey/views/{viewId}/versions/{versionId} | Update a Journey View by ID and version |
+| [**PutJourneyViewsEventdefinition**](#PutJourneyViewsEventdefinition) | **Put** /api/v2/journey/views/eventdefinitions/{eventDefinitionId} | Update external event for journey views |
+| [**PutJourneyViewsEventdefinitionActivate**](#PutJourneyViewsEventdefinitionActivate) | **Put** /api/v2/journey/views/eventdefinitions/{eventDefinitionId}/activate | Activate external event for journey views |
 
 
 
@@ -1267,8 +1271,13 @@ namespace Example
 
 > [**ActionTarget**](ActionTarget) GetJourneyActiontarget (string actionTargetId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Retrieve a single action target.
+Deprecated. Retrieve a single action target.
+
+ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
 
 Requires ANY permissions: 
 
@@ -1300,7 +1309,7 @@ namespace Example
 
             try
             { 
-                // Retrieve a single action target.
+                // Deprecated. Retrieve a single action target.
                 ActionTarget result = apiInstance.GetJourneyActiontarget(actionTargetId);
                 Debug.WriteLine(result);
             }
@@ -1329,8 +1338,13 @@ namespace Example
 
 > [**ActionTargetListing**](ActionTargetListing) GetJourneyActiontargets (int? pageNumber = null, int? pageSize = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Retrieve all action targets.
+Deprecated. Retrieve all action targets.
+
+ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
 
 Requires ANY permissions: 
 
@@ -1363,7 +1377,7 @@ namespace Example
 
             try
             { 
-                // Retrieve all action targets.
+                // Deprecated. Retrieve all action targets.
                 ActionTargetListing result = apiInstance.GetJourneyActiontargets(pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -3720,6 +3734,120 @@ This endpoint does require any parameters.
 [**JourneyEventDefinitionListing**](JourneyEventDefinitionListing)
 
 
+## GetJourneyViewsEventdefinitionsExternal
+
+> [**GetExternalEventsResponse**](GetExternalEventsResponse) GetJourneyViewsEventdefinitionsExternal ()
+
+
+Get external events for journey views
+
+Requires ALL permissions: 
+
+* journey:externalEvents:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewsEventdefinitionsExternalExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+
+            try
+            { 
+                // Get external events for journey views
+                GetExternalEventsResponse result = apiInstance.GetJourneyViewsEventdefinitionsExternal();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViewsEventdefinitionsExternal: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**GetExternalEventsResponse**](GetExternalEventsResponse)
+
+
+## GetJourneyViewsEventdefinitionsExternalChanges
+
+> [**ExternalEventChangesResponse**](ExternalEventChangesResponse) GetJourneyViewsEventdefinitionsExternalChanges ()
+
+
+Get changes in external event definitions
+
+Requires ALL permissions: 
+
+* journey:externalEvents:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewsEventdefinitionsExternalChangesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+
+            try
+            { 
+                // Get changes in external event definitions
+                ExternalEventChangesResponse result = apiInstance.GetJourneyViewsEventdefinitionsExternalChanges();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViewsEventdefinitionsExternalChanges: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**ExternalEventChangesResponse**](ExternalEventChangesResponse)
+
+
 ## GetJourneyViewsJobs
 
 > [**JourneyViewJobListing**](JourneyViewJobListing) GetJourneyViewsJobs (int? pageNumber = null, int? pageSize = null, string interval = null, string statuses = null)
@@ -3988,8 +4116,13 @@ namespace Example
 
 > [**ActionTarget**](ActionTarget) PatchJourneyActiontarget (string actionTargetId, PatchActionTarget body = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Update a single action target.
+Deprecated. Update a single action target.
+
+ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
 
 Requires ANY permissions: 
 
@@ -4022,7 +4155,7 @@ namespace Example
 
             try
             { 
-                // Update a single action target.
+                // Deprecated. Update a single action target.
                 ActionTarget result = apiInstance.PatchJourneyActiontarget(actionTargetId, body);
                 Debug.WriteLine(result);
             }
@@ -5960,4 +6093,132 @@ namespace Example
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatform.Client.V2 263.0.0_
+## PutJourneyViewsEventdefinition
+
+> [**UpdateExternalEventResponse**](UpdateExternalEventResponse) PutJourneyViewsEventdefinition (string eventDefinitionId, UpdateExternalEventRequest body = null)
+
+
+Update external event for journey views
+
+Requires ALL permissions: 
+
+* journey:externalEvents:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutJourneyViewsEventdefinitionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var eventDefinitionId = eventDefinitionId_example;  // string | Event Definition ID
+            var body = new UpdateExternalEventRequest(); // UpdateExternalEventRequest |  (optional) 
+
+            try
+            { 
+                // Update external event for journey views
+                UpdateExternalEventResponse result = apiInstance.PutJourneyViewsEventdefinition(eventDefinitionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PutJourneyViewsEventdefinition: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **eventDefinitionId** | **string**| Event Definition ID |  |
+| **body** | [**UpdateExternalEventRequest**](UpdateExternalEventRequest)|  | [optional]  |
+
+### Return type
+
+[**UpdateExternalEventResponse**](UpdateExternalEventResponse)
+
+
+## PutJourneyViewsEventdefinitionActivate
+
+> [**ActivateExternalEventResponse**](ActivateExternalEventResponse) PutJourneyViewsEventdefinitionActivate (string eventDefinitionId, ActivateExternalEventRequest body = null)
+
+
+Activate external event for journey views
+
+Requires ALL permissions: 
+
+* journey:externalEvents:activate
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutJourneyViewsEventdefinitionActivateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var eventDefinitionId = eventDefinitionId_example;  // string | Event Definition ID
+            var body = new ActivateExternalEventRequest(); // ActivateExternalEventRequest |  (optional) 
+
+            try
+            { 
+                // Activate external event for journey views
+                ActivateExternalEventResponse result = apiInstance.PutJourneyViewsEventdefinitionActivate(eventDefinitionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PutJourneyViewsEventdefinitionActivate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **eventDefinitionId** | **string**| Event Definition ID |  |
+| **body** | [**ActivateExternalEventRequest**](ActivateExternalEventRequest)|  | [optional]  |
+
+### Return type
+
+[**ActivateExternalEventResponse**](ActivateExternalEventResponse)
+
+
+_PureCloudPlatform.Client.V2 264.0.0_

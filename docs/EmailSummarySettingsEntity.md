@@ -1,15 +1,14 @@
-# UtilizationTag
+# EmailSummarySettingsEntity
 
-## ININ.PureCloudApi.Model.UtilizationTag
+## ININ.PureCloudApi.Model.EmailSummarySettingsEntity
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 263.0.0_
+_PureCloudPlatform.Client.V2 264.0.0_
