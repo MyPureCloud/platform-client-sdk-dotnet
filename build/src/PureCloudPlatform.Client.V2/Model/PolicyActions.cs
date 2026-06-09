@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssignSurveys">AssignSurveys.</param>
         /// <param name="RetentionDuration">RetentionDuration.</param>
         /// <param name="InitiateScreenRecording">InitiateScreenRecording.</param>
-        /// <param name="MediaTranscriptions">MediaTranscriptions.</param>
+        /// <param name="MediaTranscriptions">Deprecated. The Voci and Call Journey transcription integrations are no longer supported..</param>
         /// <param name="IntegrationExport">Policy action for exporting recordings using an integration to 3rd party s3..</param>
         public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<MeteredAssignmentByAgent> AssignMeteredAssignmentByAgent = null, List<CalibrationAssignment> AssignCalibrations = null, List<SurveyAssignment> AssignSurveys = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null, List<MediaTranscription> MediaTranscriptions = null, IntegrationExport IntegrationExport = null)
         {
@@ -136,8 +136,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets MediaTranscriptions
+        /// Deprecated. The Voci and Call Journey transcription integrations are no longer supported.
         /// </summary>
+        /// <value>Deprecated. The Voci and Call Journey transcription integrations are no longer supported.</value>
         [DataMember(Name="mediaTranscriptions", EmitDefaultValue=false)]
         public List<MediaTranscription> MediaTranscriptions { get; set; }
 

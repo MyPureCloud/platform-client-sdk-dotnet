@@ -18,6 +18,33 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WhatsAppDefinition :  IEquatable<WhatsAppDefinition>
     {
+        /// <summary>
+        /// Category of whatsApp carousels template.
+        /// </summary>
+        /// <value>Category of whatsApp carousels template.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CategoryEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Marketing for "marketing"
+            /// </summary>
+            [EnumMember(Value = "marketing")]
+            Marketing
+        }
+        /// <summary>
+        /// Category of whatsApp carousels template.
+        /// </summary>
+        /// <value>Category of whatsApp carousels template.</value>
+        [DataMember(Name="category", EmitDefaultValue=false)]
+        public CategoryEnum? Category { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WhatsAppDefinition" /> class.
@@ -33,7 +60,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Buttons">List of buttons to be included in the standard WhatsApp messages channel.</param>
         /// <param name="MessageFooter">Footer for the message in the standard WhatsApp messages channel.</param>
         /// <param name="Header">Header for the message in the standard WhatsApp messages channel.</param>
-        public WhatsAppDefinition(string Name = null, string Namespace = null, string Language = null, List<Button> Buttons = null, MessageFooter MessageFooter = null, MessageHeader Header = null)
+        /// <param name="IntegrationId">WhatsApp integration ID for whatsApp carousels.</param>
+        /// <param name="Category">Category of whatsApp carousels template..</param>
+        /// <param name="Carousel">Definition for whatsApp carousels template..</param>
+        public WhatsAppDefinition(string Name = null, string Namespace = null, string Language = null, List<Button> Buttons = null, MessageFooter MessageFooter = null, MessageHeader Header = null, string IntegrationId = null, CategoryEnum? Category = null, Carousel Carousel = null)
         {
             this.Name = Name;
             this.Namespace = Namespace;
@@ -41,6 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Buttons = Buttons;
             this.MessageFooter = MessageFooter;
             this.Header = Header;
+            this.IntegrationId = IntegrationId;
+            this.Category = Category;
+            this.Carousel = Carousel;
             
         }
         
@@ -99,6 +132,44 @@ namespace PureCloudPlatform.Client.V2.Model
         public MessageHeader Header { get; set; }
 
 
+
+        /// <summary>
+        /// WhatsApp integration ID for whatsApp carousels
+        /// </summary>
+        /// <value>WhatsApp integration ID for whatsApp carousels</value>
+        [DataMember(Name="integrationId", EmitDefaultValue=false)]
+        public string IntegrationId { get; set; }
+
+
+
+
+
+        /// <summary>
+        /// Template status of whatsApp carousels template.
+        /// </summary>
+        /// <value>Template status of whatsApp carousels template.</value>
+        [DataMember(Name="templateStatus", EmitDefaultValue=false)]
+        public string TemplateStatus { get; private set; }
+
+
+
+        /// <summary>
+        /// Status information about the template
+        /// </summary>
+        /// <value>Status information about the template</value>
+        [DataMember(Name="statusInfo", EmitDefaultValue=false)]
+        public StatusInfo StatusInfo { get; private set; }
+
+
+
+        /// <summary>
+        /// Definition for whatsApp carousels template.
+        /// </summary>
+        /// <value>Definition for whatsApp carousels template.</value>
+        [DataMember(Name="carousel", EmitDefaultValue=false)]
+        public Carousel Carousel { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -114,6 +185,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Buttons: ").Append(Buttons).Append("\n");
             sb.Append("  MessageFooter: ").Append(MessageFooter).Append("\n");
             sb.Append("  Header: ").Append(Header).Append("\n");
+            sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
+            sb.Append("  Category: ").Append(Category).Append("\n");
+            sb.Append("  TemplateStatus: ").Append(TemplateStatus).Append("\n");
+            sb.Append("  StatusInfo: ").Append(StatusInfo).Append("\n");
+            sb.Append("  Carousel: ").Append(Carousel).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -183,6 +259,31 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Header == other.Header ||
                     this.Header != null &&
                     this.Header.Equals(other.Header)
+                ) &&
+                (
+                    this.IntegrationId == other.IntegrationId ||
+                    this.IntegrationId != null &&
+                    this.IntegrationId.Equals(other.IntegrationId)
+                ) &&
+                (
+                    this.Category == other.Category ||
+                    this.Category != null &&
+                    this.Category.Equals(other.Category)
+                ) &&
+                (
+                    this.TemplateStatus == other.TemplateStatus ||
+                    this.TemplateStatus != null &&
+                    this.TemplateStatus.Equals(other.TemplateStatus)
+                ) &&
+                (
+                    this.StatusInfo == other.StatusInfo ||
+                    this.StatusInfo != null &&
+                    this.StatusInfo.Equals(other.StatusInfo)
+                ) &&
+                (
+                    this.Carousel == other.Carousel ||
+                    this.Carousel != null &&
+                    this.Carousel.Equals(other.Carousel)
                 );
         }
 
@@ -214,6 +315,21 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Header != null)
                     hash = hash * 59 + this.Header.GetHashCode();
+
+                if (this.IntegrationId != null)
+                    hash = hash * 59 + this.IntegrationId.GetHashCode();
+
+                if (this.Category != null)
+                    hash = hash * 59 + this.Category.GetHashCode();
+
+                if (this.TemplateStatus != null)
+                    hash = hash * 59 + this.TemplateStatus.GetHashCode();
+
+                if (this.StatusInfo != null)
+                    hash = hash * 59 + this.StatusInfo.GetHashCode();
+
+                if (this.Carousel != null)
+                    hash = hash * 59 + this.Carousel.GetHashCode();
 
                 return hash;
             }

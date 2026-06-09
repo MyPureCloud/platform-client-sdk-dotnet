@@ -42,6 +42,58 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteBusinessrulesDecisiontableWithHttpInfo (string tableId, bool? forceDelete = null);
 
         /// <summary>
+        /// Delete an export job for a decision table
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns></returns>
+        
+        void DeleteBusinessrulesDecisiontableExport (string tableId, string exportJobId);
+
+        /// <summary>
+        /// Delete an export job for a decision table
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteBusinessrulesDecisiontableExportWithHttpInfo (string tableId, string exportJobId);
+
+        /// <summary>
+        /// Delete decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns></returns>
+        
+        void DeleteBusinessrulesDecisiontableImport (string tableId, string importJobId);
+
+        /// <summary>
+        /// Delete decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteBusinessrulesDecisiontableImportWithHttpInfo (string tableId, string importJobId);
+
+        /// <summary>
         /// Delete a decision table version
         /// </summary>
         /// <remarks>
@@ -142,6 +194,114 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DecisionTable</returns>
         
         ApiResponse<DecisionTable> GetBusinessrulesDecisiontableWithHttpInfo (string tableId);
+
+        /// <summary>
+        /// Get an export job for a decision table
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>DecisionTableExportJob</returns>
+        
+        DecisionTableExportJob GetBusinessrulesDecisiontableExport (string tableId, string exportJobId);
+
+        /// <summary>
+        /// Get an export job for a decision table
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>ApiResponse of DecisionTableExportJob</returns>
+        
+        ApiResponse<DecisionTableExportJob> GetBusinessrulesDecisiontableExportWithHttpInfo (string tableId, string exportJobId);
+
+        /// <summary>
+        /// List export jobs for a decision table
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>DecisionTableExportJobListing</returns>
+        
+        DecisionTableExportJobListing GetBusinessrulesDecisiontableExports (string tableId, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// List export jobs for a decision table
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>ApiResponse of DecisionTableExportJobListing</returns>
+        
+        ApiResponse<DecisionTableExportJobListing> GetBusinessrulesDecisiontableExportsWithHttpInfo (string tableId, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Get decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>DecisionTableImportJob</returns>
+        
+        DecisionTableImportJob GetBusinessrulesDecisiontableImport (string tableId, string importJobId);
+
+        /// <summary>
+        /// Get decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>ApiResponse of DecisionTableImportJob</returns>
+        
+        ApiResponse<DecisionTableImportJob> GetBusinessrulesDecisiontableImportWithHttpInfo (string tableId, string importJobId);
+
+        /// <summary>
+        /// List decision table row import jobs
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>DecisionTableImportJobListing</returns>
+        
+        DecisionTableImportJobListing GetBusinessrulesDecisiontableImports (string tableId, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// List decision table row import jobs
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>ApiResponse of DecisionTableImportJobListing</returns>
+        
+        ApiResponse<DecisionTableImportJobListing> GetBusinessrulesDecisiontableImportsWithHttpInfo (string tableId, string after = null, string pageSize = null);
 
         /// <summary>
         /// Get a decision table version
@@ -440,6 +600,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DecisionTable> PatchBusinessrulesDecisiontableWithHttpInfo (string tableId, UpdateDecisionTableRequest body);
 
         /// <summary>
+        /// Update decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <param name="body">Import job update request</param>
+        /// <returns>DecisionTableImportJob</returns>
+        
+        DecisionTableImportJob PatchBusinessrulesDecisiontableImport (string tableId, string importJobId, UpdateDecisionTableImportJobRequest body);
+
+        /// <summary>
+        /// Update decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <param name="body">Import job update request</param>
+        /// <returns>ApiResponse of DecisionTableImportJob</returns>
+        
+        ApiResponse<DecisionTableImportJob> PatchBusinessrulesDecisiontableImportWithHttpInfo (string tableId, string importJobId, UpdateDecisionTableImportJobRequest body);
+
+        /// <summary>
         /// Update a decision table version
         /// </summary>
         /// <remarks>
@@ -492,6 +680,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DecisionTableExecutionResponse</returns>
         
         ApiResponse<DecisionTableExecutionResponse> PostBusinessrulesDecisiontableExecuteWithHttpInfo (string tableId, DecisionTableExecutionRequest body);
+
+        /// <summary>
+        /// Create an export job for a decision table version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Export job request</param>
+        /// <returns>DecisionTableExportJob</returns>
+        
+        DecisionTableExportJob PostBusinessrulesDecisiontableExports (string tableId, DecisionTableExportJobRequest body);
+
+        /// <summary>
+        /// Create an export job for a decision table version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Export job request</param>
+        /// <returns>ApiResponse of DecisionTableExportJob</returns>
+        
+        ApiResponse<DecisionTableExportJob> PostBusinessrulesDecisiontableExportsWithHttpInfo (string tableId, DecisionTableExportJobRequest body);
+
+        /// <summary>
+        /// Create a decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Import job create request</param>
+        /// <returns>DecisionTableImportJob</returns>
+        
+        DecisionTableImportJob PostBusinessrulesDecisiontableImports (string tableId, CreateDecisionTableImportJobRequest body);
+
+        /// <summary>
+        /// Create a decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Import job create request</param>
+        /// <returns>ApiResponse of DecisionTableImportJob</returns>
+        
+        ApiResponse<DecisionTableImportJob> PostBusinessrulesDecisiontableImportsWithHttpInfo (string tableId, CreateDecisionTableImportJobRequest body);
 
         /// <summary>
         /// Copy a decision table version
@@ -576,6 +816,90 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DecisionTableRow</returns>
         
         ApiResponse<DecisionTableRow> PostBusinessrulesDecisiontableVersionRowsWithHttpInfo (string tableId, int? tableVersion, CreateDecisionTableRowRequest body);
+
+        /// <summary>
+        /// Bulk add decision table rows
+        /// </summary>
+        /// <remarks>
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk add decision table rows request</param>
+        /// <returns>BulkAddDecisionTableRowsResponse</returns>
+        
+        BulkAddDecisionTableRowsResponse PostBusinessrulesDecisiontableVersionRowsBulkAdd (string tableId, int? tableVersion, BulkAddDecisionTableRowsRequest body);
+
+        /// <summary>
+        /// Bulk add decision table rows
+        /// </summary>
+        /// <remarks>
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk add decision table rows request</param>
+        /// <returns>ApiResponse of BulkAddDecisionTableRowsResponse</returns>
+        
+        ApiResponse<BulkAddDecisionTableRowsResponse> PostBusinessrulesDecisiontableVersionRowsBulkAddWithHttpInfo (string tableId, int? tableVersion, BulkAddDecisionTableRowsRequest body);
+
+        /// <summary>
+        /// Bulk delete decision table rows
+        /// </summary>
+        /// <remarks>
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body"></param>
+        /// <returns></returns>
+        
+        void PostBusinessrulesDecisiontableVersionRowsBulkRemove (string tableId, int? tableVersion, BulkDeleteDecisionTableRowsRequest body);
+
+        /// <summary>
+        /// Bulk delete decision table rows
+        /// </summary>
+        /// <remarks>
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PostBusinessrulesDecisiontableVersionRowsBulkRemoveWithHttpInfo (string tableId, int? tableVersion, BulkDeleteDecisionTableRowsRequest body);
+
+        /// <summary>
+        /// Bulk update decision table rows
+        /// </summary>
+        /// <remarks>
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk update decision table rows request</param>
+        /// <returns>BulkUpdateDecisionTableRowsResponse</returns>
+        
+        BulkUpdateDecisionTableRowsResponse PostBusinessrulesDecisiontableVersionRowsBulkUpdate (string tableId, int? tableVersion, BulkUpdateDecisionTableRowsRequest body);
+
+        /// <summary>
+        /// Bulk update decision table rows
+        /// </summary>
+        /// <remarks>
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk update decision table rows request</param>
+        /// <returns>ApiResponse of BulkUpdateDecisionTableRowsResponse</returns>
+        
+        ApiResponse<BulkUpdateDecisionTableRowsResponse> PostBusinessrulesDecisiontableVersionRowsBulkUpdateWithHttpInfo (string tableId, int? tableVersion, BulkUpdateDecisionTableRowsRequest body);
 
         /// <summary>
         /// Search for decision table rows
@@ -820,6 +1144,58 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteBusinessrulesDecisiontableAsyncWithHttpInfo (string tableId, bool? forceDelete = null);
 
         /// <summary>
+        /// Delete an export job for a decision table
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteBusinessrulesDecisiontableExportAsync (string tableId, string exportJobId);
+
+        /// <summary>
+        /// Delete an export job for a decision table
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteBusinessrulesDecisiontableExportAsyncWithHttpInfo (string tableId, string exportJobId);
+
+        /// <summary>
+        /// Delete decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteBusinessrulesDecisiontableImportAsync (string tableId, string importJobId);
+
+        /// <summary>
+        /// Delete decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteBusinessrulesDecisiontableImportAsyncWithHttpInfo (string tableId, string importJobId);
+
+        /// <summary>
         /// Delete a decision table version
         /// </summary>
         /// <remarks>
@@ -920,6 +1296,114 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DecisionTable)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DecisionTable>> GetBusinessrulesDecisiontableAsyncWithHttpInfo (string tableId);
+
+        /// <summary>
+        /// Get an export job for a decision table
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>Task of DecisionTableExportJob</returns>
+        
+        System.Threading.Tasks.Task<DecisionTableExportJob> GetBusinessrulesDecisiontableExportAsync (string tableId, string exportJobId);
+
+        /// <summary>
+        /// Get an export job for a decision table
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>Task of ApiResponse (DecisionTableExportJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableExportJob>> GetBusinessrulesDecisiontableExportAsyncWithHttpInfo (string tableId, string exportJobId);
+
+        /// <summary>
+        /// List export jobs for a decision table
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>Task of DecisionTableExportJobListing</returns>
+        
+        System.Threading.Tasks.Task<DecisionTableExportJobListing> GetBusinessrulesDecisiontableExportsAsync (string tableId, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// List export jobs for a decision table
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>Task of ApiResponse (DecisionTableExportJobListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableExportJobListing>> GetBusinessrulesDecisiontableExportsAsyncWithHttpInfo (string tableId, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Get decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>Task of DecisionTableImportJob</returns>
+        
+        System.Threading.Tasks.Task<DecisionTableImportJob> GetBusinessrulesDecisiontableImportAsync (string tableId, string importJobId);
+
+        /// <summary>
+        /// Get decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>Task of ApiResponse (DecisionTableImportJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableImportJob>> GetBusinessrulesDecisiontableImportAsyncWithHttpInfo (string tableId, string importJobId);
+
+        /// <summary>
+        /// List decision table row import jobs
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>Task of DecisionTableImportJobListing</returns>
+        
+        System.Threading.Tasks.Task<DecisionTableImportJobListing> GetBusinessrulesDecisiontableImportsAsync (string tableId, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// List decision table row import jobs
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>Task of ApiResponse (DecisionTableImportJobListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableImportJobListing>> GetBusinessrulesDecisiontableImportsAsyncWithHttpInfo (string tableId, string after = null, string pageSize = null);
 
         /// <summary>
         /// Get a decision table version
@@ -1218,6 +1702,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DecisionTable>> PatchBusinessrulesDecisiontableAsyncWithHttpInfo (string tableId, UpdateDecisionTableRequest body);
 
         /// <summary>
+        /// Update decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <param name="body">Import job update request</param>
+        /// <returns>Task of DecisionTableImportJob</returns>
+        
+        System.Threading.Tasks.Task<DecisionTableImportJob> PatchBusinessrulesDecisiontableImportAsync (string tableId, string importJobId, UpdateDecisionTableImportJobRequest body);
+
+        /// <summary>
+        /// Update decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <param name="body">Import job update request</param>
+        /// <returns>Task of ApiResponse (DecisionTableImportJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableImportJob>> PatchBusinessrulesDecisiontableImportAsyncWithHttpInfo (string tableId, string importJobId, UpdateDecisionTableImportJobRequest body);
+
+        /// <summary>
         /// Update a decision table version
         /// </summary>
         /// <remarks>
@@ -1270,6 +1782,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DecisionTableExecutionResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DecisionTableExecutionResponse>> PostBusinessrulesDecisiontableExecuteAsyncWithHttpInfo (string tableId, DecisionTableExecutionRequest body);
+
+        /// <summary>
+        /// Create an export job for a decision table version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Export job request</param>
+        /// <returns>Task of DecisionTableExportJob</returns>
+        
+        System.Threading.Tasks.Task<DecisionTableExportJob> PostBusinessrulesDecisiontableExportsAsync (string tableId, DecisionTableExportJobRequest body);
+
+        /// <summary>
+        /// Create an export job for a decision table version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Export job request</param>
+        /// <returns>Task of ApiResponse (DecisionTableExportJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableExportJob>> PostBusinessrulesDecisiontableExportsAsyncWithHttpInfo (string tableId, DecisionTableExportJobRequest body);
+
+        /// <summary>
+        /// Create a decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Import job create request</param>
+        /// <returns>Task of DecisionTableImportJob</returns>
+        
+        System.Threading.Tasks.Task<DecisionTableImportJob> PostBusinessrulesDecisiontableImportsAsync (string tableId, CreateDecisionTableImportJobRequest body);
+
+        /// <summary>
+        /// Create a decision table row import job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Import job create request</param>
+        /// <returns>Task of ApiResponse (DecisionTableImportJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableImportJob>> PostBusinessrulesDecisiontableImportsAsyncWithHttpInfo (string tableId, CreateDecisionTableImportJobRequest body);
 
         /// <summary>
         /// Copy a decision table version
@@ -1354,6 +1918,90 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DecisionTableRow)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DecisionTableRow>> PostBusinessrulesDecisiontableVersionRowsAsyncWithHttpInfo (string tableId, int? tableVersion, CreateDecisionTableRowRequest body);
+
+        /// <summary>
+        /// Bulk add decision table rows
+        /// </summary>
+        /// <remarks>
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk add decision table rows request</param>
+        /// <returns>Task of BulkAddDecisionTableRowsResponse</returns>
+        
+        System.Threading.Tasks.Task<BulkAddDecisionTableRowsResponse> PostBusinessrulesDecisiontableVersionRowsBulkAddAsync (string tableId, int? tableVersion, BulkAddDecisionTableRowsRequest body);
+
+        /// <summary>
+        /// Bulk add decision table rows
+        /// </summary>
+        /// <remarks>
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk add decision table rows request</param>
+        /// <returns>Task of ApiResponse (BulkAddDecisionTableRowsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkAddDecisionTableRowsResponse>> PostBusinessrulesDecisiontableVersionRowsBulkAddAsyncWithHttpInfo (string tableId, int? tableVersion, BulkAddDecisionTableRowsRequest body);
+
+        /// <summary>
+        /// Bulk delete decision table rows
+        /// </summary>
+        /// <remarks>
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body"></param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PostBusinessrulesDecisiontableVersionRowsBulkRemoveAsync (string tableId, int? tableVersion, BulkDeleteDecisionTableRowsRequest body);
+
+        /// <summary>
+        /// Bulk delete decision table rows
+        /// </summary>
+        /// <remarks>
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostBusinessrulesDecisiontableVersionRowsBulkRemoveAsyncWithHttpInfo (string tableId, int? tableVersion, BulkDeleteDecisionTableRowsRequest body);
+
+        /// <summary>
+        /// Bulk update decision table rows
+        /// </summary>
+        /// <remarks>
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk update decision table rows request</param>
+        /// <returns>Task of BulkUpdateDecisionTableRowsResponse</returns>
+        
+        System.Threading.Tasks.Task<BulkUpdateDecisionTableRowsResponse> PostBusinessrulesDecisiontableVersionRowsBulkUpdateAsync (string tableId, int? tableVersion, BulkUpdateDecisionTableRowsRequest body);
+
+        /// <summary>
+        /// Bulk update decision table rows
+        /// </summary>
+        /// <remarks>
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk update decision table rows request</param>
+        /// <returns>Task of ApiResponse (BulkUpdateDecisionTableRowsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkUpdateDecisionTableRowsResponse>> PostBusinessrulesDecisiontableVersionRowsBulkUpdateAsyncWithHttpInfo (string tableId, int? tableVersion, BulkUpdateDecisionTableRowsRequest body);
 
         /// <summary>
         /// Search for decision table rows
@@ -1858,6 +2506,438 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteBusinessrulesDecisiontable: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete an export job for a decision table 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns></returns>
+        
+        public void DeleteBusinessrulesDecisiontableExport (string tableId, string exportJobId)
+        {
+             DeleteBusinessrulesDecisiontableExportWithHttpInfo(tableId, exportJobId);
+        }
+
+        /// <summary>
+        /// Delete an export job for a decision table 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteBusinessrulesDecisiontableExportWithHttpInfo (string tableId, string exportJobId)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableExport");
+            // verify the required parameter 'exportJobId' is set
+            if (exportJobId == null)
+                throw new ApiException(400, "Missing required parameter 'exportJobId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableExport");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/exports/{exportJobId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (exportJobId != null) localVarPathParams.Add("exportJobId", this.Configuration.ApiClient.ParameterToString(exportJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontableExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteBusinessrulesDecisiontableExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontableExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an export job for a decision table 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteBusinessrulesDecisiontableExportAsync (string tableId, string exportJobId)
+        {
+             await DeleteBusinessrulesDecisiontableExportAsyncWithHttpInfo(tableId, exportJobId);
+
+        }
+
+        /// <summary>
+        /// Delete an export job for a decision table 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteBusinessrulesDecisiontableExportAsyncWithHttpInfo (string tableId, string exportJobId)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableExport");
+            
+            // verify the required parameter 'exportJobId' is set
+            if (exportJobId == null)
+                throw new ApiException(400, "Missing required parameter 'exportJobId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableExport");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/exports/{exportJobId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (exportJobId != null) localVarPathParams.Add("exportJobId", this.Configuration.ApiClient.ParameterToString(exportJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontableExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteBusinessrulesDecisiontableExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontableExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns></returns>
+        
+        public void DeleteBusinessrulesDecisiontableImport (string tableId, string importJobId)
+        {
+             DeleteBusinessrulesDecisiontableImportWithHttpInfo(tableId, importJobId);
+        }
+
+        /// <summary>
+        /// Delete decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteBusinessrulesDecisiontableImportWithHttpInfo (string tableId, string importJobId)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableImport");
+            // verify the required parameter 'importJobId' is set
+            if (importJobId == null)
+                throw new ApiException(400, "Missing required parameter 'importJobId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableImport");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (importJobId != null) localVarPathParams.Add("importJobId", this.Configuration.ApiClient.ParameterToString(importJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontableImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteBusinessrulesDecisiontableImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontableImport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteBusinessrulesDecisiontableImportAsync (string tableId, string importJobId)
+        {
+             await DeleteBusinessrulesDecisiontableImportAsyncWithHttpInfo(tableId, importJobId);
+
+        }
+
+        /// <summary>
+        /// Delete decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteBusinessrulesDecisiontableImportAsyncWithHttpInfo (string tableId, string importJobId)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableImport");
+            
+            // verify the required parameter 'importJobId' is set
+            if (importJobId == null)
+                throw new ApiException(400, "Missing required parameter 'importJobId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableImport");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (importJobId != null) localVarPathParams.Add("importJobId", this.Configuration.ApiClient.ParameterToString(importJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontableImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteBusinessrulesDecisiontableImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontableImport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -2715,6 +3795,876 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DecisionTable>(localVarStatusCode,
                 localVarHeaders,
                 (DecisionTable) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTable)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an export job for a decision table 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>DecisionTableExportJob</returns>
+        
+        public DecisionTableExportJob GetBusinessrulesDecisiontableExport (string tableId, string exportJobId)
+        {
+             ApiResponse<DecisionTableExportJob> localVarResponse = GetBusinessrulesDecisiontableExportWithHttpInfo(tableId, exportJobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an export job for a decision table 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>ApiResponse of DecisionTableExportJob</returns>
+        
+        public ApiResponse< DecisionTableExportJob > GetBusinessrulesDecisiontableExportWithHttpInfo (string tableId, string exportJobId)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableExport");
+            // verify the required parameter 'exportJobId' is set
+            if (exportJobId == null)
+                throw new ApiException(400, "Missing required parameter 'exportJobId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableExport");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/exports/{exportJobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (exportJobId != null) localVarPathParams.Add("exportJobId", this.Configuration.ApiClient.ParameterToString(exportJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetBusinessrulesDecisiontableExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableExportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableExportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableExportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an export job for a decision table 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>Task of DecisionTableExportJob</returns>
+        
+        public async System.Threading.Tasks.Task<DecisionTableExportJob> GetBusinessrulesDecisiontableExportAsync (string tableId, string exportJobId)
+        {
+             ApiResponse<DecisionTableExportJob> localVarResponse = await GetBusinessrulesDecisiontableExportAsyncWithHttpInfo(tableId, exportJobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an export job for a decision table 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="exportJobId">Export Job ID</param>
+        /// <returns>Task of ApiResponse (DecisionTableExportJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableExportJob>> GetBusinessrulesDecisiontableExportAsyncWithHttpInfo (string tableId, string exportJobId)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableExport");
+            
+            // verify the required parameter 'exportJobId' is set
+            if (exportJobId == null)
+                throw new ApiException(400, "Missing required parameter 'exportJobId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableExport");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/exports/{exportJobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (exportJobId != null) localVarPathParams.Add("exportJobId", this.Configuration.ApiClient.ParameterToString(exportJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetBusinessrulesDecisiontableExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableExportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableExportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableExportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// List export jobs for a decision table 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>DecisionTableExportJobListing</returns>
+        
+        public DecisionTableExportJobListing GetBusinessrulesDecisiontableExports (string tableId, string after = null, string pageSize = null)
+        {
+             ApiResponse<DecisionTableExportJobListing> localVarResponse = GetBusinessrulesDecisiontableExportsWithHttpInfo(tableId, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List export jobs for a decision table 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>ApiResponse of DecisionTableExportJobListing</returns>
+        
+        public ApiResponse< DecisionTableExportJobListing > GetBusinessrulesDecisiontableExportsWithHttpInfo (string tableId, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableExports");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/exports";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetBusinessrulesDecisiontableExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableExportJobListing>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableExportJobListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableExportJobListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// List export jobs for a decision table 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>Task of DecisionTableExportJobListing</returns>
+        
+        public async System.Threading.Tasks.Task<DecisionTableExportJobListing> GetBusinessrulesDecisiontableExportsAsync (string tableId, string after = null, string pageSize = null)
+        {
+             ApiResponse<DecisionTableExportJobListing> localVarResponse = await GetBusinessrulesDecisiontableExportsAsyncWithHttpInfo(tableId, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List export jobs for a decision table 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>Task of ApiResponse (DecisionTableExportJobListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableExportJobListing>> GetBusinessrulesDecisiontableExportsAsyncWithHttpInfo (string tableId, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableExports");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/exports";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetBusinessrulesDecisiontableExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableExportJobListing>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableExportJobListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableExportJobListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>DecisionTableImportJob</returns>
+        
+        public DecisionTableImportJob GetBusinessrulesDecisiontableImport (string tableId, string importJobId)
+        {
+             ApiResponse<DecisionTableImportJob> localVarResponse = GetBusinessrulesDecisiontableImportWithHttpInfo(tableId, importJobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>ApiResponse of DecisionTableImportJob</returns>
+        
+        public ApiResponse< DecisionTableImportJob > GetBusinessrulesDecisiontableImportWithHttpInfo (string tableId, string importJobId)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableImport");
+            // verify the required parameter 'importJobId' is set
+            if (importJobId == null)
+                throw new ApiException(400, "Missing required parameter 'importJobId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableImport");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (importJobId != null) localVarPathParams.Add("importJobId", this.Configuration.ApiClient.ParameterToString(importJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetBusinessrulesDecisiontableImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableImport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableImportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableImportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableImportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>Task of DecisionTableImportJob</returns>
+        
+        public async System.Threading.Tasks.Task<DecisionTableImportJob> GetBusinessrulesDecisiontableImportAsync (string tableId, string importJobId)
+        {
+             ApiResponse<DecisionTableImportJob> localVarResponse = await GetBusinessrulesDecisiontableImportAsyncWithHttpInfo(tableId, importJobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <returns>Task of ApiResponse (DecisionTableImportJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableImportJob>> GetBusinessrulesDecisiontableImportAsyncWithHttpInfo (string tableId, string importJobId)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableImport");
+            
+            // verify the required parameter 'importJobId' is set
+            if (importJobId == null)
+                throw new ApiException(400, "Missing required parameter 'importJobId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableImport");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (importJobId != null) localVarPathParams.Add("importJobId", this.Configuration.ApiClient.ParameterToString(importJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetBusinessrulesDecisiontableImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableImport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableImportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableImportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableImportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// List decision table row import jobs 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>DecisionTableImportJobListing</returns>
+        
+        public DecisionTableImportJobListing GetBusinessrulesDecisiontableImports (string tableId, string after = null, string pageSize = null)
+        {
+             ApiResponse<DecisionTableImportJobListing> localVarResponse = GetBusinessrulesDecisiontableImportsWithHttpInfo(tableId, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List decision table row import jobs 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>ApiResponse of DecisionTableImportJobListing</returns>
+        
+        public ApiResponse< DecisionTableImportJobListing > GetBusinessrulesDecisiontableImportsWithHttpInfo (string tableId, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableImports");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/imports";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableImports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetBusinessrulesDecisiontableImports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableImports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableImportJobListing>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableImportJobListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableImportJobListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// List decision table row import jobs 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>Task of DecisionTableImportJobListing</returns>
+        
+        public async System.Threading.Tasks.Task<DecisionTableImportJobListing> GetBusinessrulesDecisiontableImportsAsync (string tableId, string after = null, string pageSize = null)
+        {
+             ApiResponse<DecisionTableImportJobListing> localVarResponse = await GetBusinessrulesDecisiontableImportsAsyncWithHttpInfo(tableId, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List decision table row import jobs 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <returns>Task of ApiResponse (DecisionTableImportJobListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableImportJobListing>> GetBusinessrulesDecisiontableImportsAsyncWithHttpInfo (string tableId, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableImports");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/imports";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableImports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetBusinessrulesDecisiontableImports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesDecisiontableImports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableImportJobListing>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableImportJobListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableImportJobListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5090,6 +7040,247 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <param name="body">Import job update request</param>
+        /// <returns>DecisionTableImportJob</returns>
+        
+        public DecisionTableImportJob PatchBusinessrulesDecisiontableImport (string tableId, string importJobId, UpdateDecisionTableImportJobRequest body)
+        {
+             ApiResponse<DecisionTableImportJob> localVarResponse = PatchBusinessrulesDecisiontableImportWithHttpInfo(tableId, importJobId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <param name="body">Import job update request</param>
+        /// <returns>ApiResponse of DecisionTableImportJob</returns>
+        
+        public ApiResponse< DecisionTableImportJob > PatchBusinessrulesDecisiontableImportWithHttpInfo (string tableId, string importJobId, UpdateDecisionTableImportJobRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableImport");
+            // verify the required parameter 'importJobId' is set
+            if (importJobId == null)
+                throw new ApiException(400, "Missing required parameter 'importJobId' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableImport");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableImport");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (importJobId != null) localVarPathParams.Add("importJobId", this.Configuration.ApiClient.ParameterToString(importJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchBusinessrulesDecisiontableImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchBusinessrulesDecisiontableImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchBusinessrulesDecisiontableImport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableImportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableImportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableImportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <param name="body">Import job update request</param>
+        /// <returns>Task of DecisionTableImportJob</returns>
+        
+        public async System.Threading.Tasks.Task<DecisionTableImportJob> PatchBusinessrulesDecisiontableImportAsync (string tableId, string importJobId, UpdateDecisionTableImportJobRequest body)
+        {
+             ApiResponse<DecisionTableImportJob> localVarResponse = await PatchBusinessrulesDecisiontableImportAsyncWithHttpInfo(tableId, importJobId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="importJobId">Import job ID</param>
+        /// <param name="body">Import job update request</param>
+        /// <returns>Task of ApiResponse (DecisionTableImportJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableImportJob>> PatchBusinessrulesDecisiontableImportAsyncWithHttpInfo (string tableId, string importJobId, UpdateDecisionTableImportJobRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableImport");
+            
+            // verify the required parameter 'importJobId' is set
+            if (importJobId == null)
+                throw new ApiException(400, "Missing required parameter 'importJobId' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableImport");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableImport");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (importJobId != null) localVarPathParams.Add("importJobId", this.Configuration.ApiClient.ParameterToString(importJobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchBusinessrulesDecisiontableImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchBusinessrulesDecisiontableImport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchBusinessrulesDecisiontableImport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableImportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableImportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableImportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update a decision table version 
         /// 
         /// </summary>
@@ -5552,6 +7743,462 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DecisionTableExecutionResponse>(localVarStatusCode,
                 localVarHeaders,
                 (DecisionTableExecutionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableExecutionResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create an export job for a decision table version 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Export job request</param>
+        /// <returns>DecisionTableExportJob</returns>
+        
+        public DecisionTableExportJob PostBusinessrulesDecisiontableExports (string tableId, DecisionTableExportJobRequest body)
+        {
+             ApiResponse<DecisionTableExportJob> localVarResponse = PostBusinessrulesDecisiontableExportsWithHttpInfo(tableId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create an export job for a decision table version 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Export job request</param>
+        /// <returns>ApiResponse of DecisionTableExportJob</returns>
+        
+        public ApiResponse< DecisionTableExportJob > PostBusinessrulesDecisiontableExportsWithHttpInfo (string tableId, DecisionTableExportJobRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableExports");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableExports");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/exports";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableExportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableExportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableExportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create an export job for a decision table version 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Export job request</param>
+        /// <returns>Task of DecisionTableExportJob</returns>
+        
+        public async System.Threading.Tasks.Task<DecisionTableExportJob> PostBusinessrulesDecisiontableExportsAsync (string tableId, DecisionTableExportJobRequest body)
+        {
+             ApiResponse<DecisionTableExportJob> localVarResponse = await PostBusinessrulesDecisiontableExportsAsyncWithHttpInfo(tableId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create an export job for a decision table version 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Export job request</param>
+        /// <returns>Task of ApiResponse (DecisionTableExportJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableExportJob>> PostBusinessrulesDecisiontableExportsAsyncWithHttpInfo (string tableId, DecisionTableExportJobRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableExports");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableExports");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/exports";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableExportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableExportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableExportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Import job create request</param>
+        /// <returns>DecisionTableImportJob</returns>
+        
+        public DecisionTableImportJob PostBusinessrulesDecisiontableImports (string tableId, CreateDecisionTableImportJobRequest body)
+        {
+             ApiResponse<DecisionTableImportJob> localVarResponse = PostBusinessrulesDecisiontableImportsWithHttpInfo(tableId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Import job create request</param>
+        /// <returns>ApiResponse of DecisionTableImportJob</returns>
+        
+        public ApiResponse< DecisionTableImportJob > PostBusinessrulesDecisiontableImportsWithHttpInfo (string tableId, CreateDecisionTableImportJobRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableImports");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableImports");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/imports";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableImports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableImports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableImports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableImportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableImportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableImportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Import job create request</param>
+        /// <returns>Task of DecisionTableImportJob</returns>
+        
+        public async System.Threading.Tasks.Task<DecisionTableImportJob> PostBusinessrulesDecisiontableImportsAsync (string tableId, CreateDecisionTableImportJobRequest body)
+        {
+             ApiResponse<DecisionTableImportJob> localVarResponse = await PostBusinessrulesDecisiontableImportsAsyncWithHttpInfo(tableId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a decision table row import job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="body">Import job create request</param>
+        /// <returns>Task of ApiResponse (DecisionTableImportJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableImportJob>> PostBusinessrulesDecisiontableImportsAsyncWithHttpInfo (string tableId, CreateDecisionTableImportJobRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableImports");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableImports");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/imports";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableImports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableImports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableImports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableImportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableImportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableImportJob)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6275,6 +8922,727 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DecisionTableRow>(localVarStatusCode,
                 localVarHeaders,
                 (DecisionTableRow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableRow)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Bulk add decision table rows 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk add decision table rows request</param>
+        /// <returns>BulkAddDecisionTableRowsResponse</returns>
+        
+        public BulkAddDecisionTableRowsResponse PostBusinessrulesDecisiontableVersionRowsBulkAdd (string tableId, int? tableVersion, BulkAddDecisionTableRowsRequest body)
+        {
+             ApiResponse<BulkAddDecisionTableRowsResponse> localVarResponse = PostBusinessrulesDecisiontableVersionRowsBulkAddWithHttpInfo(tableId, tableVersion, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk add decision table rows 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk add decision table rows request</param>
+        /// <returns>ApiResponse of BulkAddDecisionTableRowsResponse</returns>
+        
+        public ApiResponse< BulkAddDecisionTableRowsResponse > PostBusinessrulesDecisiontableVersionRowsBulkAddWithHttpInfo (string tableId, int? tableVersion, BulkAddDecisionTableRowsRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkAdd");
+            // verify the required parameter 'tableVersion' is set
+            if (tableVersion == null)
+                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkAdd");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkAdd");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/add";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRowsBulkAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableVersionRowsBulkAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRowsBulkAdd: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkAddDecisionTableRowsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkAddDecisionTableRowsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkAddDecisionTableRowsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Bulk add decision table rows 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk add decision table rows request</param>
+        /// <returns>Task of BulkAddDecisionTableRowsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<BulkAddDecisionTableRowsResponse> PostBusinessrulesDecisiontableVersionRowsBulkAddAsync (string tableId, int? tableVersion, BulkAddDecisionTableRowsRequest body)
+        {
+             ApiResponse<BulkAddDecisionTableRowsResponse> localVarResponse = await PostBusinessrulesDecisiontableVersionRowsBulkAddAsyncWithHttpInfo(tableId, tableVersion, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Bulk add decision table rows 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk add decision table rows request</param>
+        /// <returns>Task of ApiResponse (BulkAddDecisionTableRowsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkAddDecisionTableRowsResponse>> PostBusinessrulesDecisiontableVersionRowsBulkAddAsyncWithHttpInfo (string tableId, int? tableVersion, BulkAddDecisionTableRowsRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkAdd");
+            
+            // verify the required parameter 'tableVersion' is set
+            if (tableVersion == null)
+                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkAdd");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkAdd");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/add";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRowsBulkAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableVersionRowsBulkAdd: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRowsBulkAdd: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkAddDecisionTableRowsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkAddDecisionTableRowsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkAddDecisionTableRowsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Bulk delete decision table rows 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body"></param>
+        /// <returns></returns>
+        
+        public void PostBusinessrulesDecisiontableVersionRowsBulkRemove (string tableId, int? tableVersion, BulkDeleteDecisionTableRowsRequest body)
+        {
+             PostBusinessrulesDecisiontableVersionRowsBulkRemoveWithHttpInfo(tableId, tableVersion, body);
+        }
+
+        /// <summary>
+        /// Bulk delete decision table rows 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PostBusinessrulesDecisiontableVersionRowsBulkRemoveWithHttpInfo (string tableId, int? tableVersion, BulkDeleteDecisionTableRowsRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkRemove");
+            // verify the required parameter 'tableVersion' is set
+            if (tableVersion == null)
+                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkRemove");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkRemove");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/remove";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRowsBulkRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableVersionRowsBulkRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRowsBulkRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Bulk delete decision table rows 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body"></param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PostBusinessrulesDecisiontableVersionRowsBulkRemoveAsync (string tableId, int? tableVersion, BulkDeleteDecisionTableRowsRequest body)
+        {
+             await PostBusinessrulesDecisiontableVersionRowsBulkRemoveAsyncWithHttpInfo(tableId, tableVersion, body);
+
+        }
+
+        /// <summary>
+        /// Bulk delete decision table rows 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostBusinessrulesDecisiontableVersionRowsBulkRemoveAsyncWithHttpInfo (string tableId, int? tableVersion, BulkDeleteDecisionTableRowsRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkRemove");
+            
+            // verify the required parameter 'tableVersion' is set
+            if (tableVersion == null)
+                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkRemove");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkRemove");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/remove";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRowsBulkRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableVersionRowsBulkRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRowsBulkRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Bulk update decision table rows 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk update decision table rows request</param>
+        /// <returns>BulkUpdateDecisionTableRowsResponse</returns>
+        
+        public BulkUpdateDecisionTableRowsResponse PostBusinessrulesDecisiontableVersionRowsBulkUpdate (string tableId, int? tableVersion, BulkUpdateDecisionTableRowsRequest body)
+        {
+             ApiResponse<BulkUpdateDecisionTableRowsResponse> localVarResponse = PostBusinessrulesDecisiontableVersionRowsBulkUpdateWithHttpInfo(tableId, tableVersion, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk update decision table rows 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk update decision table rows request</param>
+        /// <returns>ApiResponse of BulkUpdateDecisionTableRowsResponse</returns>
+        
+        public ApiResponse< BulkUpdateDecisionTableRowsResponse > PostBusinessrulesDecisiontableVersionRowsBulkUpdateWithHttpInfo (string tableId, int? tableVersion, BulkUpdateDecisionTableRowsRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkUpdate");
+            // verify the required parameter 'tableVersion' is set
+            if (tableVersion == null)
+                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkUpdate");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkUpdate");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/update";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRowsBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableVersionRowsBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRowsBulkUpdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkUpdateDecisionTableRowsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkUpdateDecisionTableRowsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkUpdateDecisionTableRowsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Bulk update decision table rows 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk update decision table rows request</param>
+        /// <returns>Task of BulkUpdateDecisionTableRowsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<BulkUpdateDecisionTableRowsResponse> PostBusinessrulesDecisiontableVersionRowsBulkUpdateAsync (string tableId, int? tableVersion, BulkUpdateDecisionTableRowsRequest body)
+        {
+             ApiResponse<BulkUpdateDecisionTableRowsResponse> localVarResponse = await PostBusinessrulesDecisiontableVersionRowsBulkUpdateAsyncWithHttpInfo(tableId, tableVersion, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Bulk update decision table rows 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Bulk update decision table rows request</param>
+        /// <returns>Task of ApiResponse (BulkUpdateDecisionTableRowsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkUpdateDecisionTableRowsResponse>> PostBusinessrulesDecisiontableVersionRowsBulkUpdateAsyncWithHttpInfo (string tableId, int? tableVersion, BulkUpdateDecisionTableRowsRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkUpdate");
+            
+            // verify the required parameter 'tableVersion' is set
+            if (tableVersion == null)
+                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkUpdate");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsBulkUpdate");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/update";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRowsBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableVersionRowsBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRowsBulkUpdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkUpdateDecisionTableRowsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkUpdateDecisionTableRowsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkUpdateDecisionTableRowsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

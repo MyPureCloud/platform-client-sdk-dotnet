@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CaseplanDataSchema" /> class.
         /// </summary>
-        /// <param name="Id">The id of the schema. (required).</param>
+        /// <param name="Id">The schema ID. (required).</param>
         public CaseplanDataSchema(string Id = null)
         {
             this.Id = Id;
@@ -37,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The id of the schema.
+        /// The schema ID.
         /// </summary>
-        /// <value>The id of the schema.</value>
+        /// <value>The schema ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

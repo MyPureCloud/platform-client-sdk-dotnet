@@ -19,13 +19,61 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class CardBodyText :  IEquatable<CardBodyText>
     {
         /// <summary>
+        /// Body content type for carousel card. Allowed value: text/plain
+        /// </summary>
+        /// <value>Body content type for carousel card. Allowed value: text/plain</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ContentTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Textplain for "text/plain"
+            /// </summary>
+            [EnumMember(Value = "text/plain")]
+            Textplain
+        }
+        /// <summary>
+        /// Body content type for carousel card. Allowed value: text/plain
+        /// </summary>
+        /// <value>Body content type for carousel card. Allowed value: text/plain</value>
+        [DataMember(Name="contentType", EmitDefaultValue=false)]
+        public ContentTypeEnum? ContentType { get; set; }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="CardBodyText" /> class.
         /// </summary>
-        public CardBodyText()
+        [JsonConstructorAttribute]
+        protected CardBodyText() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CardBodyText" /> class.
+        /// </summary>
+        /// <param name="Content">Body content for carousel card. (required).</param>
+        /// <param name="ContentType">Body content type for carousel card. Allowed value: text/plain (required).</param>
+        public CardBodyText(string Content = null, ContentTypeEnum? ContentType = null)
         {
+            this.Content = Content;
+            this.ContentType = ContentType;
             
         }
         
+
+
+        /// <summary>
+        /// Body content for carousel card.
+        /// </summary>
+        /// <value>Body content for carousel card.</value>
+        [DataMember(Name="content", EmitDefaultValue=false)]
+        public string Content { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +84,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class CardBodyText {\n");
 
+            sb.Append("  Content: ").Append(Content).Append("\n");
+            sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +125,17 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.Content == other.Content ||
+                    this.Content != null &&
+                    this.Content.Equals(other.Content)
+                ) &&
+                (
+                    this.ContentType == other.ContentType ||
+                    this.ContentType != null &&
+                    this.ContentType.Equals(other.ContentType)
+                );
         }
 
         /// <summary>
@@ -89,6 +149,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Content != null)
+                    hash = hash * 59 + this.Content.GetHashCode();
+
+                if (this.ContentType != null)
+                    hash = hash * 59 + this.ContentType.GetHashCode();
+
                 return hash;
             }
         }

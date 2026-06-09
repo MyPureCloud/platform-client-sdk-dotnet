@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class Stepplan :  IEquatable<Stepplan>
     {
         /// <summary>
-        /// The activityType of the Stepplan.
+        /// The activity type of the Stepplan.
         /// </summary>
-        /// <value>The activityType of the Stepplan.</value>
+        /// <value>The activity type of the Stepplan.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ActivityTypeEnum
         {
@@ -52,9 +52,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Workitem
         }
         /// <summary>
-        /// The activityType of the Stepplan.
+        /// The activity type of the Stepplan.
         /// </summary>
-        /// <value>The activityType of the Stepplan.</value>
+        /// <value>The activity type of the Stepplan.</value>
         [DataMember(Name="activityType", EmitDefaultValue=false)]
         public ActivityTypeEnum? ActivityType { get; set; }
         /// <summary>
@@ -67,8 +67,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">The Stepplan creation date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">The Stepplan modification date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ModifiedBy">The ID of the User who modified the Stepplan..</param>
-        /// <param name="ActivityType">The activityType of the Stepplan..</param>
-        /// <param name="WorkitemSettings">The workitemSettings of the Stepplan..</param>
+        /// <param name="ActivityType">The activity type of the Stepplan..</param>
+        /// <param name="WorkitemSettings">The Workitem settings of the Stepplan..</param>
         public Stepplan(string Name = null, string Description = null, CaseplanReference Caseplan = null, StageplanReference Stageplan = null, DateTime? DateCreated = null, DateTime? DateModified = null, UserReference ModifiedBy = null, ActivityTypeEnum? ActivityType = null, WorkitemSettingsResponse WorkitemSettings = null)
         {
             this.Name = Name;
@@ -160,9 +160,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The workitemSettings of the Stepplan.
+        /// The Workitem settings of the Stepplan.
         /// </summary>
-        /// <value>The workitemSettings of the Stepplan.</value>
+        /// <value>The Workitem settings of the Stepplan.</value>
         [DataMember(Name="workitemSettings", EmitDefaultValue=false)]
         public WorkitemSettingsResponse WorkitemSettings { get; set; }
 

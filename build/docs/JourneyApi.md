@@ -111,8 +111,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete/cancel an async request for journey aggregates
 
-DeleteAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:journeyAggregate:view
@@ -738,8 +736,6 @@ namespace Example
 
 Get status for async query for journey aggregates
 
-GetAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:journeyAggregate:view
@@ -801,8 +797,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsJourneysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4517,8 +4511,6 @@ namespace Example
 
 Query for journey aggregates asynchronously
 
-PostAnalyticsJourneysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:journeyAggregate:view
@@ -6221,4 +6213,4 @@ namespace Example
 [**ActivateExternalEventResponse**](ActivateExternalEventResponse)
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_

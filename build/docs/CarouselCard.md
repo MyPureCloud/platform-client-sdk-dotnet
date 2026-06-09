@@ -6,7 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Header** | [**MessageHeader**](MessageHeader) | Header for whatsApp carousel card | |
+| **Buttons** | [**List&lt;Button&gt;**](Button) | List of buttons to be included in the whatsApp carousel messages template | |
+| **CardBodyText** | [**CardBodyText**](CardBodyText) | Optional card body text to be included in the whatsApp carousel messages template | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_

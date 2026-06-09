@@ -90,15 +90,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Query conditions to apply on export
-        /// </summary>
-        /// <value>Query conditions to apply on export</value>
-        [DataMember(Name="queryConditions", EmitDefaultValue=false)]
-        public ContactsExportQueryConditions QueryConditions { get; set; }
-
-
-
-        /// <summary>
         /// The user that created this request
         /// </summary>
         /// <value>The user that created this request</value>
@@ -128,6 +119,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Query conditions to apply on export
+        /// </summary>
+        /// <value>Query conditions to apply on export</value>
+        [DataMember(Name="queryConditions", EmitDefaultValue=false)]
+        public ContactsExportQueryConditions QueryConditions { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -146,11 +146,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
-            sb.Append("  QueryConditions: ").Append(QueryConditions).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
+            sb.Append("  QueryConditions: ").Append(QueryConditions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -203,11 +203,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DivisionIds.SequenceEqual(other.DivisionIds)
                 ) &&
                 (
-                    this.QueryConditions == other.QueryConditions ||
-                    this.QueryConditions != null &&
-                    this.QueryConditions.Equals(other.QueryConditions)
-                ) &&
-                (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
@@ -226,6 +221,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DownloadUrl == other.DownloadUrl ||
                     this.DownloadUrl != null &&
                     this.DownloadUrl.Equals(other.DownloadUrl)
+                ) &&
+                (
+                    this.QueryConditions == other.QueryConditions ||
+                    this.QueryConditions != null &&
+                    this.QueryConditions.Equals(other.QueryConditions)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -251,9 +251,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.DivisionIds != null)
                     hash = hash * 59 + this.DivisionIds.GetHashCode();
 
-                if (this.QueryConditions != null)
-                    hash = hash * 59 + this.QueryConditions.GetHashCode();
-
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
 
@@ -265,6 +262,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
+
+                if (this.QueryConditions != null)
+                    hash = hash * 59 + this.QueryConditions.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

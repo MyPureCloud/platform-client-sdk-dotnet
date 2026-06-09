@@ -550,6 +550,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Workforcemanagement,
             
             /// <summary>
+            /// Enum Workforcemanagementschedulingpreferences for "workforce.management.scheduling.preferences"
+            /// </summary>
+            [EnumMember(Value = "workforce.management.scheduling.preferences")]
+            Workforcemanagementschedulingpreferences,
+            
+            /// <summary>
             /// Enum Workforcemanagementselfschedule for "workforce.management.self.schedule"
             /// </summary>
             [EnumMember(Value = "workforce.management.self.schedule")]

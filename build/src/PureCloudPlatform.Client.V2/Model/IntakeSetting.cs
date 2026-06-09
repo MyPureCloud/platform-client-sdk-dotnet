@@ -28,8 +28,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="IntakeSetting" /> class.
         /// </summary>
         /// <param name="Property">The property name for this intake setting. (required).</param>
-        /// <param name="Required">Defines if this property is required for intake (required).</param>
-        /// <param name="DisplayOrder">The order where this property should be displayed (required).</param>
+        /// <param name="Required">Whether this property is required for intake. (required).</param>
+        /// <param name="DisplayOrder">The display order for this property. (required).</param>
         public IntakeSetting(string Property = null, bool? Required = null, int? DisplayOrder = null)
         {
             this.Property = Property;
@@ -50,18 +50,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Defines if this property is required for intake
+        /// Whether this property is required for intake.
         /// </summary>
-        /// <value>Defines if this property is required for intake</value>
+        /// <value>Whether this property is required for intake.</value>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public bool? Required { get; set; }
 
 
 
         /// <summary>
-        /// The order where this property should be displayed
+        /// The display order for this property.
         /// </summary>
-        /// <value>The order where this property should be displayed</value>
+        /// <value>The display order for this property.</value>
         [DataMember(Name="displayOrder", EmitDefaultValue=false)]
         public int? DisplayOrder { get; set; }
 

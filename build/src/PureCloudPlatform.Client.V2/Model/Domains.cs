@@ -22,9 +22,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Domains" /> class.
         /// </summary>
         /// <param name="AuthorizedDomains">The authorized domains settings for email processing..</param>
-        public Domains(AuthorizedDomains AuthorizedDomains = null)
+        /// <param name="AllowExistingEmailParticipants">Allow reply and forward to recipients included in the previous email, ignoring the authorized domains list.</param>
+        /// <param name="AllowOutboundToAnyDomainAcd">Allow new outbound email (no existing conversation) to be sent to any domain, ignoring the authorized domains list.This setting applies only to new outbound emails sent on behalf of queue or agentless, NOT campaigns.This setting can only be true if allowExistingEmailParticipants is also true..</param>
+        public Domains(AuthorizedDomains AuthorizedDomains = null, bool? AllowExistingEmailParticipants = null, bool? AllowOutboundToAnyDomainAcd = null)
         {
             this.AuthorizedDomains = AuthorizedDomains;
+            this.AllowExistingEmailParticipants = AllowExistingEmailParticipants;
+            this.AllowOutboundToAnyDomainAcd = AllowOutboundToAnyDomainAcd;
             
         }
         
@@ -38,6 +42,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public AuthorizedDomains AuthorizedDomains { get; set; }
 
 
+
+        /// <summary>
+        /// Allow reply and forward to recipients included in the previous email, ignoring the authorized domains list
+        /// </summary>
+        /// <value>Allow reply and forward to recipients included in the previous email, ignoring the authorized domains list</value>
+        [DataMember(Name="allowExistingEmailParticipants", EmitDefaultValue=false)]
+        public bool? AllowExistingEmailParticipants { get; set; }
+
+
+
+        /// <summary>
+        /// Allow new outbound email (no existing conversation) to be sent to any domain, ignoring the authorized domains list.This setting applies only to new outbound emails sent on behalf of queue or agentless, NOT campaigns.This setting can only be true if allowExistingEmailParticipants is also true.
+        /// </summary>
+        /// <value>Allow new outbound email (no existing conversation) to be sent to any domain, ignoring the authorized domains list.This setting applies only to new outbound emails sent on behalf of queue or agentless, NOT campaigns.This setting can only be true if allowExistingEmailParticipants is also true.</value>
+        [DataMember(Name="allowOutboundToAnyDomainAcd", EmitDefaultValue=false)]
+        public bool? AllowOutboundToAnyDomainAcd { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,6 +70,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class Domains {\n");
 
             sb.Append("  AuthorizedDomains: ").Append(AuthorizedDomains).Append("\n");
+            sb.Append("  AllowExistingEmailParticipants: ").Append(AllowExistingEmailParticipants).Append("\n");
+            sb.Append("  AllowOutboundToAnyDomainAcd: ").Append(AllowOutboundToAnyDomainAcd).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +116,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AuthorizedDomains == other.AuthorizedDomains ||
                     this.AuthorizedDomains != null &&
                     this.AuthorizedDomains.Equals(other.AuthorizedDomains)
+                ) &&
+                (
+                    this.AllowExistingEmailParticipants == other.AllowExistingEmailParticipants ||
+                    this.AllowExistingEmailParticipants != null &&
+                    this.AllowExistingEmailParticipants.Equals(other.AllowExistingEmailParticipants)
+                ) &&
+                (
+                    this.AllowOutboundToAnyDomainAcd == other.AllowOutboundToAnyDomainAcd ||
+                    this.AllowOutboundToAnyDomainAcd != null &&
+                    this.AllowOutboundToAnyDomainAcd.Equals(other.AllowOutboundToAnyDomainAcd)
                 );
         }
 
@@ -108,6 +142,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.AuthorizedDomains != null)
                     hash = hash * 59 + this.AuthorizedDomains.GetHashCode();
+
+                if (this.AllowExistingEmailParticipants != null)
+                    hash = hash * 59 + this.AllowExistingEmailParticipants.GetHashCode();
+
+                if (this.AllowOutboundToAnyDomainAcd != null)
+                    hash = hash * 59 + this.AllowOutboundToAnyDomainAcd.GetHashCode();
 
                 return hash;
             }

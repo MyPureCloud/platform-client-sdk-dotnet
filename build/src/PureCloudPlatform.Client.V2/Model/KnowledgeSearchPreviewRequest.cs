@@ -32,13 +32,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="GenerationSetting">Setting for answer generation. (required).</param>
         /// <param name="Stateful">Indicates if stateful search and generation is enabled for the knowledge setting..</param>
         /// <param name="ConversationTurns">List of conversation turns to use for stateful search..</param>
-        public KnowledgeSearchPreviewRequest(string Query = null, List<V3SourceRef> Sources = null, KnowledgeGenerationSetting GenerationSetting = null, bool? Stateful = null, List<KnowledgeConversationTurn> ConversationTurns = null)
+        /// <param name="Filter">Composite tag filter applied to the search preview..</param>
+        public KnowledgeSearchPreviewRequest(string Query = null, List<V3SourceRef> Sources = null, KnowledgeGenerationSetting GenerationSetting = null, bool? Stateful = null, List<KnowledgeConversationTurn> ConversationTurns = null, V3SourceTagFilter Filter = null)
         {
             this.Query = Query;
             this.Sources = Sources;
             this.GenerationSetting = GenerationSetting;
             this.Stateful = Stateful;
             this.ConversationTurns = ConversationTurns;
+            this.Filter = Filter;
             
         }
         
@@ -88,6 +90,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<KnowledgeConversationTurn> ConversationTurns { get; set; }
 
 
+
+        /// <summary>
+        /// Composite tag filter applied to the search preview.
+        /// </summary>
+        /// <value>Composite tag filter applied to the search preview.</value>
+        [DataMember(Name="filter", EmitDefaultValue=false)]
+        public V3SourceTagFilter Filter { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  GenerationSetting: ").Append(GenerationSetting).Append("\n");
             sb.Append("  Stateful: ").Append(Stateful).Append("\n");
             sb.Append("  ConversationTurns: ").Append(ConversationTurns).Append("\n");
+            sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -166,6 +178,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationTurns == other.ConversationTurns ||
                     this.ConversationTurns != null &&
                     this.ConversationTurns.SequenceEqual(other.ConversationTurns)
+                ) &&
+                (
+                    this.Filter == other.Filter ||
+                    this.Filter != null &&
+                    this.Filter.Equals(other.Filter)
                 );
         }
 
@@ -194,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConversationTurns != null)
                     hash = hash * 59 + this.ConversationTurns.GetHashCode();
+
+                if (this.Filter != null)
+                    hash = hash * 59 + this.Filter.GetHashCode();
 
                 return hash;
             }

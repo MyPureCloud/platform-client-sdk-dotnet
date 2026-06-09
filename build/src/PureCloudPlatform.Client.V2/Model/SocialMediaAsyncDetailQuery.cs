@@ -105,15 +105,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of topicIds to query in
-        /// </summary>
-        /// <value>List of topicIds to query in</value>
-        [DataMember(Name="topicIds", EmitDefaultValue=false)]
-        public List<string> TopicIds { get; private set; }
-
-
-
-        /// <summary>
         /// The number of results per page
         /// </summary>
         /// <value>The number of results per page</value>
@@ -135,7 +126,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  Filter: ").Append(Filter).Append("\n");
-            sb.Append("  TopicIds: ").Append(TopicIds).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("}\n");
@@ -194,11 +184,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Filter.Equals(other.Filter)
                 ) &&
                 (
-                    this.TopicIds == other.TopicIds ||
-                    this.TopicIds != null &&
-                    this.TopicIds.SequenceEqual(other.TopicIds)
-                ) &&
-                (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
@@ -229,9 +214,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Filter != null)
                     hash = hash * 59 + this.Filter.GetHashCode();
-
-                if (this.TopicIds != null)
-                    hash = hash * 59 + this.TopicIds.GetHashCode();
 
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();

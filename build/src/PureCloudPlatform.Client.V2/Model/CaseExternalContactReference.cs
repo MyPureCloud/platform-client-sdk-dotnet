@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CaseExternalContactReference" /> class.
         /// </summary>
-        /// <param name="Id">The globally unique identifier for the object..</param>
+        /// <param name="Id">The globally unique identifier for the External Contact..</param>
         public CaseExternalContactReference(string Id = null)
         {
             this.Id = Id;
@@ -31,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The globally unique identifier for the External Contact.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The globally unique identifier for the External Contact.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

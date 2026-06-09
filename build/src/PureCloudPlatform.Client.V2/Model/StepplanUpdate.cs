@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class StepplanUpdate :  IEquatable<StepplanUpdate>
     {
         /// <summary>
-        /// The activityType of the Stepplan.
+        /// The activity type of the Stepplan.
         /// </summary>
-        /// <value>The activityType of the Stepplan.</value>
+        /// <value>The activity type of the Stepplan.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ActivityTypeEnum
         {
@@ -52,9 +52,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Workitem
         }
         /// <summary>
-        /// The activityType of the Stepplan.
+        /// The activity type of the Stepplan.
         /// </summary>
-        /// <value>The activityType of the Stepplan.</value>
+        /// <value>The activity type of the Stepplan.</value>
         [DataMember(Name="activityType", EmitDefaultValue=false)]
         public ActivityTypeEnum? ActivityType { get; set; }
         /// <summary>
@@ -62,8 +62,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the Stepplan. Valid length between 3 and 256 characters..</param>
         /// <param name="Description">The description of the Stepplan. Maximum length of 512 characters..</param>
-        /// <param name="WorkitemSettings">The workitemSettings of the Stepplan..</param>
-        /// <param name="ActivityType">The activityType of the Stepplan..</param>
+        /// <param name="WorkitemSettings">The Workitem settings of the Stepplan..</param>
+        /// <param name="ActivityType">The activity type of the Stepplan..</param>
         public StepplanUpdate(string Name = null, string Description = null, WorkitemSettings WorkitemSettings = null, ActivityTypeEnum? ActivityType = null)
         {
             this.Name = Name;
@@ -94,9 +94,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The workitemSettings of the Stepplan.
+        /// The Workitem settings of the Stepplan.
         /// </summary>
-        /// <value>The workitemSettings of the Stepplan.</value>
+        /// <value>The Workitem settings of the Stepplan.</value>
         [DataMember(Name="workitemSettings", EmitDefaultValue=false)]
         public WorkitemSettings WorkitemSettings { get; set; }
 

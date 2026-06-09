@@ -157,7 +157,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Roadsideassistance for "RoadsideAssistance"
             /// </summary>
             [EnumMember(Value = "RoadsideAssistance")]
-            Roadsideassistance
+            Roadsideassistance,
+            
+            /// <summary>
+            /// Enum Notificationresponse for "NotificationResponse"
+            /// </summary>
+            [EnumMember(Value = "NotificationResponse")]
+            Notificationresponse
         }
         /// <summary>
         /// For social media messages, the visibility of the message in the originating social platform

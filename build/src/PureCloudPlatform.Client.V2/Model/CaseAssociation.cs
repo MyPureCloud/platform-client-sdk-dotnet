@@ -13,15 +13,15 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Represents an association between a case and an interaction
+    /// Represents an association between a Case and an interaction.
     /// </summary>
     [DataContract]
     public partial class CaseAssociation :  IEquatable<CaseAssociation>
     {
         /// <summary>
-        /// Association type.
+        /// The association type.
         /// </summary>
-        /// <value>Association type.</value>
+        /// <value>The association type.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum AssociationTypeEnum
         {
@@ -52,9 +52,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Initiation
         }
         /// <summary>
-        /// Association type.
+        /// The association type.
         /// </summary>
-        /// <value>Association type.</value>
+        /// <value>The association type.</value>
         [DataMember(Name="associationType", EmitDefaultValue=false)]
         public AssociationTypeEnum? AssociationType { get; set; }
         /// <summary>
@@ -62,13 +62,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The ID of the association..</param>
         /// <param name="Name">Name.</param>
-        /// <param name="AssociationType">Association type..</param>
-        /// <param name="DateAssociated">Interaction association date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="Workitem">Associated workitem ID..</param>
-        /// <param name="Conversation">Associated conversation ID..</param>
-        /// <param name="Stage">The stage related to this association..</param>
-        /// <param name="Step">The step related to this association..</param>
-        /// <param name="Case">Case ID.</param>
+        /// <param name="AssociationType">The association type..</param>
+        /// <param name="DateAssociated">The date of the interaction association. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="Workitem">The associated Workitem..</param>
+        /// <param name="Conversation">The associated Conversation..</param>
+        /// <param name="Stage">The Stage related to this association..</param>
+        /// <param name="Step">The Step related to this association..</param>
+        /// <param name="Case">The Case for this association..</param>
         public CaseAssociation(string Id = null, string Name = null, AssociationTypeEnum? AssociationType = null, DateTime? DateAssociated = null, WorkitemReference Workitem = null, ConversationReference Conversation = null, StageReference Stage = null, StepReference Step = null, CaseReference Case = null)
         {
             this.Id = Id;
@@ -105,45 +105,45 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Interaction association date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// The date of the interaction association. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Interaction association date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>The date of the interaction association. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateAssociated", EmitDefaultValue=false)]
         public DateTime? DateAssociated { get; set; }
 
 
 
         /// <summary>
-        /// Associated workitem ID.
+        /// The associated Workitem.
         /// </summary>
-        /// <value>Associated workitem ID.</value>
+        /// <value>The associated Workitem.</value>
         [DataMember(Name="workitem", EmitDefaultValue=false)]
         public WorkitemReference Workitem { get; set; }
 
 
 
         /// <summary>
-        /// Associated conversation ID.
+        /// The associated Conversation.
         /// </summary>
-        /// <value>Associated conversation ID.</value>
+        /// <value>The associated Conversation.</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public ConversationReference Conversation { get; set; }
 
 
 
         /// <summary>
-        /// The stage related to this association.
+        /// The Stage related to this association.
         /// </summary>
-        /// <value>The stage related to this association.</value>
+        /// <value>The Stage related to this association.</value>
         [DataMember(Name="stage", EmitDefaultValue=false)]
         public StageReference Stage { get; set; }
 
 
 
         /// <summary>
-        /// The step related to this association.
+        /// The Step related to this association.
         /// </summary>
-        /// <value>The step related to this association.</value>
+        /// <value>The Step related to this association.</value>
         [DataMember(Name="step", EmitDefaultValue=false)]
         public StepReference Step { get; set; }
 
@@ -159,9 +159,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Case ID
+        /// The Case for this association.
         /// </summary>
-        /// <value>Case ID</value>
+        /// <value>The Case for this association.</value>
         [DataMember(Name="case", EmitDefaultValue=false)]
         public CaseReference Case { get; set; }
 

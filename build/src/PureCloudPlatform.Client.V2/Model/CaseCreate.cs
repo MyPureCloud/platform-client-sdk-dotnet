@@ -27,13 +27,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CaseCreate" /> class.
         /// </summary>
-        /// <param name="CaseplanId">The ID of the caseplan to create the case from. (required).</param>
-        /// <param name="OwnerId">The ID of the owner of the case..</param>
+        /// <param name="CaseplanId">The ID of the Caseplan used to create the Case. (required).</param>
+        /// <param name="OwnerId">The ID of the owner of the Case..</param>
         /// <param name="Summary">Overview information for the Case. Valid length between 3 and 512 characters..</param>
         /// <param name="ExternalContactId">The ID of the External Contact associated with the Case. (required).</param>
-        /// <param name="ConversationId">The ID of conversation associated with the Case..</param>
-        /// <param name="WorkitemId">The ID of the workitem associated with the Case..</param>
-        /// <param name="TtlSeconds">The epoch timestamp in seconds specifying the time-to-live for the lifetime of the Case. Can not be greater than 365 days from the current time..</param>
+        /// <param name="ConversationId">The ID of the Conversation associated with the Case..</param>
+        /// <param name="WorkitemId">The ID of the Workitem associated with the Case..</param>
+        /// <param name="TtlSeconds">Epoch timestamp in seconds for the Case time-to-live. Cannot be more than 365 days after the current time..</param>
         /// <param name="Intake">The intake data for the Case. Maximum of 10 intake objects allowed..</param>
         public CaseCreate(string CaseplanId = null, string OwnerId = null, string Summary = null, string ExternalContactId = null, string ConversationId = null, string WorkitemId = null, int? TtlSeconds = null, List<Intake> Intake = null)
         {
@@ -51,18 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ID of the caseplan to create the case from.
+        /// The ID of the Caseplan used to create the Case.
         /// </summary>
-        /// <value>The ID of the caseplan to create the case from.</value>
+        /// <value>The ID of the Caseplan used to create the Case.</value>
         [DataMember(Name="caseplanId", EmitDefaultValue=false)]
         public string CaseplanId { get; set; }
 
 
 
         /// <summary>
-        /// The ID of the owner of the case.
+        /// The ID of the owner of the Case.
         /// </summary>
-        /// <value>The ID of the owner of the case.</value>
+        /// <value>The ID of the owner of the Case.</value>
         [DataMember(Name="ownerId", EmitDefaultValue=false)]
         public string OwnerId { get; set; }
 
@@ -87,27 +87,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ID of conversation associated with the Case.
+        /// The ID of the Conversation associated with the Case.
         /// </summary>
-        /// <value>The ID of conversation associated with the Case.</value>
+        /// <value>The ID of the Conversation associated with the Case.</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
 
 
 
         /// <summary>
-        /// The ID of the workitem associated with the Case.
+        /// The ID of the Workitem associated with the Case.
         /// </summary>
-        /// <value>The ID of the workitem associated with the Case.</value>
+        /// <value>The ID of the Workitem associated with the Case.</value>
         [DataMember(Name="workitemId", EmitDefaultValue=false)]
         public string WorkitemId { get; set; }
 
 
 
         /// <summary>
-        /// The epoch timestamp in seconds specifying the time-to-live for the lifetime of the Case. Can not be greater than 365 days from the current time.
+        /// Epoch timestamp in seconds for the Case time-to-live. Cannot be more than 365 days after the current time.
         /// </summary>
-        /// <value>The epoch timestamp in seconds specifying the time-to-live for the lifetime of the Case. Can not be greater than 365 days from the current time.</value>
+        /// <value>Epoch timestamp in seconds for the Case time-to-live. Cannot be more than 365 days after the current time.</value>
         [DataMember(Name="ttlSeconds", EmitDefaultValue=false)]
         public int? TtlSeconds { get; set; }
 

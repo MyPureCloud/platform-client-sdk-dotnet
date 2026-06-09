@@ -7,9 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Property** | **string** | The property name for this intake setting. | |
-| **Required** | **bool?** | Defines if this property is required for intake | |
-| **DisplayOrder** | **int?** | The order where this property should be displayed | |
+| **Required** | **bool?** | Whether this property is required for intake. | |
+| **DisplayOrder** | **int?** | The display order for this property. | |
 
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_

@@ -521,9 +521,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionIds">Division IDs of entities (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
         /// <param name="pageSize">Number of entities to return (optional)</param>
-        /// <returns>ExportListing</returns>
+        /// <returns>ContactsExportListing</returns>
         
-        ExportListing GetExternalcontactsContactsExports (List<string> divisionIds = null, string after = null, int? pageSize = null);
+        ContactsExportListing GetExternalcontactsContactsExports (List<string> divisionIds = null, string after = null, int? pageSize = null);
 
         /// <summary>
         /// List exports for organization
@@ -535,9 +535,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionIds">Division IDs of entities (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
         /// <param name="pageSize">Number of entities to return (optional)</param>
-        /// <returns>ApiResponse of ExportListing</returns>
+        /// <returns>ApiResponse of ContactsExportListing</returns>
         
-        ApiResponse<ExportListing> GetExternalcontactsContactsExportsWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null);
+        ApiResponse<ContactsExportListing> GetExternalcontactsContactsExportsWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a schema
@@ -3625,9 +3625,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionIds">Division IDs of entities (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
         /// <param name="pageSize">Number of entities to return (optional)</param>
-        /// <returns>Task of ExportListing</returns>
+        /// <returns>Task of ContactsExportListing</returns>
         
-        System.Threading.Tasks.Task<ExportListing> GetExternalcontactsContactsExportsAsync (List<string> divisionIds = null, string after = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ContactsExportListing> GetExternalcontactsContactsExportsAsync (List<string> divisionIds = null, string after = null, int? pageSize = null);
 
         /// <summary>
         /// List exports for organization
@@ -3639,9 +3639,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionIds">Division IDs of entities (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
         /// <param name="pageSize">Number of entities to return (optional)</param>
-        /// <returns>Task of ApiResponse (ExportListing)</returns>
+        /// <returns>Task of ApiResponse (ContactsExportListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ExportListing>> GetExternalcontactsContactsExportsAsyncWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactsExportListing>> GetExternalcontactsContactsExportsAsyncWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a schema
@@ -10340,11 +10340,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionIds">Division IDs of entities (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
         /// <param name="pageSize">Number of entities to return (optional)</param>
-        /// <returns>ExportListing</returns>
+        /// <returns>ContactsExportListing</returns>
         
-        public ExportListing GetExternalcontactsContactsExports (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        public ContactsExportListing GetExternalcontactsContactsExports (List<string> divisionIds = null, string after = null, int? pageSize = null)
         {
-             ApiResponse<ExportListing> localVarResponse = GetExternalcontactsContactsExportsWithHttpInfo(divisionIds, after, pageSize);
+             ApiResponse<ContactsExportListing> localVarResponse = GetExternalcontactsContactsExportsWithHttpInfo(divisionIds, after, pageSize);
              return localVarResponse.Data;
         }
 
@@ -10356,9 +10356,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionIds">Division IDs of entities (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
         /// <param name="pageSize">Number of entities to return (optional)</param>
-        /// <returns>ApiResponse of ExportListing</returns>
+        /// <returns>ApiResponse of ContactsExportListing</returns>
         
-        public ApiResponse< ExportListing > GetExternalcontactsContactsExportsWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        public ApiResponse< ContactsExportListing > GetExternalcontactsContactsExportsWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null)
         { 
 
             var localVarPath = "/api/v2/externalcontacts/contacts/exports";
@@ -10428,9 +10428,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ExportListing>(localVarStatusCode,
+            return new ApiResponse<ContactsExportListing>(localVarStatusCode,
                 localVarHeaders,
-                (ExportListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExportListing)),
+                (ContactsExportListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsExportListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10444,11 +10444,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionIds">Division IDs of entities (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
         /// <param name="pageSize">Number of entities to return (optional)</param>
-        /// <returns>Task of ExportListing</returns>
+        /// <returns>Task of ContactsExportListing</returns>
         
-        public async System.Threading.Tasks.Task<ExportListing> GetExternalcontactsContactsExportsAsync (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ContactsExportListing> GetExternalcontactsContactsExportsAsync (List<string> divisionIds = null, string after = null, int? pageSize = null)
         {
-             ApiResponse<ExportListing> localVarResponse = await GetExternalcontactsContactsExportsAsyncWithHttpInfo(divisionIds, after, pageSize);
+             ApiResponse<ContactsExportListing> localVarResponse = await GetExternalcontactsContactsExportsAsyncWithHttpInfo(divisionIds, after, pageSize);
              return localVarResponse.Data;
 
         }
@@ -10461,9 +10461,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionIds">Division IDs of entities (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
         /// <param name="pageSize">Number of entities to return (optional)</param>
-        /// <returns>Task of ApiResponse (ExportListing)</returns>
+        /// <returns>Task of ApiResponse (ContactsExportListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ExportListing>> GetExternalcontactsContactsExportsAsyncWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactsExportListing>> GetExternalcontactsContactsExportsAsyncWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null)
         { 
 
             var localVarPath = "/api/v2/externalcontacts/contacts/exports";
@@ -10533,9 +10533,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ExportListing>(localVarStatusCode,
+            return new ApiResponse<ContactsExportListing>(localVarStatusCode,
                 localVarHeaders,
-                (ExportListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExportListing)),
+                (ContactsExportListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsExportListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

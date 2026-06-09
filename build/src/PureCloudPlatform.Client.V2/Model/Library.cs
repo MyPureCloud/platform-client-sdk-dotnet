@@ -61,7 +61,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Form for "Form"
             /// </summary>
             [EnumMember(Value = "Form")]
-            Form
+            Form,
+            
+            /// <summary>
+            /// Enum Appleinvitation for "AppleInvitation"
+            /// </summary>
+            [EnumMember(Value = "AppleInvitation")]
+            Appleinvitation
         }
         /// <summary>
         /// This value is deprecated. Responses representing message templates may be added to any library.

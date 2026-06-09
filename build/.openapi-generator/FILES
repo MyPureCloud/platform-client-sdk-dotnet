@@ -193,6 +193,8 @@ docs/AgentScheduleShiftActivity.md
 docs/AgentScheduleUnavailableTime.md
 docs/AgentScoringRule.md
 docs/AgentScoringRuleEntityListing.md
+docs/AgentStateActivityCategoryCount.md
+docs/AgentStateAdherenceStateCount.md
 docs/AgentStateAgentQueryClause.md
 docs/AgentStateAgentQueryPredicate.md
 docs/AgentStateCountsRequest.md
@@ -329,6 +331,7 @@ docs/AppleIntegration.md
 docs/AppleIntegrationEntityListing.md
 docs/AppleIntegrationRequest.md
 docs/AppleIntegrationUpdateRequest.md
+docs/AppleInvitation.md
 docs/AppleOpaqueId.md
 docs/ApplePay.md
 docs/ApprovalNamespace.md
@@ -654,6 +657,8 @@ docs/BuUpdateAgentScheduleShift.md
 docs/BuUpdateAgentScheduleUploadSchema.md
 docs/BuUpdateTimeOffPlanRequest.md
 docs/BuUserListing.md
+docs/BulkAddDecisionTableRowsRequest.md
+docs/BulkAddDecisionTableRowsResponse.md
 docs/BulkAddOpportunitiesRequest.md
 docs/BulkAddOpportunitiesResponse.md
 docs/BulkAddSourceIntentsRequest.md
@@ -664,6 +669,7 @@ docs/BulkContactsEnrichRequest.md
 docs/BulkContactsEnrichResponse.md
 docs/BulkContactsRequest.md
 docs/BulkContactsResponse.md
+docs/BulkDeleteDecisionTableRowsRequest.md
 docs/BulkDeleteResponse.md
 docs/BulkEntityErrorContactEnrichRequest.md
 docs/BulkEntityErrorEntity.md
@@ -728,6 +734,8 @@ docs/BulkResult.md
 docs/BulkResults.md
 docs/BulkShiftTradeStateUpdateRequest.md
 docs/BulkSourceIntentsResponse.md
+docs/BulkUpdateDecisionTableRowsRequest.md
+docs/BulkUpdateDecisionTableRowsResponse.md
 docs/BulkUpdateOpportunityEnrollmentsStatusResponse.md
 docs/BulkUpdateShiftTradeListJobRequest.md
 docs/BulkUpdateShiftTradeStateRequestItem.md
@@ -904,6 +912,7 @@ docs/CaseplanCreate.md
 docs/CaseplanCreateResponse.md
 docs/CaseplanDataSchema.md
 docs/CaseplanDataSchemaListing.md
+docs/CaseplanDataSchemaRequest.md
 docs/CaseplanListing.md
 docs/CaseplanQueryEntityListing.md
 docs/CaseplanQueryRequest.md
@@ -1131,6 +1140,7 @@ docs/ContactsExport.md
 docs/ContactsExportFieldFilter.md
 docs/ContactsExportFieldListFilter.md
 docs/ContactsExportFilter.md
+docs/ContactsExportListing.md
 docs/ContactsExportQueryConditions.md
 docs/ContactsExportRequest.md
 docs/ContactsPatchChange.md
@@ -1581,6 +1591,7 @@ docs/ConversationSummariesGetResponse.md
 docs/ConversationSummary.md
 docs/ConversationSummaryExtractedEntity.md
 docs/ConversationSummaryFollowup.md
+docs/ConversationSummaryLabel.md
 docs/ConversationSummaryReason.md
 docs/ConversationSummaryResolution.md
 docs/ConversationSummaryTopicConversationFollowupAction.md
@@ -1688,6 +1699,7 @@ docs/CreateCallbackResponse.md
 docs/CreateCapacityPlanStaffingGroupMetricChangeRequest.md
 docs/CreateCoachingAppointmentRequest.md
 docs/CreateDecisionTableColumnsRequest.md
+docs/CreateDecisionTableImportJobRequest.md
 docs/CreateDecisionTableRequest.md
 docs/CreateDecisionTableRowRequest.md
 docs/CreateEmailRequest.md
@@ -1704,6 +1716,7 @@ docs/CreateManagementUnitApiRequest.md
 docs/CreateManagementUnitSettingsRequest.md
 docs/CreateMetric.md
 docs/CreateObjective.md
+docs/CreateOrganizationLink.md
 docs/CreateOutboundMessagingConversationRequest.md
 docs/CreateOutboundMessagingConversationResponse.md
 docs/CreatePerformanceProfile.md
@@ -1864,9 +1877,18 @@ docs/DecisionTableColumns.md
 docs/DecisionTableContract.md
 docs/DecisionTableExecutionRequest.md
 docs/DecisionTableExecutionResponse.md
+docs/DecisionTableExportJob.md
+docs/DecisionTableExportJobError.md
+docs/DecisionTableExportJobListing.md
+docs/DecisionTableExportJobRequest.md
+docs/DecisionTableImportJob.md
+docs/DecisionTableImportJobError.md
+docs/DecisionTableImportJobListing.md
+docs/DecisionTableImportRowMetrics.md
 docs/DecisionTableInputColumn.md
 docs/DecisionTableInputColumnExpression.md
 docs/DecisionTableInputColumnRequest.md
+docs/DecisionTableJobValidationError.md
 docs/DecisionTableListing.md
 docs/DecisionTableOutputColumn.md
 docs/DecisionTableOutputColumnRequest.md
@@ -1940,11 +1962,14 @@ docs/DeleteAuthorizationRole-example.txt
 docs/DeleteAuthorizationSubjectDivisionRole-example.txt
 docs/DeleteAuthorizationSubjectDivisionRole-example.txt
 docs/DeleteBusinessrulesDecisiontable-example.txt
+docs/DeleteBusinessrulesDecisiontableExport-example.txt
+docs/DeleteBusinessrulesDecisiontableImport-example.txt
 docs/DeleteBusinessrulesDecisiontableVersion-example.txt
 docs/DeleteBusinessrulesDecisiontableVersionRow-example.txt
 docs/DeleteBusinessrulesSchema-example.txt
 docs/DeleteCasemanagementCase-example.txt
 docs/DeleteCasemanagementCaseplan-example.txt
+docs/DeleteCasemanagementCaseplanDataschema-example.txt
 docs/DeleteChatsRoomMessage-example.txt
 docs/DeleteChatsRoomMessagesPin-example.txt
 docs/DeleteChatsRoomParticipant-example.txt
@@ -2137,6 +2162,7 @@ docs/DeleteRoutingDirectroutingbackupSettingsMe-example.txt
 docs/DeleteRoutingEmailDomain-example.txt
 docs/DeleteRoutingEmailDomainRoute-example.txt
 docs/DeleteRoutingEmailOutboundDomain-example.txt
+docs/DeleteRoutingEmailSettingEmailSettingId-example.txt
 docs/DeleteRoutingLanguage-example.txt
 docs/DeleteRoutingPredictor-example.txt
 docs/DeleteRoutingPredictorsKeyperformanceindicator-example.txt
@@ -2188,6 +2214,7 @@ docs/DeleteTaskmanagementWorktypeFlowsOncreateRule-example.txt
 docs/DeleteTaskmanagementWorktypeStatus-example.txt
 docs/DeleteTeam-example.txt
 docs/DeleteTeamMembers-example.txt
+docs/DeleteTelephonyOrganizationLinkTargetOrganizationId-example.txt
 docs/DeleteTelephonyProvidersEdge-example.txt
 docs/DeleteTelephonyProvidersEdgeLogicalinterface-example.txt
 docs/DeleteTelephonyProvidersEdgeSoftwareupdate-example.txt
@@ -2389,6 +2416,7 @@ docs/DirectoryUserDevicesListing.md
 docs/DisableSiteConnectionsRequest.md
 docs/DisallowedEntityLearningAssignmentItem.md
 docs/DisallowedEntityLearningAssignmentReference.md
+docs/DisasterRecoveryAllRoutingRequest.md
 docs/DisconnectReason.md
 docs/Disposition.md
 docs/DispositionAmdTimeout.md
@@ -2617,6 +2645,7 @@ docs/EmailProgressTransferEvent.md
 docs/EmailRoutingEstablishedEvent.md
 docs/EmailRoutingTransferEvent.md
 docs/EmailSetting.md
+docs/EmailSettingEntityListing.md
 docs/EmailSettingReference.md
 docs/EmailSettings.md
 docs/EmailSetup.md
@@ -2755,7 +2784,6 @@ docs/ExpandableWebDeploymentEntityListing.md
 docs/ExpansionCriterium.md
 docs/ExpiredEdgeListing.md
 docs/ExportDetails.md
-docs/ExportListing.md
 docs/ExportScriptRequest.md
 docs/ExportScriptResponse.md
 docs/ExportUri.md
@@ -3265,6 +3293,10 @@ docs/GetBillingContractsInvoices-example.txt
 docs/GetBillingReportsBillableusage-example.txt
 docs/GetBillingTrusteebillingoverviewTrustorOrgId-example.txt
 docs/GetBusinessrulesDecisiontable-example.txt
+docs/GetBusinessrulesDecisiontableExport-example.txt
+docs/GetBusinessrulesDecisiontableExports-example.txt
+docs/GetBusinessrulesDecisiontableImport-example.txt
+docs/GetBusinessrulesDecisiontableImports-example.txt
 docs/GetBusinessrulesDecisiontableVersion-example.txt
 docs/GetBusinessrulesDecisiontableVersionRow-example.txt
 docs/GetBusinessrulesDecisiontableVersionRows-example.txt
@@ -4111,6 +4143,8 @@ docs/GetRoutingEmailDomains-example.txt
 docs/GetRoutingEmailOutboundDomain-example.txt
 docs/GetRoutingEmailOutboundDomainActivation-example.txt
 docs/GetRoutingEmailOutboundDomains-example.txt
+docs/GetRoutingEmailSetting-example.txt
+docs/GetRoutingEmailSettingEmailSettingId-example.txt
 docs/GetRoutingEmailSetup-example.txt
 docs/GetRoutingLanguage-example.txt
 docs/GetRoutingLanguages-example.txt
@@ -4311,6 +4345,9 @@ docs/GetTelephonyAgentGreetings-example.txt
 docs/GetTelephonyAgentsGreetingsMe-example.txt
 docs/GetTelephonyCallsMetrics-example.txt
 docs/GetTelephonyMediaregions-example.txt
+docs/GetTelephonyNumbersRouting-example.txt
+docs/GetTelephonyOrganizationLink-example.txt
+docs/GetTelephonyOrganizationLinkRegions-example.txt
 docs/GetTelephonyProvidersEdge-example.txt
 docs/GetTelephonyProvidersEdgeDiagnosticNslookup-example.txt
 docs/GetTelephonyProvidersEdgeDiagnosticPing-example.txt
@@ -5639,6 +5676,10 @@ docs/NuanceMixDlgSettings.md
 docs/NuanceOrganization.md
 docs/Number.md
 docs/NumberPlan.md
+docs/NumberRouting.md
+docs/NumberRoutingListing.md
+docs/NumberRoutingRequest.md
+docs/NumberRoutingResetOrganizationRequest.md
 docs/NumericRange.md
 docs/OAuthApi.json
 docs/OAuthApi.md
@@ -5739,6 +5780,9 @@ docs/OrganizationAuthorizationApi.json
 docs/OrganizationAuthorizationApi.md
 docs/OrganizationCallMetrics.md
 docs/OrganizationFeatures.md
+docs/OrganizationLink.md
+docs/OrganizationLinkApprovalRequest.md
+docs/OrganizationLinkResponse.md
 docs/OrganizationPresence.md
 docs/OrganizationPresenceDefinition.md
 docs/OrganizationPresenceDefinitionEntityListing.md
@@ -5911,6 +5955,7 @@ docs/PatchBuReschedulingOptionsManagementUnitRequest.md
 docs/PatchBuReschedulingOptionsRequest.md
 docs/PatchBuScheduleRunRequest.md
 docs/PatchBusinessrulesDecisiontable-example.txt
+docs/PatchBusinessrulesDecisiontableImport-example.txt
 docs/PatchBusinessrulesDecisiontableVersion-example.txt
 docs/PatchCallToAction.md
 docs/PatchCallbackRequest.md
@@ -6069,6 +6114,7 @@ docs/PatchRoutingConversation-example.txt
 docs/PatchRoutingEmailDomain-example.txt
 docs/PatchRoutingEmailDomainValidate-example.txt
 docs/PatchRoutingEmailOutboundDomain-example.txt
+docs/PatchRoutingEmailSettingEmailSettingId-example.txt
 docs/PatchRoutingPredictor-example.txt
 docs/PatchRoutingPredictorsKeyperformanceindicator-example.txt
 docs/PatchRoutingQueueMember-example.txt
@@ -6108,6 +6154,7 @@ docs/PatchTaskmanagementWorktypeFlowsOnattributechangeRule-example.txt
 docs/PatchTaskmanagementWorktypeFlowsOncreateRule-example.txt
 docs/PatchTaskmanagementWorktypeStatus-example.txt
 docs/PatchTeam-example.txt
+docs/PatchTelephonyOrganizationLinkApproveRequestingOrganizationId-example.txt
 docs/PatchTelephonyProvidersEdgesSiteSiteconnections-example.txt
 docs/PatchTextStyleProperties.md
 docs/PatchUser-example.txt
@@ -6391,9 +6438,14 @@ docs/PostAuthorizationSubjectDivisionRole-example.txt
 docs/PostAuthorizationSubjectDivisionRole-example.txt
 docs/PostBackgroundassistantToken-example.txt
 docs/PostBusinessrulesDecisiontableExecute-example.txt
+docs/PostBusinessrulesDecisiontableExports-example.txt
+docs/PostBusinessrulesDecisiontableImports-example.txt
 docs/PostBusinessrulesDecisiontableVersionCopy-example.txt
 docs/PostBusinessrulesDecisiontableVersionExecute-example.txt
 docs/PostBusinessrulesDecisiontableVersionRows-example.txt
+docs/PostBusinessrulesDecisiontableVersionRowsBulkAdd-example.txt
+docs/PostBusinessrulesDecisiontableVersionRowsBulkRemove-example.txt
+docs/PostBusinessrulesDecisiontableVersionRowsBulkUpdate-example.txt
 docs/PostBusinessrulesDecisiontableVersionRowsSearch-example.txt
 docs/PostBusinessrulesDecisiontableVersionSync-example.txt
 docs/PostBusinessrulesDecisiontableVersions-example.txt
@@ -6402,6 +6454,7 @@ docs/PostBusinessrulesSchemas-example.txt
 docs/PostCarrierservicesIntegrationsEmergencylocationsMe-example.txt
 docs/PostCasemanagementCaseAssociations-example.txt
 docs/PostCasemanagementCaseTerminateJobs-example.txt
+docs/PostCasemanagementCaseplanDataschemas-example.txt
 docs/PostCasemanagementCaseplanPublish-example.txt
 docs/PostCasemanagementCaseplanVersions-example.txt
 docs/PostCasemanagementCaseplans-example.txt
@@ -6882,6 +6935,7 @@ docs/PostRoutingEmailDomains-example.txt
 docs/PostRoutingEmailOutboundDomainTestconnection-example.txt
 docs/PostRoutingEmailOutboundDomains-example.txt
 docs/PostRoutingEmailOutboundDomainsSimulated-example.txt
+docs/PostRoutingEmailSetting-example.txt
 docs/PostRoutingLanguages-example.txt
 docs/PostRoutingPredictors-example.txt
 docs/PostRoutingPredictorsKeyperformanceindicators-example.txt
@@ -6954,6 +7008,10 @@ docs/PostTeamMembers-example.txt
 docs/PostTeams-example.txt
 docs/PostTeamsSearch-example.txt
 docs/PostTeamsSearch-example.txt
+docs/PostTelephonyNumbersRouting-example.txt
+docs/PostTelephonyNumbersRoutingAll-example.txt
+docs/PostTelephonyNumbersRoutingReset-example.txt
+docs/PostTelephonyOrganizationLink-example.txt
 docs/PostTelephonyProvidersEdgeDiagnosticNslookup-example.txt
 docs/PostTelephonyProvidersEdgeDiagnosticPing-example.txt
 docs/PostTelephonyProvidersEdgeDiagnosticRoute-example.txt
@@ -7254,6 +7312,7 @@ docs/PutAuthorizationRolesSettings-example.txt
 docs/PutBusinessrulesDecisiontableVersionPublish-example.txt
 docs/PutBusinessrulesDecisiontableVersionRow-example.txt
 docs/PutBusinessrulesSchema-example.txt
+docs/PutCasemanagementCaseplanDataschema-example.txt
 docs/PutCasemanagementCaseplanIntakesettings-example.txt
 docs/PutChatsMessageReactions-example.txt
 docs/PutChatsSettings-example.txt
@@ -7939,6 +7998,7 @@ docs/RecordingMessageReceipt.md
 docs/RecordingMessageReceiptReason.md
 docs/RecordingMessagingMessage.md
 docs/RecordingMetadata.md
+docs/RecordingNotificationResponse.md
 docs/RecordingNotificationTemplate.md
 docs/RecordingRetention.md
 docs/RecordingRetentionCursorEntityListing.md
@@ -7961,6 +8021,7 @@ docs/RecurrencePeriod.md
 docs/RecurrenceSettings.md
 docs/RecurrenceSettingsBase.md
 docs/Referrer.md
+docs/RegionResponse.md
 docs/RegionTimeZone.md
 docs/RegisterArchitectExportJob.md
 docs/RegisterArchitectExportJobResponse.md
@@ -8099,6 +8160,7 @@ docs/RoutingStatusDetailQueryClause.md
 docs/RoutingStatusDetailQueryFilter.md
 docs/RoutingStatusDetailQueryPredicate.md
 docs/RoutingTransferEvent.md
+docs/Row.md
 docs/RowSearchFilter.md
 docs/RowSearchPredicate.md
 docs/RuleConfig.md
@@ -8130,6 +8192,9 @@ docs/ScheduleGroupEntityListing.md
 docs/ScheduleInterval.md
 docs/ScheduleReferenceWithBusinessUnit.md
 docs/ScheduleUploadProcessingResponse.md
+docs/ScheduleVisibilityRange.md
+docs/ScheduleVisibilitySettingsRequest.md
+docs/ScheduleVisibilitySettingsResponse.md
 docs/ScheduledTrigger.md
 docs/ScheduledTriggerEntityListing.md
 docs/SchedulerMessageArgument.md
@@ -8397,6 +8462,7 @@ docs/SocialMediaQueryPredicate.md
 docs/SocialMediaQuerySort.md
 docs/SocialMediaStatisticalResponse.md
 docs/SocialMediaStatisticalSummary.md
+docs/SocialNumericRange.md
 docs/SocialTopicPatchRequest.md
 docs/SocialTopicRequest.md
 docs/SocialTopicResponse.md
@@ -8681,6 +8747,7 @@ docs/TextStyleProperties.md
 docs/TextbotsApi.json
 docs/TextbotsApi.md
 docs/ThirdPartySuggestion.md
+docs/ThirdPartySuggestionSource.md
 docs/Ticker.md
 docs/TimeAllowed.md
 docs/TimeAndDateSubCondition.md
@@ -8891,6 +8958,7 @@ docs/UpdateCoachingAppointmentRequest.md
 docs/UpdateConferenceRequest.md
 docs/UpdateContactColumnActionSettings.md
 docs/UpdateDecisionTableColumnsRequest.md
+docs/UpdateDecisionTableImportJobRequest.md
 docs/UpdateDecisionTableRequest.md
 docs/UpdateDecisionTableVersionRequest.md
 docs/UpdateDraftInput.md
@@ -9201,10 +9269,12 @@ docs/V3SourceLastSynchronization.md
 docs/V3SourceRef.md
 docs/V3SourceScheduleSettings.md
 docs/V3SourceSiteDetails.md
+docs/V3SourceTagFilter.md
 docs/V3SourceUpdateRequest.md
 docs/V3StartManualSyncRequest.md
 docs/V3Synchronization.md
 docs/V3SynchronizationListing.md
+docs/V3SynchronizationRef.md
 docs/V3SynchronizationStatistics.md
 docs/V3SynchronizationUpdateRequest.md
 docs/V3SynchronizationUploadMetadata.md
@@ -10064,6 +10134,8 @@ src/PureCloudPlatform.Client.V2/Model/AgentScheduleShiftActivity.cs
 src/PureCloudPlatform.Client.V2/Model/AgentScheduleUnavailableTime.cs
 src/PureCloudPlatform.Client.V2/Model/AgentScoringRule.cs
 src/PureCloudPlatform.Client.V2/Model/AgentScoringRuleEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/AgentStateActivityCategoryCount.cs
+src/PureCloudPlatform.Client.V2/Model/AgentStateAdherenceStateCount.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateAgentQueryClause.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateAgentQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateCountsRequest.cs
@@ -10194,6 +10266,7 @@ src/PureCloudPlatform.Client.V2/Model/AppleIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/AppleIntegrationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/AppleIntegrationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AppleIntegrationUpdateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AppleInvitation.cs
 src/PureCloudPlatform.Client.V2/Model/AppleOpaqueId.cs
 src/PureCloudPlatform.Client.V2/Model/ApplePay.cs
 src/PureCloudPlatform.Client.V2/Model/ApprovalNamespace.cs
@@ -10507,6 +10580,8 @@ src/PureCloudPlatform.Client.V2/Model/BuUpdateAgentScheduleShift.cs
 src/PureCloudPlatform.Client.V2/Model/BuUpdateAgentScheduleUploadSchema.cs
 src/PureCloudPlatform.Client.V2/Model/BuUpdateTimeOffPlanRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BuUserListing.cs
+src/PureCloudPlatform.Client.V2/Model/BulkAddDecisionTableRowsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/BulkAddDecisionTableRowsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkAddOpportunitiesRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkAddOpportunitiesResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkAddSourceIntentsRequest.cs
@@ -10517,6 +10592,7 @@ src/PureCloudPlatform.Client.V2/Model/BulkContactsEnrichRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkContactsEnrichResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkContactsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkContactsResponse.cs
+src/PureCloudPlatform.Client.V2/Model/BulkDeleteDecisionTableRowsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkDeleteResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkEntityErrorContactEnrichRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkEntityErrorEntity.cs
@@ -10581,6 +10657,8 @@ src/PureCloudPlatform.Client.V2/Model/BulkResult.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResults.cs
 src/PureCloudPlatform.Client.V2/Model/BulkShiftTradeStateUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkSourceIntentsResponse.cs
+src/PureCloudPlatform.Client.V2/Model/BulkUpdateDecisionTableRowsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/BulkUpdateDecisionTableRowsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkUpdateOpportunityEnrollmentsStatusResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkUpdateShiftTradeListJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkUpdateShiftTradeStateRequestItem.cs
@@ -10751,6 +10829,7 @@ src/PureCloudPlatform.Client.V2/Model/CaseplanCreate.cs
 src/PureCloudPlatform.Client.V2/Model/CaseplanCreateResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CaseplanDataSchema.cs
 src/PureCloudPlatform.Client.V2/Model/CaseplanDataSchemaListing.cs
+src/PureCloudPlatform.Client.V2/Model/CaseplanDataSchemaRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CaseplanListing.cs
 src/PureCloudPlatform.Client.V2/Model/CaseplanQueryEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/CaseplanQueryRequest.cs
@@ -10974,6 +11053,7 @@ src/PureCloudPlatform.Client.V2/Model/ContactsExport.cs
 src/PureCloudPlatform.Client.V2/Model/ContactsExportFieldFilter.cs
 src/PureCloudPlatform.Client.V2/Model/ContactsExportFieldListFilter.cs
 src/PureCloudPlatform.Client.V2/Model/ContactsExportFilter.cs
+src/PureCloudPlatform.Client.V2/Model/ContactsExportListing.cs
 src/PureCloudPlatform.Client.V2/Model/ContactsExportQueryConditions.cs
 src/PureCloudPlatform.Client.V2/Model/ContactsExportRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ContactsPatchChange.cs
@@ -11422,6 +11502,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationSummariesGetResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummary.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryExtractedEntity.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryFollowup.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSummaryLabel.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryReason.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryResolution.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSummaryTopicConversationFollowupAction.cs
@@ -11527,6 +11608,7 @@ src/PureCloudPlatform.Client.V2/Model/CreateCallbackResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CreateCapacityPlanStaffingGroupMetricChangeRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateCoachingAppointmentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateDecisionTableColumnsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CreateDecisionTableImportJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateDecisionTableRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateDecisionTableRowRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateEmailRequest.cs
@@ -11543,6 +11625,7 @@ src/PureCloudPlatform.Client.V2/Model/CreateManagementUnitApiRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateManagementUnitSettingsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateMetric.cs
 src/PureCloudPlatform.Client.V2/Model/CreateObjective.cs
+src/PureCloudPlatform.Client.V2/Model/CreateOrganizationLink.cs
 src/PureCloudPlatform.Client.V2/Model/CreateOutboundMessagingConversationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateOutboundMessagingConversationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CreatePerformanceProfile.cs
@@ -11699,9 +11782,18 @@ src/PureCloudPlatform.Client.V2/Model/DecisionTableColumns.cs
 src/PureCloudPlatform.Client.V2/Model/DecisionTableContract.cs
 src/PureCloudPlatform.Client.V2/Model/DecisionTableExecutionRequest.cs
 src/PureCloudPlatform.Client.V2/Model/DecisionTableExecutionResponse.cs
+src/PureCloudPlatform.Client.V2/Model/DecisionTableExportJob.cs
+src/PureCloudPlatform.Client.V2/Model/DecisionTableExportJobError.cs
+src/PureCloudPlatform.Client.V2/Model/DecisionTableExportJobListing.cs
+src/PureCloudPlatform.Client.V2/Model/DecisionTableExportJobRequest.cs
+src/PureCloudPlatform.Client.V2/Model/DecisionTableImportJob.cs
+src/PureCloudPlatform.Client.V2/Model/DecisionTableImportJobError.cs
+src/PureCloudPlatform.Client.V2/Model/DecisionTableImportJobListing.cs
+src/PureCloudPlatform.Client.V2/Model/DecisionTableImportRowMetrics.cs
 src/PureCloudPlatform.Client.V2/Model/DecisionTableInputColumn.cs
 src/PureCloudPlatform.Client.V2/Model/DecisionTableInputColumnExpression.cs
 src/PureCloudPlatform.Client.V2/Model/DecisionTableInputColumnRequest.cs
+src/PureCloudPlatform.Client.V2/Model/DecisionTableJobValidationError.cs
 src/PureCloudPlatform.Client.V2/Model/DecisionTableListing.cs
 src/PureCloudPlatform.Client.V2/Model/DecisionTableOutputColumn.cs
 src/PureCloudPlatform.Client.V2/Model/DecisionTableOutputColumnRequest.cs
@@ -11861,6 +11953,7 @@ src/PureCloudPlatform.Client.V2/Model/DirectoryUserDevicesListing.cs
 src/PureCloudPlatform.Client.V2/Model/DisableSiteConnectionsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/DisallowedEntityLearningAssignmentItem.cs
 src/PureCloudPlatform.Client.V2/Model/DisallowedEntityLearningAssignmentReference.cs
+src/PureCloudPlatform.Client.V2/Model/DisasterRecoveryAllRoutingRequest.cs
 src/PureCloudPlatform.Client.V2/Model/DisconnectReason.cs
 src/PureCloudPlatform.Client.V2/Model/Disposition.cs
 src/PureCloudPlatform.Client.V2/Model/DispositionAmdTimeout.cs
@@ -12087,6 +12180,7 @@ src/PureCloudPlatform.Client.V2/Model/EmailProgressTransferEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailRoutingEstablishedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailRoutingTransferEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailSetting.cs
+src/PureCloudPlatform.Client.V2/Model/EmailSettingEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EmailSettingReference.cs
 src/PureCloudPlatform.Client.V2/Model/EmailSettings.cs
 src/PureCloudPlatform.Client.V2/Model/EmailSetup.cs
@@ -12219,7 +12313,6 @@ src/PureCloudPlatform.Client.V2/Model/ExpandableWebDeploymentEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExpansionCriterium.cs
 src/PureCloudPlatform.Client.V2/Model/ExpiredEdgeListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExportDetails.cs
-src/PureCloudPlatform.Client.V2/Model/ExportListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExportScriptRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ExportScriptResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ExportUri.cs
@@ -13516,6 +13609,10 @@ src/PureCloudPlatform.Client.V2/Model/NuanceMixDlgSettings.cs
 src/PureCloudPlatform.Client.V2/Model/NuanceOrganization.cs
 src/PureCloudPlatform.Client.V2/Model/Number.cs
 src/PureCloudPlatform.Client.V2/Model/NumberPlan.cs
+src/PureCloudPlatform.Client.V2/Model/NumberRouting.cs
+src/PureCloudPlatform.Client.V2/Model/NumberRoutingListing.cs
+src/PureCloudPlatform.Client.V2/Model/NumberRoutingRequest.cs
+src/PureCloudPlatform.Client.V2/Model/NumberRoutingResetOrganizationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/NumericRange.cs
 src/PureCloudPlatform.Client.V2/Model/OAuthAppleAuthorizationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/OAuthAppleAuthorizationResponseError.cs
@@ -13606,6 +13703,9 @@ src/PureCloudPlatform.Client.V2/Model/OrgWhitelistSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Organization.cs
 src/PureCloudPlatform.Client.V2/Model/OrganizationCallMetrics.cs
 src/PureCloudPlatform.Client.V2/Model/OrganizationFeatures.cs
+src/PureCloudPlatform.Client.V2/Model/OrganizationLink.cs
+src/PureCloudPlatform.Client.V2/Model/OrganizationLinkApprovalRequest.cs
+src/PureCloudPlatform.Client.V2/Model/OrganizationLinkResponse.cs
 src/PureCloudPlatform.Client.V2/Model/OrganizationPresence.cs
 src/PureCloudPlatform.Client.V2/Model/OrganizationPresenceDefinition.cs
 src/PureCloudPlatform.Client.V2/Model/OrganizationPresenceDefinitionEntityListing.cs
@@ -14373,6 +14473,7 @@ src/PureCloudPlatform.Client.V2/Model/RecordingMessageReceipt.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingMessageReceiptReason.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingMessagingMessage.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingMetadata.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingNotificationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingNotificationTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingRetention.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingRetentionCursorEntityListing.cs
@@ -14395,6 +14496,7 @@ src/PureCloudPlatform.Client.V2/Model/RecurrencePeriod.cs
 src/PureCloudPlatform.Client.V2/Model/RecurrenceSettings.cs
 src/PureCloudPlatform.Client.V2/Model/RecurrenceSettingsBase.cs
 src/PureCloudPlatform.Client.V2/Model/Referrer.cs
+src/PureCloudPlatform.Client.V2/Model/RegionResponse.cs
 src/PureCloudPlatform.Client.V2/Model/RegionTimeZone.cs
 src/PureCloudPlatform.Client.V2/Model/RegisterArchitectExportJob.cs
 src/PureCloudPlatform.Client.V2/Model/RegisterArchitectExportJobResponse.cs
@@ -14529,6 +14631,7 @@ src/PureCloudPlatform.Client.V2/Model/RoutingStatusDetailQueryClause.cs
 src/PureCloudPlatform.Client.V2/Model/RoutingStatusDetailQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/RoutingStatusDetailQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/RoutingTransferEvent.cs
+src/PureCloudPlatform.Client.V2/Model/Row.cs
 src/PureCloudPlatform.Client.V2/Model/RowSearchFilter.cs
 src/PureCloudPlatform.Client.V2/Model/RowSearchPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/RuleConfig.cs
@@ -14558,6 +14661,9 @@ src/PureCloudPlatform.Client.V2/Model/ScheduleGroupEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ScheduleInterval.cs
 src/PureCloudPlatform.Client.V2/Model/ScheduleReferenceWithBusinessUnit.cs
 src/PureCloudPlatform.Client.V2/Model/ScheduleUploadProcessingResponse.cs
+src/PureCloudPlatform.Client.V2/Model/ScheduleVisibilityRange.cs
+src/PureCloudPlatform.Client.V2/Model/ScheduleVisibilitySettingsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/ScheduleVisibilitySettingsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ScheduledTrigger.cs
 src/PureCloudPlatform.Client.V2/Model/ScheduledTriggerEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SchedulerMessageArgument.cs
@@ -14817,6 +14923,7 @@ src/PureCloudPlatform.Client.V2/Model/SocialMediaQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/SocialMediaQuerySort.cs
 src/PureCloudPlatform.Client.V2/Model/SocialMediaStatisticalResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SocialMediaStatisticalSummary.cs
+src/PureCloudPlatform.Client.V2/Model/SocialNumericRange.cs
 src/PureCloudPlatform.Client.V2/Model/SocialTopicPatchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SocialTopicRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SocialTopicResponse.cs
@@ -15085,6 +15192,7 @@ src/PureCloudPlatform.Client.V2/Model/TextBotsRichMediaInputEvent.cs
 src/PureCloudPlatform.Client.V2/Model/TextMessageListing.cs
 src/PureCloudPlatform.Client.V2/Model/TextStyleProperties.cs
 src/PureCloudPlatform.Client.V2/Model/ThirdPartySuggestion.cs
+src/PureCloudPlatform.Client.V2/Model/ThirdPartySuggestionSource.cs
 src/PureCloudPlatform.Client.V2/Model/Ticker.cs
 src/PureCloudPlatform.Client.V2/Model/TimeAllowed.cs
 src/PureCloudPlatform.Client.V2/Model/TimeAndDateSubCondition.cs
@@ -15293,6 +15401,7 @@ src/PureCloudPlatform.Client.V2/Model/UpdateCoachingAppointmentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateConferenceRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateContactColumnActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateDecisionTableColumnsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateDecisionTableImportJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateDecisionTableRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateDecisionTableVersionRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateDraftInput.cs
@@ -15591,10 +15700,12 @@ src/PureCloudPlatform.Client.V2/Model/V3SourceLastSynchronization.cs
 src/PureCloudPlatform.Client.V2/Model/V3SourceRef.cs
 src/PureCloudPlatform.Client.V2/Model/V3SourceScheduleSettings.cs
 src/PureCloudPlatform.Client.V2/Model/V3SourceSiteDetails.cs
+src/PureCloudPlatform.Client.V2/Model/V3SourceTagFilter.cs
 src/PureCloudPlatform.Client.V2/Model/V3SourceUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/V3StartManualSyncRequest.cs
 src/PureCloudPlatform.Client.V2/Model/V3Synchronization.cs
 src/PureCloudPlatform.Client.V2/Model/V3SynchronizationListing.cs
+src/PureCloudPlatform.Client.V2/Model/V3SynchronizationRef.cs
 src/PureCloudPlatform.Client.V2/Model/V3SynchronizationStatistics.cs
 src/PureCloudPlatform.Client.V2/Model/V3SynchronizationUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/V3SynchronizationUploadMetadata.cs

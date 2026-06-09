@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StepplansWorktypeReference" /> class.
         /// </summary>
-        /// <param name="Id">The id of the worktype..</param>
+        /// <param name="Id">The Worktype ID..</param>
         /// <param name="Name">Name.</param>
         public StepplansWorktypeReference(string Id = null, string Name = null)
         {
@@ -33,9 +33,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The id of the worktype.
+        /// The Worktype ID.
         /// </summary>
-        /// <value>The id of the worktype.</value>
+        /// <value>The Worktype ID.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

@@ -121,9 +121,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Low
         }
         /// <summary>
-        /// The creation status of the Case
+        /// The creation status of the Case.
         /// </summary>
-        /// <value>The creation status of the Case</value>
+        /// <value>The creation status of the Case.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum CreationStatusEnum
         {
@@ -172,9 +172,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public PriorityEnum? Priority { get; set; }
         /// <summary>
-        /// The creation status of the Case
+        /// The creation status of the Case.
         /// </summary>
-        /// <value>The creation status of the Case</value>
+        /// <value>The creation status of the Case.</value>
         [DataMember(Name="creationStatus", EmitDefaultValue=false)]
         public CreationStatusEnum? CreationStatus { get; set; }
         /// <summary>
@@ -184,7 +184,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Version">The version of the Case..</param>
         /// <param name="Reference">The reference identifier of the Case..</param>
-        /// <param name="Caseplan">The Caseplan the case was created from..</param>
+        /// <param name="Caseplan">The Caseplan the Case was created from..</param>
         /// <param name="Summary">Overview information for the Case..</param>
         /// <param name="Owner">The owner of the Case..</param>
         /// <param name="Status">The status of the Case..</param>
@@ -194,10 +194,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateClosed">The completion time of the Case. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateCreated">The date the Case was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">The date the Case was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ModifiedBy">The id of the User who modified the Case..</param>
+        /// <param name="ModifiedBy">The ID of the User who modified the Case..</param>
         /// <param name="ExternalContact">The External Contact associated with the Case..</param>
         /// <param name="CustomerIntent">The customer intent for the Case..</param>
-        /// <param name="CreationStatus">The creation status of the Case.</param>
+        /// <param name="CreationStatus">The creation status of the Case..</param>
         /// <param name="TtlSeconds">The time-to-live in seconds for the lifetime of the Case..</param>
         public Case(string Name = null, StarrableDivision Division = null, int? Version = null, string Reference = null, CaseplanReference Caseplan = null, string Summary = null, UserReference Owner = null, StatusEnum? Status = null, PriorityEnum? Priority = null, DateTime? DateDue = null, DateTime? DateStarted = null, DateTime? DateClosed = null, DateTime? DateCreated = null, DateTime? DateModified = null, UserReference ModifiedBy = null, CaseExternalContactReference ExternalContact = null, CustomerIntentReference CustomerIntent = null, CreationStatusEnum? CreationStatus = null, int? TtlSeconds = null)
         {
@@ -271,9 +271,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The Caseplan the case was created from.
+        /// The Caseplan the Case was created from.
         /// </summary>
-        /// <value>The Caseplan the case was created from.</value>
+        /// <value>The Caseplan the Case was created from.</value>
         [DataMember(Name="caseplan", EmitDefaultValue=false)]
         public CaseplanReference Caseplan { get; set; }
 
@@ -347,9 +347,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The id of the User who modified the Case.
+        /// The ID of the User who modified the Case.
         /// </summary>
-        /// <value>The id of the User who modified the Case.</value>
+        /// <value>The ID of the User who modified the Case.</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public UserReference ModifiedBy { get; set; }
 

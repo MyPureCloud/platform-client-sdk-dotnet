@@ -136,6 +136,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteRoutingEmailOutboundDomainWithHttpInfo (string domainId);
 
         /// <summary>
+        /// Delete an email setting. Removes the email setting and its associated settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns></returns>
+        
+        void DeleteRoutingEmailSettingEmailSettingId (string emailSettingId);
+
+        /// <summary>
+        /// Delete an email setting. Removes the email setting and its associated settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteRoutingEmailSettingEmailSettingIdWithHttpInfo (string emailSettingId);
+
+        /// <summary>
         /// Delete a routing language
         /// </summary>
         /// <remarks>
@@ -1096,6 +1120,56 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null, string expand = null);
 
         /// <summary>
+        /// Get a paged list of email routing settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>EmailSettingEntityListing</returns>
+        
+        EmailSettingEntityListing GetRoutingEmailSetting (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a paged list of email routing settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of EmailSettingEntityListing</returns>
+        
+        ApiResponse<EmailSettingEntityListing> GetRoutingEmailSettingWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get email setting. Returns the specified email setting that defines settings for email
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>EmailSetting</returns>
+        
+        EmailSetting GetRoutingEmailSettingEmailSettingId (string emailSettingId);
+
+        /// <summary>
+        /// Get email setting. Returns the specified email setting that defines settings for email
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>ApiResponse of EmailSetting</returns>
+        
+        ApiResponse<EmailSetting> GetRoutingEmailSettingEmailSettingIdWithHttpInfo (string emailSettingId);
+
+        /// <summary>
         /// Get email setup
         /// </summary>
         /// <remarks>
@@ -1778,7 +1852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">Queue ID(s) (optional)</param>
-        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s). Including &#39;*&#39; will query for all divisions (optional)</param>
         /// <returns>QueueEntityListing</returns>
         
         QueueEntityListing GetRoutingQueuesDivisionviews (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
@@ -1796,7 +1870,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">Queue ID(s) (optional)</param>
-        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s). Including &#39;*&#39; will query for all divisions (optional)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
         
         ApiResponse<QueueEntityListing> GetRoutingQueuesDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
@@ -2146,7 +2220,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SkillGroupEntityListing> GetRoutingSkillgroupsWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null);
 
         /// <summary>
-        /// Get the list of routing skills.
+        /// Get the list of routing skills. View permission enforcement only applies to skills assigned to a division.
         /// </summary>
         /// <remarks>
         /// 
@@ -2161,7 +2235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         SkillEntityListing GetRoutingSkills (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null);
 
         /// <summary>
-        /// Get the list of routing skills.
+        /// Get the list of routing skills. View permission enforcement only applies to skills assigned to a division.
         /// </summary>
         /// <remarks>
         /// 
@@ -2848,6 +2922,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of OutboundDomain</returns>
         
         ApiResponse<OutboundDomain> PatchRoutingEmailOutboundDomainWithHttpInfo (string domainId, OutboundDomainPatchRequest body);
+
+        /// <summary>
+        /// Update an email setting. Modifies the settings for email setting
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>EmailSetting</returns>
+        
+        EmailSetting PatchRoutingEmailSettingEmailSettingId (string emailSettingId, EmailSetting body);
+
+        /// <summary>
+        /// Update an email setting. Modifies the settings for email setting
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>ApiResponse of EmailSetting</returns>
+        
+        ApiResponse<EmailSetting> PatchRoutingEmailSettingEmailSettingIdWithHttpInfo (string emailSettingId, EmailSetting body);
 
         /// <summary>
         /// Update single predictor.
@@ -3596,6 +3696,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
         
         ApiResponse<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo (OutboundDomainCreateRequest body);
+
+        /// <summary>
+        /// Create a new email setting. Used to define various settings, that can then be associated with email domains
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>EmailSetting</returns>
+        
+        EmailSetting PostRoutingEmailSetting (EmailSetting body);
+
+        /// <summary>
+        /// Create a new email setting. Used to define various settings, that can then be associated with email domains
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>ApiResponse of EmailSetting</returns>
+        
+        ApiResponse<EmailSetting> PostRoutingEmailSettingWithHttpInfo (EmailSetting body);
 
         /// <summary>
         /// Create Language
@@ -4636,6 +4760,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId);
 
         /// <summary>
+        /// Delete an email setting. Removes the email setting and its associated settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteRoutingEmailSettingEmailSettingIdAsync (string emailSettingId);
+
+        /// <summary>
+        /// Delete an email setting. Removes the email setting and its associated settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailSettingEmailSettingIdAsyncWithHttpInfo (string emailSettingId);
+
+        /// <summary>
         /// Delete a routing language
         /// </summary>
         /// <remarks>
@@ -5596,6 +5744,56 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<OutboundDomainEntityListing>> GetRoutingEmailOutboundDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null, string expand = null);
 
         /// <summary>
+        /// Get a paged list of email routing settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of EmailSettingEntityListing</returns>
+        
+        System.Threading.Tasks.Task<EmailSettingEntityListing> GetRoutingEmailSettingAsync (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a paged list of email routing settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (EmailSettingEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<EmailSettingEntityListing>> GetRoutingEmailSettingAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get email setting. Returns the specified email setting that defines settings for email
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>Task of EmailSetting</returns>
+        
+        System.Threading.Tasks.Task<EmailSetting> GetRoutingEmailSettingEmailSettingIdAsync (string emailSettingId);
+
+        /// <summary>
+        /// Get email setting. Returns the specified email setting that defines settings for email
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>Task of ApiResponse (EmailSetting)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<EmailSetting>> GetRoutingEmailSettingEmailSettingIdAsyncWithHttpInfo (string emailSettingId);
+
+        /// <summary>
         /// Get email setup
         /// </summary>
         /// <remarks>
@@ -6278,7 +6476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">Queue ID(s) (optional)</param>
-        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s). Including &#39;*&#39; will query for all divisions (optional)</param>
         /// <returns>Task of QueueEntityListing</returns>
         
         System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
@@ -6296,7 +6494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">Queue ID(s) (optional)</param>
-        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s). Including &#39;*&#39; will query for all divisions (optional)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
@@ -6646,7 +6844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SkillGroupEntityListing>> GetRoutingSkillgroupsAsyncWithHttpInfo (int? pageSize = null, string name = null, string after = null, string before = null);
 
         /// <summary>
-        /// Get the list of routing skills.
+        /// Get the list of routing skills. View permission enforcement only applies to skills assigned to a division.
         /// </summary>
         /// <remarks>
         /// 
@@ -6661,7 +6859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<SkillEntityListing> GetRoutingSkillsAsync (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null);
 
         /// <summary>
-        /// Get the list of routing skills.
+        /// Get the list of routing skills. View permission enforcement only applies to skills assigned to a division.
         /// </summary>
         /// <remarks>
         /// 
@@ -7348,6 +7546,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (OutboundDomain)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> PatchRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId, OutboundDomainPatchRequest body);
+
+        /// <summary>
+        /// Update an email setting. Modifies the settings for email setting
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>Task of EmailSetting</returns>
+        
+        System.Threading.Tasks.Task<EmailSetting> PatchRoutingEmailSettingEmailSettingIdAsync (string emailSettingId, EmailSetting body);
+
+        /// <summary>
+        /// Update an email setting. Modifies the settings for email setting
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>Task of ApiResponse (EmailSetting)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<EmailSetting>> PatchRoutingEmailSettingEmailSettingIdAsyncWithHttpInfo (string emailSettingId, EmailSetting body);
 
         /// <summary>
         /// Update single predictor.
@@ -8096,6 +8320,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo (OutboundDomainCreateRequest body);
+
+        /// <summary>
+        /// Create a new email setting. Used to define various settings, that can then be associated with email domains
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>Task of EmailSetting</returns>
+        
+        System.Threading.Tasks.Task<EmailSetting> PostRoutingEmailSettingAsync (EmailSetting body);
+
+        /// <summary>
+        /// Create a new email setting. Used to define various settings, that can then be associated with email domains
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>Task of ApiResponse (EmailSetting)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<EmailSetting>> PostRoutingEmailSettingAsyncWithHttpInfo (EmailSetting body);
 
         /// <summary>
         /// Create Language
@@ -10108,6 +10356,209 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteRoutingEmailOutboundDomain: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingEmailOutboundDomain: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete an email setting. Removes the email setting and its associated settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns></returns>
+        
+        public void DeleteRoutingEmailSettingEmailSettingId (string emailSettingId)
+        {
+             DeleteRoutingEmailSettingEmailSettingIdWithHttpInfo(emailSettingId);
+        }
+
+        /// <summary>
+        /// Delete an email setting. Removes the email setting and its associated settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteRoutingEmailSettingEmailSettingIdWithHttpInfo (string emailSettingId)
+        { 
+            // verify the required parameter 'emailSettingId' is set
+            if (emailSettingId == null)
+                throw new ApiException(400, "Missing required parameter 'emailSettingId' when calling RoutingApi->DeleteRoutingEmailSettingEmailSettingId");
+
+            var localVarPath = "/api/v2/routing/email/setting/{emailSettingId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emailSettingId != null) localVarPathParams.Add("emailSettingId", this.Configuration.ApiClient.ParameterToString(emailSettingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingEmailSettingEmailSettingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteRoutingEmailSettingEmailSettingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingEmailSettingEmailSettingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an email setting. Removes the email setting and its associated settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteRoutingEmailSettingEmailSettingIdAsync (string emailSettingId)
+        {
+             await DeleteRoutingEmailSettingEmailSettingIdAsyncWithHttpInfo(emailSettingId);
+
+        }
+
+        /// <summary>
+        /// Delete an email setting. Removes the email setting and its associated settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailSettingEmailSettingIdAsyncWithHttpInfo (string emailSettingId)
+        { 
+            // verify the required parameter 'emailSettingId' is set
+            if (emailSettingId == null)
+                throw new ApiException(400, "Missing required parameter 'emailSettingId' when calling RoutingApi->DeleteRoutingEmailSettingEmailSettingId");
+            
+
+            var localVarPath = "/api/v2/routing/email/setting/{emailSettingId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emailSettingId != null) localVarPathParams.Add("emailSettingId", this.Configuration.ApiClient.ParameterToString(emailSettingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingEmailSettingEmailSettingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteRoutingEmailSettingEmailSettingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingEmailSettingEmailSettingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -17995,6 +18446,415 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a paged list of email routing settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>EmailSettingEntityListing</returns>
+        
+        public EmailSettingEntityListing GetRoutingEmailSetting (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<EmailSettingEntityListing> localVarResponse = GetRoutingEmailSettingWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a paged list of email routing settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of EmailSettingEntityListing</returns>
+        
+        public ApiResponse< EmailSettingEntityListing > GetRoutingEmailSettingWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/email/setting";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingEmailSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailSetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailSettingEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (EmailSettingEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailSettingEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a paged list of email routing settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of EmailSettingEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<EmailSettingEntityListing> GetRoutingEmailSettingAsync (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<EmailSettingEntityListing> localVarResponse = await GetRoutingEmailSettingAsyncWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a paged list of email routing settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (EmailSettingEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<EmailSettingEntityListing>> GetRoutingEmailSettingAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/email/setting";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingEmailSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailSetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailSettingEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (EmailSettingEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailSettingEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get email setting. Returns the specified email setting that defines settings for email 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>EmailSetting</returns>
+        
+        public EmailSetting GetRoutingEmailSettingEmailSettingId (string emailSettingId)
+        {
+             ApiResponse<EmailSetting> localVarResponse = GetRoutingEmailSettingEmailSettingIdWithHttpInfo(emailSettingId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get email setting. Returns the specified email setting that defines settings for email 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>ApiResponse of EmailSetting</returns>
+        
+        public ApiResponse< EmailSetting > GetRoutingEmailSettingEmailSettingIdWithHttpInfo (string emailSettingId)
+        { 
+            // verify the required parameter 'emailSettingId' is set
+            if (emailSettingId == null)
+                throw new ApiException(400, "Missing required parameter 'emailSettingId' when calling RoutingApi->GetRoutingEmailSettingEmailSettingId");
+
+            var localVarPath = "/api/v2/routing/email/setting/{emailSettingId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emailSettingId != null) localVarPathParams.Add("emailSettingId", this.Configuration.ApiClient.ParameterToString(emailSettingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailSettingEmailSettingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingEmailSettingEmailSettingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailSettingEmailSettingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailSetting>(localVarStatusCode,
+                localVarHeaders,
+                (EmailSetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailSetting)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get email setting. Returns the specified email setting that defines settings for email 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>Task of EmailSetting</returns>
+        
+        public async System.Threading.Tasks.Task<EmailSetting> GetRoutingEmailSettingEmailSettingIdAsync (string emailSettingId)
+        {
+             ApiResponse<EmailSetting> localVarResponse = await GetRoutingEmailSettingEmailSettingIdAsyncWithHttpInfo(emailSettingId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get email setting. Returns the specified email setting that defines settings for email 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <returns>Task of ApiResponse (EmailSetting)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<EmailSetting>> GetRoutingEmailSettingEmailSettingIdAsyncWithHttpInfo (string emailSettingId)
+        { 
+            // verify the required parameter 'emailSettingId' is set
+            if (emailSettingId == null)
+                throw new ApiException(400, "Missing required parameter 'emailSettingId' when calling RoutingApi->GetRoutingEmailSettingEmailSettingId");
+            
+
+            var localVarPath = "/api/v2/routing/email/setting/{emailSettingId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emailSettingId != null) localVarPathParams.Add("emailSettingId", this.Configuration.ApiClient.ParameterToString(emailSettingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailSettingEmailSettingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetRoutingEmailSettingEmailSettingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailSettingEmailSettingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailSetting>(localVarStatusCode,
+                localVarHeaders,
+                (EmailSetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailSetting)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get email setup 
         /// 
         /// </summary>
@@ -23042,7 +23902,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">Queue ID(s) (optional)</param>
-        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s). Including &#39;*&#39; will query for all divisions (optional)</param>
         /// <returns>QueueEntityListing</returns>
         
         public QueueEntityListing GetRoutingQueuesDivisionviews (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
@@ -23062,7 +23922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">Queue ID(s) (optional)</param>
-        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s). Including &#39;*&#39; will query for all divisions (optional)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
         
         public ApiResponse< QueueEntityListing > GetRoutingQueuesDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
@@ -23158,7 +24018,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">Queue ID(s) (optional)</param>
-        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s). Including &#39;*&#39; will query for all divisions (optional)</param>
         /// <returns>Task of QueueEntityListing</returns>
         
         public async System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
@@ -23179,7 +24039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="id">Queue ID(s) (optional)</param>
-        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s). Including &#39;*&#39; will query for all divisions (optional)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
@@ -25978,7 +26838,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of routing skills. 
+        /// Get the list of routing skills. View permission enforcement only applies to skills assigned to a division. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -25995,7 +26855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of routing skills. 
+        /// Get the list of routing skills. View permission enforcement only applies to skills assigned to a division. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -26085,7 +26945,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of routing skills. 
+        /// Get the list of routing skills. View permission enforcement only applies to skills assigned to a division. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -26103,7 +26963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of routing skills. 
+        /// Get the list of routing skills. View permission enforcement only applies to skills assigned to a division. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -31434,6 +32294,234 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<OutboundDomain>(localVarStatusCode,
                 localVarHeaders,
                 (OutboundDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundDomain)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update an email setting. Modifies the settings for email setting 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>EmailSetting</returns>
+        
+        public EmailSetting PatchRoutingEmailSettingEmailSettingId (string emailSettingId, EmailSetting body)
+        {
+             ApiResponse<EmailSetting> localVarResponse = PatchRoutingEmailSettingEmailSettingIdWithHttpInfo(emailSettingId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an email setting. Modifies the settings for email setting 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>ApiResponse of EmailSetting</returns>
+        
+        public ApiResponse< EmailSetting > PatchRoutingEmailSettingEmailSettingIdWithHttpInfo (string emailSettingId, EmailSetting body)
+        { 
+            // verify the required parameter 'emailSettingId' is set
+            if (emailSettingId == null)
+                throw new ApiException(400, "Missing required parameter 'emailSettingId' when calling RoutingApi->PatchRoutingEmailSettingEmailSettingId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingEmailSettingEmailSettingId");
+
+            var localVarPath = "/api/v2/routing/email/setting/{emailSettingId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emailSettingId != null) localVarPathParams.Add("emailSettingId", this.Configuration.ApiClient.ParameterToString(emailSettingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailSettingEmailSettingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchRoutingEmailSettingEmailSettingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailSettingEmailSettingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailSetting>(localVarStatusCode,
+                localVarHeaders,
+                (EmailSetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailSetting)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an email setting. Modifies the settings for email setting 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>Task of EmailSetting</returns>
+        
+        public async System.Threading.Tasks.Task<EmailSetting> PatchRoutingEmailSettingEmailSettingIdAsync (string emailSettingId, EmailSetting body)
+        {
+             ApiResponse<EmailSetting> localVarResponse = await PatchRoutingEmailSettingEmailSettingIdAsyncWithHttpInfo(emailSettingId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an email setting. Modifies the settings for email setting 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emailSettingId">Email Setting ID</param>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>Task of ApiResponse (EmailSetting)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<EmailSetting>> PatchRoutingEmailSettingEmailSettingIdAsyncWithHttpInfo (string emailSettingId, EmailSetting body)
+        { 
+            // verify the required parameter 'emailSettingId' is set
+            if (emailSettingId == null)
+                throw new ApiException(400, "Missing required parameter 'emailSettingId' when calling RoutingApi->PatchRoutingEmailSettingEmailSettingId");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingEmailSettingEmailSettingId");
+            
+
+            var localVarPath = "/api/v2/routing/email/setting/{emailSettingId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emailSettingId != null) localVarPathParams.Add("emailSettingId", this.Configuration.ApiClient.ParameterToString(emailSettingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailSettingEmailSettingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchRoutingEmailSettingEmailSettingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailSettingEmailSettingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailSetting>(localVarStatusCode,
+                localVarHeaders,
+                (EmailSetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailSetting)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -37909,6 +38997,221 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<EmailOutboundDomainResult>(localVarStatusCode,
                 localVarHeaders,
                 (EmailOutboundDomainResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailOutboundDomainResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a new email setting. Used to define various settings, that can then be associated with email domains 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>EmailSetting</returns>
+        
+        public EmailSetting PostRoutingEmailSetting (EmailSetting body)
+        {
+             ApiResponse<EmailSetting> localVarResponse = PostRoutingEmailSettingWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new email setting. Used to define various settings, that can then be associated with email domains 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>ApiResponse of EmailSetting</returns>
+        
+        public ApiResponse< EmailSetting > PostRoutingEmailSettingWithHttpInfo (EmailSetting body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingEmailSetting");
+
+            var localVarPath = "/api/v2/routing/email/setting";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostRoutingEmailSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailSetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailSetting>(localVarStatusCode,
+                localVarHeaders,
+                (EmailSetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailSetting)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a new email setting. Used to define various settings, that can then be associated with email domains 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>Task of EmailSetting</returns>
+        
+        public async System.Threading.Tasks.Task<EmailSetting> PostRoutingEmailSettingAsync (EmailSetting body)
+        {
+             ApiResponse<EmailSetting> localVarResponse = await PostRoutingEmailSettingAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a new email setting. Used to define various settings, that can then be associated with email domains 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">EmailSetting</param>
+        /// <returns>Task of ApiResponse (EmailSetting)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<EmailSetting>> PostRoutingEmailSettingAsyncWithHttpInfo (EmailSetting body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingEmailSetting");
+            
+
+            var localVarPath = "/api/v2/routing/email/setting";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostRoutingEmailSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailSetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailSetting>(localVarStatusCode,
+                localVarHeaders,
+                (EmailSetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailSetting)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

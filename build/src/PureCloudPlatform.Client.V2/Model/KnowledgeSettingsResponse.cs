@@ -27,10 +27,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Sources">Knowledge source information searched upon..</param>
         /// <param name="GenerationSetting">Settings for answer generation..</param>
         /// <param name="Stateful">Indicates if stateful search and generation is enabled for the knowledge setting..</param>
+        /// <param name="Filter">Composite tag filter of search results..</param>
         /// <param name="DateCreated">Knowledge setting created date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Knowledge setting last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ModifiedBy">The user who modified the knowledge setting..</param>
-        public KnowledgeSettingsResponse(string Id = null, string Name = null, string Description = null, List<V3SourceRef> Sources = null, KnowledgeGenerationSetting GenerationSetting = null, bool? Stateful = null, DateTime? DateCreated = null, DateTime? DateModified = null, UserReference ModifiedBy = null)
+        public KnowledgeSettingsResponse(string Id = null, string Name = null, string Description = null, List<V3SourceRef> Sources = null, KnowledgeGenerationSetting GenerationSetting = null, bool? Stateful = null, V3SourceTagFilter Filter = null, DateTime? DateCreated = null, DateTime? DateModified = null, UserReference ModifiedBy = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -38,6 +39,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Sources = Sources;
             this.GenerationSetting = GenerationSetting;
             this.Stateful = Stateful;
+            this.Filter = Filter;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.ModifiedBy = ModifiedBy;
@@ -101,6 +103,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Composite tag filter of search results.
+        /// </summary>
+        /// <value>Composite tag filter of search results.</value>
+        [DataMember(Name="filter", EmitDefaultValue=false)]
+        public V3SourceTagFilter Filter { get; set; }
+
+
+
+        /// <summary>
         /// Knowledge setting created date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Knowledge setting created date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -150,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Sources: ").Append(Sources).Append("\n");
             sb.Append("  GenerationSetting: ").Append(GenerationSetting).Append("\n");
             sb.Append("  Stateful: ").Append(Stateful).Append("\n");
+            sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
@@ -225,6 +237,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Stateful.Equals(other.Stateful)
                 ) &&
                 (
+                    this.Filter == other.Filter ||
+                    this.Filter != null &&
+                    this.Filter.Equals(other.Filter)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -274,6 +291,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Stateful != null)
                     hash = hash * 59 + this.Stateful.GetHashCode();
+
+                if (this.Filter != null)
+                    hash = hash * 59 + this.Filter.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

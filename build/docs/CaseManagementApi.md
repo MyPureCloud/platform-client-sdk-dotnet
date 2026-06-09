@@ -8,9 +8,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteCasemanagementCase**](#DeleteCasemanagementCase) | **Delete** /api/v2/casemanagement/cases/{caseId} | Delete a Case. |
 | [**DeleteCasemanagementCaseplan**](#DeleteCasemanagementCaseplan) | **Delete** /api/v2/casemanagement/caseplans/{caseplanId} | Delete a Caseplan. |
+| [**DeleteCasemanagementCaseplanDataschema**](#DeleteCasemanagementCaseplanDataschema) | **Delete** /api/v2/casemanagement/caseplans/{caseplanId}/dataschemas/{schemaKeyName} | Remove a data schema from a draft Caseplan. |
 | [**GetCasemanagementCase**](#GetCasemanagementCase) | **Get** /api/v2/casemanagement/cases/{caseId} | Get a Case. |
 | [**GetCasemanagementCaseAssociation**](#GetCasemanagementCaseAssociation) | **Get** /api/v2/casemanagement/cases/{caseId}/associations/{associationId} | Get a Case Association. |
-| [**GetCasemanagementCaseAssociations**](#GetCasemanagementCaseAssociations) | **Get** /api/v2/casemanagement/cases/{caseId}/associations | Get a list of case associations for a provided case. |
+| [**GetCasemanagementCaseAssociations**](#GetCasemanagementCaseAssociations) | **Get** /api/v2/casemanagement/cases/{caseId}/associations | Get a list of Case associations for the Case. |
 | [**GetCasemanagementCaseStage**](#GetCasemanagementCaseStage) | **Get** /api/v2/casemanagement/cases/{caseId}/stages/{stageId} | Get a Stage. |
 | [**GetCasemanagementCaseStageStep**](#GetCasemanagementCaseStageStep) | **Get** /api/v2/casemanagement/cases/{caseId}/stages/{stageId}/steps/{stepId} | Get a Step. |
 | [**GetCasemanagementCaseStageSteps**](#GetCasemanagementCaseStageSteps) | **Get** /api/v2/casemanagement/cases/{caseId}/stages/{stageId}/steps | Get a list of Steps. |
@@ -18,29 +19,31 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetCasemanagementCaseTerminateJob**](#GetCasemanagementCaseTerminateJob) | **Get** /api/v2/casemanagement/cases/{caseId}/terminate/jobs/{jobId} | Get a Terminate Job for a Case. |
 | [**GetCasemanagementCaseplan**](#GetCasemanagementCaseplan) | **Get** /api/v2/casemanagement/caseplans/{caseplanId} | Get a Caseplan. |
 | [**GetCasemanagementCaseplanVersion**](#GetCasemanagementCaseplanVersion) | **Get** /api/v2/casemanagement/caseplans/{caseplanId}/versions/{versionId} | Get a Caseplan version. |
-| [**GetCasemanagementCaseplanVersionDataschemas**](#GetCasemanagementCaseplanVersionDataschemas) | **Get** /api/v2/casemanagement/caseplans/{caseplanId}/versions/{versionId}/dataschemas | Get the dataSchemas for a caseplan version. |
+| [**GetCasemanagementCaseplanVersionDataschemas**](#GetCasemanagementCaseplanVersionDataschemas) | **Get** /api/v2/casemanagement/caseplans/{caseplanId}/versions/{versionId}/dataschemas | Get the data schemas for a Caseplan version. |
 | [**GetCasemanagementCaseplanVersionIntakesettings**](#GetCasemanagementCaseplanVersionIntakesettings) | **Get** /api/v2/casemanagement/caseplans/{caseplanId}/versions/{versionId}/intakesettings | Get the intake settings for a Caseplan version. |
 | [**GetCasemanagementCaseplanVersionStageplan**](#GetCasemanagementCaseplanVersionStageplan) | **Get** /api/v2/casemanagement/caseplans/{caseplanId}/versions/{versionId}/stageplans/{stageplanId} | Get a Stageplan. |
 | [**GetCasemanagementCaseplanVersionStageplanStepplan**](#GetCasemanagementCaseplanVersionStageplanStepplan) | **Get** /api/v2/casemanagement/caseplans/{caseplanId}/versions/{versionId}/stageplans/{stageplanId}/stepplans/{stepplanId} | Get a Stepplan. |
 | [**GetCasemanagementCaseplanVersionStageplanStepplans**](#GetCasemanagementCaseplanVersionStageplanStepplans) | **Get** /api/v2/casemanagement/caseplans/{caseplanId}/versions/{versionId}/stageplans/{stageplanId}/stepplans | Get a list of Stepplans. |
 | [**GetCasemanagementCaseplanVersionStageplans**](#GetCasemanagementCaseplanVersionStageplans) | **Get** /api/v2/casemanagement/caseplans/{caseplanId}/versions/{versionId}/stageplans | Get a list of Stageplans. |
 | [**GetCasemanagementCaseplans**](#GetCasemanagementCaseplans) | **Get** /api/v2/casemanagement/caseplans | Get a list of Caseplans. |
-| [**GetCasemanagementCasesExternalcontact**](#GetCasemanagementCasesExternalcontact) | **Get** /api/v2/casemanagement/cases/externalcontacts/{externalContactId} | Get a list of cases for provided external contact id. |
+| [**GetCasemanagementCasesExternalcontact**](#GetCasemanagementCasesExternalcontact) | **Get** /api/v2/casemanagement/cases/externalcontacts/{externalContactId} | Get a list of Cases for an External Contact. |
 | [**GetCasemanagementCasesReference**](#GetCasemanagementCasesReference) | **Get** /api/v2/casemanagement/cases/references/{referenceId} | Get a Case by reference. |
-| [**PatchCasemanagementCaseDatedue**](#PatchCasemanagementCaseDatedue) | **Patch** /api/v2/casemanagement/cases/{caseId}/datedue | Update date due of a Case. |
+| [**PatchCasemanagementCaseDatedue**](#PatchCasemanagementCaseDatedue) | **Patch** /api/v2/casemanagement/cases/{caseId}/datedue | Update the due date of a Case. |
 | [**PatchCasemanagementCasePriority**](#PatchCasemanagementCasePriority) | **Patch** /api/v2/casemanagement/cases/{caseId}/priority | Update priority of a Case. |
 | [**PatchCasemanagementCaseSummary**](#PatchCasemanagementCaseSummary) | **Patch** /api/v2/casemanagement/cases/{caseId}/summary | Update summary of a Case. |
 | [**PatchCasemanagementCaseplan**](#PatchCasemanagementCaseplan) | **Patch** /api/v2/casemanagement/caseplans/{caseplanId} | Update the attributes of a Caseplan. |
 | [**PatchCasemanagementCaseplanStageplan**](#PatchCasemanagementCaseplanStageplan) | **Patch** /api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId} | Update the attributes of a Stageplan. |
 | [**PatchCasemanagementCaseplanStageplanStepplan**](#PatchCasemanagementCaseplanStageplanStepplan) | **Patch** /api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId}/stepplans/{stepplanId} | Update the attributes of a Stepplan. |
-| [**PostCasemanagementCaseAssociations**](#PostCasemanagementCaseAssociations) | **Post** /api/v2/casemanagement/cases/{caseId}/associations | Create a case association. |
+| [**PostCasemanagementCaseAssociations**](#PostCasemanagementCaseAssociations) | **Post** /api/v2/casemanagement/cases/{caseId}/associations | Create a Case association. |
 | [**PostCasemanagementCaseTerminateJobs**](#PostCasemanagementCaseTerminateJobs) | **Post** /api/v2/casemanagement/cases/{caseId}/terminate/jobs | Create a Terminate Job for a Case. |
+| [**PostCasemanagementCaseplanDataschemas**](#PostCasemanagementCaseplanDataschemas) | **Post** /api/v2/casemanagement/caseplans/{caseplanId}/dataschemas | Add a data schema to a draft Caseplan. |
 | [**PostCasemanagementCaseplanPublish**](#PostCasemanagementCaseplanPublish) | **Post** /api/v2/casemanagement/caseplans/{caseplanId}/publish | Publish Caseplan. |
 | [**PostCasemanagementCaseplanVersions**](#PostCasemanagementCaseplanVersions) | **Post** /api/v2/casemanagement/caseplans/{caseplanId}/versions | Create Caseplan version. |
 | [**PostCasemanagementCaseplans**](#PostCasemanagementCaseplans) | **Post** /api/v2/casemanagement/caseplans | Create a Caseplan. |
-| [**PostCasemanagementCaseplansQuery**](#PostCasemanagementCaseplansQuery) | **Post** /api/v2/casemanagement/caseplans/query | Query for caseplans |
+| [**PostCasemanagementCaseplansQuery**](#PostCasemanagementCaseplansQuery) | **Post** /api/v2/casemanagement/caseplans/query | Query for Caseplans. |
 | [**PostCasemanagementCases**](#PostCasemanagementCases) | **Post** /api/v2/casemanagement/cases | Create a Case. |
-| [**PostCasemanagementCasesAssociationsQuery**](#PostCasemanagementCasesAssociationsQuery) | **Post** /api/v2/casemanagement/cases/associations/query | Query for case associations |
+| [**PostCasemanagementCasesAssociationsQuery**](#PostCasemanagementCasesAssociationsQuery) | **Post** /api/v2/casemanagement/cases/associations/query | Query for Case associations by interaction. |
+| [**PutCasemanagementCaseplanDataschema**](#PutCasemanagementCaseplanDataschema) | **Put** /api/v2/casemanagement/caseplans/{caseplanId}/dataschemas/{schemaKeyName} | Update a data schema on a draft Caseplan. |
 | [**PutCasemanagementCaseplanIntakesettings**](#PutCasemanagementCaseplanIntakesettings) | **Put** /api/v2/casemanagement/caseplans/{caseplanId}/intakesettings | Update the intake settings for a Caseplan. |
 
 
@@ -51,8 +54,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 Delete a Case.
-
-DeleteCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -80,7 +81,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID
+            var caseId = caseId_example;  // string | Case identifier.
 
             try
             { 
@@ -102,7 +103,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID |  |
+| **caseId** | **string**| Case identifier. |  |
 
 ### Return type
 
@@ -115,8 +116,6 @@ namespace Example
 
 
 Delete a Caseplan.
-
-DeleteCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -144,7 +143,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
 
             try
             { 
@@ -166,7 +165,71 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
+| **caseplanId** | **string**| Caseplan identifier. |  |
+
+### Return type
+
+**Object**
+
+
+## DeleteCasemanagementCaseplanDataschema
+
+> **Object** DeleteCasemanagementCaseplanDataschema (string caseplanId, string schemaKeyName)
+
+
+Remove a data schema from a draft Caseplan.
+
+Requires ALL permissions: 
+
+* caseManagement:caseplanDataSchemas:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteCasemanagementCaseplanDataschemaExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var schemaKeyName = schemaKeyName_example;  // string | Schema key (for example \"default\").
+
+            try
+            { 
+                // Remove a data schema from a draft Caseplan.
+                Object result = apiInstance.DeleteCasemanagementCaseplanDataschema(caseplanId, schemaKeyName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.DeleteCasemanagementCaseplanDataschema: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **schemaKeyName** | **string**| Schema key (for example \&quot;default\&quot;). |  |
 
 ### Return type
 
@@ -179,8 +242,6 @@ namespace Example
 
 
 Get a Case.
-
-GetCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -208,8 +269,8 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID
-            var expands = expands_example;  // string | Which fields to expand. (optional) 
+            var caseId = caseId_example;  // string | Case identifier.
+            var expands = expands_example;  // string | Fields to expand. (optional) 
 
             try
             { 
@@ -231,8 +292,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID |  |
-| **expands** | **string**| Which fields to expand. | [optional] <br />**Values**: caseplan |
+| **caseId** | **string**| Case identifier. |  |
+| **expands** | **string**| Fields to expand. | [optional] <br />**Values**: caseplan |
 
 ### Return type
 
@@ -245,8 +306,6 @@ namespace Example
 
 
 Get a Case Association.
-
-GetCasemanagementCaseAssociation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -274,8 +333,8 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID
-            var associationId = associationId_example;  // string | Case Association ID
+            var caseId = caseId_example;  // string | Case identifier.
+            var associationId = associationId_example;  // string | Case association identifier.
 
             try
             { 
@@ -297,8 +356,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID |  |
-| **associationId** | **string**| Case Association ID |  |
+| **caseId** | **string**| Case identifier. |  |
+| **associationId** | **string**| Case association identifier. |  |
 
 ### Return type
 
@@ -310,9 +369,7 @@ namespace Example
 > [**CaseAssociationListing**](CaseAssociationListing) GetCasemanagementCaseAssociations (string caseId, string before = null, string after = null, string pageSize = null)
 
 
-Get a list of case associations for a provided case.
-
-GetCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+Get a list of Case associations for the Case.
 
 Requires ANY permissions: 
 
@@ -340,14 +397,14 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID.
+            var caseId = caseId_example;  // string | Case identifier.
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
 
             try
             { 
-                // Get a list of case associations for a provided case.
+                // Get a list of Case associations for the Case.
                 CaseAssociationListing result = apiInstance.GetCasemanagementCaseAssociations(caseId, before, after, pageSize);
                 Debug.WriteLine(result);
             }
@@ -365,7 +422,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID. |  |
+| **caseId** | **string**| Case identifier. |  |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
@@ -381,8 +438,6 @@ namespace Example
 
 
 Get a Stage.
-
-GetCasemanagementCaseStage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -410,8 +465,8 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID
-            var stageId = stageId_example;  // string | Stage ID
+            var caseId = caseId_example;  // string | Case identifier.
+            var stageId = stageId_example;  // string | Stage identifier.
 
             try
             { 
@@ -433,8 +488,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID |  |
-| **stageId** | **string**| Stage ID |  |
+| **caseId** | **string**| Case identifier. |  |
+| **stageId** | **string**| Stage identifier. |  |
 
 ### Return type
 
@@ -447,8 +502,6 @@ namespace Example
 
 
 Get a Step.
-
-GetCasemanagementCaseStageStep is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -476,9 +529,9 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID
-            var stageId = stageId_example;  // string | Stage ID
-            var stepId = stepId_example;  // string | Step ID
+            var caseId = caseId_example;  // string | Case identifier.
+            var stageId = stageId_example;  // string | Stage identifier.
+            var stepId = stepId_example;  // string | Step identifier.
 
             try
             { 
@@ -500,9 +553,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID |  |
-| **stageId** | **string**| Stage ID |  |
-| **stepId** | **string**| Step ID |  |
+| **caseId** | **string**| Case identifier. |  |
+| **stageId** | **string**| Stage identifier. |  |
+| **stepId** | **string**| Step identifier. |  |
 
 ### Return type
 
@@ -515,8 +568,6 @@ namespace Example
 
 
 Get a list of Steps.
-
-GetCasemanagementCaseStageSteps is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -544,8 +595,8 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID
-            var stageId = stageId_example;  // string | Stage ID
+            var caseId = caseId_example;  // string | Case identifier.
+            var stageId = stageId_example;  // string | Stage identifier.
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
@@ -570,8 +621,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID |  |
-| **stageId** | **string**| Stage ID |  |
+| **caseId** | **string**| Case identifier. |  |
+| **stageId** | **string**| Stage identifier. |  |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
@@ -587,8 +638,6 @@ namespace Example
 
 
 Get a list of Stages.
-
-GetCasemanagementCaseStages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -616,7 +665,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID
+            var caseId = caseId_example;  // string | Case identifier.
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
@@ -641,7 +690,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID |  |
+| **caseId** | **string**| Case identifier. |  |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
@@ -657,8 +706,6 @@ namespace Example
 
 
 Get a Terminate Job for a Case.
-
-GetCasemanagementCaseTerminateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -686,8 +733,8 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID
-            var jobId = jobId_example;  // string | Job ID
+            var caseId = caseId_example;  // string | Case identifier.
+            var jobId = jobId_example;  // string | Terminate Job identifier.
 
             try
             { 
@@ -709,8 +756,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID |  |
-| **jobId** | **string**| Job ID |  |
+| **caseId** | **string**| Case identifier. |  |
+| **jobId** | **string**| Terminate Job identifier. |  |
 
 ### Return type
 
@@ -723,8 +770,6 @@ namespace Example
 
 
 Get a Caseplan.
-
-GetCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -752,7 +797,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
 
             try
             { 
@@ -774,7 +819,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
+| **caseplanId** | **string**| Caseplan identifier. |  |
 
 ### Return type
 
@@ -787,8 +832,6 @@ namespace Example
 
 
 Get a Caseplan version.
-
-GetCasemanagementCaseplanVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -816,8 +859,8 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
-            var versionId = versionId_example;  // string | Version of the caseplan
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var versionId = versionId_example;  // string | Caseplan version identifier.
 
             try
             { 
@@ -839,8 +882,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
-| **versionId** | **string**| Version of the caseplan |  |
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **versionId** | **string**| Caseplan version identifier. |  |
 
 ### Return type
 
@@ -852,9 +895,7 @@ namespace Example
 > [**CaseplanDataSchemaListing**](CaseplanDataSchemaListing) GetCasemanagementCaseplanVersionDataschemas (string caseplanId, string versionId)
 
 
-Get the dataSchemas for a caseplan version.
-
-GetCasemanagementCaseplanVersionDataschemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+Get the data schemas for a Caseplan version.
 
 Requires ANY permissions: 
 
@@ -882,12 +923,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
-            var versionId = versionId_example;  // string | Version of the caseplan
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var versionId = versionId_example;  // string | Caseplan version identifier.
 
             try
             { 
-                // Get the dataSchemas for a caseplan version.
+                // Get the data schemas for a Caseplan version.
                 CaseplanDataSchemaListing result = apiInstance.GetCasemanagementCaseplanVersionDataschemas(caseplanId, versionId);
                 Debug.WriteLine(result);
             }
@@ -905,8 +946,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
-| **versionId** | **string**| Version of the caseplan |  |
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **versionId** | **string**| Caseplan version identifier. |  |
 
 ### Return type
 
@@ -919,8 +960,6 @@ namespace Example
 
 
 Get the intake settings for a Caseplan version.
-
-GetCasemanagementCaseplanVersionIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -948,8 +987,8 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
-            var versionId = versionId_example;  // string | Version of the caseplan
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var versionId = versionId_example;  // string | Caseplan version identifier.
 
             try
             { 
@@ -971,8 +1010,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
-| **versionId** | **string**| Version of the caseplan |  |
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **versionId** | **string**| Caseplan version identifier. |  |
 
 ### Return type
 
@@ -985,8 +1024,6 @@ namespace Example
 
 
 Get a Stageplan.
-
-GetCasemanagementCaseplanVersionStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1014,10 +1051,10 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
-            var versionId = versionId_example;  // string | Version ID
-            var stageplanId = stageplanId_example;  // string | Stageplan ID
-            var expands = new List<string>(); // List<string> | Which fields to expand. (optional) 
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var versionId = versionId_example;  // string | Caseplan version identifier.
+            var stageplanId = stageplanId_example;  // string | Stageplan identifier.
+            var expands = new List<string>(); // List<string> | Fields to expand. (optional) 
 
             try
             { 
@@ -1039,10 +1076,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
-| **versionId** | **string**| Version ID |  |
-| **stageplanId** | **string**| Stageplan ID |  |
-| **expands** | [**List<string>**](string)| Which fields to expand. | [optional] <br />**Values**: caseplan |
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **versionId** | **string**| Caseplan version identifier. |  |
+| **stageplanId** | **string**| Stageplan identifier. |  |
+| **expands** | [**List<string>**](string)| Fields to expand. | [optional] <br />**Values**: caseplan |
 
 ### Return type
 
@@ -1055,8 +1092,6 @@ namespace Example
 
 
 Get a Stepplan.
-
-GetCasemanagementCaseplanVersionStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1084,11 +1119,11 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
-            var versionId = versionId_example;  // string | Version ID
-            var stageplanId = stageplanId_example;  // string | Stageplan ID
-            var stepplanId = stepplanId_example;  // string | Stepplan ID
-            var expands = new List<string>(); // List<string> | Which fields to expand. (optional) 
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var versionId = versionId_example;  // string | Caseplan version identifier.
+            var stageplanId = stageplanId_example;  // string | Stageplan identifier.
+            var stepplanId = stepplanId_example;  // string | Stepplan identifier.
+            var expands = new List<string>(); // List<string> | Fields to expand. (optional) 
 
             try
             { 
@@ -1110,11 +1145,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
-| **versionId** | **string**| Version ID |  |
-| **stageplanId** | **string**| Stageplan ID |  |
-| **stepplanId** | **string**| Stepplan ID |  |
-| **expands** | [**List<string>**](string)| Which fields to expand. | [optional] <br />**Values**: stageplan, caseplan, worktype |
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **versionId** | **string**| Caseplan version identifier. |  |
+| **stageplanId** | **string**| Stageplan identifier. |  |
+| **stepplanId** | **string**| Stepplan identifier. |  |
+| **expands** | [**List<string>**](string)| Fields to expand. | [optional] <br />**Values**: stageplan, caseplan, worktype |
 
 ### Return type
 
@@ -1127,8 +1162,6 @@ namespace Example
 
 
 Get a list of Stepplans.
-
-GetCasemanagementCaseplanVersionStageplanStepplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1156,13 +1189,13 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
-            var versionId = versionId_example;  // string | Version ID
-            var stageplanId = stageplanId_example;  // string | Stageplan ID
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var versionId = versionId_example;  // string | Caseplan version identifier.
+            var stageplanId = stageplanId_example;  // string | Stageplan identifier.
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
-            var expands = new List<string>(); // List<string> | Which fields to expand. (optional) 
+            var expands = new List<string>(); // List<string> | Fields to expand. (optional) 
 
             try
             { 
@@ -1184,13 +1217,13 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
-| **versionId** | **string**| Version ID |  |
-| **stageplanId** | **string**| Stageplan ID |  |
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **versionId** | **string**| Caseplan version identifier. |  |
+| **stageplanId** | **string**| Stageplan identifier. |  |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
-| **expands** | [**List<string>**](string)| Which fields to expand. | [optional] <br />**Values**: caseplan, stageplan, worktype |
+| **expands** | [**List<string>**](string)| Fields to expand. | [optional] <br />**Values**: caseplan, stageplan, worktype |
 
 ### Return type
 
@@ -1203,8 +1236,6 @@ namespace Example
 
 
 Get a list of Stageplans.
-
-GetCasemanagementCaseplanVersionStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1232,12 +1263,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
-            var versionId = versionId_example;  // string | Version ID
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var versionId = versionId_example;  // string | Caseplan version identifier.
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
-            var expands = new List<string>(); // List<string> | Which fields to expand. (optional) 
+            var expands = new List<string>(); // List<string> | Fields to expand. (optional) 
 
             try
             { 
@@ -1259,12 +1290,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
-| **versionId** | **string**| Version ID |  |
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **versionId** | **string**| Caseplan version identifier. |  |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
-| **expands** | [**List<string>**](string)| Which fields to expand. | [optional] <br />**Values**: caseplan |
+| **expands** | [**List<string>**](string)| Fields to expand. | [optional] <br />**Values**: caseplan |
 
 ### Return type
 
@@ -1277,8 +1308,6 @@ namespace Example
 
 
 Get a list of Caseplans.
-
-GetCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1306,10 +1335,10 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var after = after_example;  // string | The cursor that points to the end of the set of caseplans that has been returned. (optional) 
-            var pageSize = 56;  // int? | Number of caseplans to return. Maximum of 200. (optional) 
-            var customerIntentId = customerIntentId_example;  // string | Filter by Customer Intent. (optional) 
-            var divisionIds = divisionIds_example;  // string | Filter by Divisions. (optional) 
+            var after = after_example;  // string | Cursor that points to the end of the previously returned set of Caseplans. (optional) 
+            var pageSize = 56;  // int? | Number of Caseplans to return. Maximum is 200. (optional) 
+            var customerIntentId = customerIntentId_example;  // string | Filter by customer intent. (optional) 
+            var divisionIds = divisionIds_example;  // string | Filter by divisions. (optional) 
 
             try
             { 
@@ -1331,10 +1360,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **after** | **string**| The cursor that points to the end of the set of caseplans that has been returned. | [optional]  |
-| **pageSize** | **int?**| Number of caseplans to return. Maximum of 200. | [optional]  |
-| **customerIntentId** | **string**| Filter by Customer Intent. | [optional]  |
-| **divisionIds** | **string**| Filter by Divisions. | [optional]  |
+| **after** | **string**| Cursor that points to the end of the previously returned set of Caseplans. | [optional]  |
+| **pageSize** | **int?**| Number of Caseplans to return. Maximum is 200. | [optional]  |
+| **customerIntentId** | **string**| Filter by customer intent. | [optional]  |
+| **divisionIds** | **string**| Filter by divisions. | [optional]  |
 
 ### Return type
 
@@ -1346,9 +1375,7 @@ namespace Example
 > [**CaseListing**](CaseListing) GetCasemanagementCasesExternalcontact (string externalContactId, string after = null, int? pageSize = null, string divisionIds = null, List<string> expands = null)
 
 
-Get a list of cases for provided external contact id.
-
-GetCasemanagementCasesExternalcontact is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+Get a list of Cases for an External Contact.
 
 Requires ANY permissions: 
 
@@ -1376,15 +1403,15 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var externalContactId = externalContactId_example;  // string | External Contact ID
-            var after = after_example;  // string | The cursor that points to the end of the set of cases that has been returned. (optional) 
-            var pageSize = 56;  // int? | Number of cases to return. Maximum of 200. (optional) 
-            var divisionIds = divisionIds_example;  // string | Filter by Divisions (optional) 
-            var expands = new List<string>(); // List<string> | Which fields to expand. (optional) 
+            var externalContactId = externalContactId_example;  // string | External contact identifier.
+            var after = after_example;  // string | Cursor pointing to the end of the previously returned page of Cases. (optional) 
+            var pageSize = 56;  // int? | Number of Cases to return (maximum 200). (optional) 
+            var divisionIds = divisionIds_example;  // string | Filter by divisions. (optional) 
+            var expands = new List<string>(); // List<string> | Fields to expand. (optional) 
 
             try
             { 
-                // Get a list of cases for provided external contact id.
+                // Get a list of Cases for an External Contact.
                 CaseListing result = apiInstance.GetCasemanagementCasesExternalcontact(externalContactId, after, pageSize, divisionIds, expands);
                 Debug.WriteLine(result);
             }
@@ -1402,11 +1429,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **externalContactId** | **string**| External Contact ID |  |
-| **after** | **string**| The cursor that points to the end of the set of cases that has been returned. | [optional]  |
-| **pageSize** | **int?**| Number of cases to return. Maximum of 200. | [optional]  |
-| **divisionIds** | **string**| Filter by Divisions | [optional]  |
-| **expands** | [**List<string>**](string)| Which fields to expand. | [optional] <br />**Values**: caseplan |
+| **externalContactId** | **string**| External contact identifier. |  |
+| **after** | **string**| Cursor pointing to the end of the previously returned page of Cases. | [optional]  |
+| **pageSize** | **int?**| Number of Cases to return (maximum 200). | [optional]  |
+| **divisionIds** | **string**| Filter by divisions. | [optional]  |
+| **expands** | [**List<string>**](string)| Fields to expand. | [optional] <br />**Values**: caseplan |
 
 ### Return type
 
@@ -1419,8 +1446,6 @@ namespace Example
 
 
 Get a Case by reference.
-
-GetCasemanagementCasesReference is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1448,8 +1473,8 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var referenceId = referenceId_example;  // string | Reference
-            var expands = expands_example;  // string | Which fields to expand. (optional) 
+            var referenceId = referenceId_example;  // string | Case reference.
+            var expands = expands_example;  // string | Fields to expand. (optional) 
 
             try
             { 
@@ -1471,8 +1496,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **referenceId** | **string**| Reference |  |
-| **expands** | **string**| Which fields to expand. | [optional] <br />**Values**: caseplan |
+| **referenceId** | **string**| Case reference. |  |
+| **expands** | **string**| Fields to expand. | [optional] <br />**Values**: caseplan |
 
 ### Return type
 
@@ -1484,9 +1509,7 @@ namespace Example
 > [**Case**](Case) PatchCasemanagementCaseDatedue (string caseId, CaseDateDueUpdate body)
 
 
-Update date due of a Case.
-
-PatchCasemanagementCaseDatedue is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+Update the due date of a Case.
 
 Requires ANY permissions: 
 
@@ -1514,12 +1537,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID
-            var body = new CaseDateDueUpdate(); // CaseDateDueUpdate | Date due
+            var caseId = caseId_example;  // string | Case identifier.
+            var body = new CaseDateDueUpdate(); // CaseDateDueUpdate | Due date update.
 
             try
             { 
-                // Update date due of a Case.
+                // Update the due date of a Case.
                 Case result = apiInstance.PatchCasemanagementCaseDatedue(caseId, body);
                 Debug.WriteLine(result);
             }
@@ -1537,8 +1560,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID |  |
-| **body** | [**CaseDateDueUpdate**](CaseDateDueUpdate)| Date due |  |
+| **caseId** | **string**| Case identifier. |  |
+| **body** | [**CaseDateDueUpdate**](CaseDateDueUpdate)| Due date update. |  |
 
 ### Return type
 
@@ -1551,8 +1574,6 @@ namespace Example
 
 
 Update priority of a Case.
-
-PatchCasemanagementCasePriority is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1580,8 +1601,8 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID
-            var body = new CasePriorityUpdate(); // CasePriorityUpdate | Priority
+            var caseId = caseId_example;  // string | Case identifier.
+            var body = new CasePriorityUpdate(); // CasePriorityUpdate | Priority update.
 
             try
             { 
@@ -1603,8 +1624,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID |  |
-| **body** | [**CasePriorityUpdate**](CasePriorityUpdate)| Priority |  |
+| **caseId** | **string**| Case identifier. |  |
+| **body** | [**CasePriorityUpdate**](CasePriorityUpdate)| Priority update. |  |
 
 ### Return type
 
@@ -1617,8 +1638,6 @@ namespace Example
 
 
 Update summary of a Case.
-
-PatchCasemanagementCaseSummary is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1646,8 +1665,8 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID
-            var body = new CaseSummaryUpdate(); // CaseSummaryUpdate | Summary
+            var caseId = caseId_example;  // string | Case identifier.
+            var body = new CaseSummaryUpdate(); // CaseSummaryUpdate | Summary update.
 
             try
             { 
@@ -1669,8 +1688,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID |  |
-| **body** | [**CaseSummaryUpdate**](CaseSummaryUpdate)| Summary |  |
+| **caseId** | **string**| Case identifier. |  |
+| **body** | [**CaseSummaryUpdate**](CaseSummaryUpdate)| Summary update. |  |
 
 ### Return type
 
@@ -1683,8 +1702,6 @@ namespace Example
 
 
 Update the attributes of a Caseplan.
-
-PatchCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1712,8 +1729,8 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
-            var body = new CaseplanUpdate(); // CaseplanUpdate | Caseplan
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var body = new CaseplanUpdate(); // CaseplanUpdate | Caseplan update.
 
             try
             { 
@@ -1735,8 +1752,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
-| **body** | [**CaseplanUpdate**](CaseplanUpdate)| Caseplan |  |
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **body** | [**CaseplanUpdate**](CaseplanUpdate)| Caseplan update. |  |
 
 ### Return type
 
@@ -1749,8 +1766,6 @@ namespace Example
 
 
 Update the attributes of a Stageplan.
-
-PatchCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1778,9 +1793,9 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
-            var stageplanId = stageplanId_example;  // string | Stageplan ID
-            var body = new StageplanUpdate(); // StageplanUpdate | Stageplan
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var stageplanId = stageplanId_example;  // string | Stageplan identifier.
+            var body = new StageplanUpdate(); // StageplanUpdate | Stageplan update.
 
             try
             { 
@@ -1802,9 +1817,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
-| **stageplanId** | **string**| Stageplan ID |  |
-| **body** | [**StageplanUpdate**](StageplanUpdate)| Stageplan |  |
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **stageplanId** | **string**| Stageplan identifier. |  |
+| **body** | [**StageplanUpdate**](StageplanUpdate)| Stageplan update. |  |
 
 ### Return type
 
@@ -1817,8 +1832,6 @@ namespace Example
 
 
 Update the attributes of a Stepplan.
-
-PatchCasemanagementCaseplanStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1846,10 +1859,10 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
-            var stageplanId = stageplanId_example;  // string | Stageplan ID
-            var stepplanId = stepplanId_example;  // string | Stepplan ID
-            var body = new StepplanUpdate(); // StepplanUpdate | Stepplan
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var stageplanId = stageplanId_example;  // string | Stageplan identifier.
+            var stepplanId = stepplanId_example;  // string | Stepplan identifier.
+            var body = new StepplanUpdate(); // StepplanUpdate | Stepplan update.
 
             try
             { 
@@ -1871,10 +1884,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
-| **stageplanId** | **string**| Stageplan ID |  |
-| **stepplanId** | **string**| Stepplan ID |  |
-| **body** | [**StepplanUpdate**](StepplanUpdate)| Stepplan |  |
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **stageplanId** | **string**| Stageplan identifier. |  |
+| **stepplanId** | **string**| Stepplan identifier. |  |
+| **body** | [**StepplanUpdate**](StepplanUpdate)| Stepplan update. |  |
 
 ### Return type
 
@@ -1883,12 +1896,10 @@ namespace Example
 
 ## PostCasemanagementCaseAssociations
 
-> [**CaseAssociation**](CaseAssociation) PostCasemanagementCaseAssociations (string caseId, CaseAssociationCreate body = null)
+> [**CaseAssociation**](CaseAssociation) PostCasemanagementCaseAssociations (string caseId, CaseAssociationCreate body)
 
 
-Create a case association.
-
-PostCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+Create a Case association.
 
 Requires ANY permissions: 
 
@@ -1916,12 +1927,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID.
-            var body = new CaseAssociationCreate(); // CaseAssociationCreate | Case Association (optional) 
+            var caseId = caseId_example;  // string | Case identifier.
+            var body = new CaseAssociationCreate(); // CaseAssociationCreate | Case association create request.
 
             try
             { 
-                // Create a case association.
+                // Create a Case association.
                 CaseAssociation result = apiInstance.PostCasemanagementCaseAssociations(caseId, body);
                 Debug.WriteLine(result);
             }
@@ -1939,8 +1950,8 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID. |  |
-| **body** | [**CaseAssociationCreate**](CaseAssociationCreate)| Case Association | [optional]  |
+| **caseId** | **string**| Case identifier. |  |
+| **body** | [**CaseAssociationCreate**](CaseAssociationCreate)| Case association create request. |  |
 
 ### Return type
 
@@ -1953,8 +1964,6 @@ namespace Example
 
 
 Create a Terminate Job for a Case.
-
-PostCasemanagementCaseTerminateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1982,7 +1991,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseId = caseId_example;  // string | Case ID
+            var caseId = caseId_example;  // string | Case identifier.
 
             try
             { 
@@ -2004,11 +2013,75 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseId** | **string**| Case ID |  |
+| **caseId** | **string**| Case identifier. |  |
 
 ### Return type
 
 [**TerminateJob**](TerminateJob)
+
+
+## PostCasemanagementCaseplanDataschemas
+
+> [**CaseplanDataSchema**](CaseplanDataSchema) PostCasemanagementCaseplanDataschemas (string caseplanId, CaseplanDataSchemaRequest body)
+
+
+Add a data schema to a draft Caseplan.
+
+Requires ALL permissions: 
+
+* caseManagement:caseplanDataSchemas:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostCasemanagementCaseplanDataschemasExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var body = new CaseplanDataSchemaRequest(); // CaseplanDataSchemaRequest | Data schema reference.
+
+            try
+            { 
+                // Add a data schema to a draft Caseplan.
+                CaseplanDataSchema result = apiInstance.PostCasemanagementCaseplanDataschemas(caseplanId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.PostCasemanagementCaseplanDataschemas: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **body** | [**CaseplanDataSchemaRequest**](CaseplanDataSchemaRequest)| Data schema reference. |  |
+
+### Return type
+
+[**CaseplanDataSchema**](CaseplanDataSchema)
 
 
 ## PostCasemanagementCaseplanPublish
@@ -2017,8 +2090,6 @@ namespace Example
 
 
 Publish Caseplan.
-
-PostCasemanagementCaseplanPublish is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2046,7 +2117,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
 
             try
             { 
@@ -2068,7 +2139,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
+| **caseplanId** | **string**| Caseplan identifier. |  |
 
 ### Return type
 
@@ -2081,8 +2152,6 @@ namespace Example
 
 
 Create Caseplan version.
-
-PostCasemanagementCaseplanVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2110,7 +2179,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
 
             try
             { 
@@ -2132,7 +2201,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
+| **caseplanId** | **string**| Caseplan identifier. |  |
 
 ### Return type
 
@@ -2145,8 +2214,6 @@ namespace Example
 
 
 Create a Caseplan.
-
-PostCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2174,7 +2241,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var body = new CaseplanCreate(); // CaseplanCreate | Caseplan
+            var body = new CaseplanCreate(); // CaseplanCreate | Caseplan create request.
 
             try
             { 
@@ -2196,7 +2263,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CaseplanCreate**](CaseplanCreate)| Caseplan |  |
+| **body** | [**CaseplanCreate**](CaseplanCreate)| Caseplan create request. |  |
 
 ### Return type
 
@@ -2208,9 +2275,7 @@ namespace Example
 > [**CaseplanQueryEntityListing**](CaseplanQueryEntityListing) PostCasemanagementCaseplansQuery (CaseplanQueryRequest body)
 
 
-Query for caseplans
-
-PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+Query for Caseplans.
 
 Requires ANY permissions: 
 
@@ -2238,11 +2303,11 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var body = new CaseplanQueryRequest(); // CaseplanQueryRequest | CaseplanQueryRequest
+            var body = new CaseplanQueryRequest(); // CaseplanQueryRequest | Caseplan query request.
 
             try
             { 
-                // Query for caseplans
+                // Query for Caseplans.
                 CaseplanQueryEntityListing result = apiInstance.PostCasemanagementCaseplansQuery(body);
                 Debug.WriteLine(result);
             }
@@ -2260,7 +2325,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CaseplanQueryRequest**](CaseplanQueryRequest)| CaseplanQueryRequest |  |
+| **body** | [**CaseplanQueryRequest**](CaseplanQueryRequest)| Caseplan query request. |  |
 
 ### Return type
 
@@ -2273,8 +2338,6 @@ namespace Example
 
 
 Create a Case.
-
-PostCasemanagementCases is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2302,7 +2365,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var body = new CaseCreate(); // CaseCreate | Case
+            var body = new CaseCreate(); // CaseCreate | Case create request.
 
             try
             { 
@@ -2324,7 +2387,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CaseCreate**](CaseCreate)| Case |  |
+| **body** | [**CaseCreate**](CaseCreate)| Case create request. |  |
 
 ### Return type
 
@@ -2333,12 +2396,10 @@ namespace Example
 
 ## PostCasemanagementCasesAssociationsQuery
 
-> [**CaseAssociationQueryEntityListing**](CaseAssociationQueryEntityListing) PostCasemanagementCasesAssociationsQuery (CaseAssociationQuery body = null)
+> [**CaseAssociationQueryEntityListing**](CaseAssociationQueryEntityListing) PostCasemanagementCasesAssociationsQuery (CaseAssociationQuery body)
 
 
-Query for case associations
-
-PostCasemanagementCasesAssociationsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+Query for Case associations by interaction.
 
 Requires ANY permissions: 
 
@@ -2366,11 +2427,11 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var body = new CaseAssociationQuery(); // CaseAssociationQuery | Case Association (optional) 
+            var body = new CaseAssociationQuery(); // CaseAssociationQuery | Case association query request.
 
             try
             { 
-                // Query for case associations
+                // Query for Case associations by interaction.
                 CaseAssociationQueryEntityListing result = apiInstance.PostCasemanagementCasesAssociationsQuery(body);
                 Debug.WriteLine(result);
             }
@@ -2388,11 +2449,77 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**CaseAssociationQuery**](CaseAssociationQuery)| Case Association | [optional]  |
+| **body** | [**CaseAssociationQuery**](CaseAssociationQuery)| Case association query request. |  |
 
 ### Return type
 
 [**CaseAssociationQueryEntityListing**](CaseAssociationQueryEntityListing)
+
+
+## PutCasemanagementCaseplanDataschema
+
+> [**CaseplanDataSchema**](CaseplanDataSchema) PutCasemanagementCaseplanDataschema (string caseplanId, string schemaKeyName, CaseplanDataSchemaRequest body)
+
+
+Update a data schema on a draft Caseplan.
+
+Requires ALL permissions: 
+
+* caseManagement:caseplanDataSchemas:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutCasemanagementCaseplanDataschemaExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var schemaKeyName = schemaKeyName_example;  // string | Schema key (for example \"default\").
+            var body = new CaseplanDataSchemaRequest(); // CaseplanDataSchemaRequest | Data schema reference.
+
+            try
+            { 
+                // Update a data schema on a draft Caseplan.
+                CaseplanDataSchema result = apiInstance.PutCasemanagementCaseplanDataschema(caseplanId, schemaKeyName, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.PutCasemanagementCaseplanDataschema: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **schemaKeyName** | **string**| Schema key (for example \&quot;default\&quot;). |  |
+| **body** | [**CaseplanDataSchemaRequest**](CaseplanDataSchemaRequest)| Data schema reference. |  |
+
+### Return type
+
+[**CaseplanDataSchema**](CaseplanDataSchema)
 
 
 ## PutCasemanagementCaseplanIntakesettings
@@ -2401,8 +2528,6 @@ namespace Example
 
 
 Update the intake settings for a Caseplan.
-
-PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2430,8 +2555,8 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new CaseManagementApi();
-            var caseplanId = caseplanId_example;  // string | Caseplan ID
-            var body = new IntakeSettingsUpdate(); // IntakeSettingsUpdate | Intake Settings
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var body = new IntakeSettingsUpdate(); // IntakeSettingsUpdate | Intake settings update.
 
             try
             { 
@@ -2453,12 +2578,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **caseplanId** | **string**| Caseplan ID |  |
-| **body** | [**IntakeSettingsUpdate**](IntakeSettingsUpdate)| Intake Settings |  |
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **body** | [**IntakeSettingsUpdate**](IntakeSettingsUpdate)| Intake settings update. |  |
 
 ### Return type
 
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_

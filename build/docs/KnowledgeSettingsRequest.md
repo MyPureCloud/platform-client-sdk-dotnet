@@ -11,7 +11,8 @@
 | **Sources** | [**List&lt;V3SourceRef&gt;**](V3SourceRef) | Knowledge source information to search upon. | |
 | **GenerationSetting** | [**KnowledgeGenerationSetting**](KnowledgeGenerationSetting) | Setting for answer generation. | [optional] |
 | **Stateful** | **bool?** | Indicates if stateful search and generation is enabled for the knowledge setting. | [optional] |
+| **Filter** | [**V3SourceTagFilter**](V3SourceTagFilter) | Composite tag filter of search results. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_

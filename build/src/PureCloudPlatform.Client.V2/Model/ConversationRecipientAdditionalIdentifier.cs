@@ -73,7 +73,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Phonenumber for "PhoneNumber"
             /// </summary>
             [EnumMember(Value = "PhoneNumber")]
-            Phonenumber
+            Phonenumber,
+            
+            /// <summary>
+            /// Enum Bsuid for "Bsuid"
+            /// </summary>
+            [EnumMember(Value = "Bsuid")]
+            Bsuid,
+            
+            /// <summary>
+            /// Enum Parentbsuid for "ParentBsuid"
+            /// </summary>
+            [EnumMember(Value = "ParentBsuid")]
+            Parentbsuid,
+            
+            /// <summary>
+            /// Enum Username for "Username"
+            /// </summary>
+            [EnumMember(Value = "Username")]
+            Username
         }
         /// <summary>
         /// Type of the Identifier

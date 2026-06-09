@@ -81,6 +81,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Askfornlunextintentaction,
             
             /// <summary>
+            /// Enum Assigncustomersegmentaction for "AssignCustomerSegmentAction"
+            /// </summary>
+            [EnumMember(Value = "AssignCustomerSegmentAction")]
+            Assigncustomersegmentaction,
+            
+            /// <summary>
             /// Enum Botstate for "BotState"
             /// </summary>
             [EnumMember(Value = "BotState")]
@@ -295,6 +301,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "GetExternalOrganizationAction")]
             Getexternalorganizationaction,
+            
+            /// <summary>
+            /// Enum Getassignedcustomersegmentsaction for "GetAssignedCustomerSegmentsAction"
+            /// </summary>
+            [EnumMember(Value = "GetAssignedCustomerSegmentsAction")]
+            Getassignedcustomersegmentsaction,
             
             /// <summary>
             /// Enum Loopaction for "LoopAction"

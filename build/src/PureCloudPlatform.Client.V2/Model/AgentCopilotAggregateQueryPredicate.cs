@@ -97,6 +97,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversationid,
             
             /// <summary>
+            /// Enum Knowledgesettingid for "knowledgeSettingId"
+            /// </summary>
+            [EnumMember(Value = "knowledgeSettingId")]
+            Knowledgesettingid,
+            
+            /// <summary>
             /// Enum Engagementtype for "engagementType"
             /// </summary>
             [EnumMember(Value = "engagementType")]

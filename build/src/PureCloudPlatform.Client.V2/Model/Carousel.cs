@@ -18,14 +18,31 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Carousel :  IEquatable<Carousel>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Carousel" /> class.
         /// </summary>
-        public Carousel()
+        [JsonConstructorAttribute]
+        protected Carousel() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Carousel" /> class.
+        /// </summary>
+        /// <param name="Cards">List of cards in a carousels template. (required).</param>
+        public Carousel(List<CarouselCard> Cards = null)
         {
+            this.Cards = Cards;
             
         }
         
+
+
+        /// <summary>
+        /// List of cards in a carousels template.
+        /// </summary>
+        /// <value>List of cards in a carousels template.</value>
+        [DataMember(Name="cards", EmitDefaultValue=false)]
+        public List<CarouselCard> Cards { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class Carousel {\n");
 
+            sb.Append("  Cards: ").Append(Cards).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +93,12 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.Cards == other.Cards ||
+                    this.Cards != null &&
+                    this.Cards.SequenceEqual(other.Cards)
+                );
         }
 
         /// <summary>
@@ -89,6 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Cards != null)
+                    hash = hash * 59 + this.Cards.GetHashCode();
+
                 return hash;
             }
         }

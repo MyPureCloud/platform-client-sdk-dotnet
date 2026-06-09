@@ -86,13 +86,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DaysBeforeStartToExpireFromWaitlist">The number of days before the time-off request start date for when the request will be expired from the waitlist (required).</param>
         /// <param name="AutoPublishApprovedTimeOffRequests">Whether newly approved time-off requests with activity codes associated with this time-off plan should be automatically published to the schedule.</param>
         /// <param name="RestrictedActivityCodes">The IDs of non time-off activity codes to check for conflicts in case the auto approval rule specifies checking activity codes. If these activity codes are present in schedule and overlap with the time-off request duration, the request will not be auto approved.</param>
+        /// <param name="OverrideDates">A list of override dates to check for conflicts with time-off request dates. If a conflict is found, the request will not be auto-approved.</param>
         /// <param name="HrisTimeOffType">Time-off type, if this time-off plan is associated with the integration.</param>
         /// <param name="Enabled">Whether this time-off plan is currently being used by agents (required).</param>
         /// <param name="CountAgainstTimeOffLimits">Whether this time-off plan counts against time-off limits (required).</param>
         /// <param name="BusinessUnitAssociation">Business unit association, if the time-off plan belongs to a business unit. managementUnitAssociation must not be set if this is populated.</param>
         /// <param name="ManagementUnitAssociation">Management Unit association, if the time-off plan belongs to a management unit. businessUnitAssociation must not be set if this is populated.</param>
         /// <param name="Metadata">Version metadata for the time-off plan (required).</param>
-        public BuTimeOffPlanResponse(string Id = null, string Name = null, List<string> ActivityCodeIds = null, List<BuTimeOffLimitReference> TimeOffLimits = null, AutoApprovalRuleEnum? AutoApprovalRule = null, int? DaysBeforeStartToExpireFromWaitlist = null, bool? AutoPublishApprovedTimeOffRequests = null, ActivityCodesReference RestrictedActivityCodes = null, HrisTimeOffType HrisTimeOffType = null, bool? Enabled = null, bool? CountAgainstTimeOffLimits = null, TimeOffPlanBusinessUnitAssociation BusinessUnitAssociation = null, TimeOffPlanManagementUnitAssociation ManagementUnitAssociation = null, WfmVersionedEntityMetadata Metadata = null)
+        public BuTimeOffPlanResponse(string Id = null, string Name = null, List<string> ActivityCodeIds = null, List<BuTimeOffLimitReference> TimeOffLimits = null, AutoApprovalRuleEnum? AutoApprovalRule = null, int? DaysBeforeStartToExpireFromWaitlist = null, bool? AutoPublishApprovedTimeOffRequests = null, ActivityCodesReference RestrictedActivityCodes = null, List<OverrideDate> OverrideDates = null, HrisTimeOffType HrisTimeOffType = null, bool? Enabled = null, bool? CountAgainstTimeOffLimits = null, TimeOffPlanBusinessUnitAssociation BusinessUnitAssociation = null, TimeOffPlanManagementUnitAssociation ManagementUnitAssociation = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -102,6 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DaysBeforeStartToExpireFromWaitlist = DaysBeforeStartToExpireFromWaitlist;
             this.AutoPublishApprovedTimeOffRequests = AutoPublishApprovedTimeOffRequests;
             this.RestrictedActivityCodes = RestrictedActivityCodes;
+            this.OverrideDates = OverrideDates;
             this.HrisTimeOffType = HrisTimeOffType;
             this.Enabled = Enabled;
             this.CountAgainstTimeOffLimits = CountAgainstTimeOffLimits;
@@ -175,6 +177,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The IDs of non time-off activity codes to check for conflicts in case the auto approval rule specifies checking activity codes. If these activity codes are present in schedule and overlap with the time-off request duration, the request will not be auto approved</value>
         [DataMember(Name="restrictedActivityCodes", EmitDefaultValue=false)]
         public ActivityCodesReference RestrictedActivityCodes { get; set; }
+
+
+
+        /// <summary>
+        /// A list of override dates to check for conflicts with time-off request dates. If a conflict is found, the request will not be auto-approved
+        /// </summary>
+        /// <value>A list of override dates to check for conflicts with time-off request dates. If a conflict is found, the request will not be auto-approved</value>
+        [DataMember(Name="overrideDates", EmitDefaultValue=false)]
+        public List<OverrideDate> OverrideDates { get; set; }
 
 
 
@@ -257,6 +268,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DaysBeforeStartToExpireFromWaitlist: ").Append(DaysBeforeStartToExpireFromWaitlist).Append("\n");
             sb.Append("  AutoPublishApprovedTimeOffRequests: ").Append(AutoPublishApprovedTimeOffRequests).Append("\n");
             sb.Append("  RestrictedActivityCodes: ").Append(RestrictedActivityCodes).Append("\n");
+            sb.Append("  OverrideDates: ").Append(OverrideDates).Append("\n");
             sb.Append("  HrisTimeOffType: ").Append(HrisTimeOffType).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  CountAgainstTimeOffLimits: ").Append(CountAgainstTimeOffLimits).Append("\n");
@@ -345,6 +357,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RestrictedActivityCodes.Equals(other.RestrictedActivityCodes)
                 ) &&
                 (
+                    this.OverrideDates == other.OverrideDates ||
+                    this.OverrideDates != null &&
+                    this.OverrideDates.SequenceEqual(other.OverrideDates)
+                ) &&
+                (
                     this.HrisTimeOffType == other.HrisTimeOffType ||
                     this.HrisTimeOffType != null &&
                     this.HrisTimeOffType.Equals(other.HrisTimeOffType)
@@ -415,6 +432,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RestrictedActivityCodes != null)
                     hash = hash * 59 + this.RestrictedActivityCodes.GetHashCode();
+
+                if (this.OverrideDates != null)
+                    hash = hash * 59 + this.OverrideDates.GetHashCode();
 
                 if (this.HrisTimeOffType != null)
                     hash = hash * 59 + this.HrisTimeOffType.GetHashCode();

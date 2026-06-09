@@ -7,10 +7,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteBusinessrulesDecisiontable**](#DeleteBusinessrulesDecisiontable) | **Delete** /api/v2/businessrules/decisiontables/{tableId} | Delete a decision table |
+| [**DeleteBusinessrulesDecisiontableExport**](#DeleteBusinessrulesDecisiontableExport) | **Delete** /api/v2/businessrules/decisiontables/{tableId}/exports/{exportJobId} | Delete an export job for a decision table |
+| [**DeleteBusinessrulesDecisiontableImport**](#DeleteBusinessrulesDecisiontableImport) | **Delete** /api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId} | Delete decision table row import job |
 | [**DeleteBusinessrulesDecisiontableVersion**](#DeleteBusinessrulesDecisiontableVersion) | **Delete** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion} | Delete a decision table version |
 | [**DeleteBusinessrulesDecisiontableVersionRow**](#DeleteBusinessrulesDecisiontableVersionRow) | **Delete** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId} | Delete a decision table row |
 | [**DeleteBusinessrulesSchema**](#DeleteBusinessrulesSchema) | **Delete** /api/v2/businessrules/schemas/{schemaId} | Delete a schema |
 | [**GetBusinessrulesDecisiontable**](#GetBusinessrulesDecisiontable) | **Get** /api/v2/businessrules/decisiontables/{tableId} | Get a decision table |
+| [**GetBusinessrulesDecisiontableExport**](#GetBusinessrulesDecisiontableExport) | **Get** /api/v2/businessrules/decisiontables/{tableId}/exports/{exportJobId} | Get an export job for a decision table |
+| [**GetBusinessrulesDecisiontableExports**](#GetBusinessrulesDecisiontableExports) | **Get** /api/v2/businessrules/decisiontables/{tableId}/exports | List export jobs for a decision table |
+| [**GetBusinessrulesDecisiontableImport**](#GetBusinessrulesDecisiontableImport) | **Get** /api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId} | Get decision table row import job |
+| [**GetBusinessrulesDecisiontableImports**](#GetBusinessrulesDecisiontableImports) | **Get** /api/v2/businessrules/decisiontables/{tableId}/imports | List decision table row import jobs |
 | [**GetBusinessrulesDecisiontableVersion**](#GetBusinessrulesDecisiontableVersion) | **Get** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion} | Get a decision table version |
 | [**GetBusinessrulesDecisiontableVersionRow**](#GetBusinessrulesDecisiontableVersionRow) | **Get** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId} | Get a decision table row |
 | [**GetBusinessrulesDecisiontableVersionRows**](#GetBusinessrulesDecisiontableVersionRows) | **Get** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows | Get a list of decision table rows. |
@@ -22,11 +28,17 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetBusinessrulesSchemasCoretype**](#GetBusinessrulesSchemasCoretype) | **Get** /api/v2/businessrules/schemas/coretypes/{coreTypeName} | Get a specific named core type. |
 | [**GetBusinessrulesSchemasCoretypes**](#GetBusinessrulesSchemasCoretypes) | **Get** /api/v2/businessrules/schemas/coretypes | Get the core types from which all schemas are built. |
 | [**PatchBusinessrulesDecisiontable**](#PatchBusinessrulesDecisiontable) | **Patch** /api/v2/businessrules/decisiontables/{tableId} | Update a decision table |
+| [**PatchBusinessrulesDecisiontableImport**](#PatchBusinessrulesDecisiontableImport) | **Patch** /api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId} | Update decision table row import job |
 | [**PatchBusinessrulesDecisiontableVersion**](#PatchBusinessrulesDecisiontableVersion) | **Patch** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion} | Update a decision table version |
 | [**PostBusinessrulesDecisiontableExecute**](#PostBusinessrulesDecisiontableExecute) | **Post** /api/v2/businessrules/decisiontables/{tableId}/execute | Execute a published decision table |
+| [**PostBusinessrulesDecisiontableExports**](#PostBusinessrulesDecisiontableExports) | **Post** /api/v2/businessrules/decisiontables/{tableId}/exports | Create an export job for a decision table version |
+| [**PostBusinessrulesDecisiontableImports**](#PostBusinessrulesDecisiontableImports) | **Post** /api/v2/businessrules/decisiontables/{tableId}/imports | Create a decision table row import job |
 | [**PostBusinessrulesDecisiontableVersionCopy**](#PostBusinessrulesDecisiontableVersionCopy) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/copy | Copy a decision table version |
 | [**PostBusinessrulesDecisiontableVersionExecute**](#PostBusinessrulesDecisiontableVersionExecute) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/execute | Execute a decision table version |
 | [**PostBusinessrulesDecisiontableVersionRows**](#PostBusinessrulesDecisiontableVersionRows) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows | Create a decision table row |
+| [**PostBusinessrulesDecisiontableVersionRowsBulkAdd**](#PostBusinessrulesDecisiontableVersionRowsBulkAdd) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/add | Bulk add decision table rows |
+| [**PostBusinessrulesDecisiontableVersionRowsBulkRemove**](#PostBusinessrulesDecisiontableVersionRowsBulkRemove) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/remove | Bulk delete decision table rows |
+| [**PostBusinessrulesDecisiontableVersionRowsBulkUpdate**](#PostBusinessrulesDecisiontableVersionRowsBulkUpdate) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/update | Bulk update decision table rows |
 | [**PostBusinessrulesDecisiontableVersionRowsSearch**](#PostBusinessrulesDecisiontableVersionRowsSearch) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/search | Search for decision table rows |
 | [**PostBusinessrulesDecisiontableVersionSync**](#PostBusinessrulesDecisiontableVersionSync) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/sync | Update the Business Rules Schema to the latest version for a given decision table version |
 | [**PostBusinessrulesDecisiontableVersions**](#PostBusinessrulesDecisiontableVersions) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions | Create a new decision table version |
@@ -95,6 +107,132 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **tableId** | **string**| Table ID |  |
 | **forceDelete** | **bool?**| Force delete decision table (under certain conditions) | [optional] [default to false] |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteBusinessrulesDecisiontableExport
+
+> void DeleteBusinessrulesDecisiontableExport (string tableId, string exportJobId)
+
+
+Delete an export job for a decision table
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableExportJob:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteBusinessrulesDecisiontableExportExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var exportJobId = exportJobId_example;  // string | Export Job ID
+
+            try
+            { 
+                // Delete an export job for a decision table
+                apiInstance.DeleteBusinessrulesDecisiontableExport(tableId, exportJobId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.DeleteBusinessrulesDecisiontableExport: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **exportJobId** | **string**| Export Job ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteBusinessrulesDecisiontableImport
+
+> void DeleteBusinessrulesDecisiontableImport (string tableId, string importJobId)
+
+
+Delete decision table row import job
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableImportJob:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteBusinessrulesDecisiontableImportExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var importJobId = importJobId_example;  // string | Import job ID
+
+            try
+            { 
+                // Delete decision table row import job
+                apiInstance.DeleteBusinessrulesDecisiontableImport(tableId, importJobId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.DeleteBusinessrulesDecisiontableImport: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **importJobId** | **string**| Import job ID |  |
 
 ### Return type
 
@@ -353,6 +491,266 @@ namespace Example
 ### Return type
 
 [**DecisionTable**](DecisionTable)
+
+
+## GetBusinessrulesDecisiontableExport
+
+> [**DecisionTableExportJob**](DecisionTableExportJob) GetBusinessrulesDecisiontableExport (string tableId, string exportJobId)
+
+
+Get an export job for a decision table
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableExportJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetBusinessrulesDecisiontableExportExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var exportJobId = exportJobId_example;  // string | Export Job ID
+
+            try
+            { 
+                // Get an export job for a decision table
+                DecisionTableExportJob result = apiInstance.GetBusinessrulesDecisiontableExport(tableId, exportJobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.GetBusinessrulesDecisiontableExport: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **exportJobId** | **string**| Export Job ID |  |
+
+### Return type
+
+[**DecisionTableExportJob**](DecisionTableExportJob)
+
+
+## GetBusinessrulesDecisiontableExports
+
+> [**DecisionTableExportJobListing**](DecisionTableExportJobListing) GetBusinessrulesDecisiontableExports (string tableId, string after = null, string pageSize = null)
+
+
+List export jobs for a decision table
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableExportJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetBusinessrulesDecisiontableExportsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 100. (optional) 
+
+            try
+            { 
+                // List export jobs for a decision table
+                DecisionTableExportJobListing result = apiInstance.GetBusinessrulesDecisiontableExports(tableId, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.GetBusinessrulesDecisiontableExports: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 100. | [optional]  |
+
+### Return type
+
+[**DecisionTableExportJobListing**](DecisionTableExportJobListing)
+
+
+## GetBusinessrulesDecisiontableImport
+
+> [**DecisionTableImportJob**](DecisionTableImportJob) GetBusinessrulesDecisiontableImport (string tableId, string importJobId)
+
+
+Get decision table row import job
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableImportJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetBusinessrulesDecisiontableImportExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var importJobId = importJobId_example;  // string | Import job ID
+
+            try
+            { 
+                // Get decision table row import job
+                DecisionTableImportJob result = apiInstance.GetBusinessrulesDecisiontableImport(tableId, importJobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.GetBusinessrulesDecisiontableImport: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **importJobId** | **string**| Import job ID |  |
+
+### Return type
+
+[**DecisionTableImportJob**](DecisionTableImportJob)
+
+
+## GetBusinessrulesDecisiontableImports
+
+> [**DecisionTableImportJobListing**](DecisionTableImportJobListing) GetBusinessrulesDecisiontableImports (string tableId, string after = null, string pageSize = null)
+
+
+List decision table row import jobs
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableImportJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetBusinessrulesDecisiontableImportsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 100. (optional) 
+
+            try
+            { 
+                // List decision table row import jobs
+                DecisionTableImportJobListing result = apiInstance.GetBusinessrulesDecisiontableImports(tableId, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.GetBusinessrulesDecisiontableImports: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 100. | [optional]  |
+
+### Return type
+
+[**DecisionTableImportJobListing**](DecisionTableImportJobListing)
 
 
 ## GetBusinessrulesDecisiontableVersion
@@ -1067,6 +1465,72 @@ namespace Example
 [**DecisionTable**](DecisionTable)
 
 
+## PatchBusinessrulesDecisiontableImport
+
+> [**DecisionTableImportJob**](DecisionTableImportJob) PatchBusinessrulesDecisiontableImport (string tableId, string importJobId, UpdateDecisionTableImportJobRequest body)
+
+
+Update decision table row import job
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableImportJob:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchBusinessrulesDecisiontableImportExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var importJobId = importJobId_example;  // string | Import job ID
+            var body = new UpdateDecisionTableImportJobRequest(); // UpdateDecisionTableImportJobRequest | Import job update request
+
+            try
+            { 
+                // Update decision table row import job
+                DecisionTableImportJob result = apiInstance.PatchBusinessrulesDecisiontableImport(tableId, importJobId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.PatchBusinessrulesDecisiontableImport: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **importJobId** | **string**| Import job ID |  |
+| **body** | [**UpdateDecisionTableImportJobRequest**](UpdateDecisionTableImportJobRequest)| Import job update request |  |
+
+### Return type
+
+[**DecisionTableImportJob**](DecisionTableImportJob)
+
+
 ## PatchBusinessrulesDecisiontableVersion
 
 > [**DecisionTableVersion**](DecisionTableVersion) PatchBusinessrulesDecisiontableVersion (string tableId, int? tableVersion, UpdateDecisionTableVersionRequest body)
@@ -1195,6 +1659,134 @@ namespace Example
 ### Return type
 
 [**DecisionTableExecutionResponse**](DecisionTableExecutionResponse)
+
+
+## PostBusinessrulesDecisiontableExports
+
+> [**DecisionTableExportJob**](DecisionTableExportJob) PostBusinessrulesDecisiontableExports (string tableId, DecisionTableExportJobRequest body)
+
+
+Create an export job for a decision table version
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableExportJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostBusinessrulesDecisiontableExportsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var body = new DecisionTableExportJobRequest(); // DecisionTableExportJobRequest | Export job request
+
+            try
+            { 
+                // Create an export job for a decision table version
+                DecisionTableExportJob result = apiInstance.PostBusinessrulesDecisiontableExports(tableId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.PostBusinessrulesDecisiontableExports: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **body** | [**DecisionTableExportJobRequest**](DecisionTableExportJobRequest)| Export job request |  |
+
+### Return type
+
+[**DecisionTableExportJob**](DecisionTableExportJob)
+
+
+## PostBusinessrulesDecisiontableImports
+
+> [**DecisionTableImportJob**](DecisionTableImportJob) PostBusinessrulesDecisiontableImports (string tableId, CreateDecisionTableImportJobRequest body)
+
+
+Create a decision table row import job
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableImportJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostBusinessrulesDecisiontableImportsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var body = new CreateDecisionTableImportJobRequest(); // CreateDecisionTableImportJobRequest | Import job create request
+
+            try
+            { 
+                // Create a decision table row import job
+                DecisionTableImportJob result = apiInstance.PostBusinessrulesDecisiontableImports(tableId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.PostBusinessrulesDecisiontableImports: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **body** | [**CreateDecisionTableImportJobRequest**](CreateDecisionTableImportJobRequest)| Import job create request |  |
+
+### Return type
+
+[**DecisionTableImportJob**](DecisionTableImportJob)
 
 
 ## PostBusinessrulesDecisiontableVersionCopy
@@ -1396,6 +1988,212 @@ namespace Example
 ### Return type
 
 [**DecisionTableRow**](DecisionTableRow)
+
+
+## PostBusinessrulesDecisiontableVersionRowsBulkAdd
+
+> [**BulkAddDecisionTableRowsResponse**](BulkAddDecisionTableRowsResponse) PostBusinessrulesDecisiontableVersionRowsBulkAdd (string tableId, int? tableVersion, BulkAddDecisionTableRowsRequest body)
+
+
+Bulk add decision table rows
+
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
+Requires ALL permissions: 
+
+* businessrules:decisionTableRow:add
+* routing:queue:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostBusinessrulesDecisiontableVersionRowsBulkAddExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var tableVersion = 56;  // int? | Table Version
+            var body = new BulkAddDecisionTableRowsRequest(); // BulkAddDecisionTableRowsRequest | Bulk add decision table rows request
+
+            try
+            { 
+                // Bulk add decision table rows
+                BulkAddDecisionTableRowsResponse result = apiInstance.PostBusinessrulesDecisiontableVersionRowsBulkAdd(tableId, tableVersion, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.PostBusinessrulesDecisiontableVersionRowsBulkAdd: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **tableVersion** | **int?**| Table Version |  |
+| **body** | [**BulkAddDecisionTableRowsRequest**](BulkAddDecisionTableRowsRequest)| Bulk add decision table rows request |  |
+
+### Return type
+
+[**BulkAddDecisionTableRowsResponse**](BulkAddDecisionTableRowsResponse)
+
+
+## PostBusinessrulesDecisiontableVersionRowsBulkRemove
+
+> void PostBusinessrulesDecisiontableVersionRowsBulkRemove (string tableId, int? tableVersion, BulkDeleteDecisionTableRowsRequest body)
+
+
+Bulk delete decision table rows
+
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
+Requires ALL permissions: 
+
+* businessrules:decisionTableRow:delete
+* routing:queue:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostBusinessrulesDecisiontableVersionRowsBulkRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var tableVersion = 56;  // int? | Table Version
+            var body = new BulkDeleteDecisionTableRowsRequest(); // BulkDeleteDecisionTableRowsRequest | 
+
+            try
+            { 
+                // Bulk delete decision table rows
+                apiInstance.PostBusinessrulesDecisiontableVersionRowsBulkRemove(tableId, tableVersion, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.PostBusinessrulesDecisiontableVersionRowsBulkRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **tableVersion** | **int?**| Table Version |  |
+| **body** | [**BulkDeleteDecisionTableRowsRequest**](BulkDeleteDecisionTableRowsRequest)|  |  |
+
+### Return type
+
+void (empty response body)
+
+
+## PostBusinessrulesDecisiontableVersionRowsBulkUpdate
+
+> [**BulkUpdateDecisionTableRowsResponse**](BulkUpdateDecisionTableRowsResponse) PostBusinessrulesDecisiontableVersionRowsBulkUpdate (string tableId, int? tableVersion, BulkUpdateDecisionTableRowsRequest body)
+
+
+Bulk update decision table rows
+
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
+Requires ALL permissions: 
+
+* businessrules:decisionTableRow:edit
+* routing:queue:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostBusinessrulesDecisiontableVersionRowsBulkUpdateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var tableVersion = 56;  // int? | Table Version
+            var body = new BulkUpdateDecisionTableRowsRequest(); // BulkUpdateDecisionTableRowsRequest | Bulk update decision table rows request
+
+            try
+            { 
+                // Bulk update decision table rows
+                BulkUpdateDecisionTableRowsResponse result = apiInstance.PostBusinessrulesDecisiontableVersionRowsBulkUpdate(tableId, tableVersion, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.PostBusinessrulesDecisiontableVersionRowsBulkUpdate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **tableVersion** | **int?**| Table Version |  |
+| **body** | [**BulkUpdateDecisionTableRowsRequest**](BulkUpdateDecisionTableRowsRequest)| Bulk update decision table rows request |  |
+
+### Return type
+
+[**BulkUpdateDecisionTableRowsResponse**](BulkUpdateDecisionTableRowsResponse)
 
 
 ## PostBusinessrulesDecisiontableVersionRowsSearch
@@ -1921,4 +2719,4 @@ namespace Example
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_

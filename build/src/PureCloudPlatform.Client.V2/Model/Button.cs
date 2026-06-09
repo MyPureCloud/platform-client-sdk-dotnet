@@ -63,11 +63,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type of button to include in whatsApp template.</param>
         /// <param name="Content">Content of the button. Use for &#39;Url&#39; or &#39;PhoneNumber&#39; button type.</param>
         /// <param name="ContentText">The text label that will be displayed on the button.</param>
-        public Button(TypeEnum? Type = null, string Content = null, string ContentText = null)
+        /// <param name="Payload">A payload to uniquely identify a quickReply button in carousel.</param>
+        public Button(TypeEnum? Type = null, string Content = null, string ContentText = null, string Payload = null)
         {
             this.Type = Type;
             this.Content = Content;
             this.ContentText = ContentText;
+            this.Payload = Payload;
             
         }
         
@@ -92,6 +94,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ContentText { get; set; }
 
 
+
+        /// <summary>
+        /// A payload to uniquely identify a quickReply button in carousel
+        /// </summary>
+        /// <value>A payload to uniquely identify a quickReply button in carousel</value>
+        [DataMember(Name="payload", EmitDefaultValue=false)]
+        public string Payload { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,6 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  ContentText: ").Append(ContentText).Append("\n");
+            sb.Append("  Payload: ").Append(Payload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,6 +170,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContentText == other.ContentText ||
                     this.ContentText != null &&
                     this.ContentText.Equals(other.ContentText)
+                ) &&
+                (
+                    this.Payload == other.Payload ||
+                    this.Payload != null &&
+                    this.Payload.Equals(other.Payload)
                 );
         }
 
@@ -180,6 +197,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ContentText != null)
                     hash = hash * 59 + this.ContentText.GetHashCode();
+
+                if (this.Payload != null)
+                    hash = hash * 59 + this.Payload.GetHashCode();
 
                 return hash;
             }

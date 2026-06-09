@@ -20,10 +20,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>Object</returns>
         
         Object DeleteCasemanagementCase (string caseId);
@@ -33,10 +32,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>ApiResponse of Object</returns>
         
         ApiResponse<Object> DeleteCasemanagementCaseWithHttpInfo (string caseId);
@@ -46,10 +44,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Object</returns>
         
         Object DeleteCasemanagementCaseplan (string caseplanId);
@@ -59,24 +56,48 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>ApiResponse of Object</returns>
         
         ApiResponse<Object> DeleteCasemanagementCaseplanWithHttpInfo (string caseplanId);
+
+        /// <summary>
+        /// Remove a data schema from a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <returns>Object</returns>
+        
+        Object DeleteCasemanagementCaseplanDataschema (string caseplanId, string schemaKeyName);
+
+        /// <summary>
+        /// Remove a data schema from a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <returns>ApiResponse of Object</returns>
+        
+        ApiResponse<Object> DeleteCasemanagementCaseplanDataschemaWithHttpInfo (string caseplanId, string schemaKeyName);
 
         /// <summary>
         /// Get a Case.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Case</returns>
         
         Case GetCasemanagementCase (string caseId, string expands = null);
@@ -86,11 +107,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of Case</returns>
         
         ApiResponse<Case> GetCasemanagementCaseWithHttpInfo (string caseId, string expands = null);
@@ -100,11 +120,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseAssociation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="associationId">Case Association ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="associationId">Case association identifier.</param>
         /// <returns>CaseAssociation</returns>
         
         CaseAssociation GetCasemanagementCaseAssociation (string caseId, string associationId);
@@ -114,24 +133,22 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseAssociation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="associationId">Case Association ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="associationId">Case association identifier.</param>
         /// <returns>ApiResponse of CaseAssociation</returns>
         
         ApiResponse<CaseAssociation> GetCasemanagementCaseAssociationWithHttpInfo (string caseId, string associationId);
 
         /// <summary>
-        /// Get a list of case associations for a provided case.
+        /// Get a list of Case associations for the Case.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -140,14 +157,13 @@ namespace PureCloudPlatform.Client.V2.Api
         CaseAssociationListing GetCasemanagementCaseAssociations (string caseId, string before = null, string after = null, string pageSize = null);
 
         /// <summary>
-        /// Get a list of case associations for a provided case.
+        /// Get a list of Case associations for the Case.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -160,11 +176,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <returns>Stage</returns>
         
         Stage GetCasemanagementCaseStage (string caseId, string stageId);
@@ -174,11 +189,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <returns>ApiResponse of Stage</returns>
         
         ApiResponse<Stage> GetCasemanagementCaseStageWithHttpInfo (string caseId, string stageId);
@@ -188,12 +202,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStageStep is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
-        /// <param name="stepId">Step ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
+        /// <param name="stepId">Step identifier.</param>
         /// <returns>Step</returns>
         
         Step GetCasemanagementCaseStageStep (string caseId, string stageId, string stepId);
@@ -203,12 +216,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStageStep is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
-        /// <param name="stepId">Step ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
+        /// <param name="stepId">Step identifier.</param>
         /// <returns>ApiResponse of Step</returns>
         
         ApiResponse<Step> GetCasemanagementCaseStageStepWithHttpInfo (string caseId, string stageId, string stepId);
@@ -218,11 +230,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStageSteps is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -235,11 +246,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStageSteps is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -252,10 +262,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -268,10 +277,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -284,11 +292,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseTerminateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="jobId">Job ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="jobId">Terminate Job identifier.</param>
         /// <returns>TerminateJob</returns>
         
         TerminateJob GetCasemanagementCaseTerminateJob (string caseId, string jobId);
@@ -298,11 +305,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseTerminateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="jobId">Job ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="jobId">Terminate Job identifier.</param>
         /// <returns>ApiResponse of TerminateJob</returns>
         
         ApiResponse<TerminateJob> GetCasemanagementCaseTerminateJobWithHttpInfo (string caseId, string jobId);
@@ -312,10 +318,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Caseplan</returns>
         
         Caseplan GetCasemanagementCaseplan (string caseplanId);
@@ -325,10 +330,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>ApiResponse of Caseplan</returns>
         
         ApiResponse<Caseplan> GetCasemanagementCaseplanWithHttpInfo (string caseplanId);
@@ -338,11 +342,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Caseplan</returns>
         
         Caseplan GetCasemanagementCaseplanVersion (string caseplanId, string versionId);
@@ -352,39 +355,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>ApiResponse of Caseplan</returns>
         
         ApiResponse<Caseplan> GetCasemanagementCaseplanVersionWithHttpInfo (string caseplanId, string versionId);
 
         /// <summary>
-        /// Get the dataSchemas for a caseplan version.
+        /// Get the data schemas for a Caseplan version.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionDataschemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>CaseplanDataSchemaListing</returns>
         
         CaseplanDataSchemaListing GetCasemanagementCaseplanVersionDataschemas (string caseplanId, string versionId);
 
         /// <summary>
-        /// Get the dataSchemas for a caseplan version.
+        /// Get the data schemas for a Caseplan version.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionDataschemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>ApiResponse of CaseplanDataSchemaListing</returns>
         
         ApiResponse<CaseplanDataSchemaListing> GetCasemanagementCaseplanVersionDataschemasWithHttpInfo (string caseplanId, string versionId);
@@ -394,11 +394,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>IntakeSettingsListing</returns>
         
         IntakeSettingsListing GetCasemanagementCaseplanVersionIntakesettings (string caseplanId, string versionId);
@@ -408,11 +407,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>ApiResponse of IntakeSettingsListing</returns>
         
         ApiResponse<IntakeSettingsListing> GetCasemanagementCaseplanVersionIntakesettingsWithHttpInfo (string caseplanId, string versionId);
@@ -422,13 +420,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Stageplan</returns>
         
         Stageplan GetCasemanagementCaseplanVersionStageplan (string caseplanId, string versionId, string stageplanId, List<string> expands = null);
@@ -438,13 +435,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of Stageplan</returns>
         
         ApiResponse<Stageplan> GetCasemanagementCaseplanVersionStageplanWithHttpInfo (string caseplanId, string versionId, string stageplanId, List<string> expands = null);
@@ -454,14 +450,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Stepplan</returns>
         
         Stepplan GetCasemanagementCaseplanVersionStageplanStepplan (string caseplanId, string versionId, string stageplanId, string stepplanId, List<string> expands = null);
@@ -471,14 +466,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of Stepplan</returns>
         
         ApiResponse<Stepplan> GetCasemanagementCaseplanVersionStageplanStepplanWithHttpInfo (string caseplanId, string versionId, string stageplanId, string stepplanId, List<string> expands = null);
@@ -488,16 +482,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>StepplanListing</returns>
         
         StepplanListing GetCasemanagementCaseplanVersionStageplanStepplans (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
@@ -507,16 +500,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of StepplanListing</returns>
         
         ApiResponse<StepplanListing> GetCasemanagementCaseplanVersionStageplanStepplansWithHttpInfo (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
@@ -526,15 +518,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>StageplanListing</returns>
         
         StageplanListing GetCasemanagementCaseplanVersionStageplans (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
@@ -544,15 +535,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of StageplanListing</returns>
         
         ApiResponse<StageplanListing> GetCasemanagementCaseplanVersionStageplansWithHttpInfo (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
@@ -562,13 +552,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="after">The cursor that points to the end of the set of caseplans that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of caseplans to return. Maximum of 200. (optional)</param>
-        /// <param name="customerIntentId">Filter by Customer Intent. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned set of Caseplans. (optional)</param>
+        /// <param name="pageSize">Number of Caseplans to return. Maximum is 200. (optional)</param>
+        /// <param name="customerIntentId">Filter by customer intent. (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
         /// <returns>CaseplanListing</returns>
         
         CaseplanListing GetCasemanagementCaseplans (string after = null, int? pageSize = null, string customerIntentId = null, string divisionIds = null);
@@ -578,47 +567,44 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="after">The cursor that points to the end of the set of caseplans that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of caseplans to return. Maximum of 200. (optional)</param>
-        /// <param name="customerIntentId">Filter by Customer Intent. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned set of Caseplans. (optional)</param>
+        /// <param name="pageSize">Number of Caseplans to return. Maximum is 200. (optional)</param>
+        /// <param name="customerIntentId">Filter by customer intent. (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
         /// <returns>ApiResponse of CaseplanListing</returns>
         
         ApiResponse<CaseplanListing> GetCasemanagementCaseplansWithHttpInfo (string after = null, int? pageSize = null, string customerIntentId = null, string divisionIds = null);
 
         /// <summary>
-        /// Get a list of cases for provided external contact id.
+        /// Get a list of Cases for an External Contact.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesExternalcontact is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalContactId">External Contact ID</param>
-        /// <param name="after">The cursor that points to the end of the set of cases that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of cases to return. Maximum of 200. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="externalContactId">External contact identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of Cases. (optional)</param>
+        /// <param name="pageSize">Number of Cases to return (maximum 200). (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>CaseListing</returns>
         
         CaseListing GetCasemanagementCasesExternalcontact (string externalContactId, string after = null, int? pageSize = null, string divisionIds = null, List<string> expands = null);
 
         /// <summary>
-        /// Get a list of cases for provided external contact id.
+        /// Get a list of Cases for an External Contact.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesExternalcontact is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalContactId">External Contact ID</param>
-        /// <param name="after">The cursor that points to the end of the set of cases that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of cases to return. Maximum of 200. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="externalContactId">External contact identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of Cases. (optional)</param>
+        /// <param name="pageSize">Number of Cases to return (maximum 200). (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of CaseListing</returns>
         
         ApiResponse<CaseListing> GetCasemanagementCasesExternalcontactWithHttpInfo (string externalContactId, string after = null, int? pageSize = null, string divisionIds = null, List<string> expands = null);
@@ -628,11 +614,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesReference is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="referenceId">Reference</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="referenceId">Case reference.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Case</returns>
         
         Case GetCasemanagementCasesReference (string referenceId, string expands = null);
@@ -642,39 +627,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesReference is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="referenceId">Reference</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="referenceId">Case reference.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of Case</returns>
         
         ApiResponse<Case> GetCasemanagementCasesReferenceWithHttpInfo (string referenceId, string expands = null);
 
         /// <summary>
-        /// Update date due of a Case.
+        /// Update the due date of a Case.
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseDatedue is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Date due</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Due date update.</param>
         /// <returns>Case</returns>
         
         Case PatchCasemanagementCaseDatedue (string caseId, CaseDateDueUpdate body);
 
         /// <summary>
-        /// Update date due of a Case.
+        /// Update the due date of a Case.
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseDatedue is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Date due</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Due date update.</param>
         /// <returns>ApiResponse of Case</returns>
         
         ApiResponse<Case> PatchCasemanagementCaseDatedueWithHttpInfo (string caseId, CaseDateDueUpdate body);
@@ -684,11 +666,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCasePriority is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Priority</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Priority update.</param>
         /// <returns>Case</returns>
         
         Case PatchCasemanagementCasePriority (string caseId, CasePriorityUpdate body);
@@ -698,11 +679,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCasePriority is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Priority</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Priority update.</param>
         /// <returns>ApiResponse of Case</returns>
         
         ApiResponse<Case> PatchCasemanagementCasePriorityWithHttpInfo (string caseId, CasePriorityUpdate body);
@@ -712,11 +692,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseSummary is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Summary</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Summary update.</param>
         /// <returns>Case</returns>
         
         Case PatchCasemanagementCaseSummary (string caseId, CaseSummaryUpdate body);
@@ -726,11 +705,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseSummary is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Summary</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Summary update.</param>
         /// <returns>ApiResponse of Case</returns>
         
         ApiResponse<Case> PatchCasemanagementCaseSummaryWithHttpInfo (string caseId, CaseSummaryUpdate body);
@@ -740,11 +718,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Caseplan update.</param>
         /// <returns>Caseplan</returns>
         
         Caseplan PatchCasemanagementCaseplan (string caseplanId, CaseplanUpdate body);
@@ -754,11 +731,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Caseplan update.</param>
         /// <returns>ApiResponse of Caseplan</returns>
         
         ApiResponse<Caseplan> PatchCasemanagementCaseplanWithHttpInfo (string caseplanId, CaseplanUpdate body);
@@ -768,12 +744,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="body">Stageplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan update.</param>
         /// <returns>Stageplan</returns>
         
         Stageplan PatchCasemanagementCaseplanStageplan (string caseplanId, string stageplanId, StageplanUpdate body);
@@ -783,12 +758,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="body">Stageplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan update.</param>
         /// <returns>ApiResponse of Stageplan</returns>
         
         ApiResponse<Stageplan> PatchCasemanagementCaseplanStageplanWithHttpInfo (string caseplanId, string stageplanId, StageplanUpdate body);
@@ -798,13 +772,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseplanStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="body">Stepplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="body">Stepplan update.</param>
         /// <returns>Stepplan</returns>
         
         Stepplan PatchCasemanagementCaseplanStageplanStepplan (string caseplanId, string stageplanId, string stepplanId, StepplanUpdate body);
@@ -814,54 +787,50 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseplanStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="body">Stepplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="body">Stepplan update.</param>
         /// <returns>ApiResponse of Stepplan</returns>
         
         ApiResponse<Stepplan> PatchCasemanagementCaseplanStageplanStepplanWithHttpInfo (string caseplanId, string stageplanId, string stepplanId, StepplanUpdate body);
 
         /// <summary>
-        /// Create a case association.
+        /// Create a Case association.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Case association create request.</param>
         /// <returns>CaseAssociation</returns>
         
-        CaseAssociation PostCasemanagementCaseAssociations (string caseId, CaseAssociationCreate body = null);
+        CaseAssociation PostCasemanagementCaseAssociations (string caseId, CaseAssociationCreate body);
 
         /// <summary>
-        /// Create a case association.
+        /// Create a Case association.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Case association create request.</param>
         /// <returns>ApiResponse of CaseAssociation</returns>
         
-        ApiResponse<CaseAssociation> PostCasemanagementCaseAssociationsWithHttpInfo (string caseId, CaseAssociationCreate body = null);
+        ApiResponse<CaseAssociation> PostCasemanagementCaseAssociationsWithHttpInfo (string caseId, CaseAssociationCreate body);
 
         /// <summary>
         /// Create a Terminate Job for a Case.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseTerminateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>TerminateJob</returns>
         
         TerminateJob PostCasemanagementCaseTerminateJobs (string caseId);
@@ -871,23 +840,47 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseTerminateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>ApiResponse of TerminateJob</returns>
         
         ApiResponse<TerminateJob> PostCasemanagementCaseTerminateJobsWithHttpInfo (string caseId);
+
+        /// <summary>
+        /// Add a data schema to a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>CaseplanDataSchema</returns>
+        
+        CaseplanDataSchema PostCasemanagementCaseplanDataschemas (string caseplanId, CaseplanDataSchemaRequest body);
+
+        /// <summary>
+        /// Add a data schema to a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>ApiResponse of CaseplanDataSchema</returns>
+        
+        ApiResponse<CaseplanDataSchema> PostCasemanagementCaseplanDataschemasWithHttpInfo (string caseplanId, CaseplanDataSchemaRequest body);
 
         /// <summary>
         /// Publish Caseplan.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanPublish is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Caseplan</returns>
         
         Caseplan PostCasemanagementCaseplanPublish (string caseplanId);
@@ -897,10 +890,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanPublish is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>ApiResponse of Caseplan</returns>
         
         ApiResponse<Caseplan> PostCasemanagementCaseplanPublishWithHttpInfo (string caseplanId);
@@ -910,10 +902,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Caseplan</returns>
         
         Caseplan PostCasemanagementCaseplanVersions (string caseplanId);
@@ -923,10 +914,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>ApiResponse of Caseplan</returns>
         
         ApiResponse<Caseplan> PostCasemanagementCaseplanVersionsWithHttpInfo (string caseplanId);
@@ -936,10 +926,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Caseplan</param>
+        /// <param name="body">Caseplan create request.</param>
         /// <returns>CaseplanCreateResponse</returns>
         
         CaseplanCreateResponse PostCasemanagementCaseplans (CaseplanCreate body);
@@ -949,36 +938,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Caseplan</param>
+        /// <param name="body">Caseplan create request.</param>
         /// <returns>ApiResponse of CaseplanCreateResponse</returns>
         
         ApiResponse<CaseplanCreateResponse> PostCasemanagementCaseplansWithHttpInfo (CaseplanCreate body);
 
         /// <summary>
-        /// Query for caseplans
+        /// Query for Caseplans.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CaseplanQueryRequest</param>
+        /// <param name="body">Caseplan query request.</param>
         /// <returns>CaseplanQueryEntityListing</returns>
         
         CaseplanQueryEntityListing PostCasemanagementCaseplansQuery (CaseplanQueryRequest body);
 
         /// <summary>
-        /// Query for caseplans
+        /// Query for Caseplans.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CaseplanQueryRequest</param>
+        /// <param name="body">Caseplan query request.</param>
         /// <returns>ApiResponse of CaseplanQueryEntityListing</returns>
         
         ApiResponse<CaseplanQueryEntityListing> PostCasemanagementCaseplansQueryWithHttpInfo (CaseplanQueryRequest body);
@@ -988,10 +974,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCases is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case</param>
+        /// <param name="body">Case create request.</param>
         /// <returns>Case</returns>
         
         Case PostCasemanagementCases (CaseCreate body);
@@ -1001,50 +986,74 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCases is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case</param>
+        /// <param name="body">Case create request.</param>
         /// <returns>ApiResponse of Case</returns>
         
         ApiResponse<Case> PostCasemanagementCasesWithHttpInfo (CaseCreate body);
 
         /// <summary>
-        /// Query for case associations
+        /// Query for Case associations by interaction.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCasesAssociationsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="body">Case association query request.</param>
         /// <returns>CaseAssociationQueryEntityListing</returns>
         
-        CaseAssociationQueryEntityListing PostCasemanagementCasesAssociationsQuery (CaseAssociationQuery body = null);
+        CaseAssociationQueryEntityListing PostCasemanagementCasesAssociationsQuery (CaseAssociationQuery body);
 
         /// <summary>
-        /// Query for case associations
+        /// Query for Case associations by interaction.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCasesAssociationsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="body">Case association query request.</param>
         /// <returns>ApiResponse of CaseAssociationQueryEntityListing</returns>
         
-        ApiResponse<CaseAssociationQueryEntityListing> PostCasemanagementCasesAssociationsQueryWithHttpInfo (CaseAssociationQuery body = null);
+        ApiResponse<CaseAssociationQueryEntityListing> PostCasemanagementCasesAssociationsQueryWithHttpInfo (CaseAssociationQuery body);
+
+        /// <summary>
+        /// Update a data schema on a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>CaseplanDataSchema</returns>
+        
+        CaseplanDataSchema PutCasemanagementCaseplanDataschema (string caseplanId, string schemaKeyName, CaseplanDataSchemaRequest body);
+
+        /// <summary>
+        /// Update a data schema on a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>ApiResponse of CaseplanDataSchema</returns>
+        
+        ApiResponse<CaseplanDataSchema> PutCasemanagementCaseplanDataschemaWithHttpInfo (string caseplanId, string schemaKeyName, CaseplanDataSchemaRequest body);
 
         /// <summary>
         /// Update the intake settings for a Caseplan.
         /// </summary>
         /// <remarks>
         /// 
-        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Intake Settings</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Intake settings update.</param>
         /// <returns>IntakeSettingsListing</returns>
         
         IntakeSettingsListing PutCasemanagementCaseplanIntakesettings (string caseplanId, IntakeSettingsUpdate body);
@@ -1054,11 +1063,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Intake Settings</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Intake settings update.</param>
         /// <returns>ApiResponse of IntakeSettingsListing</returns>
         
         ApiResponse<IntakeSettingsListing> PutCasemanagementCaseplanIntakesettingsWithHttpInfo (string caseplanId, IntakeSettingsUpdate body);
@@ -1072,10 +1080,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>Task of Object</returns>
         
         System.Threading.Tasks.Task<Object> DeleteCasemanagementCaseAsync (string caseId);
@@ -1085,10 +1092,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCasemanagementCaseAsyncWithHttpInfo (string caseId);
@@ -1098,10 +1104,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of Object</returns>
         
         System.Threading.Tasks.Task<Object> DeleteCasemanagementCaseplanAsync (string caseplanId);
@@ -1111,24 +1116,48 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCasemanagementCaseplanAsyncWithHttpInfo (string caseplanId);
+
+        /// <summary>
+        /// Remove a data schema from a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <returns>Task of Object</returns>
+        
+        System.Threading.Tasks.Task<Object> DeleteCasemanagementCaseplanDataschemaAsync (string caseplanId, string schemaKeyName);
+
+        /// <summary>
+        /// Remove a data schema from a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCasemanagementCaseplanDataschemaAsyncWithHttpInfo (string caseplanId, string schemaKeyName);
 
         /// <summary>
         /// Get a Case.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of Case</returns>
         
         System.Threading.Tasks.Task<Case> GetCasemanagementCaseAsync (string caseId, string expands = null);
@@ -1138,11 +1167,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Case>> GetCasemanagementCaseAsyncWithHttpInfo (string caseId, string expands = null);
@@ -1152,11 +1180,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseAssociation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="associationId">Case Association ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="associationId">Case association identifier.</param>
         /// <returns>Task of CaseAssociation</returns>
         
         System.Threading.Tasks.Task<CaseAssociation> GetCasemanagementCaseAssociationAsync (string caseId, string associationId);
@@ -1166,24 +1193,22 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseAssociation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="associationId">Case Association ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="associationId">Case association identifier.</param>
         /// <returns>Task of ApiResponse (CaseAssociation)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CaseAssociation>> GetCasemanagementCaseAssociationAsyncWithHttpInfo (string caseId, string associationId);
 
         /// <summary>
-        /// Get a list of case associations for a provided case.
+        /// Get a list of Case associations for the Case.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -1192,14 +1217,13 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<CaseAssociationListing> GetCasemanagementCaseAssociationsAsync (string caseId, string before = null, string after = null, string pageSize = null);
 
         /// <summary>
-        /// Get a list of case associations for a provided case.
+        /// Get a list of Case associations for the Case.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -1212,11 +1236,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <returns>Task of Stage</returns>
         
         System.Threading.Tasks.Task<Stage> GetCasemanagementCaseStageAsync (string caseId, string stageId);
@@ -1226,11 +1249,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <returns>Task of ApiResponse (Stage)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Stage>> GetCasemanagementCaseStageAsyncWithHttpInfo (string caseId, string stageId);
@@ -1240,12 +1262,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStageStep is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
-        /// <param name="stepId">Step ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
+        /// <param name="stepId">Step identifier.</param>
         /// <returns>Task of Step</returns>
         
         System.Threading.Tasks.Task<Step> GetCasemanagementCaseStageStepAsync (string caseId, string stageId, string stepId);
@@ -1255,12 +1276,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStageStep is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
-        /// <param name="stepId">Step ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
+        /// <param name="stepId">Step identifier.</param>
         /// <returns>Task of ApiResponse (Step)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Step>> GetCasemanagementCaseStageStepAsyncWithHttpInfo (string caseId, string stageId, string stepId);
@@ -1270,11 +1290,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStageSteps is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -1287,11 +1306,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStageSteps is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -1304,10 +1322,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -1320,10 +1337,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseStages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -1336,11 +1352,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseTerminateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="jobId">Job ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="jobId">Terminate Job identifier.</param>
         /// <returns>Task of TerminateJob</returns>
         
         System.Threading.Tasks.Task<TerminateJob> GetCasemanagementCaseTerminateJobAsync (string caseId, string jobId);
@@ -1350,11 +1365,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseTerminateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="jobId">Job ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="jobId">Terminate Job identifier.</param>
         /// <returns>Task of ApiResponse (TerminateJob)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TerminateJob>> GetCasemanagementCaseTerminateJobAsyncWithHttpInfo (string caseId, string jobId);
@@ -1364,10 +1378,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of Caseplan</returns>
         
         System.Threading.Tasks.Task<Caseplan> GetCasemanagementCaseplanAsync (string caseplanId);
@@ -1377,10 +1390,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of ApiResponse (Caseplan)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Caseplan>> GetCasemanagementCaseplanAsyncWithHttpInfo (string caseplanId);
@@ -1390,11 +1402,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Task of Caseplan</returns>
         
         System.Threading.Tasks.Task<Caseplan> GetCasemanagementCaseplanVersionAsync (string caseplanId, string versionId);
@@ -1404,39 +1415,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Task of ApiResponse (Caseplan)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Caseplan>> GetCasemanagementCaseplanVersionAsyncWithHttpInfo (string caseplanId, string versionId);
 
         /// <summary>
-        /// Get the dataSchemas for a caseplan version.
+        /// Get the data schemas for a Caseplan version.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionDataschemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Task of CaseplanDataSchemaListing</returns>
         
         System.Threading.Tasks.Task<CaseplanDataSchemaListing> GetCasemanagementCaseplanVersionDataschemasAsync (string caseplanId, string versionId);
 
         /// <summary>
-        /// Get the dataSchemas for a caseplan version.
+        /// Get the data schemas for a Caseplan version.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionDataschemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Task of ApiResponse (CaseplanDataSchemaListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CaseplanDataSchemaListing>> GetCasemanagementCaseplanVersionDataschemasAsyncWithHttpInfo (string caseplanId, string versionId);
@@ -1446,11 +1454,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Task of IntakeSettingsListing</returns>
         
         System.Threading.Tasks.Task<IntakeSettingsListing> GetCasemanagementCaseplanVersionIntakesettingsAsync (string caseplanId, string versionId);
@@ -1460,11 +1467,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Task of ApiResponse (IntakeSettingsListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<IntakeSettingsListing>> GetCasemanagementCaseplanVersionIntakesettingsAsyncWithHttpInfo (string caseplanId, string versionId);
@@ -1474,13 +1480,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of Stageplan</returns>
         
         System.Threading.Tasks.Task<Stageplan> GetCasemanagementCaseplanVersionStageplanAsync (string caseplanId, string versionId, string stageplanId, List<string> expands = null);
@@ -1490,13 +1495,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Stageplan)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Stageplan>> GetCasemanagementCaseplanVersionStageplanAsyncWithHttpInfo (string caseplanId, string versionId, string stageplanId, List<string> expands = null);
@@ -1506,14 +1510,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of Stepplan</returns>
         
         System.Threading.Tasks.Task<Stepplan> GetCasemanagementCaseplanVersionStageplanStepplanAsync (string caseplanId, string versionId, string stageplanId, string stepplanId, List<string> expands = null);
@@ -1523,14 +1526,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Stepplan)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Stepplan>> GetCasemanagementCaseplanVersionStageplanStepplanAsyncWithHttpInfo (string caseplanId, string versionId, string stageplanId, string stepplanId, List<string> expands = null);
@@ -1540,16 +1542,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of StepplanListing</returns>
         
         System.Threading.Tasks.Task<StepplanListing> GetCasemanagementCaseplanVersionStageplanStepplansAsync (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
@@ -1559,16 +1560,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (StepplanListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<StepplanListing>> GetCasemanagementCaseplanVersionStageplanStepplansAsyncWithHttpInfo (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
@@ -1578,15 +1578,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of StageplanListing</returns>
         
         System.Threading.Tasks.Task<StageplanListing> GetCasemanagementCaseplanVersionStageplansAsync (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
@@ -1596,15 +1595,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplanVersionStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (StageplanListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<StageplanListing>> GetCasemanagementCaseplanVersionStageplansAsyncWithHttpInfo (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
@@ -1614,13 +1612,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="after">The cursor that points to the end of the set of caseplans that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of caseplans to return. Maximum of 200. (optional)</param>
-        /// <param name="customerIntentId">Filter by Customer Intent. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned set of Caseplans. (optional)</param>
+        /// <param name="pageSize">Number of Caseplans to return. Maximum is 200. (optional)</param>
+        /// <param name="customerIntentId">Filter by customer intent. (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
         /// <returns>Task of CaseplanListing</returns>
         
         System.Threading.Tasks.Task<CaseplanListing> GetCasemanagementCaseplansAsync (string after = null, int? pageSize = null, string customerIntentId = null, string divisionIds = null);
@@ -1630,47 +1627,44 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="after">The cursor that points to the end of the set of caseplans that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of caseplans to return. Maximum of 200. (optional)</param>
-        /// <param name="customerIntentId">Filter by Customer Intent. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned set of Caseplans. (optional)</param>
+        /// <param name="pageSize">Number of Caseplans to return. Maximum is 200. (optional)</param>
+        /// <param name="customerIntentId">Filter by customer intent. (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
         /// <returns>Task of ApiResponse (CaseplanListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CaseplanListing>> GetCasemanagementCaseplansAsyncWithHttpInfo (string after = null, int? pageSize = null, string customerIntentId = null, string divisionIds = null);
 
         /// <summary>
-        /// Get a list of cases for provided external contact id.
+        /// Get a list of Cases for an External Contact.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesExternalcontact is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalContactId">External Contact ID</param>
-        /// <param name="after">The cursor that points to the end of the set of cases that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of cases to return. Maximum of 200. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="externalContactId">External contact identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of Cases. (optional)</param>
+        /// <param name="pageSize">Number of Cases to return (maximum 200). (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of CaseListing</returns>
         
         System.Threading.Tasks.Task<CaseListing> GetCasemanagementCasesExternalcontactAsync (string externalContactId, string after = null, int? pageSize = null, string divisionIds = null, List<string> expands = null);
 
         /// <summary>
-        /// Get a list of cases for provided external contact id.
+        /// Get a list of Cases for an External Contact.
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesExternalcontact is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalContactId">External Contact ID</param>
-        /// <param name="after">The cursor that points to the end of the set of cases that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of cases to return. Maximum of 200. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="externalContactId">External contact identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of Cases. (optional)</param>
+        /// <param name="pageSize">Number of Cases to return (maximum 200). (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (CaseListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CaseListing>> GetCasemanagementCasesExternalcontactAsyncWithHttpInfo (string externalContactId, string after = null, int? pageSize = null, string divisionIds = null, List<string> expands = null);
@@ -1680,11 +1674,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesReference is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="referenceId">Reference</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="referenceId">Case reference.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of Case</returns>
         
         System.Threading.Tasks.Task<Case> GetCasemanagementCasesReferenceAsync (string referenceId, string expands = null);
@@ -1694,39 +1687,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesReference is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="referenceId">Reference</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="referenceId">Case reference.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Case>> GetCasemanagementCasesReferenceAsyncWithHttpInfo (string referenceId, string expands = null);
 
         /// <summary>
-        /// Update date due of a Case.
+        /// Update the due date of a Case.
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseDatedue is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Date due</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Due date update.</param>
         /// <returns>Task of Case</returns>
         
         System.Threading.Tasks.Task<Case> PatchCasemanagementCaseDatedueAsync (string caseId, CaseDateDueUpdate body);
 
         /// <summary>
-        /// Update date due of a Case.
+        /// Update the due date of a Case.
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseDatedue is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Date due</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Due date update.</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCaseDatedueAsyncWithHttpInfo (string caseId, CaseDateDueUpdate body);
@@ -1736,11 +1726,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCasePriority is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Priority</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Priority update.</param>
         /// <returns>Task of Case</returns>
         
         System.Threading.Tasks.Task<Case> PatchCasemanagementCasePriorityAsync (string caseId, CasePriorityUpdate body);
@@ -1750,11 +1739,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCasePriority is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Priority</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Priority update.</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCasePriorityAsyncWithHttpInfo (string caseId, CasePriorityUpdate body);
@@ -1764,11 +1752,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseSummary is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Summary</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Summary update.</param>
         /// <returns>Task of Case</returns>
         
         System.Threading.Tasks.Task<Case> PatchCasemanagementCaseSummaryAsync (string caseId, CaseSummaryUpdate body);
@@ -1778,11 +1765,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseSummary is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Summary</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Summary update.</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCaseSummaryAsyncWithHttpInfo (string caseId, CaseSummaryUpdate body);
@@ -1792,11 +1778,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Caseplan update.</param>
         /// <returns>Task of Caseplan</returns>
         
         System.Threading.Tasks.Task<Caseplan> PatchCasemanagementCaseplanAsync (string caseplanId, CaseplanUpdate body);
@@ -1806,11 +1791,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Caseplan update.</param>
         /// <returns>Task of ApiResponse (Caseplan)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Caseplan>> PatchCasemanagementCaseplanAsyncWithHttpInfo (string caseplanId, CaseplanUpdate body);
@@ -1820,12 +1804,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="body">Stageplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan update.</param>
         /// <returns>Task of Stageplan</returns>
         
         System.Threading.Tasks.Task<Stageplan> PatchCasemanagementCaseplanStageplanAsync (string caseplanId, string stageplanId, StageplanUpdate body);
@@ -1835,12 +1818,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="body">Stageplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan update.</param>
         /// <returns>Task of ApiResponse (Stageplan)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Stageplan>> PatchCasemanagementCaseplanStageplanAsyncWithHttpInfo (string caseplanId, string stageplanId, StageplanUpdate body);
@@ -1850,13 +1832,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseplanStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="body">Stepplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="body">Stepplan update.</param>
         /// <returns>Task of Stepplan</returns>
         
         System.Threading.Tasks.Task<Stepplan> PatchCasemanagementCaseplanStageplanStepplanAsync (string caseplanId, string stageplanId, string stepplanId, StepplanUpdate body);
@@ -1866,54 +1847,50 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseplanStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="body">Stepplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="body">Stepplan update.</param>
         /// <returns>Task of ApiResponse (Stepplan)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Stepplan>> PatchCasemanagementCaseplanStageplanStepplanAsyncWithHttpInfo (string caseplanId, string stageplanId, string stepplanId, StepplanUpdate body);
 
         /// <summary>
-        /// Create a case association.
+        /// Create a Case association.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Case association create request.</param>
         /// <returns>Task of CaseAssociation</returns>
         
-        System.Threading.Tasks.Task<CaseAssociation> PostCasemanagementCaseAssociationsAsync (string caseId, CaseAssociationCreate body = null);
+        System.Threading.Tasks.Task<CaseAssociation> PostCasemanagementCaseAssociationsAsync (string caseId, CaseAssociationCreate body);
 
         /// <summary>
-        /// Create a case association.
+        /// Create a Case association.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Case association create request.</param>
         /// <returns>Task of ApiResponse (CaseAssociation)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<CaseAssociation>> PostCasemanagementCaseAssociationsAsyncWithHttpInfo (string caseId, CaseAssociationCreate body = null);
+        System.Threading.Tasks.Task<ApiResponse<CaseAssociation>> PostCasemanagementCaseAssociationsAsyncWithHttpInfo (string caseId, CaseAssociationCreate body);
 
         /// <summary>
         /// Create a Terminate Job for a Case.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseTerminateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>Task of TerminateJob</returns>
         
         System.Threading.Tasks.Task<TerminateJob> PostCasemanagementCaseTerminateJobsAsync (string caseId);
@@ -1923,23 +1900,47 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseTerminateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>Task of ApiResponse (TerminateJob)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TerminateJob>> PostCasemanagementCaseTerminateJobsAsyncWithHttpInfo (string caseId);
+
+        /// <summary>
+        /// Add a data schema to a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>Task of CaseplanDataSchema</returns>
+        
+        System.Threading.Tasks.Task<CaseplanDataSchema> PostCasemanagementCaseplanDataschemasAsync (string caseplanId, CaseplanDataSchemaRequest body);
+
+        /// <summary>
+        /// Add a data schema to a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>Task of ApiResponse (CaseplanDataSchema)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CaseplanDataSchema>> PostCasemanagementCaseplanDataschemasAsyncWithHttpInfo (string caseplanId, CaseplanDataSchemaRequest body);
 
         /// <summary>
         /// Publish Caseplan.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanPublish is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of Caseplan</returns>
         
         System.Threading.Tasks.Task<Caseplan> PostCasemanagementCaseplanPublishAsync (string caseplanId);
@@ -1949,10 +1950,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanPublish is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of ApiResponse (Caseplan)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Caseplan>> PostCasemanagementCaseplanPublishAsyncWithHttpInfo (string caseplanId);
@@ -1962,10 +1962,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of Caseplan</returns>
         
         System.Threading.Tasks.Task<Caseplan> PostCasemanagementCaseplanVersionsAsync (string caseplanId);
@@ -1975,10 +1974,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of ApiResponse (Caseplan)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Caseplan>> PostCasemanagementCaseplanVersionsAsyncWithHttpInfo (string caseplanId);
@@ -1988,10 +1986,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Caseplan</param>
+        /// <param name="body">Caseplan create request.</param>
         /// <returns>Task of CaseplanCreateResponse</returns>
         
         System.Threading.Tasks.Task<CaseplanCreateResponse> PostCasemanagementCaseplansAsync (CaseplanCreate body);
@@ -2001,36 +1998,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Caseplan</param>
+        /// <param name="body">Caseplan create request.</param>
         /// <returns>Task of ApiResponse (CaseplanCreateResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CaseplanCreateResponse>> PostCasemanagementCaseplansAsyncWithHttpInfo (CaseplanCreate body);
 
         /// <summary>
-        /// Query for caseplans
+        /// Query for Caseplans.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CaseplanQueryRequest</param>
+        /// <param name="body">Caseplan query request.</param>
         /// <returns>Task of CaseplanQueryEntityListing</returns>
         
         System.Threading.Tasks.Task<CaseplanQueryEntityListing> PostCasemanagementCaseplansQueryAsync (CaseplanQueryRequest body);
 
         /// <summary>
-        /// Query for caseplans
+        /// Query for Caseplans.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CaseplanQueryRequest</param>
+        /// <param name="body">Caseplan query request.</param>
         /// <returns>Task of ApiResponse (CaseplanQueryEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CaseplanQueryEntityListing>> PostCasemanagementCaseplansQueryAsyncWithHttpInfo (CaseplanQueryRequest body);
@@ -2040,10 +2034,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCases is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case</param>
+        /// <param name="body">Case create request.</param>
         /// <returns>Task of Case</returns>
         
         System.Threading.Tasks.Task<Case> PostCasemanagementCasesAsync (CaseCreate body);
@@ -2053,50 +2046,74 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCases is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case</param>
+        /// <param name="body">Case create request.</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Case>> PostCasemanagementCasesAsyncWithHttpInfo (CaseCreate body);
 
         /// <summary>
-        /// Query for case associations
+        /// Query for Case associations by interaction.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCasesAssociationsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="body">Case association query request.</param>
         /// <returns>Task of CaseAssociationQueryEntityListing</returns>
         
-        System.Threading.Tasks.Task<CaseAssociationQueryEntityListing> PostCasemanagementCasesAssociationsQueryAsync (CaseAssociationQuery body = null);
+        System.Threading.Tasks.Task<CaseAssociationQueryEntityListing> PostCasemanagementCasesAssociationsQueryAsync (CaseAssociationQuery body);
 
         /// <summary>
-        /// Query for case associations
+        /// Query for Case associations by interaction.
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCasesAssociationsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="body">Case association query request.</param>
         /// <returns>Task of ApiResponse (CaseAssociationQueryEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<CaseAssociationQueryEntityListing>> PostCasemanagementCasesAssociationsQueryAsyncWithHttpInfo (CaseAssociationQuery body = null);
+        System.Threading.Tasks.Task<ApiResponse<CaseAssociationQueryEntityListing>> PostCasemanagementCasesAssociationsQueryAsyncWithHttpInfo (CaseAssociationQuery body);
+
+        /// <summary>
+        /// Update a data schema on a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>Task of CaseplanDataSchema</returns>
+        
+        System.Threading.Tasks.Task<CaseplanDataSchema> PutCasemanagementCaseplanDataschemaAsync (string caseplanId, string schemaKeyName, CaseplanDataSchemaRequest body);
+
+        /// <summary>
+        /// Update a data schema on a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>Task of ApiResponse (CaseplanDataSchema)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CaseplanDataSchema>> PutCasemanagementCaseplanDataschemaAsyncWithHttpInfo (string caseplanId, string schemaKeyName, CaseplanDataSchemaRequest body);
 
         /// <summary>
         /// Update the intake settings for a Caseplan.
         /// </summary>
         /// <remarks>
         /// 
-        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Intake Settings</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Intake settings update.</param>
         /// <returns>Task of IntakeSettingsListing</returns>
         
         System.Threading.Tasks.Task<IntakeSettingsListing> PutCasemanagementCaseplanIntakesettingsAsync (string caseplanId, IntakeSettingsUpdate body);
@@ -2106,11 +2123,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Intake Settings</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Intake settings update.</param>
         /// <returns>Task of ApiResponse (IntakeSettingsListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<IntakeSettingsListing>> PutCasemanagementCaseplanIntakesettingsAsyncWithHttpInfo (string caseplanId, IntakeSettingsUpdate body);
@@ -2210,10 +2226,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Case. 
         /// 
-        /// DeleteCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>Object</returns>
         
         public Object DeleteCasemanagementCase (string caseId)
@@ -2225,10 +2240,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Case. 
         /// 
-        /// DeleteCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>ApiResponse of Object</returns>
         
         public ApiResponse< Object > DeleteCasemanagementCaseWithHttpInfo (string caseId)
@@ -2313,10 +2327,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Case. 
         /// 
-        /// DeleteCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>Task of Object</returns>
         
         public async System.Threading.Tasks.Task<Object> DeleteCasemanagementCaseAsync (string caseId)
@@ -2329,10 +2342,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Case. 
         /// 
-        /// DeleteCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCasemanagementCaseAsyncWithHttpInfo (string caseId)
@@ -2419,10 +2431,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Caseplan. 
         /// 
-        /// DeleteCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Object</returns>
         
         public Object DeleteCasemanagementCaseplan (string caseplanId)
@@ -2434,10 +2445,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Caseplan. 
         /// 
-        /// DeleteCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>ApiResponse of Object</returns>
         
         public ApiResponse< Object > DeleteCasemanagementCaseplanWithHttpInfo (string caseplanId)
@@ -2522,10 +2532,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Caseplan. 
         /// 
-        /// DeleteCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of Object</returns>
         
         public async System.Threading.Tasks.Task<Object> DeleteCasemanagementCaseplanAsync (string caseplanId)
@@ -2538,10 +2547,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Caseplan. 
         /// 
-        /// DeleteCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCasemanagementCaseplanAsyncWithHttpInfo (string caseplanId)
@@ -2626,13 +2634,230 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Case. 
+        /// Remove a data schema from a draft Caseplan. 
         /// 
-        /// GetCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <returns>Object</returns>
+        
+        public Object DeleteCasemanagementCaseplanDataschema (string caseplanId, string schemaKeyName)
+        {
+             ApiResponse<Object> localVarResponse = DeleteCasemanagementCaseplanDataschemaWithHttpInfo(caseplanId, schemaKeyName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Remove a data schema from a draft Caseplan. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <returns>ApiResponse of Object</returns>
+        
+        public ApiResponse< Object > DeleteCasemanagementCaseplanDataschemaWithHttpInfo (string caseplanId, string schemaKeyName)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->DeleteCasemanagementCaseplanDataschema");
+            // verify the required parameter 'schemaKeyName' is set
+            if (schemaKeyName == null)
+                throw new ApiException(400, "Missing required parameter 'schemaKeyName' when calling CaseManagementApi->DeleteCasemanagementCaseplanDataschema");
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/dataschemas/{schemaKeyName}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+            if (schemaKeyName != null) localVarPathParams.Add("schemaKeyName", this.Configuration.ApiClient.ParameterToString(schemaKeyName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCasemanagementCaseplanDataschema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteCasemanagementCaseplanDataschema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCasemanagementCaseplanDataschema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Remove a data schema from a draft Caseplan. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <returns>Task of Object</returns>
+        
+        public async System.Threading.Tasks.Task<Object> DeleteCasemanagementCaseplanDataschemaAsync (string caseplanId, string schemaKeyName)
+        {
+             ApiResponse<Object> localVarResponse = await DeleteCasemanagementCaseplanDataschemaAsyncWithHttpInfo(caseplanId, schemaKeyName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Remove a data schema from a draft Caseplan. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCasemanagementCaseplanDataschemaAsyncWithHttpInfo (string caseplanId, string schemaKeyName)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->DeleteCasemanagementCaseplanDataschema");
+            
+            // verify the required parameter 'schemaKeyName' is set
+            if (schemaKeyName == null)
+                throw new ApiException(400, "Missing required parameter 'schemaKeyName' when calling CaseManagementApi->DeleteCasemanagementCaseplanDataschema");
+            
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/dataschemas/{schemaKeyName}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+            if (schemaKeyName != null) localVarPathParams.Add("schemaKeyName", this.Configuration.ApiClient.ParameterToString(schemaKeyName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCasemanagementCaseplanDataschema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteCasemanagementCaseplanDataschema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCasemanagementCaseplanDataschema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a Case. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Case</returns>
         
         public Case GetCasemanagementCase (string caseId, string expands = null)
@@ -2644,11 +2869,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Case. 
         /// 
-        /// GetCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of Case</returns>
         
         public ApiResponse< Case > GetCasemanagementCaseWithHttpInfo (string caseId, string expands = null)
@@ -2734,11 +2958,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Case. 
         /// 
-        /// GetCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of Case</returns>
         
         public async System.Threading.Tasks.Task<Case> GetCasemanagementCaseAsync (string caseId, string expands = null)
@@ -2751,11 +2974,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Case. 
         /// 
-        /// GetCasemanagementCase is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Case>> GetCasemanagementCaseAsyncWithHttpInfo (string caseId, string expands = null)
@@ -2843,11 +3065,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Case Association. 
         /// 
-        /// GetCasemanagementCaseAssociation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="associationId">Case Association ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="associationId">Case association identifier.</param>
         /// <returns>CaseAssociation</returns>
         
         public CaseAssociation GetCasemanagementCaseAssociation (string caseId, string associationId)
@@ -2859,11 +3080,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Case Association. 
         /// 
-        /// GetCasemanagementCaseAssociation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="associationId">Case Association ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="associationId">Case association identifier.</param>
         /// <returns>ApiResponse of CaseAssociation</returns>
         
         public ApiResponse< CaseAssociation > GetCasemanagementCaseAssociationWithHttpInfo (string caseId, string associationId)
@@ -2952,11 +3172,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Case Association. 
         /// 
-        /// GetCasemanagementCaseAssociation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="associationId">Case Association ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="associationId">Case association identifier.</param>
         /// <returns>Task of CaseAssociation</returns>
         
         public async System.Threading.Tasks.Task<CaseAssociation> GetCasemanagementCaseAssociationAsync (string caseId, string associationId)
@@ -2969,11 +3188,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Case Association. 
         /// 
-        /// GetCasemanagementCaseAssociation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="associationId">Case Association ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="associationId">Case association identifier.</param>
         /// <returns>Task of ApiResponse (CaseAssociation)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<CaseAssociation>> GetCasemanagementCaseAssociationAsyncWithHttpInfo (string caseId, string associationId)
@@ -3063,12 +3281,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of case associations for a provided case. 
+        /// Get a list of Case associations for the Case. 
         /// 
-        /// GetCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -3081,12 +3298,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of case associations for a provided case. 
+        /// Get a list of Case associations for the Case. 
         /// 
-        /// GetCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -3175,12 +3391,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of case associations for a provided case. 
+        /// Get a list of Case associations for the Case. 
         /// 
-        /// GetCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -3194,12 +3409,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of case associations for a provided case. 
+        /// Get a list of Case associations for the Case. 
         /// 
-        /// GetCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -3292,11 +3506,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Stage. 
         /// 
-        /// GetCasemanagementCaseStage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <returns>Stage</returns>
         
         public Stage GetCasemanagementCaseStage (string caseId, string stageId)
@@ -3308,11 +3521,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Stage. 
         /// 
-        /// GetCasemanagementCaseStage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <returns>ApiResponse of Stage</returns>
         
         public ApiResponse< Stage > GetCasemanagementCaseStageWithHttpInfo (string caseId, string stageId)
@@ -3401,11 +3613,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Stage. 
         /// 
-        /// GetCasemanagementCaseStage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <returns>Task of Stage</returns>
         
         public async System.Threading.Tasks.Task<Stage> GetCasemanagementCaseStageAsync (string caseId, string stageId)
@@ -3418,11 +3629,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Stage. 
         /// 
-        /// GetCasemanagementCaseStage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <returns>Task of ApiResponse (Stage)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Stage>> GetCasemanagementCaseStageAsyncWithHttpInfo (string caseId, string stageId)
@@ -3514,12 +3724,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Step. 
         /// 
-        /// GetCasemanagementCaseStageStep is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
-        /// <param name="stepId">Step ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
+        /// <param name="stepId">Step identifier.</param>
         /// <returns>Step</returns>
         
         public Step GetCasemanagementCaseStageStep (string caseId, string stageId, string stepId)
@@ -3531,12 +3740,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Step. 
         /// 
-        /// GetCasemanagementCaseStageStep is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
-        /// <param name="stepId">Step ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
+        /// <param name="stepId">Step identifier.</param>
         /// <returns>ApiResponse of Step</returns>
         
         public ApiResponse< Step > GetCasemanagementCaseStageStepWithHttpInfo (string caseId, string stageId, string stepId)
@@ -3629,12 +3837,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Step. 
         /// 
-        /// GetCasemanagementCaseStageStep is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
-        /// <param name="stepId">Step ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
+        /// <param name="stepId">Step identifier.</param>
         /// <returns>Task of Step</returns>
         
         public async System.Threading.Tasks.Task<Step> GetCasemanagementCaseStageStepAsync (string caseId, string stageId, string stepId)
@@ -3647,12 +3854,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Step. 
         /// 
-        /// GetCasemanagementCaseStageStep is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
-        /// <param name="stepId">Step ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
+        /// <param name="stepId">Step identifier.</param>
         /// <returns>Task of ApiResponse (Step)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Step>> GetCasemanagementCaseStageStepAsyncWithHttpInfo (string caseId, string stageId, string stepId)
@@ -3749,11 +3955,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Steps. 
         /// 
-        /// GetCasemanagementCaseStageSteps is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -3768,11 +3973,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Steps. 
         /// 
-        /// GetCasemanagementCaseStageSteps is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -3867,11 +4071,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Steps. 
         /// 
-        /// GetCasemanagementCaseStageSteps is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -3887,11 +4090,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Steps. 
         /// 
-        /// GetCasemanagementCaseStageSteps is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="stageId">Stage ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="stageId">Stage identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -3989,10 +4191,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Stages. 
         /// 
-        /// GetCasemanagementCaseStages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -4007,10 +4208,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Stages. 
         /// 
-        /// GetCasemanagementCaseStages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -4101,10 +4301,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Stages. 
         /// 
-        /// GetCasemanagementCaseStages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -4120,10 +4319,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Stages. 
         /// 
-        /// GetCasemanagementCaseStages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
@@ -4216,11 +4414,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Terminate Job for a Case. 
         /// 
-        /// GetCasemanagementCaseTerminateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="jobId">Job ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="jobId">Terminate Job identifier.</param>
         /// <returns>TerminateJob</returns>
         
         public TerminateJob GetCasemanagementCaseTerminateJob (string caseId, string jobId)
@@ -4232,11 +4429,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Terminate Job for a Case. 
         /// 
-        /// GetCasemanagementCaseTerminateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="jobId">Job ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="jobId">Terminate Job identifier.</param>
         /// <returns>ApiResponse of TerminateJob</returns>
         
         public ApiResponse< TerminateJob > GetCasemanagementCaseTerminateJobWithHttpInfo (string caseId, string jobId)
@@ -4325,11 +4521,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Terminate Job for a Case. 
         /// 
-        /// GetCasemanagementCaseTerminateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="jobId">Job ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="jobId">Terminate Job identifier.</param>
         /// <returns>Task of TerminateJob</returns>
         
         public async System.Threading.Tasks.Task<TerminateJob> GetCasemanagementCaseTerminateJobAsync (string caseId, string jobId)
@@ -4342,11 +4537,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Terminate Job for a Case. 
         /// 
-        /// GetCasemanagementCaseTerminateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="jobId">Job ID</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="jobId">Terminate Job identifier.</param>
         /// <returns>Task of ApiResponse (TerminateJob)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<TerminateJob>> GetCasemanagementCaseTerminateJobAsyncWithHttpInfo (string caseId, string jobId)
@@ -4438,10 +4632,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Caseplan. 
         /// 
-        /// GetCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Caseplan</returns>
         
         public Caseplan GetCasemanagementCaseplan (string caseplanId)
@@ -4453,10 +4646,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Caseplan. 
         /// 
-        /// GetCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>ApiResponse of Caseplan</returns>
         
         public ApiResponse< Caseplan > GetCasemanagementCaseplanWithHttpInfo (string caseplanId)
@@ -4541,10 +4733,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Caseplan. 
         /// 
-        /// GetCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of Caseplan</returns>
         
         public async System.Threading.Tasks.Task<Caseplan> GetCasemanagementCaseplanAsync (string caseplanId)
@@ -4557,10 +4748,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Caseplan. 
         /// 
-        /// GetCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of ApiResponse (Caseplan)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Caseplan>> GetCasemanagementCaseplanAsyncWithHttpInfo (string caseplanId)
@@ -4647,11 +4837,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Caseplan version. 
         /// 
-        /// GetCasemanagementCaseplanVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Caseplan</returns>
         
         public Caseplan GetCasemanagementCaseplanVersion (string caseplanId, string versionId)
@@ -4663,11 +4852,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Caseplan version. 
         /// 
-        /// GetCasemanagementCaseplanVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>ApiResponse of Caseplan</returns>
         
         public ApiResponse< Caseplan > GetCasemanagementCaseplanVersionWithHttpInfo (string caseplanId, string versionId)
@@ -4756,11 +4944,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Caseplan version. 
         /// 
-        /// GetCasemanagementCaseplanVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Task of Caseplan</returns>
         
         public async System.Threading.Tasks.Task<Caseplan> GetCasemanagementCaseplanVersionAsync (string caseplanId, string versionId)
@@ -4773,11 +4960,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Caseplan version. 
         /// 
-        /// GetCasemanagementCaseplanVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Task of ApiResponse (Caseplan)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Caseplan>> GetCasemanagementCaseplanVersionAsyncWithHttpInfo (string caseplanId, string versionId)
@@ -4867,13 +5053,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the dataSchemas for a caseplan version. 
+        /// Get the data schemas for a Caseplan version. 
         /// 
-        /// GetCasemanagementCaseplanVersionDataschemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>CaseplanDataSchemaListing</returns>
         
         public CaseplanDataSchemaListing GetCasemanagementCaseplanVersionDataschemas (string caseplanId, string versionId)
@@ -4883,13 +5068,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the dataSchemas for a caseplan version. 
+        /// Get the data schemas for a Caseplan version. 
         /// 
-        /// GetCasemanagementCaseplanVersionDataschemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>ApiResponse of CaseplanDataSchemaListing</returns>
         
         public ApiResponse< CaseplanDataSchemaListing > GetCasemanagementCaseplanVersionDataschemasWithHttpInfo (string caseplanId, string versionId)
@@ -4976,13 +5160,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the dataSchemas for a caseplan version. 
+        /// Get the data schemas for a Caseplan version. 
         /// 
-        /// GetCasemanagementCaseplanVersionDataschemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Task of CaseplanDataSchemaListing</returns>
         
         public async System.Threading.Tasks.Task<CaseplanDataSchemaListing> GetCasemanagementCaseplanVersionDataschemasAsync (string caseplanId, string versionId)
@@ -4993,13 +5176,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the dataSchemas for a caseplan version. 
+        /// Get the data schemas for a Caseplan version. 
         /// 
-        /// GetCasemanagementCaseplanVersionDataschemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Task of ApiResponse (CaseplanDataSchemaListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<CaseplanDataSchemaListing>> GetCasemanagementCaseplanVersionDataschemasAsyncWithHttpInfo (string caseplanId, string versionId)
@@ -5091,11 +5273,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the intake settings for a Caseplan version. 
         /// 
-        /// GetCasemanagementCaseplanVersionIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>IntakeSettingsListing</returns>
         
         public IntakeSettingsListing GetCasemanagementCaseplanVersionIntakesettings (string caseplanId, string versionId)
@@ -5107,11 +5288,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the intake settings for a Caseplan version. 
         /// 
-        /// GetCasemanagementCaseplanVersionIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>ApiResponse of IntakeSettingsListing</returns>
         
         public ApiResponse< IntakeSettingsListing > GetCasemanagementCaseplanVersionIntakesettingsWithHttpInfo (string caseplanId, string versionId)
@@ -5200,11 +5380,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the intake settings for a Caseplan version. 
         /// 
-        /// GetCasemanagementCaseplanVersionIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Task of IntakeSettingsListing</returns>
         
         public async System.Threading.Tasks.Task<IntakeSettingsListing> GetCasemanagementCaseplanVersionIntakesettingsAsync (string caseplanId, string versionId)
@@ -5217,11 +5396,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the intake settings for a Caseplan version. 
         /// 
-        /// GetCasemanagementCaseplanVersionIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version of the caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <returns>Task of ApiResponse (IntakeSettingsListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<IntakeSettingsListing>> GetCasemanagementCaseplanVersionIntakesettingsAsyncWithHttpInfo (string caseplanId, string versionId)
@@ -5313,13 +5491,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Stageplan. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Stageplan</returns>
         
         public Stageplan GetCasemanagementCaseplanVersionStageplan (string caseplanId, string versionId, string stageplanId, List<string> expands = null)
@@ -5331,13 +5508,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Stageplan. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of Stageplan</returns>
         
         public ApiResponse< Stageplan > GetCasemanagementCaseplanVersionStageplanWithHttpInfo (string caseplanId, string versionId, string stageplanId, List<string> expands = null)
@@ -5431,13 +5607,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Stageplan. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of Stageplan</returns>
         
         public async System.Threading.Tasks.Task<Stageplan> GetCasemanagementCaseplanVersionStageplanAsync (string caseplanId, string versionId, string stageplanId, List<string> expands = null)
@@ -5450,13 +5625,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Stageplan. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Stageplan)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Stageplan>> GetCasemanagementCaseplanVersionStageplanAsyncWithHttpInfo (string caseplanId, string versionId, string stageplanId, List<string> expands = null)
@@ -5554,14 +5728,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Stepplan. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Stepplan</returns>
         
         public Stepplan GetCasemanagementCaseplanVersionStageplanStepplan (string caseplanId, string versionId, string stageplanId, string stepplanId, List<string> expands = null)
@@ -5573,14 +5746,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Stepplan. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of Stepplan</returns>
         
         public ApiResponse< Stepplan > GetCasemanagementCaseplanVersionStageplanStepplanWithHttpInfo (string caseplanId, string versionId, string stageplanId, string stepplanId, List<string> expands = null)
@@ -5678,14 +5850,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Stepplan. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of Stepplan</returns>
         
         public async System.Threading.Tasks.Task<Stepplan> GetCasemanagementCaseplanVersionStageplanStepplanAsync (string caseplanId, string versionId, string stageplanId, string stepplanId, List<string> expands = null)
@@ -5698,14 +5869,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Stepplan. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Stepplan)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Stepplan>> GetCasemanagementCaseplanVersionStageplanStepplanAsyncWithHttpInfo (string caseplanId, string versionId, string stageplanId, string stepplanId, List<string> expands = null)
@@ -5808,16 +5978,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Stepplans. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>StepplanListing</returns>
         
         public StepplanListing GetCasemanagementCaseplanVersionStageplanStepplans (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
@@ -5829,16 +5998,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Stepplans. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of StepplanListing</returns>
         
         public ApiResponse< StepplanListing > GetCasemanagementCaseplanVersionStageplanStepplansWithHttpInfo (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
@@ -5935,16 +6103,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Stepplans. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of StepplanListing</returns>
         
         public async System.Threading.Tasks.Task<StepplanListing> GetCasemanagementCaseplanVersionStageplanStepplansAsync (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
@@ -5957,16 +6124,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Stepplans. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplanStepplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (StepplanListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<StepplanListing>> GetCasemanagementCaseplanVersionStageplanStepplansAsyncWithHttpInfo (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
@@ -6067,15 +6233,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Stageplans. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>StageplanListing</returns>
         
         public StageplanListing GetCasemanagementCaseplanVersionStageplans (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
@@ -6087,15 +6252,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Stageplans. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of StageplanListing</returns>
         
         public ApiResponse< StageplanListing > GetCasemanagementCaseplanVersionStageplansWithHttpInfo (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
@@ -6188,15 +6352,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Stageplans. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of StageplanListing</returns>
         
         public async System.Threading.Tasks.Task<StageplanListing> GetCasemanagementCaseplanVersionStageplansAsync (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
@@ -6209,15 +6372,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Stageplans. 
         /// 
-        /// GetCasemanagementCaseplanVersionStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="versionId">Version ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (StageplanListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<StageplanListing>> GetCasemanagementCaseplanVersionStageplansAsyncWithHttpInfo (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
@@ -6313,13 +6475,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Caseplans. 
         /// 
-        /// GetCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="after">The cursor that points to the end of the set of caseplans that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of caseplans to return. Maximum of 200. (optional)</param>
-        /// <param name="customerIntentId">Filter by Customer Intent. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned set of Caseplans. (optional)</param>
+        /// <param name="pageSize">Number of Caseplans to return. Maximum is 200. (optional)</param>
+        /// <param name="customerIntentId">Filter by customer intent. (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
         /// <returns>CaseplanListing</returns>
         
         public CaseplanListing GetCasemanagementCaseplans (string after = null, int? pageSize = null, string customerIntentId = null, string divisionIds = null)
@@ -6331,13 +6492,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Caseplans. 
         /// 
-        /// GetCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="after">The cursor that points to the end of the set of caseplans that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of caseplans to return. Maximum of 200. (optional)</param>
-        /// <param name="customerIntentId">Filter by Customer Intent. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned set of Caseplans. (optional)</param>
+        /// <param name="pageSize">Number of Caseplans to return. Maximum is 200. (optional)</param>
+        /// <param name="customerIntentId">Filter by customer intent. (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
         /// <returns>ApiResponse of CaseplanListing</returns>
         
         public ApiResponse< CaseplanListing > GetCasemanagementCaseplansWithHttpInfo (string after = null, int? pageSize = null, string customerIntentId = null, string divisionIds = null)
@@ -6422,13 +6582,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Caseplans. 
         /// 
-        /// GetCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="after">The cursor that points to the end of the set of caseplans that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of caseplans to return. Maximum of 200. (optional)</param>
-        /// <param name="customerIntentId">Filter by Customer Intent. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned set of Caseplans. (optional)</param>
+        /// <param name="pageSize">Number of Caseplans to return. Maximum is 200. (optional)</param>
+        /// <param name="customerIntentId">Filter by customer intent. (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
         /// <returns>Task of CaseplanListing</returns>
         
         public async System.Threading.Tasks.Task<CaseplanListing> GetCasemanagementCaseplansAsync (string after = null, int? pageSize = null, string customerIntentId = null, string divisionIds = null)
@@ -6441,13 +6600,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Caseplans. 
         /// 
-        /// GetCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="after">The cursor that points to the end of the set of caseplans that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of caseplans to return. Maximum of 200. (optional)</param>
-        /// <param name="customerIntentId">Filter by Customer Intent. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned set of Caseplans. (optional)</param>
+        /// <param name="pageSize">Number of Caseplans to return. Maximum is 200. (optional)</param>
+        /// <param name="customerIntentId">Filter by customer intent. (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
         /// <returns>Task of ApiResponse (CaseplanListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<CaseplanListing>> GetCasemanagementCaseplansAsyncWithHttpInfo (string after = null, int? pageSize = null, string customerIntentId = null, string divisionIds = null)
@@ -6531,16 +6689,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of cases for provided external contact id. 
+        /// Get a list of Cases for an External Contact. 
         /// 
-        /// GetCasemanagementCasesExternalcontact is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalContactId">External Contact ID</param>
-        /// <param name="after">The cursor that points to the end of the set of cases that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of cases to return. Maximum of 200. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="externalContactId">External contact identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of Cases. (optional)</param>
+        /// <param name="pageSize">Number of Cases to return (maximum 200). (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>CaseListing</returns>
         
         public CaseListing GetCasemanagementCasesExternalcontact (string externalContactId, string after = null, int? pageSize = null, string divisionIds = null, List<string> expands = null)
@@ -6550,16 +6707,15 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of cases for provided external contact id. 
+        /// Get a list of Cases for an External Contact. 
         /// 
-        /// GetCasemanagementCasesExternalcontact is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalContactId">External Contact ID</param>
-        /// <param name="after">The cursor that points to the end of the set of cases that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of cases to return. Maximum of 200. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="externalContactId">External contact identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of Cases. (optional)</param>
+        /// <param name="pageSize">Number of Cases to return (maximum 200). (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of CaseListing</returns>
         
         public ApiResponse< CaseListing > GetCasemanagementCasesExternalcontactWithHttpInfo (string externalContactId, string after = null, int? pageSize = null, string divisionIds = null, List<string> expands = null)
@@ -6646,16 +6802,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of cases for provided external contact id. 
+        /// Get a list of Cases for an External Contact. 
         /// 
-        /// GetCasemanagementCasesExternalcontact is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalContactId">External Contact ID</param>
-        /// <param name="after">The cursor that points to the end of the set of cases that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of cases to return. Maximum of 200. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="externalContactId">External contact identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of Cases. (optional)</param>
+        /// <param name="pageSize">Number of Cases to return (maximum 200). (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of CaseListing</returns>
         
         public async System.Threading.Tasks.Task<CaseListing> GetCasemanagementCasesExternalcontactAsync (string externalContactId, string after = null, int? pageSize = null, string divisionIds = null, List<string> expands = null)
@@ -6666,16 +6821,15 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of cases for provided external contact id. 
+        /// Get a list of Cases for an External Contact. 
         /// 
-        /// GetCasemanagementCasesExternalcontact is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="externalContactId">External Contact ID</param>
-        /// <param name="after">The cursor that points to the end of the set of cases that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of cases to return. Maximum of 200. (optional)</param>
-        /// <param name="divisionIds">Filter by Divisions (optional)</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="externalContactId">External contact identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of Cases. (optional)</param>
+        /// <param name="pageSize">Number of Cases to return (maximum 200). (optional)</param>
+        /// <param name="divisionIds">Filter by divisions. (optional)</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (CaseListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<CaseListing>> GetCasemanagementCasesExternalcontactAsyncWithHttpInfo (string externalContactId, string after = null, int? pageSize = null, string divisionIds = null, List<string> expands = null)
@@ -6766,11 +6920,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Case by reference. 
         /// 
-        /// GetCasemanagementCasesReference is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="referenceId">Reference</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="referenceId">Case reference.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Case</returns>
         
         public Case GetCasemanagementCasesReference (string referenceId, string expands = null)
@@ -6782,11 +6935,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Case by reference. 
         /// 
-        /// GetCasemanagementCasesReference is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="referenceId">Reference</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="referenceId">Case reference.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of Case</returns>
         
         public ApiResponse< Case > GetCasemanagementCasesReferenceWithHttpInfo (string referenceId, string expands = null)
@@ -6872,11 +7024,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Case by reference. 
         /// 
-        /// GetCasemanagementCasesReference is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="referenceId">Reference</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="referenceId">Case reference.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of Case</returns>
         
         public async System.Threading.Tasks.Task<Case> GetCasemanagementCasesReferenceAsync (string referenceId, string expands = null)
@@ -6889,11 +7040,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Case by reference. 
         /// 
-        /// GetCasemanagementCasesReference is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="referenceId">Reference</param>
-        /// <param name="expands">Which fields to expand. (optional)</param>
+        /// <param name="referenceId">Case reference.</param>
+        /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Case>> GetCasemanagementCasesReferenceAsyncWithHttpInfo (string referenceId, string expands = null)
@@ -6979,13 +7129,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update date due of a Case. 
+        /// Update the due date of a Case. 
         /// 
-        /// PatchCasemanagementCaseDatedue is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Date due</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Due date update.</param>
         /// <returns>Case</returns>
         
         public Case PatchCasemanagementCaseDatedue (string caseId, CaseDateDueUpdate body)
@@ -6995,13 +7144,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update date due of a Case. 
+        /// Update the due date of a Case. 
         /// 
-        /// PatchCasemanagementCaseDatedue is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Date due</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Due date update.</param>
         /// <returns>ApiResponse of Case</returns>
         
         public ApiResponse< Case > PatchCasemanagementCaseDatedueWithHttpInfo (string caseId, CaseDateDueUpdate body)
@@ -7093,13 +7241,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update date due of a Case. 
+        /// Update the due date of a Case. 
         /// 
-        /// PatchCasemanagementCaseDatedue is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Date due</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Due date update.</param>
         /// <returns>Task of Case</returns>
         
         public async System.Threading.Tasks.Task<Case> PatchCasemanagementCaseDatedueAsync (string caseId, CaseDateDueUpdate body)
@@ -7110,13 +7257,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update date due of a Case. 
+        /// Update the due date of a Case. 
         /// 
-        /// PatchCasemanagementCaseDatedue is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Date due</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Due date update.</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCaseDatedueAsyncWithHttpInfo (string caseId, CaseDateDueUpdate body)
@@ -7213,11 +7359,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update priority of a Case. 
         /// 
-        /// PatchCasemanagementCasePriority is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Priority</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Priority update.</param>
         /// <returns>Case</returns>
         
         public Case PatchCasemanagementCasePriority (string caseId, CasePriorityUpdate body)
@@ -7229,11 +7374,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update priority of a Case. 
         /// 
-        /// PatchCasemanagementCasePriority is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Priority</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Priority update.</param>
         /// <returns>ApiResponse of Case</returns>
         
         public ApiResponse< Case > PatchCasemanagementCasePriorityWithHttpInfo (string caseId, CasePriorityUpdate body)
@@ -7327,11 +7471,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update priority of a Case. 
         /// 
-        /// PatchCasemanagementCasePriority is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Priority</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Priority update.</param>
         /// <returns>Task of Case</returns>
         
         public async System.Threading.Tasks.Task<Case> PatchCasemanagementCasePriorityAsync (string caseId, CasePriorityUpdate body)
@@ -7344,11 +7487,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update priority of a Case. 
         /// 
-        /// PatchCasemanagementCasePriority is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Priority</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Priority update.</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCasePriorityAsyncWithHttpInfo (string caseId, CasePriorityUpdate body)
@@ -7445,11 +7587,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update summary of a Case. 
         /// 
-        /// PatchCasemanagementCaseSummary is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Summary</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Summary update.</param>
         /// <returns>Case</returns>
         
         public Case PatchCasemanagementCaseSummary (string caseId, CaseSummaryUpdate body)
@@ -7461,11 +7602,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update summary of a Case. 
         /// 
-        /// PatchCasemanagementCaseSummary is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Summary</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Summary update.</param>
         /// <returns>ApiResponse of Case</returns>
         
         public ApiResponse< Case > PatchCasemanagementCaseSummaryWithHttpInfo (string caseId, CaseSummaryUpdate body)
@@ -7559,11 +7699,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update summary of a Case. 
         /// 
-        /// PatchCasemanagementCaseSummary is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Summary</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Summary update.</param>
         /// <returns>Task of Case</returns>
         
         public async System.Threading.Tasks.Task<Case> PatchCasemanagementCaseSummaryAsync (string caseId, CaseSummaryUpdate body)
@@ -7576,11 +7715,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update summary of a Case. 
         /// 
-        /// PatchCasemanagementCaseSummary is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
-        /// <param name="body">Summary</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Summary update.</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCaseSummaryAsyncWithHttpInfo (string caseId, CaseSummaryUpdate body)
@@ -7677,11 +7815,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the attributes of a Caseplan. 
         /// 
-        /// PatchCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Caseplan update.</param>
         /// <returns>Caseplan</returns>
         
         public Caseplan PatchCasemanagementCaseplan (string caseplanId, CaseplanUpdate body)
@@ -7693,11 +7830,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the attributes of a Caseplan. 
         /// 
-        /// PatchCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Caseplan update.</param>
         /// <returns>ApiResponse of Caseplan</returns>
         
         public ApiResponse< Caseplan > PatchCasemanagementCaseplanWithHttpInfo (string caseplanId, CaseplanUpdate body)
@@ -7791,11 +7927,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the attributes of a Caseplan. 
         /// 
-        /// PatchCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Caseplan update.</param>
         /// <returns>Task of Caseplan</returns>
         
         public async System.Threading.Tasks.Task<Caseplan> PatchCasemanagementCaseplanAsync (string caseplanId, CaseplanUpdate body)
@@ -7808,11 +7943,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the attributes of a Caseplan. 
         /// 
-        /// PatchCasemanagementCaseplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Caseplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Caseplan update.</param>
         /// <returns>Task of ApiResponse (Caseplan)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Caseplan>> PatchCasemanagementCaseplanAsyncWithHttpInfo (string caseplanId, CaseplanUpdate body)
@@ -7909,12 +8043,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the attributes of a Stageplan. 
         /// 
-        /// PatchCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="body">Stageplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan update.</param>
         /// <returns>Stageplan</returns>
         
         public Stageplan PatchCasemanagementCaseplanStageplan (string caseplanId, string stageplanId, StageplanUpdate body)
@@ -7926,12 +8059,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the attributes of a Stageplan. 
         /// 
-        /// PatchCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="body">Stageplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan update.</param>
         /// <returns>ApiResponse of Stageplan</returns>
         
         public ApiResponse< Stageplan > PatchCasemanagementCaseplanStageplanWithHttpInfo (string caseplanId, string stageplanId, StageplanUpdate body)
@@ -8029,12 +8161,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the attributes of a Stageplan. 
         /// 
-        /// PatchCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="body">Stageplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan update.</param>
         /// <returns>Task of Stageplan</returns>
         
         public async System.Threading.Tasks.Task<Stageplan> PatchCasemanagementCaseplanStageplanAsync (string caseplanId, string stageplanId, StageplanUpdate body)
@@ -8047,12 +8178,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the attributes of a Stageplan. 
         /// 
-        /// PatchCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="body">Stageplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan update.</param>
         /// <returns>Task of ApiResponse (Stageplan)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Stageplan>> PatchCasemanagementCaseplanStageplanAsyncWithHttpInfo (string caseplanId, string stageplanId, StageplanUpdate body)
@@ -8154,13 +8284,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the attributes of a Stepplan. 
         /// 
-        /// PatchCasemanagementCaseplanStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="body">Stepplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="body">Stepplan update.</param>
         /// <returns>Stepplan</returns>
         
         public Stepplan PatchCasemanagementCaseplanStageplanStepplan (string caseplanId, string stageplanId, string stepplanId, StepplanUpdate body)
@@ -8172,13 +8301,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the attributes of a Stepplan. 
         /// 
-        /// PatchCasemanagementCaseplanStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="body">Stepplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="body">Stepplan update.</param>
         /// <returns>ApiResponse of Stepplan</returns>
         
         public ApiResponse< Stepplan > PatchCasemanagementCaseplanStageplanStepplanWithHttpInfo (string caseplanId, string stageplanId, string stepplanId, StepplanUpdate body)
@@ -8280,13 +8408,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the attributes of a Stepplan. 
         /// 
-        /// PatchCasemanagementCaseplanStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="body">Stepplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="body">Stepplan update.</param>
         /// <returns>Task of Stepplan</returns>
         
         public async System.Threading.Tasks.Task<Stepplan> PatchCasemanagementCaseplanStageplanStepplanAsync (string caseplanId, string stageplanId, string stepplanId, StepplanUpdate body)
@@ -8299,13 +8426,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the attributes of a Stepplan. 
         /// 
-        /// PatchCasemanagementCaseplanStageplanStepplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="stageplanId">Stageplan ID</param>
-        /// <param name="stepplanId">Stepplan ID</param>
-        /// <param name="body">Stepplan</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="stepplanId">Stepplan identifier.</param>
+        /// <param name="body">Stepplan update.</param>
         /// <returns>Task of ApiResponse (Stepplan)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Stepplan>> PatchCasemanagementCaseplanStageplanStepplanAsyncWithHttpInfo (string caseplanId, string stageplanId, string stepplanId, StepplanUpdate body)
@@ -8410,36 +8536,37 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a case association. 
+        /// Create a Case association. 
         /// 
-        /// PostCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Case association create request.</param>
         /// <returns>CaseAssociation</returns>
         
-        public CaseAssociation PostCasemanagementCaseAssociations (string caseId, CaseAssociationCreate body = null)
+        public CaseAssociation PostCasemanagementCaseAssociations (string caseId, CaseAssociationCreate body)
         {
              ApiResponse<CaseAssociation> localVarResponse = PostCasemanagementCaseAssociationsWithHttpInfo(caseId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create a case association. 
+        /// Create a Case association. 
         /// 
-        /// PostCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Case association create request.</param>
         /// <returns>ApiResponse of CaseAssociation</returns>
         
-        public ApiResponse< CaseAssociation > PostCasemanagementCaseAssociationsWithHttpInfo (string caseId, CaseAssociationCreate body = null)
+        public ApiResponse< CaseAssociation > PostCasemanagementCaseAssociationsWithHttpInfo (string caseId, CaseAssociationCreate body)
         { 
             // verify the required parameter 'caseId' is set
             if (caseId == null)
                 throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->PostCasemanagementCaseAssociations");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCaseAssociations");
 
             var localVarPath = "/api/v2/casemanagement/cases/{caseId}/associations";
             var localVarHttpMethod = "Post";
@@ -8521,16 +8648,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a case association. 
+        /// Create a Case association. 
         /// 
-        /// PostCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Case association create request.</param>
         /// <returns>Task of CaseAssociation</returns>
         
-        public async System.Threading.Tasks.Task<CaseAssociation> PostCasemanagementCaseAssociationsAsync (string caseId, CaseAssociationCreate body = null)
+        public async System.Threading.Tasks.Task<CaseAssociation> PostCasemanagementCaseAssociationsAsync (string caseId, CaseAssociationCreate body)
         {
              ApiResponse<CaseAssociation> localVarResponse = await PostCasemanagementCaseAssociationsAsyncWithHttpInfo(caseId, body);
              return localVarResponse.Data;
@@ -8538,20 +8664,23 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a case association. 
+        /// Create a Case association. 
         /// 
-        /// PostCasemanagementCaseAssociations is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID.</param>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Case association create request.</param>
         /// <returns>Task of ApiResponse (CaseAssociation)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<CaseAssociation>> PostCasemanagementCaseAssociationsAsyncWithHttpInfo (string caseId, CaseAssociationCreate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CaseAssociation>> PostCasemanagementCaseAssociationsAsyncWithHttpInfo (string caseId, CaseAssociationCreate body)
         { 
             // verify the required parameter 'caseId' is set
             if (caseId == null)
                 throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->PostCasemanagementCaseAssociations");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCaseAssociations");
             
 
             var localVarPath = "/api/v2/casemanagement/cases/{caseId}/associations";
@@ -8637,10 +8766,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Terminate Job for a Case. 
         /// 
-        /// PostCasemanagementCaseTerminateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>TerminateJob</returns>
         
         public TerminateJob PostCasemanagementCaseTerminateJobs (string caseId)
@@ -8652,10 +8780,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Terminate Job for a Case. 
         /// 
-        /// PostCasemanagementCaseTerminateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>ApiResponse of TerminateJob</returns>
         
         public ApiResponse< TerminateJob > PostCasemanagementCaseTerminateJobsWithHttpInfo (string caseId)
@@ -8740,10 +8867,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Terminate Job for a Case. 
         /// 
-        /// PostCasemanagementCaseTerminateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>Task of TerminateJob</returns>
         
         public async System.Threading.Tasks.Task<TerminateJob> PostCasemanagementCaseTerminateJobsAsync (string caseId)
@@ -8756,10 +8882,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Terminate Job for a Case. 
         /// 
-        /// PostCasemanagementCaseTerminateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseId">Case ID</param>
+        /// <param name="caseId">Case identifier.</param>
         /// <returns>Task of ApiResponse (TerminateJob)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<TerminateJob>> PostCasemanagementCaseTerminateJobsAsyncWithHttpInfo (string caseId)
@@ -8844,12 +8969,239 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Publish Caseplan. 
+        /// Add a data schema to a draft Caseplan. 
         /// 
-        /// PostCasemanagementCaseplanPublish is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>CaseplanDataSchema</returns>
+        
+        public CaseplanDataSchema PostCasemanagementCaseplanDataschemas (string caseplanId, CaseplanDataSchemaRequest body)
+        {
+             ApiResponse<CaseplanDataSchema> localVarResponse = PostCasemanagementCaseplanDataschemasWithHttpInfo(caseplanId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a data schema to a draft Caseplan. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>ApiResponse of CaseplanDataSchema</returns>
+        
+        public ApiResponse< CaseplanDataSchema > PostCasemanagementCaseplanDataschemasWithHttpInfo (string caseplanId, CaseplanDataSchemaRequest body)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->PostCasemanagementCaseplanDataschemas");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCaseplanDataschemas");
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/dataschemas";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplanDataschemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostCasemanagementCaseplanDataschemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplanDataschemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CaseplanDataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (CaseplanDataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseplanDataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add a data schema to a draft Caseplan. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>Task of CaseplanDataSchema</returns>
+        
+        public async System.Threading.Tasks.Task<CaseplanDataSchema> PostCasemanagementCaseplanDataschemasAsync (string caseplanId, CaseplanDataSchemaRequest body)
+        {
+             ApiResponse<CaseplanDataSchema> localVarResponse = await PostCasemanagementCaseplanDataschemasAsyncWithHttpInfo(caseplanId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add a data schema to a draft Caseplan. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>Task of ApiResponse (CaseplanDataSchema)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CaseplanDataSchema>> PostCasemanagementCaseplanDataschemasAsyncWithHttpInfo (string caseplanId, CaseplanDataSchemaRequest body)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->PostCasemanagementCaseplanDataschemas");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCaseplanDataschemas");
+            
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/dataschemas";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplanDataschemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostCasemanagementCaseplanDataschemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplanDataschemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CaseplanDataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (CaseplanDataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseplanDataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Publish Caseplan. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Caseplan</returns>
         
         public Caseplan PostCasemanagementCaseplanPublish (string caseplanId)
@@ -8861,10 +9213,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Publish Caseplan. 
         /// 
-        /// PostCasemanagementCaseplanPublish is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>ApiResponse of Caseplan</returns>
         
         public ApiResponse< Caseplan > PostCasemanagementCaseplanPublishWithHttpInfo (string caseplanId)
@@ -8949,10 +9300,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Publish Caseplan. 
         /// 
-        /// PostCasemanagementCaseplanPublish is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of Caseplan</returns>
         
         public async System.Threading.Tasks.Task<Caseplan> PostCasemanagementCaseplanPublishAsync (string caseplanId)
@@ -8965,10 +9315,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Publish Caseplan. 
         /// 
-        /// PostCasemanagementCaseplanPublish is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of ApiResponse (Caseplan)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Caseplan>> PostCasemanagementCaseplanPublishAsyncWithHttpInfo (string caseplanId)
@@ -9055,10 +9404,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create Caseplan version. 
         /// 
-        /// PostCasemanagementCaseplanVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Caseplan</returns>
         
         public Caseplan PostCasemanagementCaseplanVersions (string caseplanId)
@@ -9070,10 +9418,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create Caseplan version. 
         /// 
-        /// PostCasemanagementCaseplanVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>ApiResponse of Caseplan</returns>
         
         public ApiResponse< Caseplan > PostCasemanagementCaseplanVersionsWithHttpInfo (string caseplanId)
@@ -9158,10 +9505,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create Caseplan version. 
         /// 
-        /// PostCasemanagementCaseplanVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of Caseplan</returns>
         
         public async System.Threading.Tasks.Task<Caseplan> PostCasemanagementCaseplanVersionsAsync (string caseplanId)
@@ -9174,10 +9520,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create Caseplan version. 
         /// 
-        /// PostCasemanagementCaseplanVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
         /// <returns>Task of ApiResponse (Caseplan)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Caseplan>> PostCasemanagementCaseplanVersionsAsyncWithHttpInfo (string caseplanId)
@@ -9264,10 +9609,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Caseplan. 
         /// 
-        /// PostCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Caseplan</param>
+        /// <param name="body">Caseplan create request.</param>
         /// <returns>CaseplanCreateResponse</returns>
         
         public CaseplanCreateResponse PostCasemanagementCaseplans (CaseplanCreate body)
@@ -9279,10 +9623,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Caseplan. 
         /// 
-        /// PostCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Caseplan</param>
+        /// <param name="body">Caseplan create request.</param>
         /// <returns>ApiResponse of CaseplanCreateResponse</returns>
         
         public ApiResponse< CaseplanCreateResponse > PostCasemanagementCaseplansWithHttpInfo (CaseplanCreate body)
@@ -9372,10 +9715,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Caseplan. 
         /// 
-        /// PostCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Caseplan</param>
+        /// <param name="body">Caseplan create request.</param>
         /// <returns>Task of CaseplanCreateResponse</returns>
         
         public async System.Threading.Tasks.Task<CaseplanCreateResponse> PostCasemanagementCaseplansAsync (CaseplanCreate body)
@@ -9388,10 +9730,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Caseplan. 
         /// 
-        /// PostCasemanagementCaseplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Caseplan</param>
+        /// <param name="body">Caseplan create request.</param>
         /// <returns>Task of ApiResponse (CaseplanCreateResponse)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<CaseplanCreateResponse>> PostCasemanagementCaseplansAsyncWithHttpInfo (CaseplanCreate body)
@@ -9481,12 +9822,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query for caseplans 
+        /// Query for Caseplans. 
         /// 
-        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CaseplanQueryRequest</param>
+        /// <param name="body">Caseplan query request.</param>
         /// <returns>CaseplanQueryEntityListing</returns>
         
         public CaseplanQueryEntityListing PostCasemanagementCaseplansQuery (CaseplanQueryRequest body)
@@ -9496,12 +9836,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query for caseplans 
+        /// Query for Caseplans. 
         /// 
-        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CaseplanQueryRequest</param>
+        /// <param name="body">Caseplan query request.</param>
         /// <returns>ApiResponse of CaseplanQueryEntityListing</returns>
         
         public ApiResponse< CaseplanQueryEntityListing > PostCasemanagementCaseplansQueryWithHttpInfo (CaseplanQueryRequest body)
@@ -9589,12 +9928,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query for caseplans 
+        /// Query for Caseplans. 
         /// 
-        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CaseplanQueryRequest</param>
+        /// <param name="body">Caseplan query request.</param>
         /// <returns>Task of CaseplanQueryEntityListing</returns>
         
         public async System.Threading.Tasks.Task<CaseplanQueryEntityListing> PostCasemanagementCaseplansQueryAsync (CaseplanQueryRequest body)
@@ -9605,12 +9943,11 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query for caseplans 
+        /// Query for Caseplans. 
         /// 
-        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">CaseplanQueryRequest</param>
+        /// <param name="body">Caseplan query request.</param>
         /// <returns>Task of ApiResponse (CaseplanQueryEntityListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<CaseplanQueryEntityListing>> PostCasemanagementCaseplansQueryAsyncWithHttpInfo (CaseplanQueryRequest body)
@@ -9702,10 +10039,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Case. 
         /// 
-        /// PostCasemanagementCases is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case</param>
+        /// <param name="body">Case create request.</param>
         /// <returns>Case</returns>
         
         public Case PostCasemanagementCases (CaseCreate body)
@@ -9717,10 +10053,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Case. 
         /// 
-        /// PostCasemanagementCases is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case</param>
+        /// <param name="body">Case create request.</param>
         /// <returns>ApiResponse of Case</returns>
         
         public ApiResponse< Case > PostCasemanagementCasesWithHttpInfo (CaseCreate body)
@@ -9810,10 +10145,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Case. 
         /// 
-        /// PostCasemanagementCases is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case</param>
+        /// <param name="body">Case create request.</param>
         /// <returns>Task of Case</returns>
         
         public async System.Threading.Tasks.Task<Case> PostCasemanagementCasesAsync (CaseCreate body)
@@ -9826,10 +10160,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Case. 
         /// 
-        /// PostCasemanagementCases is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case</param>
+        /// <param name="body">Case create request.</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<Case>> PostCasemanagementCasesAsyncWithHttpInfo (CaseCreate body)
@@ -9919,31 +10252,32 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query for case associations 
+        /// Query for Case associations by interaction. 
         /// 
-        /// PostCasemanagementCasesAssociationsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="body">Case association query request.</param>
         /// <returns>CaseAssociationQueryEntityListing</returns>
         
-        public CaseAssociationQueryEntityListing PostCasemanagementCasesAssociationsQuery (CaseAssociationQuery body = null)
+        public CaseAssociationQueryEntityListing PostCasemanagementCasesAssociationsQuery (CaseAssociationQuery body)
         {
              ApiResponse<CaseAssociationQueryEntityListing> localVarResponse = PostCasemanagementCasesAssociationsQueryWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Query for case associations 
+        /// Query for Case associations by interaction. 
         /// 
-        /// PostCasemanagementCasesAssociationsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="body">Case association query request.</param>
         /// <returns>ApiResponse of CaseAssociationQueryEntityListing</returns>
         
-        public ApiResponse< CaseAssociationQueryEntityListing > PostCasemanagementCasesAssociationsQueryWithHttpInfo (CaseAssociationQuery body = null)
+        public ApiResponse< CaseAssociationQueryEntityListing > PostCasemanagementCasesAssociationsQueryWithHttpInfo (CaseAssociationQuery body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCasesAssociationsQuery");
 
             var localVarPath = "/api/v2/casemanagement/cases/associations/query";
             var localVarHttpMethod = "Post";
@@ -10024,15 +10358,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query for case associations 
+        /// Query for Case associations by interaction. 
         /// 
-        /// PostCasemanagementCasesAssociationsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="body">Case association query request.</param>
         /// <returns>Task of CaseAssociationQueryEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<CaseAssociationQueryEntityListing> PostCasemanagementCasesAssociationsQueryAsync (CaseAssociationQuery body = null)
+        public async System.Threading.Tasks.Task<CaseAssociationQueryEntityListing> PostCasemanagementCasesAssociationsQueryAsync (CaseAssociationQuery body)
         {
              ApiResponse<CaseAssociationQueryEntityListing> localVarResponse = await PostCasemanagementCasesAssociationsQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -10040,16 +10373,19 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query for case associations 
+        /// Query for Case associations by interaction. 
         /// 
-        /// PostCasemanagementCasesAssociationsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Case Association (optional)</param>
+        /// <param name="body">Case association query request.</param>
         /// <returns>Task of ApiResponse (CaseAssociationQueryEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<CaseAssociationQueryEntityListing>> PostCasemanagementCasesAssociationsQueryAsyncWithHttpInfo (CaseAssociationQuery body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CaseAssociationQueryEntityListing>> PostCasemanagementCasesAssociationsQueryAsyncWithHttpInfo (CaseAssociationQuery body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCasesAssociationsQuery");
+            
 
             var localVarPath = "/api/v2/casemanagement/cases/associations/query";
             var localVarHttpMethod = "Post";
@@ -10131,13 +10467,253 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the intake settings for a Caseplan. 
+        /// Update a data schema on a draft Caseplan. 
         /// 
-        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Intake Settings</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>CaseplanDataSchema</returns>
+        
+        public CaseplanDataSchema PutCasemanagementCaseplanDataschema (string caseplanId, string schemaKeyName, CaseplanDataSchemaRequest body)
+        {
+             ApiResponse<CaseplanDataSchema> localVarResponse = PutCasemanagementCaseplanDataschemaWithHttpInfo(caseplanId, schemaKeyName, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a data schema on a draft Caseplan. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>ApiResponse of CaseplanDataSchema</returns>
+        
+        public ApiResponse< CaseplanDataSchema > PutCasemanagementCaseplanDataschemaWithHttpInfo (string caseplanId, string schemaKeyName, CaseplanDataSchemaRequest body)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->PutCasemanagementCaseplanDataschema");
+            // verify the required parameter 'schemaKeyName' is set
+            if (schemaKeyName == null)
+                throw new ApiException(400, "Missing required parameter 'schemaKeyName' when calling CaseManagementApi->PutCasemanagementCaseplanDataschema");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PutCasemanagementCaseplanDataschema");
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/dataschemas/{schemaKeyName}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+            if (schemaKeyName != null) localVarPathParams.Add("schemaKeyName", this.Configuration.ApiClient.ParameterToString(schemaKeyName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutCasemanagementCaseplanDataschema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutCasemanagementCaseplanDataschema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCasemanagementCaseplanDataschema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CaseplanDataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (CaseplanDataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseplanDataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a data schema on a draft Caseplan. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>Task of CaseplanDataSchema</returns>
+        
+        public async System.Threading.Tasks.Task<CaseplanDataSchema> PutCasemanagementCaseplanDataschemaAsync (string caseplanId, string schemaKeyName, CaseplanDataSchemaRequest body)
+        {
+             ApiResponse<CaseplanDataSchema> localVarResponse = await PutCasemanagementCaseplanDataschemaAsyncWithHttpInfo(caseplanId, schemaKeyName, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a data schema on a draft Caseplan. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="schemaKeyName">Schema key (for example \&quot;default\&quot;).</param>
+        /// <param name="body">Data schema reference.</param>
+        /// <returns>Task of ApiResponse (CaseplanDataSchema)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CaseplanDataSchema>> PutCasemanagementCaseplanDataschemaAsyncWithHttpInfo (string caseplanId, string schemaKeyName, CaseplanDataSchemaRequest body)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->PutCasemanagementCaseplanDataschema");
+            
+            // verify the required parameter 'schemaKeyName' is set
+            if (schemaKeyName == null)
+                throw new ApiException(400, "Missing required parameter 'schemaKeyName' when calling CaseManagementApi->PutCasemanagementCaseplanDataschema");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PutCasemanagementCaseplanDataschema");
+            
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/dataschemas/{schemaKeyName}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+            if (schemaKeyName != null) localVarPathParams.Add("schemaKeyName", this.Configuration.ApiClient.ParameterToString(schemaKeyName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutCasemanagementCaseplanDataschema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutCasemanagementCaseplanDataschema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCasemanagementCaseplanDataschema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CaseplanDataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (CaseplanDataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseplanDataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update the intake settings for a Caseplan. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Intake settings update.</param>
         /// <returns>IntakeSettingsListing</returns>
         
         public IntakeSettingsListing PutCasemanagementCaseplanIntakesettings (string caseplanId, IntakeSettingsUpdate body)
@@ -10149,11 +10725,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the intake settings for a Caseplan. 
         /// 
-        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Intake Settings</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Intake settings update.</param>
         /// <returns>ApiResponse of IntakeSettingsListing</returns>
         
         public ApiResponse< IntakeSettingsListing > PutCasemanagementCaseplanIntakesettingsWithHttpInfo (string caseplanId, IntakeSettingsUpdate body)
@@ -10247,11 +10822,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the intake settings for a Caseplan. 
         /// 
-        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Intake Settings</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Intake settings update.</param>
         /// <returns>Task of IntakeSettingsListing</returns>
         
         public async System.Threading.Tasks.Task<IntakeSettingsListing> PutCasemanagementCaseplanIntakesettingsAsync (string caseplanId, IntakeSettingsUpdate body)
@@ -10264,11 +10838,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the intake settings for a Caseplan. 
         /// 
-        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="caseplanId">Caseplan ID</param>
-        /// <param name="body">Intake Settings</param>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Intake settings update.</param>
         /// <returns>Task of ApiResponse (IntakeSettingsListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<IntakeSettingsListing>> PutCasemanagementCaseplanIntakesettingsAsyncWithHttpInfo (string caseplanId, IntakeSettingsUpdate body)

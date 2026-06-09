@@ -66,17 +66,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ReferencePrefix">The prefix used when creating the reference for Cases from the Caseplan..</param>
         /// <param name="DefaultDueDurationInSeconds">The default due duration in seconds for Cases created from the Caseplan..</param>
         /// <param name="DefaultTtlSeconds">The default TTL in seconds for Cases created from the Caseplan..</param>
-        /// <param name="DefaultCaseOwner">The default case owner for Cases created from the Caseplan..</param>
+        /// <param name="DefaultCaseOwner">The default Case owner for Cases created from the Caseplan..</param>
         /// <param name="Latest">The latest version of the Caseplan..</param>
         /// <param name="Published">The published version of the Caseplan..</param>
         /// <param name="DateCreated">The Caseplan creation date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">The Caseplan modification date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DatePublished">The Caseplan publication date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ModifiedBy">The id of the User who modified the Caseplan..</param>
-        /// <param name="CustomerIntent">The customer intent for the Cases created from the caseplan..</param>
+        /// <param name="ModifiedBy">The ID of the User who modified the Caseplan..</param>
+        /// <param name="CustomerIntent">The customer intent for Cases created from this Caseplan..</param>
         /// <param name="VersionState">The version state of the Caseplan..</param>
-        /// <param name="DataSchemas">The schemas that define all data for cases from this Caseplan..</param>
-        /// <param name="IntakeSettings">The intake format when collecting data for a case from this caseplan..</param>
+        /// <param name="DataSchemas">The schemas that define all data for Cases from this Caseplan..</param>
+        /// <param name="IntakeSettings">The intake format when collecting data for a Case from this Caseplan..</param>
         public CaseplanCreateResponse(string Name = null, StarrableDivision Division = null, string Description = null, string ReferencePrefix = null, int? DefaultDueDurationInSeconds = null, int? DefaultTtlSeconds = null, UserReference DefaultCaseOwner = null, int? Latest = null, int? Published = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DatePublished = null, UserReference ModifiedBy = null, CustomerIntentReference CustomerIntent = null, VersionStateEnum? VersionState = null, List<CaseplanDataSchema> DataSchemas = null, List<IntakeSetting> IntakeSettings = null)
         {
             this.Name = Name;
@@ -165,9 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The default case owner for Cases created from the Caseplan.
+        /// The default Case owner for Cases created from the Caseplan.
         /// </summary>
-        /// <value>The default case owner for Cases created from the Caseplan.</value>
+        /// <value>The default Case owner for Cases created from the Caseplan.</value>
         [DataMember(Name="defaultCaseOwner", EmitDefaultValue=false)]
         public UserReference DefaultCaseOwner { get; set; }
 
@@ -219,18 +219,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The id of the User who modified the Caseplan.
+        /// The ID of the User who modified the Caseplan.
         /// </summary>
-        /// <value>The id of the User who modified the Caseplan.</value>
+        /// <value>The ID of the User who modified the Caseplan.</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public UserReference ModifiedBy { get; set; }
 
 
 
         /// <summary>
-        /// The customer intent for the Cases created from the caseplan.
+        /// The customer intent for Cases created from this Caseplan.
         /// </summary>
-        /// <value>The customer intent for the Cases created from the caseplan.</value>
+        /// <value>The customer intent for Cases created from this Caseplan.</value>
         [DataMember(Name="customerIntent", EmitDefaultValue=false)]
         public CustomerIntentReference CustomerIntent { get; set; }
 
@@ -239,18 +239,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The schemas that define all data for cases from this Caseplan.
+        /// The schemas that define all data for Cases from this Caseplan.
         /// </summary>
-        /// <value>The schemas that define all data for cases from this Caseplan.</value>
+        /// <value>The schemas that define all data for Cases from this Caseplan.</value>
         [DataMember(Name="dataSchemas", EmitDefaultValue=false)]
         public List<CaseplanDataSchema> DataSchemas { get; set; }
 
 
 
         /// <summary>
-        /// The intake format when collecting data for a case from this caseplan.
+        /// The intake format when collecting data for a Case from this Caseplan.
         /// </summary>
-        /// <value>The intake format when collecting data for a case from this caseplan.</value>
+        /// <value>The intake format when collecting data for a Case from this Caseplan.</value>
         [DataMember(Name="intakeSettings", EmitDefaultValue=false)]
         public List<IntakeSetting> IntakeSettings { get; set; }
 

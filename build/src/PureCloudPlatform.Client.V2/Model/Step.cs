@@ -81,8 +81,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">The ID of the User who modified the Step..</param>
         /// <param name="Version">The version of the Step..</param>
         /// <param name="Status">The Status of the Step..</param>
-        /// <param name="Stage">The parent stage of the step..</param>
-        /// <param name="Case">The parent case of the step..</param>
+        /// <param name="Stage">The parent Stage of the Step..</param>
+        /// <param name="Case">The parent Case of the Step..</param>
         public Step(string Name = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateCompleted = null, DateTime? DateStarted = null, UserReference ModifiedBy = null, int? Version = null, StatusEnum? Status = null, StageReference Stage = null, CaseReference Case = null)
         {
             this.Name = Name;
@@ -185,9 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The parent stage of the step.
+        /// The parent Stage of the Step.
         /// </summary>
-        /// <value>The parent stage of the step.</value>
+        /// <value>The parent Stage of the Step.</value>
         [DataMember(Name="stage", EmitDefaultValue=false)]
         public StageReference Stage { get; set; }
 
@@ -203,9 +203,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The parent case of the step.
+        /// The parent Case of the Step.
         /// </summary>
-        /// <value>The parent case of the step.</value>
+        /// <value>The parent Case of the Step.</value>
         [DataMember(Name="case", EmitDefaultValue=false)]
         public CaseReference Case { get; set; }
 

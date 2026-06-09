@@ -27,6 +27,24 @@ namespace PureCloudPlatform.Client.V2.Model
         }
         
 
+
+        /// <summary>
+        /// Status code
+        /// </summary>
+        /// <value>Status code</value>
+        [DataMember(Name="code", EmitDefaultValue=false)]
+        public string Code { get; private set; }
+
+
+
+        /// <summary>
+        /// Status Message
+        /// </summary>
+        /// <value>Status Message</value>
+        [DataMember(Name="message", EmitDefaultValue=false)]
+        public string Message { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -36,6 +54,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class StatusInfo {\n");
 
+            sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +95,17 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.Code == other.Code ||
+                    this.Code != null &&
+                    this.Code.Equals(other.Code)
+                ) &&
+                (
+                    this.Message == other.Message ||
+                    this.Message != null &&
+                    this.Message.Equals(other.Message)
+                );
         }
 
         /// <summary>
@@ -89,6 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Code != null)
+                    hash = hash * 59 + this.Code.GetHashCode();
+
+                if (this.Message != null)
+                    hash = hash * 59 + this.Message.GetHashCode();
+
                 return hash;
             }
         }

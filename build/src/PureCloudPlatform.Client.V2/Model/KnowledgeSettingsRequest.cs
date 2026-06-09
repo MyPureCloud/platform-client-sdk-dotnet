@@ -32,13 +32,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Sources">Knowledge source information to search upon. (required).</param>
         /// <param name="GenerationSetting">Setting for answer generation..</param>
         /// <param name="Stateful">Indicates if stateful search and generation is enabled for the knowledge setting..</param>
-        public KnowledgeSettingsRequest(string Name = null, string Description = null, List<V3SourceRef> Sources = null, KnowledgeGenerationSetting GenerationSetting = null, bool? Stateful = null)
+        /// <param name="Filter">Composite tag filter of search results..</param>
+        public KnowledgeSettingsRequest(string Name = null, string Description = null, List<V3SourceRef> Sources = null, KnowledgeGenerationSetting GenerationSetting = null, bool? Stateful = null, V3SourceTagFilter Filter = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.Sources = Sources;
             this.GenerationSetting = GenerationSetting;
             this.Stateful = Stateful;
+            this.Filter = Filter;
             
         }
         
@@ -88,6 +90,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Stateful { get; set; }
 
 
+
+        /// <summary>
+        /// Composite tag filter of search results.
+        /// </summary>
+        /// <value>Composite tag filter of search results.</value>
+        [DataMember(Name="filter", EmitDefaultValue=false)]
+        public V3SourceTagFilter Filter { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Sources: ").Append(Sources).Append("\n");
             sb.Append("  GenerationSetting: ").Append(GenerationSetting).Append("\n");
             sb.Append("  Stateful: ").Append(Stateful).Append("\n");
+            sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -166,6 +178,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Stateful == other.Stateful ||
                     this.Stateful != null &&
                     this.Stateful.Equals(other.Stateful)
+                ) &&
+                (
+                    this.Filter == other.Filter ||
+                    this.Filter != null &&
+                    this.Filter.Equals(other.Filter)
                 );
         }
 
@@ -194,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Stateful != null)
                     hash = hash * 59 + this.Stateful.GetHashCode();
+
+                if (this.Filter != null)
+                    hash = hash * 59 + this.Filter.GetHashCode();
 
                 return hash;
             }

@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CaseplanQueryRequest" /> class.
         /// </summary>
-        /// <param name="Name">Filter by caseplan name (case-insensitive, partial match). Omitting name returns all caseplans (subject to pagination)..</param>
+        /// <param name="Name">Filter by Caseplan name (case-insensitive, partial match). Omitting name returns all Caseplans (subject to pagination)..</param>
         /// <param name="PageSize">Number of results per page. Maximum is 200. Default is 25..</param>
         /// <param name="After">Cursor for pagination. Use the \&quot;after\&quot; value from the previous response..</param>
         /// <param name="DivisionIds">Divisions to filter by. Accepts a list of UUIDs and/or &#39;*&#39;..</param>
@@ -37,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Filter by caseplan name (case-insensitive, partial match). Omitting name returns all caseplans (subject to pagination).
+        /// Filter by Caseplan name (case-insensitive, partial match). Omitting name returns all Caseplans (subject to pagination).
         /// </summary>
-        /// <value>Filter by caseplan name (case-insensitive, partial match). Omitting name returns all caseplans (subject to pagination).</value>
+        /// <value>Filter by Caseplan name (case-insensitive, partial match). Omitting name returns all Caseplans (subject to pagination).</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 

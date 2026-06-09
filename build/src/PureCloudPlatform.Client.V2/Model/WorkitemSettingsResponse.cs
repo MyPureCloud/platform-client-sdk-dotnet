@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkitemSettingsResponse" /> class.
         /// </summary>
-        /// <param name="Worktype">The worktype information for the workitem settings..</param>
+        /// <param name="Worktype">The Worktype information for the Workitem settings..</param>
         public WorkitemSettingsResponse(StepplansWorktypeReference Worktype = null)
         {
             this.Worktype = Worktype;
@@ -31,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The worktype information for the workitem settings.
+        /// The Worktype information for the Workitem settings.
         /// </summary>
-        /// <value>The worktype information for the workitem settings.</value>
+        /// <value>The Worktype information for the Workitem settings.</value>
         [DataMember(Name="worktype", EmitDefaultValue=false)]
         public StepplansWorktypeReference Worktype { get; set; }
 

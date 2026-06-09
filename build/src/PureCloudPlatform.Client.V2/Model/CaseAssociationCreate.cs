@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CaseAssociationCreate" /> class.
         /// </summary>
-        /// <param name="WorkitemId">The ID of the workitem to associate with the case..</param>
-        /// <param name="ConversationId">The ID of the conversation to associate with the case..</param>
+        /// <param name="WorkitemId">The ID of the Workitem to associate with the Case..</param>
+        /// <param name="ConversationId">The ID of the Conversation to associate with the Case..</param>
         public CaseAssociationCreate(string WorkitemId = null, string ConversationId = null)
         {
             this.WorkitemId = WorkitemId;
@@ -33,18 +33,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ID of the workitem to associate with the case.
+        /// The ID of the Workitem to associate with the Case.
         /// </summary>
-        /// <value>The ID of the workitem to associate with the case.</value>
+        /// <value>The ID of the Workitem to associate with the Case.</value>
         [DataMember(Name="workitemId", EmitDefaultValue=false)]
         public string WorkitemId { get; set; }
 
 
 
         /// <summary>
-        /// The ID of the conversation to associate with the case.
+        /// The ID of the Conversation to associate with the Case.
         /// </summary>
-        /// <value>The ID of the conversation to associate with the case.</value>
+        /// <value>The ID of the Conversation to associate with the Case.</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
 

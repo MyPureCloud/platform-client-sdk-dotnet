@@ -13,19 +13,19 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ExportListing
+    /// DecisionTableExportJobListing
     /// </summary>
     [DataContract]
-    public partial class ExportListing :  IEquatable<ExportListing>
+    public partial class DecisionTableExportJobListing :  IEquatable<DecisionTableExportJobListing>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ExportListing" /> class.
+        /// Initializes a new instance of the <see cref="DecisionTableExportJobListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="NextUri">NextUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
-        public ExportListing(List<ContactsExport> Entities = null, string NextUri = null, string SelfUri = null, string PreviousUri = null)
+        public DecisionTableExportJobListing(List<DecisionTableExportJob> Entities = null, string NextUri = null, string SelfUri = null, string PreviousUri = null)
         {
             this.Entities = Entities;
             this.NextUri = NextUri;
@@ -40,7 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<ContactsExport> Entities { get; set; }
+        public List<DecisionTableExportJob> Entities { get; set; }
 
 
 
@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ExportListing {\n");
+            sb.Append("class DecisionTableExportJobListing {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  NextUri: ").Append(NextUri).Append("\n");
@@ -105,15 +105,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ExportListing);
+            return this.Equals(obj as DecisionTableExportJobListing);
         }
 
         /// <summary>
-        /// Returns true if ExportListing instances are equal
+        /// Returns true if DecisionTableExportJobListing instances are equal
         /// </summary>
-        /// <param name="other">Instance of ExportListing to be compared</param>
+        /// <param name="other">Instance of DecisionTableExportJobListing to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ExportListing other)
+        public bool Equals(DecisionTableExportJobListing other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

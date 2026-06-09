@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Image for "Image"
             /// </summary>
             [EnumMember(Value = "Image")]
-            Image
+            Image,
+            
+            /// <summary>
+            /// Enum Video for "Video"
+            /// </summary>
+            [EnumMember(Value = "Video")]
+            Video
         }
         /// <summary>
         /// Defines the content type of the Header in message

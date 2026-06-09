@@ -94,7 +94,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Form for "Form"
             /// </summary>
             [EnumMember(Value = "Form")]
-            Form
+            Form,
+            
+            /// <summary>
+            /// Enum Appleinvitation for "AppleInvitation"
+            /// </summary>
+            [EnumMember(Value = "AppleInvitation")]
+            Appleinvitation
         }
         /// <summary>
         /// The interaction type for this response.

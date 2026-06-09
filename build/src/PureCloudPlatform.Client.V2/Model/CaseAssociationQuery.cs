@@ -22,9 +22,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CaseAssociationQuery" /> class.
         /// </summary>
         /// <param name="PageSize">The number of entities to return in the response..</param>
-        /// <param name="After">The cursor that points to the end of the set of entities that has been returned..</param>
+        /// <param name="After">Cursor pointing to the end of the previously returned page of associations..</param>
         /// <param name="WorkitemId">The Workitem ID to query by..</param>
-        /// <param name="ConversationId">The conversation ID to query by..</param>
+        /// <param name="ConversationId">The Conversation ID to query by..</param>
         public CaseAssociationQuery(int? PageSize = null, string After = null, string WorkitemId = null, string ConversationId = null)
         {
             this.PageSize = PageSize;
@@ -46,9 +46,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The cursor that points to the end of the set of entities that has been returned.
+        /// Cursor pointing to the end of the previously returned page of associations.
         /// </summary>
-        /// <value>The cursor that points to the end of the set of entities that has been returned.</value>
+        /// <value>Cursor pointing to the end of the previously returned page of associations.</value>
         [DataMember(Name="after", EmitDefaultValue=false)]
         public string After { get; set; }
 
@@ -64,9 +64,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The conversation ID to query by.
+        /// The Conversation ID to query by.
         /// </summary>
-        /// <value>The conversation ID to query by.</value>
+        /// <value>The Conversation ID to query by.</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
 

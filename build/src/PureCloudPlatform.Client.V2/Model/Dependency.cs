@@ -123,6 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversationsummarysetting,
             
             /// <summary>
+            /// Enum Customersegment for "CUSTOMERSEGMENT"
+            /// </summary>
+            [EnumMember(Value = "CUSTOMERSEGMENT")]
+            Customersegment,
+            
+            /// <summary>
             /// Enum Dataaction for "DATAACTION"
             /// </summary>
             [EnumMember(Value = "DATAACTION")]

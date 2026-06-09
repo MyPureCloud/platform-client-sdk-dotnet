@@ -81,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">The ID of the User who modified the Stage..</param>
         /// <param name="Version">The version of the Stage..</param>
         /// <param name="Status">The Status of the Stage..</param>
-        /// <param name="Case">The parent case of the Stage..</param>
+        /// <param name="Case">The parent Case of the Stage..</param>
         public Stage(string Name = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateCompleted = null, DateTime? DateStarted = null, UserReference ModifiedBy = null, int? Version = null, StatusEnum? Status = null, CaseReference Case = null)
         {
             this.Name = Name;
@@ -192,9 +192,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The parent case of the Stage.
+        /// The parent Case of the Stage.
         /// </summary>
-        /// <value>The parent case of the Stage.</value>
+        /// <value>The parent Case of the Stage.</value>
         [DataMember(Name="case", EmitDefaultValue=false)]
         public CaseReference Case { get; set; }
 
