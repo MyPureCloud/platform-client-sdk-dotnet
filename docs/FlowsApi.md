@@ -23,8 +23,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete/cancel an async request for flow aggregates
 
-DeleteAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:flowAggregate:view
@@ -85,8 +83,6 @@ void (empty response body)
 
 
 Get status for async query for Flow aggregates
-
-GetAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -149,8 +145,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsFlowsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -281,8 +275,6 @@ namespace Example
 
 
 Query for flow aggregates asynchronously
-
-PostAnalyticsFlowsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -463,4 +455,4 @@ namespace Example
 [**FlowObservationQueryResponse**](FlowObservationQueryResponse)
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_

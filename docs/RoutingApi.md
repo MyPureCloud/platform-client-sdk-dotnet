@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingEmailDomain**](#DeleteRoutingEmailDomain) | **Delete** /api/v2/routing/email/domains/{domainId} | Delete a domain |
 | [**DeleteRoutingEmailDomainRoute**](#DeleteRoutingEmailDomainRoute) | **Delete** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Delete a route |
 | [**DeleteRoutingEmailOutboundDomain**](#DeleteRoutingEmailOutboundDomain) | **Delete** /api/v2/routing/email/outbound/domains/{domainId} | Delete an outbound domain |
+| [**DeleteRoutingEmailSettingEmailSettingId**](#DeleteRoutingEmailSettingEmailSettingId) | **Delete** /api/v2/routing/email/setting/{emailSettingId} | Delete an email setting. Removes the email setting and its associated settings |
 | [**DeleteRoutingLanguage**](#DeleteRoutingLanguage) | **Delete** /api/v2/routing/languages/{languageId} | Delete a routing language |
 | [**DeleteRoutingPredictor**](#DeleteRoutingPredictor) | **Delete** /api/v2/routing/predictors/{predictorId} | Delete single predictor. |
 | [**DeleteRoutingPredictorsKeyperformanceindicator**](#DeleteRoutingPredictorsKeyperformanceindicator) | **Delete** /api/v2/routing/predictors/keyperformanceindicators/{kpiId} | Delete a custom Key Performance Indicator. |
@@ -49,6 +50,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingEmailOutboundDomain**](#GetRoutingEmailOutboundDomain) | **Get** /api/v2/routing/email/outbound/domains/{domainId} | Get domain |
 | [**GetRoutingEmailOutboundDomainActivation**](#GetRoutingEmailOutboundDomainActivation) | **Get** /api/v2/routing/email/outbound/domains/{domainId}/activation | Get activation status (cname + dkim) of an outbound domain |
 | [**GetRoutingEmailOutboundDomains**](#GetRoutingEmailOutboundDomains) | **Get** /api/v2/routing/email/outbound/domains | Get outbound domains |
+| [**GetRoutingEmailSetting**](#GetRoutingEmailSetting) | **Get** /api/v2/routing/email/setting | Get a paged list of email routing settings. |
+| [**GetRoutingEmailSettingEmailSettingId**](#GetRoutingEmailSettingEmailSettingId) | **Get** /api/v2/routing/email/setting/{emailSettingId} | Get email setting. Returns the specified email setting that defines settings for email |
 | [**GetRoutingEmailSetup**](#GetRoutingEmailSetup) | **Get** /api/v2/routing/email/setup | Get email setup |
 | [**GetRoutingLanguage**](#GetRoutingLanguage) | **Get** /api/v2/routing/languages/{languageId} | Get a routing language |
 | [**GetRoutingLanguages**](#GetRoutingLanguages) | **Get** /api/v2/routing/languages | Get the list of supported languages. |
@@ -86,7 +89,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingSkillgroupMembers**](#GetRoutingSkillgroupMembers) | **Get** /api/v2/routing/skillgroups/{skillGroupId}/members | Get skill group members |
 | [**GetRoutingSkillgroupMembersDivisions**](#GetRoutingSkillgroupMembersDivisions) | **Get** /api/v2/routing/skillgroups/{skillGroupId}/members/divisions | Get list of member divisions for this skill group. |
 | [**GetRoutingSkillgroups**](#GetRoutingSkillgroups) | **Get** /api/v2/routing/skillgroups | Get skill group listing |
-| [**GetRoutingSkills**](#GetRoutingSkills) | **Get** /api/v2/routing/skills | Get the list of routing skills. |
+| [**GetRoutingSkills**](#GetRoutingSkills) | **Get** /api/v2/routing/skills | Get the list of routing skills. View permission enforcement only applies to skills assigned to a division. |
 | [**GetRoutingSmsAddress**](#GetRoutingSmsAddress) | **Get** /api/v2/routing/sms/addresses/{addressId} | Get an Address by Id for SMS |
 | [**GetRoutingSmsAddresses**](#GetRoutingSmsAddresses) | **Get** /api/v2/routing/sms/addresses | Get a list of Addresses for SMS |
 | [**GetRoutingSmsAvailablephonenumbers**](#GetRoutingSmsAvailablephonenumbers) | **Get** /api/v2/routing/sms/availablephonenumbers | Get a list of available phone numbers for SMS provisioning. |
@@ -111,6 +114,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRoutingEmailDomain**](#PatchRoutingEmailDomain) | **Patch** /api/v2/routing/email/domains/{domainId} | Update domain settings |
 | [**PatchRoutingEmailDomainValidate**](#PatchRoutingEmailDomainValidate) | **Patch** /api/v2/routing/email/domains/{domainId}/validate | Validate domain settings |
 | [**PatchRoutingEmailOutboundDomain**](#PatchRoutingEmailOutboundDomain) | **Patch** /api/v2/routing/email/outbound/domains/{domainId} | Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP). |
+| [**PatchRoutingEmailSettingEmailSettingId**](#PatchRoutingEmailSettingEmailSettingId) | **Patch** /api/v2/routing/email/setting/{emailSettingId} | Update an email setting. Modifies the settings for email setting |
 | [**PatchRoutingPredictor**](#PatchRoutingPredictor) | **Patch** /api/v2/routing/predictors/{predictorId} | Update single predictor. |
 | [**PatchRoutingPredictorsKeyperformanceindicator**](#PatchRoutingPredictorsKeyperformanceindicator) | **Patch** /api/v2/routing/predictors/keyperformanceindicators/{kpiId} | Update a custom Key Performance Indicator. |
 | [**PatchRoutingQueueMember**](#PatchRoutingQueueMember) | **Patch** /api/v2/routing/queues/{queueId}/members/{memberId} | Update the ring number OR joined status for a queue member. |
@@ -140,6 +144,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRoutingEmailOutboundDomainTestconnection**](#PostRoutingEmailOutboundDomainTestconnection) | **Post** /api/v2/routing/email/outbound/domains/{domainId}/testconnection | Tests the custom SMTP server integration connection set on this outbound domain |
 | [**PostRoutingEmailOutboundDomains**](#PostRoutingEmailOutboundDomains) | **Post** /api/v2/routing/email/outbound/domains | Create a domain |
 | [**PostRoutingEmailOutboundDomainsSimulated**](#PostRoutingEmailOutboundDomainsSimulated) | **Post** /api/v2/routing/email/outbound/domains/simulated | Create a simulated domain |
+| [**PostRoutingEmailSetting**](#PostRoutingEmailSetting) | **Post** /api/v2/routing/email/setting | Create a new email setting. Used to define various settings, that can then be associated with email domains |
 | [**PostRoutingLanguages**](#PostRoutingLanguages) | **Post** /api/v2/routing/languages | Create Language |
 | [**PostRoutingPredictors**](#PostRoutingPredictors) | **Post** /api/v2/routing/predictors | Create a predictor. |
 | [**PostRoutingPredictorsKeyperformanceindicators**](#PostRoutingPredictorsKeyperformanceindicators) | **Post** /api/v2/routing/predictors/keyperformanceindicators | Create a custom Key Performance Indicator. |
@@ -475,6 +480,67 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteRoutingEmailSettingEmailSettingId
+
+> void DeleteRoutingEmailSettingEmailSettingId (string emailSettingId)
+
+
+Delete an email setting. Removes the email setting and its associated settings
+
+Requires ALL permissions: 
+
+* email:settings:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingEmailSettingEmailSettingIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var emailSettingId = emailSettingId_example;  // string | Email Setting ID
+
+            try
+            { 
+                // Delete an email setting. Removes the email setting and its associated settings
+                apiInstance.DeleteRoutingEmailSettingEmailSettingId(emailSettingId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteRoutingEmailSettingEmailSettingId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emailSettingId** | **string**| Email Setting ID |  |
 
 ### Return type
 
@@ -2865,6 +2931,132 @@ namespace Example
 [**OutboundDomainEntityListing**](OutboundDomainEntityListing)
 
 
+## GetRoutingEmailSetting
+
+> [**EmailSettingEntityListing**](EmailSettingEntityListing) GetRoutingEmailSetting (int? pageSize = null, int? pageNumber = null)
+
+
+Get a paged list of email routing settings.
+
+Requires ALL permissions: 
+
+* email:settings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingEmailSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get a paged list of email routing settings.
+                EmailSettingEntityListing result = apiInstance.GetRoutingEmailSetting(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingEmailSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+
+### Return type
+
+[**EmailSettingEntityListing**](EmailSettingEntityListing)
+
+
+## GetRoutingEmailSettingEmailSettingId
+
+> [**EmailSetting**](EmailSetting) GetRoutingEmailSettingEmailSettingId (string emailSettingId)
+
+
+Get email setting. Returns the specified email setting that defines settings for email
+
+Requires ALL permissions: 
+
+* email:settings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingEmailSettingEmailSettingIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var emailSettingId = emailSettingId_example;  // string | Email Setting ID
+
+            try
+            { 
+                // Get email setting. Returns the specified email setting that defines settings for email
+                EmailSetting result = apiInstance.GetRoutingEmailSettingEmailSettingId(emailSettingId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingEmailSettingEmailSettingId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emailSettingId** | **string**| Email Setting ID |  |
+
+### Return type
+
+[**EmailSetting**](EmailSetting)
+
+
 ## GetRoutingEmailSetup
 
 > [**EmailSetup**](EmailSetup) GetRoutingEmailSetup ()
@@ -4451,7 +4643,7 @@ namespace Example
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
             var name = name_example;  // string | Name (optional) 
             var id = new List<string>(); // List<string> | Queue ID(s) (optional) 
-            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            var divisionId = new List<string>(); // List<string> | Division ID(s). Including '*' will query for all divisions (optional) 
 
             try
             { 
@@ -4479,7 +4671,7 @@ namespace Example
 | **sortOrder** | **string**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc |
 | **name** | **string**| Name | [optional]  |
 | **id** | [**List<string>**](string)| Queue ID(s) | [optional]  |
-| **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
+| **divisionId** | [**List<string>**](string)| Division ID(s). Including &#39;*&#39; will query for all divisions | [optional]  |
 
 ### Return type
 
@@ -5317,7 +5509,7 @@ namespace Example
 > [**SkillEntityListing**](SkillEntityListing) GetRoutingSkills (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null)
 
 
-Get the list of routing skills.
+Get the list of routing skills. View permission enforcement only applies to skills assigned to a division.
 
 Requires ANY permissions: 
 
@@ -5352,7 +5544,7 @@ namespace Example
 
             try
             { 
-                // Get the list of routing skills.
+                // Get the list of routing skills. View permission enforcement only applies to skills assigned to a division.
                 SkillEntityListing result = apiInstance.GetRoutingSkills(pageSize, pageNumber, name, id);
                 Debug.WriteLine(result);
             }
@@ -6972,6 +7164,70 @@ namespace Example
 ### Return type
 
 [**OutboundDomain**](OutboundDomain)
+
+
+## PatchRoutingEmailSettingEmailSettingId
+
+> [**EmailSetting**](EmailSetting) PatchRoutingEmailSettingEmailSettingId (string emailSettingId, EmailSetting body)
+
+
+Update an email setting. Modifies the settings for email setting
+
+Requires ALL permissions: 
+
+* email:settings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchRoutingEmailSettingEmailSettingIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var emailSettingId = emailSettingId_example;  // string | Email Setting ID
+            var body = new EmailSetting(); // EmailSetting | EmailSetting
+
+            try
+            { 
+                // Update an email setting. Modifies the settings for email setting
+                EmailSetting result = apiInstance.PatchRoutingEmailSettingEmailSettingId(emailSettingId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PatchRoutingEmailSettingEmailSettingId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emailSettingId** | **string**| Email Setting ID |  |
+| **body** | [**EmailSetting**](EmailSetting)| EmailSetting |  |
+
+### Return type
+
+[**EmailSetting**](EmailSetting)
 
 
 ## PatchRoutingPredictor
@@ -8845,6 +9101,68 @@ namespace Example
 ### Return type
 
 [**EmailOutboundDomainResult**](EmailOutboundDomainResult)
+
+
+## PostRoutingEmailSetting
+
+> [**EmailSetting**](EmailSetting) PostRoutingEmailSetting (EmailSetting body)
+
+
+Create a new email setting. Used to define various settings, that can then be associated with email domains
+
+Requires ANY permissions: 
+
+* email:settings:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingEmailSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new EmailSetting(); // EmailSetting | EmailSetting
+
+            try
+            { 
+                // Create a new email setting. Used to define various settings, that can then be associated with email domains
+                EmailSetting result = apiInstance.PostRoutingEmailSetting(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingEmailSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**EmailSetting**](EmailSetting)| EmailSetting |  |
+
+### Return type
+
+[**EmailSetting**](EmailSetting)
 
 
 ## PostRoutingLanguages
@@ -11139,4 +11457,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_

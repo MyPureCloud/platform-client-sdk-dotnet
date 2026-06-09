@@ -1,16 +1,16 @@
-# ExportListing
+# DecisionTableExportJobListing
 
-## ININ.PureCloudApi.Model.ExportListing
+## ININ.PureCloudApi.Model.DecisionTableExportJobListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;ContactsExport&gt;**](ContactsExport) |  | [optional] |
+| **Entities** | [**List&lt;DecisionTableExportJob&gt;**](DecisionTableExportJob) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_

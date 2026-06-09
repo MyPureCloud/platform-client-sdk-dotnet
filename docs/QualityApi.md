@@ -88,8 +88,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete/cancel an async request for evaluation aggregates
 
-DeleteAnalyticsEvaluationsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:evaluationAggregate:view
@@ -150,8 +148,6 @@ void (empty response body)
 
 
 Delete/cancel an async request for survey aggregates
-
-DeleteAnalyticsSurveysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -593,8 +589,6 @@ void (empty response body)
 
 Get status for async query for evaluation aggregates
 
-GetAnalyticsEvaluationsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:evaluationAggregate:view
@@ -656,8 +650,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsEvaluationsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -723,8 +715,6 @@ namespace Example
 
 Get status for async query for survey aggregates
 
-GetAnalyticsSurveysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:surveyAggregate:view
@@ -786,8 +776,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsSurveysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3121,8 +3109,6 @@ namespace Example
 
 Query for evaluation aggregates asynchronously
 
-PostAnalyticsEvaluationsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:evaluationAggregate:view
@@ -3246,8 +3232,6 @@ namespace Example
 
 
 Query for survey aggregates asynchronously
-
-PostAnalyticsSurveysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4831,4 +4815,4 @@ namespace Example
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_

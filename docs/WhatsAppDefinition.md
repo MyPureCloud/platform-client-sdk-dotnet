@@ -12,7 +12,12 @@
 | **Buttons** | [**List&lt;Button&gt;**](Button) | List of buttons to be included in the standard WhatsApp messages channel | [optional] |
 | **MessageFooter** | [**MessageFooter**](MessageFooter) | Footer for the message in the standard WhatsApp messages channel | [optional] |
 | **Header** | [**MessageHeader**](MessageHeader) | Header for the message in the standard WhatsApp messages channel | [optional] |
+| **IntegrationId** | **string** | WhatsApp integration ID for whatsApp carousels | [optional] |
+| **Category** | **string** | Category of whatsApp carousels template. | [optional] |
+| **TemplateStatus** | **string** | Template status of whatsApp carousels template. | [optional] |
+| **StatusInfo** | [**StatusInfo**](StatusInfo) | Status information about the template | [optional] |
+| **Carousel** | [**Carousel**](Carousel) | Definition for whatsApp carousels template. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_

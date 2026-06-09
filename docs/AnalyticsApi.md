@@ -154,8 +154,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete/cancel an async request for action aggregates
 
-DeleteAnalyticsActionsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * integrations:action:view
@@ -344,8 +342,6 @@ void (empty response body)
 
 Delete/cancel an async request for bot aggregates
 
-DeleteAnalyticsBotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:botAggregate:view
@@ -407,8 +403,6 @@ void (empty response body)
 
 Delete/cancel an async request for case management aggregates
 
-DeleteAnalyticsCasemanagementAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:caseManagementAggregate:view
@@ -469,8 +463,6 @@ void (empty response body)
 
 
 Delete/cancel an async request for conversation aggregates
-
-DeleteAnalyticsConversationsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -658,8 +650,6 @@ void (empty response body)
 
 Delete/cancel an async request for evaluation aggregates
 
-DeleteAnalyticsEvaluationsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:evaluationAggregate:view
@@ -720,8 +710,6 @@ void (empty response body)
 
 
 Delete/cancel an async request for flow execution aggregates
-
-DeleteAnalyticsFlowexecutionsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -784,8 +772,6 @@ void (empty response body)
 
 Delete/cancel an async request for flow aggregates
 
-DeleteAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:flowAggregate:view
@@ -846,8 +832,6 @@ void (empty response body)
 
 
 Delete/cancel an async request for journey aggregates
-
-DeleteAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -910,8 +894,6 @@ void (empty response body)
 
 Delete/cancel an async request for knowledge aggregates
 
-DeleteAnalyticsKnowledgeAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:knowledgeAggregate:view
@@ -972,8 +954,6 @@ void (empty response body)
 
 
 Delete/cancel an async request for resolution aggregates
-
-DeleteAnalyticsResolutionsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1036,8 +1016,6 @@ void (empty response body)
 
 Delete/cancel an async request for summary aggregates
 
-DeleteAnalyticsSummariesAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:summaryAggregate:view
@@ -1098,8 +1076,6 @@ void (empty response body)
 
 
 Delete/cancel an async request for survey aggregates
-
-DeleteAnalyticsSurveysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1162,8 +1138,6 @@ void (empty response body)
 
 Delete/cancel an async request for task management aggregates
 
-DeleteAnalyticsTaskmanagementAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:taskManagementAggregate:view
@@ -1225,8 +1199,6 @@ void (empty response body)
 
 Delete/cancel an async request for transcript aggregates
 
-DeleteAnalyticsTranscriptsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:speechAndTextAnalyticsAggregates:view
@@ -1287,8 +1259,6 @@ void (empty response body)
 
 
 Delete/cancel an async request for user aggregates
-
-DeleteAnalyticsUsersAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1412,8 +1382,6 @@ void (empty response body)
 
 Get status for async query for action aggregates
 
-GetAnalyticsActionsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * integrations:action:view
@@ -1476,8 +1444,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsActionsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2099,8 +2065,6 @@ namespace Example
 
 Get status for async query for bot aggregates
 
-GetAnalyticsBotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:botAggregate:view
@@ -2162,8 +2126,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsBotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2229,8 +2191,6 @@ namespace Example
 
 Get status for async query for case management aggregates
 
-GetAnalyticsCasemanagementAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:caseManagementAggregate:view
@@ -2292,8 +2252,6 @@ namespace Example
 
 
 Fetch a page of results for an async case management query
-
-GetAnalyticsCasemanagementAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2422,8 +2380,6 @@ namespace Example
 
 Get status for async query for conversation aggregates
 
-GetAnalyticsConversationsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:conversationAggregate:view
@@ -2485,8 +2441,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsConversationsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3126,8 +3080,6 @@ This endpoint does require any parameters.
 
 Get status for async query for evaluation aggregates
 
-GetAnalyticsEvaluationsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:evaluationAggregate:view
@@ -3189,8 +3141,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsEvaluationsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3256,8 +3206,6 @@ namespace Example
 
 Get status for async query for flow execution aggregates
 
-GetAnalyticsFlowexecutionsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:flowExecutionAggregate:view
@@ -3319,8 +3267,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsFlowexecutionsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3386,8 +3332,6 @@ namespace Example
 
 Get status for async query for Flow aggregates
 
-GetAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:flowAggregate:view
@@ -3449,8 +3393,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsFlowsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3516,8 +3458,6 @@ namespace Example
 
 Get status for async query for journey aggregates
 
-GetAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:journeyAggregate:view
@@ -3579,8 +3519,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsJourneysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3646,8 +3584,6 @@ namespace Example
 
 Get status for async query for knowledge aggregates
 
-GetAnalyticsKnowledgeAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:knowledgeAggregate:view
@@ -3709,8 +3645,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsKnowledgeAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4237,8 +4171,6 @@ namespace Example
 
 Get status for async query for resolution aggregates
 
-GetAnalyticsResolutionsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:resolutionAggregate:view
@@ -4300,8 +4232,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsResolutionsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4367,8 +4297,6 @@ namespace Example
 
 Get status for async query for summary aggregates
 
-GetAnalyticsSummariesAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:summaryAggregate:view
@@ -4430,8 +4358,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsSummariesAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4497,8 +4423,6 @@ namespace Example
 
 Get status for async query for survey aggregates
 
-GetAnalyticsSurveysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:surveyAggregate:view
@@ -4560,8 +4484,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsSurveysAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4627,8 +4549,6 @@ namespace Example
 
 Get status for async query for task management aggregates
 
-GetAnalyticsTaskmanagementAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:taskManagementAggregate:view
@@ -4690,8 +4610,6 @@ namespace Example
 
 
 Fetch a page of results for an async task management query
-
-GetAnalyticsTaskmanagementAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4757,8 +4675,6 @@ namespace Example
 
 Get status for async query for transcript aggregates
 
-GetAnalyticsTranscriptsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:speechAndTextAnalyticsAggregates:view
@@ -4820,8 +4736,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsTranscriptsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4887,8 +4801,6 @@ namespace Example
 
 Get status for async query for user aggregates
 
-GetAnalyticsUsersAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:userAggregate:view
@@ -4950,8 +4862,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsUsersAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5263,8 +5173,6 @@ namespace Example
 
 
 Query for action aggregates asynchronously
-
-PostAnalyticsActionsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5772,8 +5680,6 @@ namespace Example
 
 Query for bot aggregates asynchronously
 
-PostAnalyticsBotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:botAggregate:view
@@ -5898,8 +5804,6 @@ namespace Example
 
 Query for case management aggregates asynchronously
 
-PostAnalyticsCasemanagementAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:caseManagementAggregate:view
@@ -5961,8 +5865,6 @@ namespace Example
 
 
 Query for case management aggregates
-
-PostAnalyticsCasemanagementAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6155,8 +6057,6 @@ namespace Example
 
 
 Query for conversation aggregates asynchronously
-
-PostAnalyticsConversationsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6600,8 +6500,6 @@ namespace Example
 
 Query for evaluation aggregates asynchronously
 
-PostAnalyticsEvaluationsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:evaluationAggregate:view
@@ -6725,8 +6623,6 @@ namespace Example
 
 
 Query for flow execution aggregates asynchronously
-
-PostAnalyticsFlowexecutionsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6918,8 +6814,6 @@ namespace Example
 
 Query for flow aggregates asynchronously
 
-PostAnalyticsFlowsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:flowAggregate:view
@@ -7106,8 +7000,6 @@ namespace Example
 
 Query for journey aggregates asynchronously
 
-PostAnalyticsJourneysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:journeyAggregate:view
@@ -7231,8 +7123,6 @@ namespace Example
 
 
 Query for knowledge aggregates asynchronously
-
-PostAnalyticsKnowledgeAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -7733,8 +7623,6 @@ namespace Example
 
 Query for resolution aggregates asynchronously
 
-PostAnalyticsResolutionsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:resolutionAggregate:view
@@ -7925,8 +7813,6 @@ namespace Example
 
 Query for summary aggregates asynchronously
 
-PostAnalyticsSummariesAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:summaryAggregate:view
@@ -8051,8 +7937,6 @@ namespace Example
 
 Query for survey aggregates asynchronously
 
-PostAnalyticsSurveysAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:surveyAggregate:view
@@ -8176,8 +8060,6 @@ namespace Example
 
 
 Query for task management aggregates asynchronously
-
-PostAnalyticsTaskmanagementAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -8435,8 +8317,6 @@ namespace Example
 
 Query for transcript aggregates asynchronously
 
-PostAnalyticsTranscriptsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:speechAndTextAnalyticsAggregates:view
@@ -8626,8 +8506,6 @@ namespace Example
 
 
 Query for user aggregates asynchronously
-
-PostAnalyticsUsersAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -8994,4 +8872,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_

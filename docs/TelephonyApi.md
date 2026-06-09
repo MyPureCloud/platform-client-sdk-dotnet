@@ -6,20 +6,90 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteTelephonyOrganizationLinkTargetOrganizationId**](#DeleteTelephonyOrganizationLinkTargetOrganizationId) | **Delete** /api/v2/telephony/organization/link/{targetOrganizationId} | Delete a link |
 | [**GetTelephonyAgentGreetings**](#GetTelephonyAgentGreetings) | **Get** /api/v2/telephony/agents/{agentId}/greetings | Get an agent&#39;s greetings. |
 | [**GetTelephonyAgentsGreetingsMe**](#GetTelephonyAgentsGreetingsMe) | **Get** /api/v2/telephony/agents/greetings/me | Get the agent&#39;s own greetings. |
 | [**GetTelephonyCallsMetrics**](#GetTelephonyCallsMetrics) | **Get** /api/v2/telephony/calls/metrics | Get the concurrent call metrics for a given organization. |
 | [**GetTelephonyMediaregions**](#GetTelephonyMediaregions) | **Get** /api/v2/telephony/mediaregions | Retrieve the list of AWS regions media can stream through. |
+| [**GetTelephonyNumbersRouting**](#GetTelephonyNumbersRouting) | **Get** /api/v2/telephony/numbers/routing | Get Number Routings by organizationId |
+| [**GetTelephonyOrganizationLink**](#GetTelephonyOrganizationLink) | **Get** /api/v2/telephony/organization/link | Get organization links |
+| [**GetTelephonyOrganizationLinkRegions**](#GetTelephonyOrganizationLinkRegions) | **Get** /api/v2/telephony/organization/link/regions | Get all the replica regions by primary region |
 | [**GetTelephonySettings**](#GetTelephonySettings) | **Get** /api/v2/telephony/settings | Get the global telephony configuration. |
 | [**GetTelephonySipmessagesConversation**](#GetTelephonySipmessagesConversation) | **Get** /api/v2/telephony/sipmessages/conversations/{conversationId} | Get a SIP message. |
 | [**GetTelephonySipmessagesConversationHeaders**](#GetTelephonySipmessagesConversationHeaders) | **Get** /api/v2/telephony/sipmessages/conversations/{conversationId}/headers | Get SIP headers. |
 | [**GetTelephonySiptraces**](#GetTelephonySiptraces) | **Get** /api/v2/telephony/siptraces | Fetch SIP metadata |
 | [**GetTelephonySiptracesDownloadDownloadId**](#GetTelephonySiptracesDownloadDownloadId) | **Get** /api/v2/telephony/siptraces/download/{downloadId} | Get signed S3 URL for a pcap download |
+| [**PatchTelephonyOrganizationLinkApproveRequestingOrganizationId**](#PatchTelephonyOrganizationLinkApproveRequestingOrganizationId) | **Patch** /api/v2/telephony/organization/link/approve/{requestingOrganizationId} | Approving a requested link |
+| [**PostTelephonyNumbersRouting**](#PostTelephonyNumbersRouting) | **Post** /api/v2/telephony/numbers/routing | Update the routing of numbers for one or multiple organizations |
+| [**PostTelephonyNumbersRoutingAll**](#PostTelephonyNumbersRoutingAll) | **Post** /api/v2/telephony/numbers/routing/all | Re-route all numbers on an organization |
+| [**PostTelephonyNumbersRoutingReset**](#PostTelephonyNumbersRoutingReset) | **Post** /api/v2/telephony/numbers/routing/reset | Reset routing for organization |
+| [**PostTelephonyOrganizationLink**](#PostTelephonyOrganizationLink) | **Post** /api/v2/telephony/organization/link | Create a link with an organization |
 | [**PostTelephonySiptracesDownload**](#PostTelephonySiptracesDownload) | **Post** /api/v2/telephony/siptraces/download | Request a download of a pcap file to S3 |
 | [**PutTelephonyAgentGreetings**](#PutTelephonyAgentGreetings) | **Put** /api/v2/telephony/agents/{agentId}/greetings | Updates an agent&#39;s greetings. |
 | [**PutTelephonyAgentsGreetingsMe**](#PutTelephonyAgentsGreetingsMe) | **Put** /api/v2/telephony/agents/greetings/me | Updates the agent&#39;s own greetings. |
 | [**PutTelephonySettings**](#PutTelephonySettings) | **Put** /api/v2/telephony/settings | Update the global telephony configuration. |
 
+
+
+## DeleteTelephonyOrganizationLinkTargetOrganizationId
+
+> void DeleteTelephonyOrganizationLinkTargetOrganizationId (string targetOrganizationId)
+
+
+Delete a link
+
+Requires ALL permissions: 
+
+* telephony:organizationLink:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteTelephonyOrganizationLinkTargetOrganizationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var targetOrganizationId = targetOrganizationId_example;  // string | targetOrganizationId
+
+            try
+            { 
+                // Delete a link
+                apiInstance.DeleteTelephonyOrganizationLinkTargetOrganizationId(targetOrganizationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.DeleteTelephonyOrganizationLinkTargetOrganizationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **targetOrganizationId** | **string**| targetOrganizationId |  |
+
+### Return type
+
+void (empty response body)
 
 
 ## GetTelephonyAgentGreetings
@@ -258,6 +328,194 @@ This endpoint does require any parameters.
 ### Return type
 
 [**MediaRegions**](MediaRegions)
+
+
+## GetTelephonyNumbersRouting
+
+> [**NumberRoutingListing**](NumberRoutingListing) GetTelephonyNumbersRouting (string before = null, string after = null, string pageSize = null, string numberId = null, string activeRoutingOrganizationId = null, string ownerOrganizationId = null, string status = null)
+
+
+Get Number Routings by organizationId
+
+Requires ALL permissions: 
+
+* telephony:numberRouting:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyNumbersRoutingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var numberId = numberId_example;  // string | numberId (optional) 
+            var activeRoutingOrganizationId = activeRoutingOrganizationId_example;  // string | activeRoutingOrganizationId (optional) 
+            var ownerOrganizationId = ownerOrganizationId_example;  // string | ownerOrganizationId (optional) 
+            var status = status_example;  // string | status (optional) 
+
+            try
+            { 
+                // Get Number Routings by organizationId
+                NumberRoutingListing result = apiInstance.GetTelephonyNumbersRouting(before, after, pageSize, numberId, activeRoutingOrganizationId, ownerOrganizationId, status);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.GetTelephonyNumbersRouting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **numberId** | **string**| numberId | [optional]  |
+| **activeRoutingOrganizationId** | **string**| activeRoutingOrganizationId | [optional]  |
+| **ownerOrganizationId** | **string**| ownerOrganizationId | [optional]  |
+| **status** | **string**| status | [optional] <br />**Values**: Normal, Redirected, Pending |
+
+### Return type
+
+[**NumberRoutingListing**](NumberRoutingListing)
+
+
+## GetTelephonyOrganizationLink
+
+> [**List&lt;OrganizationLinkResponse&gt;**](OrganizationLinkResponse) GetTelephonyOrganizationLink ()
+
+
+Get organization links
+
+Requires ALL permissions: 
+
+* telephony:organizationLink:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyOrganizationLinkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+
+            try
+            { 
+                // Get organization links
+                List<OrganizationLinkResponse> result = apiInstance.GetTelephonyOrganizationLink();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.GetTelephonyOrganizationLink: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**List<OrganizationLinkResponse>**](OrganizationLinkResponse)
+
+
+## GetTelephonyOrganizationLinkRegions
+
+> [**List&lt;RegionResponse&gt;**](RegionResponse) GetTelephonyOrganizationLinkRegions ()
+
+
+Get all the replica regions by primary region
+
+Requires ALL permissions: 
+
+* telephony:organizationLink:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyOrganizationLinkRegionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+
+            try
+            { 
+                // Get all the replica regions by primary region
+                List<RegionResponse> result = apiInstance.GetTelephonyOrganizationLinkRegions();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.GetTelephonyOrganizationLinkRegions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**List<RegionResponse>**](RegionResponse)
 
 
 ## GetTelephonySettings
@@ -583,6 +841,314 @@ namespace Example
 [**SignedUrlResponse**](SignedUrlResponse)
 
 
+## PatchTelephonyOrganizationLinkApproveRequestingOrganizationId
+
+> void PatchTelephonyOrganizationLinkApproveRequestingOrganizationId (string requestingOrganizationId, OrganizationLinkApprovalRequest body)
+
+
+Approving a requested link
+
+Requires ALL permissions: 
+
+* telephony:organizationLink:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchTelephonyOrganizationLinkApproveRequestingOrganizationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var requestingOrganizationId = requestingOrganizationId_example;  // string | requestingOrganizationId
+            var body = new OrganizationLinkApprovalRequest(); // OrganizationLinkApprovalRequest | Approval request body
+
+            try
+            { 
+                // Approving a requested link
+                apiInstance.PatchTelephonyOrganizationLinkApproveRequestingOrganizationId(requestingOrganizationId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.PatchTelephonyOrganizationLinkApproveRequestingOrganizationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **requestingOrganizationId** | **string**| requestingOrganizationId |  |
+| **body** | [**OrganizationLinkApprovalRequest**](OrganizationLinkApprovalRequest)| Approval request body |  |
+
+### Return type
+
+void (empty response body)
+
+
+## PostTelephonyNumbersRouting
+
+> void PostTelephonyNumbersRouting (List<NumberRoutingRequest> body)
+
+
+Update the routing of numbers for one or multiple organizations
+
+Requires ALL permissions: 
+
+* telephony:numberRouting:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyNumbersRoutingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var body = new List<NumberRoutingRequest>(); // List<NumberRoutingRequest> | drRoutingList
+
+            try
+            { 
+                // Update the routing of numbers for one or multiple organizations
+                apiInstance.PostTelephonyNumbersRouting(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.PostTelephonyNumbersRouting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**List<NumberRoutingRequest>**](NumberRoutingRequest)| drRoutingList |  |
+
+### Return type
+
+void (empty response body)
+
+
+## PostTelephonyNumbersRoutingAll
+
+> void PostTelephonyNumbersRoutingAll (DisasterRecoveryAllRoutingRequest body)
+
+
+Re-route all numbers on an organization
+
+Requires ALL permissions: 
+
+* telephony:numberRouting:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyNumbersRoutingAllExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var body = new DisasterRecoveryAllRoutingRequest(); // DisasterRecoveryAllRoutingRequest | Value for all routing request body
+
+            try
+            { 
+                // Re-route all numbers on an organization
+                apiInstance.PostTelephonyNumbersRoutingAll(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.PostTelephonyNumbersRoutingAll: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**DisasterRecoveryAllRoutingRequest**](DisasterRecoveryAllRoutingRequest)| Value for all routing request body |  |
+
+### Return type
+
+void (empty response body)
+
+
+## PostTelephonyNumbersRoutingReset
+
+> void PostTelephonyNumbersRoutingReset (NumberRoutingResetOrganizationRequest body)
+
+
+Reset routing for organization
+
+Requires ALL permissions: 
+
+* telephony:numberRouting:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyNumbersRoutingResetExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var body = new NumberRoutingResetOrganizationRequest(); // NumberRoutingResetOrganizationRequest | Value for bulk routing request body
+
+            try
+            { 
+                // Reset routing for organization
+                apiInstance.PostTelephonyNumbersRoutingReset(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.PostTelephonyNumbersRoutingReset: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**NumberRoutingResetOrganizationRequest**](NumberRoutingResetOrganizationRequest)| Value for bulk routing request body |  |
+
+### Return type
+
+void (empty response body)
+
+
+## PostTelephonyOrganizationLink
+
+> [**OrganizationLink**](OrganizationLink) PostTelephonyOrganizationLink (CreateOrganizationLink body)
+
+
+Create a link with an organization
+
+Requires ALL permissions: 
+
+* telephony:organizationLink:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyOrganizationLinkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var body = new CreateOrganizationLink(); // CreateOrganizationLink | CreateLinkOrg body
+
+            try
+            { 
+                // Create a link with an organization
+                OrganizationLink result = apiInstance.PostTelephonyOrganizationLink(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.PostTelephonyOrganizationLink: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateOrganizationLink**](CreateOrganizationLink)| CreateLinkOrg body |  |
+
+### Return type
+
+[**OrganizationLink**](OrganizationLink)
+
+
 ## PostTelephonySiptracesDownload
 
 > [**SipDownloadResponse**](SipDownloadResponse) PostTelephonySiptracesDownload (SIPSearchPublicRequest sIPSearchPublicRequest)
@@ -833,4 +1399,4 @@ namespace Example
 [**TelephonySettings**](TelephonySettings)
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_

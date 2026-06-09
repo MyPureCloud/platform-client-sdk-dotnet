@@ -1356,7 +1356,7 @@ namespace Example
 
 ## GetExternalcontactsContactsExports
 
-> [**ExportListing**](ExportListing) GetExternalcontactsContactsExports (List<string> divisionIds = null, string after = null, int? pageSize = null)
+> [**ContactsExportListing**](ContactsExportListing) GetExternalcontactsContactsExports (List<string> divisionIds = null, string after = null, int? pageSize = null)
 
 
 List exports for organization
@@ -1395,7 +1395,7 @@ namespace Example
             try
             { 
                 // List exports for organization
-                ExportListing result = apiInstance.GetExternalcontactsContactsExports(divisionIds, after, pageSize);
+                ContactsExportListing result = apiInstance.GetExternalcontactsContactsExports(divisionIds, after, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1418,7 +1418,7 @@ namespace Example
 
 ### Return type
 
-[**ExportListing**](ExportListing)
+[**ContactsExportListing**](ContactsExportListing)
 
 
 ## GetExternalcontactsContactsSchema
@@ -7879,4 +7879,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 264.0.0_
+_PureCloudPlatform.Client.V2 265.0.0_
