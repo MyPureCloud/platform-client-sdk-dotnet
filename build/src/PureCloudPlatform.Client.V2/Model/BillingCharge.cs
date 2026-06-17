@@ -30,7 +30,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OverageRate">The rate charged per unit of overage..</param>
         /// <param name="OverageCharge">The total charge for overage usage..</param>
         /// <param name="OverageCurrency">The currency in which the overage charge is billed..</param>
-        public BillingCharge(BillingProduct Product = null, List<NamedEntity> Organizations = null, int? PrepaidQuantity = null, int? FairuseQuantity = null, int? ActualQuantity = null, int? OverageQuantity = null, double? OverageRate = null, double? OverageCharge = null, string OverageCurrency = null)
+        /// <param name="ConvertedTokenCount">AI Token Count after the conversion for AI Products..</param>
+        /// <param name="TokenConversionRate">AI Token Conversion Rate — Units per token conversion ratio..</param>
+        public BillingCharge(BillingProduct Product = null, List<NamedEntity> Organizations = null, int? PrepaidQuantity = null, int? FairuseQuantity = null, int? ActualQuantity = null, int? OverageQuantity = null, double? OverageRate = null, double? OverageCharge = null, string OverageCurrency = null, double? ConvertedTokenCount = null, double? TokenConversionRate = null)
         {
             this.Product = Product;
             this.Organizations = Organizations;
@@ -41,6 +43,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OverageRate = OverageRate;
             this.OverageCharge = OverageCharge;
             this.OverageCurrency = OverageCurrency;
+            this.ConvertedTokenCount = ConvertedTokenCount;
+            this.TokenConversionRate = TokenConversionRate;
             
         }
         
@@ -135,6 +139,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public string OverageCurrency { get; set; }
 
 
+
+        /// <summary>
+        /// AI Token Count after the conversion for AI Products.
+        /// </summary>
+        /// <value>AI Token Count after the conversion for AI Products.</value>
+        [DataMember(Name="convertedTokenCount", EmitDefaultValue=false)]
+        public double? ConvertedTokenCount { get; set; }
+
+
+
+        /// <summary>
+        /// AI Token Conversion Rate — Units per token conversion ratio.
+        /// </summary>
+        /// <value>AI Token Conversion Rate — Units per token conversion ratio.</value>
+        [DataMember(Name="tokenConversionRate", EmitDefaultValue=false)]
+        public double? TokenConversionRate { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -154,6 +176,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OverageRate: ").Append(OverageRate).Append("\n");
             sb.Append("  OverageCharge: ").Append(OverageCharge).Append("\n");
             sb.Append("  OverageCurrency: ").Append(OverageCurrency).Append("\n");
+            sb.Append("  ConvertedTokenCount: ").Append(ConvertedTokenCount).Append("\n");
+            sb.Append("  TokenConversionRate: ").Append(TokenConversionRate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -243,6 +267,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OverageCurrency == other.OverageCurrency ||
                     this.OverageCurrency != null &&
                     this.OverageCurrency.Equals(other.OverageCurrency)
+                ) &&
+                (
+                    this.ConvertedTokenCount == other.ConvertedTokenCount ||
+                    this.ConvertedTokenCount != null &&
+                    this.ConvertedTokenCount.Equals(other.ConvertedTokenCount)
+                ) &&
+                (
+                    this.TokenConversionRate == other.TokenConversionRate ||
+                    this.TokenConversionRate != null &&
+                    this.TokenConversionRate.Equals(other.TokenConversionRate)
                 );
         }
 
@@ -286,6 +320,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OverageCurrency != null)
                     hash = hash * 59 + this.OverageCurrency.GetHashCode();
+
+                if (this.ConvertedTokenCount != null)
+                    hash = hash * 59 + this.ConvertedTokenCount.GetHashCode();
+
+                if (this.TokenConversionRate != null)
+                    hash = hash * 59 + this.TokenConversionRate.GetHashCode();
 
                 return hash;
             }

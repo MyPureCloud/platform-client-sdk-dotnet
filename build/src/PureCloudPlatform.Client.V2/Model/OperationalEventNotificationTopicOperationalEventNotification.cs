@@ -32,8 +32,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EntityType">EntityType.</param>
         /// <param name="ConversationId">ConversationId.</param>
         /// <param name="EntityToken">EntityToken.</param>
+        /// <param name="PhoneNumber">PhoneNumber.</param>
+        /// <param name="ExternalContactId">ExternalContactId.</param>
         /// <param name="Timestamp">Timestamp.</param>
-        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, Guid? EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string Version = null, Guid? ParentEntity = null, string EntityType = null, Guid? ConversationId = null, string EntityToken = null, long? Timestamp = null)
+        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, Guid? EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string Version = null, Guid? ParentEntity = null, string EntityType = null, Guid? ConversationId = null, string EntityToken = null, string PhoneNumber = null, string ExternalContactId = null, long? Timestamp = null)
         {
             this.EventEntity = EventEntity;
             this.EntityId = EntityId;
@@ -46,6 +48,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EntityType = EntityType;
             this.ConversationId = ConversationId;
             this.EntityToken = EntityToken;
+            this.PhoneNumber = PhoneNumber;
+            this.ExternalContactId = ExternalContactId;
             this.Timestamp = Timestamp;
             
         }
@@ -141,6 +145,22 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets PhoneNumber
+        /// </summary>
+        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
+        public string PhoneNumber { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ExternalContactId
+        /// </summary>
+        [DataMember(Name="externalContactId", EmitDefaultValue=false)]
+        public string ExternalContactId { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Timestamp
         /// </summary>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
@@ -167,6 +187,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  EntityToken: ").Append(EntityToken).Append("\n");
+            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+            sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -264,6 +286,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EntityToken.Equals(other.EntityToken)
                 ) &&
                 (
+                    this.PhoneNumber == other.PhoneNumber ||
+                    this.PhoneNumber != null &&
+                    this.PhoneNumber.Equals(other.PhoneNumber)
+                ) &&
+                (
+                    this.ExternalContactId == other.ExternalContactId ||
+                    this.ExternalContactId != null &&
+                    this.ExternalContactId.Equals(other.ExternalContactId)
+                ) &&
+                (
                     this.Timestamp == other.Timestamp ||
                     this.Timestamp != null &&
                     this.Timestamp.Equals(other.Timestamp)
@@ -313,6 +345,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EntityToken != null)
                     hash = hash * 59 + this.EntityToken.GetHashCode();
+
+                if (this.PhoneNumber != null)
+                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
+
+                if (this.ExternalContactId != null)
+                    hash = hash * 59 + this.ExternalContactId.GetHashCode();
 
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();

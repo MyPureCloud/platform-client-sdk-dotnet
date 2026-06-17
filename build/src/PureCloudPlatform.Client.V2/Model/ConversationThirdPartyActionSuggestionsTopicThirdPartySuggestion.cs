@@ -22,9 +22,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion" /> class.
         /// </summary>
         /// <param name="Text">Text.</param>
-        public ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion(string Text = null)
+        /// <param name="Title">Title.</param>
+        /// <param name="Sources">Sources.</param>
+        public ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion(string Text = null, string Title = null, List<ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestionSource> Sources = null)
         {
             this.Text = Text;
+            this.Title = Title;
+            this.Sources = Sources;
             
         }
         
@@ -37,6 +41,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Text { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Title
+        /// </summary>
+        [DataMember(Name="title", EmitDefaultValue=false)]
+        public string Title { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Sources
+        /// </summary>
+        [DataMember(Name="sources", EmitDefaultValue=false)]
+        public List<ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestionSource> Sources { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,6 +67,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion {\n");
 
             sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("  Sources: ").Append(Sources).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +113,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Text == other.Text ||
                     this.Text != null &&
                     this.Text.Equals(other.Text)
+                ) &&
+                (
+                    this.Title == other.Title ||
+                    this.Title != null &&
+                    this.Title.Equals(other.Title)
+                ) &&
+                (
+                    this.Sources == other.Sources ||
+                    this.Sources != null &&
+                    this.Sources.SequenceEqual(other.Sources)
                 );
         }
 
@@ -107,6 +139,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
+
+                if (this.Title != null)
+                    hash = hash * 59 + this.Title.GetHashCode();
+
+                if (this.Sources != null)
+                    hash = hash * 59 + this.Sources.GetHashCode();
 
                 return hash;
             }

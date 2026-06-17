@@ -73,7 +73,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageId">MessageId.</param>
         /// <param name="QueryStatement">QueryStatement.</param>
         /// <param name="Language">Language.</param>
-        public ConversationResponseSuggestionsTopicSuggestionContext(Guid? QueueId = null, MediaTypeEnum? MediaType = null, Guid? UserId = null, Guid? ExternalContactId = null, Guid? AssistantId = null, Guid? UtteranceId = null, string MessageId = null, string QueryStatement = null, string Language = null)
+        /// <param name="QueryReformulationContext">QueryReformulationContext.</param>
+        public ConversationResponseSuggestionsTopicSuggestionContext(Guid? QueueId = null, MediaTypeEnum? MediaType = null, Guid? UserId = null, Guid? ExternalContactId = null, Guid? AssistantId = null, Guid? UtteranceId = null, string MessageId = null, string QueryStatement = null, string Language = null, ConversationResponseSuggestionsTopicQueryReformulationContext QueryReformulationContext = null)
         {
             this.QueueId = QueueId;
             this.MediaType = MediaType;
@@ -84,6 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessageId = MessageId;
             this.QueryStatement = QueryStatement;
             this.Language = Language;
+            this.QueryReformulationContext = QueryReformulationContext;
             
         }
         
@@ -154,6 +156,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Language { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets QueryReformulationContext
+        /// </summary>
+        [DataMember(Name="queryReformulationContext", EmitDefaultValue=false)]
+        public ConversationResponseSuggestionsTopicQueryReformulationContext QueryReformulationContext { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -172,6 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessageId: ").Append(MessageId).Append("\n");
             sb.Append("  QueryStatement: ").Append(QueryStatement).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
+            sb.Append("  QueryReformulationContext: ").Append(QueryReformulationContext).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -256,6 +267,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
+                ) &&
+                (
+                    this.QueryReformulationContext == other.QueryReformulationContext ||
+                    this.QueryReformulationContext != null &&
+                    this.QueryReformulationContext.Equals(other.QueryReformulationContext)
                 );
         }
 
@@ -296,6 +312,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
+
+                if (this.QueryReformulationContext != null)
+                    hash = hash * 59 + this.QueryReformulationContext.GetHashCode();
 
                 return hash;
             }

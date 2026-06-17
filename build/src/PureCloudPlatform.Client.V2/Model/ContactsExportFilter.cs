@@ -23,13 +23,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Eq">Filtered field should have the same value.</param>
         /// <param name="In">Filtered field should match one of the listed values.</param>
+        /// <param name="Lte">Filtered field should be less than or equal to the value.</param>
+        /// <param name="Gte">Filtered field should be greater than or equal to the value.</param>
         /// <param name="And">Boolean AND combination of filters.</param>
         /// <param name="Or">Boolean OR combination of filters.</param>
         /// <param name="Not">Boolean negation of filters.</param>
-        public ContactsExportFilter(ContactsExportFieldFilter Eq = null, ContactsExportFieldListFilter In = null, List<ContactsExportFilter> And = null, List<ContactsExportFilter> Or = null, ContactsExportFilter Not = null)
+        public ContactsExportFilter(ContactsExportFieldFilter Eq = null, ContactsExportFieldListFilter In = null, ContactsExportComparisonFieldFilter Lte = null, ContactsExportComparisonFieldFilter Gte = null, List<ContactsExportFilter> And = null, List<ContactsExportFilter> Or = null, ContactsExportFilter Not = null)
         {
             this.Eq = Eq;
             this.In = In;
+            this.Lte = Lte;
+            this.Gte = Gte;
             this.And = And;
             this.Or = Or;
             this.Not = Not;
@@ -53,6 +57,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Filtered field should match one of the listed values</value>
         [DataMember(Name="in", EmitDefaultValue=false)]
         public ContactsExportFieldListFilter In { get; set; }
+
+
+
+        /// <summary>
+        /// Filtered field should be less than or equal to the value
+        /// </summary>
+        /// <value>Filtered field should be less than or equal to the value</value>
+        [DataMember(Name="lte", EmitDefaultValue=false)]
+        public ContactsExportComparisonFieldFilter Lte { get; set; }
+
+
+
+        /// <summary>
+        /// Filtered field should be greater than or equal to the value
+        /// </summary>
+        /// <value>Filtered field should be greater than or equal to the value</value>
+        [DataMember(Name="gte", EmitDefaultValue=false)]
+        public ContactsExportComparisonFieldFilter Gte { get; set; }
 
 
 
@@ -93,6 +115,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Eq: ").Append(Eq).Append("\n");
             sb.Append("  In: ").Append(In).Append("\n");
+            sb.Append("  Lte: ").Append(Lte).Append("\n");
+            sb.Append("  Gte: ").Append(Gte).Append("\n");
             sb.Append("  And: ").Append(And).Append("\n");
             sb.Append("  Or: ").Append(Or).Append("\n");
             sb.Append("  Not: ").Append(Not).Append("\n");
@@ -147,6 +171,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.In.Equals(other.In)
                 ) &&
                 (
+                    this.Lte == other.Lte ||
+                    this.Lte != null &&
+                    this.Lte.Equals(other.Lte)
+                ) &&
+                (
+                    this.Gte == other.Gte ||
+                    this.Gte != null &&
+                    this.Gte.Equals(other.Gte)
+                ) &&
+                (
                     this.And == other.And ||
                     this.And != null &&
                     this.And.SequenceEqual(other.And)
@@ -179,6 +213,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.In != null)
                     hash = hash * 59 + this.In.GetHashCode();
+
+                if (this.Lte != null)
+                    hash = hash * 59 + this.Lte.GetHashCode();
+
+                if (this.Gte != null)
+                    hash = hash * 59 + this.Gte.GetHashCode();
 
                 if (this.And != null)
                     hash = hash * 59 + this.And.GetHashCode();

@@ -2620,7 +2620,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>KnowledgeDocumentResponse</returns>
         
-        KnowledgeDocumentResponse PostKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, KnowledgeDocumentCreateRequest body);
+        KnowledgeDocumentResponse PostKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, KnowledgeDocumentReq body);
 
         /// <summary>
         /// Create document.
@@ -2633,7 +2633,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeDocumentResponse</returns>
         
-        ApiResponse<KnowledgeDocumentResponse> PostKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentCreateRequest body);
+        ApiResponse<KnowledgeDocumentResponse> PostKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentReq body);
 
         /// <summary>
         /// Answer documents.
@@ -6004,7 +6004,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeDocumentResponse</returns>
         
-        System.Threading.Tasks.Task<KnowledgeDocumentResponse> PostKnowledgeKnowledgebaseDocumentsAsync (string knowledgeBaseId, KnowledgeDocumentCreateRequest body);
+        System.Threading.Tasks.Task<KnowledgeDocumentResponse> PostKnowledgeKnowledgebaseDocumentsAsync (string knowledgeBaseId, KnowledgeDocumentReq body);
 
         /// <summary>
         /// Create document.
@@ -6017,7 +6017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeDocumentResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponse>> PostKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentCreateRequest body);
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponse>> PostKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentReq body);
 
         /// <summary>
         /// Answer documents.
@@ -27276,7 +27276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>KnowledgeDocumentResponse</returns>
         
-        public KnowledgeDocumentResponse PostKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, KnowledgeDocumentCreateRequest body)
+        public KnowledgeDocumentResponse PostKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, KnowledgeDocumentReq body)
         {
              ApiResponse<KnowledgeDocumentResponse> localVarResponse = PostKnowledgeKnowledgebaseDocumentsWithHttpInfo(knowledgeBaseId, body);
              return localVarResponse.Data;
@@ -27291,7 +27291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeDocumentResponse</returns>
         
-        public ApiResponse< KnowledgeDocumentResponse > PostKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentCreateRequest body)
+        public ApiResponse< KnowledgeDocumentResponse > PostKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentReq body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -27388,7 +27388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeDocumentResponse</returns>
         
-        public async System.Threading.Tasks.Task<KnowledgeDocumentResponse> PostKnowledgeKnowledgebaseDocumentsAsync (string knowledgeBaseId, KnowledgeDocumentCreateRequest body)
+        public async System.Threading.Tasks.Task<KnowledgeDocumentResponse> PostKnowledgeKnowledgebaseDocumentsAsync (string knowledgeBaseId, KnowledgeDocumentReq body)
         {
              ApiResponse<KnowledgeDocumentResponse> localVarResponse = await PostKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo(knowledgeBaseId, body);
              return localVarResponse.Data;
@@ -27404,7 +27404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeDocumentResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponse>> PostKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentCreateRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponse>> PostKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentReq body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)

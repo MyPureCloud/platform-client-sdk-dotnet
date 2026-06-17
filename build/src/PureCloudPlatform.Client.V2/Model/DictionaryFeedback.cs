@@ -67,9 +67,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Genesysextended
         }
         /// <summary>
-        /// The status of the dictionary feedback. Only returned when GenesysExtended feature is enabled.
+        /// The status of the dictionary feedback
         /// </summary>
-        /// <value>The status of the dictionary feedback. Only returned when GenesysExtended feature is enabled.</value>
+        /// <value>The status of the dictionary feedback</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusEnum
         {
@@ -103,7 +103,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Saved for "Saved"
             /// </summary>
             [EnumMember(Value = "Saved")]
-            Saved
+            Saved,
+            
+            /// <summary>
+            /// Enum Invalid for "Invalid"
+            /// </summary>
+            [EnumMember(Value = "Invalid")]
+            Invalid
         }
         /// <summary>
         /// The source of the given dictionary feedback
@@ -118,9 +124,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="transcriptionEngine", EmitDefaultValue=false)]
         public TranscriptionEngineEnum? TranscriptionEngine { get; set; }
         /// <summary>
-        /// The status of the dictionary feedback. Only returned when GenesysExtended feature is enabled.
+        /// The status of the dictionary feedback
         /// </summary>
-        /// <value>The status of the dictionary feedback. Only returned when GenesysExtended feature is enabled.</value>
+        /// <value>The status of the dictionary feedback</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; private set; }
 
@@ -136,8 +142,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Dialect">The dialect for the given term, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (required).</param>
         /// <param name="BoostValue">A weighted value assigned to a phrase. The higher the value, the higher the likelihood that the system will choose the word or phrase from the possible alternatives. Boost range is from 1.0 to 10.0. Default is 2.0.</param>
         /// <param name="TranscriptionEngine">The transcription engine for the dictionary feedback. Only returned when GenesysExtended feature is enabled..</param>
-        /// <param name="DisplayAs">The display name for the dictionary feedback. Only returned when GenesysExtended feature is enabled. This field is only valid for Extended Services transcription engine..</param>
-        /// <param name="ExamplePhrases">A list of at least 3 and up to 20 unique phrases that are example usage of the term. This field is only valid and required for Genesys transcription engine..</param>
+        /// <param name="DisplayAs">The display name for the dictionary feedback..</param>
+        /// <param name="ExamplePhrases">A list of at least 3 and up to 20 unique phrases that are example usage of the term. This field is only valid for Genesys transcription engine. Not applicable for English and Spanish dialects.</param>
         /// <param name="SoundsLike">A list of up to 10 terms that give examples of how the term sounds. This field is only valid for Genesys transcription engine..</param>
         public DictionaryFeedback(string Term = null, string Dialect = null, float? BoostValue = null, TranscriptionEngineEnum? TranscriptionEngine = null, string DisplayAs = null, List<DictionaryFeedbackExamplePhrase> ExamplePhrases = null, List<string> SoundsLike = null)
         {
@@ -232,18 +238,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The display name for the dictionary feedback. Only returned when GenesysExtended feature is enabled. This field is only valid for Extended Services transcription engine.
+        /// The reason the dictionary feedback is invalid
         /// </summary>
-        /// <value>The display name for the dictionary feedback. Only returned when GenesysExtended feature is enabled. This field is only valid for Extended Services transcription engine.</value>
+        /// <value>The reason the dictionary feedback is invalid</value>
+        [DataMember(Name="invalidReason", EmitDefaultValue=false)]
+        public string InvalidReason { get; private set; }
+
+
+
+        /// <summary>
+        /// The display name for the dictionary feedback.
+        /// </summary>
+        /// <value>The display name for the dictionary feedback.</value>
         [DataMember(Name="displayAs", EmitDefaultValue=false)]
         public string DisplayAs { get; set; }
 
 
 
         /// <summary>
-        /// A list of at least 3 and up to 20 unique phrases that are example usage of the term. This field is only valid and required for Genesys transcription engine.
+        /// A list of at least 3 and up to 20 unique phrases that are example usage of the term. This field is only valid for Genesys transcription engine. Not applicable for English and Spanish dialects
         /// </summary>
-        /// <value>A list of at least 3 and up to 20 unique phrases that are example usage of the term. This field is only valid and required for Genesys transcription engine.</value>
+        /// <value>A list of at least 3 and up to 20 unique phrases that are example usage of the term. This field is only valid for Genesys transcription engine. Not applicable for English and Spanish dialects</value>
         [DataMember(Name="examplePhrases", EmitDefaultValue=false)]
         public List<DictionaryFeedbackExamplePhrase> ExamplePhrases { get; set; }
 
@@ -286,6 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  TranscriptionEngine: ").Append(TranscriptionEngine).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  InvalidReason: ").Append(InvalidReason).Append("\n");
             sb.Append("  DisplayAs: ").Append(DisplayAs).Append("\n");
             sb.Append("  ExamplePhrases: ").Append(ExamplePhrases).Append("\n");
             sb.Append("  SoundsLike: ").Append(SoundsLike).Append("\n");
@@ -386,6 +402,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Status.Equals(other.Status)
                 ) &&
                 (
+                    this.InvalidReason == other.InvalidReason ||
+                    this.InvalidReason != null &&
+                    this.InvalidReason.Equals(other.InvalidReason)
+                ) &&
+                (
                     this.DisplayAs == other.DisplayAs ||
                     this.DisplayAs != null &&
                     this.DisplayAs.Equals(other.DisplayAs)
@@ -450,6 +471,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+
+                if (this.InvalidReason != null)
+                    hash = hash * 59 + this.InvalidReason.GetHashCode();
 
                 if (this.DisplayAs != null)
                     hash = hash * 59 + this.DisplayAs.GetHashCode();

@@ -31,12 +31,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ReplyToId">The id of the message this public message is replying to..</param>
         /// <param name="Source">The source of the public message. Useful when there could be more than location. Channel specific, e.g., for Facebook it&#39;s a source page..</param>
         /// <param name="Url">The URL of the social post on the native platform..</param>
-        public OpenSocialMediaPublicMetadata(string RootId = null, string ReplyToId = null, string Source = null, string Url = null)
+        /// <param name="MentionIds">IDs of accounts referenced by name within the message text or caption (for example &#39;@brandpage&#39; in a post body or comment). A &#39;mention&#39; here uses the same convention as Meta (Facebook, Instagram) and LinkedIn, where it denotes a textual reference to an account. Distinct from tagIds, which represent explicit associations with the message. Null or absent when no accounts are referenced in the text..</param>
+        /// <param name="TagIds">IDs of accounts attached to the message itself, independent of the text (for example a person tagged in an Instagram photo so their profile is linked from the image). A &#39;tag&#39; here uses the same convention as Meta (Facebook, Instagram) and LinkedIn, where it denotes an explicit association with content rather than a textual reference. Distinct from mentionIds, which represent in-text/caption references. Null or absent when no accounts are tagged on the message..</param>
+        public OpenSocialMediaPublicMetadata(string RootId = null, string ReplyToId = null, string Source = null, string Url = null, List<string> MentionIds = null, List<string> TagIds = null)
         {
             this.RootId = RootId;
             this.ReplyToId = ReplyToId;
             this.Source = Source;
             this.Url = Url;
+            this.MentionIds = MentionIds;
+            this.TagIds = TagIds;
             
         }
         
@@ -77,6 +81,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Url { get; set; }
 
 
+
+        /// <summary>
+        /// IDs of accounts referenced by name within the message text or caption (for example &#39;@brandpage&#39; in a post body or comment). A &#39;mention&#39; here uses the same convention as Meta (Facebook, Instagram) and LinkedIn, where it denotes a textual reference to an account. Distinct from tagIds, which represent explicit associations with the message. Null or absent when no accounts are referenced in the text.
+        /// </summary>
+        /// <value>IDs of accounts referenced by name within the message text or caption (for example &#39;@brandpage&#39; in a post body or comment). A &#39;mention&#39; here uses the same convention as Meta (Facebook, Instagram) and LinkedIn, where it denotes a textual reference to an account. Distinct from tagIds, which represent explicit associations with the message. Null or absent when no accounts are referenced in the text.</value>
+        [DataMember(Name="mentionIds", EmitDefaultValue=false)]
+        public List<string> MentionIds { get; set; }
+
+
+
+        /// <summary>
+        /// IDs of accounts attached to the message itself, independent of the text (for example a person tagged in an Instagram photo so their profile is linked from the image). A &#39;tag&#39; here uses the same convention as Meta (Facebook, Instagram) and LinkedIn, where it denotes an explicit association with content rather than a textual reference. Distinct from mentionIds, which represent in-text/caption references. Null or absent when no accounts are tagged on the message.
+        /// </summary>
+        /// <value>IDs of accounts attached to the message itself, independent of the text (for example a person tagged in an Instagram photo so their profile is linked from the image). A &#39;tag&#39; here uses the same convention as Meta (Facebook, Instagram) and LinkedIn, where it denotes an explicit association with content rather than a textual reference. Distinct from mentionIds, which represent in-text/caption references. Null or absent when no accounts are tagged on the message.</value>
+        [DataMember(Name="tagIds", EmitDefaultValue=false)]
+        public List<string> TagIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +112,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ReplyToId: ").Append(ReplyToId).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
+            sb.Append("  MentionIds: ").Append(MentionIds).Append("\n");
+            sb.Append("  TagIds: ").Append(TagIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,6 +173,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Url == other.Url ||
                     this.Url != null &&
                     this.Url.Equals(other.Url)
+                ) &&
+                (
+                    this.MentionIds == other.MentionIds ||
+                    this.MentionIds != null &&
+                    this.MentionIds.SequenceEqual(other.MentionIds)
+                ) &&
+                (
+                    this.TagIds == other.TagIds ||
+                    this.TagIds != null &&
+                    this.TagIds.SequenceEqual(other.TagIds)
                 );
         }
 
@@ -174,6 +208,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
+
+                if (this.MentionIds != null)
+                    hash = hash * 59 + this.MentionIds.GetHashCode();
+
+                if (this.TagIds != null)
+                    hash = hash * 59 + this.TagIds.GetHashCode();
 
                 return hash;
             }

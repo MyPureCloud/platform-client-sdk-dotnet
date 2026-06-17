@@ -119,9 +119,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Resolution">Resolution.</param>
         /// <param name="FollowupActions">FollowupActions.</param>
         /// <param name="ExtractedEntities">ExtractedEntities.</param>
+        /// <param name="Labels">Labels.</param>
         /// <param name="ErrorType">ErrorType.</param>
         /// <param name="DurationMs">DurationMs.</param>
-        public V2SessionConversationsSummarySettingsPreviewEventConversationSummarySettingsPreviewMessage(DateTime? CreatedDate = null, Guid? SummaryId = null, Guid? SessionId = null, Guid? UserId = null, Guid? SummarySettingsId = null, string Language = null, MediaTypeEnum? MediaType = null, V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage Summary = null, V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage Reason = null, V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMessage Resolution = null, List<V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction> FollowupActions = null, List<V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity> ExtractedEntities = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null)
+        public V2SessionConversationsSummarySettingsPreviewEventConversationSummarySettingsPreviewMessage(DateTime? CreatedDate = null, Guid? SummaryId = null, Guid? SessionId = null, Guid? UserId = null, Guid? SummarySettingsId = null, string Language = null, MediaTypeEnum? MediaType = null, V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage Summary = null, V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage Reason = null, V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMessage Resolution = null, List<V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction> FollowupActions = null, List<V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity> ExtractedEntities = null, List<V2SessionConversationsSummarySettingsPreviewEventConversationSummaryLabel> Labels = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null)
         {
             this.CreatedDate = CreatedDate;
             this.SummaryId = SummaryId;
@@ -135,6 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Resolution = Resolution;
             this.FollowupActions = FollowupActions;
             this.ExtractedEntities = ExtractedEntities;
+            this.Labels = Labels;
             this.ErrorType = ErrorType;
             this.DurationMs = DurationMs;
             
@@ -232,6 +234,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Gets or Sets Labels
+        /// </summary>
+        [DataMember(Name="labels", EmitDefaultValue=false)]
+        public List<V2SessionConversationsSummarySettingsPreviewEventConversationSummaryLabel> Labels { get; set; }
+
+
+
 
 
         /// <summary>
@@ -262,6 +272,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Resolution: ").Append(Resolution).Append("\n");
             sb.Append("  FollowupActions: ").Append(FollowupActions).Append("\n");
             sb.Append("  ExtractedEntities: ").Append(ExtractedEntities).Append("\n");
+            sb.Append("  Labels: ").Append(Labels).Append("\n");
             sb.Append("  ErrorType: ").Append(ErrorType).Append("\n");
             sb.Append("  DurationMs: ").Append(DurationMs).Append("\n");
             sb.Append("}\n");
@@ -365,6 +376,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExtractedEntities.SequenceEqual(other.ExtractedEntities)
                 ) &&
                 (
+                    this.Labels == other.Labels ||
+                    this.Labels != null &&
+                    this.Labels.SequenceEqual(other.Labels)
+                ) &&
+                (
                     this.ErrorType == other.ErrorType ||
                     this.ErrorType != null &&
                     this.ErrorType.Equals(other.ErrorType)
@@ -422,6 +438,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExtractedEntities != null)
                     hash = hash * 59 + this.ExtractedEntities.GetHashCode();
+
+                if (this.Labels != null)
+                    hash = hash * 59 + this.Labels.GetHashCode();
 
                 if (this.ErrorType != null)
                     hash = hash * 59 + this.ErrorType.GetHashCode();

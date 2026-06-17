@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartDate">StartDate.</param>
         /// <param name="EndDate">EndDate.</param>
         /// <param name="Updates">Updates.</param>
-        public WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification(WfmAgentScheduleUpdateTopicUserReference User = null, DateTime? StartDate = null, DateTime? EndDate = null, List<WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate> Updates = null)
+        /// <param name="VisibilityRange">VisibilityRange.</param>
+        public WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification(WfmAgentScheduleUpdateTopicUserReference User = null, DateTime? StartDate = null, DateTime? EndDate = null, List<WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate> Updates = null, WfmAgentScheduleUpdateTopicAgentScheduleVisibilityRange VisibilityRange = null)
         {
             this.User = User;
             this.StartDate = StartDate;
             this.EndDate = EndDate;
             this.Updates = Updates;
+            this.VisibilityRange = VisibilityRange;
             
         }
         
@@ -67,6 +69,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate> Updates { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets VisibilityRange
+        /// </summary>
+        [DataMember(Name="visibilityRange", EmitDefaultValue=false)]
+        public WfmAgentScheduleUpdateTopicAgentScheduleVisibilityRange VisibilityRange { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  Updates: ").Append(Updates).Append("\n");
+            sb.Append("  VisibilityRange: ").Append(VisibilityRange).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,6 +150,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Updates == other.Updates ||
                     this.Updates != null &&
                     this.Updates.SequenceEqual(other.Updates)
+                ) &&
+                (
+                    this.VisibilityRange == other.VisibilityRange ||
+                    this.VisibilityRange != null &&
+                    this.VisibilityRange.Equals(other.VisibilityRange)
                 );
         }
 
@@ -164,6 +180,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Updates != null)
                     hash = hash * 59 + this.Updates.GetHashCode();
+
+                if (this.VisibilityRange != null)
+                    hash = hash * 59 + this.VisibilityRange.GetHashCode();
 
                 return hash;
             }

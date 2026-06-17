@@ -32,7 +32,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Conversation">The link to a conversation.</param>
         /// <param name="DateCreated">The date when the event created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EntityVersion">The version of the entity in the providing service.</param>
-        public OperationalEvent(AddressableEntityRef EventDefinition = null, string EntityId = null, string EntityToken = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string ParentEntityId = null, AddressableEntityRef Conversation = null, DateTime? DateCreated = null, string EntityVersion = null)
+        /// <param name="PhoneNumber">The phone number associated with the event.</param>
+        /// <param name="ExternalContactId">The external contact ID associated with the event.</param>
+        public OperationalEvent(AddressableEntityRef EventDefinition = null, string EntityId = null, string EntityToken = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string ParentEntityId = null, AddressableEntityRef Conversation = null, DateTime? DateCreated = null, string EntityVersion = null, string PhoneNumber = null, string ExternalContactId = null)
         {
             this.EventDefinition = EventDefinition;
             this.EntityId = EntityId;
@@ -45,6 +47,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Conversation = Conversation;
             this.DateCreated = DateCreated;
             this.EntityVersion = EntityVersion;
+            this.PhoneNumber = PhoneNumber;
+            this.ExternalContactId = ExternalContactId;
             
         }
         
@@ -148,6 +152,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public string EntityVersion { get; set; }
 
 
+
+        /// <summary>
+        /// The phone number associated with the event
+        /// </summary>
+        /// <value>The phone number associated with the event</value>
+        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
+        public string PhoneNumber { get; set; }
+
+
+
+        /// <summary>
+        /// The external contact ID associated with the event
+        /// </summary>
+        /// <value>The external contact ID associated with the event</value>
+        [DataMember(Name="externalContactId", EmitDefaultValue=false)]
+        public string ExternalContactId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -168,6 +190,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  EntityVersion: ").Append(EntityVersion).Append("\n");
+            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+            sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -262,6 +286,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EntityVersion == other.EntityVersion ||
                     this.EntityVersion != null &&
                     this.EntityVersion.Equals(other.EntityVersion)
+                ) &&
+                (
+                    this.PhoneNumber == other.PhoneNumber ||
+                    this.PhoneNumber != null &&
+                    this.PhoneNumber.Equals(other.PhoneNumber)
+                ) &&
+                (
+                    this.ExternalContactId == other.ExternalContactId ||
+                    this.ExternalContactId != null &&
+                    this.ExternalContactId.Equals(other.ExternalContactId)
                 );
         }
 
@@ -308,6 +342,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EntityVersion != null)
                     hash = hash * 59 + this.EntityVersion.GetHashCode();
+
+                if (this.PhoneNumber != null)
+                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
+
+                if (this.ExternalContactId != null)
+                    hash = hash * 59 + this.ExternalContactId.GetHashCode();
 
                 return hash;
             }

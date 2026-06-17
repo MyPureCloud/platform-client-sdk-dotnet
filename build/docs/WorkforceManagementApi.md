@@ -10,6 +10,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteWorkforcemanagementBusinessunitActivitycode**](#DeleteWorkforcemanagementBusinessunitActivitycode) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId} | Deletes an activity code |
 | [**DeleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory**](#DeleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory | Delete staffing group allocations history created for a capacity plan before the given date |
 | [**DeleteWorkforcemanagementBusinessunitPlanninggroup**](#DeleteWorkforcemanagementBusinessunitPlanninggroup) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Deletes the planning group |
+| [**DeleteWorkforcemanagementBusinessunitSchedulebid**](#DeleteWorkforcemanagementBusinessunitSchedulebid) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId} | Delete a schedule bid |
+| [**DeleteWorkforcemanagementBusinessunitSchedulebidGroup**](#DeleteWorkforcemanagementBusinessunitSchedulebidGroup) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId} | Delete a schedule bid group by bid group Id |
 | [**DeleteWorkforcemanagementBusinessunitSchedulingRun**](#DeleteWorkforcemanagementBusinessunitSchedulingRun) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Cancel a scheduling run |
 | [**DeleteWorkforcemanagementBusinessunitServicegoaltemplate**](#DeleteWorkforcemanagementBusinessunitServicegoaltemplate) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Delete a service goal template |
 | [**DeleteWorkforcemanagementBusinessunitStaffinggroup**](#DeleteWorkforcemanagementBusinessunitStaffinggroup) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId} | Deletes a staffing group |
@@ -65,6 +67,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitOpportunity**](#GetWorkforcemanagementBusinessunitOpportunity) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/{opportunityId} | Get opportunity details |
 | [**GetWorkforcemanagementBusinessunitPlanninggroup**](#GetWorkforcemanagementBusinessunitPlanninggroup) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Get a planning group |
 | [**GetWorkforcemanagementBusinessunitPlanninggroups**](#GetWorkforcemanagementBusinessunitPlanninggroups) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups | Gets list of planning groups |
+| [**GetWorkforcemanagementBusinessunitSchedulebid**](#GetWorkforcemanagementBusinessunitSchedulebid) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId} | Get a schedule bid |
+| [**GetWorkforcemanagementBusinessunitSchedulebidGroup**](#GetWorkforcemanagementBusinessunitSchedulebidGroup) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId} | Get a schedule bid group |
+| [**GetWorkforcemanagementBusinessunitSchedulebidGroupPreferences**](#GetWorkforcemanagementBusinessunitSchedulebidGroupPreferences) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}/preferences | Get agents schedule bid preferences for a bid group |
+| [**GetWorkforcemanagementBusinessunitSchedulebidGroupsSummary**](#GetWorkforcemanagementBusinessunitSchedulebidGroupsSummary) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/summary | Get summary of bid groups that belong to a schedule bid |
+| [**GetWorkforcemanagementBusinessunitSchedulebids**](#GetWorkforcemanagementBusinessunitSchedulebids) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids | Get list of schedule bids |
 | [**GetWorkforcemanagementBusinessunitSchedulerSettings**](#GetWorkforcemanagementBusinessunitSchedulerSettings) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduler/settings | Get scheduler settings for a business unit |
 | [**GetWorkforcemanagementBusinessunitSchedulingRun**](#GetWorkforcemanagementBusinessunitSchedulingRun) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Get a scheduling run |
 | [**GetWorkforcemanagementBusinessunitSchedulingRunResult**](#GetWorkforcemanagementBusinessunitSchedulingRunResult) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}/result | Get the result of a rescheduling operation |
@@ -137,6 +144,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementManagementunits**](#GetWorkforcemanagementManagementunits) | **Get** /api/v2/workforcemanagement/managementunits | Get management units |
 | [**GetWorkforcemanagementManagementunitsDivisionviews**](#GetWorkforcemanagementManagementunitsDivisionviews) | **Get** /api/v2/workforcemanagement/managementunits/divisionviews | Get management units across divisions |
 | [**GetWorkforcemanagementNotifications**](#GetWorkforcemanagementNotifications) | **Get** /api/v2/workforcemanagement/notifications | Get a list of notifications for the current user |
+| [**GetWorkforcemanagementSchedulebidPreference**](#GetWorkforcemanagementSchedulebidPreference) | **Get** /api/v2/workforcemanagement/schedulebids/{bidId}/preference | Gets an agent&#39;s schedule bidding preference |
+| [**GetWorkforcemanagementSchedulebidSchedulesets**](#GetWorkforcemanagementSchedulebidSchedulesets) | **Get** /api/v2/workforcemanagement/schedulebids/{bidId}/schedulesets | Gets an agent&#39;s schedule sets for a bid |
+| [**GetWorkforcemanagementSchedulebids**](#GetWorkforcemanagementSchedulebids) | **Get** /api/v2/workforcemanagement/schedulebids | Gets the list of schedule bids that belong to an agent. It will fetch an open bid or upcoming bid or a bid that is closed recently |
 | [**GetWorkforcemanagementSchedulingjob**](#GetWorkforcemanagementSchedulingjob) | **Get** /api/v2/workforcemanagement/schedulingjobs/{jobId} | Get status of the scheduling job |
 | [**GetWorkforcemanagementShifttrades**](#GetWorkforcemanagementShifttrades) | **Get** /api/v2/workforcemanagement/shifttrades | Gets all of my shift trades |
 | [**GetWorkforcemanagementShifttradingTradeJob**](#GetWorkforcemanagementShifttradingTradeJob) | **Get** /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/jobs/{jobId} | View result of update trade operation. Only the user who started the operation can query the status |
@@ -167,6 +177,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementBusinessunitMinimumstaffingSettings**](#PatchWorkforcemanagementBusinessunitMinimumstaffingSettings) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/minimumstaffing/settings | Update minimum staffing settings for a business unit |
 | [**PatchWorkforcemanagementBusinessunitOpportunity**](#PatchWorkforcemanagementBusinessunitOpportunity) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/{opportunityId} | Update the opportunity |
 | [**PatchWorkforcemanagementBusinessunitPlanninggroup**](#PatchWorkforcemanagementBusinessunitPlanninggroup) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Updates the planning group |
+| [**PatchWorkforcemanagementBusinessunitSchedulebid**](#PatchWorkforcemanagementBusinessunitSchedulebid) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId} | Update a schedule bid |
+| [**PatchWorkforcemanagementBusinessunitSchedulebidGroup**](#PatchWorkforcemanagementBusinessunitSchedulebidGroup) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId} | Update a schedule bid group by bid group Id |
+| [**PatchWorkforcemanagementBusinessunitSchedulebidGroupPreferences**](#PatchWorkforcemanagementBusinessunitSchedulebidGroupPreferences) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}/preferences | Overrides the assigned schedule bid for the specified agents |
 | [**PatchWorkforcemanagementBusinessunitSchedulerSettings**](#PatchWorkforcemanagementBusinessunitSchedulerSettings) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduler/settings | Update scheduler settings for a business unit |
 | [**PatchWorkforcemanagementBusinessunitSchedulingRun**](#PatchWorkforcemanagementBusinessunitSchedulingRun) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Mark a schedule run as applied |
 | [**PatchWorkforcemanagementBusinessunitServicegoaltemplate**](#PatchWorkforcemanagementBusinessunitServicegoaltemplate) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Updates a service goal template |
@@ -232,6 +245,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQuery**](#PostWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/externalactivities/query | Query opportunities by external activity IDs |
 | [**PostWorkforcemanagementBusinessunitOpportunitiesQuery**](#PostWorkforcemanagementBusinessunitOpportunitiesQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/query | Query opportunities within the specified date range |
 | [**PostWorkforcemanagementBusinessunitPlanninggroups**](#PostWorkforcemanagementBusinessunitPlanninggroups) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups | Adds a new planning group |
+| [**PostWorkforcemanagementBusinessunitSchedulebidCopy**](#PostWorkforcemanagementBusinessunitSchedulebidCopy) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/copy | Copy a schedule bid |
+| [**PostWorkforcemanagementBusinessunitSchedulebidGroups**](#PostWorkforcemanagementBusinessunitSchedulebidGroups) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups | Add a bid group in a given schedule bid |
+| [**PostWorkforcemanagementBusinessunitSchedulebids**](#PostWorkforcemanagementBusinessunitSchedulebids) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids | Create a new schedule bid |
+| [**PostWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets**](#PostWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/effectiveschedulesets | Fetch all the agents with effective schedule set for the given BU |
 | [**PostWorkforcemanagementBusinessunitServicegoaltemplates**](#PostWorkforcemanagementBusinessunitServicegoaltemplates) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates | Adds a new service goal template |
 | [**PostWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs**](#PostWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/evaluate/jobs | Queries and evaluates against shift trade configuration shift trades in a management unit per week |
 | [**PostWorkforcemanagementBusinessunitShifttradingTradesQueryJobs**](#PostWorkforcemanagementBusinessunitShifttradingTradesQueryJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/query/jobs | Queries shift trades in a management unit per user |
@@ -314,6 +331,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutWorkforcemanagementAgentIntegrationsHris**](#PutWorkforcemanagementAgentIntegrationsHris) | **Put** /api/v2/workforcemanagement/agents/{agentId}/integrations/hris | Update integrations for agent |
 | [**PutWorkforcemanagementBusinessunitTimeofflimitValues**](#PutWorkforcemanagementBusinessunitTimeofflimitValues) | **Put** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values | Sets daily values for a date range of time-off limit object |
 | [**PutWorkforcemanagementManagementunitTimeofflimitValues**](#PutWorkforcemanagementManagementunitTimeofflimitValues) | **Put** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values | Sets daily values for a date range of time off limit object |
+| [**PutWorkforcemanagementSchedulebidPreference**](#PutWorkforcemanagementSchedulebidPreference) | **Put** /api/v2/workforcemanagement/schedulebids/{bidId}/preference | Update an agent&#39;s schedule set preference |
 
 
 
@@ -565,6 +583,134 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit. |  |
 | **planningGroupId** | **string**| The ID of a planning group to delete |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteWorkforcemanagementBusinessunitSchedulebid
+
+> void DeleteWorkforcemanagementBusinessunitSchedulebid (string businessUnitId, string bidId)
+
+
+Delete a schedule bid
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWorkforcemanagementBusinessunitSchedulebidExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The ID of the schedule bid
+
+            try
+            { 
+                // Delete a schedule bid
+                apiInstance.DeleteWorkforcemanagementBusinessunitSchedulebid(businessUnitId, bidId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.DeleteWorkforcemanagementBusinessunitSchedulebid: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The ID of the schedule bid |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteWorkforcemanagementBusinessunitSchedulebidGroup
+
+> void DeleteWorkforcemanagementBusinessunitSchedulebidGroup (string businessUnitId, string bidId, string bidGroupId)
+
+
+Delete a schedule bid group by bid group Id
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWorkforcemanagementBusinessunitSchedulebidGroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The ID of the schedule bid associated with the bid groups
+            var bidGroupId = bidGroupId_example;  // string | Schedule Bid Group id
+
+            try
+            { 
+                // Delete a schedule bid group by bid group Id
+                apiInstance.DeleteWorkforcemanagementBusinessunitSchedulebidGroup(businessUnitId, bidId, bidGroupId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.DeleteWorkforcemanagementBusinessunitSchedulebidGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The ID of the schedule bid associated with the bid groups |  |
+| **bidGroupId** | **string**| Schedule Bid Group id |  |
 
 ### Return type
 
@@ -4274,6 +4420,332 @@ namespace Example
 ### Return type
 
 [**PlanningGroupList**](PlanningGroupList)
+
+
+## GetWorkforcemanagementBusinessunitSchedulebid
+
+> [**ScheduleBid**](ScheduleBid) GetWorkforcemanagementBusinessunitSchedulebid (string businessUnitId, string bidId)
+
+
+Get a schedule bid
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitSchedulebidExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The ID of the schedule bid
+
+            try
+            { 
+                // Get a schedule bid
+                ScheduleBid result = apiInstance.GetWorkforcemanagementBusinessunitSchedulebid(businessUnitId, bidId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitSchedulebid: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The ID of the schedule bid |  |
+
+### Return type
+
+[**ScheduleBid**](ScheduleBid)
+
+
+## GetWorkforcemanagementBusinessunitSchedulebidGroup
+
+> [**ScheduleBidGroupResponse**](ScheduleBidGroupResponse) GetWorkforcemanagementBusinessunitSchedulebidGroup (string businessUnitId, string bidId, string bidGroupId)
+
+
+Get a schedule bid group
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitSchedulebidGroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The ID of the schedule bid associated with the bid groups
+            var bidGroupId = bidGroupId_example;  // string | Schedule Bid Group id
+
+            try
+            { 
+                // Get a schedule bid group
+                ScheduleBidGroupResponse result = apiInstance.GetWorkforcemanagementBusinessunitSchedulebidGroup(businessUnitId, bidId, bidGroupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitSchedulebidGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The ID of the schedule bid associated with the bid groups |  |
+| **bidGroupId** | **string**| Schedule Bid Group id |  |
+
+### Return type
+
+[**ScheduleBidGroupResponse**](ScheduleBidGroupResponse)
+
+
+## GetWorkforcemanagementBusinessunitSchedulebidGroupPreferences
+
+> [**AdminAgentScheduleBidPreferenceResponse**](AdminAgentScheduleBidPreferenceResponse) GetWorkforcemanagementBusinessunitSchedulebidGroupPreferences (string businessUnitId, string bidId, string bidGroupId, bool? forceDownloadService = null, List<string> expand = null)
+
+
+Get agents schedule bid preferences for a bid group
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitSchedulebidGroupPreferencesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The ID of the schedule bid associated with the bid groups
+            var bidGroupId = bidGroupId_example;  // string | The ID of the schedule bid group
+            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) 
+            var expand = new List<string>(); // List<string> | Include to fetch agents' preferences with priorities (optional) 
+
+            try
+            { 
+                // Get agents schedule bid preferences for a bid group
+                AdminAgentScheduleBidPreferenceResponse result = apiInstance.GetWorkforcemanagementBusinessunitSchedulebidGroupPreferences(businessUnitId, bidId, bidGroupId, forceDownloadService, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitSchedulebidGroupPreferences: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The ID of the schedule bid associated with the bid groups |  |
+| **bidGroupId** | **string**| The ID of the schedule bid group |  |
+| **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional]  |
+| **expand** | [**List<string>**](string)| Include to fetch agents&#39; preferences with priorities | [optional] <br />**Values**: agentsScheduleBidPreferences.agentScheduleBidPreferencePriorities |
+
+### Return type
+
+[**AdminAgentScheduleBidPreferenceResponse**](AdminAgentScheduleBidPreferenceResponse)
+
+
+## GetWorkforcemanagementBusinessunitSchedulebidGroupsSummary
+
+> [**ScheduleBidGroupSummaryList**](ScheduleBidGroupSummaryList) GetWorkforcemanagementBusinessunitSchedulebidGroupsSummary (string businessUnitId, string bidId)
+
+
+Get summary of bid groups that belong to a schedule bid
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitSchedulebidGroupsSummaryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The ID of the schedule bid associated with the bid groups
+
+            try
+            { 
+                // Get summary of bid groups that belong to a schedule bid
+                ScheduleBidGroupSummaryList result = apiInstance.GetWorkforcemanagementBusinessunitSchedulebidGroupsSummary(businessUnitId, bidId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitSchedulebidGroupsSummary: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The ID of the schedule bid associated with the bid groups |  |
+
+### Return type
+
+[**ScheduleBidGroupSummaryList**](ScheduleBidGroupSummaryList)
+
+
+## GetWorkforcemanagementBusinessunitSchedulebids
+
+> [**ScheduleBidListResponse**](ScheduleBidListResponse) GetWorkforcemanagementBusinessunitSchedulebids (string businessUnitId)
+
+
+Get list of schedule bids
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitSchedulebidsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+
+            try
+            { 
+                // Get list of schedule bids
+                ScheduleBidListResponse result = apiInstance.GetWorkforcemanagementBusinessunitSchedulebids(businessUnitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitSchedulebids: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+
+### Return type
+
+[**ScheduleBidListResponse**](ScheduleBidListResponse)
 
 
 ## GetWorkforcemanagementBusinessunitSchedulerSettings
@@ -9123,6 +9595,187 @@ This endpoint does require any parameters.
 [**NotificationsResponse**](NotificationsResponse)
 
 
+## GetWorkforcemanagementSchedulebidPreference
+
+> [**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse) GetWorkforcemanagementSchedulebidPreference (string bidId)
+
+
+Gets an agent's schedule bidding preference
+
+Requires ANY permissions: 
+
+* wfm:agentScheduleBid:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementSchedulebidPreferenceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var bidId = bidId_example;  // string | The ID of the schedule bid
+
+            try
+            { 
+                // Gets an agent's schedule bidding preference
+                AgentScheduleBiddingPreferenceResponse result = apiInstance.GetWorkforcemanagementSchedulebidPreference(bidId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementSchedulebidPreference: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bidId** | **string**| The ID of the schedule bid |  |
+
+### Return type
+
+[**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
+
+
+## GetWorkforcemanagementSchedulebidSchedulesets
+
+> [**AgentScheduleBidScheduleSetResponse**](AgentScheduleBidScheduleSetResponse) GetWorkforcemanagementSchedulebidSchedulesets (string bidId)
+
+
+Gets an agent's schedule sets for a bid
+
+Requires ANY permissions: 
+
+* wfm:agentScheduleBid:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementSchedulebidSchedulesetsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var bidId = bidId_example;  // string | The ID of the schedule bid
+
+            try
+            { 
+                // Gets an agent's schedule sets for a bid
+                AgentScheduleBidScheduleSetResponse result = apiInstance.GetWorkforcemanagementSchedulebidSchedulesets(bidId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementSchedulebidSchedulesets: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bidId** | **string**| The ID of the schedule bid |  |
+
+### Return type
+
+[**AgentScheduleBidScheduleSetResponse**](AgentScheduleBidScheduleSetResponse)
+
+
+## GetWorkforcemanagementSchedulebids
+
+> [**AgentScheduleBids**](AgentScheduleBids) GetWorkforcemanagementSchedulebids ()
+
+
+Gets the list of schedule bids that belong to an agent. It will fetch an open bid or upcoming bid or a bid that is closed recently
+
+Requires ANY permissions: 
+
+* wfm:agentScheduleBid:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementSchedulebidsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+
+            try
+            { 
+                // Gets the list of schedule bids that belong to an agent. It will fetch an open bid or upcoming bid or a bid that is closed recently
+                AgentScheduleBids result = apiInstance.GetWorkforcemanagementSchedulebids();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementSchedulebids: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**AgentScheduleBids**](AgentScheduleBids)
+
+
 ## GetWorkforcemanagementSchedulingjob
 
 > [**SchedulingStatusResponse**](SchedulingStatusResponse) GetWorkforcemanagementSchedulingjob (string jobId)
@@ -11025,6 +11678,208 @@ namespace Example
 ### Return type
 
 [**PlanningGroup**](PlanningGroup)
+
+
+## PatchWorkforcemanagementBusinessunitSchedulebid
+
+> [**ScheduleBid**](ScheduleBid) PatchWorkforcemanagementBusinessunitSchedulebid (string businessUnitId, string bidId, UpdateScheduleBid body)
+
+
+Update a schedule bid
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitSchedulebidExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The ID of the schedule bid
+            var body = new UpdateScheduleBid(); // UpdateScheduleBid | The schedule bid to be updated
+
+            try
+            { 
+                // Update a schedule bid
+                ScheduleBid result = apiInstance.PatchWorkforcemanagementBusinessunitSchedulebid(businessUnitId, bidId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitSchedulebid: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The ID of the schedule bid |  |
+| **body** | [**UpdateScheduleBid**](UpdateScheduleBid)| The schedule bid to be updated |  |
+
+### Return type
+
+[**ScheduleBid**](ScheduleBid)
+
+
+## PatchWorkforcemanagementBusinessunitSchedulebidGroup
+
+> [**ScheduleBidGroupResponse**](ScheduleBidGroupResponse) PatchWorkforcemanagementBusinessunitSchedulebidGroup (string businessUnitId, string bidId, string bidGroupId, ScheduleBidGroupUpdate body)
+
+
+Update a schedule bid group by bid group Id
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitSchedulebidGroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The ID of the schedule bid associated with the bid groups
+            var bidGroupId = bidGroupId_example;  // string | Schedule Bid Group id
+            var body = new ScheduleBidGroupUpdate(); // ScheduleBidGroupUpdate | body
+
+            try
+            { 
+                // Update a schedule bid group by bid group Id
+                ScheduleBidGroupResponse result = apiInstance.PatchWorkforcemanagementBusinessunitSchedulebidGroup(businessUnitId, bidId, bidGroupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitSchedulebidGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The ID of the schedule bid associated with the bid groups |  |
+| **bidGroupId** | **string**| Schedule Bid Group id |  |
+| **body** | [**ScheduleBidGroupUpdate**](ScheduleBidGroupUpdate)| body |  |
+
+### Return type
+
+[**ScheduleBidGroupResponse**](ScheduleBidGroupResponse)
+
+
+## PatchWorkforcemanagementBusinessunitSchedulebidGroupPreferences
+
+> [**AdminAgentScheduleBidPreferenceResponse**](AdminAgentScheduleBidPreferenceResponse) PatchWorkforcemanagementBusinessunitSchedulebidGroupPreferences (string businessUnitId, string bidId, string bidGroupId, AgentsBidAssignedScheduleSetOverrideRequest body)
+
+
+Overrides the assigned schedule bid for the specified agents
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitSchedulebidGroupPreferencesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The ID of the schedule bid associated with the bid groups
+            var bidGroupId = bidGroupId_example;  // string | The ID of the schedule bid group
+            var body = new AgentsBidAssignedScheduleSetOverrideRequest(); // AgentsBidAssignedScheduleSetOverrideRequest | body
+
+            try
+            { 
+                // Overrides the assigned schedule bid for the specified agents
+                AdminAgentScheduleBidPreferenceResponse result = apiInstance.PatchWorkforcemanagementBusinessunitSchedulebidGroupPreferences(businessUnitId, bidId, bidGroupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitSchedulebidGroupPreferences: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The ID of the schedule bid associated with the bid groups |  |
+| **bidGroupId** | **string**| The ID of the schedule bid group |  |
+| **body** | [**AgentsBidAssignedScheduleSetOverrideRequest**](AgentsBidAssignedScheduleSetOverrideRequest)| body |  |
+
+### Return type
+
+[**AdminAgentScheduleBidPreferenceResponse**](AdminAgentScheduleBidPreferenceResponse)
 
 
 ## PatchWorkforcemanagementBusinessunitSchedulerSettings
@@ -15264,6 +16119,266 @@ namespace Example
 ### Return type
 
 [**PlanningGroup**](PlanningGroup)
+
+
+## PostWorkforcemanagementBusinessunitSchedulebidCopy
+
+> [**ScheduleBid**](ScheduleBid) PostWorkforcemanagementBusinessunitSchedulebidCopy (string businessUnitId, string bidId, CopyScheduleBid body)
+
+
+Copy a schedule bid
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitSchedulebidCopyExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The ID of the schedule bid to copy
+            var body = new CopyScheduleBid(); // CopyScheduleBid | body
+
+            try
+            { 
+                // Copy a schedule bid
+                ScheduleBid result = apiInstance.PostWorkforcemanagementBusinessunitSchedulebidCopy(businessUnitId, bidId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitSchedulebidCopy: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The ID of the schedule bid to copy |  |
+| **body** | [**CopyScheduleBid**](CopyScheduleBid)| body |  |
+
+### Return type
+
+[**ScheduleBid**](ScheduleBid)
+
+
+## PostWorkforcemanagementBusinessunitSchedulebidGroups
+
+> [**ScheduleBidGroupResponse**](ScheduleBidGroupResponse) PostWorkforcemanagementBusinessunitSchedulebidGroups (string businessUnitId, string bidId, ScheduleBidGroupCreate body)
+
+
+Add a bid group in a given schedule bid
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitSchedulebidGroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The ID of the schedule bid associated with the bid groups
+            var body = new ScheduleBidGroupCreate(); // ScheduleBidGroupCreate | body
+
+            try
+            { 
+                // Add a bid group in a given schedule bid
+                ScheduleBidGroupResponse result = apiInstance.PostWorkforcemanagementBusinessunitSchedulebidGroups(businessUnitId, bidId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitSchedulebidGroups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The ID of the schedule bid associated with the bid groups |  |
+| **body** | [**ScheduleBidGroupCreate**](ScheduleBidGroupCreate)| body |  |
+
+### Return type
+
+[**ScheduleBidGroupResponse**](ScheduleBidGroupResponse)
+
+
+## PostWorkforcemanagementBusinessunitSchedulebids
+
+> [**ScheduleBid**](ScheduleBid) PostWorkforcemanagementBusinessunitSchedulebids (string businessUnitId, CreateScheduleBid body)
+
+
+Create a new schedule bid
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitSchedulebidsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new CreateScheduleBid(); // CreateScheduleBid | The schedule bid to be created
+
+            try
+            { 
+                // Create a new schedule bid
+                ScheduleBid result = apiInstance.PostWorkforcemanagementBusinessunitSchedulebids(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitSchedulebids: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**CreateScheduleBid**](CreateScheduleBid)| The schedule bid to be created |  |
+
+### Return type
+
+[**ScheduleBid**](ScheduleBid)
+
+
+## PostWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets
+
+> [**AgentsEffectiveScheduleSetResponse**](AgentsEffectiveScheduleSetResponse) PostWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets (string businessUnitId, QueryEffectiveScheduleSetsRequest body)
+
+
+Fetch all the agents with effective schedule set for the given BU
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesetsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new QueryEffectiveScheduleSetsRequest(); // QueryEffectiveScheduleSetsRequest | body
+
+            try
+            { 
+                // Fetch all the agents with effective schedule set for the given BU
+                AgentsEffectiveScheduleSetResponse result = apiInstance.PostWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**QueryEffectiveScheduleSetsRequest**](QueryEffectiveScheduleSetsRequest)| body |  |
+
+### Return type
+
+[**AgentsEffectiveScheduleSetResponse**](AgentsEffectiveScheduleSetResponse)
 
 
 ## PostWorkforcemanagementBusinessunitServicegoaltemplates
@@ -20686,4 +21801,68 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 265.0.0_
+## PutWorkforcemanagementSchedulebidPreference
+
+> [**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse) PutWorkforcemanagementSchedulebidPreference (string bidId, UpdateAgentScheduleBiddingPreference body)
+
+
+Update an agent's schedule set preference
+
+Requires ANY permissions: 
+
+* wfm:agentScheduleBid:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutWorkforcemanagementSchedulebidPreferenceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var bidId = bidId_example;  // string | The ID of the schedule bid
+            var body = new UpdateAgentScheduleBiddingPreference(); // UpdateAgentScheduleBiddingPreference | body
+
+            try
+            { 
+                // Update an agent's schedule set preference
+                AgentScheduleBiddingPreferenceResponse result = apiInstance.PutWorkforcemanagementSchedulebidPreference(bidId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PutWorkforcemanagementSchedulebidPreference: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bidId** | **string**| The ID of the schedule bid |  |
+| **body** | [**UpdateAgentScheduleBiddingPreference**](UpdateAgentScheduleBiddingPreference)| body |  |
+
+### Return type
+
+[**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
+
+
+_PureCloudPlatform.Client.V2 266.0.0_

@@ -19,15 +19,50 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class CaseplanQueryRequest :  IEquatable<CaseplanQueryRequest>
     {
         /// <summary>
+        /// Type of name search to perform. Default is BEGINS_WITH.
+        /// </summary>
+        /// <value>Type of name search to perform. Default is BEGINS_WITH.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum NameSearchTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum BeginsWith for "BEGINS_WITH"
+            /// </summary>
+            [EnumMember(Value = "BEGINS_WITH")]
+            BeginsWith,
+            
+            /// <summary>
+            /// Enum Contains for "CONTAINS"
+            /// </summary>
+            [EnumMember(Value = "CONTAINS")]
+            Contains
+        }
+        /// <summary>
+        /// Type of name search to perform. Default is BEGINS_WITH.
+        /// </summary>
+        /// <value>Type of name search to perform. Default is BEGINS_WITH.</value>
+        [DataMember(Name="nameSearchType", EmitDefaultValue=false)]
+        public NameSearchTypeEnum? NameSearchType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="CaseplanQueryRequest" /> class.
         /// </summary>
         /// <param name="Name">Filter by Caseplan name (case-insensitive, partial match). Omitting name returns all Caseplans (subject to pagination)..</param>
+        /// <param name="NameSearchType">Type of name search to perform. Default is BEGINS_WITH..</param>
         /// <param name="PageSize">Number of results per page. Maximum is 200. Default is 25..</param>
         /// <param name="After">Cursor for pagination. Use the \&quot;after\&quot; value from the previous response..</param>
         /// <param name="DivisionIds">Divisions to filter by. Accepts a list of UUIDs and/or &#39;*&#39;..</param>
-        public CaseplanQueryRequest(string Name = null, int? PageSize = null, string After = null, List<string> DivisionIds = null)
+        public CaseplanQueryRequest(string Name = null, NameSearchTypeEnum? NameSearchType = null, int? PageSize = null, string After = null, List<string> DivisionIds = null)
         {
             this.Name = Name;
+            this.NameSearchType = NameSearchType;
             this.PageSize = PageSize;
             this.After = After;
             this.DivisionIds = DivisionIds;
@@ -42,6 +77,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Filter by Caseplan name (case-insensitive, partial match). Omitting name returns all Caseplans (subject to pagination).</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+
 
 
 
@@ -81,6 +118,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class CaseplanQueryRequest {\n");
 
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  NameSearchType: ").Append(NameSearchType).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  After: ").Append(After).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
@@ -130,6 +168,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.NameSearchType == other.NameSearchType ||
+                    this.NameSearchType != null &&
+                    this.NameSearchType.Equals(other.NameSearchType)
+                ) &&
+                (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
@@ -159,6 +202,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.NameSearchType != null)
+                    hash = hash * 59 + this.NameSearchType.GetHashCode();
 
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();

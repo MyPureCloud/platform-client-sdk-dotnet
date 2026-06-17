@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Users">Users.</param>
-        public WfmActivityPlanRunJobCompleteTopicActivityPlanSessionReference(string Id = null, List<string> Users = null)
+        public WfmActivityPlanRunJobCompleteTopicActivityPlanSessionReference(string Id = null, List<WfmActivityPlanRunJobCompleteTopicUserReference> Users = null)
         {
             this.Id = Id;
             this.Users = Users;
@@ -44,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Users
         /// </summary>
         [DataMember(Name="users", EmitDefaultValue=false)]
-        public List<string> Users { get; set; }
+        public List<WfmActivityPlanRunJobCompleteTopicUserReference> Users { get; set; }
 
 
         /// <summary>

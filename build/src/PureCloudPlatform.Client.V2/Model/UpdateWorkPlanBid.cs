@@ -175,9 +175,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EffectiveDate">The date when agents will be assigned to the new work plan in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="AgentRankingType">The type of agent ranking selected for this bid.</param>
         /// <param name="RankingTiebreakerType">Ranking tiebreaker.</param>
+        /// <param name="EndOverridesAndRotations">If true, all existing overrides, workplan rotations will be ended one day before effective date of this bid.</param>
         /// <param name="WorkPlanFieldsVisibleToAgents">The work plan fields visible to agents whenever work plan preferences are made.</param>
         /// <param name="Status">The state of the bid.</param>
-        public UpdateWorkPlanBid(string Name = null, BuShortTermForecastWeekReference Forecast = null, String BidWindowStartDate = null, String BidWindowEndDate = null, String EffectiveDate = null, AgentRankingTypeEnum? AgentRankingType = null, RankingTiebreakerTypeEnum? RankingTiebreakerType = null, ListWrapperAgentWorkPlanField WorkPlanFieldsVisibleToAgents = null, StatusEnum? Status = null)
+        public UpdateWorkPlanBid(string Name = null, BuShortTermForecastWeekReference Forecast = null, String BidWindowStartDate = null, String BidWindowEndDate = null, String EffectiveDate = null, AgentRankingTypeEnum? AgentRankingType = null, RankingTiebreakerTypeEnum? RankingTiebreakerType = null, bool? EndOverridesAndRotations = null, ListWrapperAgentWorkPlanField WorkPlanFieldsVisibleToAgents = null, StatusEnum? Status = null)
         {
             this.Name = Name;
             this.Forecast = Forecast;
@@ -186,6 +187,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EffectiveDate = EffectiveDate;
             this.AgentRankingType = AgentRankingType;
             this.RankingTiebreakerType = RankingTiebreakerType;
+            this.EndOverridesAndRotations = EndOverridesAndRotations;
             this.WorkPlanFieldsVisibleToAgents = WorkPlanFieldsVisibleToAgents;
             this.Status = Status;
             
@@ -243,6 +245,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// If true, all existing overrides, workplan rotations will be ended one day before effective date of this bid
+        /// </summary>
+        /// <value>If true, all existing overrides, workplan rotations will be ended one day before effective date of this bid</value>
+        [DataMember(Name="endOverridesAndRotations", EmitDefaultValue=false)]
+        public bool? EndOverridesAndRotations { get; set; }
+
+
+
+        /// <summary>
         /// The work plan fields visible to agents whenever work plan preferences are made
         /// </summary>
         /// <value>The work plan fields visible to agents whenever work plan preferences are made</value>
@@ -268,6 +279,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EffectiveDate: ").Append(EffectiveDate).Append("\n");
             sb.Append("  AgentRankingType: ").Append(AgentRankingType).Append("\n");
             sb.Append("  RankingTiebreakerType: ").Append(RankingTiebreakerType).Append("\n");
+            sb.Append("  EndOverridesAndRotations: ").Append(EndOverridesAndRotations).Append("\n");
             sb.Append("  WorkPlanFieldsVisibleToAgents: ").Append(WorkPlanFieldsVisibleToAgents).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("}\n");
@@ -346,6 +358,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RankingTiebreakerType.Equals(other.RankingTiebreakerType)
                 ) &&
                 (
+                    this.EndOverridesAndRotations == other.EndOverridesAndRotations ||
+                    this.EndOverridesAndRotations != null &&
+                    this.EndOverridesAndRotations.Equals(other.EndOverridesAndRotations)
+                ) &&
+                (
                     this.WorkPlanFieldsVisibleToAgents == other.WorkPlanFieldsVisibleToAgents ||
                     this.WorkPlanFieldsVisibleToAgents != null &&
                     this.WorkPlanFieldsVisibleToAgents.Equals(other.WorkPlanFieldsVisibleToAgents)
@@ -388,6 +405,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RankingTiebreakerType != null)
                     hash = hash * 59 + this.RankingTiebreakerType.GetHashCode();
+
+                if (this.EndOverridesAndRotations != null)
+                    hash = hash * 59 + this.EndOverridesAndRotations.GetHashCode();
 
                 if (this.WorkPlanFieldsVisibleToAgents != null)
                     hash = hash * 59 + this.WorkPlanFieldsVisibleToAgents.GetHashCode();

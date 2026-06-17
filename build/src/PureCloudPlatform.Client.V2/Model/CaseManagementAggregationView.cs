@@ -34,6 +34,18 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Ncaseassociationscreated for "nCaseAssociationsCreated"
+            /// </summary>
+            [EnumMember(Value = "nCaseAssociationsCreated")]
+            Ncaseassociationscreated,
+            
+            /// <summary>
+            /// Enum Ncasesdeleted for "nCasesDeleted"
+            /// </summary>
+            [EnumMember(Value = "nCasesDeleted")]
+            Ncasesdeleted,
+            
+            /// <summary>
             /// Enum Ncasesopened for "nCasesOpened"
             /// </summary>
             [EnumMember(Value = "nCasesOpened")]

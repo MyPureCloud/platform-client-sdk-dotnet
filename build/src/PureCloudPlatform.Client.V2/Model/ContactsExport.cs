@@ -107,6 +107,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// When the request reached a terminal state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>When the request reached a terminal state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCompletion", EmitDefaultValue=false)]
+        public DateTime? DateCompletion { get; private set; }
+
+
+
 
 
         /// <summary>
@@ -115,6 +124,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The location where the results of the request can be retrieved</value>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; private set; }
+
+
+
+        /// <summary>
+        /// Number of rows returned by the export query
+        /// </summary>
+        /// <value>Number of rows returned by the export query</value>
+        [DataMember(Name="resultRowCount", EmitDefaultValue=false)]
+        public int? ResultRowCount { get; private set; }
 
 
 
@@ -148,8 +166,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateCompletion: ").Append(DateCompletion).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
+            sb.Append("  ResultRowCount: ").Append(ResultRowCount).Append("\n");
             sb.Append("  QueryConditions: ").Append(QueryConditions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -213,6 +233,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.DateCompletion == other.DateCompletion ||
+                    this.DateCompletion != null &&
+                    this.DateCompletion.Equals(other.DateCompletion)
+                ) &&
+                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
@@ -221,6 +246,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DownloadUrl == other.DownloadUrl ||
                     this.DownloadUrl != null &&
                     this.DownloadUrl.Equals(other.DownloadUrl)
+                ) &&
+                (
+                    this.ResultRowCount == other.ResultRowCount ||
+                    this.ResultRowCount != null &&
+                    this.ResultRowCount.Equals(other.ResultRowCount)
                 ) &&
                 (
                     this.QueryConditions == other.QueryConditions ||
@@ -257,11 +287,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
 
+                if (this.DateCompletion != null)
+                    hash = hash * 59 + this.DateCompletion.GetHashCode();
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
 
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
+
+                if (this.ResultRowCount != null)
+                    hash = hash * 59 + this.ResultRowCount.GetHashCode();
 
                 if (this.QueryConditions != null)
                     hash = hash * 59 + this.QueryConditions.GetHashCode();

@@ -14,9 +14,9 @@
 | **Document** | [**KnowledgeDocumentReference**](KnowledgeDocumentReference) | The reference to document to which the variation is associated. | [optional] |
 | **Priority** | **int?** | The priority of the variation. | [optional] |
 | **Name** | **string** | The name of the variation. | [optional] |
-| **Body** | [**DocumentBodyRequest**](DocumentBodyRequest) | The content for the variation. | [optional] |
+| **Body** | [**DocumentBody**](DocumentBody) | The content for the variation. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 265.0.0_
+_PureCloudPlatform.Client.V2 266.0.0_

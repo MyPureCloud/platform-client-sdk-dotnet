@@ -148,6 +148,33 @@ namespace PureCloudPlatform.Client.V2.Model
             Randomlyassign
         }
         /// <summary>
+        /// The type of bid created
+        /// </summary>
+        /// <value>The type of bid created</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum BidTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Workplanbid for "WorkPlanBid"
+            /// </summary>
+            [EnumMember(Value = "WorkPlanBid")]
+            Workplanbid,
+            
+            /// <summary>
+            /// Enum Schedulebid for "ScheduleBid"
+            /// </summary>
+            [EnumMember(Value = "ScheduleBid")]
+            Schedulebid
+        }
+        /// <summary>
         /// Gets or Sets WorkPlanFieldsVisibleToAgents
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
@@ -191,6 +218,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Ranking tiebreaker</value>
         [DataMember(Name="rankingTiebreakerType", EmitDefaultValue=false)]
         public RankingTiebreakerTypeEnum? RankingTiebreakerType { get; set; }
+        /// <summary>
+        /// The type of bid created
+        /// </summary>
+        /// <value>The type of bid created</value>
+        [DataMember(Name="bidType", EmitDefaultValue=false)]
+        public BidTypeEnum? BidType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanBid" /> class.
@@ -210,9 +243,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentRankingType">The type of agent ranking selected for this bid (required).</param>
         /// <param name="RankingTiebreakerType">Ranking tiebreaker (required).</param>
         /// <param name="PublishedDate">The date the work plan bid published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="BidType">The type of bid created (required).</param>
+        /// <param name="EndOverridesAndRotations">If true, all existing overrides, workplan rotations will be ended one day before effective date of this bid (required).</param>
         /// <param name="WorkPlanFieldsVisibleToAgents">The work plan fields visible to agents whenever work plan preferences are made (required).</param>
         /// <param name="Metadata">The meta data of this bid.</param>
-        public WorkPlanBid(string Id = null, string Name = null, BuShortTermForecastWeekReference Forecast = null, String BidWindowStartDate = null, String BidWindowEndDate = null, String EffectiveDate = null, StatusEnum? Status = null, AgentRankingTypeEnum? AgentRankingType = null, RankingTiebreakerTypeEnum? RankingTiebreakerType = null, DateTime? PublishedDate = null, List<WorkPlanFieldsVisibleToAgentsEnum> WorkPlanFieldsVisibleToAgents = null, WorkPlanBidMetadata Metadata = null)
+        public WorkPlanBid(string Id = null, string Name = null, BuShortTermForecastWeekReference Forecast = null, String BidWindowStartDate = null, String BidWindowEndDate = null, String EffectiveDate = null, StatusEnum? Status = null, AgentRankingTypeEnum? AgentRankingType = null, RankingTiebreakerTypeEnum? RankingTiebreakerType = null, DateTime? PublishedDate = null, BidTypeEnum? BidType = null, bool? EndOverridesAndRotations = null, List<WorkPlanFieldsVisibleToAgentsEnum> WorkPlanFieldsVisibleToAgents = null, WorkPlanBidMetadata Metadata = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -224,6 +259,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AgentRankingType = AgentRankingType;
             this.RankingTiebreakerType = RankingTiebreakerType;
             this.PublishedDate = PublishedDate;
+            this.BidType = BidType;
+            this.EndOverridesAndRotations = EndOverridesAndRotations;
             this.WorkPlanFieldsVisibleToAgents = WorkPlanFieldsVisibleToAgents;
             this.Metadata = Metadata;
             
@@ -300,6 +337,17 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+        /// <summary>
+        /// If true, all existing overrides, workplan rotations will be ended one day before effective date of this bid
+        /// </summary>
+        /// <value>If true, all existing overrides, workplan rotations will be ended one day before effective date of this bid</value>
+        [DataMember(Name="endOverridesAndRotations", EmitDefaultValue=false)]
+        public bool? EndOverridesAndRotations { get; set; }
+
+
+
         /// <summary>
         /// The work plan fields visible to agents whenever work plan preferences are made
         /// </summary>
@@ -345,6 +393,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AgentRankingType: ").Append(AgentRankingType).Append("\n");
             sb.Append("  RankingTiebreakerType: ").Append(RankingTiebreakerType).Append("\n");
             sb.Append("  PublishedDate: ").Append(PublishedDate).Append("\n");
+            sb.Append("  BidType: ").Append(BidType).Append("\n");
+            sb.Append("  EndOverridesAndRotations: ").Append(EndOverridesAndRotations).Append("\n");
             sb.Append("  WorkPlanFieldsVisibleToAgents: ").Append(WorkPlanFieldsVisibleToAgents).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -439,6 +489,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PublishedDate.Equals(other.PublishedDate)
                 ) &&
                 (
+                    this.BidType == other.BidType ||
+                    this.BidType != null &&
+                    this.BidType.Equals(other.BidType)
+                ) &&
+                (
+                    this.EndOverridesAndRotations == other.EndOverridesAndRotations ||
+                    this.EndOverridesAndRotations != null &&
+                    this.EndOverridesAndRotations.Equals(other.EndOverridesAndRotations)
+                ) &&
+                (
                     this.WorkPlanFieldsVisibleToAgents == other.WorkPlanFieldsVisibleToAgents ||
                     this.WorkPlanFieldsVisibleToAgents != null &&
                     this.WorkPlanFieldsVisibleToAgents.SequenceEqual(other.WorkPlanFieldsVisibleToAgents)
@@ -495,6 +555,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PublishedDate != null)
                     hash = hash * 59 + this.PublishedDate.GetHashCode();
+
+                if (this.BidType != null)
+                    hash = hash * 59 + this.BidType.GetHashCode();
+
+                if (this.EndOverridesAndRotations != null)
+                    hash = hash * 59 + this.EndOverridesAndRotations.GetHashCode();
 
                 if (this.WorkPlanFieldsVisibleToAgents != null)
                     hash = hash * 59 + this.WorkPlanFieldsVisibleToAgents.GetHashCode();

@@ -27,7 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IpAddressAllowlist">The list of IP addresses that will be allowed to authenticate with Genesys Cloud..</param>
         /// <param name="PasswordRequirements">The password requirements for the organization..</param>
         /// <param name="InactivityTimeoutExclusions">The list of exempt apis from inactivity timeout..</param>
-        public OrgAuthSettings(bool? MultifactorAuthenticationRequired = null, bool? DomainAllowlistEnabled = null, List<string> DomainAllowlist = null, List<string> IpAddressAllowlist = null, PasswordRequirements PasswordRequirements = null, List<string> InactivityTimeoutExclusions = null)
+        /// <param name="UniversalLogout">Indicates whether universal logout is enabled for the organization..</param>
+        public OrgAuthSettings(bool? MultifactorAuthenticationRequired = null, bool? DomainAllowlistEnabled = null, List<string> DomainAllowlist = null, List<string> IpAddressAllowlist = null, PasswordRequirements PasswordRequirements = null, List<string> InactivityTimeoutExclusions = null, bool? UniversalLogout = null)
         {
             this.MultifactorAuthenticationRequired = MultifactorAuthenticationRequired;
             this.DomainAllowlistEnabled = DomainAllowlistEnabled;
@@ -35,6 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IpAddressAllowlist = IpAddressAllowlist;
             this.PasswordRequirements = PasswordRequirements;
             this.InactivityTimeoutExclusions = InactivityTimeoutExclusions;
+            this.UniversalLogout = UniversalLogout;
             
         }
         
@@ -93,6 +95,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> InactivityTimeoutExclusions { get; set; }
 
 
+
+        /// <summary>
+        /// Indicates whether universal logout is enabled for the organization.
+        /// </summary>
+        /// <value>Indicates whether universal logout is enabled for the organization.</value>
+        [DataMember(Name="universalLogout", EmitDefaultValue=false)]
+        public bool? UniversalLogout { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IpAddressAllowlist: ").Append(IpAddressAllowlist).Append("\n");
             sb.Append("  PasswordRequirements: ").Append(PasswordRequirements).Append("\n");
             sb.Append("  InactivityTimeoutExclusions: ").Append(InactivityTimeoutExclusions).Append("\n");
+            sb.Append("  UniversalLogout: ").Append(UniversalLogout).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,6 +189,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InactivityTimeoutExclusions == other.InactivityTimeoutExclusions ||
                     this.InactivityTimeoutExclusions != null &&
                     this.InactivityTimeoutExclusions.SequenceEqual(other.InactivityTimeoutExclusions)
+                ) &&
+                (
+                    this.UniversalLogout == other.UniversalLogout ||
+                    this.UniversalLogout != null &&
+                    this.UniversalLogout.Equals(other.UniversalLogout)
                 );
         }
 
@@ -208,6 +225,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InactivityTimeoutExclusions != null)
                     hash = hash * 59 + this.InactivityTimeoutExclusions.GetHashCode();
+
+                if (this.UniversalLogout != null)
+                    hash = hash * 59 + this.UniversalLogout.GetHashCode();
 
                 return hash;
             }

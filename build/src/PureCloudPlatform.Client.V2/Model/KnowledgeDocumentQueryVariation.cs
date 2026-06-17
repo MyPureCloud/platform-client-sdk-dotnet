@@ -33,7 +33,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the variation..</param>
         /// <param name="Body">The content for the variation..</param>
         /// <param name="Chunks">The chunk blocks associated with the variation..</param>
-        public KnowledgeDocumentQueryVariation(AddressableEntityRef DocumentVersion = null, List<DocumentVariationContext> Contexts = null, int? Priority = null, string Name = null, DocumentBodyResponse Body = null, List<DocumentVariationQueryChunkBlock> Chunks = null)
+        public KnowledgeDocumentQueryVariation(AddressableEntityRef DocumentVersion = null, List<DocumentVariationContext> Contexts = null, int? Priority = null, string Name = null, DocumentBody Body = null, List<DocumentVariationQueryChunkBlock> Chunks = null)
         {
             this.DocumentVersion = DocumentVersion;
             this.Contexts = Contexts;
@@ -123,7 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The content for the variation.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
-        public DocumentBodyResponse Body { get; set; }
+        public DocumentBody Body { get; set; }
 
 
 

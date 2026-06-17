@@ -94,7 +94,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Export for "Export"
             /// </summary>
             [EnumMember(Value = "Export")]
-            Export
+            Export,
+            
+            /// <summary>
+            /// Enum Validate for "Validate"
+            /// </summary>
+            [EnumMember(Value = "Validate")]
+            Validate
         }
         /// <summary>
         /// Status of the Architect Export Job

@@ -25,13 +25,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Header">The template header..</param>
         /// <param name="Body">The template body..</param>
         /// <param name="Buttons">Template buttons.</param>
+        /// <param name="Carousel">The template carousel.</param>
         /// <param name="Footer">The template footer..</param>
-        public RecordingNotificationTemplate(string Language = null, RecordingTemplateHeader Header = null, RecordingTemplateBody Body = null, List<RecordingTemplateButton> Buttons = null, RecordingTemplateFooter Footer = null)
+        public RecordingNotificationTemplate(string Language = null, RecordingTemplateHeader Header = null, RecordingTemplateBody Body = null, List<RecordingTemplateButton> Buttons = null, RecordingTemplateCarousel Carousel = null, RecordingTemplateFooter Footer = null)
         {
             this.Language = Language;
             this.Header = Header;
             this.Body = Body;
             this.Buttons = Buttons;
+            this.Carousel = Carousel;
             this.Footer = Footer;
             
         }
@@ -84,6 +86,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The template carousel
+        /// </summary>
+        /// <value>The template carousel</value>
+        [DataMember(Name="carousel", EmitDefaultValue=false)]
+        public RecordingTemplateCarousel Carousel { get; set; }
+
+
+
+        /// <summary>
         /// The template footer.
         /// </summary>
         /// <value>The template footer.</value>
@@ -105,6 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Header: ").Append(Header).Append("\n");
             sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  Buttons: ").Append(Buttons).Append("\n");
+            sb.Append("  Carousel: ").Append(Carousel).Append("\n");
             sb.Append("  Footer: ").Append(Footer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -172,6 +184,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Buttons.SequenceEqual(other.Buttons)
                 ) &&
                 (
+                    this.Carousel == other.Carousel ||
+                    this.Carousel != null &&
+                    this.Carousel.Equals(other.Carousel)
+                ) &&
+                (
                     this.Footer == other.Footer ||
                     this.Footer != null &&
                     this.Footer.Equals(other.Footer)
@@ -203,6 +220,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Buttons != null)
                     hash = hash * 59 + this.Buttons.GetHashCode();
+
+                if (this.Carousel != null)
+                    hash = hash * 59 + this.Carousel.GetHashCode();
 
                 if (this.Footer != null)
                     hash = hash * 59 + this.Footer.GetHashCode();

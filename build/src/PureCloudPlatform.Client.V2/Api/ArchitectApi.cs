@@ -2732,6 +2732,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FlowOutcomeDivisionViewEntityListing> GetFlowsOutcomesDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
+        /// Fetch Architect Validate Job Status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetFlowsValidateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>ArchitectValidateJobStateResponse</returns>
+        
+        ArchitectValidateJobStateResponse GetFlowsValidateJob (string jobId, List<string> expand = null);
+
+        /// <summary>
+        /// Fetch Architect Validate Job Status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetFlowsValidateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>ApiResponse of ArchitectValidateJobStateResponse</returns>
+        
+        ApiResponse<ArchitectValidateJobStateResponse> GetFlowsValidateJobWithHttpInfo (string jobId, List<string> expand = null);
+
+        /// <summary>
         /// Updates a grammar
         /// </summary>
         /// <remarks>
@@ -3762,6 +3790,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of FlowOutcome</returns>
         
         ApiResponse<FlowOutcome> PostFlowsOutcomesWithHttpInfo (FlowOutcome body = null);
+
+        /// <summary>
+        /// Register Architect Validate Job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostFlowsValidateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>RegisterArchitectValidateJobResponse</returns>
+        
+        RegisterArchitectValidateJobResponse PostFlowsValidateJobs (RegisterArchitectValidateJob body);
+
+        /// <summary>
+        /// Register Architect Validate Job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostFlowsValidateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of RegisterArchitectValidateJobResponse</returns>
+        
+        ApiResponse<RegisterArchitectValidateJobResponse> PostFlowsValidateJobsWithHttpInfo (RegisterArchitectValidateJob body);
 
         /// <summary>
         /// Updates a emergency group by ID
@@ -6884,6 +6938,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FlowOutcomeDivisionViewEntityListing>> GetFlowsOutcomesDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
+        /// Fetch Architect Validate Job Status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetFlowsValidateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>Task of ArchitectValidateJobStateResponse</returns>
+        
+        System.Threading.Tasks.Task<ArchitectValidateJobStateResponse> GetFlowsValidateJobAsync (string jobId, List<string> expand = null);
+
+        /// <summary>
+        /// Fetch Architect Validate Job Status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetFlowsValidateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>Task of ApiResponse (ArchitectValidateJobStateResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ArchitectValidateJobStateResponse>> GetFlowsValidateJobAsyncWithHttpInfo (string jobId, List<string> expand = null);
+
+        /// <summary>
         /// Updates a grammar
         /// </summary>
         /// <remarks>
@@ -7914,6 +7996,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (FlowOutcome)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<FlowOutcome>> PostFlowsOutcomesAsyncWithHttpInfo (FlowOutcome body = null);
+
+        /// <summary>
+        /// Register Architect Validate Job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostFlowsValidateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of RegisterArchitectValidateJobResponse</returns>
+        
+        System.Threading.Tasks.Task<RegisterArchitectValidateJobResponse> PostFlowsValidateJobsAsync (RegisterArchitectValidateJob body);
+
+        /// <summary>
+        /// Register Architect Validate Job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostFlowsValidateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (RegisterArchitectValidateJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<RegisterArchitectValidateJobResponse>> PostFlowsValidateJobsAsyncWithHttpInfo (RegisterArchitectValidateJob body);
 
         /// <summary>
         /// Updates a emergency group by ID
@@ -28760,6 +28868,221 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Fetch Architect Validate Job Status 
+        /// 
+        /// GetFlowsValidateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>ArchitectValidateJobStateResponse</returns>
+        
+        public ArchitectValidateJobStateResponse GetFlowsValidateJob (string jobId, List<string> expand = null)
+        {
+             ApiResponse<ArchitectValidateJobStateResponse> localVarResponse = GetFlowsValidateJobWithHttpInfo(jobId, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch Architect Validate Job Status 
+        /// 
+        /// GetFlowsValidateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>ApiResponse of ArchitectValidateJobStateResponse</returns>
+        
+        public ApiResponse< ArchitectValidateJobStateResponse > GetFlowsValidateJobWithHttpInfo (string jobId, List<string> expand = null)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling ArchitectApi->GetFlowsValidateJob");
+
+            var localVarPath = "/api/v2/flows/validate/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsValidateJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetFlowsValidateJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsValidateJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ArchitectValidateJobStateResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ArchitectValidateJobStateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ArchitectValidateJobStateResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Fetch Architect Validate Job Status 
+        /// 
+        /// GetFlowsValidateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>Task of ArchitectValidateJobStateResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ArchitectValidateJobStateResponse> GetFlowsValidateJobAsync (string jobId, List<string> expand = null)
+        {
+             ApiResponse<ArchitectValidateJobStateResponse> localVarResponse = await GetFlowsValidateJobAsyncWithHttpInfo(jobId, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Fetch Architect Validate Job Status 
+        /// 
+        /// GetFlowsValidateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <returns>Task of ApiResponse (ArchitectValidateJobStateResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ArchitectValidateJobStateResponse>> GetFlowsValidateJobAsyncWithHttpInfo (string jobId, List<string> expand = null)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling ArchitectApi->GetFlowsValidateJob");
+            
+
+            var localVarPath = "/api/v2/flows/validate/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsValidateJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetFlowsValidateJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsValidateJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ArchitectValidateJobStateResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ArchitectValidateJobStateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ArchitectValidateJobStateResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Updates a grammar 
         /// 
         /// </summary>
@@ -37653,6 +37976,225 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<FlowOutcome>(localVarStatusCode,
                 localVarHeaders,
                 (FlowOutcome) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowOutcome)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Register Architect Validate Job 
+        /// 
+        /// PostFlowsValidateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>RegisterArchitectValidateJobResponse</returns>
+        
+        public RegisterArchitectValidateJobResponse PostFlowsValidateJobs (RegisterArchitectValidateJob body)
+        {
+             ApiResponse<RegisterArchitectValidateJobResponse> localVarResponse = PostFlowsValidateJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Register Architect Validate Job 
+        /// 
+        /// PostFlowsValidateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of RegisterArchitectValidateJobResponse</returns>
+        
+        public ApiResponse< RegisterArchitectValidateJobResponse > PostFlowsValidateJobsWithHttpInfo (RegisterArchitectValidateJob body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsValidateJobs");
+
+            var localVarPath = "/api/v2/flows/validate/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsValidateJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostFlowsValidateJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsValidateJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RegisterArchitectValidateJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (RegisterArchitectValidateJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RegisterArchitectValidateJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Register Architect Validate Job 
+        /// 
+        /// PostFlowsValidateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of RegisterArchitectValidateJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<RegisterArchitectValidateJobResponse> PostFlowsValidateJobsAsync (RegisterArchitectValidateJob body)
+        {
+             ApiResponse<RegisterArchitectValidateJobResponse> localVarResponse = await PostFlowsValidateJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Register Architect Validate Job 
+        /// 
+        /// PostFlowsValidateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (RegisterArchitectValidateJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<RegisterArchitectValidateJobResponse>> PostFlowsValidateJobsAsyncWithHttpInfo (RegisterArchitectValidateJob body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsValidateJobs");
+            
+
+            var localVarPath = "/api/v2/flows/validate/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsValidateJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostFlowsValidateJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsValidateJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RegisterArchitectValidateJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (RegisterArchitectValidateJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RegisterArchitectValidateJobResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

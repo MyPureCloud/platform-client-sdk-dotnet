@@ -108,11 +108,44 @@ namespace PureCloudPlatform.Client.V2.Model
             Paidhours
         }
         /// <summary>
+        /// The type of the bid
+        /// </summary>
+        /// <value>The type of the bid</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum BidTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Workplanbid for "WorkPlanBid"
+            /// </summary>
+            [EnumMember(Value = "WorkPlanBid")]
+            Workplanbid,
+            
+            /// <summary>
+            /// Enum Schedulebid for "ScheduleBid"
+            /// </summary>
+            [EnumMember(Value = "ScheduleBid")]
+            Schedulebid
+        }
+        /// <summary>
         /// The state of the bid
         /// </summary>
         /// <value>The state of the bid</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        /// <summary>
+        /// The type of the bid
+        /// </summary>
+        /// <value>The type of the bid</value>
+        [DataMember(Name="bidType", EmitDefaultValue=false)]
+        public BidTypeEnum? BidType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentWorkPlanBid" /> class.
@@ -129,7 +162,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EffectiveDate">The date when agents will be assigned to the new work plan. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="Status">The state of the bid (required).</param>
         /// <param name="WorkPlanFieldsVisibleToAgents">The work plan fields visible to agents whenever work plan preferences are made (required).</param>
-        public AgentWorkPlanBid(string Id = null, string Name = null, String BidWindowStartDate = null, String BidWindowEndDate = null, String EffectiveDate = null, StatusEnum? Status = null, List<WorkPlanFieldsVisibleToAgentsEnum> WorkPlanFieldsVisibleToAgents = null)
+        /// <param name="BidType">The type of the bid.</param>
+        public AgentWorkPlanBid(string Id = null, string Name = null, String BidWindowStartDate = null, String BidWindowEndDate = null, String EffectiveDate = null, StatusEnum? Status = null, List<WorkPlanFieldsVisibleToAgentsEnum> WorkPlanFieldsVisibleToAgents = null, BidTypeEnum? BidType = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -138,6 +172,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EffectiveDate = EffectiveDate;
             this.Status = Status;
             this.WorkPlanFieldsVisibleToAgents = WorkPlanFieldsVisibleToAgents;
+            this.BidType = BidType;
             
         }
         
@@ -198,6 +233,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -222,6 +259,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EffectiveDate: ").Append(EffectiveDate).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  WorkPlanFieldsVisibleToAgents: ").Append(WorkPlanFieldsVisibleToAgents).Append("\n");
+            sb.Append("  BidType: ").Append(BidType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -299,6 +337,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WorkPlanFieldsVisibleToAgents.SequenceEqual(other.WorkPlanFieldsVisibleToAgents)
                 ) &&
                 (
+                    this.BidType == other.BidType ||
+                    this.BidType != null &&
+                    this.BidType.Equals(other.BidType)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -336,6 +379,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.WorkPlanFieldsVisibleToAgents != null)
                     hash = hash * 59 + this.WorkPlanFieldsVisibleToAgents.GetHashCode();
+
+                if (this.BidType != null)
+                    hash = hash * 59 + this.BidType.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -99,6 +99,11 @@ namespace PureCloudPlatform.Client.V2.Client
         ///</Summary>
         [Description("https://api.apse1.pure.cloud")]
         ap_southeast_1,
+        ///<Summary>
+        /// eusc_de_east_1 Region
+        ///</Summary>
+        [Description("https://api.edee1.eusc-pure.cloud")]
+        eusc_de_east_1,
 
     }
 

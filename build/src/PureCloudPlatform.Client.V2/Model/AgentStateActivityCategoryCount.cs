@@ -85,7 +85,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unscheduled for "Unscheduled"
             /// </summary>
             [EnumMember(Value = "Unscheduled")]
-            Unscheduled
+            Unscheduled,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
         }
         /// <summary>
         /// Activity category

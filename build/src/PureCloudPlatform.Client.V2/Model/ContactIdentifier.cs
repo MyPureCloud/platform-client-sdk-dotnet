@@ -64,6 +64,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Socialinstagram,
             
             /// <summary>
+            /// Enum Socialwhatsappbsuid for "SocialWhatsappBsuid"
+            /// </summary>
+            [EnumMember(Value = "SocialWhatsappBsuid")]
+            Socialwhatsappbsuid,
+            
+            /// <summary>
             /// Enum Appleopaqueid for "AppleOpaqueId"
             /// </summary>
             [EnumMember(Value = "AppleOpaqueId")]

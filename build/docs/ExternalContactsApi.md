@@ -25,7 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsContactUnresolved**](#GetExternalcontactsContactUnresolved) | **Get** /api/v2/externalcontacts/contacts/{contactId}/unresolved | Fetch an unresolved external contact |
 | [**GetExternalcontactsContacts**](#GetExternalcontactsContacts) | **Get** /api/v2/externalcontacts/contacts | Search for external contacts |
 | [**GetExternalcontactsContactsExport**](#GetExternalcontactsContactsExport) | **Get** /api/v2/externalcontacts/contacts/exports/{exportId} | Get export for exportId |
-| [**GetExternalcontactsContactsExports**](#GetExternalcontactsContactsExports) | **Get** /api/v2/externalcontacts/contacts/exports | List exports for organization |
+| [**GetExternalcontactsContactsExports**](#GetExternalcontactsContactsExports) | **Get** /api/v2/externalcontacts/contacts/exports | List contact exports for organization |
 | [**GetExternalcontactsContactsSchema**](#GetExternalcontactsContactsSchema) | **Get** /api/v2/externalcontacts/contacts/schemas/{schemaId} | Get a schema |
 | [**GetExternalcontactsContactsSchemaVersion**](#GetExternalcontactsContactsSchemaVersion) | **Get** /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId} | Get a specific version of a schema |
 | [**GetExternalcontactsContactsSchemaVersions**](#GetExternalcontactsContactsSchemaVersions) | **Get** /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions | Get all versions of an external contact&#39;s schema |
@@ -1359,7 +1359,7 @@ namespace Example
 > [**ContactsExportListing**](ContactsExportListing) GetExternalcontactsContactsExports (List<string> divisionIds = null, string after = null, int? pageSize = null)
 
 
-List exports for organization
+List contact exports for organization
 
 Requires ALL permissions: 
 
@@ -1394,7 +1394,7 @@ namespace Example
 
             try
             { 
-                // List exports for organization
+                // List contact exports for organization
                 ContactsExportListing result = apiInstance.GetExternalcontactsContactsExports(divisionIds, after, pageSize);
                 Debug.WriteLine(result);
             }
@@ -7879,4 +7879,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 265.0.0_
+_PureCloudPlatform.Client.V2 266.0.0_

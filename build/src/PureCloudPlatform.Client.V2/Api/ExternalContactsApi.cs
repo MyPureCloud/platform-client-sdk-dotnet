@@ -512,7 +512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ContactsExport> GetExternalcontactsContactsExportWithHttpInfo (string exportId);
 
         /// <summary>
-        /// List exports for organization
+        /// List contact exports for organization
         /// </summary>
         /// <remarks>
         /// 
@@ -526,7 +526,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ContactsExportListing GetExternalcontactsContactsExports (List<string> divisionIds = null, string after = null, int? pageSize = null);
 
         /// <summary>
-        /// List exports for organization
+        /// List contact exports for organization
         /// </summary>
         /// <remarks>
         /// 
@@ -3616,7 +3616,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ContactsExport>> GetExternalcontactsContactsExportAsyncWithHttpInfo (string exportId);
 
         /// <summary>
-        /// List exports for organization
+        /// List contact exports for organization
         /// </summary>
         /// <remarks>
         /// 
@@ -3630,7 +3630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ContactsExportListing> GetExternalcontactsContactsExportsAsync (List<string> divisionIds = null, string after = null, int? pageSize = null);
 
         /// <summary>
-        /// List exports for organization
+        /// List contact exports for organization
         /// </summary>
         /// <remarks>
         /// 
@@ -10333,7 +10333,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// List exports for organization 
+        /// List contact exports for organization 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10349,7 +10349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// List exports for organization 
+        /// List contact exports for organization 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10437,7 +10437,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// List exports for organization 
+        /// List contact exports for organization 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10454,7 +10454,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// List exports for organization 
+        /// List contact exports for organization 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

@@ -919,7 +919,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum QueueSkillExpressionPerformanceView for "QUEUE_SKILL_EXPRESSION_PERFORMANCE_VIEW"
             /// </summary>
             [EnumMember(Value = "QUEUE_SKILL_EXPRESSION_PERFORMANCE_VIEW")]
-            QueueSkillExpressionPerformanceView
+            QueueSkillExpressionPerformanceView,
+            
+            /// <summary>
+            /// Enum AgenticVirtualAgentPerformanceView for "AGENTIC_VIRTUAL_AGENT_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENTIC_VIRTUAL_AGENT_PERFORMANCE_VIEW")]
+            AgenticVirtualAgentPerformanceView
         }
         /// <summary>
         /// The error message in case the export request failed

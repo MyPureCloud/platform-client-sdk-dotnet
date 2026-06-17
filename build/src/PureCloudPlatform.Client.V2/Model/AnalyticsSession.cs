@@ -664,6 +664,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EdgeId">Unique identifier of the edge device.</param>
         /// <param name="EligibleAgentCounts">Number of eligible agents for each predictive routing attempt.</param>
         /// <param name="EngagementSource">Open Messaging engagement source type.</param>
+        /// <param name="ErrorCodeDescription">Error code description extracted from the first disconnectReason.</param>
         /// <param name="ExtendedDeliveryStatus">Extended delivery status.</param>
         /// <param name="FlowInType">Type of flow in that occurred when entering ACD..</param>
         /// <param name="FlowOutType">Type of flow out that occurred when emitting tFlowOut..</param>
@@ -717,7 +718,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Flow">IVR flow execution associated with this session.</param>
         /// <param name="Metrics">List of metrics for this session.</param>
         /// <param name="Segments">List of segments for this session.</param>
-        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string BargedParticipantId = null, List<string> Bcc = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, List<string> Cc = null, bool? Cleared = null, string CoachedParticipantId = null, string CobrowseRole = null, string CobrowseRoomId = null, bool? DeliveryPushed = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, List<string> DestinationAddresses = null, DateTime? DetectedSpeechEnd = null, DateTime? DetectedSpeechStart = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, EngagementSourceEnum? EngagementSource = null, string ExtendedDeliveryStatus = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string ScreenMonitoredUserId = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, string SkillExpressionId = null, bool? SkipEnabled = null, bool? SnippetRecording = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsAgentGroup> AgentGroups = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string BargedParticipantId = null, List<string> Bcc = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, List<string> Cc = null, bool? Cleared = null, string CoachedParticipantId = null, string CobrowseRole = null, string CobrowseRoomId = null, bool? DeliveryPushed = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, List<string> DestinationAddresses = null, DateTime? DetectedSpeechEnd = null, DateTime? DetectedSpeechStart = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, EngagementSourceEnum? EngagementSource = null, string ErrorCodeDescription = null, string ExtendedDeliveryStatus = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string ScreenMonitoredUserId = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, string SkillExpressionId = null, bool? SkipEnabled = null, bool? SnippetRecording = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsAgentGroup> AgentGroups = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
         {
             this.ActiveSkillIds = ActiveSkillIds;
             this.AcwSkipped = AcwSkipped;
@@ -754,6 +755,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EdgeId = EdgeId;
             this.EligibleAgentCounts = EligibleAgentCounts;
             this.EngagementSource = EngagementSource;
+            this.ErrorCodeDescription = ErrorCodeDescription;
             this.ExtendedDeliveryStatus = ExtendedDeliveryStatus;
             this.FlowInType = FlowInType;
             this.FlowOutType = FlowOutType;
@@ -1103,6 +1105,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<int?> EligibleAgentCounts { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// Error code description extracted from the first disconnectReason
+        /// </summary>
+        /// <value>Error code description extracted from the first disconnectReason</value>
+        [DataMember(Name="errorCodeDescription", EmitDefaultValue=false)]
+        public string ErrorCodeDescription { get; set; }
 
 
 
@@ -1605,6 +1616,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EdgeId: ").Append(EdgeId).Append("\n");
             sb.Append("  EligibleAgentCounts: ").Append(EligibleAgentCounts).Append("\n");
             sb.Append("  EngagementSource: ").Append(EngagementSource).Append("\n");
+            sb.Append("  ErrorCodeDescription: ").Append(ErrorCodeDescription).Append("\n");
             sb.Append("  ExtendedDeliveryStatus: ").Append(ExtendedDeliveryStatus).Append("\n");
             sb.Append("  FlowInType: ").Append(FlowInType).Append("\n");
             sb.Append("  FlowOutType: ").Append(FlowOutType).Append("\n");
@@ -1872,6 +1884,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EngagementSource == other.EngagementSource ||
                     this.EngagementSource != null &&
                     this.EngagementSource.Equals(other.EngagementSource)
+                ) &&
+                (
+                    this.ErrorCodeDescription == other.ErrorCodeDescription ||
+                    this.ErrorCodeDescription != null &&
+                    this.ErrorCodeDescription.Equals(other.ErrorCodeDescription)
                 ) &&
                 (
                     this.ExtendedDeliveryStatus == other.ExtendedDeliveryStatus ||
@@ -2255,6 +2272,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EngagementSource != null)
                     hash = hash * 59 + this.EngagementSource.GetHashCode();
+
+                if (this.ErrorCodeDescription != null)
+                    hash = hash * 59 + this.ErrorCodeDescription.GetHashCode();
 
                 if (this.ExtendedDeliveryStatus != null)
                     hash = hash * 59 + this.ExtendedDeliveryStatus.GetHashCode();

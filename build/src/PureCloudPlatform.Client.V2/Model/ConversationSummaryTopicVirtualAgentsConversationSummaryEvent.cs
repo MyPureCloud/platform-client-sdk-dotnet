@@ -282,7 +282,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastEditedBy">LastEditedBy.</param>
         /// <param name="ErrorType">ErrorType.</param>
         /// <param name="DurationMs">DurationMs.</param>
-        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationFollowupAction> FollowupActions = null, List<ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity> ExtractedEntities = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, SummarySourceTypeEnum? SummarySourceType = null, TriggerTypeEnum? TriggerType = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null)
+        /// <param name="Labels">Labels.</param>
+        public ConversationSummaryTopicVirtualAgentsConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicVirtualAgentsConversationSummary Summary = null, ConversationSummaryTopicVirtualAgentsConversationHeadline Headline = null, ConversationSummaryTopicVirtualAgentsConversationReason Reason = null, ConversationSummaryTopicVirtualAgentsConversationResolution Resolution = null, List<ConversationSummaryTopicVirtualAgentsConversationFollowupAction> FollowupActions = null, List<ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity> ExtractedEntities = null, List<ConversationSummaryTopicVirtualAgentsConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicVirtualAgentsTriggerSource TriggerSource = null, SummarySourceTypeEnum? SummarySourceType = null, TriggerTypeEnum? TriggerType = null, ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null, List<ConversationSummaryTopicVirtualAgentsConversationSummaryLabel> Labels = null)
         {
             this.ConversationId = ConversationId;
             this.QueueId = QueueId;
@@ -306,6 +307,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LastEditedBy = LastEditedBy;
             this.ErrorType = ErrorType;
             this.DurationMs = DurationMs;
+            this.Labels = Labels;
             
         }
         
@@ -456,6 +458,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public long? DurationMs { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Labels
+        /// </summary>
+        [DataMember(Name="labels", EmitDefaultValue=false)]
+        public List<ConversationSummaryTopicVirtualAgentsConversationSummaryLabel> Labels { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -487,6 +497,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LastEditedBy: ").Append(LastEditedBy).Append("\n");
             sb.Append("  ErrorType: ").Append(ErrorType).Append("\n");
             sb.Append("  DurationMs: ").Append(DurationMs).Append("\n");
+            sb.Append("  Labels: ").Append(Labels).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -636,6 +647,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DurationMs == other.DurationMs ||
                     this.DurationMs != null &&
                     this.DurationMs.Equals(other.DurationMs)
+                ) &&
+                (
+                    this.Labels == other.Labels ||
+                    this.Labels != null &&
+                    this.Labels.SequenceEqual(other.Labels)
                 );
         }
 
@@ -715,6 +731,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DurationMs != null)
                     hash = hash * 59 + this.DurationMs.GetHashCode();
+
+                if (this.Labels != null)
+                    hash = hash * 59 + this.Labels.GetHashCode();
 
                 return hash;
             }

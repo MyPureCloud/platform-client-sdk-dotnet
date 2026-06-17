@@ -33,6 +33,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Associationtype for "associationType"
+            /// </summary>
+            [EnumMember(Value = "associationType")]
+            Associationtype,
+            
+            /// <summary>
             /// Enum Caseid for "caseId"
             /// </summary>
             [EnumMember(Value = "caseId")]
@@ -43,6 +49,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "caseplanId")]
             Caseplanid,
+            
+            /// <summary>
+            /// Enum Conversationid for "conversationId"
+            /// </summary>
+            [EnumMember(Value = "conversationId")]
+            Conversationid,
             
             /// <summary>
             /// Enum Customerintentid for "customerIntentId"
@@ -69,10 +81,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Priority,
             
             /// <summary>
+            /// Enum Stageid for "stageId"
+            /// </summary>
+            [EnumMember(Value = "stageId")]
+            Stageid,
+            
+            /// <summary>
             /// Enum Status for "status"
             /// </summary>
             [EnumMember(Value = "status")]
-            Status
+            Status,
+            
+            /// <summary>
+            /// Enum Stepid for "stepId"
+            /// </summary>
+            [EnumMember(Value = "stepId")]
+            Stepid,
+            
+            /// <summary>
+            /// Enum Workitemid for "workitemId"
+            /// </summary>
+            [EnumMember(Value = "workitemId")]
+            Workitemid
         }
         /// <summary>
         /// Gets or Sets Metrics
@@ -87,6 +117,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OUTDATED_SDK_VERSION")]
             OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Ncaseassociationscreated for "nCaseAssociationsCreated"
+            /// </summary>
+            [EnumMember(Value = "nCaseAssociationsCreated")]
+            Ncaseassociationscreated,
+            
+            /// <summary>
+            /// Enum Ncasesdeleted for "nCasesDeleted"
+            /// </summary>
+            [EnumMember(Value = "nCasesDeleted")]
+            Ncasesdeleted,
             
             /// <summary>
             /// Enum Ncasesopened for "nCasesOpened"

@@ -1,0 +1,15 @@
+# ConversationSummaryTopicVirtualAgentsConversationSummaryLabel
+
+## ININ.PureCloudApi.Model.ConversationSummaryTopicVirtualAgentsConversationSummaryLabel
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Name** | **string** |  | [optional] |
+| **Description** | **string** |  | [optional] |
+| **Type** | **string** |  | [optional] |
+
+
+
+_PureCloudPlatform.Client.V2 266.0.0_

@@ -405,7 +405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
+        /// <param name="pageSize">The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary. (optional, default to 500)</param>
         /// <returns>DictionaryFeedbackEntityListing</returns>
         
         DictionaryFeedbackEntityListing GetSpeechandtextanalyticsDictionaryfeedback (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null);
@@ -420,7 +420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
+        /// <param name="pageSize">The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary. (optional, default to 500)</param>
         /// <returns>ApiResponse of DictionaryFeedbackEntityListing</returns>
         
         ApiResponse<DictionaryFeedbackEntityListing> GetSpeechandtextanalyticsDictionaryfeedbackWithHttpInfo (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null);
@@ -2031,7 +2031,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
+        /// <param name="pageSize">The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary. (optional, default to 500)</param>
         /// <returns>Task of DictionaryFeedbackEntityListing</returns>
         
         System.Threading.Tasks.Task<DictionaryFeedbackEntityListing> GetSpeechandtextanalyticsDictionaryfeedbackAsync (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null);
@@ -2046,7 +2046,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
+        /// <param name="pageSize">The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary. (optional, default to 500)</param>
         /// <returns>Task of ApiResponse (DictionaryFeedbackEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DictionaryFeedbackEntityListing>> GetSpeechandtextanalyticsDictionaryfeedbackAsyncWithHttpInfo (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null);
@@ -6484,7 +6484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
+        /// <param name="pageSize">The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary. (optional, default to 500)</param>
         /// <returns>DictionaryFeedbackEntityListing</returns>
         
         public DictionaryFeedbackEntityListing GetSpeechandtextanalyticsDictionaryfeedback (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null)
@@ -6501,7 +6501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
+        /// <param name="pageSize">The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary. (optional, default to 500)</param>
         /// <returns>ApiResponse of DictionaryFeedbackEntityListing</returns>
         
         public ApiResponse< DictionaryFeedbackEntityListing > GetSpeechandtextanalyticsDictionaryfeedbackWithHttpInfo (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null)
@@ -6591,7 +6591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
+        /// <param name="pageSize">The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary. (optional, default to 500)</param>
         /// <returns>Task of DictionaryFeedbackEntityListing</returns>
         
         public async System.Threading.Tasks.Task<DictionaryFeedbackEntityListing> GetSpeechandtextanalyticsDictionaryfeedbackAsync (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null)
@@ -6609,7 +6609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
         /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
+        /// <param name="pageSize">The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary. (optional, default to 500)</param>
         /// <returns>Task of ApiResponse (DictionaryFeedbackEntityListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<DictionaryFeedbackEntityListing>> GetSpeechandtextanalyticsDictionaryfeedbackAsyncWithHttpInfo (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null)

@@ -1,0 +1,16 @@
+# RegisterArchitectValidateJobResponse
+
+## ININ.PureCloudApi.Model.RegisterArchitectValidateJobResponse
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Status** | **string** | The status of the validate job. | [optional] |
+| **TotalFlows** | **int?** | The number of flows submitted for validation. | [optional] |
+| **SelfUri** | **string** | The URI for this object | [optional] |
+
+
+
+_PureCloudPlatform.Client.V2 266.0.0_

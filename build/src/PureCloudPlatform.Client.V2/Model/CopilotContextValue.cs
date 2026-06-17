@@ -43,13 +43,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Conversationattribute for "ConversationAttribute"
             /// </summary>
             [EnumMember(Value = "ConversationAttribute")]
-            Conversationattribute,
-            
-            /// <summary>
-            /// Enum Participantdata for "ParticipantData"
-            /// </summary>
-            [EnumMember(Value = "ParticipantData")]
-            Participantdata
+            Conversationattribute
         }
         /// <summary>
         /// Type of the context.
@@ -68,13 +62,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name of the context. (required).</param>
         /// <param name="Type">Type of the context. (required).</param>
-        /// <param name="ParticipantDataProperties">Participant data properties..</param>
         /// <param name="ConversationAttributeProperties">Conversation attribute properties..</param>
-        public CopilotContextValue(string Name = null, TypeEnum? Type = null, ParticipantDataProperties ParticipantDataProperties = null, ConversationAttributeProperties ConversationAttributeProperties = null)
+        public CopilotContextValue(string Name = null, TypeEnum? Type = null, ConversationAttributeProperties ConversationAttributeProperties = null)
         {
             this.Name = Name;
             this.Type = Type;
-            this.ParticipantDataProperties = ParticipantDataProperties;
             this.ConversationAttributeProperties = ConversationAttributeProperties;
             
         }
@@ -89,15 +81,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Name { get; set; }
 
 
-
-
-
-        /// <summary>
-        /// Participant data properties.
-        /// </summary>
-        /// <value>Participant data properties.</value>
-        [DataMember(Name="participantDataProperties", EmitDefaultValue=false)]
-        public ParticipantDataProperties ParticipantDataProperties { get; set; }
 
 
 
@@ -120,7 +103,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  ParticipantDataProperties: ").Append(ParticipantDataProperties).Append("\n");
             sb.Append("  ConversationAttributeProperties: ").Append(ConversationAttributeProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -173,11 +155,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
-                    this.ParticipantDataProperties == other.ParticipantDataProperties ||
-                    this.ParticipantDataProperties != null &&
-                    this.ParticipantDataProperties.Equals(other.ParticipantDataProperties)
-                ) &&
-                (
                     this.ConversationAttributeProperties == other.ConversationAttributeProperties ||
                     this.ConversationAttributeProperties != null &&
                     this.ConversationAttributeProperties.Equals(other.ConversationAttributeProperties)
@@ -200,9 +177,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-
-                if (this.ParticipantDataProperties != null)
-                    hash = hash * 59 + this.ParticipantDataProperties.GetHashCode();
 
                 if (this.ConversationAttributeProperties != null)
                     hash = hash * 59 + this.ConversationAttributeProperties.GetHashCode();

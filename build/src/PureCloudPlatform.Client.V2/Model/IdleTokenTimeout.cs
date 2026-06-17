@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IdleTokenTimeout" /> class.
         /// </summary>
-        /// <param name="IdleTokenTimeoutSeconds">Token timeout length in seconds. Must be at least 5 minutes and 8 hours or less (if HIPAA is disabled) or 15 minutes or less (if HIPAA is enabled)..</param>
+        /// <param name="IdleTokenTimeoutSeconds">Token timeout length in seconds. Must be at least 5 minutes and at most 8 hours. HIPAA-enabled organizations may be subject to a stricter 15-minute maximum during rollout..</param>
         /// <param name="EnableIdleTokenTimeout">Indicates whether the Token Timeout should be enabled or disabled..</param>
         /// <param name="InactivityTimeoutUnit">The unit for the inactivity timeout (MINUTES or HOURS)..</param>
         /// <param name="InactivityTimeoutGroupsEnabled">Indicates whether inactivity timeout groups are enabled..</param>
@@ -72,9 +72,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Token timeout length in seconds. Must be at least 5 minutes and 8 hours or less (if HIPAA is disabled) or 15 minutes or less (if HIPAA is enabled).
+        /// Token timeout length in seconds. Must be at least 5 minutes and at most 8 hours. HIPAA-enabled organizations may be subject to a stricter 15-minute maximum during rollout.
         /// </summary>
-        /// <value>Token timeout length in seconds. Must be at least 5 minutes and 8 hours or less (if HIPAA is disabled) or 15 minutes or less (if HIPAA is enabled).</value>
+        /// <value>Token timeout length in seconds. Must be at least 5 minutes and at most 8 hours. HIPAA-enabled organizations may be subject to a stricter 15-minute maximum during rollout.</value>
         [DataMember(Name="idleTokenTimeoutSeconds", EmitDefaultValue=false)]
         public int? IdleTokenTimeoutSeconds { get; set; }
 

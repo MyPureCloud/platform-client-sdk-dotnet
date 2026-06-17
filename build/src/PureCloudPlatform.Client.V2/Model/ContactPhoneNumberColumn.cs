@@ -29,11 +29,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ColumnName">The name of the phone column. (required).</param>
         /// <param name="Type">Indicates the type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;. (required).</param>
+        /// <param name="CallableTimeColumnName">A name of the callableTimeColumn.</param>
         /// <param name="CallableTimeColumn">A column that indicates the timezone to use for a given contact when checking callable times. Not allowed if &#39;automaticTimeZoneMapping&#39; is set to true..</param>
-        public ContactPhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumn = null)
+        public ContactPhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumnName = null, string CallableTimeColumn = null)
         {
             this.ColumnName = ColumnName;
             this.Type = Type;
+            this.CallableTimeColumnName = CallableTimeColumnName;
             this.CallableTimeColumn = CallableTimeColumn;
             
         }
@@ -59,6 +61,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// A name of the callableTimeColumn
+        /// </summary>
+        /// <value>A name of the callableTimeColumn</value>
+        [DataMember(Name="callableTimeColumnName", EmitDefaultValue=false)]
+        public string CallableTimeColumnName { get; set; }
+
+
+
+        /// <summary>
         /// A column that indicates the timezone to use for a given contact when checking callable times. Not allowed if &#39;automaticTimeZoneMapping&#39; is set to true.
         /// </summary>
         /// <value>A column that indicates the timezone to use for a given contact when checking callable times. Not allowed if &#39;automaticTimeZoneMapping&#39; is set to true.</value>
@@ -77,6 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  CallableTimeColumnName: ").Append(CallableTimeColumnName).Append("\n");
             sb.Append("  CallableTimeColumn: ").Append(CallableTimeColumn).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -129,6 +141,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
+                    this.CallableTimeColumnName == other.CallableTimeColumnName ||
+                    this.CallableTimeColumnName != null &&
+                    this.CallableTimeColumnName.Equals(other.CallableTimeColumnName)
+                ) &&
+                (
                     this.CallableTimeColumn == other.CallableTimeColumn ||
                     this.CallableTimeColumn != null &&
                     this.CallableTimeColumn.Equals(other.CallableTimeColumn)
@@ -151,6 +168,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.CallableTimeColumnName != null)
+                    hash = hash * 59 + this.CallableTimeColumnName.GetHashCode();
 
                 if (this.CallableTimeColumn != null)
                     hash = hash * 59 + this.CallableTimeColumn.GetHashCode();

@@ -67,6 +67,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Associationtype for "associationType"
+            /// </summary>
+            [EnumMember(Value = "associationType")]
+            Associationtype,
+            
+            /// <summary>
             /// Enum Caseid for "caseId"
             /// </summary>
             [EnumMember(Value = "caseId")]
@@ -77,6 +83,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "caseplanId")]
             Caseplanid,
+            
+            /// <summary>
+            /// Enum Conversationid for "conversationId"
+            /// </summary>
+            [EnumMember(Value = "conversationId")]
+            Conversationid,
             
             /// <summary>
             /// Enum Customerintentid for "customerIntentId"
@@ -103,10 +115,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Priority,
             
             /// <summary>
+            /// Enum Stageid for "stageId"
+            /// </summary>
+            [EnumMember(Value = "stageId")]
+            Stageid,
+            
+            /// <summary>
             /// Enum Status for "status"
             /// </summary>
             [EnumMember(Value = "status")]
-            Status
+            Status,
+            
+            /// <summary>
+            /// Enum Stepid for "stepId"
+            /// </summary>
+            [EnumMember(Value = "stepId")]
+            Stepid,
+            
+            /// <summary>
+            /// Enum Workitemid for "workitemId"
+            /// </summary>
+            [EnumMember(Value = "workitemId")]
+            Workitemid
         }
         /// <summary>
         /// Optional operator, default is matches

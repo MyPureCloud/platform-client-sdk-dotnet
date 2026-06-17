@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **Users** | **List&lt;string&gt;** |  | [optional] |
+| **Users** | [**List&lt;WfmActivityPlanRunJobCompleteTopicUserReference&gt;**](WfmActivityPlanRunJobCompleteTopicUserReference) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 265.0.0_
+_PureCloudPlatform.Client.V2 266.0.0_
