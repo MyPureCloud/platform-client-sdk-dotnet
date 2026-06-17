@@ -1053,7 +1053,7 @@ namespace Example
             var dialect = en-US;  // string | The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional) 
             var transcriptionEngine = transcriptionEngine_example;  // string | Filter by transcription engine, If not provided, all transcription engines will be considered (optional) 
             var nextPage = nextPage_example;  // string | The key for listing the next page (optional) 
-            var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 500)
+            var pageSize = 56;  // int? | The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary. (optional)  (default to 500)
 
             try
             { 
@@ -1078,7 +1078,7 @@ namespace Example
 | **dialect** | **string**| The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]  |
 | **transcriptionEngine** | **string**| Filter by transcription engine, If not provided, all transcription engines will be considered | [optional] <br />**Values**: Genesys, GenesysExtended |
 | **nextPage** | **string**| The key for listing the next page | [optional]  |
-| **pageSize** | **int?**| The page size for the listing | [optional] [default to 500] |
+| **pageSize** | **int?**| The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary. | [optional] [default to 500] |
 
 ### Return type
 
@@ -4114,4 +4114,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 265.0.0_
+_PureCloudPlatform.Client.V2 266.0.0_

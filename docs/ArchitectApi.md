@@ -98,6 +98,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowsOutcome**](#GetFlowsOutcome) | **Get** /api/v2/flows/outcomes/{flowOutcomeId} | Get a flow outcome |
 | [**GetFlowsOutcomes**](#GetFlowsOutcomes) | **Get** /api/v2/flows/outcomes | Get a pageable list of flow outcomes, filtered by query parameters |
 | [**GetFlowsOutcomesDivisionviews**](#GetFlowsOutcomesDivisionviews) | **Get** /api/v2/flows/outcomes/divisionviews | Get a pageable list of basic flow outcome information objects filterable by query parameters. |
+| [**GetFlowsValidateJob**](#GetFlowsValidateJob) | **Get** /api/v2/flows/validate/jobs/{jobId} | Fetch Architect Validate Job Status |
 | [**PatchArchitectGrammar**](#PatchArchitectGrammar) | **Patch** /api/v2/architect/grammars/{grammarId} | Updates a grammar |
 | [**PatchArchitectGrammarLanguage**](#PatchArchitectGrammarLanguage) | **Patch** /api/v2/architect/grammars/{grammarId}/languages/{languageCode} | Updates a grammar language |
 | [**PatchFlowsInstancesSettingsExecutiondata**](#PatchFlowsInstancesSettingsExecutiondata) | **Patch** /api/v2/flows/instances/settings/executiondata | Edit the execution history enabled setting. |
@@ -139,6 +140,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostFlowsJobs**](#PostFlowsJobs) | **Post** /api/v2/flows/jobs | Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job. |
 | [**PostFlowsMilestones**](#PostFlowsMilestones) | **Post** /api/v2/flows/milestones | Create a flow milestone |
 | [**PostFlowsOutcomes**](#PostFlowsOutcomes) | **Post** /api/v2/flows/outcomes | Create a flow outcome |
+| [**PostFlowsValidateJobs**](#PostFlowsValidateJobs) | **Post** /api/v2/flows/validate/jobs | Register Architect Validate Job |
 | [**PutArchitectEmergencygroup**](#PutArchitectEmergencygroup) | **Put** /api/v2/architect/emergencygroups/{emergencyGroupId} | Updates a emergency group by ID |
 | [**PutArchitectIvr**](#PutArchitectIvr) | **Put** /api/v2/architect/ivrs/{ivrId} | Update an IVR Config. |
 | [**PutArchitectIvrIdentityresolution**](#PutArchitectIvrIdentityresolution) | **Put** /api/v2/architect/ivrs/{ivrId}/identityresolution | Update an IVR IdentityResolutionConfig. |
@@ -6420,6 +6422,72 @@ namespace Example
 [**FlowOutcomeDivisionViewEntityListing**](FlowOutcomeDivisionViewEntityListing)
 
 
+## GetFlowsValidateJob
+
+> [**ArchitectValidateJobStateResponse**](ArchitectValidateJobStateResponse) GetFlowsValidateJob (string jobId, List<string> expand = null)
+
+
+Fetch Architect Validate Job Status
+
+GetFlowsValidateJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:jobValidate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsValidateJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var jobId = jobId_example;  // string | Job ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+
+            try
+            { 
+                // Fetch Architect Validate Job Status
+                ArchitectValidateJobStateResponse result = apiInstance.GetFlowsValidateJob(jobId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsValidateJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| Job ID |  |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: messages |
+
+### Return type
+
+[**ArchitectValidateJobStateResponse**](ArchitectValidateJobStateResponse)
+
+
 ## PatchArchitectGrammar
 
 > [**Grammar**](Grammar) PatchArchitectGrammar (string grammarId, Grammar body = null)
@@ -9051,6 +9119,70 @@ namespace Example
 [**FlowOutcome**](FlowOutcome)
 
 
+## PostFlowsValidateJobs
+
+> [**RegisterArchitectValidateJobResponse**](RegisterArchitectValidateJobResponse) PostFlowsValidateJobs (RegisterArchitectValidateJob body)
+
+
+Register Architect Validate Job
+
+PostFlowsValidateJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* architect:jobValidate:create
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsValidateJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var body = new RegisterArchitectValidateJob(); // RegisterArchitectValidateJob | 
+
+            try
+            { 
+                // Register Architect Validate Job
+                RegisterArchitectValidateJobResponse result = apiInstance.PostFlowsValidateJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsValidateJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**RegisterArchitectValidateJob**](RegisterArchitectValidateJob)|  |  |
+
+### Return type
+
+[**RegisterArchitectValidateJobResponse**](RegisterArchitectValidateJobResponse)
+
+
 ## PutArchitectEmergencygroup
 
 > [**EmergencyGroup**](EmergencyGroup) PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body)
@@ -10033,4 +10165,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 265.0.0_
+_PureCloudPlatform.Client.V2 266.0.0_

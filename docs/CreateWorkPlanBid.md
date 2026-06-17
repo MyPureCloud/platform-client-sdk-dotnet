@@ -13,8 +13,9 @@
 | **EffectiveDate** | **String** | The date when agents will be assigned to the new work plan in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **AgentRankingType** | **string** | The type of agent ranking selected for this bid | |
 | **RankingTiebreakerType** | **string** | Ranking tiebreaker to be used | |
+| **EndOverridesAndRotations** | **bool?** | If true, all existing overrides, workplan rotations will be ended one day before effective date of this bid | [optional] |
 | **WorkPlanFieldsVisibleToAgents** | **List&lt;string&gt;** | The work plan fields visible to agents whenever work plan preferences are made | |
 
 
 
-_PureCloudPlatform.Client.V2 265.0.0_
+_PureCloudPlatform.Client.V2 266.0.0_
