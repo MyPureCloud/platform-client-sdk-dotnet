@@ -69,7 +69,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsScanRelationshipsDivisionviewsAll**](#GetExternalcontactsScanRelationshipsDivisionviewsAll) | **Get** /api/v2/externalcontacts/scan/relationships/divisionviews/all | Scan for relationships |
 | [**PatchExternalcontactsContact**](#PatchExternalcontactsContact) | **Patch** /api/v2/externalcontacts/contacts/{contactId} | Update specific fields of an external contact |
 | [**PatchExternalcontactsContactIdentifiers**](#PatchExternalcontactsContactIdentifiers) | **Patch** /api/v2/externalcontacts/contacts/{contactId}/identifiers | Claim or release identifiers for a contact |
+| [**PatchExternalcontactsContactNote**](#PatchExternalcontactsContactNote) | **Patch** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Update a Contact Note |
+| [**PatchExternalcontactsOrganization**](#PatchExternalcontactsOrganization) | **Patch** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Update specific fields of an external organization |
 | [**PatchExternalcontactsOrganizationIdentifiers**](#PatchExternalcontactsOrganizationIdentifiers) | **Patch** /api/v2/externalcontacts/organizations/{externalOrganizationId}/identifiers | Claim or release identifiers for an external organization |
+| [**PatchExternalcontactsOrganizationNote**](#PatchExternalcontactsOrganizationNote) | **Patch** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Update an External Organization Note |
+| [**PatchExternalcontactsRelationship**](#PatchExternalcontactsRelationship) | **Patch** /api/v2/externalcontacts/relationships/{relationshipId} | Update specific fields of a relationship |
 | [**PostExternalcontactsBulkContacts**](#PostExternalcontactsBulkContacts) | **Post** /api/v2/externalcontacts/bulk/contacts | Bulk fetch contacts |
 | [**PostExternalcontactsBulkContactsAdd**](#PostExternalcontactsBulkContactsAdd) | **Post** /api/v2/externalcontacts/bulk/contacts/add | Bulk add contacts |
 | [**PostExternalcontactsBulkContactsDivisionviews**](#PostExternalcontactsBulkContactsDivisionviews) | **Post** /api/v2/externalcontacts/bulk/contacts/divisionviews | Bulk fetch contacts across divisions |
@@ -4184,6 +4188,136 @@ namespace Example
 [**ContactIdentifier**](ContactIdentifier)
 
 
+## PatchExternalcontactsContactNote
+
+> [**Note**](Note) PatchExternalcontactsContactNote (string contactId, string noteId, ExternalContactsPatchRequest body)
+
+
+Update a Contact Note
+
+Requires ANY permissions: 
+
+* externalContacts:contact:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchExternalcontactsContactNoteExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var contactId = contactId_example;  // string | ExternalContact Id
+            var noteId = noteId_example;  // string | Note Id
+            var body = new ExternalContactsPatchRequest(); // ExternalContactsPatchRequest | Note field to update
+
+            try
+            { 
+                // Update a Contact Note
+                Note result = apiInstance.PatchExternalcontactsContactNote(contactId, noteId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PatchExternalcontactsContactNote: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactId** | **string**| ExternalContact Id |  |
+| **noteId** | **string**| Note Id |  |
+| **body** | [**ExternalContactsPatchRequest**](ExternalContactsPatchRequest)| Note field to update |  |
+
+### Return type
+
+[**Note**](Note)
+
+
+## PatchExternalcontactsOrganization
+
+> [**ExternalOrganization**](ExternalOrganization) PatchExternalcontactsOrganization (string externalOrganizationId, ExternalContactsPatchRequest body)
+
+
+Update specific fields of an external organization
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchExternalcontactsOrganizationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var externalOrganizationId = externalOrganizationId_example;  // string | External Organization ID
+            var body = new ExternalContactsPatchRequest(); // ExternalContactsPatchRequest | External Organization fields to update
+
+            try
+            { 
+                // Update specific fields of an external organization
+                ExternalOrganization result = apiInstance.PatchExternalcontactsOrganization(externalOrganizationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PatchExternalcontactsOrganization: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **externalOrganizationId** | **string**| External Organization ID |  |
+| **body** | [**ExternalContactsPatchRequest**](ExternalContactsPatchRequest)| External Organization fields to update |  |
+
+### Return type
+
+[**ExternalOrganization**](ExternalOrganization)
+
+
 ## PatchExternalcontactsOrganizationIdentifiers
 
 > [**ExternalOrganizationIdentifier**](ExternalOrganizationIdentifier) PatchExternalcontactsOrganizationIdentifiers (string externalOrganizationId, ExternalOrganizationIdentifierClaimRequest body)
@@ -4246,6 +4380,136 @@ namespace Example
 ### Return type
 
 [**ExternalOrganizationIdentifier**](ExternalOrganizationIdentifier)
+
+
+## PatchExternalcontactsOrganizationNote
+
+> [**Note**](Note) PatchExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, ExternalContactsPatchRequest body)
+
+
+Update an External Organization Note
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchExternalcontactsOrganizationNoteExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var externalOrganizationId = externalOrganizationId_example;  // string | External Organization Id
+            var noteId = noteId_example;  // string | Note Id
+            var body = new ExternalContactsPatchRequest(); // ExternalContactsPatchRequest | Note field to update
+
+            try
+            { 
+                // Update an External Organization Note
+                Note result = apiInstance.PatchExternalcontactsOrganizationNote(externalOrganizationId, noteId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PatchExternalcontactsOrganizationNote: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **externalOrganizationId** | **string**| External Organization Id |  |
+| **noteId** | **string**| Note Id |  |
+| **body** | [**ExternalContactsPatchRequest**](ExternalContactsPatchRequest)| Note field to update |  |
+
+### Return type
+
+[**Note**](Note)
+
+
+## PatchExternalcontactsRelationship
+
+> [**Relationship**](Relationship) PatchExternalcontactsRelationship (string relationshipId, ExternalContactsPatchRequest body)
+
+
+Update specific fields of a relationship
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchExternalcontactsRelationshipExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var relationshipId = relationshipId_example;  // string | Relationship Id
+            var body = new ExternalContactsPatchRequest(); // ExternalContactsPatchRequest | Relationship fields to update
+
+            try
+            { 
+                // Update specific fields of a relationship
+                Relationship result = apiInstance.PatchExternalcontactsRelationship(relationshipId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PatchExternalcontactsRelationship: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **relationshipId** | **string**| Relationship Id |  |
+| **body** | [**ExternalContactsPatchRequest**](ExternalContactsPatchRequest)| Relationship fields to update |  |
+
+### Return type
+
+[**Relationship**](Relationship)
 
 
 ## PostExternalcontactsBulkContacts
@@ -7879,4 +8143,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 266.0.0_
+_PureCloudPlatform.Client.V2 267.0.0_

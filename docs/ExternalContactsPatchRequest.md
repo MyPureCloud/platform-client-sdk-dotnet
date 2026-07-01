@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Changes** | [**List&lt;ContactsPatchChange&gt;**](ContactsPatchChange) | A list of changes to apply to the provided contact entity | [optional] |
+| **Changes** | [**List&lt;ContactsPatchChange&gt;**](ContactsPatchChange) | A list of changes to apply to the provided entity | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 266.0.0_
+_PureCloudPlatform.Client.V2 267.0.0_

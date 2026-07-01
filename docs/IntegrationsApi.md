@@ -484,7 +484,7 @@ namespace Example
 
 ## GetIntegrations
 
-> [**IntegrationEntityListing**](IntegrationEntityListing) GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> ids = null, string integrationType = null, string reportedState = null)
+> [**IntegrationEntityListing**](IntegrationEntityListing) GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> ids = null, string integrationType = null, string reportedState = null, string credentialId = null)
 
 
 List integrations
@@ -524,11 +524,12 @@ namespace Example
             var ids = new List<string>(); // List<string> | Comma-separated list of integration IDs to filter by (max 100) (optional) 
             var integrationType = webhook;  // string | Filter integrations by integration type ID (optional) 
             var reportedState = ACTIVE;  // string | Filter integrations by reported state (case-insensitive) (optional) 
+            var credentialId = a1b2c3d4-e5f6-7890-abcd-ef1234567890;  // string | Filter integrations by credential ID (optional) 
 
             try
             { 
                 // List integrations
-                IntegrationEntityListing result = apiInstance.GetIntegrations(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, ids, integrationType, reportedState);
+                IntegrationEntityListing result = apiInstance.GetIntegrations(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, ids, integrationType, reportedState, credentialId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -554,6 +555,7 @@ namespace Example
 | **ids** | [**List<string>**](string)| Comma-separated list of integration IDs to filter by (max 100) | [optional]  |
 | **integrationType** | **string**| Filter integrations by integration type ID | [optional]  |
 | **reportedState** | **string**| Filter integrations by reported state (case-insensitive) | [optional] <br />**Values**: ACTIVE, ACTIVATING, INACTIVE, DEACTIVATING, ERROR |
+| **credentialId** | **string**| Filter integrations by credential ID | [optional]  |
 
 ### Return type
 
@@ -6145,4 +6147,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 266.0.0_
+_PureCloudPlatform.Client.V2 267.0.0_
