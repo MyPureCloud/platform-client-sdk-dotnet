@@ -40,6 +40,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Bot,
             
             /// <summary>
+            /// Enum Case for "Case"
+            /// </summary>
+            [EnumMember(Value = "Case")]
+            Case,
+            
+            /// <summary>
             /// Enum Copilot for "Copilot"
             /// </summary>
             [EnumMember(Value = "Copilot")]

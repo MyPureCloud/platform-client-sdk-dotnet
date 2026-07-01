@@ -54,6 +54,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitAlternativeshiftsTrade**](#GetWorkforcemanagementBusinessunitAlternativeshiftsTrade) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/{tradeId} | Get an alternative shifts trade in a business unit for a given trade ID |
 | [**GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob**](#GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search/jobs/{jobId} | Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementBusinessunitCapacityplan**](#GetWorkforcemanagementBusinessunitCapacityplan) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId} | Get a capacity plan |
+| [**GetWorkforcemanagementBusinessunitCapacityplanForecast**](#GetWorkforcemanagementBusinessunitCapacityplanForecast) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/forecast | Get a capacity plan&#39;s forecast inputs |
 | [**GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations**](#GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations | Get a capacity plan&#39;s staffing group allocations |
 | [**GetWorkforcemanagementBusinessunitCapacityplanStaffingrequirements**](#GetWorkforcemanagementBusinessunitCapacityplanStaffingrequirements) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffingrequirements | Get a capacity plan&#39;s staffing requirements |
 | [**GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast**](#GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId} | Get the latest long term staffing requirements for a business unit |
@@ -3574,6 +3575,72 @@ namespace Example
 ### Return type
 
 [**CapacityPlanResponse**](CapacityPlanResponse)
+
+
+## GetWorkforcemanagementBusinessunitCapacityplanForecast
+
+> [**CapacityPlanForecastInputsResponse**](CapacityPlanForecastInputsResponse) GetWorkforcemanagementBusinessunitCapacityplanForecast (string businessUnitId, string capacityPlanId, string granularity = null)
+
+
+Get a capacity plan's forecast inputs
+
+Requires ANY permissions: 
+
+* wfm:capacityPlanForecastInputs:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitCapacityplanForecastExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var capacityPlanId = capacityPlanId_example;  // string | The ID of the capacity plan
+            var granularity = granularity_example;  // string | Granularity to access capacity plan forecast data, defaults to weekly (optional) 
+
+            try
+            { 
+                // Get a capacity plan's forecast inputs
+                CapacityPlanForecastInputsResponse result = apiInstance.GetWorkforcemanagementBusinessunitCapacityplanForecast(businessUnitId, capacityPlanId, granularity);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitCapacityplanForecast: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **capacityPlanId** | **string**| The ID of the capacity plan |  |
+| **granularity** | **string**| Granularity to access capacity plan forecast data, defaults to weekly | [optional] <br />**Values**: weekly, monthly |
+
+### Return type
+
+[**CapacityPlanForecastInputsResponse**](CapacityPlanForecastInputsResponse)
 
 
 ## GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations
@@ -21865,4 +21932,4 @@ namespace Example
 [**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
 
 
-_PureCloudPlatform.Client.V2 266.0.0_
+_PureCloudPlatform.Client.V2 267.0.0_

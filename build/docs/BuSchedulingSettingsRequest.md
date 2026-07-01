@@ -8,6 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **MessageSeverities** | [**List&lt;SchedulerMessageTypeSeverity&gt;**](SchedulerMessageTypeSeverity) | Schedule generation message severity configuration | [optional] |
 | **SyncTimeOffProperties** | [**SetWrapperSyncTimeOffProperty**](SetWrapperSyncTimeOffProperty) | Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published | [optional] |
+| **EnableTimeOffFullDayEstimation** | **bool?** | Enables start and end time estimation for full-day time-off requests. When enabled, syncTimeOffProperties must include FullDayEarliestStartOffsetMinutes and FullDayLatestEndOffsetMinutes | [optional] |
 | **ServiceGoalImpact** | [**WfmServiceGoalImpactSettings**](WfmServiceGoalImpactSettings) | Configures the max percent increase and decrease of service goals for this business unit | [optional] |
 | **AllowWorkPlanPerMinuteGranularity** | **bool?** | Indicates whether or not per minute granularity for scheduling will be enabled for this business unit. Defaults to false | [optional] |
 | **ActivitySmoothingType** | **string** | The activity smoothing type for schedule generation in this business unit | [optional] |
@@ -15,4 +16,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 266.0.0_
+_PureCloudPlatform.Client.V2 267.0.0_

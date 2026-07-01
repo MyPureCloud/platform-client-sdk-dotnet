@@ -381,10 +381,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversations,
             
             /// <summary>
-            /// Enum Copilot for "Copilot"
+            /// Enum Genesyscloudcopilot for "GenesysCloudCopilot"
             /// </summary>
-            [EnumMember(Value = "Copilot")]
-            Copilot
+            [EnumMember(Value = "GenesysCloudCopilot")]
+            Genesyscloudcopilot
         }
         /// <summary>
         /// Gets or Sets Action
@@ -2777,6 +2777,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "DecisionTableVersion")]
             Decisiontableversion,
+            
+            /// <summary>
+            /// Enum Decisiontablesnapshot for "DecisionTableSnapshot"
+            /// </summary>
+            [EnumMember(Value = "DecisionTableSnapshot")]
+            Decisiontablesnapshot,
             
             /// <summary>
             /// Enum Decisiontablerow for "DecisionTableRow"

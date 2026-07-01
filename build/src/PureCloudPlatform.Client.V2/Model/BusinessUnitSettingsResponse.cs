@@ -95,14 +95,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShortTermForecasting">Short term forecasting settings.</param>
         /// <param name="Scheduling">Scheduling settings.</param>
         /// <param name="Notifications">Notification settings.</param>
+        /// <param name="Learning">Learning settings.</param>
+        /// <param name="Coaching">Coaching settings.</param>
         /// <param name="Metadata">Version metadata for this business unit (required).</param>
-        public BusinessUnitSettingsResponse(StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, BuShortTermForecastingSettings ShortTermForecasting = null, BuSchedulingSettingsResponse Scheduling = null, BuNotificationSettingsResponse Notifications = null, WfmVersionedEntityMetadata Metadata = null)
+        public BusinessUnitSettingsResponse(StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, BuShortTermForecastingSettings ShortTermForecasting = null, BuSchedulingSettingsResponse Scheduling = null, BuNotificationSettingsResponse Notifications = null, BuActivitySettingsResponse Learning = null, BuActivitySettingsResponse Coaching = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.StartDayOfWeek = StartDayOfWeek;
             this.TimeZone = TimeZone;
             this.ShortTermForecasting = ShortTermForecasting;
             this.Scheduling = Scheduling;
             this.Notifications = Notifications;
+            this.Learning = Learning;
+            this.Coaching = Coaching;
             this.Metadata = Metadata;
             
         }
@@ -148,6 +152,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Learning settings
+        /// </summary>
+        /// <value>Learning settings</value>
+        [DataMember(Name="learning", EmitDefaultValue=false)]
+        public BuActivitySettingsResponse Learning { get; set; }
+
+
+
+        /// <summary>
+        /// Coaching settings
+        /// </summary>
+        /// <value>Coaching settings</value>
+        [DataMember(Name="coaching", EmitDefaultValue=false)]
+        public BuActivitySettingsResponse Coaching { get; set; }
+
+
+
+        /// <summary>
         /// Version metadata for this business unit
         /// </summary>
         /// <value>Version metadata for this business unit</value>
@@ -169,6 +191,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ShortTermForecasting: ").Append(ShortTermForecasting).Append("\n");
             sb.Append("  Scheduling: ").Append(Scheduling).Append("\n");
             sb.Append("  Notifications: ").Append(Notifications).Append("\n");
+            sb.Append("  Learning: ").Append(Learning).Append("\n");
+            sb.Append("  Coaching: ").Append(Coaching).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -236,6 +260,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Notifications.Equals(other.Notifications)
                 ) &&
                 (
+                    this.Learning == other.Learning ||
+                    this.Learning != null &&
+                    this.Learning.Equals(other.Learning)
+                ) &&
+                (
+                    this.Coaching == other.Coaching ||
+                    this.Coaching != null &&
+                    this.Coaching.Equals(other.Coaching)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -267,6 +301,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Notifications != null)
                     hash = hash * 59 + this.Notifications.GetHashCode();
+
+                if (this.Learning != null)
+                    hash = hash * 59 + this.Learning.GetHashCode();
+
+                if (this.Coaching != null)
+                    hash = hash * 59 + this.Coaching.GetHashCode();
 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

@@ -18,6 +18,39 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResponseAssetBulkRequest :  IEquatable<ResponseAssetBulkRequest>
     {
+        /// <summary>
+        /// The sort order for results
+        /// </summary>
+        /// <value>The sort order for results</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SortOrderEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Asc for "asc"
+            /// </summary>
+            [EnumMember(Value = "asc")]
+            Asc,
+            
+            /// <summary>
+            /// Enum Desc for "desc"
+            /// </summary>
+            [EnumMember(Value = "desc")]
+            Desc
+        }
+        /// <summary>
+        /// The sort order for results
+        /// </summary>
+        /// <value>The sort order for results</value>
+        [DataMember(Name="sortOrder", EmitDefaultValue=false)]
+        public SortOrderEnum? SortOrder { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseAssetBulkRequest" /> class.
@@ -28,9 +61,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ResponseAssetBulkRequest" /> class.
         /// </summary>
         /// <param name="AssetIds">List of Response Asset IDs (max 50) (required).</param>
-        public ResponseAssetBulkRequest(List<string> AssetIds = null)
+        /// <param name="SortBy">The field in the resource that you want to sort the results by. Allowed values: name, dateCreated, dateModified, contentLength.</param>
+        /// <param name="SortOrder">The sort order for results.</param>
+        public ResponseAssetBulkRequest(List<string> AssetIds = null, string SortBy = null, SortOrderEnum? SortOrder = null)
         {
             this.AssetIds = AssetIds;
+            this.SortBy = SortBy;
+            this.SortOrder = SortOrder;
             
         }
         
@@ -44,6 +81,17 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> AssetIds { get; set; }
 
 
+
+        /// <summary>
+        /// The field in the resource that you want to sort the results by. Allowed values: name, dateCreated, dateModified, contentLength
+        /// </summary>
+        /// <value>The field in the resource that you want to sort the results by. Allowed values: name, dateCreated, dateModified, contentLength</value>
+        [DataMember(Name="sortBy", EmitDefaultValue=false)]
+        public string SortBy { get; set; }
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +102,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ResponseAssetBulkRequest {\n");
 
             sb.Append("  AssetIds: ").Append(AssetIds).Append("\n");
+            sb.Append("  SortBy: ").Append(SortBy).Append("\n");
+            sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +148,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AssetIds == other.AssetIds ||
                     this.AssetIds != null &&
                     this.AssetIds.SequenceEqual(other.AssetIds)
+                ) &&
+                (
+                    this.SortBy == other.SortBy ||
+                    this.SortBy != null &&
+                    this.SortBy.Equals(other.SortBy)
+                ) &&
+                (
+                    this.SortOrder == other.SortOrder ||
+                    this.SortOrder != null &&
+                    this.SortOrder.Equals(other.SortOrder)
                 );
         }
 
@@ -114,6 +174,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.AssetIds != null)
                     hash = hash * 59 + this.AssetIds.GetHashCode();
+
+                if (this.SortBy != null)
+                    hash = hash * 59 + this.SortBy.GetHashCode();
+
+                if (this.SortOrder != null)
+                    hash = hash * 59 + this.SortOrder.GetHashCode();
 
                 return hash;
             }

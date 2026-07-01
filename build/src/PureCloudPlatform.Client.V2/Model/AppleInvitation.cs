@@ -19,13 +19,89 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class AppleInvitation :  IEquatable<AppleInvitation>
     {
         /// <summary>
+        /// The template type for the invitation
+        /// </summary>
+        /// <value>The template type for the invitation</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TemplateTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Withimage for "WithImage"
+            /// </summary>
+            [EnumMember(Value = "WithImage")]
+            Withimage,
+            
+            /// <summary>
+            /// Enum Withoutimage for "WithoutImage"
+            /// </summary>
+            [EnumMember(Value = "WithoutImage")]
+            Withoutimage
+        }
+        /// <summary>
+        /// The template type for the invitation
+        /// </summary>
+        /// <value>The template type for the invitation</value>
+        [DataMember(Name="templateType", EmitDefaultValue=false)]
+        public TemplateTypeEnum? TemplateType { get; set; }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="AppleInvitation" /> class.
         /// </summary>
-        public AppleInvitation()
+        [JsonConstructorAttribute]
+        protected AppleInvitation() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AppleInvitation" /> class.
+        /// </summary>
+        /// <param name="BusinessName">The business name displayed in the invitation (required).</param>
+        /// <param name="TranscriptMessage">The transcript message displayed in the invitation (required).</param>
+        /// <param name="TemplateType">The template type for the invitation (required).</param>
+        /// <param name="Locale">The locale for the invitation (required).</param>
+        public AppleInvitation(string BusinessName = null, string TranscriptMessage = null, TemplateTypeEnum? TemplateType = null, string Locale = null)
         {
+            this.BusinessName = BusinessName;
+            this.TranscriptMessage = TranscriptMessage;
+            this.TemplateType = TemplateType;
+            this.Locale = Locale;
             
         }
         
+
+
+        /// <summary>
+        /// The business name displayed in the invitation
+        /// </summary>
+        /// <value>The business name displayed in the invitation</value>
+        [DataMember(Name="businessName", EmitDefaultValue=false)]
+        public string BusinessName { get; set; }
+
+
+
+        /// <summary>
+        /// The transcript message displayed in the invitation
+        /// </summary>
+        /// <value>The transcript message displayed in the invitation</value>
+        [DataMember(Name="transcriptMessage", EmitDefaultValue=false)]
+        public string TranscriptMessage { get; set; }
+
+
+
+
+
+        /// <summary>
+        /// The locale for the invitation
+        /// </summary>
+        /// <value>The locale for the invitation</value>
+        [DataMember(Name="locale", EmitDefaultValue=false)]
+        public string Locale { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +112,10 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AppleInvitation {\n");
 
+            sb.Append("  BusinessName: ").Append(BusinessName).Append("\n");
+            sb.Append("  TranscriptMessage: ").Append(TranscriptMessage).Append("\n");
+            sb.Append("  TemplateType: ").Append(TemplateType).Append("\n");
+            sb.Append("  Locale: ").Append(Locale).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +155,27 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.BusinessName == other.BusinessName ||
+                    this.BusinessName != null &&
+                    this.BusinessName.Equals(other.BusinessName)
+                ) &&
+                (
+                    this.TranscriptMessage == other.TranscriptMessage ||
+                    this.TranscriptMessage != null &&
+                    this.TranscriptMessage.Equals(other.TranscriptMessage)
+                ) &&
+                (
+                    this.TemplateType == other.TemplateType ||
+                    this.TemplateType != null &&
+                    this.TemplateType.Equals(other.TemplateType)
+                ) &&
+                (
+                    this.Locale == other.Locale ||
+                    this.Locale != null &&
+                    this.Locale.Equals(other.Locale)
+                );
         }
 
         /// <summary>
@@ -89,6 +189,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.BusinessName != null)
+                    hash = hash * 59 + this.BusinessName.GetHashCode();
+
+                if (this.TranscriptMessage != null)
+                    hash = hash * 59 + this.TranscriptMessage.GetHashCode();
+
+                if (this.TemplateType != null)
+                    hash = hash * 59 + this.TemplateType.GetHashCode();
+
+                if (this.Locale != null)
+                    hash = hash * 59 + this.Locale.GetHashCode();
+
                 return hash;
             }
         }

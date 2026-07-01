@@ -11,8 +11,10 @@
 | **ShortTermForecasting** | [**BuShortTermForecastingSettings**](BuShortTermForecastingSettings) | Short term forecasting settings | [optional] |
 | **Scheduling** | [**BuSchedulingSettingsRequest**](BuSchedulingSettingsRequest) | Scheduling settings | [optional] |
 | **Notifications** | [**BuNotificationSettingsRequest**](BuNotificationSettingsRequest) | Notification settings | [optional] |
+| **Learning** | [**BuActivitySettingsRequest**](BuActivitySettingsRequest) | Learning settings | [optional] |
+| **Coaching** | [**BuActivitySettingsRequest**](BuActivitySettingsRequest) | Coaching settings | [optional] |
 | **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this business unit | |
 
 
 
-_PureCloudPlatform.Client.V2 266.0.0_
+_PureCloudPlatform.Client.V2 267.0.0_

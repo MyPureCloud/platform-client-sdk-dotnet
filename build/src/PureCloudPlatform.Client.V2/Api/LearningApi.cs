@@ -358,7 +358,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isArchived">Archive status (optional, default to false)</param>
         /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -366,12 +365,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
-        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>LearningModuleList</returns>
         
-        LearningModuleList GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null);
+        LearningModuleList GetLearningModules (List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, List<string> statuses = null, List<string> externalIds = null);
 
         /// <summary>
         /// Get all learning modules of an organization
@@ -380,7 +378,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isArchived">Archive status (optional, default to false)</param>
         /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -388,12 +385,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
-        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>ApiResponse of LearningModuleList</returns>
         
-        ApiResponse<LearningModuleList> GetLearningModulesWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null);
+        ApiResponse<LearningModuleList> GetLearningModulesWithHttpInfo (List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, List<string> statuses = null, List<string> externalIds = null);
 
         /// <summary>
         /// Get all learning modules of an organization including assignments for a specific user
@@ -1408,7 +1404,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isArchived">Archive status (optional, default to false)</param>
         /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -1416,12 +1411,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
-        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>Task of LearningModuleList</returns>
         
-        System.Threading.Tasks.Task<LearningModuleList> GetLearningModulesAsync (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null);
+        System.Threading.Tasks.Task<LearningModuleList> GetLearningModulesAsync (List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, List<string> statuses = null, List<string> externalIds = null);
 
         /// <summary>
         /// Get all learning modules of an organization
@@ -1430,7 +1424,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isArchived">Archive status (optional, default to false)</param>
         /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -1438,12 +1431,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
-        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>Task of ApiResponse (LearningModuleList)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<LearningModuleList>> GetLearningModulesAsyncWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null);
+        System.Threading.Tasks.Task<ApiResponse<LearningModuleList>> GetLearningModulesAsyncWithHttpInfo (List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, List<string> statuses = null, List<string> externalIds = null);
 
         /// <summary>
         /// Get all learning modules of an organization including assignments for a specific user
@@ -4682,7 +4674,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isArchived">Archive status (optional, default to false)</param>
         /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4690,14 +4681,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
-        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>LearningModuleList</returns>
         
-        public LearningModuleList GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
+        public LearningModuleList GetLearningModules (List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, List<string> statuses = null, List<string> externalIds = null)
         {
-             ApiResponse<LearningModuleList> localVarResponse = GetLearningModulesWithHttpInfo(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses, externalIds);
+             ApiResponse<LearningModuleList> localVarResponse = GetLearningModulesWithHttpInfo(types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, statuses, externalIds);
              return localVarResponse.Data;
         }
 
@@ -4706,7 +4696,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isArchived">Archive status (optional, default to false)</param>
         /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4714,12 +4703,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
-        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>ApiResponse of LearningModuleList</returns>
         
-        public ApiResponse< LearningModuleList > GetLearningModulesWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
+        public ApiResponse< LearningModuleList > GetLearningModulesWithHttpInfo (List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, List<string> statuses = null, List<string> externalIds = null)
         { 
 
             var localVarPath = "/api/v2/learning/modules";
@@ -4755,7 +4743,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (isArchived != null) localVarQueryParams.Add(new Tuple<string, string>("isArchived", this.Configuration.ApiClient.ParameterToString(isArchived)));
             if (types != null) types.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("types", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
@@ -4763,7 +4750,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (searchTerm != null) localVarQueryParams.Add(new Tuple<string, string>("searchTerm", this.Configuration.ApiClient.ParameterToString(searchTerm)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
-            if (isPublished != null) localVarQueryParams.Add(new Tuple<string, string>("isPublished", this.Configuration.ApiClient.ParameterToString(isPublished)));
             if (statuses != null) statuses.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("statuses", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (externalIds != null) externalIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("externalIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
@@ -4810,7 +4796,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isArchived">Archive status (optional, default to false)</param>
         /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4818,14 +4803,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
-        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>Task of LearningModuleList</returns>
         
-        public async System.Threading.Tasks.Task<LearningModuleList> GetLearningModulesAsync (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
+        public async System.Threading.Tasks.Task<LearningModuleList> GetLearningModulesAsync (List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, List<string> statuses = null, List<string> externalIds = null)
         {
-             ApiResponse<LearningModuleList> localVarResponse = await GetLearningModulesAsyncWithHttpInfo(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses, externalIds);
+             ApiResponse<LearningModuleList> localVarResponse = await GetLearningModulesAsyncWithHttpInfo(types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, statuses, externalIds);
              return localVarResponse.Data;
 
         }
@@ -4835,7 +4819,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isArchived">Archive status (optional, default to false)</param>
         /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4843,12 +4826,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="searchTerm">Search Term (searchable by name) (optional)</param>
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
-        /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <param name="statuses">Specifies the module statuses to filter by (optional)</param>
         /// <param name="externalIds">Specifies the module external IDs to filter by. Only one ID is allowed (optional)</param>
         /// <returns>Task of ApiResponse (LearningModuleList)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<LearningModuleList>> GetLearningModulesAsyncWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LearningModuleList>> GetLearningModulesAsyncWithHttpInfo (List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, List<string> statuses = null, List<string> externalIds = null)
         { 
 
             var localVarPath = "/api/v2/learning/modules";
@@ -4884,7 +4866,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (isArchived != null) localVarQueryParams.Add(new Tuple<string, string>("isArchived", this.Configuration.ApiClient.ParameterToString(isArchived)));
             if (types != null) types.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("types", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
@@ -4892,7 +4873,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (searchTerm != null) localVarQueryParams.Add(new Tuple<string, string>("searchTerm", this.Configuration.ApiClient.ParameterToString(searchTerm)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
-            if (isPublished != null) localVarQueryParams.Add(new Tuple<string, string>("isPublished", this.Configuration.ApiClient.ParameterToString(isPublished)));
             if (statuses != null) statuses.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("statuses", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (externalIds != null) externalIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("externalIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 

@@ -11,7 +11,9 @@
 | **PayableMinutes** | **int?** | An estimation of payable part of time off request in minutes | |
 | **Flexible** | **bool?** | Whether there is flexibility for a user to choose different hours than the system estimated | |
 | **OverrideDateType** | **string** | The override date type, if the requested day is an override date | [optional] |
+| **EarliestStartOffsetMinutes** | **int?** | Earliest start time in minutes from midnight for full day request. Value may be null when time-off estimation is disabled | [optional] |
+| **LatestEndOffsetMinutes** | **int?** | Latest end time in minutes from midnight for full day request. Value may be null when time-off estimation is disabled | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 266.0.0_
+_PureCloudPlatform.Client.V2 267.0.0_

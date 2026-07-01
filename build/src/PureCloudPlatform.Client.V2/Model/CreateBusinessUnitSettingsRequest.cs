@@ -95,13 +95,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShortTermForecasting">Short term forecasting settings.</param>
         /// <param name="Scheduling">Scheduling settings.</param>
         /// <param name="Notifications">Notification settings.</param>
-        public CreateBusinessUnitSettingsRequest(StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, BuShortTermForecastingSettings ShortTermForecasting = null, BuSchedulingSettingsRequest Scheduling = null, BuNotificationSettingsRequest Notifications = null)
+        /// <param name="Learning">Learning settings.</param>
+        /// <param name="Coaching">Coaching settings.</param>
+        public CreateBusinessUnitSettingsRequest(StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, BuShortTermForecastingSettings ShortTermForecasting = null, BuSchedulingSettingsRequest Scheduling = null, BuNotificationSettingsRequest Notifications = null, BuActivitySettingsRequest Learning = null, BuActivitySettingsRequest Coaching = null)
         {
             this.StartDayOfWeek = StartDayOfWeek;
             this.TimeZone = TimeZone;
             this.ShortTermForecasting = ShortTermForecasting;
             this.Scheduling = Scheduling;
             this.Notifications = Notifications;
+            this.Learning = Learning;
+            this.Coaching = Coaching;
             
         }
         
@@ -144,6 +148,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public BuNotificationSettingsRequest Notifications { get; set; }
 
 
+
+        /// <summary>
+        /// Learning settings
+        /// </summary>
+        /// <value>Learning settings</value>
+        [DataMember(Name="learning", EmitDefaultValue=false)]
+        public BuActivitySettingsRequest Learning { get; set; }
+
+
+
+        /// <summary>
+        /// Coaching settings
+        /// </summary>
+        /// <value>Coaching settings</value>
+        [DataMember(Name="coaching", EmitDefaultValue=false)]
+        public BuActivitySettingsRequest Coaching { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -158,6 +180,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ShortTermForecasting: ").Append(ShortTermForecasting).Append("\n");
             sb.Append("  Scheduling: ").Append(Scheduling).Append("\n");
             sb.Append("  Notifications: ").Append(Notifications).Append("\n");
+            sb.Append("  Learning: ").Append(Learning).Append("\n");
+            sb.Append("  Coaching: ").Append(Coaching).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -222,6 +246,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Notifications == other.Notifications ||
                     this.Notifications != null &&
                     this.Notifications.Equals(other.Notifications)
+                ) &&
+                (
+                    this.Learning == other.Learning ||
+                    this.Learning != null &&
+                    this.Learning.Equals(other.Learning)
+                ) &&
+                (
+                    this.Coaching == other.Coaching ||
+                    this.Coaching != null &&
+                    this.Coaching.Equals(other.Coaching)
                 );
         }
 
@@ -250,6 +284,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Notifications != null)
                     hash = hash * 59 + this.Notifications.GetHashCode();
+
+                if (this.Learning != null)
+                    hash = hash * 59 + this.Learning.GetHashCode();
+
+                if (this.Coaching != null)
+                    hash = hash * 59 + this.Coaching.GetHashCode();
 
                 return hash;
             }

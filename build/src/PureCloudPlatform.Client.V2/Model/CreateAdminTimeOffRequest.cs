@@ -65,18 +65,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ActivityCodeId">The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category (required).</param>
         /// <param name="Notes">Notes about the time off request.</param>
         /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.</param>
+        /// <param name="FullDayEarliestStartOffsetMinutes">Earliest start offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available.</param>
+        /// <param name="FullDayLatestEndOffsetMinutes">Latest end offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available.</param>
         /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests.</param>
         /// <param name="DailyDurationMinutes">Daily duration in minutes applied to all days of this time off request. Ignored if durationMinutes is specified. At least one of dailyDurationMinutes or durationMinutes is required.</param>
         /// <param name="DurationMinutes">Duration in minutes for each day of this time off request. Must match the size of fullDayManagementUnitDates or partialDayStartDateTimes. At least one of dailyDurationMinutes or durationMinutes is required.</param>
         /// <param name="PayableMinutes">Payable minutes for each day of this time off request, representing scheduled paid time displaced by this request. Defaults to dailyDurationMinutes if not specified.</param>
         /// <param name="Paid">Whether this is a paid time off request. Defaults to the activity code&#39;s paid value if not specified.</param>
-        public CreateAdminTimeOffRequest(StatusEnum? Status = null, List<UserReference> Users = null, string ActivityCodeId = null, string Notes = null, List<string> FullDayManagementUnitDates = null, List<DateTime?> PartialDayStartDateTimes = null, int? DailyDurationMinutes = null, List<int?> DurationMinutes = null, List<int?> PayableMinutes = null, bool? Paid = null)
+        public CreateAdminTimeOffRequest(StatusEnum? Status = null, List<UserReference> Users = null, string ActivityCodeId = null, string Notes = null, List<string> FullDayManagementUnitDates = null, List<int?> FullDayEarliestStartOffsetMinutes = null, List<int?> FullDayLatestEndOffsetMinutes = null, List<DateTime?> PartialDayStartDateTimes = null, int? DailyDurationMinutes = null, List<int?> DurationMinutes = null, List<int?> PayableMinutes = null, bool? Paid = null)
         {
             this.Status = Status;
             this.Users = Users;
             this.ActivityCodeId = ActivityCodeId;
             this.Notes = Notes;
             this.FullDayManagementUnitDates = FullDayManagementUnitDates;
+            this.FullDayEarliestStartOffsetMinutes = FullDayEarliestStartOffsetMinutes;
+            this.FullDayLatestEndOffsetMinutes = FullDayLatestEndOffsetMinutes;
             this.PartialDayStartDateTimes = PartialDayStartDateTimes;
             this.DailyDurationMinutes = DailyDurationMinutes;
             this.DurationMinutes = DurationMinutes;
@@ -122,6 +126,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone</value>
         [DataMember(Name="fullDayManagementUnitDates", EmitDefaultValue=false)]
         public List<string> FullDayManagementUnitDates { get; set; }
+
+
+
+        /// <summary>
+        /// Earliest start offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available
+        /// </summary>
+        /// <value>Earliest start offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available</value>
+        [DataMember(Name="fullDayEarliestStartOffsetMinutes", EmitDefaultValue=false)]
+        public List<int?> FullDayEarliestStartOffsetMinutes { get; set; }
+
+
+
+        /// <summary>
+        /// Latest end offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available
+        /// </summary>
+        /// <value>Latest end offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available</value>
+        [DataMember(Name="fullDayLatestEndOffsetMinutes", EmitDefaultValue=false)]
+        public List<int?> FullDayLatestEndOffsetMinutes { get; set; }
 
 
 
@@ -183,6 +205,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
+            sb.Append("  FullDayEarliestStartOffsetMinutes: ").Append(FullDayEarliestStartOffsetMinutes).Append("\n");
+            sb.Append("  FullDayLatestEndOffsetMinutes: ").Append(FullDayLatestEndOffsetMinutes).Append("\n");
             sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
             sb.Append("  DailyDurationMinutes: ").Append(DailyDurationMinutes).Append("\n");
             sb.Append("  DurationMinutes: ").Append(DurationMinutes).Append("\n");
@@ -254,6 +278,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FullDayManagementUnitDates.SequenceEqual(other.FullDayManagementUnitDates)
                 ) &&
                 (
+                    this.FullDayEarliestStartOffsetMinutes == other.FullDayEarliestStartOffsetMinutes ||
+                    this.FullDayEarliestStartOffsetMinutes != null &&
+                    this.FullDayEarliestStartOffsetMinutes.SequenceEqual(other.FullDayEarliestStartOffsetMinutes)
+                ) &&
+                (
+                    this.FullDayLatestEndOffsetMinutes == other.FullDayLatestEndOffsetMinutes ||
+                    this.FullDayLatestEndOffsetMinutes != null &&
+                    this.FullDayLatestEndOffsetMinutes.SequenceEqual(other.FullDayLatestEndOffsetMinutes)
+                ) &&
+                (
                     this.PartialDayStartDateTimes == other.PartialDayStartDateTimes ||
                     this.PartialDayStartDateTimes != null &&
                     this.PartialDayStartDateTimes.SequenceEqual(other.PartialDayStartDateTimes)
@@ -305,6 +339,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FullDayManagementUnitDates != null)
                     hash = hash * 59 + this.FullDayManagementUnitDates.GetHashCode();
+
+                if (this.FullDayEarliestStartOffsetMinutes != null)
+                    hash = hash * 59 + this.FullDayEarliestStartOffsetMinutes.GetHashCode();
+
+                if (this.FullDayLatestEndOffsetMinutes != null)
+                    hash = hash * 59 + this.FullDayLatestEndOffsetMinutes.GetHashCode();
 
                 if (this.PartialDayStartDateTimes != null)
                     hash = hash * 59 + this.PartialDayStartDateTimes.GetHashCode();

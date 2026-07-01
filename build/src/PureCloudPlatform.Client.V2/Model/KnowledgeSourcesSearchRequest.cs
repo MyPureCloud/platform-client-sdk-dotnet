@@ -292,7 +292,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Trtr for "tr-TR"
             /// </summary>
             [EnumMember(Value = "tr-TR")]
-            Trtr
+            Trtr,
+            
+            /// <summary>
+            /// Enum Elgr for "el-GR"
+            /// </summary>
+            [EnumMember(Value = "el-GR")]
+            Elgr,
+            
+            /// <summary>
+            /// Enum Filph for "fil-PH"
+            /// </summary>
+            [EnumMember(Value = "fil-PH")]
+            Filph,
+            
+            /// <summary>
+            /// Enum Heil for "he-IL"
+            /// </summary>
+            [EnumMember(Value = "he-IL")]
+            Heil,
+            
+            /// <summary>
+            /// Enum Msmy for "ms-MY"
+            /// </summary>
+            [EnumMember(Value = "ms-MY")]
+            Msmy,
+            
+            /// <summary>
+            /// Enum Plpl for "pl-PL"
+            /// </summary>
+            [EnumMember(Value = "pl-PL")]
+            Plpl,
+            
+            /// <summary>
+            /// Enum Thth for "th-TH"
+            /// </summary>
+            [EnumMember(Value = "th-TH")]
+            Thth
         }
         /// <summary>
         /// The type of the query that initiates the search.

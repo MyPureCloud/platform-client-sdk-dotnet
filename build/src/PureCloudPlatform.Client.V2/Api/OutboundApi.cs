@@ -1667,7 +1667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query a list of contact lists.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Any ContactList field can be used as a query parameter to filter results. Multiple values can be specified for a field, and filter type prefixes can be used inline. Example: dateCreated=greaterthan:2025-01-01T00:00:00.000Z&dateCreated=lessthan:2027-01-01T00:00:00.000Z. See https://developer.genesys.cloud/routing/outbound/filter-type for available filter types.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -1689,7 +1689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query a list of contact lists.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Any ContactList field can be used as a query parameter to filter results. Multiple values can be specified for a field, and filter type prefixes can be used inline. Example: dateCreated=greaterthan:2025-01-01T00:00:00.000Z&dateCreated=lessthan:2027-01-01T00:00:00.000Z. See https://developer.genesys.cloud/routing/outbound/filter-type for available filter types.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -6353,7 +6353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query a list of contact lists.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Any ContactList field can be used as a query parameter to filter results. Multiple values can be specified for a field, and filter type prefixes can be used inline. Example: dateCreated=greaterthan:2025-01-01T00:00:00.000Z&dateCreated=lessthan:2027-01-01T00:00:00.000Z. See https://developer.genesys.cloud/routing/outbound/filter-type for available filter types.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -6375,7 +6375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query a list of contact lists.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Any ContactList field can be used as a query parameter to filter results. Multiple values can be specified for a field, and filter type prefixes can be used inline. Example: dateCreated=greaterthan:2025-01-01T00:00:00.000Z&dateCreated=lessthan:2027-01-01T00:00:00.000Z. See https://developer.genesys.cloud/routing/outbound/filter-type for available filter types.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -22572,7 +22572,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of contact lists. 
-        /// 
+        /// Any ContactList field can be used as a query parameter to filter results. Multiple values can be specified for a field, and filter type prefixes can be used inline. Example: dateCreated=greaterthan:2025-01-01T00:00:00.000Z&dateCreated=lessthan:2027-01-01T00:00:00.000Z. See https://developer.genesys.cloud/routing/outbound/filter-type for available filter types.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -22596,7 +22596,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of contact lists. 
-        /// 
+        /// Any ContactList field can be used as a query parameter to filter results. Multiple values can be specified for a field, and filter type prefixes can be used inline. Example: dateCreated=greaterthan:2025-01-01T00:00:00.000Z&dateCreated=lessthan:2027-01-01T00:00:00.000Z. See https://developer.genesys.cloud/routing/outbound/filter-type for available filter types.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -22700,7 +22700,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of contact lists. 
-        /// 
+        /// Any ContactList field can be used as a query parameter to filter results. Multiple values can be specified for a field, and filter type prefixes can be used inline. Example: dateCreated=greaterthan:2025-01-01T00:00:00.000Z&dateCreated=lessthan:2027-01-01T00:00:00.000Z. See https://developer.genesys.cloud/routing/outbound/filter-type for available filter types.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>
@@ -22725,7 +22725,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query a list of contact lists. 
-        /// 
+        /// Any ContactList field can be used as a query parameter to filter results. Multiple values can be specified for a field, and filter type prefixes can be used inline. Example: dateCreated=greaterthan:2025-01-01T00:00:00.000Z&dateCreated=lessthan:2027-01-01T00:00:00.000Z. See https://developer.genesys.cloud/routing/outbound/filter-type for available filter types.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeImportStatus">Include import status (optional, default to false)</param>

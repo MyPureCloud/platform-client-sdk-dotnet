@@ -32,7 +32,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OverageCurrency">The currency in which the overage charge is billed..</param>
         /// <param name="ConvertedTokenCount">AI Token Count after the conversion for AI Products..</param>
         /// <param name="TokenConversionRate">AI Token Conversion Rate — Units per token conversion ratio..</param>
-        public BillingCharge(BillingProduct Product = null, List<NamedEntity> Organizations = null, int? PrepaidQuantity = null, int? FairuseQuantity = null, int? ActualQuantity = null, int? OverageQuantity = null, double? OverageRate = null, double? OverageCharge = null, string OverageCurrency = null, double? ConvertedTokenCount = null, double? TokenConversionRate = null)
+        public BillingCharge(BillingProduct Product = null, List<NamedEntity> Organizations = null, double? PrepaidQuantity = null, double? FairuseQuantity = null, double? ActualQuantity = null, double? OverageQuantity = null, double? OverageRate = null, double? OverageCharge = null, string OverageCurrency = null, double? ConvertedTokenCount = null, double? TokenConversionRate = null)
         {
             this.Product = Product;
             this.Organizations = Organizations;
@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The quantity of usage that is prepaid.</value>
         [DataMember(Name="prepaidQuantity", EmitDefaultValue=false)]
-        public int? PrepaidQuantity { get; set; }
+        public double? PrepaidQuantity { get; set; }
 
 
 
@@ -91,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The quantity of usage allowed under fair use policies.</value>
         [DataMember(Name="fairuseQuantity", EmitDefaultValue=false)]
-        public int? FairuseQuantity { get; set; }
+        public double? FairuseQuantity { get; set; }
 
 
 
@@ -100,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The actual quantity of usage.</value>
         [DataMember(Name="actualQuantity", EmitDefaultValue=false)]
-        public int? ActualQuantity { get; set; }
+        public double? ActualQuantity { get; set; }
 
 
 
@@ -109,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The quantity of usage that exceeds prepaid or fair use limits.</value>
         [DataMember(Name="overageQuantity", EmitDefaultValue=false)]
-        public int? OverageQuantity { get; set; }
+        public double? OverageQuantity { get; set; }
 
 
 

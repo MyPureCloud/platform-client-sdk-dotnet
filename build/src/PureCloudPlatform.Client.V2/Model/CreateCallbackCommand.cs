@@ -18,6 +18,45 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateCallbackCommand :  IEquatable<CreateCallbackCommand>
     {
+        /// <summary>
+        /// How customer-first callback agent reservation is applied for this callback. useAgentReservation forces reservation on; noAgentReservation forces it off; useQueueSetting uses the queue configuration.
+        /// </summary>
+        /// <value>How customer-first callback agent reservation is applied for this callback. useAgentReservation forces reservation on; noAgentReservation forces it off; useQueueSetting uses the queue configuration.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CustomerFirstCallbackDeliveryModeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Usequeuesetting for "UseQueueSetting"
+            /// </summary>
+            [EnumMember(Value = "UseQueueSetting")]
+            Usequeuesetting,
+            
+            /// <summary>
+            /// Enum Useagentreservation for "UseAgentReservation"
+            /// </summary>
+            [EnumMember(Value = "UseAgentReservation")]
+            Useagentreservation,
+            
+            /// <summary>
+            /// Enum Noagentreservation for "NoAgentReservation"
+            /// </summary>
+            [EnumMember(Value = "NoAgentReservation")]
+            Noagentreservation
+        }
+        /// <summary>
+        /// How customer-first callback agent reservation is applied for this callback. useAgentReservation forces reservation on; noAgentReservation forces it off; useQueueSetting uses the queue configuration.
+        /// </summary>
+        /// <value>How customer-first callback agent reservation is applied for this callback. useAgentReservation forces reservation on; noAgentReservation forces it off; useQueueSetting uses the queue configuration.</value>
+        [DataMember(Name="customerFirstCallbackDeliveryMode", EmitDefaultValue=false)]
+        public CustomerFirstCallbackDeliveryModeEnum? CustomerFirstCallbackDeliveryMode { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallbackCommand" /> class.
@@ -30,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ScriptId">The identifier of the script to be used for the callback.</param>
         /// <param name="QueueId">The identifier of the queue to be used for the callback. Either queueId or routingData is required..</param>
         /// <param name="RoutingData">The routing data to be used for the callback. Either queueId or routingData is required..</param>
+        /// <param name="CustomerFirstCallbackDeliveryMode">How customer-first callback agent reservation is applied for this callback. useAgentReservation forces reservation on; noAgentReservation forces it off; useQueueSetting uses the queue configuration..</param>
         /// <param name="CallbackUserName">The name of the party to be called back..</param>
         /// <param name="CallbackNumbers">A list of phone numbers for the callback. (required).</param>
         /// <param name="CallbackScheduledTime">The scheduled date-time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -38,11 +78,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Data">A map of key-value pairs containing additional data that can be associated to the callback. These values will appear in the attributes property on the conversation participant. Example: { \&quot;notes\&quot;: \&quot;ready to close the deal!\&quot;, \&quot;customerPreferredName\&quot;: \&quot;Doc\&quot; }.</param>
         /// <param name="CallerId">The phone number displayed to recipients when a phone call is placed as part of the callback. Must conform to the E.164 format. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerId\&quot; varies..</param>
         /// <param name="CallerIdName">The name displayed to recipients when a phone call is placed as part of the callback. May be overridden by other settings in the system such as external trunk settings. Telco support for \&quot;callerIdName\&quot; varies..</param>
-        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? ValidateCallbackNumbers = null, Dictionary<string, string> Data = null, string CallerId = null, string CallerIdName = null)
+        public CreateCallbackCommand(string ScriptId = null, string QueueId = null, RoutingData RoutingData = null, CustomerFirstCallbackDeliveryModeEnum? CustomerFirstCallbackDeliveryMode = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, bool? ValidateCallbackNumbers = null, Dictionary<string, string> Data = null, string CallerId = null, string CallerIdName = null)
         {
             this.ScriptId = ScriptId;
             this.QueueId = QueueId;
             this.RoutingData = RoutingData;
+            this.CustomerFirstCallbackDeliveryMode = CustomerFirstCallbackDeliveryMode;
             this.CallbackUserName = CallbackUserName;
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackScheduledTime = CallbackScheduledTime;
@@ -80,6 +121,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The routing data to be used for the callback. Either queueId or routingData is required.</value>
         [DataMember(Name="routingData", EmitDefaultValue=false)]
         public RoutingData RoutingData { get; set; }
+
+
 
 
 
@@ -166,6 +209,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  RoutingData: ").Append(RoutingData).Append("\n");
+            sb.Append("  CustomerFirstCallbackDeliveryMode: ").Append(CustomerFirstCallbackDeliveryMode).Append("\n");
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
@@ -230,6 +274,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoutingData.Equals(other.RoutingData)
                 ) &&
                 (
+                    this.CustomerFirstCallbackDeliveryMode == other.CustomerFirstCallbackDeliveryMode ||
+                    this.CustomerFirstCallbackDeliveryMode != null &&
+                    this.CustomerFirstCallbackDeliveryMode.Equals(other.CustomerFirstCallbackDeliveryMode)
+                ) &&
+                (
                     this.CallbackUserName == other.CallbackUserName ||
                     this.CallbackUserName != null &&
                     this.CallbackUserName.Equals(other.CallbackUserName)
@@ -290,6 +339,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RoutingData != null)
                     hash = hash * 59 + this.RoutingData.GetHashCode();
+
+                if (this.CustomerFirstCallbackDeliveryMode != null)
+                    hash = hash * 59 + this.CustomerFirstCallbackDeliveryMode.GetHashCode();
 
                 if (this.CallbackUserName != null)
                     hash = hash * 59 + this.CallbackUserName.GetHashCode();

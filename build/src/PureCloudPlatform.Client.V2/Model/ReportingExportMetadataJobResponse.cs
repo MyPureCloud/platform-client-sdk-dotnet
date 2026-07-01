@@ -841,7 +841,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AgenticVirtualAgentPerformanceView for "AGENTIC_VIRTUAL_AGENT_PERFORMANCE_VIEW"
             /// </summary>
             [EnumMember(Value = "AGENTIC_VIRTUAL_AGENT_PERFORMANCE_VIEW")]
-            AgenticVirtualAgentPerformanceView
+            AgenticVirtualAgentPerformanceView,
+            
+            /// <summary>
+            /// Enum CallbackQueuePerformanceSummaryView for "CALLBACK_QUEUE_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CALLBACK_QUEUE_PERFORMANCE_SUMMARY_VIEW")]
+            CallbackQueuePerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum CallbackQueuePerformanceDetailView for "CALLBACK_QUEUE_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CALLBACK_QUEUE_PERFORMANCE_DETAIL_VIEW")]
+            CallbackQueuePerformanceDetailView
         }
         /// <summary>
         /// The view type of the export metadata

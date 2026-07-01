@@ -230,7 +230,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nscriptsuggestions for "nScriptSuggestions"
             /// </summary>
             [EnumMember(Value = "nScriptSuggestions")]
-            Nscriptsuggestions
+            Nscriptsuggestions,
+            
+            /// <summary>
+            /// Enum Ndistinctconversations for "nDistinctConversations"
+            /// </summary>
+            [EnumMember(Value = "nDistinctConversations")]
+            Ndistinctconversations
         }
         /// <summary>
         /// Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.

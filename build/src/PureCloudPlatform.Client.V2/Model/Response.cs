@@ -126,7 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Version">Version number required for updates..</param>
         /// <param name="Libraries">One or more libraries response is associated with. (required).</param>
-        /// <param name="Texts">One or more texts associated with the response. (required).</param>
+        /// <param name="Texts">One or more texts associated with the response. Required for responseTypes: Standard, Footer, MessagingTemplate and CampaignEmailTemplate.</param>
         /// <param name="InteractionType">The interaction type for this response..</param>
         /// <param name="Substitutions">Details about any text substitutions used in the texts for this response..</param>
         /// <param name="SubstitutionsSchema">Metadata about the text substitutions in json schema format..</param>
@@ -134,7 +134,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessagingTemplate">An optional messaging template definition for responseType.MessagingTemplate..</param>
         /// <param name="Assets">Assets used in the response.</param>
         /// <param name="Footer">Footer template definition for responseType.Footer..</param>
-        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, ResponseTypeEnum? ResponseType = null, MessagingTemplate MessagingTemplate = null, List<RmsAssetAddressableRef> Assets = null, FooterTemplate Footer = null)
+        /// <param name="AppleInvitation">Apple Messages for Business invitation template definition for responseType.AppleInvitation..</param>
+        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, ResponseTypeEnum? ResponseType = null, MessagingTemplate MessagingTemplate = null, List<RmsAssetAddressableRef> Assets = null, FooterTemplate Footer = null, AppleInvitation AppleInvitation = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -147,6 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessagingTemplate = MessagingTemplate;
             this.Assets = Assets;
             this.Footer = Footer;
+            this.AppleInvitation = AppleInvitation;
             
         }
         
@@ -188,9 +190,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// One or more texts associated with the response.
+        /// One or more texts associated with the response. Required for responseTypes: Standard, Footer, MessagingTemplate and CampaignEmailTemplate
         /// </summary>
-        /// <value>One or more texts associated with the response.</value>
+        /// <value>One or more texts associated with the response. Required for responseTypes: Standard, Footer, MessagingTemplate and CampaignEmailTemplate</value>
         [DataMember(Name="texts", EmitDefaultValue=false)]
         public List<ResponseText> Texts { get; set; }
 
@@ -264,6 +266,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Apple Messages for Business invitation template definition for responseType.AppleInvitation.
+        /// </summary>
+        /// <value>Apple Messages for Business invitation template definition for responseType.AppleInvitation.</value>
+        [DataMember(Name="appleInvitation", EmitDefaultValue=false)]
+        public AppleInvitation AppleInvitation { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -294,6 +305,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessagingTemplate: ").Append(MessagingTemplate).Append("\n");
             sb.Append("  Assets: ").Append(Assets).Append("\n");
             sb.Append("  Footer: ").Append(Footer).Append("\n");
+            sb.Append("  AppleInvitation: ").Append(AppleInvitation).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -406,6 +418,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Footer.Equals(other.Footer)
                 ) &&
                 (
+                    this.AppleInvitation == other.AppleInvitation ||
+                    this.AppleInvitation != null &&
+                    this.AppleInvitation.Equals(other.AppleInvitation)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -464,6 +481,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Footer != null)
                     hash = hash * 59 + this.Footer.GetHashCode();
+
+                if (this.AppleInvitation != null)
+                    hash = hash * 59 + this.AppleInvitation.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

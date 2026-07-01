@@ -23,10 +23,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="PhoneNumber">PhoneNumber.</param>
         /// <param name="DisplayName">DisplayName.</param>
-        public ExternalContactsContactChangedTopicWhatsAppId(ExternalContactsContactChangedTopicPhoneNumber PhoneNumber = null, string DisplayName = null)
+        /// <param name="Username">Username.</param>
+        /// <param name="WhatsAppBusinessScopedIds">WhatsAppBusinessScopedIds.</param>
+        public ExternalContactsContactChangedTopicWhatsAppId(ExternalContactsContactChangedTopicPhoneNumber PhoneNumber = null, string DisplayName = null, string Username = null, List<ExternalContactsContactChangedTopicWhatsAppBusinessScopedId> WhatsAppBusinessScopedIds = null)
         {
             this.PhoneNumber = PhoneNumber;
             this.DisplayName = DisplayName;
+            this.Username = Username;
+            this.WhatsAppBusinessScopedIds = WhatsAppBusinessScopedIds;
             
         }
         
@@ -47,6 +51,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public string DisplayName { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Username
+        /// </summary>
+        [DataMember(Name="username", EmitDefaultValue=false)]
+        public string Username { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets WhatsAppBusinessScopedIds
+        /// </summary>
+        [DataMember(Name="whatsAppBusinessScopedIds", EmitDefaultValue=false)]
+        public List<ExternalContactsContactChangedTopicWhatsAppBusinessScopedId> WhatsAppBusinessScopedIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -58,6 +78,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  Username: ").Append(Username).Append("\n");
+            sb.Append("  WhatsAppBusinessScopedIds: ").Append(WhatsAppBusinessScopedIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,6 +129,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
                     this.DisplayName.Equals(other.DisplayName)
+                ) &&
+                (
+                    this.Username == other.Username ||
+                    this.Username != null &&
+                    this.Username.Equals(other.Username)
+                ) &&
+                (
+                    this.WhatsAppBusinessScopedIds == other.WhatsAppBusinessScopedIds ||
+                    this.WhatsAppBusinessScopedIds != null &&
+                    this.WhatsAppBusinessScopedIds.SequenceEqual(other.WhatsAppBusinessScopedIds)
                 );
         }
 
@@ -126,6 +158,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
+
+                if (this.Username != null)
+                    hash = hash * 59 + this.Username.GetHashCode();
+
+                if (this.WhatsAppBusinessScopedIds != null)
+                    hash = hash * 59 + this.WhatsAppBusinessScopedIds.GetHashCode();
 
                 return hash;
             }

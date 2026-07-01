@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalContactsPatchRequest" /> class.
         /// </summary>
-        /// <param name="Changes">A list of changes to apply to the provided contact entity.</param>
+        /// <param name="Changes">A list of changes to apply to the provided entity.</param>
         public ExternalContactsPatchRequest(List<ContactsPatchChange> Changes = null)
         {
             this.Changes = Changes;
@@ -31,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A list of changes to apply to the provided contact entity
+        /// A list of changes to apply to the provided entity
         /// </summary>
-        /// <value>A list of changes to apply to the provided contact entity</value>
+        /// <value>A list of changes to apply to the provided entity</value>
         [DataMember(Name="changes", EmitDefaultValue=false)]
         public List<ContactsPatchChange> Changes { get; set; }
 

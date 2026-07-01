@@ -57,11 +57,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Disconnect reason protocol type..</param>
         /// <param name="Code">Protocol specific reason code. See the Q.850 and SIP specs..</param>
         /// <param name="Phrase">Human readable English description of the disconnect reason..</param>
-        public QueueConversationVideoEventTopicDisconnectReason(TypeEnum? Type = null, long? Code = null, string Phrase = null)
+        /// <param name="Reason">Final disconnect reason code that triggered the disposition result..</param>
+        public QueueConversationVideoEventTopicDisconnectReason(TypeEnum? Type = null, long? Code = null, string Phrase = null, string Reason = null)
         {
             this.Type = Type;
             this.Code = Code;
             this.Phrase = Phrase;
+            this.Reason = Reason;
             
         }
         
@@ -86,6 +88,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Phrase { get; set; }
 
 
+
+        /// <summary>
+        /// Final disconnect reason code that triggered the disposition result.
+        /// </summary>
+        /// <value>Final disconnect reason code that triggered the disposition result.</value>
+        [DataMember(Name="reason", EmitDefaultValue=false)]
+        public string Reason { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Phrase: ").Append(Phrase).Append("\n");
+            sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -152,6 +164,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Phrase == other.Phrase ||
                     this.Phrase != null &&
                     this.Phrase.Equals(other.Phrase)
+                ) &&
+                (
+                    this.Reason == other.Reason ||
+                    this.Reason != null &&
+                    this.Reason.Equals(other.Reason)
                 );
         }
 
@@ -174,6 +191,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Phrase != null)
                     hash = hash * 59 + this.Phrase.GetHashCode();
+
+                if (this.Reason != null)
+                    hash = hash * 59 + this.Reason.GetHashCode();
 
                 return hash;
             }

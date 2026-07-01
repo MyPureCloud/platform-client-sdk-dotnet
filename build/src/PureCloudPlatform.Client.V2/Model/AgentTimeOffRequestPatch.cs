@@ -51,11 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MarkedAsRead">Whether this request has been read by the agent.</param>
         /// <param name="Status">The status of this time off request. Can only be canceled if the requested date has not already passed.</param>
         /// <param name="Notes">Notes about the time off request. Can only be edited while the request is still pending.</param>
-        public AgentTimeOffRequestPatch(bool? MarkedAsRead = null, StatusEnum? Status = null, string Notes = null)
+        /// <param name="FullDayEarliestStartOffsetMinutes">Earliest start offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available.</param>
+        /// <param name="FullDayLatestEndOffsetMinutes">Latest end offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available.</param>
+        public AgentTimeOffRequestPatch(bool? MarkedAsRead = null, StatusEnum? Status = null, string Notes = null, ListWrapperInteger FullDayEarliestStartOffsetMinutes = null, ListWrapperInteger FullDayLatestEndOffsetMinutes = null)
         {
             this.MarkedAsRead = MarkedAsRead;
             this.Status = Status;
             this.Notes = Notes;
+            this.FullDayEarliestStartOffsetMinutes = FullDayEarliestStartOffsetMinutes;
+            this.FullDayLatestEndOffsetMinutes = FullDayLatestEndOffsetMinutes;
             
         }
         
@@ -80,6 +84,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Notes { get; set; }
 
 
+
+        /// <summary>
+        /// Earliest start offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available
+        /// </summary>
+        /// <value>Earliest start offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available</value>
+        [DataMember(Name="fullDayEarliestStartOffsetMinutes", EmitDefaultValue=false)]
+        public ListWrapperInteger FullDayEarliestStartOffsetMinutes { get; set; }
+
+
+
+        /// <summary>
+        /// Latest end offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available
+        /// </summary>
+        /// <value>Latest end offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available</value>
+        [DataMember(Name="fullDayLatestEndOffsetMinutes", EmitDefaultValue=false)]
+        public ListWrapperInteger FullDayLatestEndOffsetMinutes { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,6 +114,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
+            sb.Append("  FullDayEarliestStartOffsetMinutes: ").Append(FullDayEarliestStartOffsetMinutes).Append("\n");
+            sb.Append("  FullDayLatestEndOffsetMinutes: ").Append(FullDayLatestEndOffsetMinutes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -146,6 +170,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Notes == other.Notes ||
                     this.Notes != null &&
                     this.Notes.Equals(other.Notes)
+                ) &&
+                (
+                    this.FullDayEarliestStartOffsetMinutes == other.FullDayEarliestStartOffsetMinutes ||
+                    this.FullDayEarliestStartOffsetMinutes != null &&
+                    this.FullDayEarliestStartOffsetMinutes.Equals(other.FullDayEarliestStartOffsetMinutes)
+                ) &&
+                (
+                    this.FullDayLatestEndOffsetMinutes == other.FullDayLatestEndOffsetMinutes ||
+                    this.FullDayLatestEndOffsetMinutes != null &&
+                    this.FullDayLatestEndOffsetMinutes.Equals(other.FullDayLatestEndOffsetMinutes)
                 );
         }
 
@@ -168,6 +202,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
+
+                if (this.FullDayEarliestStartOffsetMinutes != null)
+                    hash = hash * 59 + this.FullDayEarliestStartOffsetMinutes.GetHashCode();
+
+                if (this.FullDayLatestEndOffsetMinutes != null)
+                    hash = hash * 59 + this.FullDayLatestEndOffsetMinutes.GetHashCode();
 
                 return hash;
             }

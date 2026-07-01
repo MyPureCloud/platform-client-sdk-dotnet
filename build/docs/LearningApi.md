@@ -808,7 +808,7 @@ namespace Example
 
 ## GetLearningModules
 
-> [**LearningModuleList**](LearningModuleList) GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
+> [**LearningModuleList**](LearningModuleList) GetLearningModules (List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, List<string> statuses = null, List<string> externalIds = null)
 
 
 Get all learning modules of an organization
@@ -839,7 +839,6 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LearningApi();
-            var isArchived = true;  // bool? | Archive status (optional)  (default to false)
             var types = new List<string>(); // List<string> | Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional) 
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
@@ -847,14 +846,13 @@ namespace Example
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
             var searchTerm = searchTerm_example;  // string | Search Term (searchable by name) (optional) 
             var expand = new List<string>(); // List<string> | Fields to expand in response(case insensitive) (optional) 
-            var isPublished = isPublished_example;  // string | Specifies if only the Unpublished (isPublished is \"False\") or Published (isPublished is \"True\") modules are returned. If isPublished is \"Any\" or omitted, both types are returned (optional)  (default to Any)
             var statuses = new List<string>(); // List<string> | Specifies the module statuses to filter by (optional) 
             var externalIds = new List<string>(); // List<string> | Specifies the module external IDs to filter by. Only one ID is allowed (optional) 
 
             try
             { 
                 // Get all learning modules of an organization
-                LearningModuleList result = apiInstance.GetLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses, externalIds);
+                LearningModuleList result = apiInstance.GetLearningModules(types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, statuses, externalIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -871,7 +869,6 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **isArchived** | **bool?**| Archive status | [optional] [default to false] |
 | **types** | [**List<string>**](string)| Specifies the module types. Informational, AssessedContent and Assessment are deprecated | [optional] <br />**Values**: Informational, AssessedContent, Assessment, External, Native |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
@@ -879,7 +876,6 @@ namespace Example
 | **sortBy** | **string**| Sort by | [optional] [default to name]<br />**Values**: name, createddate, percentpassed, averagescore |
 | **searchTerm** | **string**| Search Term (searchable by name) | [optional]  |
 | **expand** | [**List<string>**](string)| Fields to expand in response(case insensitive) | [optional] <br />**Values**: rule, summaryData |
-| **isPublished** | **string**| Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned | [optional] [default to Any]<br />**Values**: True, False, Any |
 | **statuses** | [**List<string>**](string)| Specifies the module statuses to filter by | [optional] <br />**Values**: Unpublished, Published, Archived |
 | **externalIds** | [**List<string>**](string)| Specifies the module external IDs to filter by. Only one ID is allowed | [optional]  |
 
@@ -2562,4 +2558,4 @@ namespace Example
 [**LearningModuleRule**](LearningModuleRule)
 
 
-_PureCloudPlatform.Client.V2 266.0.0_
+_PureCloudPlatform.Client.V2 267.0.0_

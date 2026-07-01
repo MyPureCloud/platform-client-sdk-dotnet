@@ -99,12 +99,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PreviousTurn">The reference to a previous turn if appropriate, used to avoid race conditions..</param>
         /// <param name="InputEventType">Indicates the type of input event being requested. If appropriate, fill out the matching user input object details on this request. (required).</param>
         /// <param name="InputEventUserInput">The data for the input event of this turn if it is a user input event. Only one inputEvent may be set..</param>
+        /// <param name="InputEventRichMedia">The data for the Rich Media input event of this turn if it is a Rich Media input event. Only one inputEvent may be set. Only ButtonResponse, PaymentResponse, Form, Presence are supported..</param>
         /// <param name="InputEventError">The data for the input event of this turn if it is an error event. Only one inputEvent may be set..</param>
-        public TextBotFlowTurnRequest(TextBotTurnReference PreviousTurn = null, InputEventTypeEnum? InputEventType = null, TextBotUserInputEvent InputEventUserInput = null, TextBotErrorInputEvent InputEventError = null)
+        public TextBotFlowTurnRequest(TextBotTurnReference PreviousTurn = null, InputEventTypeEnum? InputEventType = null, TextBotUserInputEvent InputEventUserInput = null, TextBotsRichMediaInputEvent InputEventRichMedia = null, TextBotErrorInputEvent InputEventError = null)
         {
             this.PreviousTurn = PreviousTurn;
             this.InputEventType = InputEventType;
             this.InputEventUserInput = InputEventUserInput;
+            this.InputEventRichMedia = InputEventRichMedia;
             this.InputEventError = InputEventError;
             
         }
@@ -132,6 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The data for the Rich Media input event of this turn if it is a Rich Media input event. Only one inputEvent may be set. Only ButtonResponse, PaymentResponse, Form, Presence are supported.
+        /// </summary>
+        /// <value>The data for the Rich Media input event of this turn if it is a Rich Media input event. Only one inputEvent may be set. Only ButtonResponse, PaymentResponse, Form, Presence are supported.</value>
+        [DataMember(Name="inputEventRichMedia", EmitDefaultValue=false)]
+        public TextBotsRichMediaInputEvent InputEventRichMedia { get; set; }
+
+
+
+        /// <summary>
         /// The data for the input event of this turn if it is an error event. Only one inputEvent may be set.
         /// </summary>
         /// <value>The data for the input event of this turn if it is an error event. Only one inputEvent may be set.</value>
@@ -151,6 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PreviousTurn: ").Append(PreviousTurn).Append("\n");
             sb.Append("  InputEventType: ").Append(InputEventType).Append("\n");
             sb.Append("  InputEventUserInput: ").Append(InputEventUserInput).Append("\n");
+            sb.Append("  InputEventRichMedia: ").Append(InputEventRichMedia).Append("\n");
             sb.Append("  InputEventError: ").Append(InputEventError).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -208,6 +220,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InputEventUserInput.Equals(other.InputEventUserInput)
                 ) &&
                 (
+                    this.InputEventRichMedia == other.InputEventRichMedia ||
+                    this.InputEventRichMedia != null &&
+                    this.InputEventRichMedia.Equals(other.InputEventRichMedia)
+                ) &&
+                (
                     this.InputEventError == other.InputEventError ||
                     this.InputEventError != null &&
                     this.InputEventError.Equals(other.InputEventError)
@@ -233,6 +250,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InputEventUserInput != null)
                     hash = hash * 59 + this.InputEventUserInput.GetHashCode();
+
+                if (this.InputEventRichMedia != null)
+                    hash = hash * 59 + this.InputEventRichMedia.GetHashCode();
 
                 if (this.InputEventError != null)
                     hash = hash * 59 + this.InputEventError.GetHashCode();

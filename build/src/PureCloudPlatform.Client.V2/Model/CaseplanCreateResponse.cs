@@ -57,23 +57,29 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The version state of the Caseplan.</value>
         [DataMember(Name="versionState", EmitDefaultValue=false)]
         public VersionStateEnum? VersionState { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CaseplanCreateResponse" /> class.
         /// </summary>
-        /// <param name="Name">The name of the Caseplan..</param>
-        /// <param name="Division">The division to which this entity belongs..</param>
+        [JsonConstructorAttribute]
+        protected CaseplanCreateResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CaseplanCreateResponse" /> class.
+        /// </summary>
+        /// <param name="Name">The name of the Caseplan. (required).</param>
+        /// <param name="Division">The division to which this Caseplan belongs. (required).</param>
         /// <param name="Description">The description of the Caseplan..</param>
-        /// <param name="ReferencePrefix">The prefix used when creating the reference for Cases from the Caseplan..</param>
-        /// <param name="DefaultDueDurationInSeconds">The default due duration in seconds for Cases created from the Caseplan..</param>
-        /// <param name="DefaultTtlSeconds">The default TTL in seconds for Cases created from the Caseplan..</param>
+        /// <param name="ReferencePrefix">The prefix used when creating the reference for Cases from the Caseplan. (required).</param>
+        /// <param name="DefaultDueDurationInSeconds">The default due duration in seconds for Cases created from the Caseplan. (required).</param>
+        /// <param name="DefaultTtlSeconds">The default TTL in seconds for Cases created from the Caseplan. (required).</param>
         /// <param name="DefaultCaseOwner">The default Case owner for Cases created from the Caseplan..</param>
-        /// <param name="Latest">The latest version of the Caseplan..</param>
+        /// <param name="Latest">The latest version of the Caseplan. (required).</param>
         /// <param name="Published">The published version of the Caseplan..</param>
-        /// <param name="DateCreated">The Caseplan creation date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="DateModified">The Caseplan modification date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DateCreated">The Caseplan creation date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        /// <param name="DateModified">The Caseplan modification date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="DatePublished">The Caseplan publication date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ModifiedBy">The ID of the User who modified the Caseplan..</param>
-        /// <param name="CustomerIntent">The customer intent for Cases created from this Caseplan..</param>
+        /// <param name="ModifiedBy">The ID of the User who modified the Caseplan. (required).</param>
+        /// <param name="CustomerIntent">The customer intent for Cases created from this Caseplan. (required).</param>
         /// <param name="VersionState">The version state of the Caseplan..</param>
         /// <param name="DataSchemas">The schemas that define all data for Cases from this Caseplan..</param>
         /// <param name="IntakeSettings">The intake format when collecting data for a Case from this Caseplan..</param>
@@ -120,9 +126,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The division to which this entity belongs.
+        /// The division to which this Caseplan belongs.
         /// </summary>
-        /// <value>The division to which this entity belongs.</value>
+        /// <value>The division to which this Caseplan belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public StarrableDivision Division { get; set; }
 

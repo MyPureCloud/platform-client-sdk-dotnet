@@ -75,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Team">Team.</param>
         /// <param name="Value">Value.</param>
         /// <param name="Type">Type.</param>
-        public DomainResourceConditionValue(User User = null, Queue Queue = null, Team Team = null, string Value = null, TypeEnum? Type = null)
+        public DomainResourceConditionValue(UserFullReference User = null, QueueFullReference Queue = null, TeamFullReference Team = null, string Value = null, TypeEnum? Type = null)
         {
             this.User = User;
             this.Queue = Queue;
@@ -91,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public User User { get; set; }
+        public UserFullReference User { get; set; }
 
 
 
@@ -99,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
-        public Queue Queue { get; set; }
+        public QueueFullReference Queue { get; set; }
 
 
 
@@ -107,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Team
         /// </summary>
         [DataMember(Name="team", EmitDefaultValue=false)]
-        public Team Team { get; set; }
+        public TeamFullReference Team { get; set; }
 
 
 

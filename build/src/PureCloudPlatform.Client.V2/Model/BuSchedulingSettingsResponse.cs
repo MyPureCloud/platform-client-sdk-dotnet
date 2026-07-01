@@ -100,14 +100,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="MessageSeverities">Schedule generation message severity configuration.</param>
         /// <param name="SyncTimeOffProperties">Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published.</param>
+        /// <param name="EnableTimeOffFullDayEstimation">Enables start and end time estimation for full-day time-off requests.</param>
         /// <param name="ServiceGoalImpact">Configures the max percent increase and decrease of service goals for this business unit.</param>
         /// <param name="AllowWorkPlanPerMinuteGranularity">Indicates whether or not per minute granularity for scheduling will be enabled for this business unit. Defaults to false.</param>
         /// <param name="ActivitySmoothingType">The activity smoothing type for schedule generation in this business unit (required).</param>
         /// <param name="InduceScheduleVariability">Indicates whether to provide variability in schedule generation (required).</param>
-        public BuSchedulingSettingsResponse(List<SchedulerMessageTypeSeverity> MessageSeverities = null, List<SyncTimeOffPropertiesEnum> SyncTimeOffProperties = null, WfmServiceGoalImpactSettings ServiceGoalImpact = null, bool? AllowWorkPlanPerMinuteGranularity = null, ActivitySmoothingTypeEnum? ActivitySmoothingType = null, bool? InduceScheduleVariability = null)
+        public BuSchedulingSettingsResponse(List<SchedulerMessageTypeSeverity> MessageSeverities = null, List<SyncTimeOffPropertiesEnum> SyncTimeOffProperties = null, bool? EnableTimeOffFullDayEstimation = null, WfmServiceGoalImpactSettings ServiceGoalImpact = null, bool? AllowWorkPlanPerMinuteGranularity = null, ActivitySmoothingTypeEnum? ActivitySmoothingType = null, bool? InduceScheduleVariability = null)
         {
             this.MessageSeverities = MessageSeverities;
             this.SyncTimeOffProperties = SyncTimeOffProperties;
+            this.EnableTimeOffFullDayEstimation = EnableTimeOffFullDayEstimation;
             this.ServiceGoalImpact = ServiceGoalImpact;
             this.AllowWorkPlanPerMinuteGranularity = AllowWorkPlanPerMinuteGranularity;
             this.ActivitySmoothingType = ActivitySmoothingType;
@@ -132,6 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published</value>
         [DataMember(Name="syncTimeOffProperties", EmitDefaultValue=false)]
         public List<SyncTimeOffPropertiesEnum> SyncTimeOffProperties { get; set; }
+
+
+
+        /// <summary>
+        /// Enables start and end time estimation for full-day time-off requests
+        /// </summary>
+        /// <value>Enables start and end time estimation for full-day time-off requests</value>
+        [DataMember(Name="enableTimeOffFullDayEstimation", EmitDefaultValue=false)]
+        public bool? EnableTimeOffFullDayEstimation { get; set; }
 
 
 
@@ -174,6 +185,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  MessageSeverities: ").Append(MessageSeverities).Append("\n");
             sb.Append("  SyncTimeOffProperties: ").Append(SyncTimeOffProperties).Append("\n");
+            sb.Append("  EnableTimeOffFullDayEstimation: ").Append(EnableTimeOffFullDayEstimation).Append("\n");
             sb.Append("  ServiceGoalImpact: ").Append(ServiceGoalImpact).Append("\n");
             sb.Append("  AllowWorkPlanPerMinuteGranularity: ").Append(AllowWorkPlanPerMinuteGranularity).Append("\n");
             sb.Append("  ActivitySmoothingType: ").Append(ActivitySmoothingType).Append("\n");
@@ -229,6 +241,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SyncTimeOffProperties.SequenceEqual(other.SyncTimeOffProperties)
                 ) &&
                 (
+                    this.EnableTimeOffFullDayEstimation == other.EnableTimeOffFullDayEstimation ||
+                    this.EnableTimeOffFullDayEstimation != null &&
+                    this.EnableTimeOffFullDayEstimation.Equals(other.EnableTimeOffFullDayEstimation)
+                ) &&
+                (
                     this.ServiceGoalImpact == other.ServiceGoalImpact ||
                     this.ServiceGoalImpact != null &&
                     this.ServiceGoalImpact.Equals(other.ServiceGoalImpact)
@@ -266,6 +283,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SyncTimeOffProperties != null)
                     hash = hash * 59 + this.SyncTimeOffProperties.GetHashCode();
+
+                if (this.EnableTimeOffFullDayEstimation != null)
+                    hash = hash * 59 + this.EnableTimeOffFullDayEstimation.GetHashCode();
 
                 if (this.ServiceGoalImpact != null)
                     hash = hash * 59 + this.ServiceGoalImpact.GetHashCode();

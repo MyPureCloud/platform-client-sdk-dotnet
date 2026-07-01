@@ -22,6 +22,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BuFullDayTimeOffMarker" /> class.
         /// </summary>
         /// <param name="BusinessUnitDate">The date of the time off marker, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
+        /// <param name="StartOffsetMinutes">The start offset in minutes for the time-off marker.</param>
+        /// <param name="EndOffsetMinutes">The end offset in minutes for the time-off marker.</param>
         /// <param name="LengthMinutes">The length of the time off marker in minutes.</param>
         /// <param name="Description">The description of the time off marker.</param>
         /// <param name="ActivityCodeId">The ID of the activity code associated with the time off marker.</param>
@@ -30,9 +32,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeOffRequestId">The ID of the time off request.</param>
         /// <param name="TimeOffRequestSyncVersion">The sync version of the full day time off request for which the scheduled activity is associated.</param>
         /// <param name="Delete">Set to &#39;true&#39; to delete this time off marker. Will always be null on responses, only has an effect on schedule update.</param>
-        public BuFullDayTimeOffMarker(String BusinessUnitDate = null, int? LengthMinutes = null, string Description = null, string ActivityCodeId = null, bool? Paid = null, int? PayableMinutes = null, string TimeOffRequestId = null, int? TimeOffRequestSyncVersion = null, bool? Delete = null)
+        public BuFullDayTimeOffMarker(String BusinessUnitDate = null, int? StartOffsetMinutes = null, int? EndOffsetMinutes = null, int? LengthMinutes = null, string Description = null, string ActivityCodeId = null, bool? Paid = null, int? PayableMinutes = null, string TimeOffRequestId = null, int? TimeOffRequestSyncVersion = null, bool? Delete = null)
         {
             this.BusinessUnitDate = BusinessUnitDate;
+            this.StartOffsetMinutes = StartOffsetMinutes;
+            this.EndOffsetMinutes = EndOffsetMinutes;
             this.LengthMinutes = LengthMinutes;
             this.Description = Description;
             this.ActivityCodeId = ActivityCodeId;
@@ -52,6 +56,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The date of the time off marker, interpreted in the business unit&#39;s time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="businessUnitDate", EmitDefaultValue=false)]
         public String BusinessUnitDate { get; set; }
+
+
+
+        /// <summary>
+        /// The start offset in minutes for the time-off marker
+        /// </summary>
+        /// <value>The start offset in minutes for the time-off marker</value>
+        [DataMember(Name="startOffsetMinutes", EmitDefaultValue=false)]
+        public int? StartOffsetMinutes { get; set; }
+
+
+
+        /// <summary>
+        /// The end offset in minutes for the time-off marker
+        /// </summary>
+        /// <value>The end offset in minutes for the time-off marker</value>
+        [DataMember(Name="endOffsetMinutes", EmitDefaultValue=false)]
+        public int? EndOffsetMinutes { get; set; }
 
 
 
@@ -136,6 +158,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class BuFullDayTimeOffMarker {\n");
 
             sb.Append("  BusinessUnitDate: ").Append(BusinessUnitDate).Append("\n");
+            sb.Append("  StartOffsetMinutes: ").Append(StartOffsetMinutes).Append("\n");
+            sb.Append("  EndOffsetMinutes: ").Append(EndOffsetMinutes).Append("\n");
             sb.Append("  LengthMinutes: ").Append(LengthMinutes).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
@@ -188,6 +212,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.BusinessUnitDate == other.BusinessUnitDate ||
                     this.BusinessUnitDate != null &&
                     this.BusinessUnitDate.Equals(other.BusinessUnitDate)
+                ) &&
+                (
+                    this.StartOffsetMinutes == other.StartOffsetMinutes ||
+                    this.StartOffsetMinutes != null &&
+                    this.StartOffsetMinutes.Equals(other.StartOffsetMinutes)
+                ) &&
+                (
+                    this.EndOffsetMinutes == other.EndOffsetMinutes ||
+                    this.EndOffsetMinutes != null &&
+                    this.EndOffsetMinutes.Equals(other.EndOffsetMinutes)
                 ) &&
                 (
                     this.LengthMinutes == other.LengthMinutes ||
@@ -244,6 +278,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.BusinessUnitDate != null)
                     hash = hash * 59 + this.BusinessUnitDate.GetHashCode();
+
+                if (this.StartOffsetMinutes != null)
+                    hash = hash * 59 + this.StartOffsetMinutes.GetHashCode();
+
+                if (this.EndOffsetMinutes != null)
+                    hash = hash * 59 + this.EndOffsetMinutes.GetHashCode();
 
                 if (this.LengthMinutes != null)
                     hash = hash * 59 + this.LengthMinutes.GetHashCode();

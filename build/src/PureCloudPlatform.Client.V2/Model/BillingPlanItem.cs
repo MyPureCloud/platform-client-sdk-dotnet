@@ -64,6 +64,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Day,
             
             /// <summary>
+            /// Enum Ea for "EA"
+            /// </summary>
+            [EnumMember(Value = "EA")]
+            Ea,
+            
+            /// <summary>
             /// Enum Each for "Each"
             /// </summary>
             [EnumMember(Value = "Each")]
@@ -80,6 +86,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Engagement")]
             Engagement,
+            
+            /// <summary>
+            /// Enum Evaluation for "Evaluation"
+            /// </summary>
+            [EnumMember(Value = "Evaluation")]
+            Evaluation,
             
             /// <summary>
             /// Enum Event for "Event"
@@ -100,10 +112,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Gb,
             
             /// <summary>
+            /// Enum Guide for "Guide"
+            /// </summary>
+            [EnumMember(Value = "Guide")]
+            Guide,
+            
+            /// <summary>
             /// Enum Hour for "Hour"
             /// </summary>
             [EnumMember(Value = "Hour")]
             Hour,
+            
+            /// <summary>
+            /// Enum Ingestion for "Ingestion"
+            /// </summary>
+            [EnumMember(Value = "Ingestion")]
+            Ingestion,
             
             /// <summary>
             /// Enum Instance for "Instance"
@@ -160,6 +184,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Port,
             
             /// <summary>
+            /// Enum Ratetable for "RateTable"
+            /// </summary>
+            [EnumMember(Value = "RateTable")]
+            Ratetable,
+            
+            /// <summary>
             /// Enum Segment for "Segment"
             /// </summary>
             [EnumMember(Value = "Segment")]
@@ -178,6 +208,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Stream,
             
             /// <summary>
+            /// Enum Summary for "Summary"
+            /// </summary>
+            [EnumMember(Value = "Summary")]
+            Summary,
+            
+            /// <summary>
             /// Enum Token for "Token"
             /// </summary>
             [EnumMember(Value = "Token")]
@@ -188,6 +224,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Transaction")]
             Transaction,
+            
+            /// <summary>
+            /// Enum Translation for "Translation"
+            /// </summary>
+            [EnumMember(Value = "Translation")]
+            Translation,
             
             /// <summary>
             /// Enum Turn for "Turn"

@@ -1020,6 +1020,7 @@ Search resources.
 Requires ANY permissions: 
 
 * directory:user:view
+* routing:skill:view
 
 ### Example
 ```{"language":"csharp"}
@@ -1641,4 +1642,4 @@ namespace Example
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 266.0.0_
+_PureCloudPlatform.Client.V2 267.0.0_

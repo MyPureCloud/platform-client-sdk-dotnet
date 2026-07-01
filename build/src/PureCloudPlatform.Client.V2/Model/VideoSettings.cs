@@ -19,14 +19,42 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class VideoSettings :  IEquatable<VideoSettings>
     {
         /// <summary>
+        /// Gets or Sets Channels
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ChannelsEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Webmessaging for "Webmessaging"
+            /// </summary>
+            [EnumMember(Value = "Webmessaging")]
+            Webmessaging,
+            
+            /// <summary>
+            /// Enum Voice for "Voice"
+            /// </summary>
+            [EnumMember(Value = "Voice")]
+            Voice
+        }
+        /// <summary>
         /// Initializes a new instance of the <see cref="VideoSettings" /> class.
         /// </summary>
         /// <param name="Enabled">whether or not video is enabled.</param>
+        /// <param name="Channels">The channels on which video chat is available.</param>
         /// <param name="Agent">Video Settings for agent.</param>
         /// <param name="User">Video Settings for user.</param>
-        public VideoSettings(bool? Enabled = null, AgentVideoSettings Agent = null, UserVideoSettings User = null)
+        public VideoSettings(bool? Enabled = null, List<ChannelsEnum> Channels = null, AgentVideoSettings Agent = null, UserVideoSettings User = null)
         {
             this.Enabled = Enabled;
+            this.Channels = Channels;
             this.Agent = Agent;
             this.User = User;
             
@@ -40,6 +68,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>whether or not video is enabled</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
+
+
+
+        /// <summary>
+        /// The channels on which video chat is available
+        /// </summary>
+        /// <value>The channels on which video chat is available</value>
+        [DataMember(Name="channels", EmitDefaultValue=false)]
+        public List<ChannelsEnum> Channels { get; set; }
 
 
 
@@ -70,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class VideoSettings {\n");
 
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  Channels: ").Append(Channels).Append("\n");
             sb.Append("  Agent: ").Append(Agent).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("}\n");
@@ -118,6 +156,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled.Equals(other.Enabled)
                 ) &&
                 (
+                    this.Channels == other.Channels ||
+                    this.Channels != null &&
+                    this.Channels.SequenceEqual(other.Channels)
+                ) &&
+                (
                     this.Agent == other.Agent ||
                     this.Agent != null &&
                     this.Agent.Equals(other.Agent)
@@ -142,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+
+                if (this.Channels != null)
+                    hash = hash * 59 + this.Channels.GetHashCode();
 
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();

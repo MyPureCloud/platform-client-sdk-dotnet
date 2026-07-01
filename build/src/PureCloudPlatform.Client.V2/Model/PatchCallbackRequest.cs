@@ -18,6 +18,45 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchCallbackRequest :  IEquatable<PatchCallbackRequest>
     {
+        /// <summary>
+        /// How customer-first callback agent reservation is applied for this callback. useAgentReservation forces reservation on; noAgentReservation forces it off; useQueueSetting uses the queue configuration.
+        /// </summary>
+        /// <value>How customer-first callback agent reservation is applied for this callback. useAgentReservation forces reservation on; noAgentReservation forces it off; useQueueSetting uses the queue configuration.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CustomerFirstCallbackDeliveryModeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Usequeuesetting for "UseQueueSetting"
+            /// </summary>
+            [EnumMember(Value = "UseQueueSetting")]
+            Usequeuesetting,
+            
+            /// <summary>
+            /// Enum Useagentreservation for "UseAgentReservation"
+            /// </summary>
+            [EnumMember(Value = "UseAgentReservation")]
+            Useagentreservation,
+            
+            /// <summary>
+            /// Enum Noagentreservation for "NoAgentReservation"
+            /// </summary>
+            [EnumMember(Value = "NoAgentReservation")]
+            Noagentreservation
+        }
+        /// <summary>
+        /// How customer-first callback agent reservation is applied for this callback. useAgentReservation forces reservation on; noAgentReservation forces it off; useQueueSetting uses the queue configuration.
+        /// </summary>
+        /// <value>How customer-first callback agent reservation is applied for this callback. useAgentReservation forces reservation on; noAgentReservation forces it off; useQueueSetting uses the queue configuration.</value>
+        [DataMember(Name="customerFirstCallbackDeliveryMode", EmitDefaultValue=false)]
+        public CustomerFirstCallbackDeliveryModeEnum? CustomerFirstCallbackDeliveryMode { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchCallbackRequest" /> class.
@@ -34,7 +73,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CountryCode">The countryCode.</param>
         /// <param name="CallbackNumbers">The callbackNumbers.</param>
         /// <param name="ValidateCallbackNumbers">validateCallbackNumbers.</param>
-        public PatchCallbackRequest(string ConversationId = null, string QueueId = null, string AgentId = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, List<string> CallbackNumbers = null, bool? ValidateCallbackNumbers = null)
+        /// <param name="CustomerFirstCallbackDeliveryMode">How customer-first callback agent reservation is applied for this callback. useAgentReservation forces reservation on; noAgentReservation forces it off; useQueueSetting uses the queue configuration..</param>
+        public PatchCallbackRequest(string ConversationId = null, string QueueId = null, string AgentId = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, List<string> CallbackNumbers = null, bool? ValidateCallbackNumbers = null, CustomerFirstCallbackDeliveryModeEnum? CustomerFirstCallbackDeliveryMode = null)
         {
             this.ConversationId = ConversationId;
             this.QueueId = QueueId;
@@ -43,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CountryCode = CountryCode;
             this.CallbackNumbers = CallbackNumbers;
             this.ValidateCallbackNumbers = ValidateCallbackNumbers;
+            this.CustomerFirstCallbackDeliveryMode = CustomerFirstCallbackDeliveryMode;
             
         }
         
@@ -110,6 +151,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? ValidateCallbackNumbers { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -126,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  ValidateCallbackNumbers: ").Append(ValidateCallbackNumbers).Append("\n");
+            sb.Append("  CustomerFirstCallbackDeliveryMode: ").Append(CustomerFirstCallbackDeliveryMode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -200,6 +244,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ValidateCallbackNumbers == other.ValidateCallbackNumbers ||
                     this.ValidateCallbackNumbers != null &&
                     this.ValidateCallbackNumbers.Equals(other.ValidateCallbackNumbers)
+                ) &&
+                (
+                    this.CustomerFirstCallbackDeliveryMode == other.CustomerFirstCallbackDeliveryMode ||
+                    this.CustomerFirstCallbackDeliveryMode != null &&
+                    this.CustomerFirstCallbackDeliveryMode.Equals(other.CustomerFirstCallbackDeliveryMode)
                 );
         }
 
@@ -234,6 +283,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ValidateCallbackNumbers != null)
                     hash = hash * 59 + this.ValidateCallbackNumbers.GetHashCode();
+
+                if (this.CustomerFirstCallbackDeliveryMode != null)
+                    hash = hash * 59 + this.CustomerFirstCallbackDeliveryMode.GetHashCode();
 
                 return hash;
             }

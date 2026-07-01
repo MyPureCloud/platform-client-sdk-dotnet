@@ -33,10 +33,10 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Webchat for "webchat"
+            /// Enum Webmessaging for "web.messaging"
             /// </summary>
-            [EnumMember(Value = "webchat")]
-            Webchat,
+            [EnumMember(Value = "web.messaging")]
+            Webmessaging,
             
             /// <summary>
             /// Enum Webhooks for "webhooks"
@@ -369,6 +369,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Microfrontend,
             
             /// <summary>
+            /// Enum Multiorg for "multi.org"
+            /// </summary>
+            [EnumMember(Value = "multi.org")]
+            Multiorg,
+            
+            /// <summary>
             /// Enum Notifications for "notifications"
             /// </summary>
             [EnumMember(Value = "notifications")]
@@ -525,10 +531,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Webdeployments,
             
             /// <summary>
-            /// Enum Webmessaging for "web.messaging"
+            /// Enum Webchat for "webchat"
             /// </summary>
-            [EnumMember(Value = "web.messaging")]
-            Webmessaging,
+            [EnumMember(Value = "webchat")]
+            Webchat,
             
             /// <summary>
             /// Enum Workforcemanagementagentavailability for "workforce.management.agent.availability"

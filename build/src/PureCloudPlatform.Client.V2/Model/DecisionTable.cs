@@ -19,6 +19,57 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class DecisionTable :  IEquatable<DecisionTable>
     {
         /// <summary>
+        /// The status of the most recently created decision table version. Lets clients distinguish e.g. a Draft latest version from a Superseded one without an extra request.
+        /// </summary>
+        /// <value>The status of the most recently created decision table version. Lets clients distinguish e.g. a Draft latest version from a Superseded one without an extra request.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum LatestVersionStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Draft for "Draft"
+            /// </summary>
+            [EnumMember(Value = "Draft")]
+            Draft,
+            
+            /// <summary>
+            /// Enum Published for "Published"
+            /// </summary>
+            [EnumMember(Value = "Published")]
+            Published,
+            
+            /// <summary>
+            /// Enum Error for "Error"
+            /// </summary>
+            [EnumMember(Value = "Error")]
+            Error,
+            
+            /// <summary>
+            /// Enum Preparing for "Preparing"
+            /// </summary>
+            [EnumMember(Value = "Preparing")]
+            Preparing,
+            
+            /// <summary>
+            /// Enum Superseded for "Superseded"
+            /// </summary>
+            [EnumMember(Value = "Superseded")]
+            Superseded
+        }
+        /// <summary>
+        /// The status of the most recently created decision table version. Lets clients distinguish e.g. a Draft latest version from a Superseded one without an extra request.
+        /// </summary>
+        /// <value>The status of the most recently created decision table version. Lets clients distinguish e.g. a Draft latest version from a Superseded one without an extra request.</value>
+        [DataMember(Name="latestVersionStatus", EmitDefaultValue=false)]
+        public LatestVersionStatusEnum? LatestVersionStatus { get; private set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="DecisionTable" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -118,6 +169,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// The column definitions of this decision table.
         /// </summary>
@@ -162,6 +215,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DatePublished: ").Append(DatePublished).Append("\n");
             sb.Append("  Published: ").Append(Published).Append("\n");
             sb.Append("  Latest: ").Append(Latest).Append("\n");
+            sb.Append("  LatestVersionStatus: ").Append(LatestVersionStatus).Append("\n");
             sb.Append("  Columns: ").Append(Columns).Append("\n");
             sb.Append("  PublishedContract: ").Append(PublishedContract).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -251,6 +305,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Latest.Equals(other.Latest)
                 ) &&
                 (
+                    this.LatestVersionStatus == other.LatestVersionStatus ||
+                    this.LatestVersionStatus != null &&
+                    this.LatestVersionStatus.Equals(other.LatestVersionStatus)
+                ) &&
+                (
                     this.Columns == other.Columns ||
                     this.Columns != null &&
                     this.Columns.Equals(other.Columns)
@@ -304,6 +363,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Latest != null)
                     hash = hash * 59 + this.Latest.GetHashCode();
+
+                if (this.LatestVersionStatus != null)
+                    hash = hash * 59 + this.LatestVersionStatus.GetHashCode();
 
                 if (this.Columns != null)
                     hash = hash * 59 + this.Columns.GetHashCode();

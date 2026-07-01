@@ -63,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the assistant that will assist the agent. (required).</param>
         /// <param name="GoogleDialogflowConfig">(Deprecated: use the &#39;knowledgeSuggestionConfig&#39; for genesys knowledge suggestions) Configuration of Dialogflow used to assist the agent with transcriptions and knowledge suggestions..</param>
         /// <param name="TranscriptionConfig">Configuration for speech transcription used to assist the agent. (required).</param>
-        /// <param name="KnowledgeSuggestionConfig">Configuration that defines how to produce knowledge suggestions. (required).</param>
+        /// <param name="KnowledgeSuggestionConfig">Configuration that defines how to produce knowledge suggestions..</param>
         public Assistant(string Name = null, GoogleDialogflowConfig GoogleDialogflowConfig = null, TranscriptionConfig TranscriptionConfig = null, KnowledgeSuggestionConfig KnowledgeSuggestionConfig = null)
         {
             this.Name = Name;

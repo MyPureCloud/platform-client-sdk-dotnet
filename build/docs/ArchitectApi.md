@@ -92,6 +92,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowsInstancesSettingsLoglevelsCharacteristics**](#GetFlowsInstancesSettingsLoglevelsCharacteristics) | **Get** /api/v2/flows/instances/settings/loglevels/characteristics | Gets the available flow log level characteristics for this organization. |
 | [**GetFlowsInstancesSettingsLoglevelsDefault**](#GetFlowsInstancesSettingsLoglevelsDefault) | **Get** /api/v2/flows/instances/settings/loglevels/default | Returns the flow default log level. |
 | [**GetFlowsJob**](#GetFlowsJob) | **Get** /api/v2/flows/jobs/{jobId} | Fetch Architect Job Status |
+| [**GetFlowsLookup**](#GetFlowsLookup) | **Get** /api/v2/flows/lookup | Look up flows by ID |
 | [**GetFlowsMilestone**](#GetFlowsMilestone) | **Get** /api/v2/flows/milestones/{milestoneId} | Get a flow milestone |
 | [**GetFlowsMilestones**](#GetFlowsMilestones) | **Get** /api/v2/flows/milestones | Get a pageable list of flow milestones, filtered by query parameters |
 | [**GetFlowsMilestonesDivisionviews**](#GetFlowsMilestonesDivisionviews) | **Get** /api/v2/flows/milestones/divisionviews | Get a pageable list of basic flow milestone information objects filterable by query parameters. |
@@ -5982,6 +5983,78 @@ namespace Example
 [**ArchitectJobStateResponse**](ArchitectJobStateResponse)
 
 
+## GetFlowsLookup
+
+> [**FlowEntityListing**](FlowEntityListing) GetFlowsLookup (List<string> id, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+
+
+Look up flows by ID
+
+Returns only flows matching the specified ID(s). Returns an empty listing if no flows match the given IDs.
+
+Requires ANY permissions: 
+
+* architect:flow:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsLookupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var id = new List<string>(); // List<string> | Flow ID(s)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "id")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
+
+            try
+            { 
+                // Look up flows by ID
+                FlowEntityListing result = apiInstance.GetFlowsLookup(id, pageNumber, pageSize, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsLookup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | [**List<string>**](string)| Flow ID(s) |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to "id"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
+
+### Return type
+
+[**FlowEntityListing**](FlowEntityListing)
+
+
 ## GetFlowsMilestone
 
 > [**FlowMilestone**](FlowMilestone) GetFlowsMilestone (string milestoneId)
@@ -10165,4 +10238,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 266.0.0_
+_PureCloudPlatform.Client.V2 267.0.0_
