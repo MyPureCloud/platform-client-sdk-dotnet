@@ -144,7 +144,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="State">The state of this activity plan (required).</param>
         /// <param name="CountsAsPaidTime">Whether the activity should count as paid time (required).</param>
         /// <param name="FixedAvailability">Fixed availability configuration for the activity plan.</param>
-        public CreateActivityPlanRequest(string Name = null, List<string> ManagementUnitIds = null, string Description = null, string ActivityCodeId = null, TypeEnum? Type = null, int? LengthMinutes = null, SchedulingPeriod InitialSchedulePeriod = null, GroupSettings GroupSettings = null, RecurrenceSettings RecurrenceSettings = null, UserSearchRule AttendeesSearchRule = null, bool? Facilitated = null, UserSearchRule FacilitatorsSearchRule = null, int? TransitionTimeMinutes = null, ActivityPlanServiceGoalImpactOverrides ServiceGoalImpactOverrides = null, OptimizationObjectiveEnum? OptimizationObjective = null, StateEnum? State = null, bool? CountsAsPaidTime = null, List<FixedAvailability> FixedAvailability = null)
+        /// <param name="StartTimeIncrementMinutes">The valid start times available when scheduling sessions.</param>
+        public CreateActivityPlanRequest(string Name = null, List<string> ManagementUnitIds = null, string Description = null, string ActivityCodeId = null, TypeEnum? Type = null, int? LengthMinutes = null, SchedulingPeriod InitialSchedulePeriod = null, GroupSettings GroupSettings = null, RecurrenceSettings RecurrenceSettings = null, UserSearchRule AttendeesSearchRule = null, bool? Facilitated = null, UserSearchRule FacilitatorsSearchRule = null, int? TransitionTimeMinutes = null, ActivityPlanServiceGoalImpactOverrides ServiceGoalImpactOverrides = null, OptimizationObjectiveEnum? OptimizationObjective = null, StateEnum? State = null, bool? CountsAsPaidTime = null, List<FixedAvailability> FixedAvailability = null, int? StartTimeIncrementMinutes = null)
         {
             this.Name = Name;
             this.ManagementUnitIds = ManagementUnitIds;
@@ -164,6 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.State = State;
             this.CountsAsPaidTime = CountsAsPaidTime;
             this.FixedAvailability = FixedAvailability;
+            this.StartTimeIncrementMinutes = StartTimeIncrementMinutes;
             
         }
         
@@ -309,6 +311,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<FixedAvailability> FixedAvailability { get; set; }
 
 
+
+        /// <summary>
+        /// The valid start times available when scheduling sessions
+        /// </summary>
+        /// <value>The valid start times available when scheduling sessions</value>
+        [DataMember(Name="startTimeIncrementMinutes", EmitDefaultValue=false)]
+        public int? StartTimeIncrementMinutes { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -336,6 +347,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  CountsAsPaidTime: ").Append(CountsAsPaidTime).Append("\n");
             sb.Append("  FixedAvailability: ").Append(FixedAvailability).Append("\n");
+            sb.Append("  StartTimeIncrementMinutes: ").Append(StartTimeIncrementMinutes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -465,6 +477,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FixedAvailability == other.FixedAvailability ||
                     this.FixedAvailability != null &&
                     this.FixedAvailability.SequenceEqual(other.FixedAvailability)
+                ) &&
+                (
+                    this.StartTimeIncrementMinutes == other.StartTimeIncrementMinutes ||
+                    this.StartTimeIncrementMinutes != null &&
+                    this.StartTimeIncrementMinutes.Equals(other.StartTimeIncrementMinutes)
                 );
         }
 
@@ -532,6 +549,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FixedAvailability != null)
                     hash = hash * 59 + this.FixedAvailability.GetHashCode();
+
+                if (this.StartTimeIncrementMinutes != null)
+                    hash = hash * 59 + this.StartTimeIncrementMinutes.GetHashCode();
 
                 return hash;
             }

@@ -1,0 +1,14 @@
+# NotesExportFieldFilter
+
+## ININ.PureCloudApi.Model.NotesExportFieldFilter
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Field** | **string** | Field name to apply the filter | |
+| **Value** | **string** | Value to check field&#39;s value against | |
+
+
+
+_PureCloudPlatform.Client.V2 268.0.0_

@@ -34,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Webdeployments for "web.deployments"
+            /// </summary>
+            [EnumMember(Value = "web.deployments")]
+            Webdeployments,
+            
+            /// <summary>
             /// Enum Webmessaging for "web.messaging"
             /// </summary>
             [EnumMember(Value = "web.messaging")]
             Webmessaging,
-            
-            /// <summary>
-            /// Enum Webhooks for "webhooks"
-            /// </summary>
-            [EnumMember(Value = "webhooks")]
-            Webhooks,
             
             /// <summary>
             /// Enum Agentassistant for "agent.assistant"
@@ -346,6 +346,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Marketplace,
             
             /// <summary>
+            /// Enum Mcpanalyticsaggregates for "mcp.analytics.aggregates"
+            /// </summary>
+            [EnumMember(Value = "mcp.analytics.aggregates")]
+            Mcpanalyticsaggregates,
+            
+            /// <summary>
             /// Enum Mcp for "mcp"
             /// </summary>
             [EnumMember(Value = "mcp")]
@@ -526,16 +532,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Voicetranscription,
             
             /// <summary>
-            /// Enum Webdeployments for "web.deployments"
-            /// </summary>
-            [EnumMember(Value = "web.deployments")]
-            Webdeployments,
-            
-            /// <summary>
             /// Enum Webchat for "webchat"
             /// </summary>
             [EnumMember(Value = "webchat")]
             Webchat,
+            
+            /// <summary>
+            /// Enum Webhooks for "webhooks"
+            /// </summary>
+            [EnumMember(Value = "webhooks")]
+            Webhooks,
+            
+            /// <summary>
+            /// Enum Workforcemanagementadherence for "workforce.management.adherence"
+            /// </summary>
+            [EnumMember(Value = "workforce.management.adherence")]
+            Workforcemanagementadherence,
             
             /// <summary>
             /// Enum Workforcemanagementagentavailability for "workforce.management.agent.availability"

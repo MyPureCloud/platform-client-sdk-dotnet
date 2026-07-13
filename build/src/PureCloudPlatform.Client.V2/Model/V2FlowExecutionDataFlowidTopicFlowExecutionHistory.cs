@@ -113,7 +113,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InvokingContext">InvokingContext.</param>
         /// <param name="StartDateTime">The start date time for this flow instance execution data..</param>
         /// <param name="Warnings">If the flow encountered a warning during execution, this is an array of the warnings..</param>
-        public V2FlowExecutionDataFlowidTopicFlowExecutionHistory(string ExecutionId = null, string ConversationId = null, string DivisionId = null, DateTime? EndDateTime = null, string Endpoint = null, List<V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo> Errors = null, List<V2FlowExecutionDataFlowidTopicFlowExecutionItem> Execution = null, string FlowExitReason = null, string FlowId = null, bool? FlowIsDebug = null, bool? ExecutionItemsTruncated = null, string FlowType = null, string FlowVersion = null, MessageTypeEnum? MessageType = null, V2FlowExecutionDataFlowidTopicInvokingContextInfo InvokingContext = null, DateTime? StartDateTime = null, List<V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo> Warnings = null)
+        /// <param name="ExecutionHistoryUri">A signed URI to download the execution history data..</param>
+        /// <param name="ExecutionHistoryUriTtl">Time to live in seconds for the executionHistoryUri..</param>
+        public V2FlowExecutionDataFlowidTopicFlowExecutionHistory(string ExecutionId = null, string ConversationId = null, string DivisionId = null, DateTime? EndDateTime = null, string Endpoint = null, List<V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo> Errors = null, List<V2FlowExecutionDataFlowidTopicFlowExecutionItem> Execution = null, string FlowExitReason = null, string FlowId = null, bool? FlowIsDebug = null, bool? ExecutionItemsTruncated = null, string FlowType = null, string FlowVersion = null, MessageTypeEnum? MessageType = null, V2FlowExecutionDataFlowidTopicInvokingContextInfo InvokingContext = null, DateTime? StartDateTime = null, List<V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo> Warnings = null, string ExecutionHistoryUri = null, long? ExecutionHistoryUriTtl = null)
         {
             this.ExecutionId = ExecutionId;
             this.ConversationId = ConversationId;
@@ -132,6 +134,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.InvokingContext = InvokingContext;
             this.StartDateTime = StartDateTime;
             this.Warnings = Warnings;
+            this.ExecutionHistoryUri = ExecutionHistoryUri;
+            this.ExecutionHistoryUriTtl = ExecutionHistoryUriTtl;
             
         }
         
@@ -281,6 +285,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo> Warnings { get; set; }
 
 
+
+        /// <summary>
+        /// A signed URI to download the execution history data.
+        /// </summary>
+        /// <value>A signed URI to download the execution history data.</value>
+        [DataMember(Name="executionHistoryUri", EmitDefaultValue=false)]
+        public string ExecutionHistoryUri { get; set; }
+
+
+
+        /// <summary>
+        /// Time to live in seconds for the executionHistoryUri.
+        /// </summary>
+        /// <value>Time to live in seconds for the executionHistoryUri.</value>
+        [DataMember(Name="executionHistoryUriTtl", EmitDefaultValue=false)]
+        public long? ExecutionHistoryUriTtl { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -307,6 +329,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InvokingContext: ").Append(InvokingContext).Append("\n");
             sb.Append("  StartDateTime: ").Append(StartDateTime).Append("\n");
             sb.Append("  Warnings: ").Append(Warnings).Append("\n");
+            sb.Append("  ExecutionHistoryUri: ").Append(ExecutionHistoryUri).Append("\n");
+            sb.Append("  ExecutionHistoryUriTtl: ").Append(ExecutionHistoryUriTtl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -431,6 +455,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Warnings == other.Warnings ||
                     this.Warnings != null &&
                     this.Warnings.SequenceEqual(other.Warnings)
+                ) &&
+                (
+                    this.ExecutionHistoryUri == other.ExecutionHistoryUri ||
+                    this.ExecutionHistoryUri != null &&
+                    this.ExecutionHistoryUri.Equals(other.ExecutionHistoryUri)
+                ) &&
+                (
+                    this.ExecutionHistoryUriTtl == other.ExecutionHistoryUriTtl ||
+                    this.ExecutionHistoryUriTtl != null &&
+                    this.ExecutionHistoryUriTtl.Equals(other.ExecutionHistoryUriTtl)
                 );
         }
 
@@ -495,6 +529,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Warnings != null)
                     hash = hash * 59 + this.Warnings.GetHashCode();
+
+                if (this.ExecutionHistoryUri != null)
+                    hash = hash * 59 + this.ExecutionHistoryUri.GetHashCode();
+
+                if (this.ExecutionHistoryUriTtl != null)
+                    hash = hash * 59 + this.ExecutionHistoryUriTtl.GetHashCode();
 
                 return hash;
             }

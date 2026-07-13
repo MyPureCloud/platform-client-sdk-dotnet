@@ -247,7 +247,8 @@
 | **EngagementSources** | **List&lt;string&gt;** | The engagement sources used to filter the view | [optional] |
 | **IsSnippetRecorded** | **bool?** | Indicates filtering for snippet recorded | [optional] |
 | **Takeover** | **bool?** | Indicates filtering for takeover | [optional] |
+| **SocialPostTypes** | **List&lt;string&gt;** | The social post types used to filter the view | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 267.0.0_
+_PureCloudPlatform.Client.V2 268.0.0_

@@ -179,20 +179,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The version of the underlying entity.  Deprecated, use field from settings.metadata instead
-        /// </summary>
-        /// <value>The version of the underlying entity.  Deprecated, use field from settings.metadata instead</value>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; private set; }
-
-
-
-        /// <summary>
         /// The date and time at which this entity was last modified.  Deprecated, use field from settings.metadata instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date and time at which this entity was last modified.  Deprecated, use field from settings.metadata instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
+
+
+
+        /// <summary>
+        /// The version of the underlying entity.  Deprecated, use field from settings.metadata instead
+        /// </summary>
+        /// <value>The version of the underlying entity.  Deprecated, use field from settings.metadata instead</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; private set; }
 
 
 
@@ -222,8 +222,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -311,14 +311,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedBy.Equals(other.ModifiedBy)
                 ) &&
                 (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
-                ) &&
-                (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -365,11 +365,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
 
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
-
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -73,14 +73,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="JourneyViewChart" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
+        /// <param name="Rank">The rank of the journey view chart for ordering display.</param>
         /// <param name="GroupByTime">A time unit to group the metrics by. There is a limit on the number of groupBy properties which can be specified..</param>
         /// <param name="GroupByAttributes">A list of attributes to group the metrics by. There is a limit on the number of groupBy properties which can be specified..</param>
         /// <param name="Metrics">A list of metrics to calculate within the chart by (aka the y axis) (required).</param>
         /// <param name="DisplayAttributes">Optional display attributes for rendering the chart.</param>
         /// <param name="GroupByMax">A maximum on the number of values being grouped by.</param>
-        public JourneyViewChart(string Name = null, GroupByTimeEnum? GroupByTime = null, List<JourneyViewChartGroupByAttribute> GroupByAttributes = null, List<JourneyViewChartMetric> Metrics = null, JourneyViewChartDisplayAttributes DisplayAttributes = null, long? GroupByMax = null)
+        public JourneyViewChart(string Name = null, int? Rank = null, GroupByTimeEnum? GroupByTime = null, List<JourneyViewChartGroupByAttribute> GroupByAttributes = null, List<JourneyViewChartMetric> Metrics = null, JourneyViewChartDisplayAttributes DisplayAttributes = null, long? GroupByMax = null)
         {
             this.Name = Name;
+            this.Rank = Rank;
             this.GroupByTime = GroupByTime;
             this.GroupByAttributes = GroupByAttributes;
             this.Metrics = Metrics;
@@ -114,6 +116,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The version of the journey view chart</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; private set; }
+
+
+
+        /// <summary>
+        /// The rank of the journey view chart for ordering display
+        /// </summary>
+        /// <value>The rank of the journey view chart for ordering display</value>
+        [DataMember(Name="rank", EmitDefaultValue=false)]
+        public int? Rank { get; set; }
 
 
 
@@ -175,6 +186,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  Rank: ").Append(Rank).Append("\n");
             sb.Append("  GroupByTime: ").Append(GroupByTime).Append("\n");
             sb.Append("  GroupByAttributes: ").Append(GroupByAttributes).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
@@ -237,6 +249,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
+                    this.Rank == other.Rank ||
+                    this.Rank != null &&
+                    this.Rank.Equals(other.Rank)
+                ) &&
+                (
                     this.GroupByTime == other.GroupByTime ||
                     this.GroupByTime != null &&
                     this.GroupByTime.Equals(other.GroupByTime)
@@ -287,6 +304,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+
+                if (this.Rank != null)
+                    hash = hash * 59 + this.Rank.GetHashCode();
 
                 if (this.GroupByTime != null)
                     hash = hash * 59 + this.GroupByTime.GetHashCode();

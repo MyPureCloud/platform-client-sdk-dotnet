@@ -960,28 +960,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DecisionTableVersion> PostBusinessrulesDecisiontableVersionSyncWithHttpInfo (string tableId, int? tableVersion);
 
         /// <summary>
-        /// Create a new decision table version
+        /// Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
+        /// <param name="body">Decision Table Version (optional)</param>
         /// <returns>DecisionTableVersion</returns>
         
-        DecisionTableVersion PostBusinessrulesDecisiontableVersions (string tableId);
+        DecisionTableVersion PostBusinessrulesDecisiontableVersions (string tableId, CreateDecisionTableVersionRequest body = null);
 
         /// <summary>
-        /// Create a new decision table version
+        /// Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
+        /// <param name="body">Decision Table Version (optional)</param>
         /// <returns>ApiResponse of DecisionTableVersion</returns>
         
-        ApiResponse<DecisionTableVersion> PostBusinessrulesDecisiontableVersionsWithHttpInfo (string tableId);
+        ApiResponse<DecisionTableVersion> PostBusinessrulesDecisiontableVersionsWithHttpInfo (string tableId, CreateDecisionTableVersionRequest body = null);
 
         /// <summary>
         /// Create a decision table
@@ -2062,28 +2064,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DecisionTableVersion>> PostBusinessrulesDecisiontableVersionSyncAsyncWithHttpInfo (string tableId, int? tableVersion);
 
         /// <summary>
-        /// Create a new decision table version
+        /// Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
+        /// <param name="body">Decision Table Version (optional)</param>
         /// <returns>Task of DecisionTableVersion</returns>
         
-        System.Threading.Tasks.Task<DecisionTableVersion> PostBusinessrulesDecisiontableVersionsAsync (string tableId);
+        System.Threading.Tasks.Task<DecisionTableVersion> PostBusinessrulesDecisiontableVersionsAsync (string tableId, CreateDecisionTableVersionRequest body = null);
 
         /// <summary>
-        /// Create a new decision table version
+        /// Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
+        /// <param name="body">Decision Table Version (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableVersion)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DecisionTableVersion>> PostBusinessrulesDecisiontableVersionsAsyncWithHttpInfo (string tableId);
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableVersion>> PostBusinessrulesDecisiontableVersionsAsyncWithHttpInfo (string tableId, CreateDecisionTableVersionRequest body = null);
 
         /// <summary>
         /// Create a decision table
@@ -10121,28 +10125,30 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a new decision table version 
+        /// Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
+        /// <param name="body">Decision Table Version (optional)</param>
         /// <returns>DecisionTableVersion</returns>
         
-        public DecisionTableVersion PostBusinessrulesDecisiontableVersions (string tableId)
+        public DecisionTableVersion PostBusinessrulesDecisiontableVersions (string tableId, CreateDecisionTableVersionRequest body = null)
         {
-             ApiResponse<DecisionTableVersion> localVarResponse = PostBusinessrulesDecisiontableVersionsWithHttpInfo(tableId);
+             ApiResponse<DecisionTableVersion> localVarResponse = PostBusinessrulesDecisiontableVersionsWithHttpInfo(tableId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create a new decision table version 
+        /// Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
+        /// <param name="body">Decision Table Version (optional)</param>
         /// <returns>ApiResponse of DecisionTableVersion</returns>
         
-        public ApiResponse< DecisionTableVersion > PostBusinessrulesDecisiontableVersionsWithHttpInfo (string tableId)
+        public ApiResponse< DecisionTableVersion > PostBusinessrulesDecisiontableVersionsWithHttpInfo (string tableId, CreateDecisionTableVersionRequest body = null)
         { 
             // verify the required parameter 'tableId' is set
             if (tableId == null)
@@ -10160,6 +10166,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json"
+                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -10188,6 +10195,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
 
 
             // authentication (PureCloud OAuth) required
@@ -10222,29 +10234,31 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a new decision table version 
+        /// Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
+        /// <param name="body">Decision Table Version (optional)</param>
         /// <returns>Task of DecisionTableVersion</returns>
         
-        public async System.Threading.Tasks.Task<DecisionTableVersion> PostBusinessrulesDecisiontableVersionsAsync (string tableId)
+        public async System.Threading.Tasks.Task<DecisionTableVersion> PostBusinessrulesDecisiontableVersionsAsync (string tableId, CreateDecisionTableVersionRequest body = null)
         {
-             ApiResponse<DecisionTableVersion> localVarResponse = await PostBusinessrulesDecisiontableVersionsAsyncWithHttpInfo(tableId);
+             ApiResponse<DecisionTableVersion> localVarResponse = await PostBusinessrulesDecisiontableVersionsAsyncWithHttpInfo(tableId, body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Create a new decision table version 
+        /// Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
+        /// <param name="body">Decision Table Version (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableVersion)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableVersion>> PostBusinessrulesDecisiontableVersionsAsyncWithHttpInfo (string tableId)
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableVersion>> PostBusinessrulesDecisiontableVersionsAsyncWithHttpInfo (string tableId, CreateDecisionTableVersionRequest body = null)
         { 
             // verify the required parameter 'tableId' is set
             if (tableId == null)
@@ -10263,6 +10277,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json"
+                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -10291,6 +10306,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
 
 
             // authentication (PureCloud OAuth) required

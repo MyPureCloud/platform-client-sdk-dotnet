@@ -567,10 +567,106 @@ namespace PureCloudPlatform.Client.V2.Model
             ImportTooManyExtraColumns,
             
             /// <summary>
+            /// Enum ImportInvalidRetentionType for "IMPORT_INVALID_RETENTION_TYPE"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_RETENTION_TYPE")]
+            ImportInvalidRetentionType,
+            
+            /// <summary>
+            /// Enum ImportInvalidRetentionDaysMustBeSet for "IMPORT_INVALID_RETENTION_DAYS_MUST_BE_SET"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_RETENTION_DAYS_MUST_BE_SET")]
+            ImportInvalidRetentionDaysMustBeSet,
+            
+            /// <summary>
+            /// Enum ImportInvalidRetentionDaysMustNotBeSet for "IMPORT_INVALID_RETENTION_DAYS_MUST_NOT_BE_SET"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_RETENTION_DAYS_MUST_NOT_BE_SET")]
+            ImportInvalidRetentionDaysMustNotBeSet,
+            
+            /// <summary>
+            /// Enum ImportInvalidRetentionDaysMustBePositive for "IMPORT_INVALID_RETENTION_DAYS_MUST_BE_POSITIVE"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_RETENTION_DAYS_MUST_BE_POSITIVE")]
+            ImportInvalidRetentionDaysMustBePositive,
+            
+            /// <summary>
+            /// Enum ImportInvalidRetentionDaysExceedsLimit for "IMPORT_INVALID_RETENTION_DAYS_EXCEEDS_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_RETENTION_DAYS_EXCEEDS_LIMIT")]
+            ImportInvalidRetentionDaysExceedsLimit,
+            
+            /// <summary>
+            /// Enum ImportInvalidRetentionExpirationDateMustBeSet for "IMPORT_INVALID_RETENTION_EXPIRATION_DATE_MUST_BE_SET"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_RETENTION_EXPIRATION_DATE_MUST_BE_SET")]
+            ImportInvalidRetentionExpirationDateMustBeSet,
+            
+            /// <summary>
+            /// Enum ImportInvalidRetentionExpirationDateMustNotBeSet for "IMPORT_INVALID_RETENTION_EXPIRATION_DATE_MUST_NOT_BE_SET"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_RETENTION_EXPIRATION_DATE_MUST_NOT_BE_SET")]
+            ImportInvalidRetentionExpirationDateMustNotBeSet,
+            
+            /// <summary>
+            /// Enum ImportInvalidRetentionExpirationDateInvalidFormat for "IMPORT_INVALID_RETENTION_EXPIRATION_DATE_INVALID_FORMAT"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_RETENTION_EXPIRATION_DATE_INVALID_FORMAT")]
+            ImportInvalidRetentionExpirationDateInvalidFormat,
+            
+            /// <summary>
+            /// Enum ImportInvalidRetentionExpirationDateNoSeconds for "IMPORT_INVALID_RETENTION_EXPIRATION_DATE_NO_SECONDS"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_RETENTION_EXPIRATION_DATE_NO_SECONDS")]
+            ImportInvalidRetentionExpirationDateNoSeconds,
+            
+            /// <summary>
+            /// Enum ImportInvalidRetentionExpirationDateExceedsLimit for "IMPORT_INVALID_RETENTION_EXPIRATION_DATE_EXCEEDS_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_RETENTION_EXPIRATION_DATE_EXCEEDS_LIMIT")]
+            ImportInvalidRetentionExpirationDateExceedsLimit,
+            
+            /// <summary>
+            /// Enum ImportInvalidRetentionMissingType for "IMPORT_INVALID_RETENTION_MISSING_TYPE"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_RETENTION_MISSING_TYPE")]
+            ImportInvalidRetentionMissingType,
+            
+            /// <summary>
+            /// Enum ImportInvalidRetentionMissingPreferredTimezone for "IMPORT_INVALID_RETENTION_MISSING_PREFERRED_TIMEZONE"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_RETENTION_MISSING_PREFERRED_TIMEZONE")]
+            ImportInvalidRetentionMissingPreferredTimezone,
+            
+            /// <summary>
+            /// Enum ImportInvalidRetentionExpirationInPast for "IMPORT_INVALID_RETENTION_EXPIRATION_IN_PAST"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_INVALID_RETENTION_EXPIRATION_IN_PAST")]
+            ImportInvalidRetentionExpirationInPast,
+            
+            /// <summary>
             /// Enum ImportContactListNameLengthExceeded for "IMPORT_CONTACT_LIST_NAME_LENGTH_EXCEEDED"
             /// </summary>
             [EnumMember(Value = "IMPORT_CONTACT_LIST_NAME_LENGTH_EXCEEDED")]
             ImportContactListNameLengthExceeded,
+            
+            /// <summary>
+            /// Enum FailedToDeleteContactList for "FAILED_TO_DELETE_CONTACT_LIST"
+            /// </summary>
+            [EnumMember(Value = "FAILED_TO_DELETE_CONTACT_LIST")]
+            FailedToDeleteContactList,
+            
+            /// <summary>
+            /// Enum ResourceNotFound for "RESOURCE_NOT_FOUND"
+            /// </summary>
+            [EnumMember(Value = "RESOURCE_NOT_FOUND")]
+            ResourceNotFound,
+            
+            /// <summary>
+            /// Enum InvalidContactUpdate for "INVALID_CONTACT_UPDATE"
+            /// </summary>
+            [EnumMember(Value = "INVALID_CONTACT_UPDATE")]
+            InvalidContactUpdate,
             
             /// <summary>
             /// Enum OrganizationHasNoDomainSet for "ORGANIZATION_HAS_NO_DOMAIN_SET"

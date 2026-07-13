@@ -949,7 +949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query for Caseplans.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint supports two filtering modes. The recommended approach uses 'filters' (generic filter model) and 'attributes' (field projection). During the migration period, the legacy fields 'name', 'nameSearchType', and 'divisionIds' remain available as an alternative.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Caseplan query request.</param>
@@ -961,7 +961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query for Caseplans.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint supports two filtering modes. The recommended approach uses 'filters' (generic filter model) and 'attributes' (field projection). During the migration period, the legacy fields 'name', 'nameSearchType', and 'divisionIds' remain available as an alternative.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Caseplan query request.</param>
@@ -2009,7 +2009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query for Caseplans.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint supports two filtering modes. The recommended approach uses 'filters' (generic filter model) and 'attributes' (field projection). During the migration period, the legacy fields 'name', 'nameSearchType', and 'divisionIds' remain available as an alternative.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Caseplan query request.</param>
@@ -2021,7 +2021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query for Caseplans.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint supports two filtering modes. The recommended approach uses 'filters' (generic filter model) and 'attributes' (field projection). During the migration period, the legacy fields 'name', 'nameSearchType', and 'divisionIds' remain available as an alternative.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Caseplan query request.</param>
@@ -9823,7 +9823,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for Caseplans. 
-        /// 
+        /// This endpoint supports two filtering modes. The recommended approach uses 'filters' (generic filter model) and 'attributes' (field projection). During the migration period, the legacy fields 'name', 'nameSearchType', and 'divisionIds' remain available as an alternative.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Caseplan query request.</param>
@@ -9837,7 +9837,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for Caseplans. 
-        /// 
+        /// This endpoint supports two filtering modes. The recommended approach uses 'filters' (generic filter model) and 'attributes' (field projection). During the migration period, the legacy fields 'name', 'nameSearchType', and 'divisionIds' remain available as an alternative.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Caseplan query request.</param>
@@ -9929,7 +9929,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for Caseplans. 
-        /// 
+        /// This endpoint supports two filtering modes. The recommended approach uses 'filters' (generic filter model) and 'attributes' (field projection). During the migration period, the legacy fields 'name', 'nameSearchType', and 'divisionIds' remain available as an alternative.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Caseplan query request.</param>
@@ -9944,7 +9944,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for Caseplans. 
-        /// 
+        /// This endpoint supports two filtering modes. The recommended approach uses 'filters' (generic filter model) and 'attributes' (field projection). During the migration period, the legacy fields 'name', 'nameSearchType', and 'divisionIds' remain available as an alternative.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Caseplan query request.</param>

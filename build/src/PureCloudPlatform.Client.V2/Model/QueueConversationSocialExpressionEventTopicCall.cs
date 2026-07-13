@@ -425,7 +425,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueMediaSettings">QueueMediaSettings.</param>
         /// <param name="Disposition">Disposition.</param>
         /// <param name="TransferSource">Indicates how call reaches the agent..</param>
-        public QueueConversationSocialExpressionEventTopicCall(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationSocialExpressionEventTopicRecordersState RecordersState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, QueueConversationSocialExpressionEventTopicAddress Self = null, QueueConversationSocialExpressionEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<QueueConversationSocialExpressionEventTopicDisconnectReason> DisconnectReasons = null, QueueConversationSocialExpressionEventTopicFaxStatus FaxStatus = null, string UuiData = null, DateTime? BargedTime = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, QueueConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings = null, QueueConversationSocialExpressionEventTopicDisposition Disposition = null, string TransferSource = null)
+        /// <param name="PublicIpAddress">The reported client IP of the phone for the call..</param>
+        public QueueConversationSocialExpressionEventTopicCall(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationSocialExpressionEventTopicRecordersState RecordersState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, QueueConversationSocialExpressionEventTopicAddress Self = null, QueueConversationSocialExpressionEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<QueueConversationSocialExpressionEventTopicDisconnectReason> DisconnectReasons = null, QueueConversationSocialExpressionEventTopicFaxStatus FaxStatus = null, string UuiData = null, DateTime? BargedTime = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, QueueConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings = null, QueueConversationSocialExpressionEventTopicDisposition Disposition = null, string TransferSource = null, string PublicIpAddress = null)
         {
             this.Id = Id;
             this.State = State;
@@ -460,6 +461,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.QueueMediaSettings = QueueMediaSettings;
             this.Disposition = Disposition;
             this.TransferSource = TransferSource;
+            this.PublicIpAddress = PublicIpAddress;
             
         }
         
@@ -719,6 +721,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string TransferSource { get; set; }
 
 
+
+        /// <summary>
+        /// The reported client IP of the phone for the call.
+        /// </summary>
+        /// <value>The reported client IP of the phone for the call.</value>
+        [DataMember(Name="publicIpAddress", EmitDefaultValue=false)]
+        public string PublicIpAddress { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -761,6 +772,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QueueMediaSettings: ").Append(QueueMediaSettings).Append("\n");
             sb.Append("  Disposition: ").Append(Disposition).Append("\n");
             sb.Append("  TransferSource: ").Append(TransferSource).Append("\n");
+            sb.Append("  PublicIpAddress: ").Append(PublicIpAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -965,6 +977,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TransferSource == other.TransferSource ||
                     this.TransferSource != null &&
                     this.TransferSource.Equals(other.TransferSource)
+                ) &&
+                (
+                    this.PublicIpAddress == other.PublicIpAddress ||
+                    this.PublicIpAddress != null &&
+                    this.PublicIpAddress.Equals(other.PublicIpAddress)
                 );
         }
 
@@ -1077,6 +1094,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TransferSource != null)
                     hash = hash * 59 + this.TransferSource.GetHashCode();
+
+                if (this.PublicIpAddress != null)
+                    hash = hash * 59 + this.PublicIpAddress.GetHashCode();
 
                 return hash;
             }

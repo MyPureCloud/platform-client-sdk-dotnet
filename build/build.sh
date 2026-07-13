@@ -3,7 +3,8 @@ frameworkVersion=net45
 netfx=${frameworkVersion#net}
 
 wget -nc "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe";
-mozroots --import --sync
+# DISABLE: mozroots is now deprecated. cert-sync should have been already installed during mono installation
+# mozroots --import --sync
 mono nuget.exe install src/PureCloudPlatform.Client.V2/packages.config -o packages -NoHttpCache -Verbosity detailed;
 mkdir -p bin;
 

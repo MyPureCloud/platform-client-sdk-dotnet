@@ -63,12 +63,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversationid,
             
             /// <summary>
-            /// Enum Knowledgesettingid for "knowledgeSettingId"
-            /// </summary>
-            [EnumMember(Value = "knowledgeSettingId")]
-            Knowledgesettingid,
-            
-            /// <summary>
             /// Enum Engagementtype for "engagementType"
             /// </summary>
             [EnumMember(Value = "engagementType")]
@@ -109,6 +103,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "knowledgeBaseDocumentVersionId")]
             Knowledgebasedocumentversionid,
+            
+            /// <summary>
+            /// Enum Knowledgesettingid for "knowledgeSettingId"
+            /// </summary>
+            [EnumMember(Value = "knowledgeSettingId")]
+            Knowledgesettingid,
             
             /// <summary>
             /// Enum Mediatype for "mediaType"
@@ -203,6 +203,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ncannedresponsesuggestions,
             
             /// <summary>
+            /// Enum Ndistinctconversations for "nDistinctConversations"
+            /// </summary>
+            [EnumMember(Value = "nDistinctConversations")]
+            Ndistinctconversations,
+            
+            /// <summary>
             /// Enum Ndistinctsuggestions for "nDistinctSuggestions"
             /// </summary>
             [EnumMember(Value = "nDistinctSuggestions")]
@@ -230,13 +236,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nscriptsuggestions for "nScriptSuggestions"
             /// </summary>
             [EnumMember(Value = "nScriptSuggestions")]
-            Nscriptsuggestions,
-            
-            /// <summary>
-            /// Enum Ndistinctconversations for "nDistinctConversations"
-            /// </summary>
-            [EnumMember(Value = "nDistinctConversations")]
-            Ndistinctconversations
+            Nscriptsuggestions
         }
         /// <summary>
         /// Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event.

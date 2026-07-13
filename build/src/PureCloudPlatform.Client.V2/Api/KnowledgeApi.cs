@@ -348,6 +348,62 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteKnowledgeSourceWithHttpInfo (string sourceId);
 
         /// <summary>
+        /// Remove a deletion entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns></returns>
+        
+        void DeleteKnowledgeSourceSynchronizationDeletion (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Remove a deletion entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteKnowledgeSourceSynchronizationDeletionWithHttpInfo (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Remove a file upload entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns></returns>
+        
+        void DeleteKnowledgeSourceSynchronizationUpload (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Remove a file upload entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteKnowledgeSourceSynchronizationUploadWithHttpInfo (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
         /// Get connection
         /// </summary>
         /// <remarks>
@@ -1624,6 +1680,126 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of V3Synchronization</returns>
         
         ApiResponse<V3Synchronization> GetKnowledgeSourceSynchronizationWithHttpInfo (string sourceId, string synchronizationId);
+
+        /// <summary>
+        /// Get a deletion entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>V3SynchronizationDeletion</returns>
+        
+        V3SynchronizationDeletion GetKnowledgeSourceSynchronizationDeletion (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Get a deletion entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>ApiResponse of V3SynchronizationDeletion</returns>
+        
+        ApiResponse<V3SynchronizationDeletion> GetKnowledgeSourceSynchronizationDeletionWithHttpInfo (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Get deletion entries associated with the synchronization.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>V3SynchronizationDeletionListing</returns>
+        
+        V3SynchronizationDeletionListing GetKnowledgeSourceSynchronizationDeletions (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Get deletion entries associated with the synchronization.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>ApiResponse of V3SynchronizationDeletionListing</returns>
+        
+        ApiResponse<V3SynchronizationDeletionListing> GetKnowledgeSourceSynchronizationDeletionsWithHttpInfo (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Get a file upload entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>V3SynchronizationUpload</returns>
+        
+        V3SynchronizationUpload GetKnowledgeSourceSynchronizationUpload (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Get a file upload entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>ApiResponse of V3SynchronizationUpload</returns>
+        
+        ApiResponse<V3SynchronizationUpload> GetKnowledgeSourceSynchronizationUploadWithHttpInfo (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Get file upload entries associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>V3SynchronizationUploadListing</returns>
+        
+        V3SynchronizationUploadListing GetKnowledgeSourceSynchronizationUploads (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Get file upload entries associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>ApiResponse of V3SynchronizationUploadListing</returns>
+        
+        ApiResponse<V3SynchronizationUploadListing> GetKnowledgeSourceSynchronizationUploadsWithHttpInfo (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null);
 
         /// <summary>
         /// Get synchronizations of a source.
@@ -3236,6 +3412,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<KnowledgeSettingsResponse> PostKnowledgeSettingsWithHttpInfo (KnowledgeSettingsRequest body = null);
 
         /// <summary>
+        /// Mark a previously synced file for deletion in the synchronization.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="body"></param>
+        /// <returns>V3SynchronizationDeletion</returns>
+        
+        V3SynchronizationDeletion PostKnowledgeSourceSynchronizationDeletions (string sourceId, string synchronizationId, V3SynchronizationFileDeletionRequest body);
+
+        /// <summary>
+        /// Mark a previously synced file for deletion in the synchronization.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of V3SynchronizationDeletion</returns>
+        
+        ApiResponse<V3SynchronizationDeletion> PostKnowledgeSourceSynchronizationDeletionsWithHttpInfo (string sourceId, string synchronizationId, V3SynchronizationFileDeletionRequest body);
+
+        /// <summary>
         /// Create presigned URL for uploading a file in the synchronization.
         /// </summary>
         /// <remarks>
@@ -3730,6 +3934,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteKnowledgeSourceAsyncWithHttpInfo (string sourceId);
+
+        /// <summary>
+        /// Remove a deletion entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteKnowledgeSourceSynchronizationDeletionAsync (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Remove a deletion entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteKnowledgeSourceSynchronizationDeletionAsyncWithHttpInfo (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Remove a file upload entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteKnowledgeSourceSynchronizationUploadAsync (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Remove a file upload entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteKnowledgeSourceSynchronizationUploadAsyncWithHttpInfo (string sourceId, string synchronizationId, string fileId);
 
         /// <summary>
         /// Get connection
@@ -5008,6 +5268,126 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (V3Synchronization)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<V3Synchronization>> GetKnowledgeSourceSynchronizationAsyncWithHttpInfo (string sourceId, string synchronizationId);
+
+        /// <summary>
+        /// Get a deletion entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of V3SynchronizationDeletion</returns>
+        
+        System.Threading.Tasks.Task<V3SynchronizationDeletion> GetKnowledgeSourceSynchronizationDeletionAsync (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Get a deletion entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of ApiResponse (V3SynchronizationDeletion)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<V3SynchronizationDeletion>> GetKnowledgeSourceSynchronizationDeletionAsyncWithHttpInfo (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Get deletion entries associated with the synchronization.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>Task of V3SynchronizationDeletionListing</returns>
+        
+        System.Threading.Tasks.Task<V3SynchronizationDeletionListing> GetKnowledgeSourceSynchronizationDeletionsAsync (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Get deletion entries associated with the synchronization.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>Task of ApiResponse (V3SynchronizationDeletionListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<V3SynchronizationDeletionListing>> GetKnowledgeSourceSynchronizationDeletionsAsyncWithHttpInfo (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Get a file upload entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of V3SynchronizationUpload</returns>
+        
+        System.Threading.Tasks.Task<V3SynchronizationUpload> GetKnowledgeSourceSynchronizationUploadAsync (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Get a file upload entry associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of ApiResponse (V3SynchronizationUpload)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<V3SynchronizationUpload>> GetKnowledgeSourceSynchronizationUploadAsyncWithHttpInfo (string sourceId, string synchronizationId, string fileId);
+
+        /// <summary>
+        /// Get file upload entries associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>Task of V3SynchronizationUploadListing</returns>
+        
+        System.Threading.Tasks.Task<V3SynchronizationUploadListing> GetKnowledgeSourceSynchronizationUploadsAsync (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Get file upload entries associated with the synchronization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>Task of ApiResponse (V3SynchronizationUploadListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<V3SynchronizationUploadListing>> GetKnowledgeSourceSynchronizationUploadsAsyncWithHttpInfo (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null);
 
         /// <summary>
         /// Get synchronizations of a source.
@@ -6618,6 +6998,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (KnowledgeSettingsResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<KnowledgeSettingsResponse>> PostKnowledgeSettingsAsyncWithHttpInfo (KnowledgeSettingsRequest body = null);
+
+        /// <summary>
+        /// Mark a previously synced file for deletion in the synchronization.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of V3SynchronizationDeletion</returns>
+        
+        System.Threading.Tasks.Task<V3SynchronizationDeletion> PostKnowledgeSourceSynchronizationDeletionsAsync (string sourceId, string synchronizationId, V3SynchronizationFileDeletionRequest body);
+
+        /// <summary>
+        /// Mark a previously synced file for deletion in the synchronization.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (V3SynchronizationDeletion)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<V3SynchronizationDeletion>> PostKnowledgeSourceSynchronizationDeletionsAsyncWithHttpInfo (string sourceId, string synchronizationId, V3SynchronizationFileDeletionRequest body);
 
         /// <summary>
         /// Create presigned URL for uploading a file in the synchronization.
@@ -9638,6 +10046,464 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteKnowledgeSource: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeSource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Remove a deletion entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns></returns>
+        
+        public void DeleteKnowledgeSourceSynchronizationDeletion (string sourceId, string synchronizationId, string fileId)
+        {
+             DeleteKnowledgeSourceSynchronizationDeletionWithHttpInfo(sourceId, synchronizationId, fileId);
+        }
+
+        /// <summary>
+        /// Remove a deletion entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteKnowledgeSourceSynchronizationDeletionWithHttpInfo (string sourceId, string synchronizationId, string fileId)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->DeleteKnowledgeSourceSynchronizationDeletion");
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->DeleteKnowledgeSourceSynchronizationDeletion");
+            // verify the required parameter 'fileId' is set
+            if (fileId == null)
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling KnowledgeApi->DeleteKnowledgeSourceSynchronizationDeletion");
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions/{fileId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+            if (fileId != null) localVarPathParams.Add("fileId", this.Configuration.ApiClient.ParameterToString(fileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeSourceSynchronizationDeletion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteKnowledgeSourceSynchronizationDeletion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeSourceSynchronizationDeletion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Remove a deletion entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteKnowledgeSourceSynchronizationDeletionAsync (string sourceId, string synchronizationId, string fileId)
+        {
+             await DeleteKnowledgeSourceSynchronizationDeletionAsyncWithHttpInfo(sourceId, synchronizationId, fileId);
+
+        }
+
+        /// <summary>
+        /// Remove a deletion entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteKnowledgeSourceSynchronizationDeletionAsyncWithHttpInfo (string sourceId, string synchronizationId, string fileId)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->DeleteKnowledgeSourceSynchronizationDeletion");
+            
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->DeleteKnowledgeSourceSynchronizationDeletion");
+            
+            // verify the required parameter 'fileId' is set
+            if (fileId == null)
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling KnowledgeApi->DeleteKnowledgeSourceSynchronizationDeletion");
+            
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions/{fileId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+            if (fileId != null) localVarPathParams.Add("fileId", this.Configuration.ApiClient.ParameterToString(fileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeSourceSynchronizationDeletion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteKnowledgeSourceSynchronizationDeletion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeSourceSynchronizationDeletion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Remove a file upload entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns></returns>
+        
+        public void DeleteKnowledgeSourceSynchronizationUpload (string sourceId, string synchronizationId, string fileId)
+        {
+             DeleteKnowledgeSourceSynchronizationUploadWithHttpInfo(sourceId, synchronizationId, fileId);
+        }
+
+        /// <summary>
+        /// Remove a file upload entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteKnowledgeSourceSynchronizationUploadWithHttpInfo (string sourceId, string synchronizationId, string fileId)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->DeleteKnowledgeSourceSynchronizationUpload");
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->DeleteKnowledgeSourceSynchronizationUpload");
+            // verify the required parameter 'fileId' is set
+            if (fileId == null)
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling KnowledgeApi->DeleteKnowledgeSourceSynchronizationUpload");
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads/{fileId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+            if (fileId != null) localVarPathParams.Add("fileId", this.Configuration.ApiClient.ParameterToString(fileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeSourceSynchronizationUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteKnowledgeSourceSynchronizationUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeSourceSynchronizationUpload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Remove a file upload entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteKnowledgeSourceSynchronizationUploadAsync (string sourceId, string synchronizationId, string fileId)
+        {
+             await DeleteKnowledgeSourceSynchronizationUploadAsyncWithHttpInfo(sourceId, synchronizationId, fileId);
+
+        }
+
+        /// <summary>
+        /// Remove a file upload entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteKnowledgeSourceSynchronizationUploadAsyncWithHttpInfo (string sourceId, string synchronizationId, string fileId)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->DeleteKnowledgeSourceSynchronizationUpload");
+            
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->DeleteKnowledgeSourceSynchronizationUpload");
+            
+            // verify the required parameter 'fileId' is set
+            if (fileId == null)
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling KnowledgeApi->DeleteKnowledgeSourceSynchronizationUpload");
+            
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads/{fileId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+            if (fileId != null) localVarPathParams.Add("fileId", this.Configuration.ApiClient.ParameterToString(fileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeSourceSynchronizationUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteKnowledgeSourceSynchronizationUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteKnowledgeSourceSynchronizationUpload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -19069,6 +19935,940 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<V3Synchronization>(localVarStatusCode,
                 localVarHeaders,
                 (V3Synchronization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3Synchronization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a deletion entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>V3SynchronizationDeletion</returns>
+        
+        public V3SynchronizationDeletion GetKnowledgeSourceSynchronizationDeletion (string sourceId, string synchronizationId, string fileId)
+        {
+             ApiResponse<V3SynchronizationDeletion> localVarResponse = GetKnowledgeSourceSynchronizationDeletionWithHttpInfo(sourceId, synchronizationId, fileId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a deletion entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>ApiResponse of V3SynchronizationDeletion</returns>
+        
+        public ApiResponse< V3SynchronizationDeletion > GetKnowledgeSourceSynchronizationDeletionWithHttpInfo (string sourceId, string synchronizationId, string fileId)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationDeletion");
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationDeletion");
+            // verify the required parameter 'fileId' is set
+            if (fileId == null)
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationDeletion");
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions/{fileId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+            if (fileId != null) localVarPathParams.Add("fileId", this.Configuration.ApiClient.ParameterToString(fileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationDeletion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeSourceSynchronizationDeletion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationDeletion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SynchronizationDeletion>(localVarStatusCode,
+                localVarHeaders,
+                (V3SynchronizationDeletion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SynchronizationDeletion)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a deletion entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of V3SynchronizationDeletion</returns>
+        
+        public async System.Threading.Tasks.Task<V3SynchronizationDeletion> GetKnowledgeSourceSynchronizationDeletionAsync (string sourceId, string synchronizationId, string fileId)
+        {
+             ApiResponse<V3SynchronizationDeletion> localVarResponse = await GetKnowledgeSourceSynchronizationDeletionAsyncWithHttpInfo(sourceId, synchronizationId, fileId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a deletion entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of ApiResponse (V3SynchronizationDeletion)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<V3SynchronizationDeletion>> GetKnowledgeSourceSynchronizationDeletionAsyncWithHttpInfo (string sourceId, string synchronizationId, string fileId)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationDeletion");
+            
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationDeletion");
+            
+            // verify the required parameter 'fileId' is set
+            if (fileId == null)
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationDeletion");
+            
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions/{fileId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+            if (fileId != null) localVarPathParams.Add("fileId", this.Configuration.ApiClient.ParameterToString(fileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationDeletion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeSourceSynchronizationDeletion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationDeletion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SynchronizationDeletion>(localVarStatusCode,
+                localVarHeaders,
+                (V3SynchronizationDeletion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SynchronizationDeletion)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get deletion entries associated with the synchronization. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>V3SynchronizationDeletionListing</returns>
+        
+        public V3SynchronizationDeletionListing GetKnowledgeSourceSynchronizationDeletions (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null)
+        {
+             ApiResponse<V3SynchronizationDeletionListing> localVarResponse = GetKnowledgeSourceSynchronizationDeletionsWithHttpInfo(sourceId, synchronizationId, before, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get deletion entries associated with the synchronization. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>ApiResponse of V3SynchronizationDeletionListing</returns>
+        
+        public ApiResponse< V3SynchronizationDeletionListing > GetKnowledgeSourceSynchronizationDeletionsWithHttpInfo (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationDeletions");
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationDeletions");
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationDeletions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeSourceSynchronizationDeletions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationDeletions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SynchronizationDeletionListing>(localVarStatusCode,
+                localVarHeaders,
+                (V3SynchronizationDeletionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SynchronizationDeletionListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get deletion entries associated with the synchronization. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>Task of V3SynchronizationDeletionListing</returns>
+        
+        public async System.Threading.Tasks.Task<V3SynchronizationDeletionListing> GetKnowledgeSourceSynchronizationDeletionsAsync (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null)
+        {
+             ApiResponse<V3SynchronizationDeletionListing> localVarResponse = await GetKnowledgeSourceSynchronizationDeletionsAsyncWithHttpInfo(sourceId, synchronizationId, before, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get deletion entries associated with the synchronization. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>Task of ApiResponse (V3SynchronizationDeletionListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<V3SynchronizationDeletionListing>> GetKnowledgeSourceSynchronizationDeletionsAsyncWithHttpInfo (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationDeletions");
+            
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationDeletions");
+            
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationDeletions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeSourceSynchronizationDeletions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationDeletions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SynchronizationDeletionListing>(localVarStatusCode,
+                localVarHeaders,
+                (V3SynchronizationDeletionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SynchronizationDeletionListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a file upload entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>V3SynchronizationUpload</returns>
+        
+        public V3SynchronizationUpload GetKnowledgeSourceSynchronizationUpload (string sourceId, string synchronizationId, string fileId)
+        {
+             ApiResponse<V3SynchronizationUpload> localVarResponse = GetKnowledgeSourceSynchronizationUploadWithHttpInfo(sourceId, synchronizationId, fileId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a file upload entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>ApiResponse of V3SynchronizationUpload</returns>
+        
+        public ApiResponse< V3SynchronizationUpload > GetKnowledgeSourceSynchronizationUploadWithHttpInfo (string sourceId, string synchronizationId, string fileId)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationUpload");
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationUpload");
+            // verify the required parameter 'fileId' is set
+            if (fileId == null)
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationUpload");
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads/{fileId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+            if (fileId != null) localVarPathParams.Add("fileId", this.Configuration.ApiClient.ParameterToString(fileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeSourceSynchronizationUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationUpload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SynchronizationUpload>(localVarStatusCode,
+                localVarHeaders,
+                (V3SynchronizationUpload) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SynchronizationUpload)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a file upload entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of V3SynchronizationUpload</returns>
+        
+        public async System.Threading.Tasks.Task<V3SynchronizationUpload> GetKnowledgeSourceSynchronizationUploadAsync (string sourceId, string synchronizationId, string fileId)
+        {
+             ApiResponse<V3SynchronizationUpload> localVarResponse = await GetKnowledgeSourceSynchronizationUploadAsyncWithHttpInfo(sourceId, synchronizationId, fileId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a file upload entry associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="fileId">File ID</param>
+        /// <returns>Task of ApiResponse (V3SynchronizationUpload)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<V3SynchronizationUpload>> GetKnowledgeSourceSynchronizationUploadAsyncWithHttpInfo (string sourceId, string synchronizationId, string fileId)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationUpload");
+            
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationUpload");
+            
+            // verify the required parameter 'fileId' is set
+            if (fileId == null)
+                throw new ApiException(400, "Missing required parameter 'fileId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationUpload");
+            
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads/{fileId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+            if (fileId != null) localVarPathParams.Add("fileId", this.Configuration.ApiClient.ParameterToString(fileId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeSourceSynchronizationUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationUpload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SynchronizationUpload>(localVarStatusCode,
+                localVarHeaders,
+                (V3SynchronizationUpload) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SynchronizationUpload)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get file upload entries associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>V3SynchronizationUploadListing</returns>
+        
+        public V3SynchronizationUploadListing GetKnowledgeSourceSynchronizationUploads (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null)
+        {
+             ApiResponse<V3SynchronizationUploadListing> localVarResponse = GetKnowledgeSourceSynchronizationUploadsWithHttpInfo(sourceId, synchronizationId, before, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get file upload entries associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>ApiResponse of V3SynchronizationUploadListing</returns>
+        
+        public ApiResponse< V3SynchronizationUploadListing > GetKnowledgeSourceSynchronizationUploadsWithHttpInfo (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationUploads");
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationUploads");
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationUploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeSourceSynchronizationUploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationUploads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SynchronizationUploadListing>(localVarStatusCode,
+                localVarHeaders,
+                (V3SynchronizationUploadListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SynchronizationUploadListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get file upload entries associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>Task of V3SynchronizationUploadListing</returns>
+        
+        public async System.Threading.Tasks.Task<V3SynchronizationUploadListing> GetKnowledgeSourceSynchronizationUploadsAsync (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null)
+        {
+             ApiResponse<V3SynchronizationUploadListing> localVarResponse = await GetKnowledgeSourceSynchronizationUploadsAsyncWithHttpInfo(sourceId, synchronizationId, before, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get file upload entries associated with the synchronization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <returns>Task of ApiResponse (V3SynchronizationUploadListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<V3SynchronizationUploadListing>> GetKnowledgeSourceSynchronizationUploadsAsyncWithHttpInfo (string sourceId, string synchronizationId, string before = null, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationUploads");
+            
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->GetKnowledgeSourceSynchronizationUploads");
+            
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationUploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeSourceSynchronizationUploads: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourceSynchronizationUploads: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SynchronizationUploadListing>(localVarStatusCode,
+                localVarHeaders,
+                (V3SynchronizationUploadListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SynchronizationUploadListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -32665,6 +34465,247 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<KnowledgeSettingsResponse>(localVarStatusCode,
                 localVarHeaders,
                 (KnowledgeSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeSettingsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Mark a previously synced file for deletion in the synchronization. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="body"></param>
+        /// <returns>V3SynchronizationDeletion</returns>
+        
+        public V3SynchronizationDeletion PostKnowledgeSourceSynchronizationDeletions (string sourceId, string synchronizationId, V3SynchronizationFileDeletionRequest body)
+        {
+             ApiResponse<V3SynchronizationDeletion> localVarResponse = PostKnowledgeSourceSynchronizationDeletionsWithHttpInfo(sourceId, synchronizationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Mark a previously synced file for deletion in the synchronization. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of V3SynchronizationDeletion</returns>
+        
+        public ApiResponse< V3SynchronizationDeletion > PostKnowledgeSourceSynchronizationDeletionsWithHttpInfo (string sourceId, string synchronizationId, V3SynchronizationFileDeletionRequest body)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->PostKnowledgeSourceSynchronizationDeletions");
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->PostKnowledgeSourceSynchronizationDeletions");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeSourceSynchronizationDeletions");
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeSourceSynchronizationDeletions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostKnowledgeSourceSynchronizationDeletions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeSourceSynchronizationDeletions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SynchronizationDeletion>(localVarStatusCode,
+                localVarHeaders,
+                (V3SynchronizationDeletion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SynchronizationDeletion)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Mark a previously synced file for deletion in the synchronization. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of V3SynchronizationDeletion</returns>
+        
+        public async System.Threading.Tasks.Task<V3SynchronizationDeletion> PostKnowledgeSourceSynchronizationDeletionsAsync (string sourceId, string synchronizationId, V3SynchronizationFileDeletionRequest body)
+        {
+             ApiResponse<V3SynchronizationDeletion> localVarResponse = await PostKnowledgeSourceSynchronizationDeletionsAsyncWithHttpInfo(sourceId, synchronizationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Mark a previously synced file for deletion in the synchronization. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceId">Source ID</param>
+        /// <param name="synchronizationId">Synchronization ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (V3SynchronizationDeletion)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<V3SynchronizationDeletion>> PostKnowledgeSourceSynchronizationDeletionsAsyncWithHttpInfo (string sourceId, string synchronizationId, V3SynchronizationFileDeletionRequest body)
+        { 
+            // verify the required parameter 'sourceId' is set
+            if (sourceId == null)
+                throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->PostKnowledgeSourceSynchronizationDeletions");
+            
+            // verify the required parameter 'synchronizationId' is set
+            if (synchronizationId == null)
+                throw new ApiException(400, "Missing required parameter 'synchronizationId' when calling KnowledgeApi->PostKnowledgeSourceSynchronizationDeletions");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeSourceSynchronizationDeletions");
+            
+
+            var localVarPath = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sourceId != null) localVarPathParams.Add("sourceId", this.Configuration.ApiClient.ParameterToString(sourceId));
+            if (synchronizationId != null) localVarPathParams.Add("synchronizationId", this.Configuration.ApiClient.ParameterToString(synchronizationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeSourceSynchronizationDeletions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostKnowledgeSourceSynchronizationDeletions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeSourceSynchronizationDeletions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SynchronizationDeletion>(localVarStatusCode,
+                localVarHeaders,
+                (V3SynchronizationDeletion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SynchronizationDeletion)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

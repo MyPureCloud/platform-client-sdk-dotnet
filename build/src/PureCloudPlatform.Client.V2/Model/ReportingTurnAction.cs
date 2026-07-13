@@ -507,6 +507,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Senddigitalcontentaction,
             
             /// <summary>
+            /// Enum Agenticaskforintentaction for "AgenticAskForIntentAction"
+            /// </summary>
+            [EnumMember(Value = "AgenticAskForIntentAction")]
+            Agenticaskforintentaction,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

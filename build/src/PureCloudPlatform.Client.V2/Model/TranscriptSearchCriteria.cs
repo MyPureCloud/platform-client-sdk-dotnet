@@ -105,7 +105,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum LessThan for "LESS_THAN"
             /// </summary>
             [EnumMember(Value = "LESS_THAN")]
-            LessThan
+            LessThan,
+            
+            /// <summary>
+            /// Enum RequiredFields for "REQUIRED_FIELDS"
+            /// </summary>
+            [EnumMember(Value = "REQUIRED_FIELDS")]
+            RequiredFields
         }
         /// <summary>
         /// How to apply this search criteria against other criteria

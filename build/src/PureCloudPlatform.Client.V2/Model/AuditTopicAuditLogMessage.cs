@@ -189,6 +189,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Analyticsreporting,
             
             /// <summary>
+            /// Enum Embeddedanalytics for "EmbeddedAnalytics"
+            /// </summary>
+            [EnumMember(Value = "EmbeddedAnalytics")]
+            Embeddedanalytics,
+            
+            /// <summary>
             /// Enum Limits for "Limits"
             /// </summary>
             [EnumMember(Value = "Limits")]
@@ -1777,10 +1783,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Activityplanoccurrencesessionuser,
             
             /// <summary>
+            /// Enum Adherenceadjustment for "AdherenceAdjustment"
+            /// </summary>
+            [EnumMember(Value = "AdherenceAdjustment")]
+            Adherenceadjustment,
+            
+            /// <summary>
+            /// Enum Adherenceadjustmentreasoncode for "AdherenceAdjustmentReasonCode"
+            /// </summary>
+            [EnumMember(Value = "AdherenceAdjustmentReasonCode")]
+            Adherenceadjustmentreasoncode,
+            
+            /// <summary>
             /// Enum Adherenceexplanation for "AdherenceExplanation"
             /// </summary>
             [EnumMember(Value = "AdherenceExplanation")]
             Adherenceexplanation,
+            
+            /// <summary>
+            /// Enum Agentschedulingpreferences for "AgentSchedulingPreferences"
+            /// </summary>
+            [EnumMember(Value = "AgentSchedulingPreferences")]
+            Agentschedulingpreferences,
             
             /// <summary>
             /// Enum Alternativeshift for "AlternativeShift"
@@ -2327,6 +2351,24 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "AnalyticsLakehouseSettings")]
             Analyticslakehousesettings,
+            
+            /// <summary>
+            /// Enum Users for "Users"
+            /// </summary>
+            [EnumMember(Value = "Users")]
+            Users,
+            
+            /// <summary>
+            /// Enum Analyses for "Analyses"
+            /// </summary>
+            [EnumMember(Value = "Analyses")]
+            Analyses,
+            
+            /// <summary>
+            /// Enum Dashboard for "Dashboard"
+            /// </summary>
+            [EnumMember(Value = "Dashboard")]
+            Dashboard,
             
             /// <summary>
             /// Enum Scheduledexports for "ScheduledExports"
@@ -2890,7 +2932,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Agent for "Agent"
             /// </summary>
             [EnumMember(Value = "Agent")]
-            Agent
+            Agent,
+            
+            /// <summary>
+            /// Enum Graphsettings for "GraphSettings"
+            /// </summary>
+            [EnumMember(Value = "GraphSettings")]
+            Graphsettings
         }
         /// <summary>
         /// Gets or Sets ServiceName

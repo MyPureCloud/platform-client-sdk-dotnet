@@ -40,6 +40,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ncannedresponsesuggestions,
             
             /// <summary>
+            /// Enum Ndistinctconversations for "nDistinctConversations"
+            /// </summary>
+            [EnumMember(Value = "nDistinctConversations")]
+            Ndistinctconversations,
+            
+            /// <summary>
             /// Enum Ndistinctsuggestions for "nDistinctSuggestions"
             /// </summary>
             [EnumMember(Value = "nDistinctSuggestions")]

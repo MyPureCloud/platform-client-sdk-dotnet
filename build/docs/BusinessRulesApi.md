@@ -41,7 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostBusinessrulesDecisiontableVersionRowsBulkUpdate**](#PostBusinessrulesDecisiontableVersionRowsBulkUpdate) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/update | Bulk update decision table rows |
 | [**PostBusinessrulesDecisiontableVersionRowsSearch**](#PostBusinessrulesDecisiontableVersionRowsSearch) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/search | Search for decision table rows |
 | [**PostBusinessrulesDecisiontableVersionSync**](#PostBusinessrulesDecisiontableVersionSync) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/sync | Update the Business Rules Schema to the latest version for a given decision table version |
-| [**PostBusinessrulesDecisiontableVersions**](#PostBusinessrulesDecisiontableVersions) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions | Create a new decision table version |
+| [**PostBusinessrulesDecisiontableVersions**](#PostBusinessrulesDecisiontableVersions) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions | Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version. |
 | [**PostBusinessrulesDecisiontables**](#PostBusinessrulesDecisiontables) | **Post** /api/v2/businessrules/decisiontables | Create a decision table |
 | [**PostBusinessrulesSchemas**](#PostBusinessrulesSchemas) | **Post** /api/v2/businessrules/schemas | Create a schema |
 | [**PutBusinessrulesDecisiontableVersionPublish**](#PutBusinessrulesDecisiontableVersionPublish) | **Put** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/publish | Publish a decision table version |
@@ -2332,10 +2332,10 @@ namespace Example
 
 ## PostBusinessrulesDecisiontableVersions
 
-> [**DecisionTableVersion**](DecisionTableVersion) PostBusinessrulesDecisiontableVersions (string tableId)
+> [**DecisionTableVersion**](DecisionTableVersion) PostBusinessrulesDecisiontableVersions (string tableId, CreateDecisionTableVersionRequest body = null)
 
 
-Create a new decision table version
+Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version.
 
 Requires ANY permissions: 
 
@@ -2364,11 +2364,12 @@ namespace Example
 
             var apiInstance = new BusinessRulesApi();
             var tableId = tableId_example;  // string | Table ID
+            var body = new CreateDecisionTableVersionRequest(); // CreateDecisionTableVersionRequest | Decision Table Version (optional) 
 
             try
             { 
-                // Create a new decision table version
-                DecisionTableVersion result = apiInstance.PostBusinessrulesDecisiontableVersions(tableId);
+                // Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version.
+                DecisionTableVersion result = apiInstance.PostBusinessrulesDecisiontableVersions(tableId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2386,6 +2387,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **tableId** | **string**| Table ID |  |
+| **body** | [**CreateDecisionTableVersionRequest**](CreateDecisionTableVersionRequest)| Decision Table Version | [optional]  |
 
 ### Return type
 
@@ -2719,4 +2721,4 @@ namespace Example
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
-_PureCloudPlatform.Client.V2 267.0.0_
+_PureCloudPlatform.Client.V2 268.0.0_

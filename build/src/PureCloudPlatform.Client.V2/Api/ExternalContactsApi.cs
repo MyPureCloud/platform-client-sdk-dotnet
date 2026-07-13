@@ -970,6 +970,58 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ContactImportSettingsEntityListing> GetExternalcontactsImportSettingsWithHttpInfo (string after = null, string pageSize = null, string sortOrder = null, string name = null);
 
         /// <summary>
+        /// Get notes export for exportId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>NotesExport</returns>
+        
+        NotesExport GetExternalcontactsNotesExport (string exportId);
+
+        /// <summary>
+        /// Get notes export for exportId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>ApiResponse of NotesExport</returns>
+        
+        ApiResponse<NotesExport> GetExternalcontactsNotesExportWithHttpInfo (string exportId);
+
+        /// <summary>
+        /// List note exports for organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>NotesExportListing</returns>
+        
+        NotesExportListing GetExternalcontactsNotesExports (List<string> divisionIds = null, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// List note exports for organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>ApiResponse of NotesExportListing</returns>
+        
+        ApiResponse<NotesExportListing> GetExternalcontactsNotesExportsWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null);
+
+        /// <summary>
         /// Fetch an external organization
         /// </summary>
         /// <remarks>
@@ -1186,6 +1238,58 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ExternalOrganizationListing> GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null, List<string> divisionIds = null);
 
         /// <summary>
+        /// Get organizations export for exportId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>OrganizationsExport</returns>
+        
+        OrganizationsExport GetExternalcontactsOrganizationsExport (string exportId);
+
+        /// <summary>
+        /// Get organizations export for exportId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>ApiResponse of OrganizationsExport</returns>
+        
+        ApiResponse<OrganizationsExport> GetExternalcontactsOrganizationsExportWithHttpInfo (string exportId);
+
+        /// <summary>
+        /// List organization exports for organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>OrganizationsExportListing</returns>
+        
+        OrganizationsExportListing GetExternalcontactsOrganizationsExports (List<string> divisionIds = null, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// List organization exports for organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>ApiResponse of OrganizationsExportListing</returns>
+        
+        ApiResponse<OrganizationsExportListing> GetExternalcontactsOrganizationsExportsWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null);
+
+        /// <summary>
         /// Get a schema
         /// </summary>
         /// <remarks>
@@ -1374,6 +1478,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Relationship</returns>
         
         ApiResponse<Relationship> GetExternalcontactsRelationshipWithHttpInfo (string relationshipId, List<string> expand = null);
+
+        /// <summary>
+        /// Get relationships export for exportId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>RelationshipsExport</returns>
+        
+        RelationshipsExport GetExternalcontactsRelationshipsExport (string exportId);
+
+        /// <summary>
+        /// Get relationships export for exportId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>ApiResponse of RelationshipsExport</returns>
+        
+        ApiResponse<RelationshipsExport> GetExternalcontactsRelationshipsExportWithHttpInfo (string exportId);
+
+        /// <summary>
+        /// List relationship exports for organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>RelationshipsExportListing</returns>
+        
+        RelationshipsExportListing GetExternalcontactsRelationshipsExports (List<string> divisionIds = null, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// List relationship exports for organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>ApiResponse of RelationshipsExportListing</returns>
+        
+        ApiResponse<RelationshipsExportListing> GetExternalcontactsRelationshipsExportsWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Look up contacts based on an attribute. Maximum of 25 values returned.
@@ -2758,6 +2914,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ExternalContact> PostExternalcontactsMergeContactsWithHttpInfo (MergeRequest body);
 
         /// <summary>
+        /// Create notes export
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>NotesExport</returns>
+        
+        NotesExport PostExternalcontactsNotesExports (NotesExport body);
+
+        /// <summary>
+        /// Create notes export
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>ApiResponse of NotesExport</returns>
+        
+        ApiResponse<NotesExport> PostExternalcontactsNotesExportsWithHttpInfo (NotesExport body);
+
+        /// <summary>
         /// Create a note for an external organization
         /// </summary>
         /// <remarks>
@@ -2834,6 +3014,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ExternalOrganization> PostExternalcontactsOrganizationsEnrichWithHttpInfo (ExternalOrganizationEnrichRequest body, bool? dryRun = null);
 
         /// <summary>
+        /// Create organizations export
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>OrganizationsExport</returns>
+        
+        OrganizationsExport PostExternalcontactsOrganizationsExports (OrganizationsExport body);
+
+        /// <summary>
+        /// Create organizations export
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>ApiResponse of OrganizationsExport</returns>
+        
+        ApiResponse<OrganizationsExport> PostExternalcontactsOrganizationsExportsWithHttpInfo (OrganizationsExport body);
+
+        /// <summary>
         /// Create a schema
         /// </summary>
         /// <remarks>
@@ -2880,6 +3084,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Relationship</returns>
         
         ApiResponse<Relationship> PostExternalcontactsRelationshipsWithHttpInfo (Relationship body);
+
+        /// <summary>
+        /// Create relationships export
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>RelationshipsExport</returns>
+        
+        RelationshipsExport PostExternalcontactsRelationshipsExports (RelationshipsExport body);
+
+        /// <summary>
+        /// Create relationships export
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>ApiResponse of RelationshipsExport</returns>
+        
+        ApiResponse<RelationshipsExport> PostExternalcontactsRelationshipsExportsWithHttpInfo (RelationshipsExport body);
 
         /// <summary>
         /// Update an external contact
@@ -4182,6 +4410,58 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ContactImportSettingsEntityListing>> GetExternalcontactsImportSettingsAsyncWithHttpInfo (string after = null, string pageSize = null, string sortOrder = null, string name = null);
 
         /// <summary>
+        /// Get notes export for exportId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>Task of NotesExport</returns>
+        
+        System.Threading.Tasks.Task<NotesExport> GetExternalcontactsNotesExportAsync (string exportId);
+
+        /// <summary>
+        /// Get notes export for exportId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>Task of ApiResponse (NotesExport)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<NotesExport>> GetExternalcontactsNotesExportAsyncWithHttpInfo (string exportId);
+
+        /// <summary>
+        /// List note exports for organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>Task of NotesExportListing</returns>
+        
+        System.Threading.Tasks.Task<NotesExportListing> GetExternalcontactsNotesExportsAsync (List<string> divisionIds = null, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// List note exports for organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>Task of ApiResponse (NotesExportListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<NotesExportListing>> GetExternalcontactsNotesExportsAsyncWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null);
+
+        /// <summary>
         /// Fetch an external organization
         /// </summary>
         /// <remarks>
@@ -4398,6 +4678,58 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null, List<string> divisionIds = null);
 
         /// <summary>
+        /// Get organizations export for exportId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>Task of OrganizationsExport</returns>
+        
+        System.Threading.Tasks.Task<OrganizationsExport> GetExternalcontactsOrganizationsExportAsync (string exportId);
+
+        /// <summary>
+        /// Get organizations export for exportId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>Task of ApiResponse (OrganizationsExport)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OrganizationsExport>> GetExternalcontactsOrganizationsExportAsyncWithHttpInfo (string exportId);
+
+        /// <summary>
+        /// List organization exports for organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>Task of OrganizationsExportListing</returns>
+        
+        System.Threading.Tasks.Task<OrganizationsExportListing> GetExternalcontactsOrganizationsExportsAsync (List<string> divisionIds = null, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// List organization exports for organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>Task of ApiResponse (OrganizationsExportListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OrganizationsExportListing>> GetExternalcontactsOrganizationsExportsAsyncWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null);
+
+        /// <summary>
         /// Get a schema
         /// </summary>
         /// <remarks>
@@ -4586,6 +4918,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Relationship)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Relationship>> GetExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, List<string> expand = null);
+
+        /// <summary>
+        /// Get relationships export for exportId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>Task of RelationshipsExport</returns>
+        
+        System.Threading.Tasks.Task<RelationshipsExport> GetExternalcontactsRelationshipsExportAsync (string exportId);
+
+        /// <summary>
+        /// Get relationships export for exportId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>Task of ApiResponse (RelationshipsExport)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<RelationshipsExport>> GetExternalcontactsRelationshipsExportAsyncWithHttpInfo (string exportId);
+
+        /// <summary>
+        /// List relationship exports for organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>Task of RelationshipsExportListing</returns>
+        
+        System.Threading.Tasks.Task<RelationshipsExportListing> GetExternalcontactsRelationshipsExportsAsync (List<string> divisionIds = null, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// List relationship exports for organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>Task of ApiResponse (RelationshipsExportListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<RelationshipsExportListing>> GetExternalcontactsRelationshipsExportsAsyncWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Look up contacts based on an attribute. Maximum of 25 values returned.
@@ -5970,6 +6354,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsMergeContactsAsyncWithHttpInfo (MergeRequest body);
 
         /// <summary>
+        /// Create notes export
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>Task of NotesExport</returns>
+        
+        System.Threading.Tasks.Task<NotesExport> PostExternalcontactsNotesExportsAsync (NotesExport body);
+
+        /// <summary>
+        /// Create notes export
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>Task of ApiResponse (NotesExport)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<NotesExport>> PostExternalcontactsNotesExportsAsyncWithHttpInfo (NotesExport body);
+
+        /// <summary>
         /// Create a note for an external organization
         /// </summary>
         /// <remarks>
@@ -6046,6 +6454,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostExternalcontactsOrganizationsEnrichAsyncWithHttpInfo (ExternalOrganizationEnrichRequest body, bool? dryRun = null);
 
         /// <summary>
+        /// Create organizations export
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>Task of OrganizationsExport</returns>
+        
+        System.Threading.Tasks.Task<OrganizationsExport> PostExternalcontactsOrganizationsExportsAsync (OrganizationsExport body);
+
+        /// <summary>
+        /// Create organizations export
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>Task of ApiResponse (OrganizationsExport)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OrganizationsExport>> PostExternalcontactsOrganizationsExportsAsyncWithHttpInfo (OrganizationsExport body);
+
+        /// <summary>
         /// Create a schema
         /// </summary>
         /// <remarks>
@@ -6092,6 +6524,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Relationship)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Relationship>> PostExternalcontactsRelationshipsAsyncWithHttpInfo (Relationship body);
+
+        /// <summary>
+        /// Create relationships export
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>Task of RelationshipsExport</returns>
+        
+        System.Threading.Tasks.Task<RelationshipsExport> PostExternalcontactsRelationshipsExportsAsync (RelationshipsExport body);
+
+        /// <summary>
+        /// Create relationships export
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>Task of ApiResponse (RelationshipsExport)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<RelationshipsExport>> PostExternalcontactsRelationshipsExportsAsyncWithHttpInfo (RelationshipsExport body);
 
         /// <summary>
         /// Update an external contact
@@ -14268,6 +14724,421 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get notes export for exportId 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>NotesExport</returns>
+        
+        public NotesExport GetExternalcontactsNotesExport (string exportId)
+        {
+             ApiResponse<NotesExport> localVarResponse = GetExternalcontactsNotesExportWithHttpInfo(exportId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get notes export for exportId 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>ApiResponse of NotesExport</returns>
+        
+        public ApiResponse< NotesExport > GetExternalcontactsNotesExportWithHttpInfo (string exportId)
+        { 
+            // verify the required parameter 'exportId' is set
+            if (exportId == null)
+                throw new ApiException(400, "Missing required parameter 'exportId' when calling ExternalContactsApi->GetExternalcontactsNotesExport");
+
+            var localVarPath = "/api/v2/externalcontacts/notes/exports/{exportId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (exportId != null) localVarPathParams.Add("exportId", this.Configuration.ApiClient.ParameterToString(exportId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsNotesExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsNotesExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsNotesExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<NotesExport>(localVarStatusCode,
+                localVarHeaders,
+                (NotesExport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotesExport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get notes export for exportId 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>Task of NotesExport</returns>
+        
+        public async System.Threading.Tasks.Task<NotesExport> GetExternalcontactsNotesExportAsync (string exportId)
+        {
+             ApiResponse<NotesExport> localVarResponse = await GetExternalcontactsNotesExportAsyncWithHttpInfo(exportId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get notes export for exportId 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>Task of ApiResponse (NotesExport)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<NotesExport>> GetExternalcontactsNotesExportAsyncWithHttpInfo (string exportId)
+        { 
+            // verify the required parameter 'exportId' is set
+            if (exportId == null)
+                throw new ApiException(400, "Missing required parameter 'exportId' when calling ExternalContactsApi->GetExternalcontactsNotesExport");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/notes/exports/{exportId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (exportId != null) localVarPathParams.Add("exportId", this.Configuration.ApiClient.ParameterToString(exportId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsNotesExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsNotesExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsNotesExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<NotesExport>(localVarStatusCode,
+                localVarHeaders,
+                (NotesExport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotesExport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// List note exports for organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>NotesExportListing</returns>
+        
+        public NotesExportListing GetExternalcontactsNotesExports (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        {
+             ApiResponse<NotesExportListing> localVarResponse = GetExternalcontactsNotesExportsWithHttpInfo(divisionIds, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List note exports for organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>ApiResponse of NotesExportListing</returns>
+        
+        public ApiResponse< NotesExportListing > GetExternalcontactsNotesExportsWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/notes/exports";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsNotesExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsNotesExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsNotesExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<NotesExportListing>(localVarStatusCode,
+                localVarHeaders,
+                (NotesExportListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotesExportListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// List note exports for organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>Task of NotesExportListing</returns>
+        
+        public async System.Threading.Tasks.Task<NotesExportListing> GetExternalcontactsNotesExportsAsync (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        {
+             ApiResponse<NotesExportListing> localVarResponse = await GetExternalcontactsNotesExportsAsyncWithHttpInfo(divisionIds, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List note exports for organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>Task of ApiResponse (NotesExportListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<NotesExportListing>> GetExternalcontactsNotesExportsAsyncWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/notes/exports";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsNotesExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsNotesExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsNotesExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<NotesExportListing>(localVarStatusCode,
+                localVarHeaders,
+                (NotesExportListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotesExportListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Fetch an external organization 
         /// 
         /// </summary>
@@ -15840,6 +16711,421 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ExternalOrganizationListing>(localVarStatusCode,
                 localVarHeaders,
                 (ExternalOrganizationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganizationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get organizations export for exportId 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>OrganizationsExport</returns>
+        
+        public OrganizationsExport GetExternalcontactsOrganizationsExport (string exportId)
+        {
+             ApiResponse<OrganizationsExport> localVarResponse = GetExternalcontactsOrganizationsExportWithHttpInfo(exportId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get organizations export for exportId 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>ApiResponse of OrganizationsExport</returns>
+        
+        public ApiResponse< OrganizationsExport > GetExternalcontactsOrganizationsExportWithHttpInfo (string exportId)
+        { 
+            // verify the required parameter 'exportId' is set
+            if (exportId == null)
+                throw new ApiException(400, "Missing required parameter 'exportId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsExport");
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/exports/{exportId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (exportId != null) localVarPathParams.Add("exportId", this.Configuration.ApiClient.ParameterToString(exportId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsOrganizationsExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrganizationsExport>(localVarStatusCode,
+                localVarHeaders,
+                (OrganizationsExport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationsExport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get organizations export for exportId 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>Task of OrganizationsExport</returns>
+        
+        public async System.Threading.Tasks.Task<OrganizationsExport> GetExternalcontactsOrganizationsExportAsync (string exportId)
+        {
+             ApiResponse<OrganizationsExport> localVarResponse = await GetExternalcontactsOrganizationsExportAsyncWithHttpInfo(exportId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get organizations export for exportId 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>Task of ApiResponse (OrganizationsExport)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationsExport>> GetExternalcontactsOrganizationsExportAsyncWithHttpInfo (string exportId)
+        { 
+            // verify the required parameter 'exportId' is set
+            if (exportId == null)
+                throw new ApiException(400, "Missing required parameter 'exportId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsExport");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/exports/{exportId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (exportId != null) localVarPathParams.Add("exportId", this.Configuration.ApiClient.ParameterToString(exportId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsOrganizationsExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrganizationsExport>(localVarStatusCode,
+                localVarHeaders,
+                (OrganizationsExport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationsExport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// List organization exports for organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>OrganizationsExportListing</returns>
+        
+        public OrganizationsExportListing GetExternalcontactsOrganizationsExports (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        {
+             ApiResponse<OrganizationsExportListing> localVarResponse = GetExternalcontactsOrganizationsExportsWithHttpInfo(divisionIds, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List organization exports for organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>ApiResponse of OrganizationsExportListing</returns>
+        
+        public ApiResponse< OrganizationsExportListing > GetExternalcontactsOrganizationsExportsWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/exports";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsOrganizationsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrganizationsExportListing>(localVarStatusCode,
+                localVarHeaders,
+                (OrganizationsExportListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationsExportListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// List organization exports for organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>Task of OrganizationsExportListing</returns>
+        
+        public async System.Threading.Tasks.Task<OrganizationsExportListing> GetExternalcontactsOrganizationsExportsAsync (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        {
+             ApiResponse<OrganizationsExportListing> localVarResponse = await GetExternalcontactsOrganizationsExportsAsyncWithHttpInfo(divisionIds, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List organization exports for organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>Task of ApiResponse (OrganizationsExportListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationsExportListing>> GetExternalcontactsOrganizationsExportsAsyncWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/exports";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsOrganizationsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrganizationsExportListing>(localVarStatusCode,
+                localVarHeaders,
+                (OrganizationsExportListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationsExportListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -17460,6 +18746,421 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Relationship>(localVarStatusCode,
                 localVarHeaders,
                 (Relationship) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Relationship)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get relationships export for exportId 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>RelationshipsExport</returns>
+        
+        public RelationshipsExport GetExternalcontactsRelationshipsExport (string exportId)
+        {
+             ApiResponse<RelationshipsExport> localVarResponse = GetExternalcontactsRelationshipsExportWithHttpInfo(exportId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get relationships export for exportId 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>ApiResponse of RelationshipsExport</returns>
+        
+        public ApiResponse< RelationshipsExport > GetExternalcontactsRelationshipsExportWithHttpInfo (string exportId)
+        { 
+            // verify the required parameter 'exportId' is set
+            if (exportId == null)
+                throw new ApiException(400, "Missing required parameter 'exportId' when calling ExternalContactsApi->GetExternalcontactsRelationshipsExport");
+
+            var localVarPath = "/api/v2/externalcontacts/relationships/exports/{exportId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (exportId != null) localVarPathParams.Add("exportId", this.Configuration.ApiClient.ParameterToString(exportId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsRelationshipsExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsRelationshipsExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsRelationshipsExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RelationshipsExport>(localVarStatusCode,
+                localVarHeaders,
+                (RelationshipsExport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RelationshipsExport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get relationships export for exportId 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>Task of RelationshipsExport</returns>
+        
+        public async System.Threading.Tasks.Task<RelationshipsExport> GetExternalcontactsRelationshipsExportAsync (string exportId)
+        {
+             ApiResponse<RelationshipsExport> localVarResponse = await GetExternalcontactsRelationshipsExportAsyncWithHttpInfo(exportId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get relationships export for exportId 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="exportId">Export id</param>
+        /// <returns>Task of ApiResponse (RelationshipsExport)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<RelationshipsExport>> GetExternalcontactsRelationshipsExportAsyncWithHttpInfo (string exportId)
+        { 
+            // verify the required parameter 'exportId' is set
+            if (exportId == null)
+                throw new ApiException(400, "Missing required parameter 'exportId' when calling ExternalContactsApi->GetExternalcontactsRelationshipsExport");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/relationships/exports/{exportId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (exportId != null) localVarPathParams.Add("exportId", this.Configuration.ApiClient.ParameterToString(exportId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsRelationshipsExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsRelationshipsExport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsRelationshipsExport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RelationshipsExport>(localVarStatusCode,
+                localVarHeaders,
+                (RelationshipsExport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RelationshipsExport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// List relationship exports for organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>RelationshipsExportListing</returns>
+        
+        public RelationshipsExportListing GetExternalcontactsRelationshipsExports (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        {
+             ApiResponse<RelationshipsExportListing> localVarResponse = GetExternalcontactsRelationshipsExportsWithHttpInfo(divisionIds, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List relationship exports for organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>ApiResponse of RelationshipsExportListing</returns>
+        
+        public ApiResponse< RelationshipsExportListing > GetExternalcontactsRelationshipsExportsWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/relationships/exports";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsRelationshipsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsRelationshipsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsRelationshipsExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RelationshipsExportListing>(localVarStatusCode,
+                localVarHeaders,
+                (RelationshipsExportListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RelationshipsExportListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// List relationship exports for organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>Task of RelationshipsExportListing</returns>
+        
+        public async System.Threading.Tasks.Task<RelationshipsExportListing> GetExternalcontactsRelationshipsExportsAsync (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        {
+             ApiResponse<RelationshipsExportListing> localVarResponse = await GetExternalcontactsRelationshipsExportsAsyncWithHttpInfo(divisionIds, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List relationship exports for organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="divisionIds">Division IDs of entities (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities (optional)</param>
+        /// <param name="pageSize">Number of entities to return (optional)</param>
+        /// <returns>Task of ApiResponse (RelationshipsExportListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<RelationshipsExportListing>> GetExternalcontactsRelationshipsExportsAsyncWithHttpInfo (List<string> divisionIds = null, string after = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/relationships/exports";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsRelationshipsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsRelationshipsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsRelationshipsExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RelationshipsExportListing>(localVarStatusCode,
+                localVarHeaders,
+                (RelationshipsExportListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RelationshipsExportListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -29392,6 +31093,221 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create notes export 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>NotesExport</returns>
+        
+        public NotesExport PostExternalcontactsNotesExports (NotesExport body)
+        {
+             ApiResponse<NotesExport> localVarResponse = PostExternalcontactsNotesExportsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create notes export 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>ApiResponse of NotesExport</returns>
+        
+        public ApiResponse< NotesExport > PostExternalcontactsNotesExportsWithHttpInfo (NotesExport body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsNotesExports");
+
+            var localVarPath = "/api/v2/externalcontacts/notes/exports";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsNotesExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostExternalcontactsNotesExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsNotesExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<NotesExport>(localVarStatusCode,
+                localVarHeaders,
+                (NotesExport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotesExport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create notes export 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>Task of NotesExport</returns>
+        
+        public async System.Threading.Tasks.Task<NotesExport> PostExternalcontactsNotesExportsAsync (NotesExport body)
+        {
+             ApiResponse<NotesExport> localVarResponse = await PostExternalcontactsNotesExportsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create notes export 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>Task of ApiResponse (NotesExport)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<NotesExport>> PostExternalcontactsNotesExportsAsyncWithHttpInfo (NotesExport body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsNotesExports");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/notes/exports";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsNotesExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostExternalcontactsNotesExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsNotesExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<NotesExport>(localVarStatusCode,
+                localVarHeaders,
+                (NotesExport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotesExport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create a note for an external organization 
         /// 
         /// </summary>
@@ -30056,6 +31972,221 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create organizations export 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>OrganizationsExport</returns>
+        
+        public OrganizationsExport PostExternalcontactsOrganizationsExports (OrganizationsExport body)
+        {
+             ApiResponse<OrganizationsExport> localVarResponse = PostExternalcontactsOrganizationsExportsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create organizations export 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>ApiResponse of OrganizationsExport</returns>
+        
+        public ApiResponse< OrganizationsExport > PostExternalcontactsOrganizationsExportsWithHttpInfo (OrganizationsExport body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizationsExports");
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/exports";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizationsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostExternalcontactsOrganizationsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizationsExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrganizationsExport>(localVarStatusCode,
+                localVarHeaders,
+                (OrganizationsExport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationsExport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create organizations export 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>Task of OrganizationsExport</returns>
+        
+        public async System.Threading.Tasks.Task<OrganizationsExport> PostExternalcontactsOrganizationsExportsAsync (OrganizationsExport body)
+        {
+             ApiResponse<OrganizationsExport> localVarResponse = await PostExternalcontactsOrganizationsExportsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create organizations export 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>Task of ApiResponse (OrganizationsExport)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationsExport>> PostExternalcontactsOrganizationsExportsAsyncWithHttpInfo (OrganizationsExport body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizationsExports");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/exports";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizationsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostExternalcontactsOrganizationsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsOrganizationsExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrganizationsExport>(localVarStatusCode,
+                localVarHeaders,
+                (OrganizationsExport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationsExport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create a schema 
         /// 
         /// </summary>
@@ -30479,6 +32610,221 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Relationship>(localVarStatusCode,
                 localVarHeaders,
                 (Relationship) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Relationship)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create relationships export 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>RelationshipsExport</returns>
+        
+        public RelationshipsExport PostExternalcontactsRelationshipsExports (RelationshipsExport body)
+        {
+             ApiResponse<RelationshipsExport> localVarResponse = PostExternalcontactsRelationshipsExportsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create relationships export 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>ApiResponse of RelationshipsExport</returns>
+        
+        public ApiResponse< RelationshipsExport > PostExternalcontactsRelationshipsExportsWithHttpInfo (RelationshipsExport body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsRelationshipsExports");
+
+            var localVarPath = "/api/v2/externalcontacts/relationships/exports";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsRelationshipsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostExternalcontactsRelationshipsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsRelationshipsExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RelationshipsExport>(localVarStatusCode,
+                localVarHeaders,
+                (RelationshipsExport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RelationshipsExport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create relationships export 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>Task of RelationshipsExport</returns>
+        
+        public async System.Threading.Tasks.Task<RelationshipsExport> PostExternalcontactsRelationshipsExportsAsync (RelationshipsExport body)
+        {
+             ApiResponse<RelationshipsExport> localVarResponse = await PostExternalcontactsRelationshipsExportsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create relationships export 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Export</param>
+        /// <returns>Task of ApiResponse (RelationshipsExport)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<RelationshipsExport>> PostExternalcontactsRelationshipsExportsAsyncWithHttpInfo (RelationshipsExport body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsRelationshipsExports");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/relationships/exports";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsRelationshipsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostExternalcontactsRelationshipsExports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsRelationshipsExports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RelationshipsExport>(localVarStatusCode,
+                localVarHeaders,
+                (RelationshipsExport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RelationshipsExport)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

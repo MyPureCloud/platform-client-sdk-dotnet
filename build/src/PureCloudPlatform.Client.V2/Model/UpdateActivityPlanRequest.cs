@@ -73,6 +73,33 @@ namespace PureCloudPlatform.Client.V2.Model
             Inactive
         }
         /// <summary>
+        /// The type of the activity plan
+        /// </summary>
+        /// <value>The type of the activity plan</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Individual for "Individual"
+            /// </summary>
+            [EnumMember(Value = "Individual")]
+            Individual,
+            
+            /// <summary>
+            /// Enum Group for "Group"
+            /// </summary>
+            [EnumMember(Value = "Group")]
+            Group
+        }
+        /// <summary>
         /// The optimization objective of this activity plan
         /// </summary>
         /// <value>The optimization objective of this activity plan</value>
@@ -84,6 +111,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The state of this activity plan</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        /// <summary>
+        /// The type of the activity plan
+        /// </summary>
+        /// <value>The type of the activity plan</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateActivityPlanRequest" /> class.
         /// </summary>
@@ -97,7 +130,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OptimizationObjective">The optimization objective of this activity plan.</param>
         /// <param name="State">The state of this activity plan.</param>
         /// <param name="FixedAvailability">Fixed availability configuration for the activity plan.</param>
-        public UpdateActivityPlanRequest(string Name = null, string Description = null, ValueWrapperGroupSettings GroupSettings = null, ValueWrapperUserSearchRule AttendeesSearchRule = null, ValueWrapperUserSearchRule FacilitatorsSearchRule = null, int? TransitionTimeMinutes = null, ValueWrapperActivityPlanServiceGoalImpactOverrides ServiceGoalImpactOverrides = null, OptimizationObjectiveEnum? OptimizationObjective = null, StateEnum? State = null, ListWrapperFixedAvailability FixedAvailability = null)
+        /// <param name="ActivityCodeId">The activity code associated with the activity plan.</param>
+        /// <param name="Type">The type of the activity plan.</param>
+        /// <param name="LengthMinutes">The length in minutes of the activity plan.</param>
+        /// <param name="CountsAsPaidTime">Whether the activity should count as paid time.</param>
+        /// <param name="RecurrenceSettings">Settings controlling recurrence for the activity plan. If not set the activity plan will only occur once.</param>
+        public UpdateActivityPlanRequest(string Name = null, string Description = null, ValueWrapperGroupSettings GroupSettings = null, ValueWrapperUserSearchRule AttendeesSearchRule = null, ValueWrapperUserSearchRule FacilitatorsSearchRule = null, int? TransitionTimeMinutes = null, ValueWrapperActivityPlanServiceGoalImpactOverrides ServiceGoalImpactOverrides = null, OptimizationObjectiveEnum? OptimizationObjective = null, StateEnum? State = null, ListWrapperFixedAvailability FixedAvailability = null, string ActivityCodeId = null, TypeEnum? Type = null, int? LengthMinutes = null, bool? CountsAsPaidTime = null, RecurrenceSettingsBase RecurrenceSettings = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -109,6 +147,11 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OptimizationObjective = OptimizationObjective;
             this.State = State;
             this.FixedAvailability = FixedAvailability;
+            this.ActivityCodeId = ActivityCodeId;
+            this.Type = Type;
+            this.LengthMinutes = LengthMinutes;
+            this.CountsAsPaidTime = CountsAsPaidTime;
+            this.RecurrenceSettings = RecurrenceSettings;
             
         }
         
@@ -189,6 +232,44 @@ namespace PureCloudPlatform.Client.V2.Model
         public ListWrapperFixedAvailability FixedAvailability { get; set; }
 
 
+
+        /// <summary>
+        /// The activity code associated with the activity plan
+        /// </summary>
+        /// <value>The activity code associated with the activity plan</value>
+        [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
+        public string ActivityCodeId { get; set; }
+
+
+
+
+
+        /// <summary>
+        /// The length in minutes of the activity plan
+        /// </summary>
+        /// <value>The length in minutes of the activity plan</value>
+        [DataMember(Name="lengthMinutes", EmitDefaultValue=false)]
+        public int? LengthMinutes { get; set; }
+
+
+
+        /// <summary>
+        /// Whether the activity should count as paid time
+        /// </summary>
+        /// <value>Whether the activity should count as paid time</value>
+        [DataMember(Name="countsAsPaidTime", EmitDefaultValue=false)]
+        public bool? CountsAsPaidTime { get; set; }
+
+
+
+        /// <summary>
+        /// Settings controlling recurrence for the activity plan. If not set the activity plan will only occur once
+        /// </summary>
+        /// <value>Settings controlling recurrence for the activity plan. If not set the activity plan will only occur once</value>
+        [DataMember(Name="recurrenceSettings", EmitDefaultValue=false)]
+        public RecurrenceSettingsBase RecurrenceSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -208,6 +289,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OptimizationObjective: ").Append(OptimizationObjective).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  FixedAvailability: ").Append(FixedAvailability).Append("\n");
+            sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  LengthMinutes: ").Append(LengthMinutes).Append("\n");
+            sb.Append("  CountsAsPaidTime: ").Append(CountsAsPaidTime).Append("\n");
+            sb.Append("  RecurrenceSettings: ").Append(RecurrenceSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -297,6 +383,31 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FixedAvailability == other.FixedAvailability ||
                     this.FixedAvailability != null &&
                     this.FixedAvailability.Equals(other.FixedAvailability)
+                ) &&
+                (
+                    this.ActivityCodeId == other.ActivityCodeId ||
+                    this.ActivityCodeId != null &&
+                    this.ActivityCodeId.Equals(other.ActivityCodeId)
+                ) &&
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.LengthMinutes == other.LengthMinutes ||
+                    this.LengthMinutes != null &&
+                    this.LengthMinutes.Equals(other.LengthMinutes)
+                ) &&
+                (
+                    this.CountsAsPaidTime == other.CountsAsPaidTime ||
+                    this.CountsAsPaidTime != null &&
+                    this.CountsAsPaidTime.Equals(other.CountsAsPaidTime)
+                ) &&
+                (
+                    this.RecurrenceSettings == other.RecurrenceSettings ||
+                    this.RecurrenceSettings != null &&
+                    this.RecurrenceSettings.Equals(other.RecurrenceSettings)
                 );
         }
 
@@ -340,6 +451,21 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FixedAvailability != null)
                     hash = hash * 59 + this.FixedAvailability.GetHashCode();
+
+                if (this.ActivityCodeId != null)
+                    hash = hash * 59 + this.ActivityCodeId.GetHashCode();
+
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.LengthMinutes != null)
+                    hash = hash * 59 + this.LengthMinutes.GetHashCode();
+
+                if (this.CountsAsPaidTime != null)
+                    hash = hash * 59 + this.CountsAsPaidTime.GetHashCode();
+
+                if (this.RecurrenceSettings != null)
+                    hash = hash * 59 + this.RecurrenceSettings.GetHashCode();
 
                 return hash;
             }

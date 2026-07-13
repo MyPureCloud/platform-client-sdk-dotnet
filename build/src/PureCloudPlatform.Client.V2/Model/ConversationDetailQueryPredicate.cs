@@ -424,6 +424,30 @@ namespace PureCloudPlatform.Client.V2.Model
             Tbarging,
             
             /// <summary>
+            /// Enum Tcallbackabandon for "tCallbackAbandon"
+            /// </summary>
+            [EnumMember(Value = "tCallbackAbandon")]
+            Tcallbackabandon,
+            
+            /// <summary>
+            /// Enum Tcallbackconnect for "tCallbackConnect"
+            /// </summary>
+            [EnumMember(Value = "tCallbackConnect")]
+            Tcallbackconnect,
+            
+            /// <summary>
+            /// Enum Tcallbacknotreached for "tCallbackNotReached"
+            /// </summary>
+            [EnumMember(Value = "tCallbackNotReached")]
+            Tcallbacknotreached,
+            
+            /// <summary>
+            /// Enum Tcallbackvirtualwait for "tCallbackVirtualWait"
+            /// </summary>
+            [EnumMember(Value = "tCallbackVirtualWait")]
+            Tcallbackvirtualwait,
+            
+            /// <summary>
             /// Enum Tcfcabandon for "tCfcAbandon"
             /// </summary>
             [EnumMember(Value = "tCfcAbandon")]

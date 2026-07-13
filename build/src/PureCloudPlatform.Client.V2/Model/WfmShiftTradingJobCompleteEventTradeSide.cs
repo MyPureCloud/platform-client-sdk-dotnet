@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="UserId">UserId.</param>
         /// <param name="Shift">Shift.</param>
-        public WfmShiftTradingJobCompleteEventTradeSide(string UserId = null, WfmShiftTradingJobCompleteEventTradeShift Shift = null)
+        /// <param name="ReviewNote">ReviewNote.</param>
+        public WfmShiftTradingJobCompleteEventTradeSide(string UserId = null, WfmShiftTradingJobCompleteEventTradeShift Shift = null, string ReviewNote = null)
         {
             this.UserId = UserId;
             this.Shift = Shift;
+            this.ReviewNote = ReviewNote;
             
         }
         
@@ -47,6 +49,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public WfmShiftTradingJobCompleteEventTradeShift Shift { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets ReviewNote
+        /// </summary>
+        [DataMember(Name="reviewNote", EmitDefaultValue=false)]
+        public string ReviewNote { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -58,6 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Shift: ").Append(Shift).Append("\n");
+            sb.Append("  ReviewNote: ").Append(ReviewNote).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,6 +118,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Shift == other.Shift ||
                     this.Shift != null &&
                     this.Shift.Equals(other.Shift)
+                ) &&
+                (
+                    this.ReviewNote == other.ReviewNote ||
+                    this.ReviewNote != null &&
+                    this.ReviewNote.Equals(other.ReviewNote)
                 );
         }
 
@@ -126,6 +142,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Shift != null)
                     hash = hash * 59 + this.Shift.GetHashCode();
+
+                if (this.ReviewNote != null)
+                    hash = hash * 59 + this.ReviewNote.GetHashCode();
 
                 return hash;
             }

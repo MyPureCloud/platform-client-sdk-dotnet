@@ -199,7 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomerIntent">The customer intent for the Case..</param>
         /// <param name="CreationStatus">The creation status of the Case..</param>
         /// <param name="TtlSeconds">The time-to-live in seconds for the lifetime of the Case..</param>
-        public Case(string Name = null, StarrableDivision Division = null, int? Version = null, string Reference = null, CaseplanReference Caseplan = null, string Summary = null, UserReference Owner = null, StatusEnum? Status = null, PriorityEnum? Priority = null, DateTime? DateDue = null, DateTime? DateStarted = null, DateTime? DateClosed = null, DateTime? DateCreated = null, DateTime? DateModified = null, UserReference ModifiedBy = null, CaseExternalContactReference ExternalContact = null, CustomerIntentReference CustomerIntent = null, CreationStatusEnum? CreationStatus = null, int? TtlSeconds = null)
+        public Case(string Name = null, StarrableDivision Division = null, int? Version = null, string Reference = null, CaseplanReference Caseplan = null, string Summary = null, CaseUserReference Owner = null, StatusEnum? Status = null, PriorityEnum? Priority = null, DateTime? DateDue = null, DateTime? DateStarted = null, DateTime? DateClosed = null, DateTime? DateCreated = null, DateTime? DateModified = null, CaseUserReference ModifiedBy = null, CaseExternalContactReference ExternalContact = null, CustomerIntentReference CustomerIntent = null, CreationStatusEnum? CreationStatus = null, int? TtlSeconds = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -293,7 +293,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The owner of the Case.</value>
         [DataMember(Name="owner", EmitDefaultValue=false)]
-        public UserReference Owner { get; set; }
+        public CaseUserReference Owner { get; set; }
 
 
 
@@ -351,7 +351,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The ID of the User who modified the Case.</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public UserReference ModifiedBy { get; set; }
+        public CaseUserReference ModifiedBy { get; set; }
 
 
 

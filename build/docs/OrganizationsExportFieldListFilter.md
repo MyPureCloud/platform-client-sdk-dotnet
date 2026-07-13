@@ -1,0 +1,14 @@
+# OrganizationsExportFieldListFilter
+
+## ININ.PureCloudApi.Model.OrganizationsExportFieldListFilter
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Field** | **string** | Field name to apply the filter | |
+| **Values** | **List&lt;string&gt;** | Values to check field&#39;s value against | |
+
+
+
+_PureCloudPlatform.Client.V2 268.0.0_

@@ -694,7 +694,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ContentExplorationView for "CONTENT_EXPLORATION_VIEW"
             /// </summary>
             [EnumMember(Value = "CONTENT_EXPLORATION_VIEW")]
-            ContentExplorationView
+            ContentExplorationView,
+            
+            /// <summary>
+            /// Enum CallbackQueuePerformanceSummaryView for "CALLBACK_QUEUE_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CALLBACK_QUEUE_PERFORMANCE_SUMMARY_VIEW")]
+            CallbackQueuePerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum CallbackQueuePerformanceDetailView for "CALLBACK_QUEUE_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CALLBACK_QUEUE_PERFORMANCE_DETAIL_VIEW")]
+            CallbackQueuePerformanceDetailView
         }
         /// <summary>
         /// Gets or Sets ExportErrorMessagesType

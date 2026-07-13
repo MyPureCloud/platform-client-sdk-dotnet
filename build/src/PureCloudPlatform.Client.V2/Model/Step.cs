@@ -194,6 +194,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The workitem activity linked to this step. Present only for workitem-type steps that have been activated.
+        /// </summary>
+        /// <value>The workitem activity linked to this step. Present only for workitem-type steps that have been activated.</value>
+        [DataMember(Name="workitemActivity", EmitDefaultValue=false)]
+        public WorkitemActivityReference WorkitemActivity { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -230,6 +239,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Stage: ").Append(Stage).Append("\n");
+            sb.Append("  WorkitemActivity: ").Append(WorkitemActivity).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Case: ").Append(Case).Append("\n");
             sb.Append("}\n");
@@ -328,6 +338,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Stage.Equals(other.Stage)
                 ) &&
                 (
+                    this.WorkitemActivity == other.WorkitemActivity ||
+                    this.WorkitemActivity != null &&
+                    this.WorkitemActivity.Equals(other.WorkitemActivity)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -382,6 +397,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Stage != null)
                     hash = hash * 59 + this.Stage.GetHashCode();
+
+                if (this.WorkitemActivity != null)
+                    hash = hash * 59 + this.WorkitemActivity.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

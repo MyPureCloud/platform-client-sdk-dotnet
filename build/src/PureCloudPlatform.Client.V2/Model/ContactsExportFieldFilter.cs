@@ -49,7 +49,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Externalorganizationid for "ExternalOrganizationId"
             /// </summary>
             [EnumMember(Value = "ExternalOrganizationId")]
-            Externalorganizationid
+            Externalorganizationid,
+            
+            /// <summary>
+            /// Enum Externalsourceid for "ExternalSourceId"
+            /// </summary>
+            [EnumMember(Value = "ExternalSourceId")]
+            Externalsourceid,
+            
+            /// <summary>
+            /// Enum Schemaid for "SchemaId"
+            /// </summary>
+            [EnumMember(Value = "SchemaId")]
+            Schemaid,
+            
+            /// <summary>
+            /// Enum Schemaversion for "SchemaVersion"
+            /// </summary>
+            [EnumMember(Value = "SchemaVersion")]
+            Schemaversion
         }
         /// <summary>
         /// Field name to apply the filter

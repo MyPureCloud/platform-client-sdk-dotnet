@@ -150,6 +150,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Audio format info
+        /// </summary>
+        /// <value>Audio format info</value>
+        [DataMember(Name="audioFormat", EmitDefaultValue=false)]
+        public AudioFormat AudioFormat { get; private set; }
+
+
+
+        /// <summary>
         /// Gets or Sets TtsString
         /// </summary>
         [DataMember(Name="ttsString", EmitDefaultValue=false)]
@@ -223,6 +232,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
+            sb.Append("  AudioFormat: ").Append(AudioFormat).Append("\n");
             sb.Append("  TtsString: ").Append(TtsString).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  UploadUri: ").Append(UploadUri).Append("\n");
@@ -302,6 +312,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaUri.Equals(other.MediaUri)
                 ) &&
                 (
+                    this.AudioFormat == other.AudioFormat ||
+                    this.AudioFormat != null &&
+                    this.AudioFormat.Equals(other.AudioFormat)
+                ) &&
+                (
                     this.TtsString == other.TtsString ||
                     this.TtsString != null &&
                     this.TtsString.Equals(other.TtsString)
@@ -371,6 +386,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MediaUri != null)
                     hash = hash * 59 + this.MediaUri.GetHashCode();
+
+                if (this.AudioFormat != null)
+                    hash = hash * 59 + this.AudioFormat.GetHashCode();
 
                 if (this.TtsString != null)
                     hash = hash * 59 + this.TtsString.GetHashCode();

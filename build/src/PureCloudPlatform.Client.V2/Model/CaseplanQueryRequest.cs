@@ -56,16 +56,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Filter by Caseplan name (case-insensitive, partial match). Omitting name returns all Caseplans (subject to pagination)..</param>
         /// <param name="NameSearchType">Type of name search to perform. Default is BEGINS_WITH..</param>
+        /// <param name="DivisionIds">Divisions to filter by. Accepts a list of UUIDs and/or &#39;*&#39;..</param>
+        /// <param name="Filters">List of filter objects to be used in the search. Valid filter names are: &#39;id&#39;, &#39;name&#39;, &#39;divisionId&#39;. Multiple filters are combined with AND logic..</param>
+        /// <param name="Attributes">List of entity attributes to be retrieved in the result..</param>
         /// <param name="PageSize">Number of results per page. Maximum is 200. Default is 25..</param>
         /// <param name="After">Cursor for pagination. Use the \&quot;after\&quot; value from the previous response..</param>
-        /// <param name="DivisionIds">Divisions to filter by. Accepts a list of UUIDs and/or &#39;*&#39;..</param>
-        public CaseplanQueryRequest(string Name = null, NameSearchTypeEnum? NameSearchType = null, int? PageSize = null, string After = null, List<string> DivisionIds = null)
+        public CaseplanQueryRequest(string Name = null, NameSearchTypeEnum? NameSearchType = null, List<string> DivisionIds = null, List<CaseplanFilter> Filters = null, List<string> Attributes = null, int? PageSize = null, string After = null)
         {
             this.Name = Name;
             this.NameSearchType = NameSearchType;
+            this.DivisionIds = DivisionIds;
+            this.Filters = Filters;
+            this.Attributes = Attributes;
             this.PageSize = PageSize;
             this.After = After;
-            this.DivisionIds = DivisionIds;
             
         }
         
@@ -79,6 +83,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Name { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// Divisions to filter by. Accepts a list of UUIDs and/or &#39;*&#39;.
+        /// </summary>
+        /// <value>Divisions to filter by. Accepts a list of UUIDs and/or &#39;*&#39;.</value>
+        [DataMember(Name="divisionIds", EmitDefaultValue=false)]
+        public List<string> DivisionIds { get; set; }
+
+
+
+        /// <summary>
+        /// List of filter objects to be used in the search. Valid filter names are: &#39;id&#39;, &#39;name&#39;, &#39;divisionId&#39;. Multiple filters are combined with AND logic.
+        /// </summary>
+        /// <value>List of filter objects to be used in the search. Valid filter names are: &#39;id&#39;, &#39;name&#39;, &#39;divisionId&#39;. Multiple filters are combined with AND logic.</value>
+        [DataMember(Name="filters", EmitDefaultValue=false)]
+        public List<CaseplanFilter> Filters { get; set; }
+
+
+
+        /// <summary>
+        /// List of entity attributes to be retrieved in the result.
+        /// </summary>
+        /// <value>List of entity attributes to be retrieved in the result.</value>
+        [DataMember(Name="attributes", EmitDefaultValue=false)]
+        public List<string> Attributes { get; set; }
 
 
 
@@ -99,15 +130,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string After { get; set; }
 
 
-
-        /// <summary>
-        /// Divisions to filter by. Accepts a list of UUIDs and/or &#39;*&#39;.
-        /// </summary>
-        /// <value>Divisions to filter by. Accepts a list of UUIDs and/or &#39;*&#39;.</value>
-        [DataMember(Name="divisionIds", EmitDefaultValue=false)]
-        public List<string> DivisionIds { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -119,9 +141,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  NameSearchType: ").Append(NameSearchType).Append("\n");
+            sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
+            sb.Append("  Filters: ").Append(Filters).Append("\n");
+            sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  After: ").Append(After).Append("\n");
-            sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -173,6 +197,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NameSearchType.Equals(other.NameSearchType)
                 ) &&
                 (
+                    this.DivisionIds == other.DivisionIds ||
+                    this.DivisionIds != null &&
+                    this.DivisionIds.SequenceEqual(other.DivisionIds)
+                ) &&
+                (
+                    this.Filters == other.Filters ||
+                    this.Filters != null &&
+                    this.Filters.SequenceEqual(other.Filters)
+                ) &&
+                (
+                    this.Attributes == other.Attributes ||
+                    this.Attributes != null &&
+                    this.Attributes.SequenceEqual(other.Attributes)
+                ) &&
+                (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
@@ -181,11 +220,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.After == other.After ||
                     this.After != null &&
                     this.After.Equals(other.After)
-                ) &&
-                (
-                    this.DivisionIds == other.DivisionIds ||
-                    this.DivisionIds != null &&
-                    this.DivisionIds.SequenceEqual(other.DivisionIds)
                 );
         }
 
@@ -206,14 +240,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.NameSearchType != null)
                     hash = hash * 59 + this.NameSearchType.GetHashCode();
 
+                if (this.DivisionIds != null)
+                    hash = hash * 59 + this.DivisionIds.GetHashCode();
+
+                if (this.Filters != null)
+                    hash = hash * 59 + this.Filters.GetHashCode();
+
+                if (this.Attributes != null)
+                    hash = hash * 59 + this.Attributes.GetHashCode();
+
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
 
                 if (this.After != null)
                     hash = hash * 59 + this.After.GetHashCode();
-
-                if (this.DivisionIds != null)
-                    hash = hash * 59 + this.DivisionIds.GetHashCode();
 
                 return hash;
             }

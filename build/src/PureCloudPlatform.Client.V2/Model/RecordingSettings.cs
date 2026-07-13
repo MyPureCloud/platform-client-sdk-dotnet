@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RegionalRecordingStorageEnabled">Store call recordings in the region where they are intended to be recorded, otherwise in the organization&#39;s home region.</param>
         /// <param name="RecordingPlaybackUrlTtl">The duration in minutes for which the generated URL for recording playback remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes..</param>
         /// <param name="RecordingBatchDownloadUrlTtl">The duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes..</param>
-        public RecordingSettings(int? MaxSimultaneousStreams = null, int? MaxConfigurableScreenRecordingStreams = null, bool? RegionalRecordingStorageEnabled = null, int? RecordingPlaybackUrlTtl = null, int? RecordingBatchDownloadUrlTtl = null)
+        /// <param name="StopRecordingWhenOnlyExternalParticipants">Whether to stop recording in conference when only external participants remain.</param>
+        public RecordingSettings(int? MaxSimultaneousStreams = null, int? MaxConfigurableScreenRecordingStreams = null, bool? RegionalRecordingStorageEnabled = null, int? RecordingPlaybackUrlTtl = null, int? RecordingBatchDownloadUrlTtl = null, bool? StopRecordingWhenOnlyExternalParticipants = null)
         {
             this.MaxSimultaneousStreams = MaxSimultaneousStreams;
             this.MaxConfigurableScreenRecordingStreams = MaxConfigurableScreenRecordingStreams;
             this.RegionalRecordingStorageEnabled = RegionalRecordingStorageEnabled;
             this.RecordingPlaybackUrlTtl = RecordingPlaybackUrlTtl;
             this.RecordingBatchDownloadUrlTtl = RecordingBatchDownloadUrlTtl;
+            this.StopRecordingWhenOnlyExternalParticipants = StopRecordingWhenOnlyExternalParticipants;
             
         }
         
@@ -82,6 +84,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? RecordingBatchDownloadUrlTtl { get; set; }
 
 
+
+        /// <summary>
+        /// Whether to stop recording in conference when only external participants remain
+        /// </summary>
+        /// <value>Whether to stop recording in conference when only external participants remain</value>
+        [DataMember(Name="stopRecordingWhenOnlyExternalParticipants", EmitDefaultValue=false)]
+        public bool? StopRecordingWhenOnlyExternalParticipants { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RegionalRecordingStorageEnabled: ").Append(RegionalRecordingStorageEnabled).Append("\n");
             sb.Append("  RecordingPlaybackUrlTtl: ").Append(RecordingPlaybackUrlTtl).Append("\n");
             sb.Append("  RecordingBatchDownloadUrlTtl: ").Append(RecordingBatchDownloadUrlTtl).Append("\n");
+            sb.Append("  StopRecordingWhenOnlyExternalParticipants: ").Append(StopRecordingWhenOnlyExternalParticipants).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +172,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecordingBatchDownloadUrlTtl == other.RecordingBatchDownloadUrlTtl ||
                     this.RecordingBatchDownloadUrlTtl != null &&
                     this.RecordingBatchDownloadUrlTtl.Equals(other.RecordingBatchDownloadUrlTtl)
+                ) &&
+                (
+                    this.StopRecordingWhenOnlyExternalParticipants == other.StopRecordingWhenOnlyExternalParticipants ||
+                    this.StopRecordingWhenOnlyExternalParticipants != null &&
+                    this.StopRecordingWhenOnlyExternalParticipants.Equals(other.StopRecordingWhenOnlyExternalParticipants)
                 );
         }
 
@@ -188,6 +205,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RecordingBatchDownloadUrlTtl != null)
                     hash = hash * 59 + this.RecordingBatchDownloadUrlTtl.GetHashCode();
+
+                if (this.StopRecordingWhenOnlyExternalParticipants != null)
+                    hash = hash * 59 + this.StopRecordingWhenOnlyExternalParticipants.GetHashCode();
 
                 return hash;
             }

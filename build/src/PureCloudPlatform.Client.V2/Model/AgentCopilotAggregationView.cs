@@ -40,6 +40,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ncannedresponsesuggestions,
             
             /// <summary>
+            /// Enum Ndistinctconversations for "nDistinctConversations"
+            /// </summary>
+            [EnumMember(Value = "nDistinctConversations")]
+            Ndistinctconversations,
+            
+            /// <summary>
             /// Enum Ndistinctsuggestions for "nDistinctSuggestions"
             /// </summary>
             [EnumMember(Value = "nDistinctSuggestions")]
@@ -67,13 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nscriptsuggestions for "nScriptSuggestions"
             /// </summary>
             [EnumMember(Value = "nScriptSuggestions")]
-            Nscriptsuggestions,
-            
-            /// <summary>
-            /// Enum Ndistinctconversations for "nDistinctConversations"
-            /// </summary>
-            [EnumMember(Value = "nDistinctConversations")]
-            Ndistinctconversations
+            Nscriptsuggestions
         }
         /// <summary>
         /// Type of view you wish to create

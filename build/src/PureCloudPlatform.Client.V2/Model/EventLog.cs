@@ -176,7 +176,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum WhatsappCampaignSchedule for "WHATSAPP_CAMPAIGN_SCHEDULE"
             /// </summary>
             [EnumMember(Value = "WHATSAPP_CAMPAIGN_SCHEDULE")]
-            WhatsappCampaignSchedule
+            WhatsappCampaignSchedule,
+            
+            /// <summary>
+            /// Enum RetentionPolicy for "RETENTION_POLICY"
+            /// </summary>
+            [EnumMember(Value = "RETENTION_POLICY")]
+            RetentionPolicy
         }
         /// <summary>
         /// Gets or Sets Level

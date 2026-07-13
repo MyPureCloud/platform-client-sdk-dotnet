@@ -13,7 +13,7 @@
 | **Reference** | **string** | The reference identifier of the Case. | [optional] |
 | **Caseplan** | [**CaseplanReference**](CaseplanReference) | The Caseplan the Case was created from. | [optional] |
 | **Summary** | **string** | Overview information for the Case. | [optional] |
-| **Owner** | [**UserReference**](UserReference) | The owner of the Case. | [optional] |
+| **Owner** | [**CaseUserReference**](CaseUserReference) | The owner of the Case. | [optional] |
 | **Status** | **string** | The status of the Case. | [optional] |
 | **Priority** | **string** | The priority of the Case. | [optional] |
 | **DateDue** | **DateTime?** | The due date of the Case. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -21,7 +21,7 @@
 | **DateClosed** | **DateTime?** | The completion time of the Case. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateCreated** | **DateTime?** | The date the Case was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | The date the Case was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **ModifiedBy** | [**UserReference**](UserReference) | The ID of the User who modified the Case. | [optional] |
+| **ModifiedBy** | [**CaseUserReference**](CaseUserReference) | The ID of the User who modified the Case. | [optional] |
 | **ExternalContact** | [**CaseExternalContactReference**](CaseExternalContactReference) | The External Contact associated with the Case. | [optional] |
 | **CustomerIntent** | [**CustomerIntentReference**](CustomerIntentReference) | The customer intent for the Case. | [optional] |
 | **CreationStatus** | **string** | The creation status of the Case. | [optional] |
@@ -30,4 +30,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 267.0.0_
+_PureCloudPlatform.Client.V2 268.0.0_

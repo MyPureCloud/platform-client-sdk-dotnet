@@ -511,7 +511,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BargedTime">BargedTime.</param>
         /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
         /// <param name="FaxStatus">FaxStatus.</param>
-        public QueueConversationCallEventTopicCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCallEventTopicUriReference User = null, QueueConversationCallEventTopicUriReference Queue = null, QueueConversationCallEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationCallEventTopicErrorBody ErrorInfo = null, QueueConversationCallEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, QueueConversationCallEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationCallEventTopicUriReference ExternalOrganization = null, QueueConversationCallEventTopicWrapup Wrapup = null, QueueConversationCallEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCallEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationCallEventTopicQueueMediaSettings QueueMediaSettings = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationCallEventTopicRecordersState RecordersState = null, QueueConversationCallEventTopicDisposition Disposition = null, string TransferSource = null, bool? SecurePause = null, QueueConversationCallEventTopicUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, DateTime? BargedTime = null, string ConsultParticipantId = null, QueueConversationCallEventTopicFaxStatus FaxStatus = null)
+        /// <param name="PublicIpAddress">PublicIpAddress.</param>
+        public QueueConversationCallEventTopicCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCallEventTopicUriReference User = null, QueueConversationCallEventTopicUriReference Queue = null, QueueConversationCallEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationCallEventTopicErrorBody ErrorInfo = null, QueueConversationCallEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, QueueConversationCallEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationCallEventTopicUriReference ExternalOrganization = null, QueueConversationCallEventTopicWrapup Wrapup = null, QueueConversationCallEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCallEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationCallEventTopicQueueMediaSettings QueueMediaSettings = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationCallEventTopicRecordersState RecordersState = null, QueueConversationCallEventTopicDisposition Disposition = null, string TransferSource = null, bool? SecurePause = null, QueueConversationCallEventTopicUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, DateTime? BargedTime = null, string ConsultParticipantId = null, QueueConversationCallEventTopicFaxStatus FaxStatus = null, string PublicIpAddress = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -571,6 +572,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.BargedTime = BargedTime;
             this.ConsultParticipantId = ConsultParticipantId;
             this.FaxStatus = FaxStatus;
+            this.PublicIpAddress = PublicIpAddress;
             
         }
         
@@ -1003,6 +1005,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public QueueConversationCallEventTopicFaxStatus FaxStatus { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets PublicIpAddress
+        /// </summary>
+        [DataMember(Name="publicIpAddress", EmitDefaultValue=false)]
+        public string PublicIpAddress { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1070,6 +1080,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  BargedTime: ").Append(BargedTime).Append("\n");
             sb.Append("  ConsultParticipantId: ").Append(ConsultParticipantId).Append("\n");
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
+            sb.Append("  PublicIpAddress: ").Append(PublicIpAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1399,6 +1410,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FaxStatus == other.FaxStatus ||
                     this.FaxStatus != null &&
                     this.FaxStatus.Equals(other.FaxStatus)
+                ) &&
+                (
+                    this.PublicIpAddress == other.PublicIpAddress ||
+                    this.PublicIpAddress != null &&
+                    this.PublicIpAddress.Equals(other.PublicIpAddress)
                 );
         }
 
@@ -1586,6 +1602,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FaxStatus != null)
                     hash = hash * 59 + this.FaxStatus.GetHashCode();
+
+                if (this.PublicIpAddress != null)
+                    hash = hash * 59 + this.PublicIpAddress.GetHashCode();
 
                 return hash;
             }

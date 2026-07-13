@@ -316,6 +316,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Tcallbacknotreached,
             
             /// <summary>
+            /// Enum Tcallbackvirtualwait for "tCallbackVirtualWait"
+            /// </summary>
+            [EnumMember(Value = "tCallbackVirtualWait")]
+            Tcallbackvirtualwait,
+            
+            /// <summary>
             /// Enum Tcfcabandon for "tCfcAbandon"
             /// </summary>
             [EnumMember(Value = "tCfcAbandon")]

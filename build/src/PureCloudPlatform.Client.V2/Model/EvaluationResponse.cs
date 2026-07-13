@@ -206,7 +206,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
         /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit.</param>
         /// <param name="HasAssistanceFailed">Is true when evaluation assistance didn&#39;t execute successfully.</param>
-        public EvaluationResponse(string Name = null, ConversationReference Conversation = null, EvaluationFormResponse EvaluationForm = null, User Evaluator = null, User Agent = null, AddressableEntityRef Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, DateTime? RevisionCreatedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
+        /// <param name="DeclinedReview">Is true when the evaluation review was declined.</param>
+        /// <param name="EvaluationContextId">The shared id for different versions of an evaluation.</param>
+        /// <param name="RetractedEvaluation">The previous evaluation version.</param>
+        public EvaluationResponse(string Name = null, ConversationReference Conversation = null, EvaluationFormResponse EvaluationForm = null, User Evaluator = null, User Agent = null, AddressableEntityRef Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, DateTime? RevisionCreatedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null, bool? DeclinedReview = null, string EvaluationContextId = null, EvaluationReference RetractedEvaluation = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -237,6 +240,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IsScoringIndex = IsScoringIndex;
             this.AuthorizedActions = AuthorizedActions;
             this.HasAssistanceFailed = HasAssistanceFailed;
+            this.DeclinedReview = DeclinedReview;
+            this.EvaluationContextId = EvaluationContextId;
+            this.RetractedEvaluation = RetractedEvaluation;
             
         }
         
@@ -525,6 +531,60 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The number of times this evaluation has been disputed
+        /// </summary>
+        /// <value>The number of times this evaluation has been disputed</value>
+        [DataMember(Name="disputeCount", EmitDefaultValue=false)]
+        public int? DisputeCount { get; private set; }
+
+
+
+        /// <summary>
+        /// The evaluation version number
+        /// </summary>
+        /// <value>The evaluation version number</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; private set; }
+
+
+
+        /// <summary>
+        /// List of all versions of the evaluation
+        /// </summary>
+        /// <value>List of all versions of the evaluation</value>
+        [DataMember(Name="versionHistory", EmitDefaultValue=false)]
+        public PagelessDomainEntityListingEvaluationVersion VersionHistory { get; private set; }
+
+
+
+        /// <summary>
+        /// Is true when the evaluation review was declined
+        /// </summary>
+        /// <value>Is true when the evaluation review was declined</value>
+        [DataMember(Name="declinedReview", EmitDefaultValue=false)]
+        public bool? DeclinedReview { get; set; }
+
+
+
+        /// <summary>
+        /// The shared id for different versions of an evaluation
+        /// </summary>
+        /// <value>The shared id for different versions of an evaluation</value>
+        [DataMember(Name="evaluationContextId", EmitDefaultValue=false)]
+        public string EvaluationContextId { get; set; }
+
+
+
+        /// <summary>
+        /// The previous evaluation version
+        /// </summary>
+        /// <value>The previous evaluation version</value>
+        [DataMember(Name="retractedEvaluation", EmitDefaultValue=false)]
+        public EvaluationReference RetractedEvaluation { get; set; }
+
+
+
+        /// <summary>
         /// AI scoring details for the evaluation.
         /// </summary>
         /// <value>AI scoring details for the evaluation.</value>
@@ -584,6 +644,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AuthorizedActions: ").Append(AuthorizedActions).Append("\n");
             sb.Append("  HasAssistanceFailed: ").Append(HasAssistanceFailed).Append("\n");
             sb.Append("  EvaluationSource: ").Append(EvaluationSource).Append("\n");
+            sb.Append("  DisputeCount: ").Append(DisputeCount).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  VersionHistory: ").Append(VersionHistory).Append("\n");
+            sb.Append("  DeclinedReview: ").Append(DeclinedReview).Append("\n");
+            sb.Append("  EvaluationContextId: ").Append(EvaluationContextId).Append("\n");
+            sb.Append("  RetractedEvaluation: ").Append(RetractedEvaluation).Append("\n");
             sb.Append("  AiScoring: ").Append(AiScoring).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -797,6 +863,36 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EvaluationSource.Equals(other.EvaluationSource)
                 ) &&
                 (
+                    this.DisputeCount == other.DisputeCount ||
+                    this.DisputeCount != null &&
+                    this.DisputeCount.Equals(other.DisputeCount)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
+                ) &&
+                (
+                    this.VersionHistory == other.VersionHistory ||
+                    this.VersionHistory != null &&
+                    this.VersionHistory.Equals(other.VersionHistory)
+                ) &&
+                (
+                    this.DeclinedReview == other.DeclinedReview ||
+                    this.DeclinedReview != null &&
+                    this.DeclinedReview.Equals(other.DeclinedReview)
+                ) &&
+                (
+                    this.EvaluationContextId == other.EvaluationContextId ||
+                    this.EvaluationContextId != null &&
+                    this.EvaluationContextId.Equals(other.EvaluationContextId)
+                ) &&
+                (
+                    this.RetractedEvaluation == other.RetractedEvaluation ||
+                    this.RetractedEvaluation != null &&
+                    this.RetractedEvaluation.Equals(other.RetractedEvaluation)
+                ) &&
+                (
                     this.AiScoring == other.AiScoring ||
                     this.AiScoring != null &&
                     this.AiScoring.Equals(other.AiScoring)
@@ -920,6 +1016,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EvaluationSource != null)
                     hash = hash * 59 + this.EvaluationSource.GetHashCode();
+
+                if (this.DisputeCount != null)
+                    hash = hash * 59 + this.DisputeCount.GetHashCode();
+
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
+
+                if (this.VersionHistory != null)
+                    hash = hash * 59 + this.VersionHistory.GetHashCode();
+
+                if (this.DeclinedReview != null)
+                    hash = hash * 59 + this.DeclinedReview.GetHashCode();
+
+                if (this.EvaluationContextId != null)
+                    hash = hash * 59 + this.EvaluationContextId.GetHashCode();
+
+                if (this.RetractedEvaluation != null)
+                    hash = hash * 59 + this.RetractedEvaluation.GetHashCode();
 
                 if (this.AiScoring != null)
                     hash = hash * 59 + this.AiScoring.GetHashCode();

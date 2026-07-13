@@ -34,6 +34,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAnalyticsConversationsDetailsJobResults**](#GetAnalyticsConversationsDetailsJobResults) | **Get** /api/v2/analytics/conversations/details/jobs/{jobId}/results | Fetch a page of results for an async details job |
 | [**GetAnalyticsConversationsDetailsJobsAvailability**](#GetAnalyticsConversationsDetailsJobsAvailability) | **Get** /api/v2/analytics/conversations/details/jobs/availability | Lookup the datalake availability date and time |
 | [**GetConversation**](#GetConversation) | **Get** /api/v2/conversations/{conversationId} | Get conversation |
+| [**GetConversationAccessattributes**](#GetConversationAccessattributes) | **Get** /api/v2/conversations/{conversationId}/accessattributes | Get the access attributes on a conversation. |
 | [**GetConversationAssistantCopilotcontext**](#GetConversationAssistantCopilotcontext) | **Get** /api/v2/conversations/{conversationId}/assistant/copilotcontext | Get copilot context values for a conversation. |
 | [**GetConversationCommunicationAgentchecklist**](#GetConversationCommunicationAgentchecklist) | **Get** /api/v2/conversations/{conversationId}/communications/{communicationId}/agentchecklists/{agentChecklistId} | Get checklist info for a single checklist. |
 | [**GetConversationCommunicationAgentchecklistJob**](#GetConversationCommunicationAgentchecklistJob) | **Get** /api/v2/conversations/{conversationId}/communications/{communicationId}/agentchecklists/{agentChecklistId}/jobs/{jobId} | Get inference job status |
@@ -262,6 +263,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsEmailInboundmessages**](#PostConversationsEmailInboundmessages) | **Post** /api/v2/conversations/emails/{conversationId}/inboundmessages | Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based. This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it. |
 | [**PostConversationsEmailMessages**](#PostConversationsEmailMessages) | **Post** /api/v2/conversations/emails/{conversationId}/messages | Send an email reply |
 | [**PostConversationsEmailMessagesDraftAttachmentsCopy**](#PostConversationsEmailMessagesDraftAttachmentsCopy) | **Post** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/copy | Copy attachments from an email message to the current draft. |
+| [**PostConversationsEmailMessagesDraftAttachmentsUploads**](#PostConversationsEmailMessagesDraftAttachmentsUploads) | **Post** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/uploads | Create a URL to upload a message attachment file |
 | [**PostConversationsEmailParticipantCommunicationWrapup**](#PostConversationsEmailParticipantCommunicationWrapup) | **Post** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsEmailParticipantReplace**](#PostConversationsEmailParticipantReplace) | **Post** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsEmailReconnect**](#PostConversationsEmailReconnect) | **Post** /api/v2/conversations/emails/{conversationId}/reconnect | Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation |
@@ -303,6 +305,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsVideoAgentconferenceCommunication**](#PostConversationsVideoAgentconferenceCommunication) | **Post** /api/v2/conversations/videos/{conversationId}/agentconference/communications/{communicationId} | Create an Agent-Type video conference and assign an agent to it |
 | [**PostConversationsVideoParticipantCommunicationWrapup**](#PostConversationsVideoParticipantCommunicationWrapup) | **Post** /api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsVideosMeetings**](#PostConversationsVideosMeetings) | **Post** /api/v2/conversations/videos/meetings | Generate a meetingId for a given conferenceId |
+| [**PutConversationAccessattributes**](#PutConversationAccessattributes) | **Put** /api/v2/conversations/{conversationId}/accessattributes | Set the access attributes on a conversation. |
 | [**PutConversationCustomattributes**](#PutConversationCustomattributes) | **Put** /api/v2/conversations/{conversationId}/customattributes | Create or update a single custom attributes record. Updating replaces all data with the provided fields. |
 | [**PutConversationCustomattributesBulk**](#PutConversationCustomattributesBulk) | **Put** /api/v2/conversations/{conversationId}/customattributes/bulk | Create or update a list of custom attributes records. Updating replaces all data with the provided fields. |
 | [**PutConversationParticipantFlaggedreason**](#PutConversationParticipantFlaggedreason) | **Put** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Set flagged reason on conversation participant to indicate bad conversation quality. |
@@ -2069,6 +2072,70 @@ namespace Example
 ### Return type
 
 [**Conversation**](Conversation)
+
+
+## GetConversationAccessattributes
+
+> [**ConversationAccessAttributesResponse**](ConversationAccessAttributesResponse) GetConversationAccessattributes (string conversationId)
+
+
+Get the access attributes on a conversation.
+
+GetConversationAccessattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* conversation:accessAttributes:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationAccessattributesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+
+            try
+            { 
+                // Get the access attributes on a conversation.
+                ConversationAccessAttributesResponse result = apiInstance.GetConversationAccessattributes(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationAccessattributes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+
+### Return type
+
+[**ConversationAccessAttributesResponse**](ConversationAccessAttributesResponse)
 
 
 ## GetConversationAssistantCopilotcontext
@@ -16872,6 +16939,72 @@ namespace Example
 [**EmailMessage**](EmailMessage)
 
 
+## PostConversationsEmailMessagesDraftAttachmentsUploads
+
+> [**UploadAttachmentResponse**](UploadAttachmentResponse) PostConversationsEmailMessagesDraftAttachmentsUploads (string conversationId, UploadAttachmentRequest body)
+
+
+Create a URL to upload a message attachment file
+
+See https://developer.genesys.cloud/analyticsdatamanagement/uploads/upload-email-attachment-files for example usage.
+
+Requires ANY permissions: 
+
+* conversation:emailAttachment:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsEmailMessagesDraftAttachmentsUploadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var body = new UploadAttachmentRequest(); // UploadAttachmentRequest | Create attachment pre-signed URL request
+
+            try
+            { 
+                // Create a URL to upload a message attachment file
+                UploadAttachmentResponse result = apiInstance.PostConversationsEmailMessagesDraftAttachmentsUploads(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsEmailMessagesDraftAttachmentsUploads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**UploadAttachmentRequest**](UploadAttachmentRequest)| Create attachment pre-signed URL request |  |
+
+### Return type
+
+[**UploadAttachmentResponse**](UploadAttachmentResponse)
+
+
 ## PostConversationsEmailParticipantCommunicationWrapup
 
 > void PostConversationsEmailParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
@@ -19549,6 +19682,72 @@ namespace Example
 [**MeetingIdRecord**](MeetingIdRecord)
 
 
+## PutConversationAccessattributes
+
+> **string** PutConversationAccessattributes (string conversationId, ConversationAccessAttributesUpdate body)
+
+
+Set the access attributes on a conversation.
+
+PutConversationAccessattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* conversation:accessAttributes:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationAccessattributesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+            var body = new ConversationAccessAttributesUpdate(); // ConversationAccessAttributesUpdate | Conversation Access Attributes
+
+            try
+            { 
+                // Set the access attributes on a conversation.
+                string result = apiInstance.PutConversationAccessattributes(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationAccessattributes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **body** | [**ConversationAccessAttributesUpdate**](ConversationAccessAttributesUpdate)| Conversation Access Attributes |  |
+
+### Return type
+
+**string**
+
+
 ## PutConversationCustomattributes
 
 > [**CustomAttributesIdResponse**](CustomAttributesIdResponse) PutConversationCustomattributes (string conversationId, CustomAttributesUpdateRequest body = null)
@@ -21298,4 +21497,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 267.0.0_
+_PureCloudPlatform.Client.V2 268.0.0_
