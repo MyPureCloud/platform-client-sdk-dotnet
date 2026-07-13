@@ -2277,6 +2277,8 @@ namespace Example
 
 Query for Caseplans.
 
+This endpoint supports two filtering modes. The recommended approach uses 'filters' (generic filter model) and 'attributes' (field projection). During the migration period, the legacy fields 'name', 'nameSearchType', and 'divisionIds' remain available as an alternative.
+
 Requires ANY permissions: 
 
 * caseManagement:caseplan:view
@@ -2586,4 +2588,4 @@ namespace Example
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatform.Client.V2 267.0.0_
+_PureCloudPlatform.Client.V2 268.0.0_

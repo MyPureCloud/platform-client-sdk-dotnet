@@ -1205,4 +1205,4 @@ namespace Example
 [**OrgWhitelistSettings**](OrgWhitelistSettings)
 
 
-_PureCloudPlatform.Client.V2 267.0.0_
+_PureCloudPlatform.Client.V2 268.0.0_
