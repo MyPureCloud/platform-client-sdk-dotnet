@@ -17,7 +17,8 @@
 | **Interruptible** | **bool?** | Whether this activity code is considered interruptible | [optional] |
 | **SecondaryPresences** | [**List&lt;SecondaryPresence&gt;**](SecondaryPresence) | The secondary presences of this activity code | [optional] |
 | **PlanningGroupIds** | **List&lt;string&gt;** | The planning group IDs associated with this activity code | [optional] |
+| **Style** | [**ActivityCodeStyle**](ActivityCodeStyle) | The style configuration for the activity code | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

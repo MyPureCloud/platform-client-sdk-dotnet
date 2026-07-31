@@ -6,14 +6,14 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **MessageSeverities** | [**List&lt;SchedulerMessageTypeSeverity&gt;**](SchedulerMessageTypeSeverity) | Schedule generation message severity configuration | [optional] |
-| **SyncTimeOffProperties** | **List&lt;string&gt;** | Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published | [optional] |
-| **EnableTimeOffFullDayEstimation** | **bool?** | Enables start and end time estimation for full-day time-off requests | [optional] |
-| **ServiceGoalImpact** | [**WfmServiceGoalImpactSettings**](WfmServiceGoalImpactSettings) | Configures the max percent increase and decrease of service goals for this business unit | [optional] |
-| **AllowWorkPlanPerMinuteGranularity** | **bool?** | Indicates whether or not per minute granularity for scheduling will be enabled for this business unit. Defaults to false | [optional] |
+| **MessageSeverities** | [**List&lt;SchedulerMessageTypeSeverity&gt;**](SchedulerMessageTypeSeverity) | Schedule generation message severity configuration | |
+| **SyncTimeOffProperties** | **List&lt;string&gt;** | Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published | |
+| **EnableTimeOffFullDayEstimation** | **bool?** | Enables start and end time estimation for full-day time-off requests | |
+| **ServiceGoalImpact** | [**WfmServiceGoalImpactSettings**](WfmServiceGoalImpactSettings) | Configures the max percent increase and decrease of service goals for this business unit | |
+| **AllowWorkPlanPerMinuteGranularity** | **bool?** | Indicates whether or not per minute granularity for scheduling will be enabled for this business unit. Defaults to false | |
 | **ActivitySmoothingType** | **string** | The activity smoothing type for schedule generation in this business unit | |
 | **InduceScheduleVariability** | **bool?** | Indicates whether to provide variability in schedule generation | |
 
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

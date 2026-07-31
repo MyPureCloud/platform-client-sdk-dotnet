@@ -59,6 +59,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitCapacityplanStaffingrequirements**](#GetWorkforcemanagementBusinessunitCapacityplanStaffingrequirements) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffingrequirements | Get a capacity plan&#39;s staffing requirements |
 | [**GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast**](#GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId} | Get the latest long term staffing requirements for a business unit |
 | [**GetWorkforcemanagementBusinessunitCapacityplans**](#GetWorkforcemanagementBusinessunitCapacityplans) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans | Get list of capacity plans for a business unit |
+| [**GetWorkforcemanagementBusinessunitDecisionmetricsJob**](#GetWorkforcemanagementBusinessunitDecisionmetricsJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/jobs/{jobId} | Gets the status of the given job |
 | [**GetWorkforcemanagementBusinessunitIntradayPlanninggroups**](#GetWorkforcemanagementBusinessunitIntradayPlanninggroups) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday/planninggroups | Get intraday planning groups for the given date |
 | [**GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession**](#GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session | Get the latest session for the business unit ID |
 | [**GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId**](#GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId} | Get the session details for the session ID |
@@ -87,6 +88,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitStaffinggroup**](#GetWorkforcemanagementBusinessunitStaffinggroup) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId} | Gets a staffing group |
 | [**GetWorkforcemanagementBusinessunitStaffinggroups**](#GetWorkforcemanagementBusinessunitStaffinggroups) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups | Gets a list of staffing groups |
 | [**GetWorkforcemanagementBusinessunitTimeofflimit**](#GetWorkforcemanagementBusinessunitTimeofflimit) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId} | Gets a time-off limit object |
+| [**GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJob**](#GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/granularityconversion/jobs/{jobId} | Query the convert time-off limit granularity job operation. Only the user who started the operation can query the status. |
+| [**GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs**](#GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/granularityconversion/jobs | Query the list of convert time-off limit granularity job operation. |
 | [**GetWorkforcemanagementBusinessunitTimeofflimits**](#GetWorkforcemanagementBusinessunitTimeofflimits) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits | Gets a list of time-off limit objects |
 | [**GetWorkforcemanagementBusinessunitTimeoffplan**](#GetWorkforcemanagementBusinessunitTimeoffplan) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} | Gets a time-off plan |
 | [**GetWorkforcemanagementBusinessunitTimeoffplans**](#GetWorkforcemanagementBusinessunitTimeoffplans) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans | Gets a list of time-off plans |
@@ -125,6 +128,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementManagementunitAdherence**](#GetWorkforcemanagementManagementunitAdherence) | **Get** /api/v2/workforcemanagement/managementunits/{managementUnitId}/adherence | Get a list of user schedule adherence records for the requested management unit |
 | [**GetWorkforcemanagementManagementunitAgent**](#GetWorkforcemanagementManagementunitAgent) | **Get** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId} | Get data for agent in the management unit |
 | [**GetWorkforcemanagementManagementunitAgentShifttrades**](#GetWorkforcemanagementManagementunitAgentShifttrades) | **Get** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades | Gets all the shift trades for a given agent |
+| [**GetWorkforcemanagementManagementunitDecisionmetrics**](#GetWorkforcemanagementManagementunitDecisionmetrics) | **Get** /api/v2/workforcemanagement/managementunits/{managementUnitId}/decisionmetrics | Gets the decision metrics of all user in given management unit |
 | [**GetWorkforcemanagementManagementunitShifttradesMatched**](#GetWorkforcemanagementManagementunitShifttradesMatched) | **Get** /api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/matched | Gets a summary of all shift trades in the matched state |
 | [**GetWorkforcemanagementManagementunitShifttradesUsers**](#GetWorkforcemanagementManagementunitShifttradesUsers) | **Get** /api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/users | Gets list of users available for whom you can send direct shift trade requests |
 | [**GetWorkforcemanagementManagementunitTimeofflimit**](#GetWorkforcemanagementManagementunitTimeofflimit) | **Get** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId} | Gets a time off limit object |
@@ -172,6 +176,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementAlternativeshiftsTradesStateJobs**](#PatchWorkforcemanagementAlternativeshiftsTradesStateJobs) | **Patch** /api/v2/workforcemanagement/alternativeshifts/trades/state/jobs | Bulk update alternative shift trade states |
 | [**PatchWorkforcemanagementBusinessunit**](#PatchWorkforcemanagementBusinessunit) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId} | Update business unit |
 | [**PatchWorkforcemanagementBusinessunitActivitycode**](#PatchWorkforcemanagementBusinessunitActivitycode) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId} | Update an activity code |
+| [**PatchWorkforcemanagementBusinessunitActivitycodesBulk**](#PatchWorkforcemanagementBusinessunitActivitycodesBulk) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/bulk | Update multiple activity codes |
 | [**PatchWorkforcemanagementBusinessunitActivityplan**](#PatchWorkforcemanagementBusinessunitActivityplan) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId} | Update an activity plan |
 | [**PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings**](#PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings | Update alternative shifts settings for a business unit |
 | [**PatchWorkforcemanagementBusinessunitCapacityplan**](#PatchWorkforcemanagementBusinessunitCapacityplan) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId} | Update a capacity plan configuration |
@@ -236,6 +241,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate**](#PostWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}/forceregenerate | Force regenerate the latest long term staffing requirements for a business unit |
 | [**PostWorkforcemanagementBusinessunitCapacityplans**](#PostWorkforcemanagementBusinessunitCapacityplans) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans | Create a new capacity plan |
 | [**PostWorkforcemanagementBusinessunitCapacityplansBulkRemove**](#PostWorkforcemanagementBusinessunitCapacityplansBulkRemove) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/bulk/remove | Delete capacity plans in a business unit |
+| [**PostWorkforcemanagementBusinessunitDecisionmetricsUpdate**](#PostWorkforcemanagementBusinessunitDecisionmetricsUpdate) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/update | Initiates the decision metrics update process |
+| [**PostWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl**](#PostWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/update/uploadurl | Creates a signed upload URL for updating decision metrics |
 | [**PostWorkforcemanagementBusinessunitIntraday**](#PostWorkforcemanagementBusinessunitIntraday) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday | Get intraday data for the given date for the requested planningGroupIds |
 | [**PostWorkforcemanagementBusinessunitOpportunitiesBulkAdd**](#PostWorkforcemanagementBusinessunitOpportunitiesBulkAdd) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/add | Bulk add opportunities |
 | [**PostWorkforcemanagementBusinessunitOpportunitiesBulkPublish**](#PostWorkforcemanagementBusinessunitOpportunitiesBulkPublish) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/publish | Bulk publish opportunities |
@@ -259,6 +266,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitStaffinggroups**](#PostWorkforcemanagementBusinessunitStaffinggroups) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups | Creates a new staffing group |
 | [**PostWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery**](#PostWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/planninggroups/query | Gets a list of planning group to staffing groups list association |
 | [**PostWorkforcemanagementBusinessunitStaffinggroupsQuery**](#PostWorkforcemanagementBusinessunitStaffinggroupsQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/query | Gets staffing group associations for a list of user IDs |
+| [**PostWorkforcemanagementBusinessunitTimeofflimitGranularityconversion**](#PostWorkforcemanagementBusinessunitTimeofflimitGranularityconversion) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/granularityconversion | Converts existing time-off limit to another granularity. |
+| [**PostWorkforcemanagementBusinessunitTimeofflimitValuesImport**](#PostWorkforcemanagementBusinessunitTimeofflimitValuesImport) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/import | Starts importing the uploaded time-off limit values |
+| [**PostWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurl**](#PostWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurl) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/import/uploadurl | Creates a signed upload URL for importing values into time-off limit |
+| [**PostWorkforcemanagementBusinessunitTimeofflimitValuesQuery**](#PostWorkforcemanagementBusinessunitTimeofflimitValuesQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/query | Retrieves time-off limit related values based on a given set of filters. |
 | [**PostWorkforcemanagementBusinessunitTimeofflimits**](#PostWorkforcemanagementBusinessunitTimeofflimits) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits | Creates a new time-off limit object |
 | [**PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery**](#PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/values/query | Retrieves time-off limit related values based on a given set of filters. |
 | [**PostWorkforcemanagementBusinessunitTimeoffplans**](#PostWorkforcemanagementBusinessunitTimeoffplans) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans | Creates a new time-off plan |
@@ -3903,6 +3914,70 @@ namespace Example
 [**CapacityPlansListResponse**](CapacityPlansListResponse)
 
 
+## GetWorkforcemanagementBusinessunitDecisionmetricsJob
+
+> [**DecisionMetricsUpdateJobResponse**](DecisionMetricsUpdateJobResponse) GetWorkforcemanagementBusinessunitDecisionmetricsJob (string businessUnitId, string jobId)
+
+
+Gets the status of the given job
+
+Requires ANY permissions: 
+
+* wfm:decisionMetrics:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitDecisionmetricsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var jobId = jobId_example;  // string | The ID of the update job
+
+            try
+            { 
+                // Gets the status of the given job
+                DecisionMetricsUpdateJobResponse result = apiInstance.GetWorkforcemanagementBusinessunitDecisionmetricsJob(businessUnitId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitDecisionmetricsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **jobId** | **string**| The ID of the update job |  |
+
+### Return type
+
+[**DecisionMetricsUpdateJobResponse**](DecisionMetricsUpdateJobResponse)
+
+
 ## GetWorkforcemanagementBusinessunitIntradayPlanninggroups
 
 > [**WfmIntradayPlanningGroupListing**](WfmIntradayPlanningGroupListing) GetWorkforcemanagementBusinessunitIntradayPlanninggroups (string businessUnitId, String date)
@@ -5733,6 +5808,138 @@ namespace Example
 ### Return type
 
 [**BuTimeOffLimitResponse**](BuTimeOffLimitResponse)
+
+
+## GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJob
+
+> [**BuConvertTimeOffLimitGranularityJobResponse**](BuConvertTimeOffLimitGranularityJobResponse) GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJob (string businessUnitId, string timeOffLimitId, string jobId)
+
+
+Query the convert time-off limit granularity job operation. Only the user who started the operation can query the status.
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:convertGranularity
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time-off limit
+            var jobId = jobId_example;  // string | The ID of the convert time off limit granularity job
+
+            try
+            { 
+                // Query the convert time-off limit granularity job operation. Only the user who started the operation can query the status.
+                BuConvertTimeOffLimitGranularityJobResponse result = apiInstance.GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJob(businessUnitId, timeOffLimitId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **timeOffLimitId** | **string**| The ID of the time-off limit |  |
+| **jobId** | **string**| The ID of the convert time off limit granularity job |  |
+
+### Return type
+
+[**BuConvertTimeOffLimitGranularityJobResponse**](BuConvertTimeOffLimitGranularityJobResponse)
+
+
+## GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs
+
+> [**BuConvertTimeOffGranularityLimitJobListing**](BuConvertTimeOffGranularityLimitJobListing) GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs (string businessUnitId, string timeOffLimitId, string statuses = null)
+
+
+Query the list of convert time-off limit granularity job operation.
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:convertGranularity
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time-off limit
+            var statuses = statuses_example;  // string | Status to filter the list of jobs (optional) 
+
+            try
+            { 
+                // Query the list of convert time-off limit granularity job operation.
+                BuConvertTimeOffGranularityLimitJobListing result = apiInstance.GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs(businessUnitId, timeOffLimitId, statuses);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **timeOffLimitId** | **string**| The ID of the time-off limit |  |
+| **statuses** | **string**| Status to filter the list of jobs | [optional] <br />**Values**: Complete, Error, Processing |
+
+### Return type
+
+[**BuConvertTimeOffGranularityLimitJobListing**](BuConvertTimeOffGranularityLimitJobListing)
 
 
 ## GetWorkforcemanagementBusinessunitTimeofflimits
@@ -8324,6 +8531,68 @@ namespace Example
 ### Return type
 
 [**ShiftTradeListResponse**](ShiftTradeListResponse)
+
+
+## GetWorkforcemanagementManagementunitDecisionmetrics
+
+> [**DecisionMetricsResponse**](DecisionMetricsResponse) GetWorkforcemanagementManagementunitDecisionmetrics (string managementUnitId)
+
+
+Gets the decision metrics of all user in given management unit
+
+Requires ANY permissions: 
+
+* wfm:decisionMetrics:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementManagementunitDecisionmetricsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
+
+            try
+            { 
+                // Gets the decision metrics of all user in given management unit
+                DecisionMetricsResponse result = apiInstance.GetWorkforcemanagementManagementunitDecisionmetrics(managementUnitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementManagementunitDecisionmetrics: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit |  |
+
+### Return type
+
+[**DecisionMetricsResponse**](DecisionMetricsResponse)
 
 
 ## GetWorkforcemanagementManagementunitShifttradesMatched
@@ -11346,6 +11615,70 @@ namespace Example
 ### Return type
 
 [**BusinessUnitActivityCode**](BusinessUnitActivityCode)
+
+
+## PatchWorkforcemanagementBusinessunitActivitycodesBulk
+
+> [**BulkUpdateActivityCodeResponse**](BulkUpdateActivityCodeResponse) PatchWorkforcemanagementBusinessunitActivitycodesBulk (string businessUnitId, BulkUpdateActivityCodeRequest body)
+
+
+Update multiple activity codes
+
+Requires ANY permissions: 
+
+* wfm:activityCodes:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitActivitycodesBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit, or 'mine' for the business unit of the logged-in user.
+            var body = new BulkUpdateActivityCodeRequest(); // BulkUpdateActivityCodeRequest | body
+
+            try
+            { 
+                // Update multiple activity codes
+                BulkUpdateActivityCodeResponse result = apiInstance.PatchWorkforcemanagementBusinessunitActivitycodesBulk(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitActivitycodesBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
+| **body** | [**BulkUpdateActivityCodeRequest**](BulkUpdateActivityCodeRequest)| body |  |
+
+### Return type
+
+[**BulkUpdateActivityCodeResponse**](BulkUpdateActivityCodeResponse)
 
 
 ## PatchWorkforcemanagementBusinessunitActivityplan
@@ -15527,6 +15860,134 @@ namespace Example
 void (empty response body)
 
 
+## PostWorkforcemanagementBusinessunitDecisionmetricsUpdate
+
+> [**DecisionMetricsUpdateJobResponse**](DecisionMetricsUpdateJobResponse) PostWorkforcemanagementBusinessunitDecisionmetricsUpdate (string businessUnitId, DecisionMetricsUpdateJobRequest body)
+
+
+Initiates the decision metrics update process
+
+Requires ANY permissions: 
+
+* wfm:decisionMetrics:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitDecisionmetricsUpdateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new DecisionMetricsUpdateJobRequest(); // DecisionMetricsUpdateJobRequest | body
+
+            try
+            { 
+                // Initiates the decision metrics update process
+                DecisionMetricsUpdateJobResponse result = apiInstance.PostWorkforcemanagementBusinessunitDecisionmetricsUpdate(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitDecisionmetricsUpdate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**DecisionMetricsUpdateJobRequest**](DecisionMetricsUpdateJobRequest)| body |  |
+
+### Return type
+
+[**DecisionMetricsUpdateJobResponse**](DecisionMetricsUpdateJobResponse)
+
+
+## PostWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl
+
+> [**DecisionMetricsUploadResponse**](DecisionMetricsUploadResponse) PostWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl (string businessUnitId, UploadUrlRequestBody body)
+
+
+Creates a signed upload URL for updating decision metrics
+
+Requires ANY permissions: 
+
+* wfm:decisionMetrics:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurlExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new UploadUrlRequestBody(); // UploadUrlRequestBody | body
+
+            try
+            { 
+                // Creates a signed upload URL for updating decision metrics
+                DecisionMetricsUploadResponse result = apiInstance.PostWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody)| body |  |
+
+### Return type
+
+[**DecisionMetricsUploadResponse**](DecisionMetricsUploadResponse)
+
+
 ## PostWorkforcemanagementBusinessunitIntraday
 
 > [**AsyncIntradayResponse**](AsyncIntradayResponse) PostWorkforcemanagementBusinessunitIntraday (string businessUnitId, IntradayPlanningGroupRequest body, bool? forceAsync = null)
@@ -17045,6 +17506,274 @@ namespace Example
 ### Return type
 
 [**UserStaffingGroupListing**](UserStaffingGroupListing)
+
+
+## PostWorkforcemanagementBusinessunitTimeofflimitGranularityconversion
+
+> [**BuConvertTimeOffLimitGranularityJobResponse**](BuConvertTimeOffLimitGranularityJobResponse) PostWorkforcemanagementBusinessunitTimeofflimitGranularityconversion (string businessUnitId, string timeOffLimitId, BuConvertTimeOffLimitGranularityJobRequest body)
+
+
+Converts existing time-off limit to another granularity.
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:convertGranularity
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitTimeofflimitGranularityconversionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time-off limit
+            var body = new BuConvertTimeOffLimitGranularityJobRequest(); // BuConvertTimeOffLimitGranularityJobRequest | body
+
+            try
+            { 
+                // Converts existing time-off limit to another granularity.
+                BuConvertTimeOffLimitGranularityJobResponse result = apiInstance.PostWorkforcemanagementBusinessunitTimeofflimitGranularityconversion(businessUnitId, timeOffLimitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitTimeofflimitGranularityconversion: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **timeOffLimitId** | **string**| The ID of the time-off limit |  |
+| **body** | [**BuConvertTimeOffLimitGranularityJobRequest**](BuConvertTimeOffLimitGranularityJobRequest)| body |  |
+
+### Return type
+
+[**BuConvertTimeOffLimitGranularityJobResponse**](BuConvertTimeOffLimitGranularityJobResponse)
+
+
+## PostWorkforcemanagementBusinessunitTimeofflimitValuesImport
+
+> [**BuTimeOffLimitResponse**](BuTimeOffLimitResponse) PostWorkforcemanagementBusinessunitTimeofflimitValuesImport (string businessUnitId, string timeOffLimitId, BuImportTimeOffLimitValuesRequest body)
+
+
+Starts importing the uploaded time-off limit values
+
+Call after uploading the time-off limit values data to the url supplied by the /import/uploadurl route
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitTimeofflimitValuesImportExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time-off limit object to set limit values for
+            var body = new BuImportTimeOffLimitValuesRequest(); // BuImportTimeOffLimitValuesRequest | body
+
+            try
+            { 
+                // Starts importing the uploaded time-off limit values
+                BuTimeOffLimitResponse result = apiInstance.PostWorkforcemanagementBusinessunitTimeofflimitValuesImport(businessUnitId, timeOffLimitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitTimeofflimitValuesImport: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **timeOffLimitId** | **string**| The ID of the time-off limit object to set limit values for |  |
+| **body** | [**BuImportTimeOffLimitValuesRequest**](BuImportTimeOffLimitValuesRequest)| body |  |
+
+### Return type
+
+[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse)
+
+
+## PostWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurl
+
+> [**BuImportTimeOffLimitValuesUploadResponse**](BuImportTimeOffLimitValuesUploadResponse) PostWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurl (string businessUnitId, string timeOffLimitId, BuTimeOffLimitValuesImportUploadUrlRequest body)
+
+
+Creates a signed upload URL for importing values into time-off limit
+
+Once the upload is complete, call the /import route to start the import process
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurlExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time-off limit object to set values for
+            var body = new BuTimeOffLimitValuesImportUploadUrlRequest(); // BuTimeOffLimitValuesImportUploadUrlRequest | body
+
+            try
+            { 
+                // Creates a signed upload URL for importing values into time-off limit
+                BuImportTimeOffLimitValuesUploadResponse result = apiInstance.PostWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurl(businessUnitId, timeOffLimitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurl: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **timeOffLimitId** | **string**| The ID of the time-off limit object to set values for |  |
+| **body** | [**BuTimeOffLimitValuesImportUploadUrlRequest**](BuTimeOffLimitValuesImportUploadUrlRequest)| body |  |
+
+### Return type
+
+[**BuImportTimeOffLimitValuesUploadResponse**](BuImportTimeOffLimitValuesUploadResponse)
+
+
+## PostWorkforcemanagementBusinessunitTimeofflimitValuesQuery
+
+> [**BuTimeOffLimitValuesForGranularityResponse**](BuTimeOffLimitValuesForGranularityResponse) PostWorkforcemanagementBusinessunitTimeofflimitValuesQuery (string businessUnitId, string timeOffLimitId, QueryTimeOffLimitValuesForGranularityRequest body)
+
+
+Retrieves time-off limit related values based on a given set of filters.
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitTimeofflimitValuesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time-off limit
+            var body = new QueryTimeOffLimitValuesForGranularityRequest(); // QueryTimeOffLimitValuesForGranularityRequest | body
+
+            try
+            { 
+                // Retrieves time-off limit related values based on a given set of filters.
+                BuTimeOffLimitValuesForGranularityResponse result = apiInstance.PostWorkforcemanagementBusinessunitTimeofflimitValuesQuery(businessUnitId, timeOffLimitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitTimeofflimitValuesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **timeOffLimitId** | **string**| The ID of the time-off limit |  |
+| **body** | [**QueryTimeOffLimitValuesForGranularityRequest**](QueryTimeOffLimitValuesForGranularityRequest)| body |  |
+
+### Return type
+
+[**BuTimeOffLimitValuesForGranularityResponse**](BuTimeOffLimitValuesForGranularityResponse)
 
 
 ## PostWorkforcemanagementBusinessunitTimeofflimits
@@ -21932,4 +22661,4 @@ namespace Example
 [**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

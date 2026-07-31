@@ -1472,6 +1472,8 @@ namespace Example
 
 Update decision table row import job
 
+Cancels an in-progress import job by supplying a status of Cancelled. Cancellation is idempotent: cancelling a job that is already Cancelled returns 200 with the cancelled job. Cancelling a job that is still Uploading or Processing returns 200. A job that has already finished (Complete or Failed) can no longer be cancelled.
+
 Requires ANY permissions: 
 
 * businessrules:decisionTableImportJob:edit
@@ -1603,6 +1605,8 @@ namespace Example
 
 
 Execute a published decision table
+
+Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
 
 Requires ANY permissions: 
 
@@ -1861,6 +1865,8 @@ namespace Example
 
 
 Execute a decision table version
+
+Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
 
 Requires ANY permissions: 
 
@@ -2721,4 +2727,4 @@ namespace Example
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

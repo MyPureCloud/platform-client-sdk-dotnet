@@ -6,8 +6,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteAgenticVirtualagentJobs**](#DeleteAgenticVirtualagentJobs) | **Delete** /api/v2/agentic/virtualagents/{virtualAgentId}/jobs | Start the deletion of a virtualAgent. |
 | [**DeleteConversationsSummariesSetting**](#DeleteConversationsSummariesSetting) | **Delete** /api/v2/conversations/summaries/settings/{summarySettingId} | Delete a summary setting. |
 | [**DeleteGuideJobs**](#DeleteGuideJobs) | **Delete** /api/v2/guides/{guideId}/jobs | Start the deletion of a guide. |
+| [**GetAgenticVirtualagent**](#GetAgenticVirtualagent) | **Get** /api/v2/agentic/virtualagents/{virtualAgentId} | Get virtual agent. |
+| [**GetAgenticVirtualagentJob**](#GetAgenticVirtualagentJob) | **Get** /api/v2/agentic/virtualagents/{virtualAgentId}/jobs/{jobId} | Get a virtualAgent job. |
+| [**GetAgenticVirtualagents**](#GetAgenticVirtualagents) | **Get** /api/v2/agentic/virtualagents | Get all virtual agents. |
 | [**GetConversationsSummariesSetting**](#GetConversationsSummariesSetting) | **Get** /api/v2/conversations/summaries/settings/{summarySettingId} | Receive a summary setting. |
 | [**GetConversationsSummariesSettings**](#GetConversationsSummariesSettings) | **Get** /api/v2/conversations/summaries/settings | Get all summary settings. |
 | [**GetGuide**](#GetGuide) | **Get** /api/v2/guides/{guideId} | Get guide. |
@@ -16,8 +20,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGuideVersionJob**](#GetGuideVersionJob) | **Get** /api/v2/guides/{guideId}/versions/{versionId}/jobs/{jobId} | Get the status of the publishing job for this guide version. |
 | [**GetGuides**](#GetGuides) | **Get** /api/v2/guides | Get all guides. |
 | [**GetGuidesJob**](#GetGuidesJob) | **Get** /api/v2/guides/jobs/{jobId} | Get the status of the guide content generation job. |
+| [**PatchAgenticVirtualagent**](#PatchAgenticVirtualagent) | **Patch** /api/v2/agentic/virtualagents/{virtualAgentId} | Update a virtual agent. |
 | [**PatchGuide**](#PatchGuide) | **Patch** /api/v2/guides/{guideId} | Update a guide. |
 | [**PatchGuideVersion**](#PatchGuideVersion) | **Patch** /api/v2/guides/{guideId}/versions/{versionId} | Update a guide version. |
+| [**PostAgenticVirtualagentVersionJobs**](#PostAgenticVirtualagentVersionJobs) | **Post** /api/v2/agentic/virtualagents/{virtualAgentId}/versions/{versionId}/jobs | Start the publishing of a virtual agent version. |
+| [**PostAgenticVirtualagents**](#PostAgenticVirtualagents) | **Post** /api/v2/agentic/virtualagents | Create a virtual agent. |
 | [**PostConversationsSummariesPreview**](#PostConversationsSummariesPreview) | **Post** /api/v2/conversations/summaries/preview | Trigger summary preview event generation. |
 | [**PostConversationsSummariesSettings**](#PostConversationsSummariesSettings) | **Post** /api/v2/conversations/summaries/settings | Create a summary setting. |
 | [**PostGuideSessionTurns**](#PostGuideSessionTurns) | **Post** /api/v2/guides/{guideId}/sessions/{guideSessionId}/turns | Add a turn to a guide session. |
@@ -28,6 +35,68 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostGuidesUploads**](#PostGuidesUploads) | **Post** /api/v2/guides/uploads | Generate presigned URL for uploading a file content to generate guide |
 | [**PutConversationsSummariesSetting**](#PutConversationsSummariesSetting) | **Put** /api/v2/conversations/summaries/settings/{summarySettingId} | Update a summary setting. |
 
+
+
+## DeleteAgenticVirtualagentJobs
+
+> [**AgenticVirtualAgentJob**](AgenticVirtualAgentJob) DeleteAgenticVirtualagentJobs (string virtualAgentId)
+
+
+Start the deletion of a virtualAgent.
+
+Requires ALL permissions: 
+
+* agentic:virtualAgentJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteAgenticVirtualagentJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var virtualAgentId = virtualAgentId_example;  // string | Virtual Agent ID
+
+            try
+            { 
+                // Start the deletion of a virtualAgent.
+                AgenticVirtualAgentJob result = apiInstance.DeleteAgenticVirtualagentJobs(virtualAgentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.DeleteAgenticVirtualagentJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **virtualAgentId** | **string**| Virtual Agent ID |  |
+
+### Return type
+
+[**AgenticVirtualAgentJob**](AgenticVirtualAgentJob)
 
 
 ## DeleteConversationsSummariesSetting
@@ -151,6 +220,206 @@ namespace Example
 ### Return type
 
 [**GuideJob**](GuideJob)
+
+
+## GetAgenticVirtualagent
+
+> [**AgenticVirtualAgent**](AgenticVirtualAgent) GetAgenticVirtualagent (string virtualAgentId)
+
+
+Get virtual agent.
+
+Requires ALL permissions: 
+
+* agentic:virtualAgent:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAgenticVirtualagentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var virtualAgentId = virtualAgentId_example;  // string | Virtual Agent ID
+
+            try
+            { 
+                // Get virtual agent.
+                AgenticVirtualAgent result = apiInstance.GetAgenticVirtualagent(virtualAgentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.GetAgenticVirtualagent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **virtualAgentId** | **string**| Virtual Agent ID |  |
+
+### Return type
+
+[**AgenticVirtualAgent**](AgenticVirtualAgent)
+
+
+## GetAgenticVirtualagentJob
+
+> [**AgenticVirtualAgentJob**](AgenticVirtualAgentJob) GetAgenticVirtualagentJob (string virtualAgentId, string jobId)
+
+
+Get a virtualAgent job.
+
+Requires ALL permissions: 
+
+* agentic:virtualAgentJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAgenticVirtualagentJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var virtualAgentId = virtualAgentId_example;  // string | Virtual Agent ID
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Get a virtualAgent job.
+                AgenticVirtualAgentJob result = apiInstance.GetAgenticVirtualagentJob(virtualAgentId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.GetAgenticVirtualagentJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **virtualAgentId** | **string**| Virtual Agent ID |  |
+| **jobId** | **string**| jobId |  |
+
+### Return type
+
+[**AgenticVirtualAgentJob**](AgenticVirtualAgentJob)
+
+
+## GetAgenticVirtualagents
+
+> [**AgenticVirtualAgentEntityListing**](AgenticVirtualAgentEntityListing) GetAgenticVirtualagents (string name = null, string nameContains = null, string status = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
+
+
+Get all virtual agents.
+
+Requires ALL permissions: 
+
+* agentic:virtualAgent:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAgenticVirtualagentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var name = name_example;  // string | Filter by matching name - case insensitive. (optional) 
+            var nameContains = nameContains_example;  // string | Filter by name contains - case insensitive. (optional) 
+            var status = status_example;  // string | Filter by status. (optional) 
+            var sortBy = sortBy_example;  // string | Sort by. Default value dateModified. (optional)  (default to dateModified)
+            var sortOrder = sortOrder_example;  // string | Sort Order. Default value desc. (optional)  (default to desc)
+            var pageNumber = 56;  // int? | Page number. (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size. The maximum page size is 100. (optional)  (default to 25)
+
+            try
+            { 
+                // Get all virtual agents.
+                AgenticVirtualAgentEntityListing result = apiInstance.GetAgenticVirtualagents(name, nameContains, status, sortBy, sortOrder, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.GetAgenticVirtualagents: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **name** | **string**| Filter by matching name - case insensitive. | [optional]  |
+| **nameContains** | **string**| Filter by name contains - case insensitive. | [optional]  |
+| **status** | **string**| Filter by status. | [optional] <br />**Values**: Draft, Published |
+| **sortBy** | **string**| Sort by. Default value dateModified. | [optional] [default to dateModified]<br />**Values**: dateModified, name, status |
+| **sortOrder** | **string**| Sort Order. Default value desc. | [optional] [default to desc]<br />**Values**: asc, desc |
+| **pageNumber** | **int?**| Page number. | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size. The maximum page size is 100. | [optional] [default to 25] |
+
+### Return type
+
+[**AgenticVirtualAgentEntityListing**](AgenticVirtualAgentEntityListing)
 
 
 ## GetConversationsSummariesSetting
@@ -679,6 +948,70 @@ namespace Example
 [**GuideContentGenerationJob**](GuideContentGenerationJob)
 
 
+## PatchAgenticVirtualagent
+
+> [**AgenticVirtualAgent**](AgenticVirtualAgent) PatchAgenticVirtualagent (string virtualAgentId, UpdateAgenticVirtualAgent body)
+
+
+Update a virtual agent.
+
+Requires ALL permissions: 
+
+* agentic:virtualAgent:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchAgenticVirtualagentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var virtualAgentId = virtualAgentId_example;  // string | Virtual Agent ID
+            var body = new UpdateAgenticVirtualAgent(); // UpdateAgenticVirtualAgent | 
+
+            try
+            { 
+                // Update a virtual agent.
+                AgenticVirtualAgent result = apiInstance.PatchAgenticVirtualagent(virtualAgentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.PatchAgenticVirtualagent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **virtualAgentId** | **string**| Virtual Agent ID |  |
+| **body** | [**UpdateAgenticVirtualAgent**](UpdateAgenticVirtualAgent)|  |  |
+
+### Return type
+
+[**AgenticVirtualAgent**](AgenticVirtualAgent)
+
+
 ## PatchGuide
 
 > [**Guide**](Guide) PatchGuide (string guideId, UpdateGuide body)
@@ -807,6 +1140,134 @@ namespace Example
 ### Return type
 
 [**GuideVersion**](GuideVersion)
+
+
+## PostAgenticVirtualagentVersionJobs
+
+> [**AgenticVirtualAgentVersionPublishJob**](AgenticVirtualAgentVersionPublishJob) PostAgenticVirtualagentVersionJobs (string virtualAgentId, string versionId, AgenticVirtualAgentVersionPublishJobRequest body)
+
+
+Start the publishing of a virtual agent version.
+
+Requires ALL permissions: 
+
+* agentic:virtualAgentVersionJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAgenticVirtualagentVersionJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var virtualAgentId = virtualAgentId_example;  // string | Virtual Agent ID
+            var versionId = versionId_example;  // string | Version ID
+            var body = new AgenticVirtualAgentVersionPublishJobRequest(); // AgenticVirtualAgentVersionPublishJobRequest | 
+
+            try
+            { 
+                // Start the publishing of a virtual agent version.
+                AgenticVirtualAgentVersionPublishJob result = apiInstance.PostAgenticVirtualagentVersionJobs(virtualAgentId, versionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.PostAgenticVirtualagentVersionJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **virtualAgentId** | **string**| Virtual Agent ID |  |
+| **versionId** | **string**| Version ID |  |
+| **body** | [**AgenticVirtualAgentVersionPublishJobRequest**](AgenticVirtualAgentVersionPublishJobRequest)|  |  |
+
+### Return type
+
+[**AgenticVirtualAgentVersionPublishJob**](AgenticVirtualAgentVersionPublishJob)
+
+
+## PostAgenticVirtualagents
+
+> [**AgenticVirtualAgent**](AgenticVirtualAgent) PostAgenticVirtualagents (CreateAgenticVirtualAgent body)
+
+
+Create a virtual agent.
+
+Requires ALL permissions: 
+
+* agentic:virtualAgent:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAgenticVirtualagentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var body = new CreateAgenticVirtualAgent(); // CreateAgenticVirtualAgent | 
+
+            try
+            { 
+                // Create a virtual agent.
+                AgenticVirtualAgent result = apiInstance.PostAgenticVirtualagents(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.PostAgenticVirtualagents: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateAgenticVirtualAgent**](CreateAgenticVirtualAgent)|  |  |
+
+### Return type
+
+[**AgenticVirtualAgent**](AgenticVirtualAgent)
 
 
 ## PostConversationsSummariesPreview
@@ -1380,4 +1841,4 @@ namespace Example
 [**SummarySetting**](SummarySetting)
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

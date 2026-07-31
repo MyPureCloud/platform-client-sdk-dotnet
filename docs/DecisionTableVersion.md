@@ -17,10 +17,12 @@
 | **DateCreated** | **DateTime?** | UTC date time indicating when this decision table version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | UTC date time indicating when this decision table version was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DatePublished** | **DateTime?** | UTC date time indicating when this decision table version was published. Null if never published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **CreatedBy** | [**AddressableEntityRef**](AddressableEntityRef) | The user who created this decision table version. | [optional] |
+| **PublishedBy** | [**AddressableEntityRef**](AddressableEntityRef) | The user who published this decision table version. | [optional] |
 | **Columns** | [**DecisionTableColumns**](DecisionTableColumns) | The column definitions of this decision table version. | [optional] |
 | **Contract** | [**DecisionTableContract**](DecisionTableContract) | The contract information for this decision table version. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

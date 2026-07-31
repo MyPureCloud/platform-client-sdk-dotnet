@@ -12,7 +12,8 @@
 | **MediaUri** | **string** | Uri to the file for this system prompt resource. | [optional] |
 | **UploadStatus** | **string** | Current upload status of the prompt resource (created, uploaded, transcoded, transcodeFailed). | [optional] |
 | **DurationSeconds** | **double?** | Duration (in seconds) for the transcoded audio file. | [optional] |
+| **AudioFormat** | [**ArchitectSystemPromptResourceNotificationPromptResourceAudioFormat**](ArchitectSystemPromptResourceNotificationPromptResourceAudioFormat) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

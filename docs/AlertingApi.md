@@ -955,4 +955,4 @@ namespace Example
 [**CommonRule**](CommonRule)
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

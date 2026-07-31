@@ -6,10 +6,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Name** | **string** | The name of the verifier. | [optional] |
+| **Name** | **string** | The name of the verifier. Maximum length is 100 characters. | |
 | **Enabled** | **bool?** | Indicates whether this verifier will be enabled. | [optional] |
+| **Credential** | [**Credential**](Credential) | The WebAuthn credential associated with this verifier. | [optional] |
 | **Default** | **bool?** | Indicates whether this will be the default verifier. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ReferenceId** | **string** | Provides context for the notification message, such as an order number or case ID. | [optional] |
+| **ReferenceId** | **string** | An opaque, caller-supplied string that provides business context for the notification message (e.g., an order number or case ID). | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_
