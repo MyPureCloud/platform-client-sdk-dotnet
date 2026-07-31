@@ -18,21 +18,15 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterGlobalStyle :  IEquatable<SupportCenterGlobalStyle>
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterGlobalStyle" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected SupportCenterGlobalStyle() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SupportCenterGlobalStyle" /> class.
-        /// </summary>
-        /// <param name="BackgroundColor">Global background color, in hexadecimal format, eg #ffffff (required).</param>
-        /// <param name="PrimaryColor">Global primary color, in hexadecimal format, eg #ffffff (required).</param>
-        /// <param name="PrimaryColorDark">Global dark primary color, in hexadecimal format, eg #ffffff (required).</param>
-        /// <param name="PrimaryColorLight">Global light primary color, in hexadecimal format, eg #ffffff (required).</param>
-        /// <param name="TextColor">Global text color, in hexadecimal format, eg #ffffff (required).</param>
-        /// <param name="FontFamily">Global font family (required).</param>
+        /// <param name="BackgroundColor">Global background color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided.</param>
+        /// <param name="PrimaryColor">Global primary color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided.</param>
+        /// <param name="PrimaryColorDark">Global dark primary color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided.</param>
+        /// <param name="PrimaryColorLight">Global light primary color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided.</param>
+        /// <param name="TextColor">Global text color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided.</param>
+        /// <param name="FontFamily">Global font family. Required when globalStyle is provided.</param>
         public SupportCenterGlobalStyle(string BackgroundColor = null, string PrimaryColor = null, string PrimaryColorDark = null, string PrimaryColorLight = null, string TextColor = null, string FontFamily = null)
         {
             this.BackgroundColor = BackgroundColor;
@@ -47,54 +41,54 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Global background color, in hexadecimal format, eg #ffffff
+        /// Global background color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided
         /// </summary>
-        /// <value>Global background color, in hexadecimal format, eg #ffffff</value>
+        /// <value>Global background color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided</value>
         [DataMember(Name="backgroundColor", EmitDefaultValue=false)]
         public string BackgroundColor { get; set; }
 
 
 
         /// <summary>
-        /// Global primary color, in hexadecimal format, eg #ffffff
+        /// Global primary color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided
         /// </summary>
-        /// <value>Global primary color, in hexadecimal format, eg #ffffff</value>
+        /// <value>Global primary color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided</value>
         [DataMember(Name="primaryColor", EmitDefaultValue=false)]
         public string PrimaryColor { get; set; }
 
 
 
         /// <summary>
-        /// Global dark primary color, in hexadecimal format, eg #ffffff
+        /// Global dark primary color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided
         /// </summary>
-        /// <value>Global dark primary color, in hexadecimal format, eg #ffffff</value>
+        /// <value>Global dark primary color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided</value>
         [DataMember(Name="primaryColorDark", EmitDefaultValue=false)]
         public string PrimaryColorDark { get; set; }
 
 
 
         /// <summary>
-        /// Global light primary color, in hexadecimal format, eg #ffffff
+        /// Global light primary color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided
         /// </summary>
-        /// <value>Global light primary color, in hexadecimal format, eg #ffffff</value>
+        /// <value>Global light primary color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided</value>
         [DataMember(Name="primaryColorLight", EmitDefaultValue=false)]
         public string PrimaryColorLight { get; set; }
 
 
 
         /// <summary>
-        /// Global text color, in hexadecimal format, eg #ffffff
+        /// Global text color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided
         /// </summary>
-        /// <value>Global text color, in hexadecimal format, eg #ffffff</value>
+        /// <value>Global text color, in hexadecimal format, eg #ffffff. Required when globalStyle is provided</value>
         [DataMember(Name="textColor", EmitDefaultValue=false)]
         public string TextColor { get; set; }
 
 
 
         /// <summary>
-        /// Global font family
+        /// Global font family. Required when globalStyle is provided
         /// </summary>
-        /// <value>Global font family</value>
+        /// <value>Global font family. Required when globalStyle is provided</value>
         [DataMember(Name="fontFamily", EmitDefaultValue=false)]
         public string FontFamily { get; set; }
 

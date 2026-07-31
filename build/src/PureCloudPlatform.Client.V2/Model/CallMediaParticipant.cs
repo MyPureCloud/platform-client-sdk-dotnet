@@ -405,7 +405,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SecurePause">True when the recording of this call is in secure pause status..</param>
         /// <param name="Disposition">Call resolution data for Dialer bulk make calls commands..</param>
         /// <param name="TransferSource">Indicates how call reaches the agent..</param>
-        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, string ExternalContactInitialDivisionId = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, DateTime? ResumeTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, RecordersState RecordersState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, string ConsultParticipantId = null, string UuiData = null, DateTime? BargedTime = null, bool? SecurePause = null, Disposition Disposition = null, string TransferSource = null)
+        /// <param name="ClientIpAddress">The reported client IP of the phone for the call..</param>
+        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, string ExternalContactInitialDivisionId = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, DateTime? ResumeTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, RecordersState RecordersState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, string ConsultParticipantId = null, string UuiData = null, DateTime? BargedTime = null, bool? SecurePause = null, Disposition Disposition = null, string TransferSource = null, string ClientIpAddress = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -464,6 +465,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SecurePause = SecurePause;
             this.Disposition = Disposition;
             this.TransferSource = TransferSource;
+            this.ClientIpAddress = ClientIpAddress;
             
         }
         
@@ -946,6 +948,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string TransferSource { get; set; }
 
 
+
+        /// <summary>
+        /// The reported client IP of the phone for the call.
+        /// </summary>
+        /// <value>The reported client IP of the phone for the call.</value>
+        [DataMember(Name="clientIpAddress", EmitDefaultValue=false)]
+        public string ClientIpAddress { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1012,6 +1023,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  Disposition: ").Append(Disposition).Append("\n");
             sb.Append("  TransferSource: ").Append(TransferSource).Append("\n");
+            sb.Append("  ClientIpAddress: ").Append(ClientIpAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1336,6 +1348,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TransferSource == other.TransferSource ||
                     this.TransferSource != null &&
                     this.TransferSource.Equals(other.TransferSource)
+                ) &&
+                (
+                    this.ClientIpAddress == other.ClientIpAddress ||
+                    this.ClientIpAddress != null &&
+                    this.ClientIpAddress.Equals(other.ClientIpAddress)
                 );
         }
 
@@ -1520,6 +1537,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TransferSource != null)
                     hash = hash * 59 + this.TransferSource.GetHashCode();
+
+                if (this.ClientIpAddress != null)
+                    hash = hash * 59 + this.ClientIpAddress.GetHashCode();
 
                 return hash;
             }

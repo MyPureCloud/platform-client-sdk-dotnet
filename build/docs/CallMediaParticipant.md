@@ -63,7 +63,8 @@
 | **SecurePause** | **bool?** | True when the recording of this call is in secure pause status. | [optional] |
 | **Disposition** | [**Disposition**](Disposition) | Call resolution data for Dialer bulk make calls commands. | [optional] |
 | **TransferSource** | **string** | Indicates how call reaches the agent. | [optional] |
+| **ClientIpAddress** | **string** | The reported client IP of the phone for the call. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

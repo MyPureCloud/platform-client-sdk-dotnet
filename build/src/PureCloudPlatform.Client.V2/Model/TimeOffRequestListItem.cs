@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// TimeOffRequest
+    /// TimeOffRequestListItem
     /// </summary>
     [DataContract]
-    public partial class TimeOffRequest :  IEquatable<TimeOffRequest>
+    public partial class TimeOffRequestListItem :  IEquatable<TimeOffRequestListItem>
     {
         /// <summary>
         /// The status of this time off request
@@ -152,36 +152,36 @@ namespace PureCloudPlatform.Client.V2.Model
         public SubstatusEnum? Substatus { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TimeOffRequest" /> class.
+        /// Initializes a new instance of the <see cref="TimeOffRequestListItem" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected TimeOffRequest() { }
+        protected TimeOffRequestListItem() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TimeOffRequest" /> class.
+        /// Initializes a new instance of the <see cref="TimeOffRequestListItem" /> class.
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="User">The user that the time off request belongs to (required).</param>
-        /// <param name="IsFullDayRequest">Whether this is a full day request (false means partial day).</param>
-        /// <param name="MarkedAsRead">Whether this request has been marked as read by the agent.</param>
-        /// <param name="ActivityCodeId">The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category.</param>
+        /// <param name="IsFullDayRequest">Whether this is a full day request (false means partial day) (required).</param>
+        /// <param name="MarkedAsRead">Deprecated - Always returns true..</param>
+        /// <param name="ActivityCodeId">The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category (required).</param>
         /// <param name="Paid">Whether this is a paid time off request.</param>
-        /// <param name="Status">The status of this time off request.</param>
+        /// <param name="Status">The status of this time off request (required).</param>
         /// <param name="Substatus">The substatus of this time off request.</param>
-        /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest &#x3D;&#x3D; false.</param>
-        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest &#x3D;&#x3D; true.</param>
-        /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes.</param>
-        /// <param name="DurationMinutes">Daily durations for each day of this time off request in minutes.</param>
-        /// <param name="PayableMinutes">Payable minutes for each day of this time off request.</param>
-        /// <param name="FullDayEarliestStartOffsetMinutes">Earliest start offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available.</param>
-        /// <param name="FullDayLatestEndOffsetMinutes">Latest end offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available.</param>
-        /// <param name="Notes">Notes about the time off request.</param>
-        /// <param name="SubmittedBy">The user who submitted this time off request. The id may be &#39;System&#39; if it was an automated process.</param>
-        /// <param name="SubmittedDate">The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest &#x3D;&#x3D; false (required).</param>
+        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest &#x3D;&#x3D; true (required).</param>
+        /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes (required).</param>
+        /// <param name="DurationMinutes">Daily durations for each day of this time off request in minutes (required).</param>
+        /// <param name="PayableMinutes">Payable minutes for each day of this time off request (required).</param>
+        /// <param name="FullDayEarliestStartOffsetMinutes">Earliest start offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available (required).</param>
+        /// <param name="FullDayLatestEndOffsetMinutes">Latest end offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available (required).</param>
+        /// <param name="Notes">Notes about the time off request (required).</param>
+        /// <param name="SubmittedBy">The user who submitted this time off request. The id may be &#39;System&#39; if it was an automated process (required).</param>
+        /// <param name="SubmittedDate">The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="ReviewedBy">The user who reviewed this time off request. The id may be &#39;System&#39; if it was an automated process.</param>
         /// <param name="ReviewedDate">The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="SyncVersion">The sync version of this time off request for which the scheduled activity is associated.</param>
-        /// <param name="Metadata">The version metadata of the time off request.</param>
-        public TimeOffRequest(string Id = null, UserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, List<int?> DurationMinutes = null, List<int?> PayableMinutes = null, List<int?> FullDayEarliestStartOffsetMinutes = null, List<int?> FullDayLatestEndOffsetMinutes = null, string Notes = null, UserReference SubmittedBy = null, DateTime? SubmittedDate = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, int? SyncVersion = null, WfmVersionedEntityMetadata Metadata = null)
+        /// <param name="SyncVersion">The sync version of this time off request for which the scheduled activity is associated (required).</param>
+        /// <param name="Metadata">The version metadata of the time off request (required).</param>
+        public TimeOffRequestListItem(string Id = null, UserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, List<int?> DurationMinutes = null, List<int?> PayableMinutes = null, List<int?> FullDayEarliestStartOffsetMinutes = null, List<int?> FullDayLatestEndOffsetMinutes = null, string Notes = null, UserReference SubmittedBy = null, DateTime? SubmittedDate = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, int? SyncVersion = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Id = Id;
             this.User = User;
@@ -238,9 +238,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether this request has been marked as read by the agent
+        /// Deprecated - Always returns true.
         /// </summary>
-        /// <value>Whether this request has been marked as read by the agent</value>
+        /// <value>Deprecated - Always returns true.</value>
         [DataMember(Name="markedAsRead", EmitDefaultValue=false)]
         public bool? MarkedAsRead { get; set; }
 
@@ -409,7 +409,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TimeOffRequest {\n");
+            sb.Append("class TimeOffRequestListItem {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -459,15 +459,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TimeOffRequest);
+            return this.Equals(obj as TimeOffRequestListItem);
         }
 
         /// <summary>
-        /// Returns true if TimeOffRequest instances are equal
+        /// Returns true if TimeOffRequestListItem instances are equal
         /// </summary>
-        /// <param name="other">Instance of TimeOffRequest to be compared</param>
+        /// <param name="other">Instance of TimeOffRequestListItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TimeOffRequest other)
+        public bool Equals(TimeOffRequestListItem other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

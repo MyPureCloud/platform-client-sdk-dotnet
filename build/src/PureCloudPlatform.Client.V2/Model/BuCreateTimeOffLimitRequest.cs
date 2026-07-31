@@ -19,14 +19,51 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class BuCreateTimeOffLimitRequest :  IEquatable<BuCreateTimeOffLimitRequest>
     {
         /// <summary>
+        /// Granularity choice for time off limit
+        /// </summary>
+        /// <value>Granularity choice for time off limit</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum GranularityEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Daily for "Daily"
+            /// </summary>
+            [EnumMember(Value = "Daily")]
+            Daily,
+            
+            /// <summary>
+            /// Enum Fifteenminutes for "FifteenMinutes"
+            /// </summary>
+            [EnumMember(Value = "FifteenMinutes")]
+            Fifteenminutes
+        }
+        /// <summary>
+        /// Granularity choice for time off limit
+        /// </summary>
+        /// <value>Granularity choice for time off limit</value>
+        [DataMember(Name="granularity", EmitDefaultValue=false)]
+        public GranularityEnum? Granularity { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="BuCreateTimeOffLimitRequest" /> class.
         /// </summary>
         /// <param name="StaffingGroupId">The ID of the staffing group to which this time-off limit is associated. It can be either management unit or business unit level staffing group. One of managementUnitId or staffingGroupId must be set. This must not be set if managementUnitId has value.</param>
         /// <param name="ManagementUnitId">The ID of the management unit to which this time-off limit is associated. One of managementUnitId or staffingGroupId must be set. This must not be set if staffingGroupId has value.</param>
-        public BuCreateTimeOffLimitRequest(string StaffingGroupId = null, string ManagementUnitId = null)
+        /// <param name="Granularity">Granularity choice for time off limit.</param>
+        /// <param name="FullDayTimeOffStartTime">The start time of full day time off requests associated with this limit interval in HH:mm format.Setting this value is allowed only for time-off limit with fifteen minutes granularity.</param>
+        public BuCreateTimeOffLimitRequest(string StaffingGroupId = null, string ManagementUnitId = null, GranularityEnum? Granularity = null, string FullDayTimeOffStartTime = null)
         {
             this.StaffingGroupId = StaffingGroupId;
             this.ManagementUnitId = ManagementUnitId;
+            this.Granularity = Granularity;
+            this.FullDayTimeOffStartTime = FullDayTimeOffStartTime;
             
         }
         
@@ -49,6 +86,17 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ManagementUnitId { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// The start time of full day time off requests associated with this limit interval in HH:mm format.Setting this value is allowed only for time-off limit with fifteen minutes granularity
+        /// </summary>
+        /// <value>The start time of full day time off requests associated with this limit interval in HH:mm format.Setting this value is allowed only for time-off limit with fifteen minutes granularity</value>
+        [DataMember(Name="fullDayTimeOffStartTime", EmitDefaultValue=false)]
+        public string FullDayTimeOffStartTime { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +108,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  StaffingGroupId: ").Append(StaffingGroupId).Append("\n");
             sb.Append("  ManagementUnitId: ").Append(ManagementUnitId).Append("\n");
+            sb.Append("  Granularity: ").Append(Granularity).Append("\n");
+            sb.Append("  FullDayTimeOffStartTime: ").Append(FullDayTimeOffStartTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +159,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ManagementUnitId == other.ManagementUnitId ||
                     this.ManagementUnitId != null &&
                     this.ManagementUnitId.Equals(other.ManagementUnitId)
+                ) &&
+                (
+                    this.Granularity == other.Granularity ||
+                    this.Granularity != null &&
+                    this.Granularity.Equals(other.Granularity)
+                ) &&
+                (
+                    this.FullDayTimeOffStartTime == other.FullDayTimeOffStartTime ||
+                    this.FullDayTimeOffStartTime != null &&
+                    this.FullDayTimeOffStartTime.Equals(other.FullDayTimeOffStartTime)
                 );
         }
 
@@ -128,6 +188,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ManagementUnitId != null)
                     hash = hash * 59 + this.ManagementUnitId.GetHashCode();
+
+                if (this.Granularity != null)
+                    hash = hash * 59 + this.Granularity.GetHashCode();
+
+                if (this.FullDayTimeOffStartTime != null)
+                    hash = hash * 59 + this.FullDayTimeOffStartTime.GetHashCode();
 
                 return hash;
             }

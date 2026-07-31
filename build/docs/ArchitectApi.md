@@ -4572,7 +4572,7 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "id")
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
-            var id = new List<string>(); // List<string> | ID (optional) 
+            var id = new List<string>(); // List<string> | ID. Deprecated, use GET /api/v2/flows/lookup with the ids parameter instead (optional) 
             var name = name_example;  // string | Name (optional) 
             var description = description_example;  // string | Description (optional) 
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
@@ -4613,7 +4613,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Sort by | [optional] [default to "id"] |
 | **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
-| **id** | [**List<string>**](string)| ID | [optional]  |
+| **id** | [**List<string>**](string)| ID. Deprecated, use GET /api/v2/flows/lookup with the ids parameter instead | [optional]  |
 | **name** | **string**| Name | [optional]  |
 | **description** | **string**| Description | [optional]  |
 | **nameOrDescription** | **string**| Name or description | [optional]  |
@@ -10238,4 +10238,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

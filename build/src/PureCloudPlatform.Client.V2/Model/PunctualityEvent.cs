@@ -94,6 +94,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The activity color
+        /// </summary>
+        /// <value>The activity color</value>
+        [DataMember(Name="activityColor", EmitDefaultValue=false)]
+        public string ActivityColor { get; private set; }
+
+
+
+        /// <summary>
         /// The category for the activity
         /// </summary>
         /// <value>The category for the activity</value>
@@ -143,6 +152,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  ActivityCode: ").Append(ActivityCode).Append("\n");
             sb.Append("  ActivityName: ").Append(ActivityName).Append("\n");
+            sb.Append("  ActivityColor: ").Append(ActivityColor).Append("\n");
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  Points: ").Append(Points).Append("\n");
             sb.Append("  Delta: ").Append(Delta).Append("\n");
@@ -223,6 +233,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActivityName.Equals(other.ActivityName)
                 ) &&
                 (
+                    this.ActivityColor == other.ActivityColor ||
+                    this.ActivityColor != null &&
+                    this.ActivityColor.Equals(other.ActivityColor)
+                ) &&
+                (
                     this.Category == other.Category ||
                     this.Category != null &&
                     this.Category.Equals(other.Category)
@@ -275,6 +290,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ActivityName != null)
                     hash = hash * 59 + this.ActivityName.GetHashCode();
+
+                if (this.ActivityColor != null)
+                    hash = hash * 59 + this.ActivityColor.GetHashCode();
 
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();

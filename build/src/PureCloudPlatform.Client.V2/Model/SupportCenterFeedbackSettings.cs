@@ -18,16 +18,10 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterFeedbackSettings :  IEquatable<SupportCenterFeedbackSettings>
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterFeedbackSettings" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected SupportCenterFeedbackSettings() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SupportCenterFeedbackSettings" /> class.
-        /// </summary>
-        /// <param name="Enabled">Whether or not requesting customer feedback on article content and article search results is enabled (required).</param>
+        /// <param name="Enabled">Whether or not requesting customer feedback on article content and article search results is enabled. Required if support center is enabled.</param>
         public SupportCenterFeedbackSettings(bool? Enabled = null)
         {
             this.Enabled = Enabled;
@@ -37,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether or not requesting customer feedback on article content and article search results is enabled
+        /// Whether or not requesting customer feedback on article content and article search results is enabled. Required if support center is enabled
         /// </summary>
-        /// <value>Whether or not requesting customer feedback on article content and article search results is enabled</value>
+        /// <value>Whether or not requesting customer feedback on article content and article search results is enabled. Required if support center is enabled</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
 

@@ -110,8 +110,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Interruptible">Whether this activity code is considered interruptible.</param>
         /// <param name="SecondaryPresences">The secondary presences of this activity code.</param>
         /// <param name="PlanningGroups">Planning groups associated with this activity code.</param>
+        /// <param name="Style">The style configuration for the activity code.</param>
         /// <param name="Metadata">Version metadata of this activity code.</param>
-        public BusinessUnitActivityCode(string Id = null, string Name = null, bool? Active = null, bool? DefaultCode = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, bool? CountsTowardShrinkage = null, bool? PlannedShrinkage = null, bool? Interruptible = null, List<SecondaryPresence> SecondaryPresences = null, List<PlanningGroupReference> PlanningGroups = null, WfmVersionedEntityMetadata Metadata = null)
+        public BusinessUnitActivityCode(string Id = null, string Name = null, bool? Active = null, bool? DefaultCode = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, bool? CountsTowardShrinkage = null, bool? PlannedShrinkage = null, bool? Interruptible = null, List<SecondaryPresence> SecondaryPresences = null, List<PlanningGroupReference> PlanningGroups = null, ActivityCodeStyle Style = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -127,6 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Interruptible = Interruptible;
             this.SecondaryPresences = SecondaryPresences;
             this.PlanningGroups = PlanningGroups;
+            this.Style = Style;
             this.Metadata = Metadata;
             
         }
@@ -252,6 +254,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The style configuration for the activity code
+        /// </summary>
+        /// <value>The style configuration for the activity code</value>
+        [DataMember(Name="style", EmitDefaultValue=false)]
+        public ActivityCodeStyle Style { get; set; }
+
+
+
+        /// <summary>
         /// Version metadata of this activity code
         /// </summary>
         /// <value>Version metadata of this activity code</value>
@@ -291,6 +302,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Interruptible: ").Append(Interruptible).Append("\n");
             sb.Append("  SecondaryPresences: ").Append(SecondaryPresences).Append("\n");
             sb.Append("  PlanningGroups: ").Append(PlanningGroups).Append("\n");
+            sb.Append("  Style: ").Append(Style).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -404,6 +416,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PlanningGroups.SequenceEqual(other.PlanningGroups)
                 ) &&
                 (
+                    this.Style == other.Style ||
+                    this.Style != null &&
+                    this.Style.Equals(other.Style)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -467,6 +484,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PlanningGroups != null)
                     hash = hash * 59 + this.PlanningGroups.GetHashCode();
+
+                if (this.Style != null)
+                    hash = hash * 59 + this.Style.GetHashCode();
 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

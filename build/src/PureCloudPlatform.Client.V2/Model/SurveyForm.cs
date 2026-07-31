@@ -28,21 +28,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SurveyForm" /> class.
         /// </summary>
         /// <param name="Name">The survey form name (required).</param>
+        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Published">Is this form published.</param>
         /// <param name="Disabled">Is this form disabled.</param>
         /// <param name="Language">Language for survey viewer localization. Currently localized languages: da, de, en-US, es, fi, fr, it, ja, ko, nl, no, pl, pt-BR, sv, th, tr, zh-CH, zh-TW (required).</param>
         /// <param name="Header">Markdown text for the top of the form..</param>
         /// <param name="Footer">Markdown text for the bottom of the form..</param>
         /// <param name="QuestionGroups">A list of question groups.</param>
-        public SurveyForm(string Name = null, bool? Published = null, bool? Disabled = null, string Language = null, string Header = null, string Footer = null, List<SurveyQuestionGroup> QuestionGroups = null)
+        /// <param name="Redacted">Is this form redacted.</param>
+        public SurveyForm(string Name = null, WritableStarrableDivision Division = null, bool? Published = null, bool? Disabled = null, string Language = null, string Header = null, string Footer = null, List<SurveyQuestionGroup> QuestionGroups = null, bool? Redacted = null)
         {
             this.Name = Name;
+            this.Division = Division;
             this.Published = Published;
             this.Disabled = Disabled;
             this.Language = Language;
             this.Header = Header;
             this.Footer = Footer;
             this.QuestionGroups = QuestionGroups;
+            this.Redacted = Redacted;
             
         }
         
@@ -63,6 +67,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The survey form name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+
+
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public WritableStarrableDivision Division { get; set; }
 
 
 
@@ -148,6 +161,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Is this form redacted
+        /// </summary>
+        /// <value>Is this form redacted</value>
+        [DataMember(Name="redacted", EmitDefaultValue=false)]
+        public bool? Redacted { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -166,6 +188,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("  Published: ").Append(Published).Append("\n");
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
@@ -175,6 +198,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Footer: ").Append(Footer).Append("\n");
             sb.Append("  QuestionGroups: ").Append(QuestionGroups).Append("\n");
             sb.Append("  PublishedVersions: ").Append(PublishedVersions).Append("\n");
+            sb.Append("  Redacted: ").Append(Redacted).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -227,6 +251,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
@@ -272,6 +301,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PublishedVersions.Equals(other.PublishedVersions)
                 ) &&
                 (
+                    this.Redacted == other.Redacted ||
+                    this.Redacted != null &&
+                    this.Redacted.Equals(other.Redacted)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -294,6 +328,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
@@ -321,6 +358,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PublishedVersions != null)
                     hash = hash * 59 + this.PublishedVersions.GetHashCode();
+
+                if (this.Redacted != null)
+                    hash = hash * 59 + this.Redacted.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

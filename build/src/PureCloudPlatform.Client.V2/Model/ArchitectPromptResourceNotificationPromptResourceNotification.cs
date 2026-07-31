@@ -27,7 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaUri">Uri to the file for this prompt resource..</param>
         /// <param name="UploadStatus">Current upload status of the prompt resource (created, uploaded, transcoded, transcodeFailed)..</param>
         /// <param name="DurationSeconds">Duration (in seconds) for the transcoded audio file..</param>
-        public ArchitectPromptResourceNotificationPromptResourceNotification(string PromptId = null, string Id = null, string Language = null, string MediaUri = null, string UploadStatus = null, double? DurationSeconds = null)
+        /// <param name="AudioFormat">AudioFormat.</param>
+        public ArchitectPromptResourceNotificationPromptResourceNotification(string PromptId = null, string Id = null, string Language = null, string MediaUri = null, string UploadStatus = null, double? DurationSeconds = null, ArchitectPromptResourceNotificationPromptResourceAudioFormat AudioFormat = null)
         {
             this.PromptId = PromptId;
             this.Id = Id;
@@ -35,6 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MediaUri = MediaUri;
             this.UploadStatus = UploadStatus;
             this.DurationSeconds = DurationSeconds;
+            this.AudioFormat = AudioFormat;
             
         }
         
@@ -93,6 +95,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public double? DurationSeconds { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AudioFormat
+        /// </summary>
+        [DataMember(Name="audioFormat", EmitDefaultValue=false)]
+        public ArchitectPromptResourceNotificationPromptResourceAudioFormat AudioFormat { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,6 +118,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
+            sb.Append("  AudioFormat: ").Append(AudioFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,6 +188,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DurationSeconds == other.DurationSeconds ||
                     this.DurationSeconds != null &&
                     this.DurationSeconds.Equals(other.DurationSeconds)
+                ) &&
+                (
+                    this.AudioFormat == other.AudioFormat ||
+                    this.AudioFormat != null &&
+                    this.AudioFormat.Equals(other.AudioFormat)
                 );
         }
 
@@ -208,6 +224,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DurationSeconds != null)
                     hash = hash * 59 + this.DurationSeconds.GetHashCode();
+
+                if (this.AudioFormat != null)
+                    hash = hash * 59 + this.AudioFormat.GetHashCode();
 
                 return hash;
             }

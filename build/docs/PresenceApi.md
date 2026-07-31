@@ -10,7 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeletePresenceSource**](#DeletePresenceSource) | **Delete** /api/v2/presence/sources/{sourceId} | Delete a Presence Source |
 | [**DeletePresencedefinition**](#DeletePresencedefinition) | **Delete** /api/v2/presencedefinitions/{presenceId} | Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead |
 | [**GetPresenceDefinition0**](#GetPresenceDefinition0) | **Get** /api/v2/presence/definitions/{definitionId} | Get a Presence Definition |
-| [**GetPresenceDefinitions0**](#GetPresenceDefinitions0) | **Get** /api/v2/presence/definitions | Get a list of Presence Definitions |
+| [**GetPresenceDefinitions0**](#GetPresenceDefinitions0) | **Get** /api/v2/presence/definitions | Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division |
 | [**GetPresenceSettings**](#GetPresenceSettings) | **Get** /api/v2/presence/settings | Get the presence settings |
 | [**GetPresenceSource**](#GetPresenceSource) | **Get** /api/v2/presence/sources/{sourceId} | Get a Presence Source |
 | [**GetPresenceSources**](#GetPresenceSources) | **Get** /api/v2/presence/sources | Get a list of Presence Sources |
@@ -293,7 +293,7 @@ namespace Example
 > [**OrganizationPresenceDefinitionEntityListing**](OrganizationPresenceDefinitionEntityListing) GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null, string localeCode = null)
 
 
-Get a list of Presence Definitions
+Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division
 
 Requires ALL permissions: 
 
@@ -327,7 +327,7 @@ namespace Example
 
             try
             { 
-                // Get a list of Presence Definitions
+                // Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division
                 OrganizationPresenceDefinitionEntityListing result = apiInstance.GetPresenceDefinitions0(deactivated, divisionId, localeCode);
                 Debug.WriteLine(result);
             }
@@ -1746,4 +1746,4 @@ namespace Example
 [**List<UserPresence>**](UserPresence)
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

@@ -320,6 +320,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The third-party suggestion.
+        /// </summary>
+        /// <value>The third-party suggestion.</value>
+        [DataMember(Name="thirdPartySuggestion", EmitDefaultValue=false)]
+        public ThirdPartySuggestion ThirdPartySuggestion { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -351,6 +360,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  KnowledgeArticle: ").Append(KnowledgeArticle).Append("\n");
             sb.Append("  CannedResponse: ").Append(CannedResponse).Append("\n");
             sb.Append("  Script: ").Append(Script).Append("\n");
+            sb.Append("  ThirdPartySuggestion: ").Append(ThirdPartySuggestion).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -468,6 +478,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Script.Equals(other.Script)
                 ) &&
                 (
+                    this.ThirdPartySuggestion == other.ThirdPartySuggestion ||
+                    this.ThirdPartySuggestion != null &&
+                    this.ThirdPartySuggestion.Equals(other.ThirdPartySuggestion)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -529,6 +544,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Script != null)
                     hash = hash * 59 + this.Script.GetHashCode();
+
+                if (this.ThirdPartySuggestion != null)
+                    hash = hash * 59 + this.ThirdPartySuggestion.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -55,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WhatsAppDefinition" /> class.
         /// </summary>
         /// <param name="Name">The messaging template name. (required).</param>
-        /// <param name="Namespace">The messaging template namespace..</param>
+        /// <param name="Namespace">The messaging template namespace. This field is deprecated..</param>
         /// <param name="Language">The messaging template language configured for this template. This is a WhatsApp specific value. For example, &#39;en_US&#39; (required).</param>
         /// <param name="Buttons">List of buttons to be included in the standard WhatsApp messages channel.</param>
         /// <param name="MessageFooter">Footer for the message in the standard WhatsApp messages channel.</param>
@@ -89,9 +89,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The messaging template namespace.
+        /// The messaging template namespace. This field is deprecated.
         /// </summary>
-        /// <value>The messaging template namespace.</value>
+        /// <value>The messaging template namespace. This field is deprecated.</value>
         [DataMember(Name="namespace", EmitDefaultValue=false)]
         public string Namespace { get; set; }
 

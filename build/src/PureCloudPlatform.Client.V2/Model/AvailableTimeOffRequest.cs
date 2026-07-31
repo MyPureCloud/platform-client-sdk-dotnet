@@ -18,6 +18,32 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AvailableTimeOffRequest :  IEquatable<AvailableTimeOffRequest>
     {
+        /// <summary>
+        /// Gets or Sets SupportedGranularities
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SupportedGranularitiesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Daily for "Daily"
+            /// </summary>
+            [EnumMember(Value = "Daily")]
+            Daily,
+            
+            /// <summary>
+            /// Enum Fifteenminutes for "FifteenMinutes"
+            /// </summary>
+            [EnumMember(Value = "FifteenMinutes")]
+            Fifteenminutes
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTimeOffRequest" /> class.
@@ -29,10 +55,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ActivityCodeId">The ID for activity code to query available time off minutes (required).</param>
         /// <param name="DateRanges">A list of date ranges of available time off minutes. A maximum number of date ranges is 30. The maximum total number of days in all ranges is 366. If no ranges are specified, then only the presence of the associated time off limit object will be checked. In such case, if the association exists, then the response will contain a list with of a single element filled with timeOffLimitId only..</param>
-        public AvailableTimeOffRequest(string ActivityCodeId = null, List<LocalDateRange> DateRanges = null)
+        /// <param name="SupportedGranularities">Granularity of time off limits supported to query availability information. Default is &#39;Daily&#39;.</param>
+        public AvailableTimeOffRequest(string ActivityCodeId = null, List<LocalDateRange> DateRanges = null, List<SupportedGranularitiesEnum> SupportedGranularities = null)
         {
             this.ActivityCodeId = ActivityCodeId;
             this.DateRanges = DateRanges;
+            this.SupportedGranularities = SupportedGranularities;
             
         }
         
@@ -55,6 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<LocalDateRange> DateRanges { get; set; }
 
 
+
+        /// <summary>
+        /// Granularity of time off limits supported to query availability information. Default is &#39;Daily&#39;
+        /// </summary>
+        /// <value>Granularity of time off limits supported to query availability information. Default is &#39;Daily&#39;</value>
+        [DataMember(Name="supportedGranularities", EmitDefaultValue=false)]
+        public List<SupportedGranularitiesEnum> SupportedGranularities { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  DateRanges: ").Append(DateRanges).Append("\n");
+            sb.Append("  SupportedGranularities: ").Append(SupportedGranularities).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateRanges == other.DateRanges ||
                     this.DateRanges != null &&
                     this.DateRanges.SequenceEqual(other.DateRanges)
+                ) &&
+                (
+                    this.SupportedGranularities == other.SupportedGranularities ||
+                    this.SupportedGranularities != null &&
+                    this.SupportedGranularities.SequenceEqual(other.SupportedGranularities)
                 );
         }
 
@@ -134,6 +177,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateRanges != null)
                     hash = hash * 59 + this.DateRanges.GetHashCode();
+
+                if (this.SupportedGranularities != null)
+                    hash = hash * 59 + this.SupportedGranularities.GetHashCode();
 
                 return hash;
             }

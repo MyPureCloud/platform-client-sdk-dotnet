@@ -1925,7 +1925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <param name="id">ID (optional)</param>
+        /// <param name="id">ID. Deprecated, use GET /api/v2/flows/lookup with the ids parameter instead (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
@@ -1956,7 +1956,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <param name="id">ID (optional)</param>
+        /// <param name="id">ID. Deprecated, use GET /api/v2/flows/lookup with the ids parameter instead (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
@@ -6163,7 +6163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <param name="id">ID (optional)</param>
+        /// <param name="id">ID. Deprecated, use GET /api/v2/flows/lookup with the ids parameter instead (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
@@ -6194,7 +6194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <param name="id">ID (optional)</param>
+        /// <param name="id">ID. Deprecated, use GET /api/v2/flows/lookup with the ids parameter instead (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
@@ -22966,7 +22966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <param name="id">ID (optional)</param>
+        /// <param name="id">ID. Deprecated, use GET /api/v2/flows/lookup with the ids parameter instead (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
@@ -22999,7 +22999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <param name="id">ID (optional)</param>
+        /// <param name="id">ID. Deprecated, use GET /api/v2/flows/lookup with the ids parameter instead (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
@@ -23121,7 +23121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <param name="id">ID (optional)</param>
+        /// <param name="id">ID. Deprecated, use GET /api/v2/flows/lookup with the ids parameter instead (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
@@ -23155,7 +23155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <param name="id">ID (optional)</param>
+        /// <param name="id">ID. Deprecated, use GET /api/v2/flows/lookup with the ids parameter instead (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>

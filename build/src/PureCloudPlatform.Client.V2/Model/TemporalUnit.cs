@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Duration">Duration.</param>
         /// <param name="TimeBased">TimeBased.</param>
         /// <param name="DateBased">DateBased.</param>
-        public TemporalUnit(bool? DurationEstimated = null, Duration Duration = null, bool? TimeBased = null, bool? DateBased = null)
+        public TemporalUnit(bool? DurationEstimated = null, string Duration = null, bool? TimeBased = null, bool? DateBased = null)
         {
             this.DurationEstimated = DurationEstimated;
             this.Duration = Duration;
@@ -48,7 +48,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Duration
         /// </summary>
         [DataMember(Name="duration", EmitDefaultValue=false)]
-        public Duration Duration { get; set; }
+        public string Duration { get; set; }
 
 
 

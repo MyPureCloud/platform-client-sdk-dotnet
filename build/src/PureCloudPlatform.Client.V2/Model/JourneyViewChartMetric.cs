@@ -88,12 +88,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ElementId">The element in the list of elements which the metric is measuring (required).</param>
         /// <param name="Aggregate">How to aggregate the given element, defaults to CustomerCount.</param>
         /// <param name="DisplayLabel">A display label for the metric.</param>
-        public JourneyViewChartMetric(string Id = null, string ElementId = null, AggregateEnum? Aggregate = null, string DisplayLabel = null)
+        /// <param name="Attribute">Attribute name.</param>
+        public JourneyViewChartMetric(string Id = null, string ElementId = null, AggregateEnum? Aggregate = null, string DisplayLabel = null, string Attribute = null)
         {
             this.Id = Id;
             this.ElementId = ElementId;
             this.Aggregate = Aggregate;
             this.DisplayLabel = DisplayLabel;
+            this.Attribute = Attribute;
             
         }
         
@@ -127,6 +129,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string DisplayLabel { get; set; }
 
 
+
+        /// <summary>
+        /// Attribute name
+        /// </summary>
+        /// <value>Attribute name</value>
+        [DataMember(Name="attribute", EmitDefaultValue=false)]
+        public string Attribute { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -140,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ElementId: ").Append(ElementId).Append("\n");
             sb.Append("  Aggregate: ").Append(Aggregate).Append("\n");
             sb.Append("  DisplayLabel: ").Append(DisplayLabel).Append("\n");
+            sb.Append("  Attribute: ").Append(Attribute).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,6 +211,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisplayLabel == other.DisplayLabel ||
                     this.DisplayLabel != null &&
                     this.DisplayLabel.Equals(other.DisplayLabel)
+                ) &&
+                (
+                    this.Attribute == other.Attribute ||
+                    this.Attribute != null &&
+                    this.Attribute.Equals(other.Attribute)
                 );
         }
 
@@ -224,6 +241,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DisplayLabel != null)
                     hash = hash * 59 + this.DisplayLabel.GetHashCode();
+
+                if (this.Attribute != null)
+                    hash = hash * 59 + this.Attribute.GetHashCode();
 
                 return hash;
             }

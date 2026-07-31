@@ -189,6 +189,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The user who created this decision table version.
+        /// </summary>
+        /// <value>The user who created this decision table version.</value>
+        [DataMember(Name="createdBy", EmitDefaultValue=false)]
+        public AddressableEntityRef CreatedBy { get; private set; }
+
+
+
+        /// <summary>
+        /// The user who published this decision table version.
+        /// </summary>
+        /// <value>The user who published this decision table version.</value>
+        [DataMember(Name="publishedBy", EmitDefaultValue=false)]
+        public AddressableEntityRef PublishedBy { get; private set; }
+
+
+
+        /// <summary>
         /// The column definitions of this decision table version.
         /// </summary>
         /// <value>The column definitions of this decision table version.</value>
@@ -234,6 +252,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  DatePublished: ").Append(DatePublished).Append("\n");
+            sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            sb.Append("  PublishedBy: ").Append(PublishedBy).Append("\n");
             sb.Append("  Columns: ").Append(Columns).Append("\n");
             sb.Append("  Contract: ").Append(Contract).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -333,6 +353,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DatePublished.Equals(other.DatePublished)
                 ) &&
                 (
+                    this.CreatedBy == other.CreatedBy ||
+                    this.CreatedBy != null &&
+                    this.CreatedBy.Equals(other.CreatedBy)
+                ) &&
+                (
+                    this.PublishedBy == other.PublishedBy ||
+                    this.PublishedBy != null &&
+                    this.PublishedBy.Equals(other.PublishedBy)
+                ) &&
+                (
                     this.Columns == other.Columns ||
                     this.Columns != null &&
                     this.Columns.Equals(other.Columns)
@@ -392,6 +422,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DatePublished != null)
                     hash = hash * 59 + this.DatePublished.GetHashCode();
+
+                if (this.CreatedBy != null)
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
+
+                if (this.PublishedBy != null)
+                    hash = hash * 59 + this.PublishedBy.GetHashCode();
 
                 if (this.Columns != null)
                     hash = hash * 59 + this.Columns.GetHashCode();

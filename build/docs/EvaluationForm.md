@@ -8,6 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The evaluation form name | |
+| **Division** | [**WritableStarrableDivision**](WritableStarrableDivision) | The division to which this entity belongs. | [optional] |
 | **ModifiedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Published** | **bool?** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |
@@ -16,9 +17,10 @@
 | **EvaluationSettings** | [**EvaluationSettings**](EvaluationSettings) | Settings for evaluations associated with this form | [optional] |
 | **LatestVersionFormName** | **string** | The name of the form&#39;s most recently published version | [optional] |
 | **AiScoring** | [**AiScoringSettings**](AiScoringSettings) | AI scoring settings for the evaluation form. | [optional] |
+| **Redacted** | **bool?** | Is this form redacted | [optional] |
 | **Dialect** | **string** | The language dialect for this evaluation form. Supported dialects: ar, cs, da, de, en-US, es, fi, fr, fr-CA, he, hi, it, ja, ko, nl, no, pl, pt-BR, pt-PT, ru, sv, th, tr, uk, zh-CN, zh-TW | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

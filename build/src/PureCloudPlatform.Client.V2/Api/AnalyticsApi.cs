@@ -44,7 +44,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -57,7 +56,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -580,7 +578,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -593,7 +590,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -606,7 +602,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -620,7 +615,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -2106,7 +2100,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -2119,7 +2112,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -3542,7 +3534,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -3555,7 +3546,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -4078,7 +4068,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -4091,7 +4080,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -4104,7 +4092,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -4118,7 +4105,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -5604,7 +5590,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -5617,7 +5602,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -7305,7 +7289,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete/cancel an async request for agent copilot aggregates 
         /// 
-        /// DeleteAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -7319,7 +7302,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete/cancel an async request for agent copilot aggregates 
         /// 
-        /// DeleteAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -7407,7 +7389,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete/cancel an async request for agent copilot aggregates 
         /// 
-        /// DeleteAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -7422,7 +7403,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete/cancel an async request for agent copilot aggregates 
         /// 
-        /// DeleteAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -11795,7 +11775,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get status for async query for agent copilot aggregates 
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -11810,7 +11789,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get status for async query for agent copilot aggregates 
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -11898,7 +11876,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get status for async query for agent copilot aggregates 
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -11914,7 +11891,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get status for async query for agent copilot aggregates 
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -12004,7 +11980,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Fetch a page of results for an async aggregates query 
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -12020,7 +11995,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Fetch a page of results for an async aggregates query 
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -12110,7 +12084,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Fetch a page of results for an async aggregates query 
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -12127,7 +12100,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Fetch a page of results for an async aggregates query 
         /// 
-        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -24043,7 +24015,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for agent copilot aggregates asynchronously 
         /// 
-        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -24058,7 +24029,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for agent copilot aggregates asynchronously 
         /// 
-        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -24151,7 +24121,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for agent copilot aggregates asynchronously 
         /// 
-        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -24167,7 +24136,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for agent copilot aggregates asynchronously 
         /// 
-        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>

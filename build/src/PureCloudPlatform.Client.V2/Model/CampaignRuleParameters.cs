@@ -219,7 +219,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SmsContentTemplate">The content template to set a SMS campaign to..</param>
         /// <param name="EmailContentTemplate">The content template to set a Email campaign to..</param>
         /// <param name="ForDuration">ISO-8601 Duration for which condition expression must be continuously true before condition is evaluated as true.</param>
-        public CampaignRuleParameters(OperatorEnum? Operator = null, string Value = null, PriorityEnum? Priority = null, DialingModeEnum? DialingMode = null, double? AbandonRate = null, int? OutboundLineCount = null, int? RelativeWeight = null, double? MaxCallsPerAgent = null, DomainEntityRef Queue = null, int? MessagesPerMinute = null, int? SmsMessagesPerMinute = null, int? EmailMessagesPerMinute = null, DomainEntityRef SmsContentTemplate = null, DomainEntityRef EmailContentTemplate = null, Duration ForDuration = null)
+        public CampaignRuleParameters(OperatorEnum? Operator = null, string Value = null, PriorityEnum? Priority = null, DialingModeEnum? DialingMode = null, double? AbandonRate = null, int? OutboundLineCount = null, int? RelativeWeight = null, double? MaxCallsPerAgent = null, DomainEntityRef Queue = null, int? MessagesPerMinute = null, int? SmsMessagesPerMinute = null, int? EmailMessagesPerMinute = null, DomainEntityRef SmsContentTemplate = null, DomainEntityRef EmailContentTemplate = null, string ForDuration = null)
         {
             this.Operator = Operator;
             this.Value = Value;
@@ -351,7 +351,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>ISO-8601 Duration for which condition expression must be continuously true before condition is evaluated as true</value>
         [DataMember(Name="forDuration", EmitDefaultValue=false)]
-        public Duration ForDuration { get; set; }
+        public string ForDuration { get; set; }
 
 
         /// <summary>

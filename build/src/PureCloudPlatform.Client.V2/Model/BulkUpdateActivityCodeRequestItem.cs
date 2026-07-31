@@ -1,0 +1,425 @@
+using System;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using PureCloudPlatform.Client.V2.Client;
+
+namespace PureCloudPlatform.Client.V2.Model
+{
+    /// <summary>
+    /// BulkUpdateActivityCodeRequestItem
+    /// </summary>
+    [DataContract]
+    public partial class BulkUpdateActivityCodeRequestItem :  IEquatable<BulkUpdateActivityCodeRequestItem>
+    {
+        /// <summary>
+        /// The activity code's category. Attempting to change the category of a default activity code will return an error
+        /// </summary>
+        /// <value>The activity code's category. Attempting to change the category of a default activity code will return an error</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CategoryEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Onqueuework for "OnQueueWork"
+            /// </summary>
+            [EnumMember(Value = "OnQueueWork")]
+            Onqueuework,
+            
+            /// <summary>
+            /// Enum Break for "Break"
+            /// </summary>
+            [EnumMember(Value = "Break")]
+            Break,
+            
+            /// <summary>
+            /// Enum Meal for "Meal"
+            /// </summary>
+            [EnumMember(Value = "Meal")]
+            Meal,
+            
+            /// <summary>
+            /// Enum Meeting for "Meeting"
+            /// </summary>
+            [EnumMember(Value = "Meeting")]
+            Meeting,
+            
+            /// <summary>
+            /// Enum Offqueuework for "OffQueueWork"
+            /// </summary>
+            [EnumMember(Value = "OffQueueWork")]
+            Offqueuework,
+            
+            /// <summary>
+            /// Enum Timeoff for "TimeOff"
+            /// </summary>
+            [EnumMember(Value = "TimeOff")]
+            Timeoff,
+            
+            /// <summary>
+            /// Enum Training for "Training"
+            /// </summary>
+            [EnumMember(Value = "Training")]
+            Training,
+            
+            /// <summary>
+            /// Enum Unavailable for "Unavailable"
+            /// </summary>
+            [EnumMember(Value = "Unavailable")]
+            Unavailable
+        }
+        /// <summary>
+        /// The activity code's category. Attempting to change the category of a default activity code will return an error
+        /// </summary>
+        /// <value>The activity code's category. Attempting to change the category of a default activity code will return an error</value>
+        [DataMember(Name="category", EmitDefaultValue=false)]
+        public CategoryEnum? Category { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BulkUpdateActivityCodeRequestItem" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected BulkUpdateActivityCodeRequestItem() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BulkUpdateActivityCodeRequestItem" /> class.
+        /// </summary>
+        /// <param name="Name">The name of the activity code.</param>
+        /// <param name="Category">The activity code&#39;s category. Attempting to change the category of a default activity code will return an error.</param>
+        /// <param name="LengthInMinutes">The default length of the activity in minutes.</param>
+        /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity.</param>
+        /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as work time.</param>
+        /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request.</param>
+        /// <param name="CountsTowardShrinkage">Whether or not this activity code counts toward shrinkage calculations.</param>
+        /// <param name="PlannedShrinkage">Whether this activity code is considered planned or unplanned shrinkage.</param>
+        /// <param name="Interruptible">Whether this activity code is considered interruptible.</param>
+        /// <param name="PlanningGroupIds">The planning group IDs associated with this activity code.</param>
+        /// <param name="Style">The style configuration for the activity code.</param>
+        /// <param name="Metadata">Version metadata for the associated business unit&#39;s list of activity codes (required).</param>
+        /// <param name="Id">The ID of the activity code (required).</param>
+        public BulkUpdateActivityCodeRequestItem(string Name = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, bool? CountsTowardShrinkage = null, bool? PlannedShrinkage = null, bool? Interruptible = null, ListWrapperString PlanningGroupIds = null, ValueWrapperActivityCodeStyle Style = null, WfmVersionedEntityMetadata Metadata = null, string Id = null)
+        {
+            this.Name = Name;
+            this.Category = Category;
+            this.LengthInMinutes = LengthInMinutes;
+            this.CountsAsPaidTime = CountsAsPaidTime;
+            this.CountsAsWorkTime = CountsAsWorkTime;
+            this.AgentTimeOffSelectable = AgentTimeOffSelectable;
+            this.CountsTowardShrinkage = CountsTowardShrinkage;
+            this.PlannedShrinkage = PlannedShrinkage;
+            this.Interruptible = Interruptible;
+            this.PlanningGroupIds = PlanningGroupIds;
+            this.Style = Style;
+            this.Metadata = Metadata;
+            this.Id = Id;
+            
+        }
+        
+
+
+        /// <summary>
+        /// The name of the activity code
+        /// </summary>
+        /// <value>The name of the activity code</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
+
+
+
+
+        /// <summary>
+        /// The default length of the activity in minutes
+        /// </summary>
+        /// <value>The default length of the activity in minutes</value>
+        [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
+        public int? LengthInMinutes { get; set; }
+
+
+
+        /// <summary>
+        /// Whether an agent is paid while performing this activity
+        /// </summary>
+        /// <value>Whether an agent is paid while performing this activity</value>
+        [DataMember(Name="countsAsPaidTime", EmitDefaultValue=false)]
+        public bool? CountsAsPaidTime { get; set; }
+
+
+
+        /// <summary>
+        /// Indicates whether or not the activity should be counted as work time
+        /// </summary>
+        /// <value>Indicates whether or not the activity should be counted as work time</value>
+        [DataMember(Name="countsAsWorkTime", EmitDefaultValue=false)]
+        public bool? CountsAsWorkTime { get; set; }
+
+
+
+        /// <summary>
+        /// Whether an agent can select this activity code when creating or editing a time off request
+        /// </summary>
+        /// <value>Whether an agent can select this activity code when creating or editing a time off request</value>
+        [DataMember(Name="agentTimeOffSelectable", EmitDefaultValue=false)]
+        public bool? AgentTimeOffSelectable { get; set; }
+
+
+
+        /// <summary>
+        /// Whether or not this activity code counts toward shrinkage calculations
+        /// </summary>
+        /// <value>Whether or not this activity code counts toward shrinkage calculations</value>
+        [DataMember(Name="countsTowardShrinkage", EmitDefaultValue=false)]
+        public bool? CountsTowardShrinkage { get; set; }
+
+
+
+        /// <summary>
+        /// Whether this activity code is considered planned or unplanned shrinkage
+        /// </summary>
+        /// <value>Whether this activity code is considered planned or unplanned shrinkage</value>
+        [DataMember(Name="plannedShrinkage", EmitDefaultValue=false)]
+        public bool? PlannedShrinkage { get; set; }
+
+
+
+        /// <summary>
+        /// Whether this activity code is considered interruptible
+        /// </summary>
+        /// <value>Whether this activity code is considered interruptible</value>
+        [DataMember(Name="interruptible", EmitDefaultValue=false)]
+        public bool? Interruptible { get; set; }
+
+
+
+        /// <summary>
+        /// The planning group IDs associated with this activity code
+        /// </summary>
+        /// <value>The planning group IDs associated with this activity code</value>
+        [DataMember(Name="planningGroupIds", EmitDefaultValue=false)]
+        public ListWrapperString PlanningGroupIds { get; set; }
+
+
+
+        /// <summary>
+        /// The style configuration for the activity code
+        /// </summary>
+        /// <value>The style configuration for the activity code</value>
+        [DataMember(Name="style", EmitDefaultValue=false)]
+        public ValueWrapperActivityCodeStyle Style { get; set; }
+
+
+
+        /// <summary>
+        /// Version metadata for the associated business unit&#39;s list of activity codes
+        /// </summary>
+        /// <value>Version metadata for the associated business unit&#39;s list of activity codes</value>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public WfmVersionedEntityMetadata Metadata { get; set; }
+
+
+
+        /// <summary>
+        /// The ID of the activity code
+        /// </summary>
+        /// <value>The ID of the activity code</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+
+
+        /// <summary>
+        /// Returns the string presentation of the object
+        /// </summary>
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.Append("class BulkUpdateActivityCodeRequestItem {\n");
+
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Category: ").Append(Category).Append("\n");
+            sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
+            sb.Append("  CountsAsPaidTime: ").Append(CountsAsPaidTime).Append("\n");
+            sb.Append("  CountsAsWorkTime: ").Append(CountsAsWorkTime).Append("\n");
+            sb.Append("  AgentTimeOffSelectable: ").Append(AgentTimeOffSelectable).Append("\n");
+            sb.Append("  CountsTowardShrinkage: ").Append(CountsTowardShrinkage).Append("\n");
+            sb.Append("  PlannedShrinkage: ").Append(PlannedShrinkage).Append("\n");
+            sb.Append("  Interruptible: ").Append(Interruptible).Append("\n");
+            sb.Append("  PlanningGroupIds: ").Append(PlanningGroupIds).Append("\n");
+            sb.Append("  Style: ").Append(Style).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
+        }
+  
+        /// <summary>
+        /// Returns the JSON string presentation of the object
+        /// </summary>
+        /// <returns>JSON string presentation of the object</returns>
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this, new JsonSerializerSettings
+            {
+                MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+                Formatting = Formatting.Indented
+            });
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="obj">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object obj)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            return this.Equals(obj as BulkUpdateActivityCodeRequestItem);
+        }
+
+        /// <summary>
+        /// Returns true if BulkUpdateActivityCodeRequestItem instances are equal
+        /// </summary>
+        /// <param name="other">Instance of BulkUpdateActivityCodeRequestItem to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(BulkUpdateActivityCodeRequestItem other)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            if (other == null)
+                return false;
+
+            return true &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.Category == other.Category ||
+                    this.Category != null &&
+                    this.Category.Equals(other.Category)
+                ) &&
+                (
+                    this.LengthInMinutes == other.LengthInMinutes ||
+                    this.LengthInMinutes != null &&
+                    this.LengthInMinutes.Equals(other.LengthInMinutes)
+                ) &&
+                (
+                    this.CountsAsPaidTime == other.CountsAsPaidTime ||
+                    this.CountsAsPaidTime != null &&
+                    this.CountsAsPaidTime.Equals(other.CountsAsPaidTime)
+                ) &&
+                (
+                    this.CountsAsWorkTime == other.CountsAsWorkTime ||
+                    this.CountsAsWorkTime != null &&
+                    this.CountsAsWorkTime.Equals(other.CountsAsWorkTime)
+                ) &&
+                (
+                    this.AgentTimeOffSelectable == other.AgentTimeOffSelectable ||
+                    this.AgentTimeOffSelectable != null &&
+                    this.AgentTimeOffSelectable.Equals(other.AgentTimeOffSelectable)
+                ) &&
+                (
+                    this.CountsTowardShrinkage == other.CountsTowardShrinkage ||
+                    this.CountsTowardShrinkage != null &&
+                    this.CountsTowardShrinkage.Equals(other.CountsTowardShrinkage)
+                ) &&
+                (
+                    this.PlannedShrinkage == other.PlannedShrinkage ||
+                    this.PlannedShrinkage != null &&
+                    this.PlannedShrinkage.Equals(other.PlannedShrinkage)
+                ) &&
+                (
+                    this.Interruptible == other.Interruptible ||
+                    this.Interruptible != null &&
+                    this.Interruptible.Equals(other.Interruptible)
+                ) &&
+                (
+                    this.PlanningGroupIds == other.PlanningGroupIds ||
+                    this.PlanningGroupIds != null &&
+                    this.PlanningGroupIds.Equals(other.PlanningGroupIds)
+                ) &&
+                (
+                    this.Style == other.Style ||
+                    this.Style != null &&
+                    this.Style.Equals(other.Style)
+                ) &&
+                (
+                    this.Metadata == other.Metadata ||
+                    this.Metadata != null &&
+                    this.Metadata.Equals(other.Metadata)
+                ) &&
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            // credit: http://stackoverflow.com/a/263416/677735
+            unchecked // Overflow is fine, just wrap
+            {
+                int hash = 41;
+                // Suitable nullity checks etc, of course :)
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.Category != null)
+                    hash = hash * 59 + this.Category.GetHashCode();
+
+                if (this.LengthInMinutes != null)
+                    hash = hash * 59 + this.LengthInMinutes.GetHashCode();
+
+                if (this.CountsAsPaidTime != null)
+                    hash = hash * 59 + this.CountsAsPaidTime.GetHashCode();
+
+                if (this.CountsAsWorkTime != null)
+                    hash = hash * 59 + this.CountsAsWorkTime.GetHashCode();
+
+                if (this.AgentTimeOffSelectable != null)
+                    hash = hash * 59 + this.AgentTimeOffSelectable.GetHashCode();
+
+                if (this.CountsTowardShrinkage != null)
+                    hash = hash * 59 + this.CountsTowardShrinkage.GetHashCode();
+
+                if (this.PlannedShrinkage != null)
+                    hash = hash * 59 + this.PlannedShrinkage.GetHashCode();
+
+                if (this.Interruptible != null)
+                    hash = hash * 59 + this.Interruptible.GetHashCode();
+
+                if (this.PlanningGroupIds != null)
+                    hash = hash * 59 + this.PlanningGroupIds.GetHashCode();
+
+                if (this.Style != null)
+                    hash = hash * 59 + this.Style.GetHashCode();
+
+                if (this.Metadata != null)
+                    hash = hash * 59 + this.Metadata.GetHashCode();
+
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
+                return hash;
+            }
+        }
+    }
+
+}

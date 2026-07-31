@@ -18,16 +18,10 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterImageSource :  IEquatable<SupportCenterImageSource>
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterImageSource" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected SupportCenterImageSource() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SupportCenterImageSource" /> class.
-        /// </summary>
-        /// <param name="DefaultUrl">Default URL for image (required).</param>
+        /// <param name="DefaultUrl">Default URL for image.</param>
         public SupportCenterImageSource(string DefaultUrl = null)
         {
             this.DefaultUrl = DefaultUrl;

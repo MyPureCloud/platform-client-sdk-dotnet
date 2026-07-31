@@ -40,8 +40,9 @@
 | **AgentAssistantId** | **string** | UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. | [optional] |
 | **TransferSource** | **string** | Indicates how call reaches the agent. | [optional] |
 | **QueueMediaSettings** | [**ConversationQueueMediaSettings**](ConversationQueueMediaSettings) | Represents the queue settings for this media type. | [optional] |
+| **ClientIpAddress** | **string** | The reported client IP of the phone for the call. | [optional] |
 | **Disposition** | [**Disposition**](Disposition) | Call resolution data for Dialer bulk make calls commands. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

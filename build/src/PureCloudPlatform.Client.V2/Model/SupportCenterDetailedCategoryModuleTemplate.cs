@@ -18,17 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterDetailedCategoryModuleTemplate :  IEquatable<SupportCenterDetailedCategoryModuleTemplate>
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterDetailedCategoryModuleTemplate" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected SupportCenterDetailedCategoryModuleTemplate() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SupportCenterDetailedCategoryModuleTemplate" /> class.
-        /// </summary>
-        /// <param name="Active">Whether this template is active or not (required).</param>
-        /// <param name="Sidebar">Sidebar settings for the template (required).</param>
+        /// <param name="Active">Whether this template is active or not.</param>
+        /// <param name="Sidebar">Sidebar settings for the template. Required if support center is enabled.</param>
         public SupportCenterDetailedCategoryModuleTemplate(bool? Active = null, SupportCenterDetailedCategoryModuleSidebar Sidebar = null)
         {
             this.Active = Active;
@@ -48,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Sidebar settings for the template
+        /// Sidebar settings for the template. Required if support center is enabled
         /// </summary>
-        /// <value>Sidebar settings for the template</value>
+        /// <value>Sidebar settings for the template. Required if support center is enabled</value>
         [DataMember(Name="sidebar", EmitDefaultValue=false)]
         public SupportCenterDetailedCategoryModuleSidebar Sidebar { get; set; }
 

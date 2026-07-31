@@ -184,7 +184,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackAutoAnswer">The option manages the auto-answer callback calls.</param>
         /// <param name="DynamicLineBalancingSettings">Dynamic line balancing settings.</param>
         /// <param name="DiagnosticsSettings">Campaign diagnostics settings.</param>
-        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, string AgentOwnedColumn = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, List<string> SkillColumns = null, bool? PreviewAutoEnd = null, int? MaxCallsPerAgent = null, double? MaxCallsPerAgentDecimal = null, bool? CallbackAutoAnswer = null, DynamicLineBalancingSettings DynamicLineBalancingSettings = null, DiagnosticsSettings DiagnosticsSettings = null)
+        /// <param name="PreciseDialingEnabled">Option to enable precise dialing.</param>
+        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, string AgentOwnedColumn = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, List<string> SkillColumns = null, bool? PreviewAutoEnd = null, int? MaxCallsPerAgent = null, double? MaxCallsPerAgentDecimal = null, bool? CallbackAutoAnswer = null, DynamicLineBalancingSettings DynamicLineBalancingSettings = null, DiagnosticsSettings DiagnosticsSettings = null, bool? PreciseDialingEnabled = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -223,6 +224,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CallbackAutoAnswer = CallbackAutoAnswer;
             this.DynamicLineBalancingSettings = DynamicLineBalancingSettings;
             this.DiagnosticsSettings = DiagnosticsSettings;
+            this.PreciseDialingEnabled = PreciseDialingEnabled;
             
         }
         
@@ -584,6 +586,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Option to enable precise dialing
+        /// </summary>
+        /// <value>Option to enable precise dialing</value>
+        [DataMember(Name="preciseDialingEnabled", EmitDefaultValue=false)]
+        public bool? PreciseDialingEnabled { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -641,6 +652,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CallbackAutoAnswer: ").Append(CallbackAutoAnswer).Append("\n");
             sb.Append("  DynamicLineBalancingSettings: ").Append(DynamicLineBalancingSettings).Append("\n");
             sb.Append("  DiagnosticsSettings: ").Append(DiagnosticsSettings).Append("\n");
+            sb.Append("  PreciseDialingEnabled: ").Append(PreciseDialingEnabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -888,6 +900,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DiagnosticsSettings.Equals(other.DiagnosticsSettings)
                 ) &&
                 (
+                    this.PreciseDialingEnabled == other.PreciseDialingEnabled ||
+                    this.PreciseDialingEnabled != null &&
+                    this.PreciseDialingEnabled.Equals(other.PreciseDialingEnabled)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -1027,6 +1044,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DiagnosticsSettings != null)
                     hash = hash * 59 + this.DiagnosticsSettings.GetHashCode();
+
+                if (this.PreciseDialingEnabled != null)
+                    hash = hash * 59 + this.PreciseDialingEnabled.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

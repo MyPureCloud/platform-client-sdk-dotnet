@@ -51,23 +51,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Router type for knowledge portal (previously support center)</value>
         [DataMember(Name="routerType", EmitDefaultValue=false)]
         public RouterTypeEnum? RouterType { get; set; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterSettings" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected SupportCenterSettings() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SupportCenterSettings" /> class.
-        /// </summary>
-        /// <param name="Enabled">Whether or not knowledge portal (previously support center) is enabled (required).</param>
-        /// <param name="KnowledgeBase">The knowledge base for knowledge portal (previously support center) (required).</param>
-        /// <param name="CustomMessages">Customizable display texts for knowledge portal (previously support center).</param>
+        /// <param name="Enabled">Whether or not knowledge portal (previously support center) is enabled..</param>
+        /// <param name="KnowledgeBase">The knowledge base for knowledge portal (previously support center). Required if support center is enabled.</param>
+        /// <param name="CustomMessages">Customizable display texts for knowledge portal (previously support center). Required if support center is enabled, must contain both Welcome and Fallback message entries.</param>
         /// <param name="RouterType">Router type for knowledge portal (previously support center).</param>
-        /// <param name="Screens">Available screens for the knowledge portal (previously support center) with its modules (required).</param>
-        /// <param name="EnabledCategories">Featured categories for knowledge portal (previously support center) home screen (required).</param>
+        /// <param name="Screens">Available screens for the knowledge portal (previously support center) with its modules. Required if support center is enabled.</param>
+        /// <param name="EnabledCategories">Featured categories for knowledge portal (previously support center) home screen. Required if support center is enabled.</param>
         /// <param name="LabelFilter">Document label filter. If set, only documents having at least one of the specified labels will be returned by knowledge document query operations..</param>
-        /// <param name="StyleSetting">Style attributes for knowledge portal (previously support center) (required).</param>
+        /// <param name="StyleSetting">Style attributes for knowledge portal (previously support center). Required if support center is enabled.</param>
         /// <param name="Feedback">Customer feedback settings.</param>
         public SupportCenterSettings(bool? Enabled = null, AddressableEntityRef KnowledgeBase = null, List<SupportCenterCustomMessage> CustomMessages = null, RouterTypeEnum? RouterType = null, List<SupportCenterScreen> Screens = null, List<SupportCenterCategory> EnabledCategories = null, SupportCenterLabelFilter LabelFilter = null, SupportCenterStyleSetting StyleSetting = null, SupportCenterFeedbackSettings Feedback = null)
         {
@@ -86,27 +80,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether or not knowledge portal (previously support center) is enabled
+        /// Whether or not knowledge portal (previously support center) is enabled.
         /// </summary>
-        /// <value>Whether or not knowledge portal (previously support center) is enabled</value>
+        /// <value>Whether or not knowledge portal (previously support center) is enabled.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
 
 
 
         /// <summary>
-        /// The knowledge base for knowledge portal (previously support center)
+        /// The knowledge base for knowledge portal (previously support center). Required if support center is enabled
         /// </summary>
-        /// <value>The knowledge base for knowledge portal (previously support center)</value>
+        /// <value>The knowledge base for knowledge portal (previously support center). Required if support center is enabled</value>
         [DataMember(Name="knowledgeBase", EmitDefaultValue=false)]
         public AddressableEntityRef KnowledgeBase { get; set; }
 
 
 
         /// <summary>
-        /// Customizable display texts for knowledge portal (previously support center)
+        /// Customizable display texts for knowledge portal (previously support center). Required if support center is enabled, must contain both Welcome and Fallback message entries
         /// </summary>
-        /// <value>Customizable display texts for knowledge portal (previously support center)</value>
+        /// <value>Customizable display texts for knowledge portal (previously support center). Required if support center is enabled, must contain both Welcome and Fallback message entries</value>
         [DataMember(Name="customMessages", EmitDefaultValue=false)]
         public List<SupportCenterCustomMessage> CustomMessages { get; set; }
 
@@ -115,18 +109,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Available screens for the knowledge portal (previously support center) with its modules
+        /// Available screens for the knowledge portal (previously support center) with its modules. Required if support center is enabled
         /// </summary>
-        /// <value>Available screens for the knowledge portal (previously support center) with its modules</value>
+        /// <value>Available screens for the knowledge portal (previously support center) with its modules. Required if support center is enabled</value>
         [DataMember(Name="screens", EmitDefaultValue=false)]
         public List<SupportCenterScreen> Screens { get; set; }
 
 
 
         /// <summary>
-        /// Featured categories for knowledge portal (previously support center) home screen
+        /// Featured categories for knowledge portal (previously support center) home screen. Required if support center is enabled
         /// </summary>
-        /// <value>Featured categories for knowledge portal (previously support center) home screen</value>
+        /// <value>Featured categories for knowledge portal (previously support center) home screen. Required if support center is enabled</value>
         [DataMember(Name="enabledCategories", EmitDefaultValue=false)]
         public List<SupportCenterCategory> EnabledCategories { get; set; }
 
@@ -142,9 +136,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Style attributes for knowledge portal (previously support center)
+        /// Style attributes for knowledge portal (previously support center). Required if support center is enabled
         /// </summary>
-        /// <value>Style attributes for knowledge portal (previously support center)</value>
+        /// <value>Style attributes for knowledge portal (previously support center). Required if support center is enabled</value>
         [DataMember(Name="styleSetting", EmitDefaultValue=false)]
         public SupportCenterStyleSetting StyleSetting { get; set; }
 

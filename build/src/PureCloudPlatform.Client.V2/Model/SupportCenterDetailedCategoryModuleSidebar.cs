@@ -18,16 +18,10 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterDetailedCategoryModuleSidebar :  IEquatable<SupportCenterDetailedCategoryModuleSidebar>
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterDetailedCategoryModuleSidebar" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected SupportCenterDetailedCategoryModuleSidebar() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SupportCenterDetailedCategoryModuleSidebar" /> class.
-        /// </summary>
-        /// <param name="Enabled">Whether sidebar is enabled or not (required).</param>
+        /// <param name="Enabled">Whether sidebar is enabled or not. Required if support center is enabled.</param>
         public SupportCenterDetailedCategoryModuleSidebar(bool? Enabled = null)
         {
             this.Enabled = Enabled;
@@ -37,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether sidebar is enabled or not
+        /// Whether sidebar is enabled or not. Required if support center is enabled
         /// </summary>
-        /// <value>Whether sidebar is enabled or not</value>
+        /// <value>Whether sidebar is enabled or not. Required if support center is enabled</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
 

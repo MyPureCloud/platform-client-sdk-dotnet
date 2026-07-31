@@ -18,17 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterHeroStyle :  IEquatable<SupportCenterHeroStyle>
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterHeroStyle" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected SupportCenterHeroStyle() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SupportCenterHeroStyle" /> class.
-        /// </summary>
-        /// <param name="BackgroundColor">Background color for hero section, in hexadecimal format, eg #ffffff (required).</param>
-        /// <param name="TextColor">Text color for hero section, in hexadecimal format, eg #ffffff (required).</param>
+        /// <param name="BackgroundColor">Background color for hero section, in hexadecimal format, eg #ffffff. Required when heroStyle is provided.</param>
+        /// <param name="TextColor">Text color for hero section, in hexadecimal format, eg #ffffff. Required when heroStyle is provided.</param>
         /// <param name="Image">Background image for hero section.</param>
         public SupportCenterHeroStyle(string BackgroundColor = null, string TextColor = null, SupportCenterImage Image = null)
         {
@@ -41,18 +35,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Background color for hero section, in hexadecimal format, eg #ffffff
+        /// Background color for hero section, in hexadecimal format, eg #ffffff. Required when heroStyle is provided
         /// </summary>
-        /// <value>Background color for hero section, in hexadecimal format, eg #ffffff</value>
+        /// <value>Background color for hero section, in hexadecimal format, eg #ffffff. Required when heroStyle is provided</value>
         [DataMember(Name="backgroundColor", EmitDefaultValue=false)]
         public string BackgroundColor { get; set; }
 
 
 
         /// <summary>
-        /// Text color for hero section, in hexadecimal format, eg #ffffff
+        /// Text color for hero section, in hexadecimal format, eg #ffffff. Required when heroStyle is provided
         /// </summary>
-        /// <value>Text color for hero section, in hexadecimal format, eg #ffffff</value>
+        /// <value>Text color for hero section, in hexadecimal format, eg #ffffff. Required when heroStyle is provided</value>
         [DataMember(Name="textColor", EmitDefaultValue=false)]
         public string TextColor { get; set; }
 

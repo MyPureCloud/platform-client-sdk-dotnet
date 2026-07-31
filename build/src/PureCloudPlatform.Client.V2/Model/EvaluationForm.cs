@@ -28,6 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="EvaluationForm" /> class.
         /// </summary>
         /// <param name="Name">The evaluation form name (required).</param>
+        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Published">Published.</param>
         /// <param name="ContextId">ContextId.</param>
@@ -35,10 +36,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PublishedVersions">A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the &#39;expand&#x3D;publishHistory&#39; query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable)..</param>
         /// <param name="EvaluationSettings">Settings for evaluations associated with this form.</param>
         /// <param name="LatestVersionFormName">The name of the form&#39;s most recently published version.</param>
+        /// <param name="Redacted">Is this form redacted.</param>
         /// <param name="Dialect">The language dialect for this evaluation form. Supported dialects: ar, cs, da, de, en-US, es, fi, fr, fr-CA, he, hi, it, ja, ko, nl, no, pl, pt-BR, pt-PT, ru, sv, th, tr, uk, zh-CN, zh-TW.</param>
-        public EvaluationForm(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null, EvaluationSettings EvaluationSettings = null, string LatestVersionFormName = null, string Dialect = null)
+        public EvaluationForm(string Name = null, WritableStarrableDivision Division = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null, EvaluationSettings EvaluationSettings = null, string LatestVersionFormName = null, bool? Redacted = null, string Dialect = null)
         {
             this.Name = Name;
+            this.Division = Division;
             this.ModifiedDate = ModifiedDate;
             this.Published = Published;
             this.ContextId = ContextId;
@@ -46,6 +49,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PublishedVersions = PublishedVersions;
             this.EvaluationSettings = EvaluationSettings;
             this.LatestVersionFormName = LatestVersionFormName;
+            this.Redacted = Redacted;
             this.Dialect = Dialect;
             
         }
@@ -67,6 +71,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The evaluation form name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+
+
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public WritableStarrableDivision Division { get; set; }
 
 
 
@@ -141,6 +154,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Is this form redacted
+        /// </summary>
+        /// <value>Is this form redacted</value>
+        [DataMember(Name="redacted", EmitDefaultValue=false)]
+        public bool? Redacted { get; set; }
+
+
+
+        /// <summary>
         /// The language dialect for this evaluation form. Supported dialects: ar, cs, da, de, en-US, es, fi, fr, fr-CA, he, hi, it, ja, ko, nl, no, pl, pt-BR, pt-PT, ru, sv, th, tr, uk, zh-CN, zh-TW
         /// </summary>
         /// <value>The language dialect for this evaluation form. Supported dialects: ar, cs, da, de, en-US, es, fi, fr, fr-CA, he, hi, it, ja, ko, nl, no, pl, pt-BR, pt-PT, ru, sv, th, tr, uk, zh-CN, zh-TW</value>
@@ -168,6 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("  Published: ").Append(Published).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
@@ -176,6 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EvaluationSettings: ").Append(EvaluationSettings).Append("\n");
             sb.Append("  LatestVersionFormName: ").Append(LatestVersionFormName).Append("\n");
             sb.Append("  AiScoring: ").Append(AiScoring).Append("\n");
+            sb.Append("  Redacted: ").Append(Redacted).Append("\n");
             sb.Append("  Dialect: ").Append(Dialect).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -229,6 +253,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
@@ -269,6 +298,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AiScoring.Equals(other.AiScoring)
                 ) &&
                 (
+                    this.Redacted == other.Redacted ||
+                    this.Redacted != null &&
+                    this.Redacted.Equals(other.Redacted)
+                ) &&
+                (
                     this.Dialect == other.Dialect ||
                     this.Dialect != null &&
                     this.Dialect.Equals(other.Dialect)
@@ -297,6 +331,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
 
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
+
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
 
@@ -320,6 +357,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AiScoring != null)
                     hash = hash * 59 + this.AiScoring.GetHashCode();
+
+                if (this.Redacted != null)
+                    hash = hash * 59 + this.Redacted.GetHashCode();
 
                 if (this.Dialect != null)
                     hash = hash * 59 + this.Dialect.GetHashCode();

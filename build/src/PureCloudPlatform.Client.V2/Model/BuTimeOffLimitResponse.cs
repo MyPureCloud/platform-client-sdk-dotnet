@@ -18,6 +18,39 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class BuTimeOffLimitResponse :  IEquatable<BuTimeOffLimitResponse>
     {
+        /// <summary>
+        /// Granularity choice for time off limit
+        /// </summary>
+        /// <value>Granularity choice for time off limit</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum GranularityEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Daily for "Daily"
+            /// </summary>
+            [EnumMember(Value = "Daily")]
+            Daily,
+            
+            /// <summary>
+            /// Enum Fifteenminutes for "FifteenMinutes"
+            /// </summary>
+            [EnumMember(Value = "FifteenMinutes")]
+            Fifteenminutes
+        }
+        /// <summary>
+        /// Granularity choice for time off limit
+        /// </summary>
+        /// <value>Granularity choice for time off limit</value>
+        [DataMember(Name="granularity", EmitDefaultValue=false)]
+        public GranularityEnum? Granularity { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BuTimeOffLimitResponse" /> class.
@@ -30,13 +63,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="StaffingGroup">The staffing group to which this time-off limit is associated. If managementUnit is set, then the staffing group belongs to that management unit.Otherwise, if managementUnit is not set, it is a business unit level staffing group.At least one of managementUnit and staffingGroup must be set.</param>
         /// <param name="ManagementUnit">The management unit to which this time-off limit is associated. If staffingGroup is set, then the limit is associated with that staffing group, which belongs to this management unit.At least one of managementUnit and staffingGroup must be set.</param>
+        /// <param name="Granularity">Granularity choice for time off limit.</param>
         /// <param name="Metadata">Version metadata for the time-off limit (required).</param>
-        public BuTimeOffLimitResponse(string Id = null, StaffingGroupReference StaffingGroup = null, ManagementUnitReference ManagementUnit = null, WfmVersionedEntityMetadata Metadata = null)
+        /// <param name="FullDayTimeOffStartTime">The start time of full day time off requests associated with this limit interval in HH:mm format..</param>
+        public BuTimeOffLimitResponse(string Id = null, StaffingGroupReference StaffingGroup = null, ManagementUnitReference ManagementUnit = null, GranularityEnum? Granularity = null, WfmVersionedEntityMetadata Metadata = null, string FullDayTimeOffStartTime = null)
         {
             this.Id = Id;
             this.StaffingGroup = StaffingGroup;
             this.ManagementUnit = ManagementUnit;
+            this.Granularity = Granularity;
             this.Metadata = Metadata;
+            this.FullDayTimeOffStartTime = FullDayTimeOffStartTime;
             
         }
         
@@ -69,12 +106,23 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Version metadata for the time-off limit
         /// </summary>
         /// <value>Version metadata for the time-off limit</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
+
+
+
+        /// <summary>
+        /// The start time of full day time off requests associated with this limit interval in HH:mm format.
+        /// </summary>
+        /// <value>The start time of full day time off requests associated with this limit interval in HH:mm format.</value>
+        [DataMember(Name="fullDayTimeOffStartTime", EmitDefaultValue=false)]
+        public string FullDayTimeOffStartTime { get; set; }
 
 
 
@@ -98,7 +146,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  StaffingGroup: ").Append(StaffingGroup).Append("\n");
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
+            sb.Append("  Granularity: ").Append(Granularity).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  FullDayTimeOffStartTime: ").Append(FullDayTimeOffStartTime).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -156,9 +206,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ManagementUnit.Equals(other.ManagementUnit)
                 ) &&
                 (
+                    this.Granularity == other.Granularity ||
+                    this.Granularity != null &&
+                    this.Granularity.Equals(other.Granularity)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
+                ) &&
+                (
+                    this.FullDayTimeOffStartTime == other.FullDayTimeOffStartTime ||
+                    this.FullDayTimeOffStartTime != null &&
+                    this.FullDayTimeOffStartTime.Equals(other.FullDayTimeOffStartTime)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -187,8 +247,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ManagementUnit != null)
                     hash = hash * 59 + this.ManagementUnit.GetHashCode();
 
+                if (this.Granularity != null)
+                    hash = hash * 59 + this.Granularity.GetHashCode();
+
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
+
+                if (this.FullDayTimeOffStartTime != null)
+                    hash = hash * 59 + this.FullDayTimeOffStartTime.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -154,6 +154,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationParticipantAttributes**](#PatchConversationParticipantAttributes) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationRecordingstate**](#PatchConversationRecordingstate) | **Patch** /api/v2/conversations/{conversationId}/recordingstate | Update a conversation by setting its recording state |
 | [**PatchConversationSecureattributes**](#PatchConversationSecureattributes) | **Patch** /api/v2/conversations/{conversationId}/secureattributes | Update the secure attributes on a conversation. |
+| [**PatchConversationSuggestion**](#PatchConversationSuggestion) | **Patch** /api/v2/conversations/{conversationId}/suggestions/{suggestionId} | Update a suggestion. |
 | [**PatchConversationSummaryEngagements**](#PatchConversationSummaryEngagements) | **Patch** /api/v2/conversations/{conversationId}/summaries/{summaryId}/engagements | Update agent&#39;s engagement for the summary. |
 | [**PatchConversationSummaryFeedback**](#PatchConversationSummaryFeedback) | **Patch** /api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback | Update the feedback for the summary. |
 | [**PatchConversationUtilizationlabel**](#PatchConversationUtilizationlabel) | **Patch** /api/v2/conversations/{conversationId}/utilizationlabel | Update the utilization label on a conversation. When there is no value provided, the system default label is applied |
@@ -232,6 +233,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsCall**](#PostConversationsCall) | **Post** /api/v2/conversations/calls/{conversationId} | Place a new call as part of a callback conversation. |
 | [**PostConversationsCallParticipantBarge**](#PostConversationsCallParticipantBarge) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/barge | Barge a given participant&#39;s call creating a barged in conference of connected participants. |
 | [**PostConversationsCallParticipantCoach**](#PostConversationsCallParticipantCoach) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/coach | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
+| [**PostConversationsCallParticipantCommunicationSummaries**](#PostConversationsCallParticipantCommunicationSummaries) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/summaries | Request an on-demand summary for a call communication. |
 | [**PostConversationsCallParticipantCommunicationWrapup**](#PostConversationsCallParticipantCommunicationWrapup) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsCallParticipantConsult**](#PostConversationsCallParticipantConsult) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Initiate and update consult transfer (Deprecated) |
 | [**PostConversationsCallParticipantConsultAgent**](#PostConversationsCallParticipantConsultAgent) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/agent | Initiate a consult transfer to an agent |
@@ -282,6 +284,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessageInboundOpenReceipt**](#PostConversationsMessageInboundOpenReceipt) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/receipt | Send an inbound Open Receipt Message |
 | [**PostConversationsMessageInboundOpenStructuredResponse**](#PostConversationsMessageInboundOpenStructuredResponse) | **Post** /api/v2/conversations/messages/{integrationId}/inbound/open/structured/response | Send inbound Open Response |
 | [**PostConversationsMessageMessagesBulk**](#PostConversationsMessageMessagesBulk) | **Post** /api/v2/conversations/messages/{conversationId}/messages/bulk | Get messages in batch |
+| [**PostConversationsMessageParticipantCommunicationSummaries**](#PostConversationsMessageParticipantCommunicationSummaries) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/summaries | Request an on-demand summary for a message communication. |
 | [**PostConversationsMessageParticipantCommunicationWrapup**](#PostConversationsMessageParticipantCommunicationWrapup) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsMessageParticipantMonitor**](#PostConversationsMessageParticipantMonitor) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
 | [**PostConversationsMessageParticipantReplace**](#PostConversationsMessageParticipantReplace) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
@@ -9746,6 +9749,72 @@ namespace Example
 **string**
 
 
+## PatchConversationSuggestion
+
+> [**Suggestion**](Suggestion) PatchConversationSuggestion (string conversationId, string suggestionId, SuggestionPatchRequest body)
+
+
+Update a suggestion.
+
+Requires ALL permissions: 
+
+* conversation:suggestion:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationSuggestionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var suggestionId = suggestionId_example;  // string | Suggestion ID
+            var body = new SuggestionPatchRequest(); // SuggestionPatchRequest | 
+
+            try
+            { 
+                // Update a suggestion.
+                Suggestion result = apiInstance.PatchConversationSuggestion(conversationId, suggestionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationSuggestion: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **suggestionId** | **string**| Suggestion ID |  |
+| **body** | [**SuggestionPatchRequest**](SuggestionPatchRequest)|  |  |
+
+### Return type
+
+[**Suggestion**](Suggestion)
+
+
 ## PatchConversationSummaryEngagements
 
 > void PatchConversationSummaryEngagements (string conversationId, string summaryId, EngagementRequest body = null)
@@ -14892,6 +14961,74 @@ namespace Example
 void (empty response body)
 
 
+## PostConversationsCallParticipantCommunicationSummaries
+
+> [**OnDemandSummaryAcceptedResponse**](OnDemandSummaryAcceptedResponse) PostConversationsCallParticipantCommunicationSummaries (string conversationId, string participantId, string communicationId, OnDemandConversationSummaryRequest body = null)
+
+
+Request an on-demand summary for a call communication.
+
+Requires ALL permissions: 
+
+* conversation:summary:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsCallParticipantCommunicationSummariesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var participantId = participantId_example;  // string | Participant ID
+            var communicationId = communicationId_example;  // string | Communication ID
+            var body = new OnDemandConversationSummaryRequest(); // OnDemandConversationSummaryRequest | On-demand summary request (optional) 
+
+            try
+            { 
+                // Request an on-demand summary for a call communication.
+                OnDemandSummaryAcceptedResponse result = apiInstance.PostConversationsCallParticipantCommunicationSummaries(conversationId, participantId, communicationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsCallParticipantCommunicationSummaries: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **participantId** | **string**| Participant ID |  |
+| **communicationId** | **string**| Communication ID |  |
+| **body** | [**OnDemandConversationSummaryRequest**](OnDemandConversationSummaryRequest)| On-demand summary request | [optional]  |
+
+### Return type
+
+[**OnDemandSummaryAcceptedResponse**](OnDemandSummaryAcceptedResponse)
+
+
 ## PostConversationsCallParticipantCommunicationWrapup
 
 > void PostConversationsCallParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
@@ -18195,6 +18332,74 @@ namespace Example
 [**TextMessageListing**](TextMessageListing)
 
 
+## PostConversationsMessageParticipantCommunicationSummaries
+
+> [**OnDemandSummaryAcceptedResponse**](OnDemandSummaryAcceptedResponse) PostConversationsMessageParticipantCommunicationSummaries (string conversationId, string participantId, string communicationId, OnDemandConversationSummaryRequest body = null)
+
+
+Request an on-demand summary for a message communication.
+
+Requires ALL permissions: 
+
+* conversation:summary:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessageParticipantCommunicationSummariesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var participantId = participantId_example;  // string | Participant ID
+            var communicationId = communicationId_example;  // string | Communication ID
+            var body = new OnDemandConversationSummaryRequest(); // OnDemandConversationSummaryRequest | On-demand summary request (optional) 
+
+            try
+            { 
+                // Request an on-demand summary for a message communication.
+                OnDemandSummaryAcceptedResponse result = apiInstance.PostConversationsMessageParticipantCommunicationSummaries(conversationId, participantId, communicationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageParticipantCommunicationSummaries: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **participantId** | **string**| Participant ID |  |
+| **communicationId** | **string**| Communication ID |  |
+| **body** | [**OnDemandConversationSummaryRequest**](OnDemandConversationSummaryRequest)| On-demand summary request | [optional]  |
+
+### Return type
+
+[**OnDemandSummaryAcceptedResponse**](OnDemandSummaryAcceptedResponse)
+
+
 ## PostConversationsMessageParticipantCommunicationWrapup
 
 > void PostConversationsMessageParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
@@ -19489,7 +19694,7 @@ void (empty response body)
 
 ## PostConversationsVideoAgentconferenceCommunication
 
-> [**VideoConferenceDetails**](VideoConferenceDetails) PostConversationsVideoAgentconferenceCommunication (string conversationId, string communicationId)
+> [**CreateJoinVideoResponse**](CreateJoinVideoResponse) PostConversationsVideoAgentconferenceCommunication (string conversationId, string communicationId)
 
 
 Create an Agent-Type video conference and assign an agent to it
@@ -19528,7 +19733,7 @@ namespace Example
             try
             { 
                 // Create an Agent-Type video conference and assign an agent to it
-                VideoConferenceDetails result = apiInstance.PostConversationsVideoAgentconferenceCommunication(conversationId, communicationId);
+                CreateJoinVideoResponse result = apiInstance.PostConversationsVideoAgentconferenceCommunication(conversationId, communicationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -19550,7 +19755,7 @@ namespace Example
 
 ### Return type
 
-[**VideoConferenceDetails**](VideoConferenceDetails)
+[**CreateJoinVideoResponse**](CreateJoinVideoResponse)
 
 
 ## PostConversationsVideoParticipantCommunicationWrapup
@@ -21497,4 +21702,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

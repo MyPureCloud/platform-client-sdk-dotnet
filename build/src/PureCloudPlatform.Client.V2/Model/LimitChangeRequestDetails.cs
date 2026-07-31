@@ -34,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Webdeployments for "web.deployments"
+            /// Enum Usersrules for "users.rules"
             /// </summary>
-            [EnumMember(Value = "web.deployments")]
-            Webdeployments,
+            [EnumMember(Value = "users.rules")]
+            Usersrules,
             
             /// <summary>
-            /// Enum Webmessaging for "web.messaging"
+            /// Enum Adminnotice for "admin.notice"
             /// </summary>
-            [EnumMember(Value = "web.messaging")]
-            Webmessaging,
+            [EnumMember(Value = "admin.notice")]
+            Adminnotice,
             
             /// <summary>
             /// Enum Agentassistant for "agent.assistant"
@@ -454,6 +454,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Screenmonitoring,
             
             /// <summary>
+            /// Enum Sda for "sda"
+            /// </summary>
+            [EnumMember(Value = "sda")]
+            Sda,
+            
+            /// <summary>
             /// Enum Search for "search"
             /// </summary>
             [EnumMember(Value = "search")]
@@ -520,16 +526,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Users,
             
             /// <summary>
-            /// Enum Usersrules for "users.rules"
-            /// </summary>
-            [EnumMember(Value = "users.rules")]
-            Usersrules,
-            
-            /// <summary>
             /// Enum Voicetranscription for "voice.transcription"
             /// </summary>
             [EnumMember(Value = "voice.transcription")]
             Voicetranscription,
+            
+            /// <summary>
+            /// Enum Webdeployments for "web.deployments"
+            /// </summary>
+            [EnumMember(Value = "web.deployments")]
+            Webdeployments,
+            
+            /// <summary>
+            /// Enum Webmessaging for "web.messaging"
+            /// </summary>
+            [EnumMember(Value = "web.messaging")]
+            Webmessaging,
             
             /// <summary>
             /// Enum Webchat for "webchat"

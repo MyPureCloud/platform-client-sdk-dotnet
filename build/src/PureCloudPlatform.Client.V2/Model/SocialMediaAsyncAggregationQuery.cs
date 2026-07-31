@@ -132,7 +132,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Views for "views"
             /// </summary>
             [EnumMember(Value = "views")]
-            Views
+            Views,
+            
+            /// <summary>
+            /// Enum Posttype for "postType"
+            /// </summary>
+            [EnumMember(Value = "postType")]
+            Posttype
         }
         /// <summary>
         /// Gets or Sets Metrics

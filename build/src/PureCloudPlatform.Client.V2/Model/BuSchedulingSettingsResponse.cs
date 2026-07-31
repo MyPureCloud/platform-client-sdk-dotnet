@@ -98,11 +98,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuSchedulingSettingsResponse" /> class.
         /// </summary>
-        /// <param name="MessageSeverities">Schedule generation message severity configuration.</param>
-        /// <param name="SyncTimeOffProperties">Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published.</param>
-        /// <param name="EnableTimeOffFullDayEstimation">Enables start and end time estimation for full-day time-off requests.</param>
-        /// <param name="ServiceGoalImpact">Configures the max percent increase and decrease of service goals for this business unit.</param>
-        /// <param name="AllowWorkPlanPerMinuteGranularity">Indicates whether or not per minute granularity for scheduling will be enabled for this business unit. Defaults to false.</param>
+        /// <param name="MessageSeverities">Schedule generation message severity configuration (required).</param>
+        /// <param name="SyncTimeOffProperties">Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published (required).</param>
+        /// <param name="EnableTimeOffFullDayEstimation">Enables start and end time estimation for full-day time-off requests (required).</param>
+        /// <param name="ServiceGoalImpact">Configures the max percent increase and decrease of service goals for this business unit (required).</param>
+        /// <param name="AllowWorkPlanPerMinuteGranularity">Indicates whether or not per minute granularity for scheduling will be enabled for this business unit. Defaults to false (required).</param>
         /// <param name="ActivitySmoothingType">The activity smoothing type for schedule generation in this business unit (required).</param>
         /// <param name="InduceScheduleVariability">Indicates whether to provide variability in schedule generation (required).</param>
         public BuSchedulingSettingsResponse(List<SchedulerMessageTypeSeverity> MessageSeverities = null, List<SyncTimeOffPropertiesEnum> SyncTimeOffProperties = null, bool? EnableTimeOffFullDayEstimation = null, WfmServiceGoalImpactSettings ServiceGoalImpact = null, bool? AllowWorkPlanPerMinuteGranularity = null, ActivitySmoothingTypeEnum? ActivitySmoothingType = null, bool? InduceScheduleVariability = null)

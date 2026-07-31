@@ -18,16 +18,24 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UpdateVerifierRequest :  IEquatable<UpdateVerifierRequest>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateVerifierRequest" /> class.
         /// </summary>
-        /// <param name="Name">The name of the verifier..</param>
+        [JsonConstructorAttribute]
+        protected UpdateVerifierRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UpdateVerifierRequest" /> class.
+        /// </summary>
+        /// <param name="Name">The name of the verifier. Maximum length is 100 characters. (required).</param>
         /// <param name="Enabled">Indicates whether this verifier will be enabled..</param>
+        /// <param name="Credential">The WebAuthn credential associated with this verifier..</param>
         /// <param name="Default">Indicates whether this will be the default verifier..</param>
-        public UpdateVerifierRequest(string Name = null, bool? Enabled = null, bool? Default = null)
+        public UpdateVerifierRequest(string Name = null, bool? Enabled = null, Credential Credential = null, bool? Default = null)
         {
             this.Name = Name;
             this.Enabled = Enabled;
+            this.Credential = Credential;
             this.Default = Default;
             
         }
@@ -35,9 +43,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The name of the verifier.
+        /// The name of the verifier. Maximum length is 100 characters.
         /// </summary>
-        /// <value>The name of the verifier.</value>
+        /// <value>The name of the verifier. Maximum length is 100 characters.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
@@ -49,6 +57,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Indicates whether this verifier will be enabled.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
+
+
+
+        /// <summary>
+        /// The WebAuthn credential associated with this verifier.
+        /// </summary>
+        /// <value>The WebAuthn credential associated with this verifier.</value>
+        [DataMember(Name="credential", EmitDefaultValue=false)]
+        public Credential Credential { get; set; }
 
 
 
@@ -71,6 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  Credential: ").Append(Credential).Append("\n");
             sb.Append("  Default: ").Append(Default).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -123,6 +141,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled.Equals(other.Enabled)
                 ) &&
                 (
+                    this.Credential == other.Credential ||
+                    this.Credential != null &&
+                    this.Credential.Equals(other.Credential)
+                ) &&
+                (
                     this.Default == other.Default ||
                     this.Default != null &&
                     this.Default.Equals(other.Default)
@@ -145,6 +168,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+
+                if (this.Credential != null)
+                    hash = hash * 59 + this.Credential.GetHashCode();
 
                 if (this.Default != null)
                     hash = hash * 59 + this.Default.GetHashCode();

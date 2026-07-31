@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class SupportCenterScreen :  IEquatable<SupportCenterScreen>
     {
         /// <summary>
-        /// The type of the screen
+        /// The type of the screen. Required if support center is enabled
         /// </summary>
-        /// <value>The type of the screen</value>
+        /// <value>The type of the screen. Required if support center is enabled</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -58,22 +58,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Article
         }
         /// <summary>
-        /// The type of the screen
+        /// The type of the screen. Required if support center is enabled
         /// </summary>
-        /// <value>The type of the screen</value>
+        /// <value>The type of the screen. Required if support center is enabled</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterScreen" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected SupportCenterScreen() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SupportCenterScreen" /> class.
-        /// </summary>
-        /// <param name="Type">The type of the screen (required).</param>
-        /// <param name="ModuleSettings">Module settings for the screen, valid modules for each screenType: Home: Search, Categories, TopViewedArticles; Category: Search, Categories; SearchResults: Search, Results; Article: Search, Article; (required).</param>
+        /// <param name="Type">The type of the screen. Required if support center is enabled.</param>
+        /// <param name="ModuleSettings">Module settings for the screen, valid modules for each screenType: Home: Search, Categories, TopViewedArticles; Category: Search, Categories; SearchResults: Search, Results; Article: Search, Article; Required if support center is enabled.</param>
         public SupportCenterScreen(TypeEnum? Type = null, List<SupportCenterModuleSetting> ModuleSettings = null)
         {
             this.Type = Type;
@@ -86,9 +80,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Module settings for the screen, valid modules for each screenType: Home: Search, Categories, TopViewedArticles; Category: Search, Categories; SearchResults: Search, Results; Article: Search, Article;
+        /// Module settings for the screen, valid modules for each screenType: Home: Search, Categories, TopViewedArticles; Category: Search, Categories; SearchResults: Search, Results; Article: Search, Article; Required if support center is enabled
         /// </summary>
-        /// <value>Module settings for the screen, valid modules for each screenType: Home: Search, Categories, TopViewedArticles; Category: Search, Categories; SearchResults: Search, Results; Article: Search, Article;</value>
+        /// <value>Module settings for the screen, valid modules for each screenType: Home: Search, Categories, TopViewedArticles; Category: Search, Categories; SearchResults: Search, Results; Article: Search, Article; Required if support center is enabled</value>
         [DataMember(Name="moduleSettings", EmitDefaultValue=false)]
         public List<SupportCenterModuleSetting> ModuleSettings { get; set; }
 

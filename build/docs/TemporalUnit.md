@@ -7,10 +7,10 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **DurationEstimated** | **bool?** |  | [optional] |
-| **Duration** | [**Duration**](Duration) |  | [optional] |
+| **Duration** | **string** |  | [optional] |
 | **TimeBased** | **bool?** |  | [optional] |
 | **DateBased** | **bool?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

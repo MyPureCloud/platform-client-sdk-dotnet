@@ -18,17 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterStyleSetting :  IEquatable<SupportCenterStyleSetting>
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterStyleSetting" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected SupportCenterStyleSetting() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SupportCenterStyleSetting" /> class.
-        /// </summary>
-        /// <param name="HeroStyle">Knowledge portal (previously support center) hero customizations (required).</param>
-        /// <param name="GlobalStyle">Knowledge portal (previously support center) global customizations (required).</param>
+        /// <param name="HeroStyle">Knowledge portal (previously support center) hero customizations. Required when styleSetting is provided.</param>
+        /// <param name="GlobalStyle">Knowledge portal (previously support center) global customizations. Required when styleSetting is provided.</param>
         public SupportCenterStyleSetting(SupportCenterHeroStyle HeroStyle = null, SupportCenterGlobalStyle GlobalStyle = null)
         {
             this.HeroStyle = HeroStyle;
@@ -39,18 +33,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Knowledge portal (previously support center) hero customizations
+        /// Knowledge portal (previously support center) hero customizations. Required when styleSetting is provided
         /// </summary>
-        /// <value>Knowledge portal (previously support center) hero customizations</value>
+        /// <value>Knowledge portal (previously support center) hero customizations. Required when styleSetting is provided</value>
         [DataMember(Name="heroStyle", EmitDefaultValue=false)]
         public SupportCenterHeroStyle HeroStyle { get; set; }
 
 
 
         /// <summary>
-        /// Knowledge portal (previously support center) global customizations
+        /// Knowledge portal (previously support center) global customizations. Required when styleSetting is provided
         /// </summary>
-        /// <value>Knowledge portal (previously support center) global customizations</value>
+        /// <value>Knowledge portal (previously support center) global customizations. Required when styleSetting is provided</value>
         [DataMember(Name="globalStyle", EmitDefaultValue=false)]
         public SupportCenterGlobalStyle GlobalStyle { get; set; }
 

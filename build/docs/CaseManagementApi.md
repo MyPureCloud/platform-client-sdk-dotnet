@@ -7,11 +7,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteCasemanagementCase**](#DeleteCasemanagementCase) | **Delete** /api/v2/casemanagement/cases/{caseId} | Delete a Case. |
+| [**DeleteCasemanagementCaseCommentsMeCommentId**](#DeleteCasemanagementCaseCommentsMeCommentId) | **Delete** /api/v2/casemanagement/cases/{caseId}/comments/me/{commentId} | Delete my Comment. |
 | [**DeleteCasemanagementCaseplan**](#DeleteCasemanagementCaseplan) | **Delete** /api/v2/casemanagement/caseplans/{caseplanId} | Delete a Caseplan. |
 | [**DeleteCasemanagementCaseplanDataschema**](#DeleteCasemanagementCaseplanDataschema) | **Delete** /api/v2/casemanagement/caseplans/{caseplanId}/dataschemas/{schemaKeyName} | Remove a data schema from a draft Caseplan. |
 | [**GetCasemanagementCase**](#GetCasemanagementCase) | **Get** /api/v2/casemanagement/cases/{caseId} | Get a Case. |
 | [**GetCasemanagementCaseAssociation**](#GetCasemanagementCaseAssociation) | **Get** /api/v2/casemanagement/cases/{caseId}/associations/{associationId} | Get a Case Association. |
 | [**GetCasemanagementCaseAssociations**](#GetCasemanagementCaseAssociations) | **Get** /api/v2/casemanagement/cases/{caseId}/associations | Get a list of Case associations for the Case. |
+| [**GetCasemanagementCaseComment**](#GetCasemanagementCaseComment) | **Get** /api/v2/casemanagement/cases/{caseId}/comments/{commentId} | Get a Comment. |
+| [**GetCasemanagementCaseComments**](#GetCasemanagementCaseComments) | **Get** /api/v2/casemanagement/cases/{caseId}/comments | Get comments for a Case. |
 | [**GetCasemanagementCaseStage**](#GetCasemanagementCaseStage) | **Get** /api/v2/casemanagement/cases/{caseId}/stages/{stageId} | Get a Stage. |
 | [**GetCasemanagementCaseStageStep**](#GetCasemanagementCaseStageStep) | **Get** /api/v2/casemanagement/cases/{caseId}/stages/{stageId}/steps/{stepId} | Get a Step. |
 | [**GetCasemanagementCaseStageSteps**](#GetCasemanagementCaseStageSteps) | **Get** /api/v2/casemanagement/cases/{caseId}/stages/{stageId}/steps | Get a list of Steps. |
@@ -35,6 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchCasemanagementCaseplanStageplan**](#PatchCasemanagementCaseplanStageplan) | **Patch** /api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId} | Update the attributes of a Stageplan. |
 | [**PatchCasemanagementCaseplanStageplanStepplan**](#PatchCasemanagementCaseplanStageplanStepplan) | **Patch** /api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId}/stepplans/{stepplanId} | Update the attributes of a Stepplan. |
 | [**PostCasemanagementCaseAssociations**](#PostCasemanagementCaseAssociations) | **Post** /api/v2/casemanagement/cases/{caseId}/associations | Create a Case association. |
+| [**PostCasemanagementCaseComments**](#PostCasemanagementCaseComments) | **Post** /api/v2/casemanagement/cases/{caseId}/comments | Add a comment to a Case. |
 | [**PostCasemanagementCaseTerminateJobs**](#PostCasemanagementCaseTerminateJobs) | **Post** /api/v2/casemanagement/cases/{caseId}/terminate/jobs | Create a Terminate Job for a Case. |
 | [**PostCasemanagementCaseplanDataschemas**](#PostCasemanagementCaseplanDataschemas) | **Post** /api/v2/casemanagement/caseplans/{caseplanId}/dataschemas | Add a data schema to a draft Caseplan. |
 | [**PostCasemanagementCaseplanPublish**](#PostCasemanagementCaseplanPublish) | **Post** /api/v2/casemanagement/caseplans/{caseplanId}/publish | Publish Caseplan. |
@@ -104,6 +108,70 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **caseId** | **string**| Case identifier. |  |
+
+### Return type
+
+**Object**
+
+
+## DeleteCasemanagementCaseCommentsMeCommentId
+
+> **Object** DeleteCasemanagementCaseCommentsMeCommentId (string caseId, string commentId)
+
+
+Delete my Comment.
+
+Requires ANY permissions: 
+
+* caseManagement:commentSelf:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteCasemanagementCaseCommentsMeCommentIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseId = caseId_example;  // string | Case identifier.
+            var commentId = commentId_example;  // string | Comment identifier.
+
+            try
+            { 
+                // Delete my Comment.
+                Object result = apiInstance.DeleteCasemanagementCaseCommentsMeCommentId(caseId, commentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.DeleteCasemanagementCaseCommentsMeCommentId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseId** | **string**| Case identifier. |  |
+| **commentId** | **string**| Comment identifier. |  |
 
 ### Return type
 
@@ -238,7 +306,7 @@ namespace Example
 
 ## GetCasemanagementCase
 
-> [**Case**](Case) GetCasemanagementCase (string caseId, string expands = null)
+> [**Case**](Case) GetCasemanagementCase (string caseId, List<string> expands = null)
 
 
 Get a Case.
@@ -270,7 +338,7 @@ namespace Example
 
             var apiInstance = new CaseManagementApi();
             var caseId = caseId_example;  // string | Case identifier.
-            var expands = expands_example;  // string | Fields to expand. (optional) 
+            var expands = new List<string>(); // List<string> | Attributes to expand. Comma-separated if more than one. (optional) 
 
             try
             { 
@@ -293,7 +361,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **caseId** | **string**| Case identifier. |  |
-| **expands** | **string**| Fields to expand. | [optional] <br />**Values**: caseplan |
+| **expands** | [**List<string>**](string)| Attributes to expand. Comma-separated if more than one. | [optional] <br />**Values**: caseplan, owner, modifiedBy, externalContact, customerIntent |
 
 ### Return type
 
@@ -430,6 +498,138 @@ namespace Example
 ### Return type
 
 [**CaseAssociationListing**](CaseAssociationListing)
+
+
+## GetCasemanagementCaseComment
+
+> [**Comment**](Comment) GetCasemanagementCaseComment (string caseId, string commentId)
+
+
+Get a Comment.
+
+Requires ANY permissions: 
+
+* caseManagement:comment:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetCasemanagementCaseCommentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseId = caseId_example;  // string | Case identifier.
+            var commentId = commentId_example;  // string | Comment identifier.
+
+            try
+            { 
+                // Get a Comment.
+                Comment result = apiInstance.GetCasemanagementCaseComment(caseId, commentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.GetCasemanagementCaseComment: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseId** | **string**| Case identifier. |  |
+| **commentId** | **string**| Comment identifier. |  |
+
+### Return type
+
+[**Comment**](Comment)
+
+
+## GetCasemanagementCaseComments
+
+> [**CommentListing**](CommentListing) GetCasemanagementCaseComments (string caseId, string after = null, int? pageSize = null, string sortOrder = null)
+
+
+Get comments for a Case.
+
+Requires ANY permissions: 
+
+* caseManagement:comment:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetCasemanagementCaseCommentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseId = caseId_example;  // string | Case identifier.
+            var after = after_example;  // string | Cursor pointing to the end of the previously returned page of comments. (optional) 
+            var pageSize = 56;  // int? | Number of comments to return. Maximum is 100. (optional) 
+            var sortOrder = sortOrder_example;  // string | Ascending or descending sort order. (optional)  (default to desc)
+
+            try
+            { 
+                // Get comments for a Case.
+                CommentListing result = apiInstance.GetCasemanagementCaseComments(caseId, after, pageSize, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.GetCasemanagementCaseComments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseId** | **string**| Case identifier. |  |
+| **after** | **string**| Cursor pointing to the end of the previously returned page of comments. | [optional]  |
+| **pageSize** | **int?**| Number of comments to return. Maximum is 100. | [optional]  |
+| **sortOrder** | **string**| Ascending or descending sort order. | [optional] [default to desc]<br />**Values**: asc, desc |
+
+### Return type
+
+[**CommentListing**](CommentListing)
 
 
 ## GetCasemanagementCaseStage
@@ -1442,7 +1642,7 @@ namespace Example
 
 ## GetCasemanagementCasesReference
 
-> [**Case**](Case) GetCasemanagementCasesReference (string referenceId, string expands = null)
+> [**Case**](Case) GetCasemanagementCasesReference (string referenceId, List<string> expands = null)
 
 
 Get a Case by reference.
@@ -1474,7 +1674,7 @@ namespace Example
 
             var apiInstance = new CaseManagementApi();
             var referenceId = referenceId_example;  // string | Case reference.
-            var expands = expands_example;  // string | Fields to expand. (optional) 
+            var expands = new List<string>(); // List<string> | Attributes to expand. Comma-separated if more than one. (optional) 
 
             try
             { 
@@ -1497,7 +1697,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **referenceId** | **string**| Case reference. |  |
-| **expands** | **string**| Fields to expand. | [optional] <br />**Values**: caseplan |
+| **expands** | [**List<string>**](string)| Attributes to expand. Comma-separated if more than one. | [optional] <br />**Values**: caseplan, owner, modifiedBy, externalContact, customerIntent |
 
 ### Return type
 
@@ -1956,6 +2156,70 @@ namespace Example
 ### Return type
 
 [**CaseAssociation**](CaseAssociation)
+
+
+## PostCasemanagementCaseComments
+
+> [**Comment**](Comment) PostCasemanagementCaseComments (string caseId, CommentCreate body)
+
+
+Add a comment to a Case.
+
+Requires ANY permissions: 
+
+* caseManagement:comment:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostCasemanagementCaseCommentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseId = caseId_example;  // string | Case identifier.
+            var body = new CommentCreate(); // CommentCreate | Comment create request.
+
+            try
+            { 
+                // Add a comment to a Case.
+                Comment result = apiInstance.PostCasemanagementCaseComments(caseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.PostCasemanagementCaseComments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseId** | **string**| Case identifier. |  |
+| **body** | [**CommentCreate**](CommentCreate)| Comment create request. |  |
+
+### Return type
+
+[**Comment**](Comment)
 
 
 ## PostCasemanagementCaseTerminateJobs
@@ -2588,4 +2852,4 @@ namespace Example
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

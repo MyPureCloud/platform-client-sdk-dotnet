@@ -37,37 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Equalto for "EqualTo"
             /// </summary>
             [EnumMember(Value = "EqualTo")]
-            Equalto,
-            
-            /// <summary>
-            /// Enum Greaterthan for "GreaterThan"
-            /// </summary>
-            [EnumMember(Value = "GreaterThan")]
-            Greaterthan,
-            
-            /// <summary>
-            /// Enum Greaterthanorequalto for "GreaterThanOrEqualTo"
-            /// </summary>
-            [EnumMember(Value = "GreaterThanOrEqualTo")]
-            Greaterthanorequalto,
-            
-            /// <summary>
-            /// Enum Lessthan for "LessThan"
-            /// </summary>
-            [EnumMember(Value = "LessThan")]
-            Lessthan,
-            
-            /// <summary>
-            /// Enum Lessthanorequalto for "LessThanOrEqualTo"
-            /// </summary>
-            [EnumMember(Value = "LessThanOrEqualTo")]
-            Lessthanorequalto,
-            
-            /// <summary>
-            /// Enum Between for "Between"
-            /// </summary>
-            [EnumMember(Value = "Between")]
-            Between
+            Equalto
         }
         /// <summary>
         /// The comparison operator for review rating filtering.
@@ -85,37 +55,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="RatingFilter" /> class.
         /// </summary>
         /// <param name="Operator">The comparison operator for review rating filtering. (required).</param>
-        /// <param name="From">The lower bound for the Between operator.</param>
-        /// <param name="To">The upper bound for the Between operator.</param>
         /// <param name="Values">One or more rating values to filter by.</param>
-        public RatingFilter(OperatorEnum? Operator = null, int? From = null, int? To = null, List<int?> Values = null)
+        public RatingFilter(OperatorEnum? Operator = null, List<int?> Values = null)
         {
             this.Operator = Operator;
-            this.From = From;
-            this.To = To;
             this.Values = Values;
             
         }
         
 
-
-
-
-        /// <summary>
-        /// The lower bound for the Between operator
-        /// </summary>
-        /// <value>The lower bound for the Between operator</value>
-        [DataMember(Name="from", EmitDefaultValue=false)]
-        public int? From { get; set; }
-
-
-
-        /// <summary>
-        /// The upper bound for the Between operator
-        /// </summary>
-        /// <value>The upper bound for the Between operator</value>
-        [DataMember(Name="to", EmitDefaultValue=false)]
-        public int? To { get; set; }
 
 
 
@@ -137,8 +85,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class RatingFilter {\n");
 
             sb.Append("  Operator: ").Append(Operator).Append("\n");
-            sb.Append("  From: ").Append(From).Append("\n");
-            sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -186,16 +132,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Operator.Equals(other.Operator)
                 ) &&
                 (
-                    this.From == other.From ||
-                    this.From != null &&
-                    this.From.Equals(other.From)
-                ) &&
-                (
-                    this.To == other.To ||
-                    this.To != null &&
-                    this.To.Equals(other.To)
-                ) &&
-                (
                     this.Values == other.Values ||
                     this.Values != null &&
                     this.Values.SequenceEqual(other.Values)
@@ -215,12 +151,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Operator != null)
                     hash = hash * 59 + this.Operator.GetHashCode();
-
-                if (this.From != null)
-                    hash = hash * 59 + this.From.GetHashCode();
-
-                if (this.To != null)
-                    hash = hash * 59 + this.To.GetHashCode();
 
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();

@@ -21,6 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteUserStationDefaultstation**](#DeleteUserStationDefaultstation) | **Delete** /api/v2/users/{userId}/station/defaultstation | Clear default station |
 | [**DeleteUserVerifier**](#DeleteUserVerifier) | **Delete** /api/v2/users/{userId}/verifiers/{verifierId} | Delete a verifier |
 | [**DeleteUsersCustomattributesSchema**](#DeleteUsersCustomattributesSchema) | **Delete** /api/v2/users/customattributes/schemas/{schemaId} | Delete a schema |
+| [**DeleteUsersMeVerifier**](#DeleteUsersMeVerifier) | **Delete** /api/v2/users/me/verifiers/{verifierId} | Delete a verifier |
 | [**DeleteUsersStationsMeAssociatedstation**](#DeleteUsersStationsMeAssociatedstation) | **Delete** /api/v2/users/stations/me/associatedstation | Clear self associated station |
 | [**GetAnalyticsUsersAggregatesJob**](#GetAnalyticsUsersAggregatesJob) | **Get** /api/v2/analytics/users/aggregates/jobs/{jobId} | Get status for async query for user aggregates |
 | [**GetAnalyticsUsersAggregatesJobResults**](#GetAnalyticsUsersAggregatesJobResults) | **Get** /api/v2/analytics/users/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
@@ -75,6 +76,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUsersDevelopmentActivity**](#GetUsersDevelopmentActivity) | **Get** /api/v2/users/development/activities/{activityId} | Get a Development Activity |
 | [**GetUsersExternalidAuthorityNameExternalKey**](#GetUsersExternalidAuthorityNameExternalKey) | **Get** /api/v2/users/externalid/{authorityName}/{externalKey} | Get the user associated with external identifier. |
 | [**GetUsersMe**](#GetUsersMe) | **Get** /api/v2/users/me | Get current user details. |
+| [**GetUsersMeVerifiers**](#GetUsersMeVerifiers) | **Get** /api/v2/users/me/verifiers | Get a list of my verifiers |
 | [**GetUsersQuery**](#GetUsersQuery) | **Get** /api/v2/users/query | Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required |
 | [**GetUsersSearch**](#GetUsersSearch) | **Get** /api/v2/users/search | Search users using the q64 value returned from a previous search |
 | [**GetUsersStationsMe**](#GetUsersStationsMe) | **Get** /api/v2/users/stations/me | Get station information for self |
@@ -108,6 +110,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUsersCustomattributesSchemas**](#PostUsersCustomattributesSchemas) | **Post** /api/v2/users/customattributes/schemas | Create a schema |
 | [**PostUsersDevelopmentActivitiesAggregatesQuery**](#PostUsersDevelopmentActivitiesAggregatesQuery) | **Post** /api/v2/users/development/activities/aggregates/query | Retrieve aggregated development activity data |
 | [**PostUsersMePassword**](#PostUsersMePassword) | **Post** /api/v2/users/me/password | Change your password |
+| [**PostUsersMeVerifiersTotp**](#PostUsersMeVerifiersTotp) | **Post** /api/v2/users/me/verifiers/totp | Add a new TOTP verifier |
+| [**PostUsersMeVerifiersTotpVerifierId**](#PostUsersMeVerifiersTotpVerifierId) | **Post** /api/v2/users/me/verifiers/totp/{verifierId} | Validate a TOTP verifier |
+| [**PostUsersMeVerifiersWebauthnRegister**](#PostUsersMeVerifiersWebauthnRegister) | **Post** /api/v2/users/me/verifiers/webauthn/register | Finish WebAuthn verifier registration |
+| [**PostUsersMeVerifiersWebauthnRegisterOptions**](#PostUsersMeVerifiersWebauthnRegisterOptions) | **Post** /api/v2/users/me/verifiers/webauthn/register/options | Begin WebAuthn verifier registration |
 | [**PostUsersSearch**](#PostUsersSearch) | **Post** /api/v2/users/search | Search users |
 | [**PostUsersSearchConversationTarget**](#PostUsersSearchConversationTarget) | **Post** /api/v2/users/search/conversation/target | Search users as conversation targets |
 | [**PostUsersSearchQueuemembersManage**](#PostUsersSearchQueuemembersManage) | **Post** /api/v2/users/search/queuemembers/manage | Search manage queue member |
@@ -128,6 +134,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutUserStationDefaultstationStationId**](#PutUserStationDefaultstationStationId) | **Put** /api/v2/users/{userId}/station/defaultstation/{stationId} | Set default station |
 | [**PutUserVerifier**](#PutUserVerifier) | **Put** /api/v2/users/{userId}/verifiers/{verifierId} | Update a verifier |
 | [**PutUsersCustomattributesSchema**](#PutUsersCustomattributesSchema) | **Put** /api/v2/users/customattributes/schemas/{schemaId} | Update a schema |
+| [**PutUsersMeVerifier**](#PutUsersMeVerifier) | **Put** /api/v2/users/me/verifiers/{verifierId} | Update a verifier |
 | [**PutUsersStationsMeAssociatedstationStationId**](#PutUsersStationsMeAssociatedstationStationId) | **Put** /api/v2/users/stations/me/associatedstation/{stationId} | Set self associated station |
 
 
@@ -1057,6 +1064,66 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteUsersMeVerifier
+
+> void DeleteUsersMeVerifier (string verifierId)
+
+
+Delete a verifier
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteUsersMeVerifierExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var verifierId = verifierId_example;  // string | Verifier ID
+
+            try
+            { 
+                // Delete a verifier
+                apiInstance.DeleteUsersMeVerifier(verifierId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.DeleteUsersMeVerifier: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **verifierId** | **string**| Verifier ID |  |
 
 ### Return type
 
@@ -4571,6 +4638,62 @@ namespace Example
 [**UserMe**](UserMe)
 
 
+## GetUsersMeVerifiers
+
+> [**VerifierEntityListing**](VerifierEntityListing) GetUsersMeVerifiers ()
+
+
+Get a list of my verifiers
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUsersMeVerifiersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+
+            try
+            { 
+                // Get a list of my verifiers
+                VerifierEntityListing result = apiInstance.GetUsersMeVerifiers();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUsersMeVerifiers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**VerifierEntityListing**](VerifierEntityListing)
+
+
 ## GetUsersQuery
 
 > [**UserCursorEntityListing**](UserCursorEntityListing) GetUsersQuery (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
@@ -6701,6 +6824,250 @@ namespace Example
 void (empty response body)
 
 
+## PostUsersMeVerifiersTotp
+
+> [**CreateVerifierResponse**](CreateVerifierResponse) PostUsersMeVerifiersTotp (CreateVerifierRequest body)
+
+
+Add a new TOTP verifier
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUsersMeVerifiersTotpExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var body = new CreateVerifierRequest(); // CreateVerifierRequest | Verifier
+
+            try
+            { 
+                // Add a new TOTP verifier
+                CreateVerifierResponse result = apiInstance.PostUsersMeVerifiersTotp(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostUsersMeVerifiersTotp: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateVerifierRequest**](CreateVerifierRequest)| Verifier |  |
+
+### Return type
+
+[**CreateVerifierResponse**](CreateVerifierResponse)
+
+
+## PostUsersMeVerifiersTotpVerifierId
+
+> void PostUsersMeVerifiersTotpVerifierId (string verifierId, ValidateVerifierRequest body)
+
+
+Validate a TOTP verifier
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUsersMeVerifiersTotpVerifierIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var verifierId = verifierId_example;  // string | Verifier ID
+            var body = new ValidateVerifierRequest(); // ValidateVerifierRequest | Verifier Validate
+
+            try
+            { 
+                // Validate a TOTP verifier
+                apiInstance.PostUsersMeVerifiersTotpVerifierId(verifierId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostUsersMeVerifiersTotpVerifierId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **verifierId** | **string**| Verifier ID |  |
+| **body** | [**ValidateVerifierRequest**](ValidateVerifierRequest)| Verifier Validate |  |
+
+### Return type
+
+void (empty response body)
+
+
+## PostUsersMeVerifiersWebauthnRegister
+
+> [**Verifier**](Verifier) PostUsersMeVerifiersWebauthnRegister (FinishWebAuthnRegistrationRequest body)
+
+
+Finish WebAuthn verifier registration
+
+Completes registration of a new WebAuthn authenticator by submitting the credential creation response produced by navigator.credentials.create().
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUsersMeVerifiersWebauthnRegisterExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var body = new FinishWebAuthnRegistrationRequest(); // FinishWebAuthnRegistrationRequest | WebAuthn registration result
+
+            try
+            { 
+                // Finish WebAuthn verifier registration
+                Verifier result = apiInstance.PostUsersMeVerifiersWebauthnRegister(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostUsersMeVerifiersWebauthnRegister: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**FinishWebAuthnRegistrationRequest**](FinishWebAuthnRegistrationRequest)| WebAuthn registration result |  |
+
+### Return type
+
+[**Verifier**](Verifier)
+
+
+## PostUsersMeVerifiersWebauthnRegisterOptions
+
+> [**BeginWebAuthnRegistrationResponse**](BeginWebAuthnRegistrationResponse) PostUsersMeVerifiersWebauthnRegisterOptions ()
+
+
+Begin WebAuthn verifier registration
+
+Returns the public key credential creation options the client passes to navigator.credentials.create() to start registering a new WebAuthn authenticator.
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUsersMeVerifiersWebauthnRegisterOptionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+
+            try
+            { 
+                // Begin WebAuthn verifier registration
+                BeginWebAuthnRegistrationResponse result = apiInstance.PostUsersMeVerifiersWebauthnRegisterOptions();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostUsersMeVerifiersWebauthnRegisterOptions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**BeginWebAuthnRegistrationResponse**](BeginWebAuthnRegistrationResponse)
+
+
 ## PostUsersSearch
 
 > [**UsersSearchResponse**](UsersSearchResponse) PostUsersSearch (UserSearchRequest body)
@@ -7977,6 +8344,69 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
+## PutUsersMeVerifier
+
+> [**Verifier**](Verifier) PutUsersMeVerifier (string verifierId, UpdateVerifierRequest body)
+
+
+Update a verifier
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutUsersMeVerifierExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var verifierId = verifierId_example;  // string | Verifier ID
+            var body = new UpdateVerifierRequest(); // UpdateVerifierRequest | Verifier Update
+
+            try
+            { 
+                // Update a verifier
+                Verifier result = apiInstance.PutUsersMeVerifier(verifierId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PutUsersMeVerifier: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **verifierId** | **string**| Verifier ID |  |
+| **body** | [**UpdateVerifierRequest**](UpdateVerifierRequest)| Verifier Update |  |
+
+### Return type
+
+[**Verifier**](Verifier)
+
+
 ## PutUsersStationsMeAssociatedstationStationId
 
 > void PutUsersStationsMeAssociatedstationStationId (string stationId)
@@ -8038,4 +8468,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

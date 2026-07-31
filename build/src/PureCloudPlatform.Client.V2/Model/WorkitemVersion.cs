@@ -207,7 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ScoredAgents">A list of scored agents for the Workitem..</param>
         /// <param name="Script">The script that will be executed for the Workitem..</param>
         /// <param name="Version">Version.</param>
-        public WorkitemVersion(string Name = null, Division Division = null, WorktypeReference Type = null, string Description = null, LanguageReference Language = null, WorkitemUtilizationLabelReference UtilizationLabel = null, int? Priority = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, WorkitemStatusReference Status = null, StatusCategoryEnum? StatusCategory = null, DateTime? DateStatusChanged = null, DateTime? DateClosed = null, WorkbinReference Workbin = null, UserReferenceWithName Reporter = null, UserReferenceWithName Assignee = null, ExternalContactReference ExternalContact = null, string ExternalTag = null, UserReference ModifiedBy = null, WorkitemQueueReference Queue = null, AssignmentStateEnum? AssignmentState = null, DateTime? DateAssignmentStateChanged = null, int? AlertTimeoutSeconds = null, List<RoutingSkillReference> Skills = null, List<UserReference> PreferredAgents = null, bool? AutoStatusTransition = null, WorkitemSchema Schema = null, Dictionary<string, Object> CustomFields = null, AutoStatusTransitionDetail AutoStatusTransitionDetail = null, List<WorkitemScoredAgent> ScoredAgents = null, WorkitemScriptReference Script = null, int? Version = null)
+        public WorkitemVersion(string Name = null, Division Division = null, WorktypeReference Type = null, string Description = null, WorkitemLanguageReference Language = null, WorkitemUtilizationLabelReference UtilizationLabel = null, int? Priority = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, WorkitemStatusReference Status = null, StatusCategoryEnum? StatusCategory = null, DateTime? DateStatusChanged = null, DateTime? DateClosed = null, WorkbinReference Workbin = null, UserReferenceWithName Reporter = null, UserReferenceWithName Assignee = null, ExternalContactReference ExternalContact = null, string ExternalTag = null, UserReference ModifiedBy = null, WorkitemQueueReference Queue = null, AssignmentStateEnum? AssignmentState = null, DateTime? DateAssignmentStateChanged = null, int? AlertTimeoutSeconds = null, List<WorkitemRoutingSkillReference> Skills = null, List<UserReference> PreferredAgents = null, bool? AutoStatusTransition = null, WorkitemSchema Schema = null, Dictionary<string, Object> CustomFields = null, AutoStatusTransitionDetail AutoStatusTransitionDetail = null, List<WorkitemScoredAgent> ScoredAgents = null, WorkitemScriptReference Script = null, int? Version = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -300,7 +300,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The language of the Workitem.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
-        public LanguageReference Language { get; set; }
+        public WorkitemLanguageReference Language { get; set; }
 
 
 
@@ -493,7 +493,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The skills of the Workitem.</value>
         [DataMember(Name="skills", EmitDefaultValue=false)]
-        public List<RoutingSkillReference> Skills { get; set; }
+        public List<WorkitemRoutingSkillReference> Skills { get; set; }
 
 
 

@@ -114,7 +114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<OrganizationPresenceDefinition> GetPresenceDefinition0WithHttpInfo (string definitionId, string localeCode = null);
 
         /// <summary>
-        /// Get a list of Presence Definitions
+        /// Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division
         /// </summary>
         /// <remarks>
         /// 
@@ -128,7 +128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         OrganizationPresenceDefinitionEntityListing GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null, string localeCode = null);
 
         /// <summary>
-        /// Get a list of Presence Definitions
+        /// Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division
         /// </summary>
         /// <remarks>
         /// 
@@ -794,7 +794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinition>> GetPresenceDefinition0AsyncWithHttpInfo (string definitionId, string localeCode = null);
 
         /// <summary>
-        /// Get a list of Presence Definitions
+        /// Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division
         /// </summary>
         /// <remarks>
         /// 
@@ -808,7 +808,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0Async (string deactivated = null, List<string> divisionId = null, string localeCode = null);
 
         /// <summary>
-        /// Get a list of Presence Definitions
+        /// Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division
         /// </summary>
         /// <remarks>
         /// 
@@ -2284,7 +2284,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Presence Definitions 
+        /// Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2300,7 +2300,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Presence Definitions 
+        /// Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2388,7 +2388,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Presence Definitions 
+        /// Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2405,7 +2405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Presence Definitions 
+        /// Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

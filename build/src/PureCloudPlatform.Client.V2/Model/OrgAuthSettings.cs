@@ -19,6 +19,39 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class OrgAuthSettings :  IEquatable<OrgAuthSettings>
     {
         /// <summary>
+        /// The browser storage location used for authentication tokens.
+        /// </summary>
+        /// <value>The browser storage location used for authentication tokens.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TokenStorageLocationEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Persistent for "persistent"
+            /// </summary>
+            [EnumMember(Value = "persistent")]
+            Persistent,
+            
+            /// <summary>
+            /// Enum Session for "session"
+            /// </summary>
+            [EnumMember(Value = "session")]
+            Session
+        }
+        /// <summary>
+        /// The browser storage location used for authentication tokens.
+        /// </summary>
+        /// <value>The browser storage location used for authentication tokens.</value>
+        [DataMember(Name="tokenStorageLocation", EmitDefaultValue=false)]
+        public TokenStorageLocationEnum? TokenStorageLocation { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="OrgAuthSettings" /> class.
         /// </summary>
         /// <param name="MultifactorAuthenticationRequired">Indicates whether multi-factor authentication is required..</param>
@@ -28,7 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PasswordRequirements">The password requirements for the organization..</param>
         /// <param name="InactivityTimeoutExclusions">The list of exempt apis from inactivity timeout..</param>
         /// <param name="UniversalLogout">Indicates whether universal logout is enabled for the organization..</param>
-        public OrgAuthSettings(bool? MultifactorAuthenticationRequired = null, bool? DomainAllowlistEnabled = null, List<string> DomainAllowlist = null, List<string> IpAddressAllowlist = null, PasswordRequirements PasswordRequirements = null, List<string> InactivityTimeoutExclusions = null, bool? UniversalLogout = null)
+        /// <param name="TokenStorageLocation">The browser storage location used for authentication tokens..</param>
+        public OrgAuthSettings(bool? MultifactorAuthenticationRequired = null, bool? DomainAllowlistEnabled = null, List<string> DomainAllowlist = null, List<string> IpAddressAllowlist = null, PasswordRequirements PasswordRequirements = null, List<string> InactivityTimeoutExclusions = null, bool? UniversalLogout = null, TokenStorageLocationEnum? TokenStorageLocation = null)
         {
             this.MultifactorAuthenticationRequired = MultifactorAuthenticationRequired;
             this.DomainAllowlistEnabled = DomainAllowlistEnabled;
@@ -37,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PasswordRequirements = PasswordRequirements;
             this.InactivityTimeoutExclusions = InactivityTimeoutExclusions;
             this.UniversalLogout = UniversalLogout;
+            this.TokenStorageLocation = TokenStorageLocation;
             
         }
         
@@ -104,6 +139,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? UniversalLogout { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -120,6 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PasswordRequirements: ").Append(PasswordRequirements).Append("\n");
             sb.Append("  InactivityTimeoutExclusions: ").Append(InactivityTimeoutExclusions).Append("\n");
             sb.Append("  UniversalLogout: ").Append(UniversalLogout).Append("\n");
+            sb.Append("  TokenStorageLocation: ").Append(TokenStorageLocation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -194,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UniversalLogout == other.UniversalLogout ||
                     this.UniversalLogout != null &&
                     this.UniversalLogout.Equals(other.UniversalLogout)
+                ) &&
+                (
+                    this.TokenStorageLocation == other.TokenStorageLocation ||
+                    this.TokenStorageLocation != null &&
+                    this.TokenStorageLocation.Equals(other.TokenStorageLocation)
                 );
         }
 
@@ -228,6 +271,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UniversalLogout != null)
                     hash = hash * 59 + this.UniversalLogout.GetHashCode();
+
+                if (this.TokenStorageLocation != null)
+                    hash = hash * 59 + this.TokenStorageLocation.GetHashCode();
 
                 return hash;
             }

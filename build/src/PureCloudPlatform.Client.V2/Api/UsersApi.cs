@@ -390,6 +390,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteUsersCustomattributesSchemaWithHttpInfo (string schemaId);
 
         /// <summary>
+        /// Delete a verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns></returns>
+        
+        void DeleteUsersMeVerifier (string verifierId);
+
+        /// <summary>
+        /// Delete a verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteUsersMeVerifierWithHttpInfo (string verifierId);
+
+        /// <summary>
         /// Clear self associated station
         /// </summary>
         /// <remarks>
@@ -1846,6 +1870,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserMe> GetUsersMeWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null);
 
         /// <summary>
+        /// Get a list of my verifiers
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>VerifierEntityListing</returns>
+        
+        VerifierEntityListing GetUsersMeVerifiers ();
+
+        /// <summary>
+        /// Get a list of my verifiers
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of VerifierEntityListing</returns>
+        
+        ApiResponse<VerifierEntityListing> GetUsersMeVerifiersWithHttpInfo ();
+
+        /// <summary>
         /// Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required
         /// </summary>
         /// <remarks>
@@ -2710,6 +2756,102 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PostUsersMePasswordWithHttpInfo (ChangeMyPasswordRequest body);
 
         /// <summary>
+        /// Add a new TOTP verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Verifier</param>
+        /// <returns>CreateVerifierResponse</returns>
+        
+        CreateVerifierResponse PostUsersMeVerifiersTotp (CreateVerifierRequest body);
+
+        /// <summary>
+        /// Add a new TOTP verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Verifier</param>
+        /// <returns>ApiResponse of CreateVerifierResponse</returns>
+        
+        ApiResponse<CreateVerifierResponse> PostUsersMeVerifiersTotpWithHttpInfo (CreateVerifierRequest body);
+
+        /// <summary>
+        /// Validate a TOTP verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Validate</param>
+        /// <returns></returns>
+        
+        void PostUsersMeVerifiersTotpVerifierId (string verifierId, ValidateVerifierRequest body);
+
+        /// <summary>
+        /// Validate a TOTP verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Validate</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PostUsersMeVerifiersTotpVerifierIdWithHttpInfo (string verifierId, ValidateVerifierRequest body);
+
+        /// <summary>
+        /// Finish WebAuthn verifier registration
+        /// </summary>
+        /// <remarks>
+        /// Completes registration of a new WebAuthn authenticator by submitting the credential creation response produced by navigator.credentials.create().
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WebAuthn registration result</param>
+        /// <returns>Verifier</returns>
+        
+        Verifier PostUsersMeVerifiersWebauthnRegister (FinishWebAuthnRegistrationRequest body);
+
+        /// <summary>
+        /// Finish WebAuthn verifier registration
+        /// </summary>
+        /// <remarks>
+        /// Completes registration of a new WebAuthn authenticator by submitting the credential creation response produced by navigator.credentials.create().
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WebAuthn registration result</param>
+        /// <returns>ApiResponse of Verifier</returns>
+        
+        ApiResponse<Verifier> PostUsersMeVerifiersWebauthnRegisterWithHttpInfo (FinishWebAuthnRegistrationRequest body);
+
+        /// <summary>
+        /// Begin WebAuthn verifier registration
+        /// </summary>
+        /// <remarks>
+        /// Returns the public key credential creation options the client passes to navigator.credentials.create() to start registering a new WebAuthn authenticator.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>BeginWebAuthnRegistrationResponse</returns>
+        
+        BeginWebAuthnRegistrationResponse PostUsersMeVerifiersWebauthnRegisterOptions ();
+
+        /// <summary>
+        /// Begin WebAuthn verifier registration
+        /// </summary>
+        /// <remarks>
+        /// Returns the public key credential creation options the client passes to navigator.credentials.create() to start registering a new WebAuthn authenticator.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of BeginWebAuthnRegistrationResponse</returns>
+        
+        ApiResponse<BeginWebAuthnRegistrationResponse> PostUsersMeVerifiersWebauthnRegisterOptionsWithHttpInfo ();
+
+        /// <summary>
         /// Search users
         /// </summary>
         /// <remarks>
@@ -3228,6 +3370,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataSchema> PutUsersCustomattributesSchemaWithHttpInfo (string schemaId, DataSchema body);
 
         /// <summary>
+        /// Update a verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Update</param>
+        /// <returns>Verifier</returns>
+        
+        Verifier PutUsersMeVerifier (string verifierId, UpdateVerifierRequest body);
+
+        /// <summary>
+        /// Update a verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Update</param>
+        /// <returns>ApiResponse of Verifier</returns>
+        
+        ApiResponse<Verifier> PutUsersMeVerifierWithHttpInfo (string verifierId, UpdateVerifierRequest body);
+
+        /// <summary>
         /// Set self associated station
         /// </summary>
         /// <remarks>
@@ -3628,6 +3796,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersCustomattributesSchemaAsyncWithHttpInfo (string schemaId);
+
+        /// <summary>
+        /// Delete a verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteUsersMeVerifierAsync (string verifierId);
+
+        /// <summary>
+        /// Delete a verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersMeVerifierAsyncWithHttpInfo (string verifierId);
 
         /// <summary>
         /// Clear self associated station
@@ -5086,6 +5278,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserMe>> GetUsersMeAsyncWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null);
 
         /// <summary>
+        /// Get a list of my verifiers
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of VerifierEntityListing</returns>
+        
+        System.Threading.Tasks.Task<VerifierEntityListing> GetUsersMeVerifiersAsync ();
+
+        /// <summary>
+        /// Get a list of my verifiers
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (VerifierEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<VerifierEntityListing>> GetUsersMeVerifiersAsyncWithHttpInfo ();
+
+        /// <summary>
         /// Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required
         /// </summary>
         /// <remarks>
@@ -5950,6 +6164,102 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersMePasswordAsyncWithHttpInfo (ChangeMyPasswordRequest body);
 
         /// <summary>
+        /// Add a new TOTP verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Verifier</param>
+        /// <returns>Task of CreateVerifierResponse</returns>
+        
+        System.Threading.Tasks.Task<CreateVerifierResponse> PostUsersMeVerifiersTotpAsync (CreateVerifierRequest body);
+
+        /// <summary>
+        /// Add a new TOTP verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Verifier</param>
+        /// <returns>Task of ApiResponse (CreateVerifierResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CreateVerifierResponse>> PostUsersMeVerifiersTotpAsyncWithHttpInfo (CreateVerifierRequest body);
+
+        /// <summary>
+        /// Validate a TOTP verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Validate</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PostUsersMeVerifiersTotpVerifierIdAsync (string verifierId, ValidateVerifierRequest body);
+
+        /// <summary>
+        /// Validate a TOTP verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Validate</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersMeVerifiersTotpVerifierIdAsyncWithHttpInfo (string verifierId, ValidateVerifierRequest body);
+
+        /// <summary>
+        /// Finish WebAuthn verifier registration
+        /// </summary>
+        /// <remarks>
+        /// Completes registration of a new WebAuthn authenticator by submitting the credential creation response produced by navigator.credentials.create().
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WebAuthn registration result</param>
+        /// <returns>Task of Verifier</returns>
+        
+        System.Threading.Tasks.Task<Verifier> PostUsersMeVerifiersWebauthnRegisterAsync (FinishWebAuthnRegistrationRequest body);
+
+        /// <summary>
+        /// Finish WebAuthn verifier registration
+        /// </summary>
+        /// <remarks>
+        /// Completes registration of a new WebAuthn authenticator by submitting the credential creation response produced by navigator.credentials.create().
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WebAuthn registration result</param>
+        /// <returns>Task of ApiResponse (Verifier)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Verifier>> PostUsersMeVerifiersWebauthnRegisterAsyncWithHttpInfo (FinishWebAuthnRegistrationRequest body);
+
+        /// <summary>
+        /// Begin WebAuthn verifier registration
+        /// </summary>
+        /// <remarks>
+        /// Returns the public key credential creation options the client passes to navigator.credentials.create() to start registering a new WebAuthn authenticator.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of BeginWebAuthnRegistrationResponse</returns>
+        
+        System.Threading.Tasks.Task<BeginWebAuthnRegistrationResponse> PostUsersMeVerifiersWebauthnRegisterOptionsAsync ();
+
+        /// <summary>
+        /// Begin WebAuthn verifier registration
+        /// </summary>
+        /// <remarks>
+        /// Returns the public key credential creation options the client passes to navigator.credentials.create() to start registering a new WebAuthn authenticator.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (BeginWebAuthnRegistrationResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BeginWebAuthnRegistrationResponse>> PostUsersMeVerifiersWebauthnRegisterOptionsAsyncWithHttpInfo ();
+
+        /// <summary>
         /// Search users
         /// </summary>
         /// <remarks>
@@ -6466,6 +6776,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutUsersCustomattributesSchemaAsyncWithHttpInfo (string schemaId, DataSchema body);
+
+        /// <summary>
+        /// Update a verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Update</param>
+        /// <returns>Task of Verifier</returns>
+        
+        System.Threading.Tasks.Task<Verifier> PutUsersMeVerifierAsync (string verifierId, UpdateVerifierRequest body);
+
+        /// <summary>
+        /// Update a verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Update</param>
+        /// <returns>Task of ApiResponse (Verifier)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Verifier>> PutUsersMeVerifierAsyncWithHttpInfo (string verifierId, UpdateVerifierRequest body);
 
         /// <summary>
         /// Set self associated station
@@ -9711,6 +10047,209 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteUsersCustomattributesSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUsersCustomattributesSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns></returns>
+        
+        public void DeleteUsersMeVerifier (string verifierId)
+        {
+             DeleteUsersMeVerifierWithHttpInfo(verifierId);
+        }
+
+        /// <summary>
+        /// Delete a verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteUsersMeVerifierWithHttpInfo (string verifierId)
+        { 
+            // verify the required parameter 'verifierId' is set
+            if (verifierId == null)
+                throw new ApiException(400, "Missing required parameter 'verifierId' when calling UsersApi->DeleteUsersMeVerifier");
+
+            var localVarPath = "/api/v2/users/me/verifiers/{verifierId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (verifierId != null) localVarPathParams.Add("verifierId", this.Configuration.ApiClient.ParameterToString(verifierId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersMeVerifier: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteUsersMeVerifier: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersMeVerifier: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteUsersMeVerifierAsync (string verifierId)
+        {
+             await DeleteUsersMeVerifierAsyncWithHttpInfo(verifierId);
+
+        }
+
+        /// <summary>
+        /// Delete a verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersMeVerifierAsyncWithHttpInfo (string verifierId)
+        { 
+            // verify the required parameter 'verifierId' is set
+            if (verifierId == null)
+                throw new ApiException(400, "Missing required parameter 'verifierId' when calling UsersApi->DeleteUsersMeVerifier");
+            
+
+            var localVarPath = "/api/v2/users/me/verifiers/{verifierId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (verifierId != null) localVarPathParams.Add("verifierId", this.Configuration.ApiClient.ParameterToString(verifierId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersMeVerifier: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteUsersMeVerifier: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersMeVerifier: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -21235,6 +21774,198 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a list of my verifiers 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>VerifierEntityListing</returns>
+        
+        public VerifierEntityListing GetUsersMeVerifiers ()
+        {
+             ApiResponse<VerifierEntityListing> localVarResponse = GetUsersMeVerifiersWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of my verifiers 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of VerifierEntityListing</returns>
+        
+        public ApiResponse< VerifierEntityListing > GetUsersMeVerifiersWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/me/verifiers";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersMeVerifiers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetUsersMeVerifiers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersMeVerifiers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VerifierEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (VerifierEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VerifierEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of my verifiers 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of VerifierEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<VerifierEntityListing> GetUsersMeVerifiersAsync ()
+        {
+             ApiResponse<VerifierEntityListing> localVarResponse = await GetUsersMeVerifiersAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of my verifiers 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (VerifierEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<VerifierEntityListing>> GetUsersMeVerifiersAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/me/verifiers";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersMeVerifiers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetUsersMeVerifiers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersMeVerifiers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VerifierEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (VerifierEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VerifierEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required 
         /// 
         /// </summary>
@@ -28622,6 +29353,854 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Add a new TOTP verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Verifier</param>
+        /// <returns>CreateVerifierResponse</returns>
+        
+        public CreateVerifierResponse PostUsersMeVerifiersTotp (CreateVerifierRequest body)
+        {
+             ApiResponse<CreateVerifierResponse> localVarResponse = PostUsersMeVerifiersTotpWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a new TOTP verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Verifier</param>
+        /// <returns>ApiResponse of CreateVerifierResponse</returns>
+        
+        public ApiResponse< CreateVerifierResponse > PostUsersMeVerifiersTotpWithHttpInfo (CreateVerifierRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersMeVerifiersTotp");
+
+            var localVarPath = "/api/v2/users/me/verifiers/totp";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersTotp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostUsersMeVerifiersTotp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersTotp: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CreateVerifierResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CreateVerifierResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateVerifierResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add a new TOTP verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Verifier</param>
+        /// <returns>Task of CreateVerifierResponse</returns>
+        
+        public async System.Threading.Tasks.Task<CreateVerifierResponse> PostUsersMeVerifiersTotpAsync (CreateVerifierRequest body)
+        {
+             ApiResponse<CreateVerifierResponse> localVarResponse = await PostUsersMeVerifiersTotpAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add a new TOTP verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Verifier</param>
+        /// <returns>Task of ApiResponse (CreateVerifierResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CreateVerifierResponse>> PostUsersMeVerifiersTotpAsyncWithHttpInfo (CreateVerifierRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersMeVerifiersTotp");
+            
+
+            var localVarPath = "/api/v2/users/me/verifiers/totp";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersTotp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostUsersMeVerifiersTotp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersTotp: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CreateVerifierResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CreateVerifierResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateVerifierResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Validate a TOTP verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Validate</param>
+        /// <returns></returns>
+        
+        public void PostUsersMeVerifiersTotpVerifierId (string verifierId, ValidateVerifierRequest body)
+        {
+             PostUsersMeVerifiersTotpVerifierIdWithHttpInfo(verifierId, body);
+        }
+
+        /// <summary>
+        /// Validate a TOTP verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Validate</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PostUsersMeVerifiersTotpVerifierIdWithHttpInfo (string verifierId, ValidateVerifierRequest body)
+        { 
+            // verify the required parameter 'verifierId' is set
+            if (verifierId == null)
+                throw new ApiException(400, "Missing required parameter 'verifierId' when calling UsersApi->PostUsersMeVerifiersTotpVerifierId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersMeVerifiersTotpVerifierId");
+
+            var localVarPath = "/api/v2/users/me/verifiers/totp/{verifierId}";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (verifierId != null) localVarPathParams.Add("verifierId", this.Configuration.ApiClient.ParameterToString(verifierId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersTotpVerifierId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostUsersMeVerifiersTotpVerifierId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersTotpVerifierId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Validate a TOTP verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Validate</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PostUsersMeVerifiersTotpVerifierIdAsync (string verifierId, ValidateVerifierRequest body)
+        {
+             await PostUsersMeVerifiersTotpVerifierIdAsyncWithHttpInfo(verifierId, body);
+
+        }
+
+        /// <summary>
+        /// Validate a TOTP verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Validate</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersMeVerifiersTotpVerifierIdAsyncWithHttpInfo (string verifierId, ValidateVerifierRequest body)
+        { 
+            // verify the required parameter 'verifierId' is set
+            if (verifierId == null)
+                throw new ApiException(400, "Missing required parameter 'verifierId' when calling UsersApi->PostUsersMeVerifiersTotpVerifierId");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersMeVerifiersTotpVerifierId");
+            
+
+            var localVarPath = "/api/v2/users/me/verifiers/totp/{verifierId}";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (verifierId != null) localVarPathParams.Add("verifierId", this.Configuration.ApiClient.ParameterToString(verifierId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersTotpVerifierId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostUsersMeVerifiersTotpVerifierId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersTotpVerifierId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Finish WebAuthn verifier registration 
+        /// Completes registration of a new WebAuthn authenticator by submitting the credential creation response produced by navigator.credentials.create().
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WebAuthn registration result</param>
+        /// <returns>Verifier</returns>
+        
+        public Verifier PostUsersMeVerifiersWebauthnRegister (FinishWebAuthnRegistrationRequest body)
+        {
+             ApiResponse<Verifier> localVarResponse = PostUsersMeVerifiersWebauthnRegisterWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Finish WebAuthn verifier registration 
+        /// Completes registration of a new WebAuthn authenticator by submitting the credential creation response produced by navigator.credentials.create().
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WebAuthn registration result</param>
+        /// <returns>ApiResponse of Verifier</returns>
+        
+        public ApiResponse< Verifier > PostUsersMeVerifiersWebauthnRegisterWithHttpInfo (FinishWebAuthnRegistrationRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersMeVerifiersWebauthnRegister");
+
+            var localVarPath = "/api/v2/users/me/verifiers/webauthn/register";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersWebauthnRegister: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostUsersMeVerifiersWebauthnRegister: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersWebauthnRegister: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Verifier>(localVarStatusCode,
+                localVarHeaders,
+                (Verifier) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Verifier)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Finish WebAuthn verifier registration 
+        /// Completes registration of a new WebAuthn authenticator by submitting the credential creation response produced by navigator.credentials.create().
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WebAuthn registration result</param>
+        /// <returns>Task of Verifier</returns>
+        
+        public async System.Threading.Tasks.Task<Verifier> PostUsersMeVerifiersWebauthnRegisterAsync (FinishWebAuthnRegistrationRequest body)
+        {
+             ApiResponse<Verifier> localVarResponse = await PostUsersMeVerifiersWebauthnRegisterAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Finish WebAuthn verifier registration 
+        /// Completes registration of a new WebAuthn authenticator by submitting the credential creation response produced by navigator.credentials.create().
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">WebAuthn registration result</param>
+        /// <returns>Task of ApiResponse (Verifier)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Verifier>> PostUsersMeVerifiersWebauthnRegisterAsyncWithHttpInfo (FinishWebAuthnRegistrationRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersMeVerifiersWebauthnRegister");
+            
+
+            var localVarPath = "/api/v2/users/me/verifiers/webauthn/register";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersWebauthnRegister: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostUsersMeVerifiersWebauthnRegister: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersWebauthnRegister: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Verifier>(localVarStatusCode,
+                localVarHeaders,
+                (Verifier) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Verifier)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Begin WebAuthn verifier registration 
+        /// Returns the public key credential creation options the client passes to navigator.credentials.create() to start registering a new WebAuthn authenticator.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>BeginWebAuthnRegistrationResponse</returns>
+        
+        public BeginWebAuthnRegistrationResponse PostUsersMeVerifiersWebauthnRegisterOptions ()
+        {
+             ApiResponse<BeginWebAuthnRegistrationResponse> localVarResponse = PostUsersMeVerifiersWebauthnRegisterOptionsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Begin WebAuthn verifier registration 
+        /// Returns the public key credential creation options the client passes to navigator.credentials.create() to start registering a new WebAuthn authenticator.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of BeginWebAuthnRegistrationResponse</returns>
+        
+        public ApiResponse< BeginWebAuthnRegistrationResponse > PostUsersMeVerifiersWebauthnRegisterOptionsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/me/verifiers/webauthn/register/options";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersWebauthnRegisterOptions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostUsersMeVerifiersWebauthnRegisterOptions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersWebauthnRegisterOptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BeginWebAuthnRegistrationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BeginWebAuthnRegistrationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BeginWebAuthnRegistrationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Begin WebAuthn verifier registration 
+        /// Returns the public key credential creation options the client passes to navigator.credentials.create() to start registering a new WebAuthn authenticator.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of BeginWebAuthnRegistrationResponse</returns>
+        
+        public async System.Threading.Tasks.Task<BeginWebAuthnRegistrationResponse> PostUsersMeVerifiersWebauthnRegisterOptionsAsync ()
+        {
+             ApiResponse<BeginWebAuthnRegistrationResponse> localVarResponse = await PostUsersMeVerifiersWebauthnRegisterOptionsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Begin WebAuthn verifier registration 
+        /// Returns the public key credential creation options the client passes to navigator.credentials.create() to start registering a new WebAuthn authenticator.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (BeginWebAuthnRegistrationResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BeginWebAuthnRegistrationResponse>> PostUsersMeVerifiersWebauthnRegisterOptionsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/me/verifiers/webauthn/register/options";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersWebauthnRegisterOptions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostUsersMeVerifiersWebauthnRegisterOptions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersMeVerifiersWebauthnRegisterOptions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BeginWebAuthnRegistrationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BeginWebAuthnRegistrationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BeginWebAuthnRegistrationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Search users 
         /// 
         /// </summary>
@@ -33120,6 +34699,234 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DataSchema>(localVarStatusCode,
                 localVarHeaders,
                 (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update a verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Update</param>
+        /// <returns>Verifier</returns>
+        
+        public Verifier PutUsersMeVerifier (string verifierId, UpdateVerifierRequest body)
+        {
+             ApiResponse<Verifier> localVarResponse = PutUsersMeVerifierWithHttpInfo(verifierId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Update</param>
+        /// <returns>ApiResponse of Verifier</returns>
+        
+        public ApiResponse< Verifier > PutUsersMeVerifierWithHttpInfo (string verifierId, UpdateVerifierRequest body)
+        { 
+            // verify the required parameter 'verifierId' is set
+            if (verifierId == null)
+                throw new ApiException(400, "Missing required parameter 'verifierId' when calling UsersApi->PutUsersMeVerifier");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUsersMeVerifier");
+
+            var localVarPath = "/api/v2/users/me/verifiers/{verifierId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (verifierId != null) localVarPathParams.Add("verifierId", this.Configuration.ApiClient.ParameterToString(verifierId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersMeVerifier: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutUsersMeVerifier: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersMeVerifier: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Verifier>(localVarStatusCode,
+                localVarHeaders,
+                (Verifier) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Verifier)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Update</param>
+        /// <returns>Task of Verifier</returns>
+        
+        public async System.Threading.Tasks.Task<Verifier> PutUsersMeVerifierAsync (string verifierId, UpdateVerifierRequest body)
+        {
+             ApiResponse<Verifier> localVarResponse = await PutUsersMeVerifierAsyncWithHttpInfo(verifierId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <param name="body">Verifier Update</param>
+        /// <returns>Task of ApiResponse (Verifier)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Verifier>> PutUsersMeVerifierAsyncWithHttpInfo (string verifierId, UpdateVerifierRequest body)
+        { 
+            // verify the required parameter 'verifierId' is set
+            if (verifierId == null)
+                throw new ApiException(400, "Missing required parameter 'verifierId' when calling UsersApi->PutUsersMeVerifier");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUsersMeVerifier");
+            
+
+            var localVarPath = "/api/v2/users/me/verifiers/{verifierId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (verifierId != null) localVarPathParams.Add("verifierId", this.Configuration.ApiClient.ParameterToString(verifierId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersMeVerifier: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutUsersMeVerifier: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersMeVerifier: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Verifier>(localVarStatusCode,
+                localVarHeaders,
+                (Verifier) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Verifier)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class SupportCenterModuleSetting :  IEquatable<SupportCenterModuleSetting>
     {
         /// <summary>
-        /// Screen module type
+        /// Screen module type. Required if support center is enabled
         /// </summary>
-        /// <value>Screen module type</value>
+        /// <value>Screen module type. Required if support center is enabled</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -76,22 +76,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Topviewedarticles
         }
         /// <summary>
-        /// Screen module type
+        /// Screen module type. Required if support center is enabled
         /// </summary>
-        /// <value>Screen module type</value>
+        /// <value>Screen module type. Required if support center is enabled</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterModuleSetting" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected SupportCenterModuleSetting() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SupportCenterModuleSetting" /> class.
-        /// </summary>
-        /// <param name="Type">Screen module type (required).</param>
-        /// <param name="Enabled">Whether or not knowledge portal (previously support center) screen module is enabled (required).</param>
+        /// <param name="Type">Screen module type. Required if support center is enabled.</param>
+        /// <param name="Enabled">Whether or not knowledge portal (previously support center) screen module is enabled. If not provided, the module is treated as hidden.</param>
         /// <param name="CompactCategoryModuleTemplate">Compact category module template.</param>
         /// <param name="DetailedCategoryModuleTemplate">Detailed category module template.</param>
         public SupportCenterModuleSetting(TypeEnum? Type = null, bool? Enabled = null, SupportCenterCompactCategoryModuleTemplate CompactCategoryModuleTemplate = null, SupportCenterDetailedCategoryModuleTemplate DetailedCategoryModuleTemplate = null)
@@ -108,9 +102,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Whether or not knowledge portal (previously support center) screen module is enabled
+        /// Whether or not knowledge portal (previously support center) screen module is enabled. If not provided, the module is treated as hidden
         /// </summary>
-        /// <value>Whether or not knowledge portal (previously support center) screen module is enabled</value>
+        /// <value>Whether or not knowledge portal (previously support center) screen module is enabled. If not provided, the module is treated as hidden</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
 

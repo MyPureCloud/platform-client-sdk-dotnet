@@ -127,6 +127,12 @@ namespace PureCloudPlatform.Client.V2.Model
             QueuePerformanceDetailView,
             
             /// <summary>
+            /// Enum QueueSkillExpressionPerformanceView for "QUEUE_SKILL_EXPRESSION_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_SKILL_EXPRESSION_PERFORMANCE_VIEW")]
+            QueueSkillExpressionPerformanceView,
+            
+            /// <summary>
             /// Enum InteractionSearchView for "INTERACTION_SEARCH_VIEW"
             /// </summary>
             [EnumMember(Value = "INTERACTION_SEARCH_VIEW")]
@@ -167,6 +173,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "AGENT_EVALUATION_DETAIL_VIEW")]
             AgentEvaluationDetailView,
+            
+            /// <summary>
+            /// Enum AgentEvaluationMeView for "AGENT_EVALUATION_ME_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_EVALUATION_ME_VIEW")]
+            AgentEvaluationMeView,
             
             /// <summary>
             /// Enum AgentQueueDetailView for "AGENT_QUEUE_DETAIL_VIEW"

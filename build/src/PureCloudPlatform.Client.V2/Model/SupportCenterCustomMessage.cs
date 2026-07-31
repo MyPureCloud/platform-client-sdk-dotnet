@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class SupportCenterCustomMessage :  IEquatable<SupportCenterCustomMessage>
     {
         /// <summary>
-        /// Type of the message
+        /// Type of the message. Required for each custom message entry
         /// </summary>
-        /// <value>Type of the message</value>
+        /// <value>Type of the message. Required for each custom message entry</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -46,22 +46,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Fallback
         }
         /// <summary>
-        /// Type of the message
+        /// Type of the message. Required for each custom message entry
         /// </summary>
-        /// <value>Type of the message</value>
+        /// <value>Type of the message. Required for each custom message entry</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterCustomMessage" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected SupportCenterCustomMessage() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SupportCenterCustomMessage" /> class.
-        /// </summary>
-        /// <param name="DefaultValue">Default value for the message (required).</param>
-        /// <param name="Type">Type of the message (required).</param>
+        /// <param name="DefaultValue">Default value for the message. Required for each custom message entry.</param>
+        /// <param name="Type">Type of the message. Required for each custom message entry.</param>
         public SupportCenterCustomMessage(string DefaultValue = null, TypeEnum? Type = null)
         {
             this.DefaultValue = DefaultValue;
@@ -72,9 +66,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Default value for the message
+        /// Default value for the message. Required for each custom message entry
         /// </summary>
-        /// <value>Default value for the message</value>
+        /// <value>Default value for the message. Required for each custom message entry</value>
         [DataMember(Name="defaultValue", EmitDefaultValue=false)]
         public string DefaultValue { get; set; }
 

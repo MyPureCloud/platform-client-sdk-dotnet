@@ -10,11 +10,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteResponsemanagementResponse**](#DeleteResponsemanagementResponse) | **Delete** /api/v2/responsemanagement/responses/{responseId} | Delete an existing response. |
 | [**DeleteResponsemanagementResponseasset**](#DeleteResponsemanagementResponseasset) | **Delete** /api/v2/responsemanagement/responseassets/{responseAssetId} | Delete response asset |
 | [**GetResponsemanagementLibraries**](#GetResponsemanagementLibraries) | **Get** /api/v2/responsemanagement/libraries | Gets a list of existing response libraries. |
+| [**GetResponsemanagementLibrariesDivisionview**](#GetResponsemanagementLibrariesDivisionview) | **Get** /api/v2/responsemanagement/libraries/divisionviews/{libraryId} | Get details about an existing response library. |
+| [**GetResponsemanagementLibrariesDivisionviews**](#GetResponsemanagementLibrariesDivisionviews) | **Get** /api/v2/responsemanagement/libraries/divisionviews | Gets a list of existing response libraries. |
 | [**GetResponsemanagementLibrary**](#GetResponsemanagementLibrary) | **Get** /api/v2/responsemanagement/libraries/{libraryId} | Get details about an existing response library. |
 | [**GetResponsemanagementResponse**](#GetResponsemanagementResponse) | **Get** /api/v2/responsemanagement/responses/{responseId} | Get details about an existing response. |
 | [**GetResponsemanagementResponseasset**](#GetResponsemanagementResponseasset) | **Get** /api/v2/responsemanagement/responseassets/{responseAssetId} | Get response asset information |
 | [**GetResponsemanagementResponseassetsStatusStatusId**](#GetResponsemanagementResponseassetsStatusStatusId) | **Get** /api/v2/responsemanagement/responseassets/status/{statusId} | Get response asset upload status |
 | [**GetResponsemanagementResponses**](#GetResponsemanagementResponses) | **Get** /api/v2/responsemanagement/responses | Gets a list of existing responses. |
+| [**GetResponsemanagementResponsesDivisionview**](#GetResponsemanagementResponsesDivisionview) | **Get** /api/v2/responsemanagement/responses/divisionviews/{responseId} | Get details about an existing response. |
 | [**PostResponsemanagementLibraries**](#PostResponsemanagementLibraries) | **Post** /api/v2/responsemanagement/libraries | Create a response library. |
 | [**PostResponsemanagementLibrariesBulk**](#PostResponsemanagementLibrariesBulk) | **Post** /api/v2/responsemanagement/libraries/bulk | Get response libraries. |
 | [**PostResponsemanagementLibrariesQuery**](#PostResponsemanagementLibrariesQuery) | **Post** /api/v2/responsemanagement/libraries/query | Query libraries using criteria. Users can set DivisionId parameter as &#39;*&#39; to fetch libraries that aren&#39;t associated with any divisions. |
@@ -22,6 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostResponsemanagementResponseassetsSearch**](#PostResponsemanagementResponseassetsSearch) | **Post** /api/v2/responsemanagement/responseassets/search | Search response assets |
 | [**PostResponsemanagementResponseassetsUploads**](#PostResponsemanagementResponseassetsUploads) | **Post** /api/v2/responsemanagement/responseassets/uploads | Creates pre-signed url for uploading response asset |
 | [**PostResponsemanagementResponses**](#PostResponsemanagementResponses) | **Post** /api/v2/responsemanagement/responses | Create a response. |
+| [**PostResponsemanagementResponsesDivisionviewsQuery**](#PostResponsemanagementResponsesDivisionviewsQuery) | **Post** /api/v2/responsemanagement/responses/divisionviews/query | Query responses |
 | [**PostResponsemanagementResponsesQuery**](#PostResponsemanagementResponsesQuery) | **Post** /api/v2/responsemanagement/responses/query | Query responses |
 | [**PutResponsemanagementLibrary**](#PutResponsemanagementLibrary) | **Put** /api/v2/responsemanagement/libraries/{libraryId} | Update an existing response library. |
 | [**PutResponsemanagementResponse**](#PutResponsemanagementResponse) | **Put** /api/v2/responsemanagement/responses/{responseId} | Update an existing response. |
@@ -282,6 +286,136 @@ namespace Example
 ### Return type
 
 [**LibraryEntityListing**](LibraryEntityListing)
+
+
+## GetResponsemanagementLibrariesDivisionview
+
+> [**LibraryDivisionView**](LibraryDivisionView) GetResponsemanagementLibrariesDivisionview (string libraryId)
+
+
+Get details about an existing response library.
+
+Requires ANY permissions: 
+
+* responses:library:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetResponsemanagementLibrariesDivisionviewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ResponseManagementApi();
+            var libraryId = libraryId_example;  // string | Library ID
+
+            try
+            { 
+                // Get details about an existing response library.
+                LibraryDivisionView result = apiInstance.GetResponsemanagementLibrariesDivisionview(libraryId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.GetResponsemanagementLibrariesDivisionview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **libraryId** | **string**| Library ID |  |
+
+### Return type
+
+[**LibraryDivisionView**](LibraryDivisionView)
+
+
+## GetResponsemanagementLibrariesDivisionviews
+
+> [**LibraryDivisionViewEntityListing**](LibraryDivisionViewEntityListing) GetResponsemanagementLibrariesDivisionviews (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null)
+
+
+Gets a list of existing response libraries.
+
+Requires ANY permissions: 
+
+* responses:library:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetResponsemanagementLibrariesDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ResponseManagementApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var messagingTemplateFilter = messagingTemplateFilter_example;  // string | Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional) 
+            var libraryPrefix = libraryPrefix_example;  // string | Returns a list of libraries that contain the prefix provided (optional) 
+
+            try
+            { 
+                // Gets a list of existing response libraries.
+                LibraryDivisionViewEntityListing result = apiInstance.GetResponsemanagementLibrariesDivisionviews(pageNumber, pageSize, messagingTemplateFilter, libraryPrefix);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.GetResponsemanagementLibrariesDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **messagingTemplateFilter** | **string**| Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel | [optional] <br />**Values**: whatsapp |
+| **libraryPrefix** | **string**| Returns a list of libraries that contain the prefix provided | [optional]  |
+
+### Return type
+
+[**LibraryDivisionViewEntityListing**](LibraryDivisionViewEntityListing)
 
 
 ## GetResponsemanagementLibrary
@@ -600,6 +734,68 @@ namespace Example
 ### Return type
 
 [**ResponseEntityListing**](ResponseEntityListing)
+
+
+## GetResponsemanagementResponsesDivisionview
+
+> [**ResponseDivisionView**](ResponseDivisionView) GetResponsemanagementResponsesDivisionview (string responseId)
+
+
+Get details about an existing response.
+
+Requires ANY permissions: 
+
+* responses:response:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetResponsemanagementResponsesDivisionviewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ResponseManagementApi();
+            var responseId = responseId_example;  // string | Response ID
+
+            try
+            { 
+                // Get details about an existing response.
+                ResponseDivisionView result = apiInstance.GetResponsemanagementResponsesDivisionview(responseId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.GetResponsemanagementResponsesDivisionview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **responseId** | **string**| Response ID |  |
+
+### Return type
+
+[**ResponseDivisionView**](ResponseDivisionView)
 
 
 ## PostResponsemanagementLibraries
@@ -1044,6 +1240,68 @@ namespace Example
 [**Response**](Response)
 
 
+## PostResponsemanagementResponsesDivisionviewsQuery
+
+> [**ResponseDivisionViewQueryResults**](ResponseDivisionViewQueryResults) PostResponsemanagementResponsesDivisionviewsQuery (ResponseQueryRequest body)
+
+
+Query responses
+
+Requires ANY permissions: 
+
+* responses:response:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostResponsemanagementResponsesDivisionviewsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ResponseManagementApi();
+            var body = new ResponseQueryRequest(); // ResponseQueryRequest | Response
+
+            try
+            { 
+                // Query responses
+                ResponseDivisionViewQueryResults result = apiInstance.PostResponsemanagementResponsesDivisionviewsQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.PostResponsemanagementResponsesDivisionviewsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ResponseQueryRequest**](ResponseQueryRequest)| Response |  |
+
+### Return type
+
+[**ResponseDivisionViewQueryResults**](ResponseDivisionViewQueryResults)
+
+
 ## PostResponsemanagementResponsesQuery
 
 > [**ResponseQueryResults**](ResponseQueryResults) PostResponsemanagementResponsesQuery (ResponseQueryRequest body)
@@ -1304,4 +1562,4 @@ namespace Example
 [**ResponseAsset**](ResponseAsset)
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

@@ -133,7 +133,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Cancelled for "Cancelled"
             /// </summary>
             [EnumMember(Value = "Cancelled")]
-            Cancelled
+            Cancelled,
+            
+            /// <summary>
+            /// Enum Throttled for "Throttled"
+            /// </summary>
+            [EnumMember(Value = "Throttled")]
+            Throttled
         }
         /// <summary>
         /// The status of the ingestion.

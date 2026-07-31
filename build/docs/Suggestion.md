@@ -21,8 +21,9 @@
 | **KnowledgeArticle** | [**SuggestionKnowledgeArticle**](SuggestionKnowledgeArticle) | The suggested knowledge article that was provided as the suggestion. | [optional] |
 | **CannedResponse** | [**SuggestionCannedResponse**](SuggestionCannedResponse) | The suggested canned response that was provided as the suggestion. | [optional] |
 | **Script** | [**SuggestionScript**](SuggestionScript) | The suggested script that was provided as the suggestion. | [optional] |
+| **ThirdPartySuggestion** | [**ThirdPartySuggestion**](ThirdPartySuggestion) | The third-party suggestion. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

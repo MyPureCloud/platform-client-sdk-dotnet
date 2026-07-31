@@ -7,7 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The messaging template name. | |
-| **Namespace** | **string** | The messaging template namespace. | [optional] |
+| **Namespace** | **string** | The messaging template namespace. This field is deprecated. | [optional] |
 | **Language** | **string** | The messaging template language configured for this template. This is a WhatsApp specific value. For example, &#39;en_US&#39; | |
 | **Buttons** | [**List&lt;Button&gt;**](Button) | List of buttons to be included in the standard WhatsApp messages channel | [optional] |
 | **MessageFooter** | [**MessageFooter**](MessageFooter) | Footer for the message in the standard WhatsApp messages channel | [optional] |
@@ -20,4 +20,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

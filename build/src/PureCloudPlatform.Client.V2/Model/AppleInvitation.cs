@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class AppleInvitation :  IEquatable<AppleInvitation>
     {
         /// <summary>
-        /// The template type for the invitation
+        /// The template type for the invitation. Only 'WithImage' is supported.
         /// </summary>
-        /// <value>The template type for the invitation</value>
+        /// <value>The template type for the invitation. Only 'WithImage' is supported.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TemplateTypeEnum
         {
@@ -37,18 +37,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Withimage for "WithImage"
             /// </summary>
             [EnumMember(Value = "WithImage")]
-            Withimage,
-            
-            /// <summary>
-            /// Enum Withoutimage for "WithoutImage"
-            /// </summary>
-            [EnumMember(Value = "WithoutImage")]
-            Withoutimage
+            Withimage
         }
         /// <summary>
-        /// The template type for the invitation
+        /// The template type for the invitation. Only 'WithImage' is supported.
         /// </summary>
-        /// <value>The template type for the invitation</value>
+        /// <value>The template type for the invitation. Only 'WithImage' is supported.</value>
         [DataMember(Name="templateType", EmitDefaultValue=false)]
         public TemplateTypeEnum? TemplateType { get; set; }
 
@@ -62,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="BusinessName">The business name displayed in the invitation (required).</param>
         /// <param name="TranscriptMessage">The transcript message displayed in the invitation (required).</param>
-        /// <param name="TemplateType">The template type for the invitation (required).</param>
+        /// <param name="TemplateType">The template type for the invitation. Only &#39;WithImage&#39; is supported. (required).</param>
         /// <param name="Locale">The locale for the invitation (required).</param>
         public AppleInvitation(string BusinessName = null, string TranscriptMessage = null, TemplateTypeEnum? TemplateType = null, string Locale = null)
         {

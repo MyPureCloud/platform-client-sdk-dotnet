@@ -125,6 +125,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
+        /// <returns>LibraryDivisionView</returns>
+        
+        LibraryDivisionView GetResponsemanagementLibrariesDivisionview (string libraryId);
+
+        /// <summary>
+        /// Get details about an existing response library.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="libraryId">Library ID</param>
+        /// <returns>ApiResponse of LibraryDivisionView</returns>
+        
+        ApiResponse<LibraryDivisionView> GetResponsemanagementLibrariesDivisionviewWithHttpInfo (string libraryId);
+
+        /// <summary>
+        /// Gets a list of existing response libraries.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
+        /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
+        /// <returns>LibraryDivisionViewEntityListing</returns>
+        
+        LibraryDivisionViewEntityListing GetResponsemanagementLibrariesDivisionviews (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null);
+
+        /// <summary>
+        /// Gets a list of existing response libraries.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
+        /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
+        /// <returns>ApiResponse of LibraryDivisionViewEntityListing</returns>
+        
+        ApiResponse<LibraryDivisionViewEntityListing> GetResponsemanagementLibrariesDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null);
+
+        /// <summary>
+        /// Get details about an existing response library.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="libraryId">Library ID</param>
         /// <returns>Library</returns>
         
         Library GetResponsemanagementLibrary (string libraryId);
@@ -244,6 +298,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ResponseEntityListing</returns>
         
         ApiResponse<ResponseEntityListing> GetResponsemanagementResponsesWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null);
+
+        /// <summary>
+        /// Get details about an existing response.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseId">Response ID</param>
+        /// <returns>ResponseDivisionView</returns>
+        
+        ResponseDivisionView GetResponsemanagementResponsesDivisionview (string responseId);
+
+        /// <summary>
+        /// Get details about an existing response.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseId">Response ID</param>
+        /// <returns>ApiResponse of ResponseDivisionView</returns>
+        
+        ApiResponse<ResponseDivisionView> GetResponsemanagementResponsesDivisionviewWithHttpInfo (string responseId);
 
         /// <summary>
         /// Create a response library.
@@ -420,6 +498,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Response</returns>
         
         ApiResponse<Response> PostResponsemanagementResponsesWithHttpInfo (Response body, string expand = null);
+
+        /// <summary>
+        /// Query responses
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Response</param>
+        /// <returns>ResponseDivisionViewQueryResults</returns>
+        
+        ResponseDivisionViewQueryResults PostResponsemanagementResponsesDivisionviewsQuery (ResponseQueryRequest body);
+
+        /// <summary>
+        /// Query responses
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Response</param>
+        /// <returns>ApiResponse of ResponseDivisionViewQueryResults</returns>
+        
+        ApiResponse<ResponseDivisionViewQueryResults> PostResponsemanagementResponsesDivisionviewsQueryWithHttpInfo (ResponseQueryRequest body);
 
         /// <summary>
         /// Query responses
@@ -639,6 +741,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="libraryId">Library ID</param>
+        /// <returns>Task of LibraryDivisionView</returns>
+        
+        System.Threading.Tasks.Task<LibraryDivisionView> GetResponsemanagementLibrariesDivisionviewAsync (string libraryId);
+
+        /// <summary>
+        /// Get details about an existing response library.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="libraryId">Library ID</param>
+        /// <returns>Task of ApiResponse (LibraryDivisionView)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LibraryDivisionView>> GetResponsemanagementLibrariesDivisionviewAsyncWithHttpInfo (string libraryId);
+
+        /// <summary>
+        /// Gets a list of existing response libraries.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
+        /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
+        /// <returns>Task of LibraryDivisionViewEntityListing</returns>
+        
+        System.Threading.Tasks.Task<LibraryDivisionViewEntityListing> GetResponsemanagementLibrariesDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null);
+
+        /// <summary>
+        /// Gets a list of existing response libraries.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
+        /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
+        /// <returns>Task of ApiResponse (LibraryDivisionViewEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LibraryDivisionViewEntityListing>> GetResponsemanagementLibrariesDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null);
+
+        /// <summary>
+        /// Get details about an existing response library.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="libraryId">Library ID</param>
         /// <returns>Task of Library</returns>
         
         System.Threading.Tasks.Task<Library> GetResponsemanagementLibraryAsync (string libraryId);
@@ -758,6 +914,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ResponseEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ResponseEntityListing>> GetResponsemanagementResponsesAsyncWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null);
+
+        /// <summary>
+        /// Get details about an existing response.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseId">Response ID</param>
+        /// <returns>Task of ResponseDivisionView</returns>
+        
+        System.Threading.Tasks.Task<ResponseDivisionView> GetResponsemanagementResponsesDivisionviewAsync (string responseId);
+
+        /// <summary>
+        /// Get details about an existing response.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseId">Response ID</param>
+        /// <returns>Task of ApiResponse (ResponseDivisionView)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ResponseDivisionView>> GetResponsemanagementResponsesDivisionviewAsyncWithHttpInfo (string responseId);
 
         /// <summary>
         /// Create a response library.
@@ -934,6 +1114,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Response)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Response>> PostResponsemanagementResponsesAsyncWithHttpInfo (Response body, string expand = null);
+
+        /// <summary>
+        /// Query responses
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Response</param>
+        /// <returns>Task of ResponseDivisionViewQueryResults</returns>
+        
+        System.Threading.Tasks.Task<ResponseDivisionViewQueryResults> PostResponsemanagementResponsesDivisionviewsQueryAsync (ResponseQueryRequest body);
+
+        /// <summary>
+        /// Query responses
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Response</param>
+        /// <returns>Task of ApiResponse (ResponseDivisionViewQueryResults)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ResponseDivisionViewQueryResults>> PostResponsemanagementResponsesDivisionviewsQueryAsyncWithHttpInfo (ResponseQueryRequest body);
 
         /// <summary>
         /// Query responses
@@ -1950,6 +2154,427 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LibraryEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (LibraryEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LibraryEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get details about an existing response library. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="libraryId">Library ID</param>
+        /// <returns>LibraryDivisionView</returns>
+        
+        public LibraryDivisionView GetResponsemanagementLibrariesDivisionview (string libraryId)
+        {
+             ApiResponse<LibraryDivisionView> localVarResponse = GetResponsemanagementLibrariesDivisionviewWithHttpInfo(libraryId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get details about an existing response library. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="libraryId">Library ID</param>
+        /// <returns>ApiResponse of LibraryDivisionView</returns>
+        
+        public ApiResponse< LibraryDivisionView > GetResponsemanagementLibrariesDivisionviewWithHttpInfo (string libraryId)
+        { 
+            // verify the required parameter 'libraryId' is set
+            if (libraryId == null)
+                throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->GetResponsemanagementLibrariesDivisionview");
+
+            var localVarPath = "/api/v2/responsemanagement/libraries/divisionviews/{libraryId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (libraryId != null) localVarPathParams.Add("libraryId", this.Configuration.ApiClient.ParameterToString(libraryId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementLibrariesDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetResponsemanagementLibrariesDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementLibrariesDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LibraryDivisionView>(localVarStatusCode,
+                localVarHeaders,
+                (LibraryDivisionView) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LibraryDivisionView)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get details about an existing response library. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="libraryId">Library ID</param>
+        /// <returns>Task of LibraryDivisionView</returns>
+        
+        public async System.Threading.Tasks.Task<LibraryDivisionView> GetResponsemanagementLibrariesDivisionviewAsync (string libraryId)
+        {
+             ApiResponse<LibraryDivisionView> localVarResponse = await GetResponsemanagementLibrariesDivisionviewAsyncWithHttpInfo(libraryId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get details about an existing response library. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="libraryId">Library ID</param>
+        /// <returns>Task of ApiResponse (LibraryDivisionView)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LibraryDivisionView>> GetResponsemanagementLibrariesDivisionviewAsyncWithHttpInfo (string libraryId)
+        { 
+            // verify the required parameter 'libraryId' is set
+            if (libraryId == null)
+                throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->GetResponsemanagementLibrariesDivisionview");
+            
+
+            var localVarPath = "/api/v2/responsemanagement/libraries/divisionviews/{libraryId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (libraryId != null) localVarPathParams.Add("libraryId", this.Configuration.ApiClient.ParameterToString(libraryId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementLibrariesDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetResponsemanagementLibrariesDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementLibrariesDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LibraryDivisionView>(localVarStatusCode,
+                localVarHeaders,
+                (LibraryDivisionView) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LibraryDivisionView)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Gets a list of existing response libraries. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
+        /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
+        /// <returns>LibraryDivisionViewEntityListing</returns>
+        
+        public LibraryDivisionViewEntityListing GetResponsemanagementLibrariesDivisionviews (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null)
+        {
+             ApiResponse<LibraryDivisionViewEntityListing> localVarResponse = GetResponsemanagementLibrariesDivisionviewsWithHttpInfo(pageNumber, pageSize, messagingTemplateFilter, libraryPrefix);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a list of existing response libraries. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
+        /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
+        /// <returns>ApiResponse of LibraryDivisionViewEntityListing</returns>
+        
+        public ApiResponse< LibraryDivisionViewEntityListing > GetResponsemanagementLibrariesDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null)
+        { 
+
+            var localVarPath = "/api/v2/responsemanagement/libraries/divisionviews";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (messagingTemplateFilter != null) localVarQueryParams.Add(new Tuple<string, string>("messagingTemplateFilter", this.Configuration.ApiClient.ParameterToString(messagingTemplateFilter)));
+            if (libraryPrefix != null) localVarQueryParams.Add(new Tuple<string, string>("libraryPrefix", this.Configuration.ApiClient.ParameterToString(libraryPrefix)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementLibrariesDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetResponsemanagementLibrariesDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementLibrariesDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LibraryDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LibraryDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LibraryDivisionViewEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Gets a list of existing response libraries. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
+        /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
+        /// <returns>Task of LibraryDivisionViewEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<LibraryDivisionViewEntityListing> GetResponsemanagementLibrariesDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null)
+        {
+             ApiResponse<LibraryDivisionViewEntityListing> localVarResponse = await GetResponsemanagementLibrariesDivisionviewsAsyncWithHttpInfo(pageNumber, pageSize, messagingTemplateFilter, libraryPrefix);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a list of existing response libraries. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="messagingTemplateFilter">Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)</param>
+        /// <param name="libraryPrefix">Returns a list of libraries that contain the prefix provided (optional)</param>
+        /// <returns>Task of ApiResponse (LibraryDivisionViewEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LibraryDivisionViewEntityListing>> GetResponsemanagementLibrariesDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null)
+        { 
+
+            var localVarPath = "/api/v2/responsemanagement/libraries/divisionviews";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (messagingTemplateFilter != null) localVarQueryParams.Add(new Tuple<string, string>("messagingTemplateFilter", this.Configuration.ApiClient.ParameterToString(messagingTemplateFilter)));
+            if (libraryPrefix != null) localVarQueryParams.Add(new Tuple<string, string>("libraryPrefix", this.Configuration.ApiClient.ParameterToString(libraryPrefix)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementLibrariesDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetResponsemanagementLibrariesDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementLibrariesDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LibraryDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LibraryDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LibraryDivisionViewEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2999,6 +3624,211 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (ResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get details about an existing response. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseId">Response ID</param>
+        /// <returns>ResponseDivisionView</returns>
+        
+        public ResponseDivisionView GetResponsemanagementResponsesDivisionview (string responseId)
+        {
+             ApiResponse<ResponseDivisionView> localVarResponse = GetResponsemanagementResponsesDivisionviewWithHttpInfo(responseId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get details about an existing response. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseId">Response ID</param>
+        /// <returns>ApiResponse of ResponseDivisionView</returns>
+        
+        public ApiResponse< ResponseDivisionView > GetResponsemanagementResponsesDivisionviewWithHttpInfo (string responseId)
+        { 
+            // verify the required parameter 'responseId' is set
+            if (responseId == null)
+                throw new ApiException(400, "Missing required parameter 'responseId' when calling ResponseManagementApi->GetResponsemanagementResponsesDivisionview");
+
+            var localVarPath = "/api/v2/responsemanagement/responses/divisionviews/{responseId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (responseId != null) localVarPathParams.Add("responseId", this.Configuration.ApiClient.ParameterToString(responseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementResponsesDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetResponsemanagementResponsesDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementResponsesDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseDivisionView>(localVarStatusCode,
+                localVarHeaders,
+                (ResponseDivisionView) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseDivisionView)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get details about an existing response. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseId">Response ID</param>
+        /// <returns>Task of ResponseDivisionView</returns>
+        
+        public async System.Threading.Tasks.Task<ResponseDivisionView> GetResponsemanagementResponsesDivisionviewAsync (string responseId)
+        {
+             ApiResponse<ResponseDivisionView> localVarResponse = await GetResponsemanagementResponsesDivisionviewAsyncWithHttpInfo(responseId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get details about an existing response. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="responseId">Response ID</param>
+        /// <returns>Task of ApiResponse (ResponseDivisionView)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseDivisionView>> GetResponsemanagementResponsesDivisionviewAsyncWithHttpInfo (string responseId)
+        { 
+            // verify the required parameter 'responseId' is set
+            if (responseId == null)
+                throw new ApiException(400, "Missing required parameter 'responseId' when calling ResponseManagementApi->GetResponsemanagementResponsesDivisionview");
+            
+
+            var localVarPath = "/api/v2/responsemanagement/responses/divisionviews/{responseId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (responseId != null) localVarPathParams.Add("responseId", this.Configuration.ApiClient.ParameterToString(responseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementResponsesDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetResponsemanagementResponsesDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetResponsemanagementResponsesDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseDivisionView>(localVarStatusCode,
+                localVarHeaders,
+                (ResponseDivisionView) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseDivisionView)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -4528,6 +5358,221 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Response>(localVarStatusCode,
                 localVarHeaders,
                 (Response) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Response)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query responses 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Response</param>
+        /// <returns>ResponseDivisionViewQueryResults</returns>
+        
+        public ResponseDivisionViewQueryResults PostResponsemanagementResponsesDivisionviewsQuery (ResponseQueryRequest body)
+        {
+             ApiResponse<ResponseDivisionViewQueryResults> localVarResponse = PostResponsemanagementResponsesDivisionviewsQueryWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query responses 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Response</param>
+        /// <returns>ApiResponse of ResponseDivisionViewQueryResults</returns>
+        
+        public ApiResponse< ResponseDivisionViewQueryResults > PostResponsemanagementResponsesDivisionviewsQueryWithHttpInfo (ResponseQueryRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponsesDivisionviewsQuery");
+
+            var localVarPath = "/api/v2/responsemanagement/responses/divisionviews/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostResponsemanagementResponsesDivisionviewsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostResponsemanagementResponsesDivisionviewsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostResponsemanagementResponsesDivisionviewsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseDivisionViewQueryResults>(localVarStatusCode,
+                localVarHeaders,
+                (ResponseDivisionViewQueryResults) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseDivisionViewQueryResults)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query responses 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Response</param>
+        /// <returns>Task of ResponseDivisionViewQueryResults</returns>
+        
+        public async System.Threading.Tasks.Task<ResponseDivisionViewQueryResults> PostResponsemanagementResponsesDivisionviewsQueryAsync (ResponseQueryRequest body)
+        {
+             ApiResponse<ResponseDivisionViewQueryResults> localVarResponse = await PostResponsemanagementResponsesDivisionviewsQueryAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query responses 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Response</param>
+        /// <returns>Task of ApiResponse (ResponseDivisionViewQueryResults)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseDivisionViewQueryResults>> PostResponsemanagementResponsesDivisionviewsQueryAsyncWithHttpInfo (ResponseQueryRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponsesDivisionviewsQuery");
+            
+
+            var localVarPath = "/api/v2/responsemanagement/responses/divisionviews/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostResponsemanagementResponsesDivisionviewsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostResponsemanagementResponsesDivisionviewsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostResponsemanagementResponsesDivisionviewsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseDivisionViewQueryResults>(localVarStatusCode,
+                localVarHeaders,
+                (ResponseDivisionViewQueryResults) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseDivisionViewQueryResults)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

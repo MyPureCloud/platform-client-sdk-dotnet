@@ -29,10 +29,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Enabled">Copilot generated summary is enabled. (required).</param>
         /// <param name="SummarySetting">Configured summary setting object..</param>
-        public SummaryGenerationConfig(bool? Enabled = null, SummarySettingEntity SummarySetting = null)
+        /// <param name="RetentionSeconds">Summary retention time in seconds. Can only be modified on the parent assistant..</param>
+        /// <param name="OnDemandSummaryConfig">On-demand summary configuration..</param>
+        /// <param name="ModelConfig">Model configuration for summarization..</param>
+        public SummaryGenerationConfig(bool? Enabled = null, SummarySettingEntity SummarySetting = null, int? RetentionSeconds = null, OnDemandSummaryConfig OnDemandSummaryConfig = null, ModelConfig ModelConfig = null)
         {
             this.Enabled = Enabled;
             this.SummarySetting = SummarySetting;
+            this.RetentionSeconds = RetentionSeconds;
+            this.OnDemandSummaryConfig = OnDemandSummaryConfig;
+            this.ModelConfig = ModelConfig;
             
         }
         
@@ -55,6 +61,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public SummarySettingEntity SummarySetting { get; set; }
 
 
+
+        /// <summary>
+        /// Summary retention time in seconds. Can only be modified on the parent assistant.
+        /// </summary>
+        /// <value>Summary retention time in seconds. Can only be modified on the parent assistant.</value>
+        [DataMember(Name="retentionSeconds", EmitDefaultValue=false)]
+        public int? RetentionSeconds { get; set; }
+
+
+
+        /// <summary>
+        /// On-demand summary configuration.
+        /// </summary>
+        /// <value>On-demand summary configuration.</value>
+        [DataMember(Name="onDemandSummaryConfig", EmitDefaultValue=false)]
+        public OnDemandSummaryConfig OnDemandSummaryConfig { get; set; }
+
+
+
+        /// <summary>
+        /// Model configuration for summarization.
+        /// </summary>
+        /// <value>Model configuration for summarization.</value>
+        [DataMember(Name="modelConfig", EmitDefaultValue=false)]
+        public ModelConfig ModelConfig { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +99,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  SummarySetting: ").Append(SummarySetting).Append("\n");
+            sb.Append("  RetentionSeconds: ").Append(RetentionSeconds).Append("\n");
+            sb.Append("  OnDemandSummaryConfig: ").Append(OnDemandSummaryConfig).Append("\n");
+            sb.Append("  ModelConfig: ").Append(ModelConfig).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +151,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SummarySetting == other.SummarySetting ||
                     this.SummarySetting != null &&
                     this.SummarySetting.Equals(other.SummarySetting)
+                ) &&
+                (
+                    this.RetentionSeconds == other.RetentionSeconds ||
+                    this.RetentionSeconds != null &&
+                    this.RetentionSeconds.Equals(other.RetentionSeconds)
+                ) &&
+                (
+                    this.OnDemandSummaryConfig == other.OnDemandSummaryConfig ||
+                    this.OnDemandSummaryConfig != null &&
+                    this.OnDemandSummaryConfig.Equals(other.OnDemandSummaryConfig)
+                ) &&
+                (
+                    this.ModelConfig == other.ModelConfig ||
+                    this.ModelConfig != null &&
+                    this.ModelConfig.Equals(other.ModelConfig)
                 );
         }
 
@@ -134,6 +185,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SummarySetting != null)
                     hash = hash * 59 + this.SummarySetting.GetHashCode();
+
+                if (this.RetentionSeconds != null)
+                    hash = hash * 59 + this.RetentionSeconds.GetHashCode();
+
+                if (this.OnDemandSummaryConfig != null)
+                    hash = hash * 59 + this.OnDemandSummaryConfig.GetHashCode();
+
+                if (this.ModelConfig != null)
+                    hash = hash * 59 + this.ModelConfig.GetHashCode();
 
                 return hash;
             }

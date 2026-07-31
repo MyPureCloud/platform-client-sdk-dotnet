@@ -40,6 +40,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteCasemanagementCaseWithHttpInfo (string caseId);
 
         /// <summary>
+        /// Delete my Comment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>Object</returns>
+        
+        Object DeleteCasemanagementCaseCommentsMeCommentId (string caseId, string commentId);
+
+        /// <summary>
+        /// Delete my Comment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>ApiResponse of Object</returns>
+        
+        ApiResponse<Object> DeleteCasemanagementCaseCommentsMeCommentIdWithHttpInfo (string caseId, string commentId);
+
+        /// <summary>
         /// Delete a Caseplan.
         /// </summary>
         /// <remarks>
@@ -97,10 +123,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>Case</returns>
         
-        Case GetCasemanagementCase (string caseId, string expands = null);
+        Case GetCasemanagementCase (string caseId, List<string> expands = null);
 
         /// <summary>
         /// Get a Case.
@@ -110,10 +136,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>ApiResponse of Case</returns>
         
-        ApiResponse<Case> GetCasemanagementCaseWithHttpInfo (string caseId, string expands = null);
+        ApiResponse<Case> GetCasemanagementCaseWithHttpInfo (string caseId, List<string> expands = null);
 
         /// <summary>
         /// Get a Case Association.
@@ -170,6 +196,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of CaseAssociationListing</returns>
         
         ApiResponse<CaseAssociationListing> GetCasemanagementCaseAssociationsWithHttpInfo (string caseId, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Get a Comment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>Comment</returns>
+        
+        Comment GetCasemanagementCaseComment (string caseId, string commentId);
+
+        /// <summary>
+        /// Get a Comment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>ApiResponse of Comment</returns>
+        
+        ApiResponse<Comment> GetCasemanagementCaseCommentWithHttpInfo (string caseId, string commentId);
+
+        /// <summary>
+        /// Get comments for a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of comments. (optional)</param>
+        /// <param name="pageSize">Number of comments to return. Maximum is 100. (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order. (optional, default to desc)</param>
+        /// <returns>CommentListing</returns>
+        
+        CommentListing GetCasemanagementCaseComments (string caseId, string after = null, int? pageSize = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get comments for a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of comments. (optional)</param>
+        /// <param name="pageSize">Number of comments to return. Maximum is 100. (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order. (optional, default to desc)</param>
+        /// <returns>ApiResponse of CommentListing</returns>
+        
+        ApiResponse<CommentListing> GetCasemanagementCaseCommentsWithHttpInfo (string caseId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
         /// Get a Stage.
@@ -617,10 +699,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="referenceId">Case reference.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>Case</returns>
         
-        Case GetCasemanagementCasesReference (string referenceId, string expands = null);
+        Case GetCasemanagementCasesReference (string referenceId, List<string> expands = null);
 
         /// <summary>
         /// Get a Case by reference.
@@ -630,10 +712,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="referenceId">Case reference.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>ApiResponse of Case</returns>
         
-        ApiResponse<Case> GetCasemanagementCasesReferenceWithHttpInfo (string referenceId, string expands = null);
+        ApiResponse<Case> GetCasemanagementCasesReferenceWithHttpInfo (string referenceId, List<string> expands = null);
 
         /// <summary>
         /// Update the due date of a Case.
@@ -822,6 +904,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of CaseAssociation</returns>
         
         ApiResponse<CaseAssociation> PostCasemanagementCaseAssociationsWithHttpInfo (string caseId, CaseAssociationCreate body);
+
+        /// <summary>
+        /// Add a comment to a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Comment create request.</param>
+        /// <returns>Comment</returns>
+        
+        Comment PostCasemanagementCaseComments (string caseId, CommentCreate body);
+
+        /// <summary>
+        /// Add a comment to a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Comment create request.</param>
+        /// <returns>ApiResponse of Comment</returns>
+        
+        ApiResponse<Comment> PostCasemanagementCaseCommentsWithHttpInfo (string caseId, CommentCreate body);
 
         /// <summary>
         /// Create a Terminate Job for a Case.
@@ -1100,6 +1208,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCasemanagementCaseAsyncWithHttpInfo (string caseId);
 
         /// <summary>
+        /// Delete my Comment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>Task of Object</returns>
+        
+        System.Threading.Tasks.Task<Object> DeleteCasemanagementCaseCommentsMeCommentIdAsync (string caseId, string commentId);
+
+        /// <summary>
+        /// Delete my Comment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCasemanagementCaseCommentsMeCommentIdAsyncWithHttpInfo (string caseId, string commentId);
+
+        /// <summary>
         /// Delete a Caseplan.
         /// </summary>
         /// <remarks>
@@ -1157,10 +1291,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>Task of Case</returns>
         
-        System.Threading.Tasks.Task<Case> GetCasemanagementCaseAsync (string caseId, string expands = null);
+        System.Threading.Tasks.Task<Case> GetCasemanagementCaseAsync (string caseId, List<string> expands = null);
 
         /// <summary>
         /// Get a Case.
@@ -1170,10 +1304,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Case>> GetCasemanagementCaseAsyncWithHttpInfo (string caseId, string expands = null);
+        System.Threading.Tasks.Task<ApiResponse<Case>> GetCasemanagementCaseAsyncWithHttpInfo (string caseId, List<string> expands = null);
 
         /// <summary>
         /// Get a Case Association.
@@ -1230,6 +1364,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (CaseAssociationListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CaseAssociationListing>> GetCasemanagementCaseAssociationsAsyncWithHttpInfo (string caseId, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Get a Comment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>Task of Comment</returns>
+        
+        System.Threading.Tasks.Task<Comment> GetCasemanagementCaseCommentAsync (string caseId, string commentId);
+
+        /// <summary>
+        /// Get a Comment.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>Task of ApiResponse (Comment)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Comment>> GetCasemanagementCaseCommentAsyncWithHttpInfo (string caseId, string commentId);
+
+        /// <summary>
+        /// Get comments for a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of comments. (optional)</param>
+        /// <param name="pageSize">Number of comments to return. Maximum is 100. (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order. (optional, default to desc)</param>
+        /// <returns>Task of CommentListing</returns>
+        
+        System.Threading.Tasks.Task<CommentListing> GetCasemanagementCaseCommentsAsync (string caseId, string after = null, int? pageSize = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get comments for a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of comments. (optional)</param>
+        /// <param name="pageSize">Number of comments to return. Maximum is 100. (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order. (optional, default to desc)</param>
+        /// <returns>Task of ApiResponse (CommentListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CommentListing>> GetCasemanagementCaseCommentsAsyncWithHttpInfo (string caseId, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
         /// Get a Stage.
@@ -1677,10 +1867,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="referenceId">Case reference.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>Task of Case</returns>
         
-        System.Threading.Tasks.Task<Case> GetCasemanagementCasesReferenceAsync (string referenceId, string expands = null);
+        System.Threading.Tasks.Task<Case> GetCasemanagementCasesReferenceAsync (string referenceId, List<string> expands = null);
 
         /// <summary>
         /// Get a Case by reference.
@@ -1690,10 +1880,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="referenceId">Case reference.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Case>> GetCasemanagementCasesReferenceAsyncWithHttpInfo (string referenceId, string expands = null);
+        System.Threading.Tasks.Task<ApiResponse<Case>> GetCasemanagementCasesReferenceAsyncWithHttpInfo (string referenceId, List<string> expands = null);
 
         /// <summary>
         /// Update the due date of a Case.
@@ -1882,6 +2072,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (CaseAssociation)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CaseAssociation>> PostCasemanagementCaseAssociationsAsyncWithHttpInfo (string caseId, CaseAssociationCreate body);
+
+        /// <summary>
+        /// Add a comment to a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Comment create request.</param>
+        /// <returns>Task of Comment</returns>
+        
+        System.Threading.Tasks.Task<Comment> PostCasemanagementCaseCommentsAsync (string caseId, CommentCreate body);
+
+        /// <summary>
+        /// Add a comment to a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Comment create request.</param>
+        /// <returns>Task of ApiResponse (Comment)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Comment>> PostCasemanagementCaseCommentsAsyncWithHttpInfo (string caseId, CommentCreate body);
 
         /// <summary>
         /// Create a Terminate Job for a Case.
@@ -2429,6 +2645,224 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Delete my Comment. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>Object</returns>
+        
+        public Object DeleteCasemanagementCaseCommentsMeCommentId (string caseId, string commentId)
+        {
+             ApiResponse<Object> localVarResponse = DeleteCasemanagementCaseCommentsMeCommentIdWithHttpInfo(caseId, commentId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete my Comment. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>ApiResponse of Object</returns>
+        
+        public ApiResponse< Object > DeleteCasemanagementCaseCommentsMeCommentIdWithHttpInfo (string caseId, string commentId)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->DeleteCasemanagementCaseCommentsMeCommentId");
+            // verify the required parameter 'commentId' is set
+            if (commentId == null)
+                throw new ApiException(400, "Missing required parameter 'commentId' when calling CaseManagementApi->DeleteCasemanagementCaseCommentsMeCommentId");
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/comments/me/{commentId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+            if (commentId != null) localVarPathParams.Add("commentId", this.Configuration.ApiClient.ParameterToString(commentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCasemanagementCaseCommentsMeCommentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteCasemanagementCaseCommentsMeCommentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCasemanagementCaseCommentsMeCommentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete my Comment. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>Task of Object</returns>
+        
+        public async System.Threading.Tasks.Task<Object> DeleteCasemanagementCaseCommentsMeCommentIdAsync (string caseId, string commentId)
+        {
+             ApiResponse<Object> localVarResponse = await DeleteCasemanagementCaseCommentsMeCommentIdAsyncWithHttpInfo(caseId, commentId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete my Comment. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCasemanagementCaseCommentsMeCommentIdAsyncWithHttpInfo (string caseId, string commentId)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->DeleteCasemanagementCaseCommentsMeCommentId");
+            
+            // verify the required parameter 'commentId' is set
+            if (commentId == null)
+                throw new ApiException(400, "Missing required parameter 'commentId' when calling CaseManagementApi->DeleteCasemanagementCaseCommentsMeCommentId");
+            
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/comments/me/{commentId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+            if (commentId != null) localVarPathParams.Add("commentId", this.Configuration.ApiClient.ParameterToString(commentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCasemanagementCaseCommentsMeCommentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteCasemanagementCaseCommentsMeCommentId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCasemanagementCaseCommentsMeCommentId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Delete a Caseplan. 
         /// 
         /// </summary>
@@ -2857,10 +3291,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>Case</returns>
         
-        public Case GetCasemanagementCase (string caseId, string expands = null)
+        public Case GetCasemanagementCase (string caseId, List<string> expands = null)
         {
              ApiResponse<Case> localVarResponse = GetCasemanagementCaseWithHttpInfo(caseId, expands);
              return localVarResponse.Data;
@@ -2872,10 +3306,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>ApiResponse of Case</returns>
         
-        public ApiResponse< Case > GetCasemanagementCaseWithHttpInfo (string caseId, string expands = null)
+        public ApiResponse< Case > GetCasemanagementCaseWithHttpInfo (string caseId, List<string> expands = null)
         { 
             // verify the required parameter 'caseId' is set
             if (caseId == null)
@@ -2915,7 +3349,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
 
             // Query params
-            if (expands != null) localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(expands)));
+            if (expands != null) expands.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -2961,10 +3395,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>Task of Case</returns>
         
-        public async System.Threading.Tasks.Task<Case> GetCasemanagementCaseAsync (string caseId, string expands = null)
+        public async System.Threading.Tasks.Task<Case> GetCasemanagementCaseAsync (string caseId, List<string> expands = null)
         {
              ApiResponse<Case> localVarResponse = await GetCasemanagementCaseAsyncWithHttpInfo(caseId, expands);
              return localVarResponse.Data;
@@ -2977,10 +3411,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Case>> GetCasemanagementCaseAsyncWithHttpInfo (string caseId, string expands = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Case>> GetCasemanagementCaseAsyncWithHttpInfo (string caseId, List<string> expands = null)
         { 
             // verify the required parameter 'caseId' is set
             if (caseId == null)
@@ -3021,7 +3455,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
 
             // Query params
-            if (expands != null) localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(expands)));
+            if (expands != null) expands.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -3497,6 +3931,447 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CaseAssociationListing>(localVarStatusCode,
                 localVarHeaders,
                 (CaseAssociationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseAssociationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a Comment. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>Comment</returns>
+        
+        public Comment GetCasemanagementCaseComment (string caseId, string commentId)
+        {
+             ApiResponse<Comment> localVarResponse = GetCasemanagementCaseCommentWithHttpInfo(caseId, commentId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a Comment. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>ApiResponse of Comment</returns>
+        
+        public ApiResponse< Comment > GetCasemanagementCaseCommentWithHttpInfo (string caseId, string commentId)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->GetCasemanagementCaseComment");
+            // verify the required parameter 'commentId' is set
+            if (commentId == null)
+                throw new ApiException(400, "Missing required parameter 'commentId' when calling CaseManagementApi->GetCasemanagementCaseComment");
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/comments/{commentId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+            if (commentId != null) localVarPathParams.Add("commentId", this.Configuration.ApiClient.ParameterToString(commentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCaseComment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetCasemanagementCaseComment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCaseComment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Comment>(localVarStatusCode,
+                localVarHeaders,
+                (Comment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Comment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a Comment. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>Task of Comment</returns>
+        
+        public async System.Threading.Tasks.Task<Comment> GetCasemanagementCaseCommentAsync (string caseId, string commentId)
+        {
+             ApiResponse<Comment> localVarResponse = await GetCasemanagementCaseCommentAsyncWithHttpInfo(caseId, commentId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a Comment. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="commentId">Comment identifier.</param>
+        /// <returns>Task of ApiResponse (Comment)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Comment>> GetCasemanagementCaseCommentAsyncWithHttpInfo (string caseId, string commentId)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->GetCasemanagementCaseComment");
+            
+            // verify the required parameter 'commentId' is set
+            if (commentId == null)
+                throw new ApiException(400, "Missing required parameter 'commentId' when calling CaseManagementApi->GetCasemanagementCaseComment");
+            
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/comments/{commentId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+            if (commentId != null) localVarPathParams.Add("commentId", this.Configuration.ApiClient.ParameterToString(commentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCaseComment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetCasemanagementCaseComment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCaseComment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Comment>(localVarStatusCode,
+                localVarHeaders,
+                (Comment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Comment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get comments for a Case. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of comments. (optional)</param>
+        /// <param name="pageSize">Number of comments to return. Maximum is 100. (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order. (optional, default to desc)</param>
+        /// <returns>CommentListing</returns>
+        
+        public CommentListing GetCasemanagementCaseComments (string caseId, string after = null, int? pageSize = null, string sortOrder = null)
+        {
+             ApiResponse<CommentListing> localVarResponse = GetCasemanagementCaseCommentsWithHttpInfo(caseId, after, pageSize, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get comments for a Case. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of comments. (optional)</param>
+        /// <param name="pageSize">Number of comments to return. Maximum is 100. (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order. (optional, default to desc)</param>
+        /// <returns>ApiResponse of CommentListing</returns>
+        
+        public ApiResponse< CommentListing > GetCasemanagementCaseCommentsWithHttpInfo (string caseId, string after = null, int? pageSize = null, string sortOrder = null)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->GetCasemanagementCaseComments");
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/comments";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCaseComments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetCasemanagementCaseComments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCaseComments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CommentListing>(localVarStatusCode,
+                localVarHeaders,
+                (CommentListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommentListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get comments for a Case. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of comments. (optional)</param>
+        /// <param name="pageSize">Number of comments to return. Maximum is 100. (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order. (optional, default to desc)</param>
+        /// <returns>Task of CommentListing</returns>
+        
+        public async System.Threading.Tasks.Task<CommentListing> GetCasemanagementCaseCommentsAsync (string caseId, string after = null, int? pageSize = null, string sortOrder = null)
+        {
+             ApiResponse<CommentListing> localVarResponse = await GetCasemanagementCaseCommentsAsyncWithHttpInfo(caseId, after, pageSize, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get comments for a Case. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="after">Cursor pointing to the end of the previously returned page of comments. (optional)</param>
+        /// <param name="pageSize">Number of comments to return. Maximum is 100. (optional)</param>
+        /// <param name="sortOrder">Ascending or descending sort order. (optional, default to desc)</param>
+        /// <returns>Task of ApiResponse (CommentListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CommentListing>> GetCasemanagementCaseCommentsAsyncWithHttpInfo (string caseId, string after = null, int? pageSize = null, string sortOrder = null)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->GetCasemanagementCaseComments");
+            
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/comments";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCaseComments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetCasemanagementCaseComments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCaseComments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CommentListing>(localVarStatusCode,
+                localVarHeaders,
+                (CommentListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CommentListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6923,10 +7798,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="referenceId">Case reference.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>Case</returns>
         
-        public Case GetCasemanagementCasesReference (string referenceId, string expands = null)
+        public Case GetCasemanagementCasesReference (string referenceId, List<string> expands = null)
         {
              ApiResponse<Case> localVarResponse = GetCasemanagementCasesReferenceWithHttpInfo(referenceId, expands);
              return localVarResponse.Data;
@@ -6938,10 +7813,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="referenceId">Case reference.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>ApiResponse of Case</returns>
         
-        public ApiResponse< Case > GetCasemanagementCasesReferenceWithHttpInfo (string referenceId, string expands = null)
+        public ApiResponse< Case > GetCasemanagementCasesReferenceWithHttpInfo (string referenceId, List<string> expands = null)
         { 
             // verify the required parameter 'referenceId' is set
             if (referenceId == null)
@@ -6981,7 +7856,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (referenceId != null) localVarPathParams.Add("referenceId", this.Configuration.ApiClient.ParameterToString(referenceId));
 
             // Query params
-            if (expands != null) localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(expands)));
+            if (expands != null) expands.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -7027,10 +7902,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="referenceId">Case reference.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>Task of Case</returns>
         
-        public async System.Threading.Tasks.Task<Case> GetCasemanagementCasesReferenceAsync (string referenceId, string expands = null)
+        public async System.Threading.Tasks.Task<Case> GetCasemanagementCasesReferenceAsync (string referenceId, List<string> expands = null)
         {
              ApiResponse<Case> localVarResponse = await GetCasemanagementCasesReferenceAsyncWithHttpInfo(referenceId, expands);
              return localVarResponse.Data;
@@ -7043,10 +7918,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="referenceId">Case reference.</param>
-        /// <param name="expands">Fields to expand. (optional)</param>
+        /// <param name="expands">Attributes to expand. Comma-separated if more than one. (optional)</param>
         /// <returns>Task of ApiResponse (Case)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Case>> GetCasemanagementCasesReferenceAsyncWithHttpInfo (string referenceId, string expands = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Case>> GetCasemanagementCasesReferenceAsyncWithHttpInfo (string referenceId, List<string> expands = null)
         { 
             // verify the required parameter 'referenceId' is set
             if (referenceId == null)
@@ -7087,7 +7962,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (referenceId != null) localVarPathParams.Add("referenceId", this.Configuration.ApiClient.ParameterToString(referenceId));
 
             // Query params
-            if (expands != null) localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(expands)));
+            if (expands != null) expands.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -8757,6 +9632,234 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CaseAssociation>(localVarStatusCode,
                 localVarHeaders,
                 (CaseAssociation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseAssociation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add a comment to a Case. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Comment create request.</param>
+        /// <returns>Comment</returns>
+        
+        public Comment PostCasemanagementCaseComments (string caseId, CommentCreate body)
+        {
+             ApiResponse<Comment> localVarResponse = PostCasemanagementCaseCommentsWithHttpInfo(caseId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a comment to a Case. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Comment create request.</param>
+        /// <returns>ApiResponse of Comment</returns>
+        
+        public ApiResponse< Comment > PostCasemanagementCaseCommentsWithHttpInfo (string caseId, CommentCreate body)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->PostCasemanagementCaseComments");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCaseComments");
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/comments";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseComments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostCasemanagementCaseComments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseComments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Comment>(localVarStatusCode,
+                localVarHeaders,
+                (Comment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Comment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add a comment to a Case. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Comment create request.</param>
+        /// <returns>Task of Comment</returns>
+        
+        public async System.Threading.Tasks.Task<Comment> PostCasemanagementCaseCommentsAsync (string caseId, CommentCreate body)
+        {
+             ApiResponse<Comment> localVarResponse = await PostCasemanagementCaseCommentsAsyncWithHttpInfo(caseId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add a comment to a Case. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Comment create request.</param>
+        /// <returns>Task of ApiResponse (Comment)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Comment>> PostCasemanagementCaseCommentsAsyncWithHttpInfo (string caseId, CommentCreate body)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->PostCasemanagementCaseComments");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCaseComments");
+            
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/comments";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseComments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostCasemanagementCaseComments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseComments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Comment>(localVarStatusCode,
+                localVarHeaders,
+                (Comment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Comment)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

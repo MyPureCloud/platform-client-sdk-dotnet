@@ -60,6 +60,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The name of the object.
+        /// </summary>
+        /// <value>The name of the object.</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; private set; }
+
+
+
+        /// <summary>
         /// Represents the details of a product.
         /// </summary>
         /// <value>Represents the details of a product.</value>
@@ -167,6 +176,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class BillingCharge {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Product: ").Append(Product).Append("\n");
             sb.Append("  Organizations: ").Append(Organizations).Append("\n");
             sb.Append("  PrepaidQuantity: ").Append(PrepaidQuantity).Append("\n");
@@ -222,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
                 ) &&
                 (
                     this.Product == other.Product ||
@@ -293,6 +308,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
 
                 if (this.Product != null)
                     hash = hash * 59 + this.Product.GetHashCode();

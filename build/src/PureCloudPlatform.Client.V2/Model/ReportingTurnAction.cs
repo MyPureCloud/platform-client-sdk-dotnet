@@ -513,6 +513,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Agenticaskforintentaction,
             
             /// <summary>
+            /// Enum Agenticanythingelseaction for "AgenticAnythingElseAction"
+            /// </summary>
+            [EnumMember(Value = "AgenticAnythingElseAction")]
+            Agenticanythingelseaction,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

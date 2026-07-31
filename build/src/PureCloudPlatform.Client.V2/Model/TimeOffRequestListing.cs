@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Entities">List of time off requests (required).</param>
         /// <param name="DownloadUrl">URL from which to fetch results for requests with a large result set. If populated, the downloaded data will conform to the same schema as would normally be returned, excepting downloaded data will never itself contain a downloadUrl.</param>
-        public TimeOffRequestListing(List<TimeOffRequest> Entities = null, string DownloadUrl = null)
+        public TimeOffRequestListing(List<TimeOffRequestListItem> Entities = null, string DownloadUrl = null)
         {
             this.Entities = Entities;
             this.DownloadUrl = DownloadUrl;
@@ -43,7 +43,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of time off requests</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<TimeOffRequest> Entities { get; set; }
+        public List<TimeOffRequestListItem> Entities { get; set; }
 
 
 

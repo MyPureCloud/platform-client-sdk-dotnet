@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SendMessagingTemplateRequest" /> class.
         /// </summary>
         /// <param name="ResponseId">Unique identifier for a Response Management response to fetch and apply pre-configured message content when sending outbound responses..</param>
-        /// <param name="Parameters">A list of Response Management response substitutions for the response&#39;s messaging template. (Deprecated) use bodyParameters instead..</param>
+        /// <param name="Parameters">(Deprecated) use bodyParameters instead..</param>
         /// <param name="HeaderParameters">A list of Response Management header parameter substitutions for the response&#39;s messaging template.</param>
         /// <param name="BodyParameters">A list of Response Management body parameter substitutions for the response&#39;s messaging template.</param>
         /// <param name="ButtonUrlParameters">A list of Response Management button url parameter substitutions for the response&#39;s messaging template.</param>
@@ -50,9 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A list of Response Management response substitutions for the response&#39;s messaging template. (Deprecated) use bodyParameters instead.
+        /// (Deprecated) use bodyParameters instead.
         /// </summary>
-        /// <value>A list of Response Management response substitutions for the response&#39;s messaging template. (Deprecated) use bodyParameters instead.</value>
+        /// <value>(Deprecated) use bodyParameters instead.</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public List<TemplateParameter> Parameters { get; set; }
 

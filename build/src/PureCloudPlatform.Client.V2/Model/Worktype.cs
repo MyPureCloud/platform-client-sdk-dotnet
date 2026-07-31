@@ -45,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Flow">The flow associated with the Worktype..</param>
         /// <param name="DefaultScript">The default script for Workitems created from the Worktype..</param>
         /// <param name="UnassignedDivisionContactsEnabled">When set to true, will allow Workitems to be associated with External Contacts that are not assigned to any division. Default value is true..</param>
-        public Worktype(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkbinReference DefaultWorkbin = null, WorkitemStatusReference DefaultStatus = null, List<WorkitemStatus> Statuses = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, LanguageReference DefaultLanguage = null, int? DefaultTtlSeconds = null, UserReference ModifiedBy = null, WorkitemQueueReference DefaultQueue = null, List<RoutingSkillReference> DefaultSkills = null, bool? AssignmentEnabled = null, WorkitemSchema Schema = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, WorkitemFlowReference Flow = null, WorkitemScriptReference DefaultScript = null, bool? UnassignedDivisionContactsEnabled = null)
+        public Worktype(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkbinReference DefaultWorkbin = null, WorkitemStatusReference DefaultStatus = null, List<WorkitemStatus> Statuses = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, WorkitemLanguageReference DefaultLanguage = null, int? DefaultTtlSeconds = null, UserReference ModifiedBy = null, WorkitemQueueReference DefaultQueue = null, List<WorkitemRoutingSkillReference> DefaultSkills = null, bool? AssignmentEnabled = null, WorkitemSchema Schema = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, WorkitemFlowReference Flow = null, WorkitemScriptReference DefaultScript = null, bool? UnassignedDivisionContactsEnabled = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -198,7 +198,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The default language for Workitems created from the Worktype.</value>
         [DataMember(Name="defaultLanguage", EmitDefaultValue=false)]
-        public LanguageReference DefaultLanguage { get; set; }
+        public WorkitemLanguageReference DefaultLanguage { get; set; }
 
 
 
@@ -234,7 +234,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The default skills for Workitems created from the Worktype.</value>
         [DataMember(Name="defaultSkills", EmitDefaultValue=false)]
-        public List<RoutingSkillReference> DefaultSkills { get; set; }
+        public List<WorkitemRoutingSkillReference> DefaultSkills { get; set; }
 
 
 

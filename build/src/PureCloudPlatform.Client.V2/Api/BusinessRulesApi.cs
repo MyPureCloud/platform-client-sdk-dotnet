@@ -603,7 +603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update decision table row import job
         /// </summary>
         /// <remarks>
-        /// 
+        /// Cancels an in-progress import job by supplying a status of Cancelled. Cancellation is idempotent: cancelling a job that is already Cancelled returns 200 with the cancelled job. Cancelling a job that is still Uploading or Processing returns 200. A job that has already finished (Complete or Failed) can no longer be cancelled.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -617,7 +617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update decision table row import job
         /// </summary>
         /// <remarks>
-        /// 
+        /// Cancels an in-progress import job by supplying a status of Cancelled. Cancellation is idempotent: cancelling a job that is already Cancelled returns 200 with the cancelled job. Cancelling a job that is still Uploading or Processing returns 200. A job that has already finished (Complete or Failed) can no longer be cancelled.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -659,7 +659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Execute a published decision table
         /// </summary>
         /// <remarks>
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -672,7 +672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Execute a published decision table
         /// </summary>
         /// <remarks>
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -765,7 +765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Execute a decision table version
         /// </summary>
         /// <remarks>
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -779,7 +779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Execute a decision table version
         /// </summary>
         /// <remarks>
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -1707,7 +1707,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update decision table row import job
         /// </summary>
         /// <remarks>
-        /// 
+        /// Cancels an in-progress import job by supplying a status of Cancelled. Cancellation is idempotent: cancelling a job that is already Cancelled returns 200 with the cancelled job. Cancelling a job that is still Uploading or Processing returns 200. A job that has already finished (Complete or Failed) can no longer be cancelled.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -1721,7 +1721,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update decision table row import job
         /// </summary>
         /// <remarks>
-        /// 
+        /// Cancels an in-progress import job by supplying a status of Cancelled. Cancellation is idempotent: cancelling a job that is already Cancelled returns 200 with the cancelled job. Cancelling a job that is still Uploading or Processing returns 200. A job that has already finished (Complete or Failed) can no longer be cancelled.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -1763,7 +1763,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Execute a published decision table
         /// </summary>
         /// <remarks>
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -1776,7 +1776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Execute a published decision table
         /// </summary>
         /// <remarks>
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -1869,7 +1869,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Execute a decision table version
         /// </summary>
         /// <remarks>
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -1883,7 +1883,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Execute a decision table version
         /// </summary>
         /// <remarks>
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -7045,7 +7045,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update decision table row import job 
-        /// 
+        /// Cancels an in-progress import job by supplying a status of Cancelled. Cancellation is idempotent: cancelling a job that is already Cancelled returns 200 with the cancelled job. Cancelling a job that is still Uploading or Processing returns 200. A job that has already finished (Complete or Failed) can no longer be cancelled.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -7061,7 +7061,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update decision table row import job 
-        /// 
+        /// Cancels an in-progress import job by supplying a status of Cancelled. Cancellation is idempotent: cancelling a job that is already Cancelled returns 200 with the cancelled job. Cancelling a job that is still Uploading or Processing returns 200. A job that has already finished (Complete or Failed) can no longer be cancelled.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -7163,7 +7163,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update decision table row import job 
-        /// 
+        /// Cancels an in-progress import job by supplying a status of Cancelled. Cancellation is idempotent: cancelling a job that is already Cancelled returns 200 with the cancelled job. Cancelling a job that is still Uploading or Processing returns 200. A job that has already finished (Complete or Failed) can no longer be cancelled.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -7180,7 +7180,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update decision table row import job 
-        /// 
+        /// Cancels an in-progress import job by supplying a status of Cancelled. Cancellation is idempotent: cancelling a job that is already Cancelled returns 200 with the cancelled job. Cancelling a job that is still Uploading or Processing returns 200. A job that has already finished (Complete or Failed) can no longer be cancelled.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -7527,7 +7527,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute a published decision table 
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -7542,7 +7542,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute a published decision table 
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -7639,7 +7639,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute a published decision table 
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -7655,7 +7655,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute a published decision table 
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -8452,7 +8452,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute a decision table version 
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -8468,7 +8468,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute a decision table version 
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -8570,7 +8570,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute a decision table version 
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -8587,7 +8587,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute a decision table version 
-        /// 
+        /// Example request payload: {\"inputs\":{\"schemaPropertykey1\":\"inputValue1\",\"schemaPropertykey2\":\"inputValue2\"}}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>

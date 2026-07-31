@@ -61,6 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="EvaluationFormResponse" /> class.
         /// </summary>
         /// <param name="Name">The evaluation form name (required).</param>
+        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Published">Published.</param>
         /// <param name="ContextId">ContextId.</param>
@@ -70,9 +71,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PublishedVersions">A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the &#39;expand&#x3D;publishHistory&#39; query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable)..</param>
         /// <param name="LatestVersionFormName">The name of the form&#39;s most recently published version.</param>
         /// <param name="Dialect">The language dialect for this evaluation form. Supported dialects: ar, cs, da, de, en-US, es, fi, fr, fr-CA, he, hi, it, ja, ko, nl, no, pl, pt-BR, pt-PT, ru, sv, th, tr, uk, zh-CN, zh-TW.</param>
-        public EvaluationFormResponse(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, WeightModeEnum? WeightMode = null, EvaluationSettings EvaluationSettings = null, DomainEntityListingEvaluationForm PublishedVersions = null, string LatestVersionFormName = null, string Dialect = null)
+        public EvaluationFormResponse(string Name = null, WritableStarrableDivision Division = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, WeightModeEnum? WeightMode = null, EvaluationSettings EvaluationSettings = null, DomainEntityListingEvaluationForm PublishedVersions = null, string LatestVersionFormName = null, string Dialect = null)
         {
             this.Name = Name;
+            this.Division = Division;
             this.ModifiedDate = ModifiedDate;
             this.Published = Published;
             this.ContextId = ContextId;
@@ -102,6 +104,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The evaluation form name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+
+
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public WritableStarrableDivision Division { get; set; }
 
 
 
@@ -205,6 +216,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("  Published: ").Append(Published).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
@@ -265,6 +277,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
@@ -339,6 +356,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();

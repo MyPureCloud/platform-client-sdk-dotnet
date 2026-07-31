@@ -107,7 +107,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Interruptible">Whether this activity code is considered interruptible.</param>
         /// <param name="SecondaryPresences">The secondary presences of this activity code.</param>
         /// <param name="PlanningGroupIds">The planning group IDs associated with this activity code.</param>
-        public CreateActivityCodeRequest(string Name = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, bool? CountsTowardShrinkage = null, bool? PlannedShrinkage = null, bool? Interruptible = null, List<SecondaryPresence> SecondaryPresences = null, List<string> PlanningGroupIds = null)
+        /// <param name="Style">The style configuration for the activity code.</param>
+        public CreateActivityCodeRequest(string Name = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, bool? CountsTowardShrinkage = null, bool? PlannedShrinkage = null, bool? Interruptible = null, List<SecondaryPresence> SecondaryPresences = null, List<string> PlanningGroupIds = null, ActivityCodeStyle Style = null)
         {
             this.Name = Name;
             this.Category = Category;
@@ -120,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Interruptible = Interruptible;
             this.SecondaryPresences = SecondaryPresences;
             this.PlanningGroupIds = PlanningGroupIds;
+            this.Style = Style;
             
         }
         
@@ -216,6 +218,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> PlanningGroupIds { get; set; }
 
 
+
+        /// <summary>
+        /// The style configuration for the activity code
+        /// </summary>
+        /// <value>The style configuration for the activity code</value>
+        [DataMember(Name="style", EmitDefaultValue=false)]
+        public ActivityCodeStyle Style { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -236,6 +247,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Interruptible: ").Append(Interruptible).Append("\n");
             sb.Append("  SecondaryPresences: ").Append(SecondaryPresences).Append("\n");
             sb.Append("  PlanningGroupIds: ").Append(PlanningGroupIds).Append("\n");
+            sb.Append("  Style: ").Append(Style).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -330,6 +342,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PlanningGroupIds == other.PlanningGroupIds ||
                     this.PlanningGroupIds != null &&
                     this.PlanningGroupIds.SequenceEqual(other.PlanningGroupIds)
+                ) &&
+                (
+                    this.Style == other.Style ||
+                    this.Style != null &&
+                    this.Style.Equals(other.Style)
                 );
         }
 
@@ -376,6 +393,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PlanningGroupIds != null)
                     hash = hash * 59 + this.PlanningGroupIds.GetHashCode();
+
+                if (this.Style != null)
+                    hash = hash * 59 + this.Style.GetHashCode();
 
                 return hash;
             }

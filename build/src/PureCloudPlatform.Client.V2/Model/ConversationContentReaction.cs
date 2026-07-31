@@ -115,7 +115,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Rating for "Rating"
             /// </summary>
             [EnumMember(Value = "Rating")]
-            Rating
+            Rating,
+            
+            /// <summary>
+            /// Enum Repost for "Repost"
+            /// </summary>
+            [EnumMember(Value = "Repost")]
+            Repost,
+            
+            /// <summary>
+            /// Enum Save for "Save"
+            /// </summary>
+            [EnumMember(Value = "Save")]
+            Save
         }
         /// <summary>
         /// Type of reaction.

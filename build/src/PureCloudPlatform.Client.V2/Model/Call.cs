@@ -430,8 +430,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
         /// <param name="TransferSource">Indicates how call reaches the agent..</param>
         /// <param name="QueueMediaSettings">Represents the queue settings for this media type..</param>
+        /// <param name="ClientIpAddress">The reported client IP of the phone for the call..</param>
         /// <param name="Disposition">Call resolution data for Dialer bulk make calls commands..</param>
-        public Call(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, RecordersState RecordersState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, string RecordingId = null, List<Segment> Segments = null, ErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, string TransferSource = null, ConversationQueueMediaSettings QueueMediaSettings = null, Disposition Disposition = null)
+        public Call(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, RecordersState RecordersState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, string RecordingId = null, List<Segment> Segments = null, ErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, string TransferSource = null, ConversationQueueMediaSettings QueueMediaSettings = null, string ClientIpAddress = null, Disposition Disposition = null)
         {
             this.State = State;
             this.InitialState = InitialState;
@@ -467,6 +468,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AgentAssistantId = AgentAssistantId;
             this.TransferSource = TransferSource;
             this.QueueMediaSettings = QueueMediaSettings;
+            this.ClientIpAddress = ClientIpAddress;
             this.Disposition = Disposition;
             
         }
@@ -744,6 +746,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The reported client IP of the phone for the call.
+        /// </summary>
+        /// <value>The reported client IP of the phone for the call.</value>
+        [DataMember(Name="clientIpAddress", EmitDefaultValue=false)]
+        public string ClientIpAddress { get; set; }
+
+
+
+        /// <summary>
         /// Call resolution data for Dialer bulk make calls commands.
         /// </summary>
         /// <value>Call resolution data for Dialer bulk make calls commands.</value>
@@ -794,6 +805,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
             sb.Append("  TransferSource: ").Append(TransferSource).Append("\n");
             sb.Append("  QueueMediaSettings: ").Append(QueueMediaSettings).Append("\n");
+            sb.Append("  ClientIpAddress: ").Append(ClientIpAddress).Append("\n");
             sb.Append("  Disposition: ").Append(Disposition).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -1006,6 +1018,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueueMediaSettings.Equals(other.QueueMediaSettings)
                 ) &&
                 (
+                    this.ClientIpAddress == other.ClientIpAddress ||
+                    this.ClientIpAddress != null &&
+                    this.ClientIpAddress.Equals(other.ClientIpAddress)
+                ) &&
+                (
                     this.Disposition == other.Disposition ||
                     this.Disposition != null &&
                     this.Disposition.Equals(other.Disposition)
@@ -1124,6 +1141,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QueueMediaSettings != null)
                     hash = hash * 59 + this.QueueMediaSettings.GetHashCode();
+
+                if (this.ClientIpAddress != null)
+                    hash = hash * 59 + this.ClientIpAddress.GetHashCode();
 
                 if (this.Disposition != null)
                     hash = hash * 59 + this.Disposition.GetHashCode();

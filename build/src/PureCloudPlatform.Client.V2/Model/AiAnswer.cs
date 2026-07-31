@@ -69,11 +69,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AnswerId">The unique identifier of the suggested AI answer..</param>
         /// <param name="Explanation">An explanation providing the reasoning behind the suggested answer..</param>
         /// <param name="FailureType">Describes the type of error associated with the AI answer..</param>
-        public AiAnswer(string AnswerId = null, string Explanation = null, FailureTypeEnum? FailureType = null)
+        /// <param name="MarkedNotApplicable">Indicates whether the AI answer is marked as not applicable..</param>
+        public AiAnswer(string AnswerId = null, string Explanation = null, FailureTypeEnum? FailureType = null, bool? MarkedNotApplicable = null)
         {
             this.AnswerId = AnswerId;
             this.Explanation = Explanation;
             this.FailureType = FailureType;
+            this.MarkedNotApplicable = MarkedNotApplicable;
             
         }
         
@@ -98,6 +100,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Indicates whether the AI answer is marked as not applicable.
+        /// </summary>
+        /// <value>Indicates whether the AI answer is marked as not applicable.</value>
+        [DataMember(Name="markedNotApplicable", EmitDefaultValue=false)]
+        public bool? MarkedNotApplicable { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AnswerId: ").Append(AnswerId).Append("\n");
             sb.Append("  Explanation: ").Append(Explanation).Append("\n");
             sb.Append("  FailureType: ").Append(FailureType).Append("\n");
+            sb.Append("  MarkedNotApplicable: ").Append(MarkedNotApplicable).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -164,6 +176,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FailureType == other.FailureType ||
                     this.FailureType != null &&
                     this.FailureType.Equals(other.FailureType)
+                ) &&
+                (
+                    this.MarkedNotApplicable == other.MarkedNotApplicable ||
+                    this.MarkedNotApplicable != null &&
+                    this.MarkedNotApplicable.Equals(other.MarkedNotApplicable)
                 );
         }
 
@@ -186,6 +203,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FailureType != null)
                     hash = hash * 59 + this.FailureType.GetHashCode();
+
+                if (this.MarkedNotApplicable != null)
+                    hash = hash * 59 + this.MarkedNotApplicable.GetHashCode();
 
                 return hash;
             }

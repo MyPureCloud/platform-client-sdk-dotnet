@@ -46,6 +46,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Formidreleased,
             
             /// <summary>
+            /// Enum Agentid for "agentId"
+            /// </summary>
+            [EnumMember(Value = "agentId")]
+            Agentid,
+            
+            /// <summary>
+            /// Enum Evaluatorid for "evaluatorId"
+            /// </summary>
+            [EnumMember(Value = "evaluatorId")]
+            Evaluatorid,
+            
+            /// <summary>
             /// Enum Contextid for "contextId"
             /// </summary>
             [EnumMember(Value = "contextId")]

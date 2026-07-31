@@ -67,9 +67,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="RoutingSkill" /> class.
         /// </summary>
         /// <param name="Name">The name of the skill. (required).</param>
-        public RoutingSkill(string Name = null)
+        /// <param name="Division">The id of the division this skill belongs to..</param>
+        public RoutingSkill(string Name = null, Division Division = null)
         {
             this.Name = Name;
+            this.Division = Division;
             
         }
         
@@ -90,6 +92,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the skill.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+
+
+        /// <summary>
+        /// The id of the division this skill belongs to.
+        /// </summary>
+        /// <value>The id of the division this skill belongs to.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public Division Division { get; set; }
 
 
 
@@ -132,6 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
@@ -187,6 +199,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
@@ -224,6 +241,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();

@@ -11,7 +11,7 @@
 | **Division** | [**Division**](Division) | The division to which this entity belongs. | [optional] |
 | **Type** | [**WorktypeReference**](WorktypeReference) | The Worktype of the Workitem. | [optional] |
 | **Description** | **string** | The description of the Workitem. | [optional] |
-| **Language** | [**LanguageReference**](LanguageReference) | The language of the Workitem. | [optional] |
+| **Language** | [**WorkitemLanguageReference**](WorkitemLanguageReference) | The language of the Workitem. | [optional] |
 | **UtilizationLabel** | [**WorkitemUtilizationLabelReference**](WorkitemUtilizationLabelReference) | The utilization label of the Workitem. | [optional] |
 | **Priority** | **int?** | The priority of the Workitem. The valid range is between -25,000,000 and 25,000,000. | [optional] |
 | **DateCreated** | **DateTime?** | The creation date of the Workitem. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -34,7 +34,7 @@
 | **AssignmentState** | **string** | The assignment state of the workitem. | [optional] |
 | **DateAssignmentStateChanged** | **DateTime?** | The assignment state change date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **AlertTimeoutSeconds** | **int?** | The duration in seconds before an alert will timeout. | [optional] |
-| **Skills** | [**List&lt;RoutingSkillReference&gt;**](RoutingSkillReference) | The skills of the Workitem. | [optional] |
+| **Skills** | [**List&lt;WorkitemRoutingSkillReference&gt;**](WorkitemRoutingSkillReference) | The skills of the Workitem. | [optional] |
 | **PreferredAgents** | [**List&lt;UserReference&gt;**](UserReference) | The preferred agents of the Workitem. | [optional] |
 | **AutoStatusTransition** | **bool?** | Set it to false to disable auto status transition. By default, it is enabled. | [optional] |
 | **Schema** | [**WorkitemSchema**](WorkitemSchema) | The schema defining the custom fields of the Workitem. The schema is inherited from the Workitems Worktype at creation time. | [optional] |
@@ -47,4 +47,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 268.0.0_
+_PureCloudPlatform.Client.V2 269.0.0_

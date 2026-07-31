@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="GrammarBased">The STT engine is intended to be used for Grammars.</param>
-        public SttEngineEntity(string Name = null, bool? GrammarBased = null)
+        /// <param name="ReplacedBy">If this STT engine has been deprecated, the STT engine that should be used as a replacement.</param>
+        public SttEngineEntity(string Name = null, bool? GrammarBased = null, AddressableEntityRef ReplacedBy = null)
         {
             this.Name = Name;
             this.GrammarBased = GrammarBased;
+            this.ReplacedBy = ReplacedBy;
             
         }
         
@@ -59,6 +61,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// If this STT engine has been deprecated, the STT engine that should be used as a replacement
+        /// </summary>
+        /// <value>If this STT engine has been deprecated, the STT engine that should be used as a replacement</value>
+        [DataMember(Name="replacedBy", EmitDefaultValue=false)]
+        public AddressableEntityRef ReplacedBy { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -78,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  GrammarBased: ").Append(GrammarBased).Append("\n");
+            sb.Append("  ReplacedBy: ").Append(ReplacedBy).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -135,6 +147,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.GrammarBased.Equals(other.GrammarBased)
                 ) &&
                 (
+                    this.ReplacedBy == other.ReplacedBy ||
+                    this.ReplacedBy != null &&
+                    this.ReplacedBy.Equals(other.ReplacedBy)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -160,6 +177,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.GrammarBased != null)
                     hash = hash * 59 + this.GrammarBased.GetHashCode();
+
+                if (this.ReplacedBy != null)
+                    hash = hash * 59 + this.ReplacedBy.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

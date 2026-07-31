@@ -106,9 +106,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PlannedShrinkage">Whether this activity code is considered planned or unplanned shrinkage.</param>
         /// <param name="Interruptible">Whether this activity code is considered interruptible.</param>
         /// <param name="PlanningGroupIds">The planning group IDs associated with this activity code.</param>
+        /// <param name="Style">The style configuration for the activity code.</param>
         /// <param name="Metadata">Version metadata for the associated business unit&#39;s list of activity codes (required).</param>
         /// <param name="SecondaryPresences">The secondary presences of this activity code.</param>
-        public UpdateActivityCodeRequest(string Name = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, bool? CountsTowardShrinkage = null, bool? PlannedShrinkage = null, bool? Interruptible = null, ListWrapperString PlanningGroupIds = null, WfmVersionedEntityMetadata Metadata = null, ListWrapperSecondaryPresence SecondaryPresences = null)
+        public UpdateActivityCodeRequest(string Name = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, bool? CountsTowardShrinkage = null, bool? PlannedShrinkage = null, bool? Interruptible = null, ListWrapperString PlanningGroupIds = null, ValueWrapperActivityCodeStyle Style = null, WfmVersionedEntityMetadata Metadata = null, ListWrapperSecondaryPresence SecondaryPresences = null)
         {
             this.Name = Name;
             this.Category = Category;
@@ -120,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PlannedShrinkage = PlannedShrinkage;
             this.Interruptible = Interruptible;
             this.PlanningGroupIds = PlanningGroupIds;
+            this.Style = Style;
             this.Metadata = Metadata;
             this.SecondaryPresences = SecondaryPresences;
             
@@ -211,6 +213,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The style configuration for the activity code
+        /// </summary>
+        /// <value>The style configuration for the activity code</value>
+        [DataMember(Name="style", EmitDefaultValue=false)]
+        public ValueWrapperActivityCodeStyle Style { get; set; }
+
+
+
+        /// <summary>
         /// Version metadata for the associated business unit&#39;s list of activity codes
         /// </summary>
         /// <value>Version metadata for the associated business unit&#39;s list of activity codes</value>
@@ -246,6 +257,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PlannedShrinkage: ").Append(PlannedShrinkage).Append("\n");
             sb.Append("  Interruptible: ").Append(Interruptible).Append("\n");
             sb.Append("  PlanningGroupIds: ").Append(PlanningGroupIds).Append("\n");
+            sb.Append("  Style: ").Append(Style).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  SecondaryPresences: ").Append(SecondaryPresences).Append("\n");
             sb.Append("}\n");
@@ -339,6 +351,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PlanningGroupIds.Equals(other.PlanningGroupIds)
                 ) &&
                 (
+                    this.Style == other.Style ||
+                    this.Style != null &&
+                    this.Style.Equals(other.Style)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -390,6 +407,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PlanningGroupIds != null)
                     hash = hash * 59 + this.PlanningGroupIds.GetHashCode();
+
+                if (this.Style != null)
+                    hash = hash * 59 + this.Style.GetHashCode();
 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

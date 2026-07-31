@@ -59,6 +59,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Profile images for the user
+        /// </summary>
+        /// <value>Profile images for the user</value>
+        [DataMember(Name="images", EmitDefaultValue=false)]
+        public List<Image> Images { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -78,6 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Presence: ").Append(Presence).Append("\n");
+            sb.Append("  Images: ").Append(Images).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -135,6 +145,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Presence.Equals(other.Presence)
                 ) &&
                 (
+                    this.Images == other.Images ||
+                    this.Images != null &&
+                    this.Images.SequenceEqual(other.Images)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -160,6 +175,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Presence != null)
                     hash = hash * 59 + this.Presence.GetHashCode();
+
+                if (this.Images != null)
+                    hash = hash * 59 + this.Images.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -1184,6 +1184,62 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EvaluationFormResponseEntityListing> GetQualityPublishedformsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
+        /// Get the most recent published version of an evaluation form across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="evaluationFormId">Evaluation Form ID</param>
+        /// <returns>EvaluationFormDivisionView</returns>
+        
+        EvaluationFormDivisionView GetQualityPublishedformsEvaluationsDivisionview (string evaluationFormId);
+
+        /// <summary>
+        /// Get the most recent published version of an evaluation form across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="evaluationFormId">Evaluation Form ID</param>
+        /// <returns>ApiResponse of EvaluationFormDivisionView</returns>
+        
+        ApiResponse<EvaluationFormDivisionView> GetQualityPublishedformsEvaluationsDivisionviewWithHttpInfo (string evaluationFormId);
+
+        /// <summary>
+        /// Get the published evaluation forms across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>EvaluationFormDivisionViewListing</returns>
+        
+        EvaluationFormDivisionViewListing GetQualityPublishedformsEvaluationsDivisionviews (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null);
+
+        /// <summary>
+        /// Get the published evaluation forms across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>ApiResponse of EvaluationFormDivisionViewListing</returns>
+        
+        ApiResponse<EvaluationFormDivisionViewListing> GetQualityPublishedformsEvaluationsDivisionviewsWithHttpInfo (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null);
+
+        /// <summary>
         /// Get the most recent published version of a survey form.
         /// </summary>
         /// <remarks>
@@ -1236,6 +1292,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of SurveyFormEntityListing</returns>
         
         ApiResponse<SurveyFormEntityListing> GetQualityPublishedformsSurveysWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null);
+
+        /// <summary>
+        /// Get the most recent published version of an enabled survey form across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyFormId">Survey Form ID</param>
+        /// <returns>SurveyFormDivisionView</returns>
+        
+        SurveyFormDivisionView GetQualityPublishedformsSurveysDivisionview (string surveyFormId);
+
+        /// <summary>
+        /// Get the most recent published version of an enabled survey form across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyFormId">Survey Form ID</param>
+        /// <returns>ApiResponse of SurveyFormDivisionView</returns>
+        
+        ApiResponse<SurveyFormDivisionView> GetQualityPublishedformsSurveysDivisionviewWithHttpInfo (string surveyFormId);
+
+        /// <summary>
+        /// Get the published and enabled survey forms across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>SurveyFormDivisionViewListing</returns>
+        
+        SurveyFormDivisionViewListing GetQualityPublishedformsSurveysDivisionviews (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null);
+
+        /// <summary>
+        /// Get the published and enabled survey forms across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>ApiResponse of SurveyFormDivisionViewListing</returns>
+        
+        ApiResponse<SurveyFormDivisionViewListing> GetQualityPublishedformsSurveysDivisionviewsWithHttpInfo (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null);
 
         /// <summary>
         /// Get a survey for a conversation
@@ -3164,6 +3276,62 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityPublishedformsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
+        /// Get the most recent published version of an evaluation form across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="evaluationFormId">Evaluation Form ID</param>
+        /// <returns>Task of EvaluationFormDivisionView</returns>
+        
+        System.Threading.Tasks.Task<EvaluationFormDivisionView> GetQualityPublishedformsEvaluationsDivisionviewAsync (string evaluationFormId);
+
+        /// <summary>
+        /// Get the most recent published version of an evaluation form across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="evaluationFormId">Evaluation Form ID</param>
+        /// <returns>Task of ApiResponse (EvaluationFormDivisionView)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormDivisionView>> GetQualityPublishedformsEvaluationsDivisionviewAsyncWithHttpInfo (string evaluationFormId);
+
+        /// <summary>
+        /// Get the published evaluation forms across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>Task of EvaluationFormDivisionViewListing</returns>
+        
+        System.Threading.Tasks.Task<EvaluationFormDivisionViewListing> GetQualityPublishedformsEvaluationsDivisionviewsAsync (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null);
+
+        /// <summary>
+        /// Get the published evaluation forms across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>Task of ApiResponse (EvaluationFormDivisionViewListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormDivisionViewListing>> GetQualityPublishedformsEvaluationsDivisionviewsAsyncWithHttpInfo (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null);
+
+        /// <summary>
         /// Get the most recent published version of a survey form.
         /// </summary>
         /// <remarks>
@@ -3216,6 +3384,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityPublishedformsSurveysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null);
+
+        /// <summary>
+        /// Get the most recent published version of an enabled survey form across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyFormId">Survey Form ID</param>
+        /// <returns>Task of SurveyFormDivisionView</returns>
+        
+        System.Threading.Tasks.Task<SurveyFormDivisionView> GetQualityPublishedformsSurveysDivisionviewAsync (string surveyFormId);
+
+        /// <summary>
+        /// Get the most recent published version of an enabled survey form across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyFormId">Survey Form ID</param>
+        /// <returns>Task of ApiResponse (SurveyFormDivisionView)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SurveyFormDivisionView>> GetQualityPublishedformsSurveysDivisionviewAsyncWithHttpInfo (string surveyFormId);
+
+        /// <summary>
+        /// Get the published and enabled survey forms across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>Task of SurveyFormDivisionViewListing</returns>
+        
+        System.Threading.Tasks.Task<SurveyFormDivisionViewListing> GetQualityPublishedformsSurveysDivisionviewsAsync (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null);
+
+        /// <summary>
+        /// Get the published and enabled survey forms across any division.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>Task of ApiResponse (SurveyFormDivisionViewListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SurveyFormDivisionViewListing>> GetQualityPublishedformsSurveysDivisionviewsAsyncWithHttpInfo (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null);
 
         /// <summary>
         /// Get a survey for a conversation
@@ -12855,6 +13079,440 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get the most recent published version of an evaluation form across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="evaluationFormId">Evaluation Form ID</param>
+        /// <returns>EvaluationFormDivisionView</returns>
+        
+        public EvaluationFormDivisionView GetQualityPublishedformsEvaluationsDivisionview (string evaluationFormId)
+        {
+             ApiResponse<EvaluationFormDivisionView> localVarResponse = GetQualityPublishedformsEvaluationsDivisionviewWithHttpInfo(evaluationFormId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the most recent published version of an evaluation form across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="evaluationFormId">Evaluation Form ID</param>
+        /// <returns>ApiResponse of EvaluationFormDivisionView</returns>
+        
+        public ApiResponse< EvaluationFormDivisionView > GetQualityPublishedformsEvaluationsDivisionviewWithHttpInfo (string evaluationFormId)
+        { 
+            // verify the required parameter 'evaluationFormId' is set
+            if (evaluationFormId == null)
+                throw new ApiException(400, "Missing required parameter 'evaluationFormId' when calling QualityApi->GetQualityPublishedformsEvaluationsDivisionview");
+
+            var localVarPath = "/api/v2/quality/publishedforms/evaluations/divisionviews/{evaluationFormId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (evaluationFormId != null) localVarPathParams.Add("evaluationFormId", this.Configuration.ApiClient.ParameterToString(evaluationFormId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsEvaluationsDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetQualityPublishedformsEvaluationsDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsEvaluationsDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationFormDivisionView>(localVarStatusCode,
+                localVarHeaders,
+                (EvaluationFormDivisionView) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormDivisionView)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the most recent published version of an evaluation form across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="evaluationFormId">Evaluation Form ID</param>
+        /// <returns>Task of EvaluationFormDivisionView</returns>
+        
+        public async System.Threading.Tasks.Task<EvaluationFormDivisionView> GetQualityPublishedformsEvaluationsDivisionviewAsync (string evaluationFormId)
+        {
+             ApiResponse<EvaluationFormDivisionView> localVarResponse = await GetQualityPublishedformsEvaluationsDivisionviewAsyncWithHttpInfo(evaluationFormId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the most recent published version of an evaluation form across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="evaluationFormId">Evaluation Form ID</param>
+        /// <returns>Task of ApiResponse (EvaluationFormDivisionView)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormDivisionView>> GetQualityPublishedformsEvaluationsDivisionviewAsyncWithHttpInfo (string evaluationFormId)
+        { 
+            // verify the required parameter 'evaluationFormId' is set
+            if (evaluationFormId == null)
+                throw new ApiException(400, "Missing required parameter 'evaluationFormId' when calling QualityApi->GetQualityPublishedformsEvaluationsDivisionview");
+            
+
+            var localVarPath = "/api/v2/quality/publishedforms/evaluations/divisionviews/{evaluationFormId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (evaluationFormId != null) localVarPathParams.Add("evaluationFormId", this.Configuration.ApiClient.ParameterToString(evaluationFormId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsEvaluationsDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetQualityPublishedformsEvaluationsDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsEvaluationsDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationFormDivisionView>(localVarStatusCode,
+                localVarHeaders,
+                (EvaluationFormDivisionView) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormDivisionView)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the published evaluation forms across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>EvaluationFormDivisionViewListing</returns>
+        
+        public EvaluationFormDivisionViewListing GetQualityPublishedformsEvaluationsDivisionviews (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null)
+        {
+             ApiResponse<EvaluationFormDivisionViewListing> localVarResponse = GetQualityPublishedformsEvaluationsDivisionviewsWithHttpInfo(id, pageSize, pageNumber, name, divisionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the published evaluation forms across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>ApiResponse of EvaluationFormDivisionViewListing</returns>
+        
+        public ApiResponse< EvaluationFormDivisionViewListing > GetQualityPublishedformsEvaluationsDivisionviewsWithHttpInfo (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null)
+        { 
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling QualityApi->GetQualityPublishedformsEvaluationsDivisionviews");
+
+            var localVarPath = "/api/v2/quality/publishedforms/evaluations/divisionviews";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsEvaluationsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetQualityPublishedformsEvaluationsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsEvaluationsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationFormDivisionViewListing>(localVarStatusCode,
+                localVarHeaders,
+                (EvaluationFormDivisionViewListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormDivisionViewListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the published evaluation forms across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>Task of EvaluationFormDivisionViewListing</returns>
+        
+        public async System.Threading.Tasks.Task<EvaluationFormDivisionViewListing> GetQualityPublishedformsEvaluationsDivisionviewsAsync (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null)
+        {
+             ApiResponse<EvaluationFormDivisionViewListing> localVarResponse = await GetQualityPublishedformsEvaluationsDivisionviewsAsyncWithHttpInfo(id, pageSize, pageNumber, name, divisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the published evaluation forms across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>Task of ApiResponse (EvaluationFormDivisionViewListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormDivisionViewListing>> GetQualityPublishedformsEvaluationsDivisionviewsAsyncWithHttpInfo (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null)
+        { 
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling QualityApi->GetQualityPublishedformsEvaluationsDivisionviews");
+            
+
+            var localVarPath = "/api/v2/quality/publishedforms/evaluations/divisionviews";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsEvaluationsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetQualityPublishedformsEvaluationsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsEvaluationsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationFormDivisionViewListing>(localVarStatusCode,
+                localVarHeaders,
+                (EvaluationFormDivisionViewListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormDivisionViewListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get the most recent published version of a survey form. 
         /// 
         /// </summary>
@@ -13269,6 +13927,440 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<SurveyFormEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (SurveyFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyFormEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the most recent published version of an enabled survey form across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyFormId">Survey Form ID</param>
+        /// <returns>SurveyFormDivisionView</returns>
+        
+        public SurveyFormDivisionView GetQualityPublishedformsSurveysDivisionview (string surveyFormId)
+        {
+             ApiResponse<SurveyFormDivisionView> localVarResponse = GetQualityPublishedformsSurveysDivisionviewWithHttpInfo(surveyFormId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the most recent published version of an enabled survey form across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyFormId">Survey Form ID</param>
+        /// <returns>ApiResponse of SurveyFormDivisionView</returns>
+        
+        public ApiResponse< SurveyFormDivisionView > GetQualityPublishedformsSurveysDivisionviewWithHttpInfo (string surveyFormId)
+        { 
+            // verify the required parameter 'surveyFormId' is set
+            if (surveyFormId == null)
+                throw new ApiException(400, "Missing required parameter 'surveyFormId' when calling QualityApi->GetQualityPublishedformsSurveysDivisionview");
+
+            var localVarPath = "/api/v2/quality/publishedforms/surveys/divisionviews/{surveyFormId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (surveyFormId != null) localVarPathParams.Add("surveyFormId", this.Configuration.ApiClient.ParameterToString(surveyFormId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsSurveysDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetQualityPublishedformsSurveysDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsSurveysDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SurveyFormDivisionView>(localVarStatusCode,
+                localVarHeaders,
+                (SurveyFormDivisionView) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyFormDivisionView)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the most recent published version of an enabled survey form across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyFormId">Survey Form ID</param>
+        /// <returns>Task of SurveyFormDivisionView</returns>
+        
+        public async System.Threading.Tasks.Task<SurveyFormDivisionView> GetQualityPublishedformsSurveysDivisionviewAsync (string surveyFormId)
+        {
+             ApiResponse<SurveyFormDivisionView> localVarResponse = await GetQualityPublishedformsSurveysDivisionviewAsyncWithHttpInfo(surveyFormId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the most recent published version of an enabled survey form across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="surveyFormId">Survey Form ID</param>
+        /// <returns>Task of ApiResponse (SurveyFormDivisionView)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SurveyFormDivisionView>> GetQualityPublishedformsSurveysDivisionviewAsyncWithHttpInfo (string surveyFormId)
+        { 
+            // verify the required parameter 'surveyFormId' is set
+            if (surveyFormId == null)
+                throw new ApiException(400, "Missing required parameter 'surveyFormId' when calling QualityApi->GetQualityPublishedformsSurveysDivisionview");
+            
+
+            var localVarPath = "/api/v2/quality/publishedforms/surveys/divisionviews/{surveyFormId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (surveyFormId != null) localVarPathParams.Add("surveyFormId", this.Configuration.ApiClient.ParameterToString(surveyFormId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsSurveysDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetQualityPublishedformsSurveysDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsSurveysDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SurveyFormDivisionView>(localVarStatusCode,
+                localVarHeaders,
+                (SurveyFormDivisionView) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyFormDivisionView)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the published and enabled survey forms across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>SurveyFormDivisionViewListing</returns>
+        
+        public SurveyFormDivisionViewListing GetQualityPublishedformsSurveysDivisionviews (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null)
+        {
+             ApiResponse<SurveyFormDivisionViewListing> localVarResponse = GetQualityPublishedformsSurveysDivisionviewsWithHttpInfo(id, pageSize, pageNumber, name, divisionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the published and enabled survey forms across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>ApiResponse of SurveyFormDivisionViewListing</returns>
+        
+        public ApiResponse< SurveyFormDivisionViewListing > GetQualityPublishedformsSurveysDivisionviewsWithHttpInfo (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null)
+        { 
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling QualityApi->GetQualityPublishedformsSurveysDivisionviews");
+
+            var localVarPath = "/api/v2/quality/publishedforms/surveys/divisionviews";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsSurveysDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetQualityPublishedformsSurveysDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsSurveysDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SurveyFormDivisionViewListing>(localVarStatusCode,
+                localVarHeaders,
+                (SurveyFormDivisionViewListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyFormDivisionViewListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the published and enabled survey forms across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>Task of SurveyFormDivisionViewListing</returns>
+        
+        public async System.Threading.Tasks.Task<SurveyFormDivisionViewListing> GetQualityPublishedformsSurveysDivisionviewsAsync (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null)
+        {
+             ApiResponse<SurveyFormDivisionViewListing> localVarResponse = await GetQualityPublishedformsSurveysDivisionviewsAsyncWithHttpInfo(id, pageSize, pageNumber, name, divisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the published and enabled survey forms across any division. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid, published evaluation form ids</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="divisionId">divisionId (optional)</param>
+        /// <returns>Task of ApiResponse (SurveyFormDivisionViewListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SurveyFormDivisionViewListing>> GetQualityPublishedformsSurveysDivisionviewsAsyncWithHttpInfo (List<string> id, int? pageSize = null, int? pageNumber = null, string name = null, string divisionId = null)
+        { 
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling QualityApi->GetQualityPublishedformsSurveysDivisionviews");
+            
+
+            var localVarPath = "/api/v2/quality/publishedforms/surveys/divisionviews";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (divisionId != null) localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(divisionId)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsSurveysDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetQualityPublishedformsSurveysDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsSurveysDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SurveyFormDivisionViewListing>(localVarStatusCode,
+                localVarHeaders,
+                (SurveyFormDivisionViewListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyFormDivisionViewListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
