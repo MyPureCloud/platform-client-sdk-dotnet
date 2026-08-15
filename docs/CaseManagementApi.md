@@ -30,8 +30,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetCasemanagementCaseplanVersionStageplans**](#GetCasemanagementCaseplanVersionStageplans) | **Get** /api/v2/casemanagement/caseplans/{caseplanId}/versions/{versionId}/stageplans | Get a list of Stageplans. |
 | [**GetCasemanagementCaseplans**](#GetCasemanagementCaseplans) | **Get** /api/v2/casemanagement/caseplans | Get a list of Caseplans. |
 | [**GetCasemanagementCasesExternalcontact**](#GetCasemanagementCasesExternalcontact) | **Get** /api/v2/casemanagement/cases/externalcontacts/{externalContactId} | Get a list of Cases for an External Contact. |
+| [**GetCasemanagementCasesQueryJob**](#GetCasemanagementCasesQueryJob) | **Get** /api/v2/casemanagement/cases/query/jobs/{jobId} | Get a case query job by id |
+| [**GetCasemanagementCasesQueryJobResults**](#GetCasemanagementCasesQueryJobResults) | **Get** /api/v2/casemanagement/cases/query/jobs/{jobId}/results | Get results for a case query job |
 | [**GetCasemanagementCasesReference**](#GetCasemanagementCasesReference) | **Get** /api/v2/casemanagement/cases/references/{referenceId} | Get a Case by reference. |
 | [**PatchCasemanagementCaseDatedue**](#PatchCasemanagementCaseDatedue) | **Patch** /api/v2/casemanagement/cases/{caseId}/datedue | Update the due date of a Case. |
+| [**PatchCasemanagementCaseOwner**](#PatchCasemanagementCaseOwner) | **Patch** /api/v2/casemanagement/cases/{caseId}/owner | Update the ownerId of a Case |
 | [**PatchCasemanagementCasePriority**](#PatchCasemanagementCasePriority) | **Patch** /api/v2/casemanagement/cases/{caseId}/priority | Update priority of a Case. |
 | [**PatchCasemanagementCaseSummary**](#PatchCasemanagementCaseSummary) | **Patch** /api/v2/casemanagement/cases/{caseId}/summary | Update summary of a Case. |
 | [**PatchCasemanagementCaseplan**](#PatchCasemanagementCaseplan) | **Patch** /api/v2/casemanagement/caseplans/{caseplanId} | Update the attributes of a Caseplan. |
@@ -47,6 +50,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostCasemanagementCaseplansQuery**](#PostCasemanagementCaseplansQuery) | **Post** /api/v2/casemanagement/caseplans/query | Query for Caseplans. |
 | [**PostCasemanagementCases**](#PostCasemanagementCases) | **Post** /api/v2/casemanagement/cases | Create a Case. |
 | [**PostCasemanagementCasesAssociationsQuery**](#PostCasemanagementCasesAssociationsQuery) | **Post** /api/v2/casemanagement/cases/associations/query | Query for Case associations by interaction. |
+| [**PostCasemanagementCasesQueryJobs**](#PostCasemanagementCasesQueryJobs) | **Post** /api/v2/casemanagement/cases/query/jobs | Create a Case query job. |
 | [**PutCasemanagementCaseplanDataschema**](#PutCasemanagementCaseplanDataschema) | **Put** /api/v2/casemanagement/caseplans/{caseplanId}/dataschemas/{schemaKeyName} | Update a data schema on a draft Caseplan. |
 | [**PutCasemanagementCaseplanIntakesettings**](#PutCasemanagementCaseplanIntakesettings) | **Put** /api/v2/casemanagement/caseplans/{caseplanId}/intakesettings | Update the intake settings for a Caseplan. |
 
@@ -1640,6 +1644,134 @@ namespace Example
 [**CaseListing**](CaseListing)
 
 
+## GetCasemanagementCasesQueryJob
+
+> [**CaseQueryJobResponse**](CaseQueryJobResponse) GetCasemanagementCasesQueryJob (string jobId)
+
+
+Get a case query job by id
+
+GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* caseManagement:queryJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetCasemanagementCasesQueryJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var jobId = jobId_example;  // string | Job ID
+
+            try
+            { 
+                // Get a case query job by id
+                CaseQueryJobResponse result = apiInstance.GetCasemanagementCasesQueryJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.GetCasemanagementCasesQueryJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| Job ID |  |
+
+### Return type
+
+[**CaseQueryJobResponse**](CaseQueryJobResponse)
+
+
+## GetCasemanagementCasesQueryJobResults
+
+> [**CaseQueryJobResultsResponse**](CaseQueryJobResultsResponse) GetCasemanagementCasesQueryJobResults (string jobId)
+
+
+Get results for a case query job
+
+GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* caseManagement:queryJobResults:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetCasemanagementCasesQueryJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var jobId = jobId_example;  // string | Job ID
+
+            try
+            { 
+                // Get results for a case query job
+                CaseQueryJobResultsResponse result = apiInstance.GetCasemanagementCasesQueryJobResults(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.GetCasemanagementCasesQueryJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| Job ID |  |
+
+### Return type
+
+[**CaseQueryJobResultsResponse**](CaseQueryJobResultsResponse)
+
+
 ## GetCasemanagementCasesReference
 
 > [**Case**](Case) GetCasemanagementCasesReference (string referenceId, List<string> expands = null)
@@ -1762,6 +1894,72 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **caseId** | **string**| Case identifier. |  |
 | **body** | [**CaseDateDueUpdate**](CaseDateDueUpdate)| Due date update. |  |
+
+### Return type
+
+[**Case**](Case)
+
+
+## PatchCasemanagementCaseOwner
+
+> [**Case**](Case) PatchCasemanagementCaseOwner (string caseId, CaseOwnerUpdate body)
+
+
+Update the ownerId of a Case
+
+PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* caseManagement:caseOwner:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchCasemanagementCaseOwnerExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseId = caseId_example;  // string | Case identifier.
+            var body = new CaseOwnerUpdate(); // CaseOwnerUpdate | OwnerId
+
+            try
+            { 
+                // Update the ownerId of a Case
+                Case result = apiInstance.PatchCasemanagementCaseOwner(caseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.PatchCasemanagementCaseOwner: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseId** | **string**| Case identifier. |  |
+| **body** | [**CaseOwnerUpdate**](CaseOwnerUpdate)| OwnerId |  |
 
 ### Return type
 
@@ -2722,6 +2920,70 @@ namespace Example
 [**CaseAssociationQueryEntityListing**](CaseAssociationQueryEntityListing)
 
 
+## PostCasemanagementCasesQueryJobs
+
+> [**CaseQueryJobResponse**](CaseQueryJobResponse) PostCasemanagementCasesQueryJobs (CaseQueryJobCreate body)
+
+
+Create a Case query job.
+
+PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* caseManagement:queryJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostCasemanagementCasesQueryJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var body = new CaseQueryJobCreate(); // CaseQueryJobCreate | Case query job create request.
+
+            try
+            { 
+                // Create a Case query job.
+                CaseQueryJobResponse result = apiInstance.PostCasemanagementCasesQueryJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.PostCasemanagementCasesQueryJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CaseQueryJobCreate**](CaseQueryJobCreate)| Case query job create request. |  |
+
+### Return type
+
+[**CaseQueryJobResponse**](CaseQueryJobResponse)
+
+
 ## PutCasemanagementCaseplanDataschema
 
 > [**CaseplanDataSchema**](CaseplanDataSchema) PutCasemanagementCaseplanDataschema (string caseplanId, string schemaKeyName, CaseplanDataSchemaRequest body)
@@ -2852,4 +3114,4 @@ namespace Example
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatform.Client.V2 269.0.0_
+_PureCloudPlatform.Client.V2 270.0.0_

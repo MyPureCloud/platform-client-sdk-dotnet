@@ -82,8 +82,6 @@ namespace Example
 
 Publish Predictive Routing Custom Kpi Attribution Batch Events
 
-PostEventsRoutingCustomkpiattributions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * routing:customKpiAttribution:inject
@@ -263,4 +261,4 @@ namespace Example
 [**BatchEventResponse**](BatchEventResponse)
 
 
-_PureCloudPlatform.Client.V2 269.0.0_
+_PureCloudPlatform.Client.V2 270.0.0_

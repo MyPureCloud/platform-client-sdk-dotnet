@@ -3761,7 +3761,7 @@ namespace Example
 
 ## PutRecordingsDeletionprotection
 
-> void PutRecordingsDeletionprotection (bool? protect = null, ConversationDeletionProtectionQuery body = null)
+> [**ManageDeleteProtectionResult**](ManageDeleteProtectionResult) PutRecordingsDeletionprotection (bool? protect = null, ConversationDeletionProtectionQuery body = null)
 
 
 Apply or revoke recording protection for conversations
@@ -3799,7 +3799,8 @@ namespace Example
             try
             { 
                 // Apply or revoke recording protection for conversations
-                apiInstance.PutRecordingsDeletionprotection(protect, body);
+                ManageDeleteProtectionResult result = apiInstance.PutRecordingsDeletionprotection(protect, body);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -3820,7 +3821,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**ManageDeleteProtectionResult**](ManageDeleteProtectionResult)
 
 
-_PureCloudPlatform.Client.V2 269.0.0_
+_PureCloudPlatform.Client.V2 270.0.0_

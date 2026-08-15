@@ -46,6 +46,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsTopicsDialects**](#GetSpeechandtextanalyticsTopicsDialects) | **Get** /api/v2/speechandtextanalytics/topics/dialects | Get list of supported Speech &amp; Text Analytics topics dialects |
 | [**GetSpeechandtextanalyticsTopicsGeneral**](#GetSpeechandtextanalyticsTopicsGeneral) | **Get** /api/v2/speechandtextanalytics/topics/general | Get the Speech &amp; Text Analytics general topics for a given dialect |
 | [**GetSpeechandtextanalyticsTopicsGeneralStatus**](#GetSpeechandtextanalyticsTopicsGeneralStatus) | **Get** /api/v2/speechandtextanalytics/topics/general/status | Get the list of general topics from the org and the system with their current status |
+| [**GetSpeechandtextanalyticsTopicsGeneratedphrasesJob**](#GetSpeechandtextanalyticsTopicsGeneratedphrasesJob) | **Get** /api/v2/speechandtextanalytics/topics/generatedphrases/jobs/{jobId} | Get a Speech &amp; Text Analytics GenAI phrases job by id |
 | [**GetSpeechandtextanalyticsTopicsPublishjob**](#GetSpeechandtextanalyticsTopicsPublishjob) | **Get** /api/v2/speechandtextanalytics/topics/publishjobs/{jobId} | Get a Speech &amp; Text Analytics publish topics job by id |
 | [**GetSpeechandtextanalyticsTopicsTestphraseJob**](#GetSpeechandtextanalyticsTopicsTestphraseJob) | **Get** /api/v2/speechandtextanalytics/topics/testphrase/jobs/{jobId} | Get a Speech &amp; Text Analytics test topics phrase job by id |
 | [**GetSpeechandtextanalyticsTranslationsLanguageConversation**](#GetSpeechandtextanalyticsTranslationsLanguageConversation) | **Get** /api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId} | Translate a single interaction recording (or an email conversation) |
@@ -59,8 +60,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostSpeechandtextanalyticsReprocessingJobs**](#PostSpeechandtextanalyticsReprocessingJobs) | **Post** /api/v2/speechandtextanalytics/reprocessing/jobs | Create a Speech &amp; Text Analytics reprocess job. |
 | [**PostSpeechandtextanalyticsSentimentfeedback**](#PostSpeechandtextanalyticsSentimentfeedback) | **Post** /api/v2/speechandtextanalytics/sentimentfeedback | Create a Speech &amp; Text Analytics SentimentFeedback |
 | [**PostSpeechandtextanalyticsTopics**](#PostSpeechandtextanalyticsTopics) | **Post** /api/v2/speechandtextanalytics/topics | Create new Speech &amp; Text Analytics topic |
+| [**PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs**](#PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs) | **Post** /api/v2/speechandtextanalytics/topics/generatedphrases/jobs | Create new Speech &amp; Text Analytics GenAI topic phrases generation job |
 | [**PostSpeechandtextanalyticsTopicsPublishjobs**](#PostSpeechandtextanalyticsTopicsPublishjobs) | **Post** /api/v2/speechandtextanalytics/topics/publishjobs | Create new Speech &amp; Text Analytics publish topics job |
-| [**PostSpeechandtextanalyticsTopicsTestphraseJobs**](#PostSpeechandtextanalyticsTopicsTestphraseJobs) | **Post** /api/v2/speechandtextanalytics/topics/testphrase/jobs | Create new Speech &amp; Text Analytics publish topics job |
+| [**PostSpeechandtextanalyticsTopicsTestphraseJobs**](#PostSpeechandtextanalyticsTopicsTestphraseJobs) | **Post** /api/v2/speechandtextanalytics/topics/testphrase/jobs | Create new Speech &amp; Text Analytics test topic phrase job |
 | [**PostSpeechandtextanalyticsTranscriptsSearch**](#PostSpeechandtextanalyticsTranscriptsSearch) | **Post** /api/v2/speechandtextanalytics/transcripts/search | Search resources. |
 | [**PutSpeechandtextanalyticsCategory**](#PutSpeechandtextanalyticsCategory) | **Put** /api/v2/speechandtextanalytics/categories/{categoryId} | Update a Speech &amp; Text Analytics category by ID |
 | [**PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](#PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | **Put** /api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId} | Update existing Speech &amp; Text Analytics dictionary feedback by id |
@@ -2603,6 +2605,68 @@ namespace Example
 [**UnifiedGeneralTopicEntityListing**](UnifiedGeneralTopicEntityListing)
 
 
+## GetSpeechandtextanalyticsTopicsGeneratedphrasesJob
+
+> [**GenAIPhrasesJob**](GenAIPhrasesJob) GetSpeechandtextanalyticsTopicsGeneratedphrasesJob (string jobId)
+
+
+Get a Speech & Text Analytics GenAI phrases job by id
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:topic:addAIPhrases
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsTopicsGeneratedphrasesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var jobId = jobId_example;  // string | the id of the GenAI phrases job
+
+            try
+            { 
+                // Get a Speech & Text Analytics GenAI phrases job by id
+                GenAIPhrasesJob result = apiInstance.GetSpeechandtextanalyticsTopicsGeneratedphrasesJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsTopicsGeneratedphrasesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| the id of the GenAI phrases job |  |
+
+### Return type
+
+[**GenAIPhrasesJob**](GenAIPhrasesJob)
+
+
 ## GetSpeechandtextanalyticsTopicsPublishjob
 
 > [**TopicJob**](TopicJob) GetSpeechandtextanalyticsTopicsPublishjob (string jobId)
@@ -3415,6 +3479,68 @@ namespace Example
 [**Topic**](Topic)
 
 
+## PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs
+
+> [**GenAIPhrasesJobs**](GenAIPhrasesJobs) PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs (GenAIPhrasesJobRequest body)
+
+
+Create new Speech & Text Analytics GenAI topic phrases generation job
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:topic:addAIPhrases
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostSpeechandtextanalyticsTopicsGeneratedphrasesJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var body = new GenAIPhrasesJobRequest(); // GenAIPhrasesJobRequest | The GenAI topic phrases generation job to create
+
+            try
+            { 
+                // Create new Speech & Text Analytics GenAI topic phrases generation job
+                GenAIPhrasesJobs result = apiInstance.PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**GenAIPhrasesJobRequest**](GenAIPhrasesJobRequest)| The GenAI topic phrases generation job to create |  |
+
+### Return type
+
+[**GenAIPhrasesJobs**](GenAIPhrasesJobs)
+
+
 ## PostSpeechandtextanalyticsTopicsPublishjobs
 
 > [**TopicJob**](TopicJob) PostSpeechandtextanalyticsTopicsPublishjobs (TopicJobRequest body)
@@ -3482,7 +3608,7 @@ namespace Example
 > [**TestTopicPhraseJobs**](TestTopicPhraseJobs) PostSpeechandtextanalyticsTopicsTestphraseJobs (TestTopicPhraseJobRequest body)
 
 
-Create new Speech & Text Analytics publish topics job
+Create new Speech & Text Analytics test topic phrase job
 
 Requires ALL permissions: 
 
@@ -3514,7 +3640,7 @@ namespace Example
 
             try
             { 
-                // Create new Speech & Text Analytics publish topics job
+                // Create new Speech & Text Analytics test topic phrase job
                 TestTopicPhraseJobs result = apiInstance.PostSpeechandtextanalyticsTopicsTestphraseJobs(body);
                 Debug.WriteLine(result);
             }
@@ -4114,4 +4240,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 269.0.0_
+_PureCloudPlatform.Client.V2 270.0.0_

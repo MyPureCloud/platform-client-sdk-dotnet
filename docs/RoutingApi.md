@@ -677,8 +677,6 @@ void (empty response body)
 
 Delete a custom Key Performance Indicator.
 
-DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * routing:keyPerformanceIndicator:delete
@@ -3644,8 +3642,6 @@ namespace Example
 
 Retrieve a single Key Performance Indicator.
 
-GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * routing:keyPerformanceIndicator:view
@@ -3773,8 +3769,6 @@ namespace Example
 
 
 Get a list of Key Performance Indicators Types available.
-
-GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -7302,8 +7296,6 @@ namespace Example
 
 Update a custom Key Performance Indicator.
 
-PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * routing:keyPerformanceIndicator:edit
@@ -9296,8 +9288,6 @@ namespace Example
 
 
 Create a custom Key Performance Indicator.
-
-PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -11457,4 +11447,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 269.0.0_
+_PureCloudPlatform.Client.V2 270.0.0_

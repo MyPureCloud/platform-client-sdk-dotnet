@@ -8,6 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Assessment** | [**LearningAssessment**](LearningAssessment) | The assessment associated with this assignment | [optional] |
+| **DateCompleted** | **DateTime?** | The date the assignment was completed. If not yet completed, this will be null. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreatedBy** | [**UserReference**](UserReference) | The user who created the assignment | [optional] |
 | **DateCreated** | **DateTime?** | The date when the assignment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ModifiedBy** | [**UserReference**](UserReference) | The user who modified the assignment | [optional] |
@@ -34,4 +35,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 269.0.0_
+_PureCloudPlatform.Client.V2 270.0.0_

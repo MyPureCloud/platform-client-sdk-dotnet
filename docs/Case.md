@@ -26,8 +26,9 @@
 | **CustomerIntent** | [**CustomerIntentReference**](CustomerIntentReference) | The customer intent for the Case. | [optional] |
 | **CreationStatus** | **string** | The creation status of the Case. | [optional] |
 | **TtlSeconds** | **int?** | The time-to-live in seconds for the lifetime of the Case. | [optional] |
+| **FailureReason** | [**FailureReason**](FailureReason) | The reason the Case failed, if applicable. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 269.0.0_
+_PureCloudPlatform.Client.V2 270.0.0_

@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Granularity** | **string** | Granularity choice for time off limit. If not specified, &#39;Daily&#39; is assumed | [optional] |
-| **DefaultLimitMinutes** | **int?** | The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available | [optional] |
+| **Granularity** | **string** | Deprecated. Granularity choice for time off limit. If not specified, &#39;Daily&#39; is assumed | [optional] |
+| **DefaultLimitMinutes** | **int?** | Deprecated. The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 269.0.0_
+_PureCloudPlatform.Client.V2 270.0.0_
