@@ -1042,6 +1042,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UnifiedGeneralTopicEntityListing> GetSpeechandtextanalyticsTopicsGeneralStatusWithHttpInfo (string dialect = null);
 
         /// <summary>
+        /// Get a Speech &amp; Text Analytics GenAI phrases job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the GenAI phrases job</param>
+        /// <returns>GenAIPhrasesJob</returns>
+        
+        GenAIPhrasesJob GetSpeechandtextanalyticsTopicsGeneratedphrasesJob (string jobId);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics GenAI phrases job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the GenAI phrases job</param>
+        /// <returns>ApiResponse of GenAIPhrasesJob</returns>
+        
+        ApiResponse<GenAIPhrasesJob> GetSpeechandtextanalyticsTopicsGeneratedphrasesJobWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Get a Speech &amp; Text Analytics publish topics job by id
         /// </summary>
         /// <remarks>
@@ -1360,6 +1384,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Topic> PostSpeechandtextanalyticsTopicsWithHttpInfo (TopicRequest body);
 
         /// <summary>
+        /// Create new Speech &amp; Text Analytics GenAI topic phrases generation job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The GenAI topic phrases generation job to create</param>
+        /// <returns>GenAIPhrasesJobs</returns>
+        
+        GenAIPhrasesJobs PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs (GenAIPhrasesJobRequest body);
+
+        /// <summary>
+        /// Create new Speech &amp; Text Analytics GenAI topic phrases generation job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The GenAI topic phrases generation job to create</param>
+        /// <returns>ApiResponse of GenAIPhrasesJobs</returns>
+        
+        ApiResponse<GenAIPhrasesJobs> PostSpeechandtextanalyticsTopicsGeneratedphrasesJobsWithHttpInfo (GenAIPhrasesJobRequest body);
+
+        /// <summary>
         /// Create new Speech &amp; Text Analytics publish topics job
         /// </summary>
         /// <remarks>
@@ -1384,7 +1432,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TopicJob> PostSpeechandtextanalyticsTopicsPublishjobsWithHttpInfo (TopicJobRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job
+        /// Create new Speech &amp; Text Analytics test topic phrase job
         /// </summary>
         /// <remarks>
         /// 
@@ -1396,7 +1444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         TestTopicPhraseJobs PostSpeechandtextanalyticsTopicsTestphraseJobs (TestTopicPhraseJobRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job
+        /// Create new Speech &amp; Text Analytics test topic phrase job
         /// </summary>
         /// <remarks>
         /// 
@@ -2668,6 +2716,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UnifiedGeneralTopicEntityListing>> GetSpeechandtextanalyticsTopicsGeneralStatusAsyncWithHttpInfo (string dialect = null);
 
         /// <summary>
+        /// Get a Speech &amp; Text Analytics GenAI phrases job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the GenAI phrases job</param>
+        /// <returns>Task of GenAIPhrasesJob</returns>
+        
+        System.Threading.Tasks.Task<GenAIPhrasesJob> GetSpeechandtextanalyticsTopicsGeneratedphrasesJobAsync (string jobId);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics GenAI phrases job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the GenAI phrases job</param>
+        /// <returns>Task of ApiResponse (GenAIPhrasesJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GenAIPhrasesJob>> GetSpeechandtextanalyticsTopicsGeneratedphrasesJobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Get a Speech &amp; Text Analytics publish topics job by id
         /// </summary>
         /// <remarks>
@@ -2986,6 +3058,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Topic>> PostSpeechandtextanalyticsTopicsAsyncWithHttpInfo (TopicRequest body);
 
         /// <summary>
+        /// Create new Speech &amp; Text Analytics GenAI topic phrases generation job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The GenAI topic phrases generation job to create</param>
+        /// <returns>Task of GenAIPhrasesJobs</returns>
+        
+        System.Threading.Tasks.Task<GenAIPhrasesJobs> PostSpeechandtextanalyticsTopicsGeneratedphrasesJobsAsync (GenAIPhrasesJobRequest body);
+
+        /// <summary>
+        /// Create new Speech &amp; Text Analytics GenAI topic phrases generation job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The GenAI topic phrases generation job to create</param>
+        /// <returns>Task of ApiResponse (GenAIPhrasesJobs)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GenAIPhrasesJobs>> PostSpeechandtextanalyticsTopicsGeneratedphrasesJobsAsyncWithHttpInfo (GenAIPhrasesJobRequest body);
+
+        /// <summary>
         /// Create new Speech &amp; Text Analytics publish topics job
         /// </summary>
         /// <remarks>
@@ -3010,7 +3106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TopicJob>> PostSpeechandtextanalyticsTopicsPublishjobsAsyncWithHttpInfo (TopicJobRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job
+        /// Create new Speech &amp; Text Analytics test topic phrase job
         /// </summary>
         /// <remarks>
         /// 
@@ -3022,7 +3118,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<TestTopicPhraseJobs> PostSpeechandtextanalyticsTopicsTestphraseJobsAsync (TestTopicPhraseJobRequest body);
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job
+        /// Create new Speech &amp; Text Analytics test topic phrase job
         /// </summary>
         /// <remarks>
         /// 
@@ -11636,6 +11732,211 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a Speech &amp; Text Analytics GenAI phrases job by id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the GenAI phrases job</param>
+        /// <returns>GenAIPhrasesJob</returns>
+        
+        public GenAIPhrasesJob GetSpeechandtextanalyticsTopicsGeneratedphrasesJob (string jobId)
+        {
+             ApiResponse<GenAIPhrasesJob> localVarResponse = GetSpeechandtextanalyticsTopicsGeneratedphrasesJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics GenAI phrases job by id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the GenAI phrases job</param>
+        /// <returns>ApiResponse of GenAIPhrasesJob</returns>
+        
+        public ApiResponse< GenAIPhrasesJob > GetSpeechandtextanalyticsTopicsGeneratedphrasesJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTopicsGeneratedphrasesJob");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/topics/generatedphrases/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTopicsGeneratedphrasesJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetSpeechandtextanalyticsTopicsGeneratedphrasesJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTopicsGeneratedphrasesJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GenAIPhrasesJob>(localVarStatusCode,
+                localVarHeaders,
+                (GenAIPhrasesJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenAIPhrasesJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics GenAI phrases job by id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the GenAI phrases job</param>
+        /// <returns>Task of GenAIPhrasesJob</returns>
+        
+        public async System.Threading.Tasks.Task<GenAIPhrasesJob> GetSpeechandtextanalyticsTopicsGeneratedphrasesJobAsync (string jobId)
+        {
+             ApiResponse<GenAIPhrasesJob> localVarResponse = await GetSpeechandtextanalyticsTopicsGeneratedphrasesJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics GenAI phrases job by id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">the id of the GenAI phrases job</param>
+        /// <returns>Task of ApiResponse (GenAIPhrasesJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GenAIPhrasesJob>> GetSpeechandtextanalyticsTopicsGeneratedphrasesJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTopicsGeneratedphrasesJob");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/topics/generatedphrases/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTopicsGeneratedphrasesJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetSpeechandtextanalyticsTopicsGeneratedphrasesJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsTopicsGeneratedphrasesJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GenAIPhrasesJob>(localVarStatusCode,
+                localVarHeaders,
+                (GenAIPhrasesJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenAIPhrasesJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a Speech &amp; Text Analytics publish topics job by id 
         /// 
         /// </summary>
@@ -14407,6 +14708,221 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create new Speech &amp; Text Analytics GenAI topic phrases generation job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The GenAI topic phrases generation job to create</param>
+        /// <returns>GenAIPhrasesJobs</returns>
+        
+        public GenAIPhrasesJobs PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs (GenAIPhrasesJobRequest body)
+        {
+             ApiResponse<GenAIPhrasesJobs> localVarResponse = PostSpeechandtextanalyticsTopicsGeneratedphrasesJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create new Speech &amp; Text Analytics GenAI topic phrases generation job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The GenAI topic phrases generation job to create</param>
+        /// <returns>ApiResponse of GenAIPhrasesJobs</returns>
+        
+        public ApiResponse< GenAIPhrasesJobs > PostSpeechandtextanalyticsTopicsGeneratedphrasesJobsWithHttpInfo (GenAIPhrasesJobRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/topics/generatedphrases/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GenAIPhrasesJobs>(localVarStatusCode,
+                localVarHeaders,
+                (GenAIPhrasesJobs) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenAIPhrasesJobs)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create new Speech &amp; Text Analytics GenAI topic phrases generation job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The GenAI topic phrases generation job to create</param>
+        /// <returns>Task of GenAIPhrasesJobs</returns>
+        
+        public async System.Threading.Tasks.Task<GenAIPhrasesJobs> PostSpeechandtextanalyticsTopicsGeneratedphrasesJobsAsync (GenAIPhrasesJobRequest body)
+        {
+             ApiResponse<GenAIPhrasesJobs> localVarResponse = await PostSpeechandtextanalyticsTopicsGeneratedphrasesJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create new Speech &amp; Text Analytics GenAI topic phrases generation job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The GenAI topic phrases generation job to create</param>
+        /// <returns>Task of ApiResponse (GenAIPhrasesJobs)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GenAIPhrasesJobs>> PostSpeechandtextanalyticsTopicsGeneratedphrasesJobsAsyncWithHttpInfo (GenAIPhrasesJobRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/topics/generatedphrases/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSpeechandtextanalyticsTopicsGeneratedphrasesJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GenAIPhrasesJobs>(localVarStatusCode,
+                localVarHeaders,
+                (GenAIPhrasesJobs) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenAIPhrasesJobs)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create new Speech &amp; Text Analytics publish topics job 
         /// 
         /// </summary>
@@ -14622,7 +15138,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job 
+        /// Create new Speech &amp; Text Analytics test topic phrase job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14636,7 +15152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job 
+        /// Create new Speech &amp; Text Analytics test topic phrase job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14728,7 +15244,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job 
+        /// Create new Speech &amp; Text Analytics test topic phrase job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14743,7 +15259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create new Speech &amp; Text Analytics publish topics job 
+        /// Create new Speech &amp; Text Analytics test topic phrase job 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

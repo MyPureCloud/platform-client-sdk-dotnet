@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class CreateTimeOffPlanRequest :  IEquatable<CreateTimeOffPlanRequest>
     {
         /// <summary>
-        /// Auto approval rule for the time off plan.
+        /// Deprecated. Auto approval rule for the time off plan.
         /// </summary>
-        /// <value>Auto approval rule for the time off plan.</value>
+        /// <value>Deprecated. Auto approval rule for the time off plan.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum AutoApprovalRuleEnum
         {
@@ -64,9 +64,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Checklimitsandactivitycodes
         }
         /// <summary>
-        /// Auto approval rule for the time off plan.
+        /// Deprecated. Auto approval rule for the time off plan.
         /// </summary>
-        /// <value>Auto approval rule for the time off plan.</value>
+        /// <value>Deprecated. Auto approval rule for the time off plan.</value>
         [DataMember(Name="autoApprovalRule", EmitDefaultValue=false)]
         public AutoApprovalRuleEnum? AutoApprovalRule { get; set; }
 
@@ -78,13 +78,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateTimeOffPlanRequest" /> class.
         /// </summary>
-        /// <param name="Name">The name of this time off plan. (required).</param>
-        /// <param name="ActivityCodeIds">The set of activity code IDs to associate with this time off plan..</param>
-        /// <param name="TimeOffLimitIds">The set of time off limit IDs to associate with this time off plan..</param>
-        /// <param name="AutoApprovalRule">Auto approval rule for the time off plan. (required).</param>
-        /// <param name="DaysBeforeStartToExpireFromWaitlist">The number of days before the time off request start date for when the request will be expired from the waitlist..</param>
-        /// <param name="HrisTimeOffType">Time off type, if this time off plan is associated with the integration..</param>
-        /// <param name="Active">Whether this time off plan should be used by agents. (required).</param>
+        /// <param name="Name">Deprecated. The name of this time off plan. (required).</param>
+        /// <param name="ActivityCodeIds">Deprecated. The set of activity code IDs to associate with this time off plan..</param>
+        /// <param name="TimeOffLimitIds">Deprecated. The set of time off limit IDs to associate with this time off plan..</param>
+        /// <param name="AutoApprovalRule">Deprecated. Auto approval rule for the time off plan. (required).</param>
+        /// <param name="DaysBeforeStartToExpireFromWaitlist">Deprecated. The number of days before the time off request start date for when the request will be expired from the waitlist..</param>
+        /// <param name="HrisTimeOffType">Deprecated. Time off type, if this time off plan is associated with the integration..</param>
+        /// <param name="Active">Deprecated. Whether this time off plan should be used by agents. (required).</param>
         public CreateTimeOffPlanRequest(string Name = null, List<string> ActivityCodeIds = null, List<string> TimeOffLimitIds = null, AutoApprovalRuleEnum? AutoApprovalRule = null, int? DaysBeforeStartToExpireFromWaitlist = null, HrisTimeOffType HrisTimeOffType = null, bool? Active = null)
         {
             this.Name = Name;
@@ -100,27 +100,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The name of this time off plan.
+        /// Deprecated. The name of this time off plan.
         /// </summary>
-        /// <value>The name of this time off plan.</value>
+        /// <value>Deprecated. The name of this time off plan.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
 
 
         /// <summary>
-        /// The set of activity code IDs to associate with this time off plan.
+        /// Deprecated. The set of activity code IDs to associate with this time off plan.
         /// </summary>
-        /// <value>The set of activity code IDs to associate with this time off plan.</value>
+        /// <value>Deprecated. The set of activity code IDs to associate with this time off plan.</value>
         [DataMember(Name="activityCodeIds", EmitDefaultValue=false)]
         public List<string> ActivityCodeIds { get; set; }
 
 
 
         /// <summary>
-        /// The set of time off limit IDs to associate with this time off plan.
+        /// Deprecated. The set of time off limit IDs to associate with this time off plan.
         /// </summary>
-        /// <value>The set of time off limit IDs to associate with this time off plan.</value>
+        /// <value>Deprecated. The set of time off limit IDs to associate with this time off plan.</value>
         [DataMember(Name="timeOffLimitIds", EmitDefaultValue=false)]
         public List<string> TimeOffLimitIds { get; set; }
 
@@ -129,27 +129,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The number of days before the time off request start date for when the request will be expired from the waitlist.
+        /// Deprecated. The number of days before the time off request start date for when the request will be expired from the waitlist.
         /// </summary>
-        /// <value>The number of days before the time off request start date for when the request will be expired from the waitlist.</value>
+        /// <value>Deprecated. The number of days before the time off request start date for when the request will be expired from the waitlist.</value>
         [DataMember(Name="daysBeforeStartToExpireFromWaitlist", EmitDefaultValue=false)]
         public int? DaysBeforeStartToExpireFromWaitlist { get; set; }
 
 
 
         /// <summary>
-        /// Time off type, if this time off plan is associated with the integration.
+        /// Deprecated. Time off type, if this time off plan is associated with the integration.
         /// </summary>
-        /// <value>Time off type, if this time off plan is associated with the integration.</value>
+        /// <value>Deprecated. Time off type, if this time off plan is associated with the integration.</value>
         [DataMember(Name="hrisTimeOffType", EmitDefaultValue=false)]
         public HrisTimeOffType HrisTimeOffType { get; set; }
 
 
 
         /// <summary>
-        /// Whether this time off plan should be used by agents.
+        /// Deprecated. Whether this time off plan should be used by agents.
         /// </summary>
-        /// <value>Whether this time off plan should be used by agents.</value>
+        /// <value>Deprecated. Whether this time off plan should be used by agents.</value>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
 

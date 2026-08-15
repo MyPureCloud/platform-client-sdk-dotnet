@@ -120,6 +120,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The date the assignment was completed. If not yet completed, this will be null. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date the assignment was completed. If not yet completed, this will be null. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
+        public DateTime? DateCompleted { get; private set; }
+
+
+
+        /// <summary>
         /// The user who created the assignment
         /// </summary>
         /// <value>The user who created the assignment</value>
@@ -329,6 +338,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Assessment: ").Append(Assessment).Append("\n");
+            sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
@@ -401,6 +411,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Assessment == other.Assessment ||
                     this.Assessment != null &&
                     this.Assessment.Equals(other.Assessment)
+                ) &&
+                (
+                    this.DateCompleted == other.DateCompleted ||
+                    this.DateCompleted != null &&
+                    this.DateCompleted.Equals(other.DateCompleted)
                 ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
@@ -535,6 +550,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Assessment != null)
                     hash = hash * 59 + this.Assessment.GetHashCode();
+
+                if (this.DateCompleted != null)
+                    hash = hash * 59 + this.DateCompleted.GetHashCode();
 
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();

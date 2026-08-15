@@ -39,10 +39,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Usersrules,
             
             /// <summary>
-            /// Enum Adminnotice for "admin.notice"
+            /// Enum Voicetranscription for "voice.transcription"
             /// </summary>
-            [EnumMember(Value = "admin.notice")]
-            Adminnotice,
+            [EnumMember(Value = "voice.transcription")]
+            Voicetranscription,
             
             /// <summary>
             /// Enum Agentassistant for "agent.assistant"
@@ -393,6 +393,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Onboarding,
             
             /// <summary>
+            /// Enum Organizationnotice for "organization.notice"
+            /// </summary>
+            [EnumMember(Value = "organization.notice")]
+            Organizationnotice,
+            
+            /// <summary>
             /// Enum Outbound for "outbound"
             /// </summary>
             [EnumMember(Value = "outbound")]
@@ -523,12 +529,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "users")]
             Users,
-            
-            /// <summary>
-            /// Enum Voicetranscription for "voice.transcription"
-            /// </summary>
-            [EnumMember(Value = "voice.transcription")]
-            Voicetranscription,
             
             /// <summary>
             /// Enum Webdeployments for "web.deployments"

@@ -692,6 +692,58 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CaseListing> GetCasemanagementCasesExternalcontactWithHttpInfo (string externalContactId, string after = null, int? pageSize = null, string divisionIds = null, List<string> expands = null);
 
         /// <summary>
+        /// Get a case query job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>CaseQueryJobResponse</returns>
+        
+        CaseQueryJobResponse GetCasemanagementCasesQueryJob (string jobId);
+
+        /// <summary>
+        /// Get a case query job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>ApiResponse of CaseQueryJobResponse</returns>
+        
+        ApiResponse<CaseQueryJobResponse> GetCasemanagementCasesQueryJobWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Get results for a case query job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>CaseQueryJobResultsResponse</returns>
+        
+        CaseQueryJobResultsResponse GetCasemanagementCasesQueryJobResults (string jobId);
+
+        /// <summary>
+        /// Get results for a case query job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>ApiResponse of CaseQueryJobResultsResponse</returns>
+        
+        ApiResponse<CaseQueryJobResultsResponse> GetCasemanagementCasesQueryJobResultsWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Get a Case by reference.
         /// </summary>
         /// <remarks>
@@ -742,6 +794,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Case</returns>
         
         ApiResponse<Case> PatchCasemanagementCaseDatedueWithHttpInfo (string caseId, CaseDateDueUpdate body);
+
+        /// <summary>
+        /// Update the ownerId of a Case
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">OwnerId</param>
+        /// <returns>Case</returns>
+        
+        Case PatchCasemanagementCaseOwner (string caseId, CaseOwnerUpdate body);
+
+        /// <summary>
+        /// Update the ownerId of a Case
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">OwnerId</param>
+        /// <returns>ApiResponse of Case</returns>
+        
+        ApiResponse<Case> PatchCasemanagementCaseOwnerWithHttpInfo (string caseId, CaseOwnerUpdate body);
 
         /// <summary>
         /// Update priority of a Case.
@@ -1124,6 +1204,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of CaseAssociationQueryEntityListing</returns>
         
         ApiResponse<CaseAssociationQueryEntityListing> PostCasemanagementCasesAssociationsQueryWithHttpInfo (CaseAssociationQuery body);
+
+        /// <summary>
+        /// Create a Case query job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Case query job create request.</param>
+        /// <returns>CaseQueryJobResponse</returns>
+        
+        CaseQueryJobResponse PostCasemanagementCasesQueryJobs (CaseQueryJobCreate body);
+
+        /// <summary>
+        /// Create a Case query job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Case query job create request.</param>
+        /// <returns>ApiResponse of CaseQueryJobResponse</returns>
+        
+        ApiResponse<CaseQueryJobResponse> PostCasemanagementCasesQueryJobsWithHttpInfo (CaseQueryJobCreate body);
 
         /// <summary>
         /// Update a data schema on a draft Caseplan.
@@ -1860,6 +1966,58 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<CaseListing>> GetCasemanagementCasesExternalcontactAsyncWithHttpInfo (string externalContactId, string after = null, int? pageSize = null, string divisionIds = null, List<string> expands = null);
 
         /// <summary>
+        /// Get a case query job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of CaseQueryJobResponse</returns>
+        
+        System.Threading.Tasks.Task<CaseQueryJobResponse> GetCasemanagementCasesQueryJobAsync (string jobId);
+
+        /// <summary>
+        /// Get a case query job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of ApiResponse (CaseQueryJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CaseQueryJobResponse>> GetCasemanagementCasesQueryJobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Get results for a case query job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of CaseQueryJobResultsResponse</returns>
+        
+        System.Threading.Tasks.Task<CaseQueryJobResultsResponse> GetCasemanagementCasesQueryJobResultsAsync (string jobId);
+
+        /// <summary>
+        /// Get results for a case query job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of ApiResponse (CaseQueryJobResultsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CaseQueryJobResultsResponse>> GetCasemanagementCasesQueryJobResultsAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Get a Case by reference.
         /// </summary>
         /// <remarks>
@@ -1910,6 +2068,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Case)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCaseDatedueAsyncWithHttpInfo (string caseId, CaseDateDueUpdate body);
+
+        /// <summary>
+        /// Update the ownerId of a Case
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">OwnerId</param>
+        /// <returns>Task of Case</returns>
+        
+        System.Threading.Tasks.Task<Case> PatchCasemanagementCaseOwnerAsync (string caseId, CaseOwnerUpdate body);
+
+        /// <summary>
+        /// Update the ownerId of a Case
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">OwnerId</param>
+        /// <returns>Task of ApiResponse (Case)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCaseOwnerAsyncWithHttpInfo (string caseId, CaseOwnerUpdate body);
 
         /// <summary>
         /// Update priority of a Case.
@@ -2292,6 +2478,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (CaseAssociationQueryEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CaseAssociationQueryEntityListing>> PostCasemanagementCasesAssociationsQueryAsyncWithHttpInfo (CaseAssociationQuery body);
+
+        /// <summary>
+        /// Create a Case query job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Case query job create request.</param>
+        /// <returns>Task of CaseQueryJobResponse</returns>
+        
+        System.Threading.Tasks.Task<CaseQueryJobResponse> PostCasemanagementCasesQueryJobsAsync (CaseQueryJobCreate body);
+
+        /// <summary>
+        /// Create a Case query job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Case query job create request.</param>
+        /// <returns>Task of ApiResponse (CaseQueryJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CaseQueryJobResponse>> PostCasemanagementCasesQueryJobsAsyncWithHttpInfo (CaseQueryJobCreate body);
 
         /// <summary>
         /// Update a data schema on a draft Caseplan.
@@ -7793,6 +8005,424 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a case query job by id 
+        /// 
+        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>CaseQueryJobResponse</returns>
+        
+        public CaseQueryJobResponse GetCasemanagementCasesQueryJob (string jobId)
+        {
+             ApiResponse<CaseQueryJobResponse> localVarResponse = GetCasemanagementCasesQueryJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a case query job by id 
+        /// 
+        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>ApiResponse of CaseQueryJobResponse</returns>
+        
+        public ApiResponse< CaseQueryJobResponse > GetCasemanagementCasesQueryJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling CaseManagementApi->GetCasemanagementCasesQueryJob");
+
+            var localVarPath = "/api/v2/casemanagement/cases/query/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCasesQueryJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetCasemanagementCasesQueryJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCasesQueryJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CaseQueryJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CaseQueryJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseQueryJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a case query job by id 
+        /// 
+        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of CaseQueryJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<CaseQueryJobResponse> GetCasemanagementCasesQueryJobAsync (string jobId)
+        {
+             ApiResponse<CaseQueryJobResponse> localVarResponse = await GetCasemanagementCasesQueryJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a case query job by id 
+        /// 
+        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of ApiResponse (CaseQueryJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CaseQueryJobResponse>> GetCasemanagementCasesQueryJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling CaseManagementApi->GetCasemanagementCasesQueryJob");
+            
+
+            var localVarPath = "/api/v2/casemanagement/cases/query/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCasesQueryJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetCasemanagementCasesQueryJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCasesQueryJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CaseQueryJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CaseQueryJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseQueryJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get results for a case query job 
+        /// 
+        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>CaseQueryJobResultsResponse</returns>
+        
+        public CaseQueryJobResultsResponse GetCasemanagementCasesQueryJobResults (string jobId)
+        {
+             ApiResponse<CaseQueryJobResultsResponse> localVarResponse = GetCasemanagementCasesQueryJobResultsWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get results for a case query job 
+        /// 
+        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>ApiResponse of CaseQueryJobResultsResponse</returns>
+        
+        public ApiResponse< CaseQueryJobResultsResponse > GetCasemanagementCasesQueryJobResultsWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling CaseManagementApi->GetCasemanagementCasesQueryJobResults");
+
+            var localVarPath = "/api/v2/casemanagement/cases/query/jobs/{jobId}/results";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCasesQueryJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetCasemanagementCasesQueryJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCasesQueryJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CaseQueryJobResultsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CaseQueryJobResultsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseQueryJobResultsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get results for a case query job 
+        /// 
+        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of CaseQueryJobResultsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<CaseQueryJobResultsResponse> GetCasemanagementCasesQueryJobResultsAsync (string jobId)
+        {
+             ApiResponse<CaseQueryJobResultsResponse> localVarResponse = await GetCasemanagementCasesQueryJobResultsAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get results for a case query job 
+        /// 
+        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of ApiResponse (CaseQueryJobResultsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CaseQueryJobResultsResponse>> GetCasemanagementCasesQueryJobResultsAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling CaseManagementApi->GetCasemanagementCasesQueryJobResults");
+            
+
+            var localVarPath = "/api/v2/casemanagement/cases/query/jobs/{jobId}/results";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCasesQueryJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetCasemanagementCasesQueryJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCasemanagementCasesQueryJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CaseQueryJobResultsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CaseQueryJobResultsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseQueryJobResultsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a Case by reference. 
         /// 
         /// </summary>
@@ -8221,6 +8851,238 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchCasemanagementCaseDatedue: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseDatedue: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Case>(localVarStatusCode,
+                localVarHeaders,
+                (Case) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Case)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update the ownerId of a Case 
+        /// 
+        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">OwnerId</param>
+        /// <returns>Case</returns>
+        
+        public Case PatchCasemanagementCaseOwner (string caseId, CaseOwnerUpdate body)
+        {
+             ApiResponse<Case> localVarResponse = PatchCasemanagementCaseOwnerWithHttpInfo(caseId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the ownerId of a Case 
+        /// 
+        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">OwnerId</param>
+        /// <returns>ApiResponse of Case</returns>
+        
+        public ApiResponse< Case > PatchCasemanagementCaseOwnerWithHttpInfo (string caseId, CaseOwnerUpdate body)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->PatchCasemanagementCaseOwner");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PatchCasemanagementCaseOwner");
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/owner";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseOwner: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchCasemanagementCaseOwner: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseOwner: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Case>(localVarStatusCode,
+                localVarHeaders,
+                (Case) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Case)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update the ownerId of a Case 
+        /// 
+        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">OwnerId</param>
+        /// <returns>Task of Case</returns>
+        
+        public async System.Threading.Tasks.Task<Case> PatchCasemanagementCaseOwnerAsync (string caseId, CaseOwnerUpdate body)
+        {
+             ApiResponse<Case> localVarResponse = await PatchCasemanagementCaseOwnerAsyncWithHttpInfo(caseId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the ownerId of a Case 
+        /// 
+        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">OwnerId</param>
+        /// <returns>Task of ApiResponse (Case)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCaseOwnerAsyncWithHttpInfo (string caseId, CaseOwnerUpdate body)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->PatchCasemanagementCaseOwner");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PatchCasemanagementCaseOwner");
+            
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/owner";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseOwner: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchCasemanagementCaseOwner: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseOwner: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Case>(localVarStatusCode,
                 localVarHeaders,
@@ -11563,6 +12425,225 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CaseAssociationQueryEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (CaseAssociationQueryEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseAssociationQueryEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a Case query job. 
+        /// 
+        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Case query job create request.</param>
+        /// <returns>CaseQueryJobResponse</returns>
+        
+        public CaseQueryJobResponse PostCasemanagementCasesQueryJobs (CaseQueryJobCreate body)
+        {
+             ApiResponse<CaseQueryJobResponse> localVarResponse = PostCasemanagementCasesQueryJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a Case query job. 
+        /// 
+        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Case query job create request.</param>
+        /// <returns>ApiResponse of CaseQueryJobResponse</returns>
+        
+        public ApiResponse< CaseQueryJobResponse > PostCasemanagementCasesQueryJobsWithHttpInfo (CaseQueryJobCreate body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCasesQueryJobs");
+
+            var localVarPath = "/api/v2/casemanagement/cases/query/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCasesQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostCasemanagementCasesQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCasesQueryJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CaseQueryJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CaseQueryJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseQueryJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a Case query job. 
+        /// 
+        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Case query job create request.</param>
+        /// <returns>Task of CaseQueryJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<CaseQueryJobResponse> PostCasemanagementCasesQueryJobsAsync (CaseQueryJobCreate body)
+        {
+             ApiResponse<CaseQueryJobResponse> localVarResponse = await PostCasemanagementCasesQueryJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a Case query job. 
+        /// 
+        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Case query job create request.</param>
+        /// <returns>Task of ApiResponse (CaseQueryJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CaseQueryJobResponse>> PostCasemanagementCasesQueryJobsAsyncWithHttpInfo (CaseQueryJobCreate body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCasesQueryJobs");
+            
+
+            var localVarPath = "/api/v2/casemanagement/cases/query/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCasesQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostCasemanagementCasesQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCasesQueryJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CaseQueryJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CaseQueryJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseQueryJobResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

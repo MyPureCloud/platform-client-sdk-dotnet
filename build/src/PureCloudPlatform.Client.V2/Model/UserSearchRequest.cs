@@ -82,7 +82,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Eightbyeight for "EightByEight"
             /// </summary>
             [EnumMember(Value = "EightByEight")]
-            Eightbyeight
+            Eightbyeight,
+            
+            /// <summary>
+            /// Enum Ringcentral for "RingCentral"
+            /// </summary>
+            [EnumMember(Value = "RingCentral")]
+            Ringcentral
         }
         /// <summary>
         /// The sort order for results

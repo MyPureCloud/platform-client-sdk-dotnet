@@ -149,6 +149,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The division identifier of the external contact.
+        /// </summary>
+        /// <value>The division identifier of the external contact.</value>
+        [DataMember(Name="externalContactDivisionId", EmitDefaultValue=false)]
+        public string ExternalContactDivisionId { get; private set; }
+
+
+
+        /// <summary>
         /// List of recipient additional identifiers
         /// </summary>
         /// <value>List of recipient additional identifiers</value>
@@ -173,6 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
+            sb.Append("  ExternalContactDivisionId: ").Append(ExternalContactDivisionId).Append("\n");
             sb.Append("  AdditionalIds: ").Append(AdditionalIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -255,6 +265,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalContactId.Equals(other.ExternalContactId)
                 ) &&
                 (
+                    this.ExternalContactDivisionId == other.ExternalContactDivisionId ||
+                    this.ExternalContactDivisionId != null &&
+                    this.ExternalContactDivisionId.Equals(other.ExternalContactDivisionId)
+                ) &&
+                (
                     this.AdditionalIds == other.AdditionalIds ||
                     this.AdditionalIds != null &&
                     this.AdditionalIds.SequenceEqual(other.AdditionalIds)
@@ -295,6 +310,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
+
+                if (this.ExternalContactDivisionId != null)
+                    hash = hash * 59 + this.ExternalContactDivisionId.GetHashCode();
 
                 if (this.AdditionalIds != null)
                     hash = hash * 59 + this.AdditionalIds.GetHashCode();

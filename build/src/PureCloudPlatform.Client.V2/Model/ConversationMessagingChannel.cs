@@ -85,7 +85,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sms for "Sms"
             /// </summary>
             [EnumMember(Value = "Sms")]
-            Sms
+            Sms,
+            
+            /// <summary>
+            /// Enum Linkedin for "LinkedIn"
+            /// </summary>
+            [EnumMember(Value = "LinkedIn")]
+            Linkedin
         }
         /// <summary>
         /// Specifies if this message is part of a private or public conversation.

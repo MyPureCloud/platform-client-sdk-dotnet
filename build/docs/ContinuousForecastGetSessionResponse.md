@@ -9,9 +9,8 @@
 | **SessionId** | **string** | Latest session ID of the business unit | [optional] |
 | **LastSuccessfulSessionId** | **string** | Last successful session ID of the business unit | [optional] |
 | **State** | **string** | State of the latest session | [optional] |
-| **ForecastDataState** | **string** | State of the forecast data | [optional] |
 | **ErrorCode** | **string** | Failed session error code | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 269.0.0_
+_PureCloudPlatform.Client.V2 270.0.0_

@@ -1528,9 +1528,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
-        /// <returns></returns>
+        /// <returns>ManageDeleteProtectionResult</returns>
         
-        void PutRecordingsDeletionprotection (bool? protect = null, ConversationDeletionProtectionQuery body = null);
+        ManageDeleteProtectionResult PutRecordingsDeletionprotection (bool? protect = null, ConversationDeletionProtectionQuery body = null);
 
         /// <summary>
         /// Apply or revoke recording protection for conversations
@@ -1541,9 +1541,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ManageDeleteProtectionResult</returns>
         
-        ApiResponse<Object> PutRecordingsDeletionprotectionWithHttpInfo (bool? protect = null, ConversationDeletionProtectionQuery body = null);
+        ApiResponse<ManageDeleteProtectionResult> PutRecordingsDeletionprotectionWithHttpInfo (bool? protect = null, ConversationDeletionProtectionQuery body = null);
 
         #endregion Synchronous Operations
 
@@ -3062,9 +3062,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ManageDeleteProtectionResult</returns>
         
-        System.Threading.Tasks.Task PutRecordingsDeletionprotectionAsync (bool? protect = null, ConversationDeletionProtectionQuery body = null);
+        System.Threading.Tasks.Task<ManageDeleteProtectionResult> PutRecordingsDeletionprotectionAsync (bool? protect = null, ConversationDeletionProtectionQuery body = null);
 
         /// <summary>
         /// Apply or revoke recording protection for conversations
@@ -3075,9 +3075,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ManageDeleteProtectionResult)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutRecordingsDeletionprotectionAsyncWithHttpInfo (bool? protect = null, ConversationDeletionProtectionQuery body = null);
+        System.Threading.Tasks.Task<ApiResponse<ManageDeleteProtectionResult>> PutRecordingsDeletionprotectionAsyncWithHttpInfo (bool? protect = null, ConversationDeletionProtectionQuery body = null);
 
         #endregion Asynchronous Operations
 
@@ -15422,11 +15422,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
-        /// <returns></returns>
+        /// <returns>ManageDeleteProtectionResult</returns>
         
-        public void PutRecordingsDeletionprotection (bool? protect = null, ConversationDeletionProtectionQuery body = null)
+        public ManageDeleteProtectionResult PutRecordingsDeletionprotection (bool? protect = null, ConversationDeletionProtectionQuery body = null)
         {
-             PutRecordingsDeletionprotectionWithHttpInfo(protect, body);
+             ApiResponse<ManageDeleteProtectionResult> localVarResponse = PutRecordingsDeletionprotectionWithHttpInfo(protect, body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -15436,9 +15437,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of ManageDeleteProtectionResult</returns>
         
-        public ApiResponse<Object> PutRecordingsDeletionprotectionWithHttpInfo (bool? protect = null, ConversationDeletionProtectionQuery body = null)
+        public ApiResponse< ManageDeleteProtectionResult > PutRecordingsDeletionprotectionWithHttpInfo (bool? protect = null, ConversationDeletionProtectionQuery body = null)
         { 
 
             var localVarPath = "/api/v2/recordings/deletionprotection";
@@ -15512,9 +15513,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutRecordingsDeletionprotection: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ManageDeleteProtectionResult>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ManageDeleteProtectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManageDeleteProtectionResult)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15527,11 +15528,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of ManageDeleteProtectionResult</returns>
         
-        public async System.Threading.Tasks.Task PutRecordingsDeletionprotectionAsync (bool? protect = null, ConversationDeletionProtectionQuery body = null)
+        public async System.Threading.Tasks.Task<ManageDeleteProtectionResult> PutRecordingsDeletionprotectionAsync (bool? protect = null, ConversationDeletionProtectionQuery body = null)
         {
-             await PutRecordingsDeletionprotectionAsyncWithHttpInfo(protect, body);
+             ApiResponse<ManageDeleteProtectionResult> localVarResponse = await PutRecordingsDeletionprotectionAsyncWithHttpInfo(protect, body);
+             return localVarResponse.Data;
 
         }
 
@@ -15542,9 +15544,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (ManageDeleteProtectionResult)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutRecordingsDeletionprotectionAsyncWithHttpInfo (bool? protect = null, ConversationDeletionProtectionQuery body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManageDeleteProtectionResult>> PutRecordingsDeletionprotectionAsyncWithHttpInfo (bool? protect = null, ConversationDeletionProtectionQuery body = null)
         { 
 
             var localVarPath = "/api/v2/recordings/deletionprotection";
@@ -15618,9 +15620,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutRecordingsDeletionprotection: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<ManageDeleteProtectionResult>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (ManageDeleteProtectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManageDeleteProtectionResult)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

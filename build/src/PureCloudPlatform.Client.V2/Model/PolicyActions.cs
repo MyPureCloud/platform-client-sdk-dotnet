@@ -31,9 +31,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssignSurveys">AssignSurveys.</param>
         /// <param name="RetentionDuration">RetentionDuration.</param>
         /// <param name="InitiateScreenRecording">InitiateScreenRecording.</param>
-        /// <param name="MediaTranscriptions">Deprecated. The Voci and Call Journey transcription integrations are no longer supported..</param>
         /// <param name="IntegrationExport">Policy action for exporting recordings using an integration to 3rd party s3..</param>
-        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<MeteredAssignmentByAgent> AssignMeteredAssignmentByAgent = null, List<CalibrationAssignment> AssignCalibrations = null, List<SurveyAssignment> AssignSurveys = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null, List<MediaTranscription> MediaTranscriptions = null, IntegrationExport IntegrationExport = null)
+        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<MeteredAssignmentByAgent> AssignMeteredAssignmentByAgent = null, List<CalibrationAssignment> AssignCalibrations = null, List<SurveyAssignment> AssignSurveys = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null, IntegrationExport IntegrationExport = null)
         {
             this.RetainRecording = RetainRecording;
             this.DeleteRecording = DeleteRecording;
@@ -45,7 +44,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AssignSurveys = AssignSurveys;
             this.RetentionDuration = RetentionDuration;
             this.InitiateScreenRecording = InitiateScreenRecording;
-            this.MediaTranscriptions = MediaTranscriptions;
             this.IntegrationExport = IntegrationExport;
             
         }
@@ -136,15 +134,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Deprecated. The Voci and Call Journey transcription integrations are no longer supported.
-        /// </summary>
-        /// <value>Deprecated. The Voci and Call Journey transcription integrations are no longer supported.</value>
-        [DataMember(Name="mediaTranscriptions", EmitDefaultValue=false)]
-        public List<MediaTranscription> MediaTranscriptions { get; set; }
-
-
-
-        /// <summary>
         /// Policy action for exporting recordings using an integration to 3rd party s3.
         /// </summary>
         /// <value>Policy action for exporting recordings using an integration to 3rd party s3.</value>
@@ -171,7 +160,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssignSurveys: ").Append(AssignSurveys).Append("\n");
             sb.Append("  RetentionDuration: ").Append(RetentionDuration).Append("\n");
             sb.Append("  InitiateScreenRecording: ").Append(InitiateScreenRecording).Append("\n");
-            sb.Append("  MediaTranscriptions: ").Append(MediaTranscriptions).Append("\n");
             sb.Append("  IntegrationExport: ").Append(IntegrationExport).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -264,11 +252,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InitiateScreenRecording.Equals(other.InitiateScreenRecording)
                 ) &&
                 (
-                    this.MediaTranscriptions == other.MediaTranscriptions ||
-                    this.MediaTranscriptions != null &&
-                    this.MediaTranscriptions.SequenceEqual(other.MediaTranscriptions)
-                ) &&
-                (
                     this.IntegrationExport == other.IntegrationExport ||
                     this.IntegrationExport != null &&
                     this.IntegrationExport.Equals(other.IntegrationExport)
@@ -315,9 +298,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InitiateScreenRecording != null)
                     hash = hash * 59 + this.InitiateScreenRecording.GetHashCode();
-
-                if (this.MediaTranscriptions != null)
-                    hash = hash * 59 + this.MediaTranscriptions.GetHashCode();
 
                 if (this.IntegrationExport != null)
                     hash = hash * 59 + this.IntegrationExport.GetHashCode();

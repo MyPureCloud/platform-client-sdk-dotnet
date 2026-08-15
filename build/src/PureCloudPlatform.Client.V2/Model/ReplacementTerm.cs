@@ -82,6 +82,12 @@ namespace PureCloudPlatform.Client.V2.Model
             AppleMessages,
             
             /// <summary>
+            /// Enum Whatsapp for "WHATSAPP"
+            /// </summary>
+            [EnumMember(Value = "WHATSAPP")]
+            Whatsapp,
+            
+            /// <summary>
             /// Enum ExternalId for "EXTERNAL_ID"
             /// </summary>
             [EnumMember(Value = "EXTERNAL_ID")]

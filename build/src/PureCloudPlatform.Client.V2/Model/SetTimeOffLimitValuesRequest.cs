@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SetTimeOffLimitValuesRequest" /> class.
         /// </summary>
         /// <param name="Values">Values.</param>
-        /// <param name="Metadata">Version metadata for the time off limit (required).</param>
+        /// <param name="Metadata">Deprecated. Version metadata for the time off limit (required).</param>
         public SetTimeOffLimitValuesRequest(List<TimeOffLimitRange> Values = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Values = Values;
@@ -47,9 +47,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Version metadata for the time off limit
+        /// Deprecated. Version metadata for the time off limit
         /// </summary>
-        /// <value>Version metadata for the time off limit</value>
+        /// <value>Deprecated. Version metadata for the time off limit</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
 

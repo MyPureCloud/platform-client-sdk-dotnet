@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class CreateTimeOffLimitRequest :  IEquatable<CreateTimeOffLimitRequest>
     {
         /// <summary>
-        /// Granularity choice for time off limit. If not specified, 'Daily' is assumed
+        /// Deprecated. Granularity choice for time off limit. If not specified, 'Daily' is assumed
         /// </summary>
-        /// <value>Granularity choice for time off limit. If not specified, 'Daily' is assumed</value>
+        /// <value>Deprecated. Granularity choice for time off limit. If not specified, 'Daily' is assumed</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum GranularityEnum
         {
@@ -46,16 +46,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Fifteenminutes
         }
         /// <summary>
-        /// Granularity choice for time off limit. If not specified, 'Daily' is assumed
+        /// Deprecated. Granularity choice for time off limit. If not specified, 'Daily' is assumed
         /// </summary>
-        /// <value>Granularity choice for time off limit. If not specified, 'Daily' is assumed</value>
+        /// <value>Deprecated. Granularity choice for time off limit. If not specified, 'Daily' is assumed</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public GranularityEnum? Granularity { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateTimeOffLimitRequest" /> class.
         /// </summary>
-        /// <param name="Granularity">Granularity choice for time off limit. If not specified, &#39;Daily&#39; is assumed.</param>
-        /// <param name="DefaultLimitMinutes">The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available.</param>
+        /// <param name="Granularity">Deprecated. Granularity choice for time off limit. If not specified, &#39;Daily&#39; is assumed.</param>
+        /// <param name="DefaultLimitMinutes">Deprecated. The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available.</param>
         public CreateTimeOffLimitRequest(GranularityEnum? Granularity = null, int? DefaultLimitMinutes = null)
         {
             this.Granularity = Granularity;
@@ -68,9 +68,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available
+        /// Deprecated. The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available
         /// </summary>
-        /// <value>The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available</value>
+        /// <value>Deprecated. The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available</value>
         [DataMember(Name="defaultLimitMinutes", EmitDefaultValue=false)]
         public int? DefaultLimitMinutes { get; set; }
 

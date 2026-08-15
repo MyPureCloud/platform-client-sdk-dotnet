@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="DownloadUrls">List of download URLs to fetch the result of quarter hour time series. This field is populated only if session state is Complete.</param>
         /// <param name="DownloadResult">Result will always come via downloadUrls; however the schema is included for documentation.</param>
-        public QuarterHourly(List<string> DownloadUrls = null, List<Timeseries> DownloadResult = null)
+        public QuarterHourly(List<string> DownloadUrls = null, List<ContinuousForecastTimeSeries> DownloadResult = null)
         {
             this.DownloadUrls = DownloadUrls;
             this.DownloadResult = DownloadResult;
@@ -46,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Result will always come via downloadUrls; however the schema is included for documentation</value>
         [DataMember(Name="downloadResult", EmitDefaultValue=false)]
-        public List<Timeseries> DownloadResult { get; set; }
+        public List<ContinuousForecastTimeSeries> DownloadResult { get; set; }
 
 
         /// <summary>

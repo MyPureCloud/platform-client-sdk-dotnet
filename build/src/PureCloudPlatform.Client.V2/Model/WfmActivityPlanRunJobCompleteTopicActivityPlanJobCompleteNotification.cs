@@ -66,7 +66,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Deletesessionusers for "DeleteSessionUsers"
             /// </summary>
             [EnumMember(Value = "DeleteSessionUsers")]
-            Deletesessionusers
+            Deletesessionusers,
+            
+            /// <summary>
+            /// Enum Maximizeoccurrence for "MaximizeOccurrence"
+            /// </summary>
+            [EnumMember(Value = "MaximizeOccurrence")]
+            Maximizeoccurrence,
+            
+            /// <summary>
+            /// Enum Createsession for "CreateSession"
+            /// </summary>
+            [EnumMember(Value = "CreateSession")]
+            Createsession,
+            
+            /// <summary>
+            /// Enum Editsession for "EditSession"
+            /// </summary>
+            [EnumMember(Value = "EditSession")]
+            Editsession
         }
         /// <summary>
         /// Gets or Sets Status

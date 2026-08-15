@@ -519,6 +519,42 @@ namespace PureCloudPlatform.Client.V2.Model
             Agenticanythingelseaction,
             
             /// <summary>
+            /// Enum Createconversationattributeaction for "CreateConversationAttributeAction"
+            /// </summary>
+            [EnumMember(Value = "CreateConversationAttributeAction")]
+            Createconversationattributeaction,
+            
+            /// <summary>
+            /// Enum Getconversationattributeaction for "GetConversationAttributeAction"
+            /// </summary>
+            [EnumMember(Value = "GetConversationAttributeAction")]
+            Getconversationattributeaction,
+            
+            /// <summary>
+            /// Enum Getconversationattributesaction for "GetConversationAttributesAction"
+            /// </summary>
+            [EnumMember(Value = "GetConversationAttributesAction")]
+            Getconversationattributesaction,
+            
+            /// <summary>
+            /// Enum Updateconversationattributeaction for "UpdateConversationAttributeAction"
+            /// </summary>
+            [EnumMember(Value = "UpdateConversationAttributeAction")]
+            Updateconversationattributeaction,
+            
+            /// <summary>
+            /// Enum Finddivisionaction for "FindDivisionAction"
+            /// </summary>
+            [EnumMember(Value = "FindDivisionAction")]
+            Finddivisionaction,
+            
+            /// <summary>
+            /// Enum Finddivisionsaction for "FindDivisionsAction"
+            /// </summary>
+            [EnumMember(Value = "FindDivisionsAction")]
+            Finddivisionsaction,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

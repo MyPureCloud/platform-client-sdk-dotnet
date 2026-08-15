@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class TimeOffLimitRange :  IEquatable<TimeOffLimitRange>
     {
         /// <summary>
-        /// Granularity choice for the time-off limit
+        /// Deprecated. Granularity choice for the time-off limit
         /// </summary>
-        /// <value>Granularity choice for the time-off limit</value>
+        /// <value>Deprecated. Granularity choice for the time-off limit</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum GranularityEnum
         {
@@ -46,9 +46,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Fifteenminutes
         }
         /// <summary>
-        /// Granularity choice for the time-off limit
+        /// Deprecated. Granularity choice for the time-off limit
         /// </summary>
-        /// <value>Granularity choice for the time-off limit</value>
+        /// <value>Deprecated. Granularity choice for the time-off limit</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public GranularityEnum? Granularity { get; set; }
 
@@ -60,9 +60,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffLimitRange" /> class.
         /// </summary>
-        /// <param name="StartDate">Start date of the range. The end date is determined by &#39;granularity&#39; and the size of &#39;limitMinutesPerInterval&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
-        /// <param name="Granularity">Granularity choice for the time-off limit (required).</param>
-        /// <param name="LimitMinutesPerInterval">The list of time off limit values in minutes per granularity interval. If &#39;null&#39; is specified, then interval specific value is cleared. Such interval will have &#39;defaultLimitMinutes&#39; value (required).</param>
+        /// <param name="StartDate">Deprecated. Start date of the range. The end date is determined by &#39;granularity&#39; and the size of &#39;limitMinutesPerInterval&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
+        /// <param name="Granularity">Deprecated. Granularity choice for the time-off limit (required).</param>
+        /// <param name="LimitMinutesPerInterval">Deprecated. The list of time off limit values in minutes per granularity interval. If &#39;null&#39; is specified, then interval specific value is cleared. Such interval will have &#39;defaultLimitMinutes&#39; value (required).</param>
         public TimeOffLimitRange(String StartDate = null, GranularityEnum? Granularity = null, List<int?> LimitMinutesPerInterval = null)
         {
             this.StartDate = StartDate;
@@ -74,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Start date of the range. The end date is determined by &#39;granularity&#39; and the size of &#39;limitMinutesPerInterval&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// Deprecated. Start date of the range. The end date is determined by &#39;granularity&#39; and the size of &#39;limitMinutesPerInterval&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
-        /// <value>Start date of the range. The end date is determined by &#39;granularity&#39; and the size of &#39;limitMinutesPerInterval&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        /// <value>Deprecated. Start date of the range. The end date is determined by &#39;granularity&#39; and the size of &#39;limitMinutesPerInterval&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public String StartDate { get; set; }
 
@@ -85,9 +85,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The list of time off limit values in minutes per granularity interval. If &#39;null&#39; is specified, then interval specific value is cleared. Such interval will have &#39;defaultLimitMinutes&#39; value
+        /// Deprecated. The list of time off limit values in minutes per granularity interval. If &#39;null&#39; is specified, then interval specific value is cleared. Such interval will have &#39;defaultLimitMinutes&#39; value
         /// </summary>
-        /// <value>The list of time off limit values in minutes per granularity interval. If &#39;null&#39; is specified, then interval specific value is cleared. Such interval will have &#39;defaultLimitMinutes&#39; value</value>
+        /// <value>Deprecated. The list of time off limit values in minutes per granularity interval. If &#39;null&#39; is specified, then interval specific value is cleared. Such interval will have &#39;defaultLimitMinutes&#39; value</value>
         [DataMember(Name="limitMinutesPerInterval", EmitDefaultValue=false)]
         public List<int?> LimitMinutesPerInterval { get; set; }
 

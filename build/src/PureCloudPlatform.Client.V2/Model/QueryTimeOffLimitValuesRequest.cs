@@ -27,9 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryTimeOffLimitValuesRequest" /> class.
         /// </summary>
-        /// <param name="TimeOffLimitId">The time off limit object id to retrieve values for. Required if activityCodeId is not specified.</param>
-        /// <param name="ActivityCodeId">The ID of the activity code by which to filter the affected limit objects. Required if timeOffLimitId is not specified.</param>
-        /// <param name="DateRanges">The list of the date ranges to return time off limit, allocated and waitlisted minutes. The valid number of date ranges is between 1 and 30. Maximum total number of days in all ranges in 366. (required).</param>
+        /// <param name="TimeOffLimitId">Deprecated. The time off limit object id to retrieve values for. Required if activityCodeId is not specified.</param>
+        /// <param name="ActivityCodeId">Deprecated. The ID of the activity code by which to filter the affected limit objects. Required if timeOffLimitId is not specified.</param>
+        /// <param name="DateRanges">Deprecated. The list of the date ranges to return time off limit, allocated and waitlisted minutes. The valid number of date ranges is between 1 and 30. Maximum total number of days in all ranges in 366. (required).</param>
         public QueryTimeOffLimitValuesRequest(string TimeOffLimitId = null, string ActivityCodeId = null, List<LocalDateRange> DateRanges = null)
         {
             this.TimeOffLimitId = TimeOffLimitId;
@@ -41,27 +41,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The time off limit object id to retrieve values for. Required if activityCodeId is not specified
+        /// Deprecated. The time off limit object id to retrieve values for. Required if activityCodeId is not specified
         /// </summary>
-        /// <value>The time off limit object id to retrieve values for. Required if activityCodeId is not specified</value>
+        /// <value>Deprecated. The time off limit object id to retrieve values for. Required if activityCodeId is not specified</value>
         [DataMember(Name="timeOffLimitId", EmitDefaultValue=false)]
         public string TimeOffLimitId { get; set; }
 
 
 
         /// <summary>
-        /// The ID of the activity code by which to filter the affected limit objects. Required if timeOffLimitId is not specified
+        /// Deprecated. The ID of the activity code by which to filter the affected limit objects. Required if timeOffLimitId is not specified
         /// </summary>
-        /// <value>The ID of the activity code by which to filter the affected limit objects. Required if timeOffLimitId is not specified</value>
+        /// <value>Deprecated. The ID of the activity code by which to filter the affected limit objects. Required if timeOffLimitId is not specified</value>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
 
 
 
         /// <summary>
-        /// The list of the date ranges to return time off limit, allocated and waitlisted minutes. The valid number of date ranges is between 1 and 30. Maximum total number of days in all ranges in 366.
+        /// Deprecated. The list of the date ranges to return time off limit, allocated and waitlisted minutes. The valid number of date ranges is between 1 and 30. Maximum total number of days in all ranges in 366.
         /// </summary>
-        /// <value>The list of the date ranges to return time off limit, allocated and waitlisted minutes. The valid number of date ranges is between 1 and 30. Maximum total number of days in all ranges in 366.</value>
+        /// <value>Deprecated. The list of the date ranges to return time off limit, allocated and waitlisted minutes. The valid number of date ranges is between 1 and 30. Maximum total number of days in all ranges in 366.</value>
         [DataMember(Name="dateRanges", EmitDefaultValue=false)]
         public List<LocalDateRange> DateRanges { get; set; }
 

@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AppleMessages for "APPLE_MESSAGES"
             /// </summary>
             [EnumMember(Value = "APPLE_MESSAGES")]
-            AppleMessages
+            AppleMessages,
+            
+            /// <summary>
+            /// Enum Whatsapp for "WHATSAPP"
+            /// </summary>
+            [EnumMember(Value = "WHATSAPP")]
+            Whatsapp
         }
         /// <summary>
         /// Social Handle Type

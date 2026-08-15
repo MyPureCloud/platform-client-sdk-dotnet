@@ -63,12 +63,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The type of chart to display.</param>
         /// <param name="GroupByTitle">A title for the grouped by attributes (aka the x axis).</param>
         /// <param name="MetricsTitle">A title for the metrics (aka the y axis).</param>
+        /// <param name="SecondaryMetricsTitle">A title for the metrics on secondary axis.</param>
         /// <param name="ShowLegend">Whether to show a legend.</param>
-        public JourneyViewChartDisplayAttributes(TypeEnum? Type = null, string GroupByTitle = null, string MetricsTitle = null, bool? ShowLegend = null)
+        public JourneyViewChartDisplayAttributes(TypeEnum? Type = null, string GroupByTitle = null, string MetricsTitle = null, string SecondaryMetricsTitle = null, bool? ShowLegend = null)
         {
             this.Type = Type;
             this.GroupByTitle = GroupByTitle;
             this.MetricsTitle = MetricsTitle;
+            this.SecondaryMetricsTitle = SecondaryMetricsTitle;
             this.ShowLegend = ShowLegend;
             
         }
@@ -96,6 +98,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// A title for the metrics on secondary axis
+        /// </summary>
+        /// <value>A title for the metrics on secondary axis</value>
+        [DataMember(Name="secondaryMetricsTitle", EmitDefaultValue=false)]
+        public string SecondaryMetricsTitle { get; set; }
+
+
+
+        /// <summary>
         /// Whether to show a legend
         /// </summary>
         /// <value>Whether to show a legend</value>
@@ -115,6 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  GroupByTitle: ").Append(GroupByTitle).Append("\n");
             sb.Append("  MetricsTitle: ").Append(MetricsTitle).Append("\n");
+            sb.Append("  SecondaryMetricsTitle: ").Append(SecondaryMetricsTitle).Append("\n");
             sb.Append("  ShowLegend: ").Append(ShowLegend).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -172,6 +184,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MetricsTitle.Equals(other.MetricsTitle)
                 ) &&
                 (
+                    this.SecondaryMetricsTitle == other.SecondaryMetricsTitle ||
+                    this.SecondaryMetricsTitle != null &&
+                    this.SecondaryMetricsTitle.Equals(other.SecondaryMetricsTitle)
+                ) &&
+                (
                     this.ShowLegend == other.ShowLegend ||
                     this.ShowLegend != null &&
                     this.ShowLegend.Equals(other.ShowLegend)
@@ -197,6 +214,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MetricsTitle != null)
                     hash = hash * 59 + this.MetricsTitle.GetHashCode();
+
+                if (this.SecondaryMetricsTitle != null)
+                    hash = hash * 59 + this.SecondaryMetricsTitle.GetHashCode();
 
                 if (this.ShowLegend != null)
                     hash = hash * 59 + this.ShowLegend.GetHashCode();

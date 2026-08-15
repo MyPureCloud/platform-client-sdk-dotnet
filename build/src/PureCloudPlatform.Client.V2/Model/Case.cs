@@ -199,7 +199,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomerIntent">The customer intent for the Case..</param>
         /// <param name="CreationStatus">The creation status of the Case..</param>
         /// <param name="TtlSeconds">The time-to-live in seconds for the lifetime of the Case..</param>
-        public Case(string Name = null, StarrableDivision Division = null, int? Version = null, string Reference = null, CaseplanReference Caseplan = null, string Summary = null, CaseUserReference Owner = null, StatusEnum? Status = null, PriorityEnum? Priority = null, DateTime? DateDue = null, DateTime? DateStarted = null, DateTime? DateClosed = null, DateTime? DateCreated = null, DateTime? DateModified = null, CaseUserReference ModifiedBy = null, CaseExternalContactReference ExternalContact = null, CustomerIntentReference CustomerIntent = null, CreationStatusEnum? CreationStatus = null, int? TtlSeconds = null)
+        /// <param name="FailureReason">The reason the Case failed, if applicable..</param>
+        public Case(string Name = null, StarrableDivision Division = null, int? Version = null, string Reference = null, CaseplanReference Caseplan = null, string Summary = null, CaseUserReference Owner = null, StatusEnum? Status = null, PriorityEnum? Priority = null, DateTime? DateDue = null, DateTime? DateStarted = null, DateTime? DateClosed = null, DateTime? DateCreated = null, DateTime? DateModified = null, CaseUserReference ModifiedBy = null, CaseExternalContactReference ExternalContact = null, CustomerIntentReference CustomerIntent = null, CreationStatusEnum? CreationStatus = null, int? TtlSeconds = null, FailureReason FailureReason = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -220,6 +221,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CustomerIntent = CustomerIntent;
             this.CreationStatus = CreationStatus;
             this.TtlSeconds = TtlSeconds;
+            this.FailureReason = FailureReason;
             
         }
         
@@ -385,6 +387,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The reason the Case failed, if applicable.
+        /// </summary>
+        /// <value>The reason the Case failed, if applicable.</value>
+        [DataMember(Name="failureReason", EmitDefaultValue=false)]
+        public FailureReason FailureReason { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -421,6 +432,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CustomerIntent: ").Append(CustomerIntent).Append("\n");
             sb.Append("  CreationStatus: ").Append(CreationStatus).Append("\n");
             sb.Append("  TtlSeconds: ").Append(TtlSeconds).Append("\n");
+            sb.Append("  FailureReason: ").Append(FailureReason).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -563,6 +575,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TtlSeconds.Equals(other.TtlSeconds)
                 ) &&
                 (
+                    this.FailureReason == other.FailureReason ||
+                    this.FailureReason != null &&
+                    this.FailureReason.Equals(other.FailureReason)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -639,6 +656,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TtlSeconds != null)
                     hash = hash * 59 + this.TtlSeconds.GetHashCode();
+
+                if (this.FailureReason != null)
+                    hash = hash * 59 + this.FailureReason.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -1333,6 +1333,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Identityprovider,
             
             /// <summary>
+            /// Enum Rulesofbehavior for "RulesOfBehavior"
+            /// </summary>
+            [EnumMember(Value = "RulesOfBehavior")]
+            Rulesofbehavior,
+            
+            /// <summary>
             /// Enum Role for "Role"
             /// </summary>
             [EnumMember(Value = "Role")]
@@ -2663,6 +2669,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "NumberOrder")]
             Numberorder,
+            
+            /// <summary>
+            /// Enum Bulkdisconnectrequest for "BulkDisconnectRequest"
+            /// </summary>
+            [EnumMember(Value = "BulkDisconnectRequest")]
+            Bulkdisconnectrequest,
             
             /// <summary>
             /// Enum Enterpriseagreement for "EnterpriseAgreement"

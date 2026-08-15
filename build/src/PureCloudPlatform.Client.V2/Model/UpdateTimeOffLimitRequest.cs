@@ -27,8 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateTimeOffLimitRequest" /> class.
         /// </summary>
-        /// <param name="DefaultLimitMinutes">The default time off limit value in minutes per granularity.</param>
-        /// <param name="Metadata">Version metadata for the time off limit (required).</param>
+        /// <param name="DefaultLimitMinutes">Deprecated. The default time off limit value in minutes per granularity.</param>
+        /// <param name="Metadata">Deprecated. Version metadata for the time off limit (required).</param>
         public UpdateTimeOffLimitRequest(int? DefaultLimitMinutes = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.DefaultLimitMinutes = DefaultLimitMinutes;
@@ -39,18 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The default time off limit value in minutes per granularity
+        /// Deprecated. The default time off limit value in minutes per granularity
         /// </summary>
-        /// <value>The default time off limit value in minutes per granularity</value>
+        /// <value>Deprecated. The default time off limit value in minutes per granularity</value>
         [DataMember(Name="defaultLimitMinutes", EmitDefaultValue=false)]
         public int? DefaultLimitMinutes { get; set; }
 
 
 
         /// <summary>
-        /// Version metadata for the time off limit
+        /// Deprecated. Version metadata for the time off limit
         /// </summary>
-        /// <value>Version metadata for the time off limit</value>
+        /// <value>Deprecated. Version metadata for the time off limit</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
 

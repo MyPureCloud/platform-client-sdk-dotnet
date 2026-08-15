@@ -21,8 +21,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RefinementSettingEntity" /> class.
         /// </summary>
-        public RefinementSettingEntity()
+        /// <param name="Id">The globally unique identifier for the object..</param>
+        public RefinementSettingEntity(string Id = null)
         {
+            this.Id = Id;
             
         }
         
@@ -33,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

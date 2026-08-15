@@ -212,7 +212,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -225,7 +224,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -1416,7 +1414,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -1430,7 +1427,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -1470,7 +1466,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;KeyPerformanceIndicatorType&gt;</returns>
@@ -1482,7 +1477,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;KeyPerformanceIndicatorType&gt;</returns>
@@ -2980,7 +2974,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -2994,7 +2987,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -3774,7 +3766,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -3787,7 +3778,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -4836,7 +4826,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -4849,7 +4838,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -6040,7 +6028,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -6054,7 +6041,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -6094,7 +6080,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;KeyPerformanceIndicatorType&gt;</returns>
@@ -6106,7 +6091,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;KeyPerformanceIndicatorType&gt;)</returns>
@@ -7604,7 +7588,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -7618,7 +7601,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -8398,7 +8380,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -8411,7 +8392,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -10978,7 +10958,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a custom Key Performance Indicator. 
         /// 
-        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -10992,7 +10971,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a custom Key Performance Indicator. 
         /// 
-        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -11080,7 +11058,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a custom Key Performance Indicator. 
         /// 
-        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -11095,7 +11072,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a custom Key Performance Indicator. 
         /// 
-        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -20759,7 +20735,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Retrieve a single Key Performance Indicator. 
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -20775,7 +20750,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Retrieve a single Key Performance Indicator. 
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -20865,7 +20839,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Retrieve a single Key Performance Indicator. 
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -20882,7 +20855,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Retrieve a single Key Performance Indicator. 
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -21178,7 +21150,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Key Performance Indicators Types available. 
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;KeyPerformanceIndicatorType&gt;</returns>
@@ -21192,7 +21163,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Key Performance Indicators Types available. 
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;KeyPerformanceIndicatorType&gt;</returns>
@@ -21275,7 +21245,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Key Performance Indicators Types available. 
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;KeyPerformanceIndicatorType&gt;</returns>
@@ -21290,7 +21259,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Key Performance Indicators Types available. 
         /// 
-        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;KeyPerformanceIndicatorType&gt;)</returns>
@@ -32752,7 +32720,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a custom Key Performance Indicator. 
         /// 
-        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -32768,7 +32735,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a custom Key Performance Indicator. 
         /// 
-        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -32863,7 +32829,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a custom Key Performance Indicator. 
         /// 
-        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -32880,7 +32845,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a custom Key Performance Indicator. 
         /// 
-        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiId">Key Performance Indicator ID</param>
@@ -39644,7 +39608,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a custom Key Performance Indicator. 
         /// 
-        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -39659,7 +39622,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a custom Key Performance Indicator. 
         /// 
-        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -39752,7 +39714,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a custom Key Performance Indicator. 
         /// 
-        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -39768,7 +39729,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a custom Key Performance Indicator. 
         /// 
-        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>

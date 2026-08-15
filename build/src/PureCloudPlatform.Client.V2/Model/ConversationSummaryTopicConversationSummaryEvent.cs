@@ -264,6 +264,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">QueueId.</param>
         /// <param name="Participants">Participants.</param>
         /// <param name="CommunicationIds">CommunicationIds.</param>
+        /// <param name="LatestCommunicationId">LatestCommunicationId.</param>
         /// <param name="CreatedDate">CreatedDate.</param>
         /// <param name="MessageType">MessageType.</param>
         /// <param name="MediaType">MediaType.</param>
@@ -283,12 +284,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ErrorType">ErrorType.</param>
         /// <param name="DurationMs">DurationMs.</param>
         /// <param name="Labels">Labels.</param>
-        public ConversationSummaryTopicConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicConversationSummary Summary = null, ConversationSummaryTopicConversationHeadline Headline = null, ConversationSummaryTopicConversationReason Reason = null, ConversationSummaryTopicConversationResolution Resolution = null, List<ConversationSummaryTopicConversationFollowupAction> FollowupActions = null, List<ConversationSummaryTopicSummaryExtractedCustomEntity> ExtractedEntities = null, List<ConversationSummaryTopicConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicTriggerSource TriggerSource = null, SummarySourceTypeEnum? SummarySourceType = null, TriggerTypeEnum? TriggerType = null, ConversationSummaryTopicConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null, List<ConversationSummaryTopicConversationSummaryLabel> Labels = null)
+        public ConversationSummaryTopicConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, Guid? LatestCommunicationId = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicConversationSummary Summary = null, ConversationSummaryTopicConversationHeadline Headline = null, ConversationSummaryTopicConversationReason Reason = null, ConversationSummaryTopicConversationResolution Resolution = null, List<ConversationSummaryTopicConversationFollowupAction> FollowupActions = null, List<ConversationSummaryTopicSummaryExtractedCustomEntity> ExtractedEntities = null, List<ConversationSummaryTopicConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicTriggerSource TriggerSource = null, SummarySourceTypeEnum? SummarySourceType = null, TriggerTypeEnum? TriggerType = null, ConversationSummaryTopicConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null, List<ConversationSummaryTopicConversationSummaryLabel> Labels = null)
         {
             this.ConversationId = ConversationId;
             this.QueueId = QueueId;
             this.Participants = Participants;
             this.CommunicationIds = CommunicationIds;
+            this.LatestCommunicationId = LatestCommunicationId;
             this.CreatedDate = CreatedDate;
             this.MessageType = MessageType;
             this.MediaType = MediaType;
@@ -342,6 +344,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="communicationIds", EmitDefaultValue=false)]
         public List<string> CommunicationIds { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets LatestCommunicationId
+        /// </summary>
+        [DataMember(Name="latestCommunicationId", EmitDefaultValue=false)]
+        public Guid? LatestCommunicationId { get; set; }
 
 
 
@@ -479,6 +489,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  CommunicationIds: ").Append(CommunicationIds).Append("\n");
+            sb.Append("  LatestCommunicationId: ").Append(LatestCommunicationId).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  MessageType: ").Append(MessageType).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
@@ -557,6 +568,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CommunicationIds == other.CommunicationIds ||
                     this.CommunicationIds != null &&
                     this.CommunicationIds.SequenceEqual(other.CommunicationIds)
+                ) &&
+                (
+                    this.LatestCommunicationId == other.LatestCommunicationId ||
+                    this.LatestCommunicationId != null &&
+                    this.LatestCommunicationId.Equals(other.LatestCommunicationId)
                 ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
@@ -677,6 +693,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CommunicationIds != null)
                     hash = hash * 59 + this.CommunicationIds.GetHashCode();
+
+                if (this.LatestCommunicationId != null)
+                    hash = hash * 59 + this.LatestCommunicationId.GetHashCode();
 
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();

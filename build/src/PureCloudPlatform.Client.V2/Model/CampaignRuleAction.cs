@@ -115,7 +115,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Changecampaigntemplate for "changeCampaignTemplate"
             /// </summary>
             [EnumMember(Value = "changeCampaignTemplate")]
-            Changecampaigntemplate
+            Changecampaigntemplate,
+            
+            /// <summary>
+            /// Enum Setcampaignreservation for "setCampaignReservation"
+            /// </summary>
+            [EnumMember(Value = "setCampaignReservation")]
+            Setcampaignreservation
         }
         /// <summary>
         /// The action to take on the campaignRuleActionEntities.

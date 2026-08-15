@@ -61,7 +61,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Terminated for "Terminated"
             /// </summary>
             [EnumMember(Value = "Terminated")]
-            Terminated
+            Terminated,
+            
+            /// <summary>
+            /// Enum Failed for "Failed"
+            /// </summary>
+            [EnumMember(Value = "Failed")]
+            Failed
         }
         /// <summary>
         /// The Status of the Stage.
@@ -81,8 +87,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">The ID of the User who modified the Stage..</param>
         /// <param name="Version">The version of the Stage..</param>
         /// <param name="Status">The Status of the Stage..</param>
+        /// <param name="FailureReason">The reason the Stage failed, if applicable..</param>
         /// <param name="Case">The parent Case of the Stage..</param>
-        public Stage(string Name = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateCompleted = null, DateTime? DateStarted = null, UserReference ModifiedBy = null, int? Version = null, StatusEnum? Status = null, CaseReference Case = null)
+        public Stage(string Name = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateCompleted = null, DateTime? DateStarted = null, UserReference ModifiedBy = null, int? Version = null, StatusEnum? Status = null, FailureReason FailureReason = null, CaseReference Case = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -93,6 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ModifiedBy = ModifiedBy;
             this.Version = Version;
             this.Status = Status;
+            this.FailureReason = FailureReason;
             this.Case = Case;
             
         }
@@ -183,6 +191,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The reason the Stage failed, if applicable.
+        /// </summary>
+        /// <value>The reason the Stage failed, if applicable.</value>
+        [DataMember(Name="failureReason", EmitDefaultValue=false)]
+        public FailureReason FailureReason { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -218,6 +235,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  FailureReason: ").Append(FailureReason).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Case: ").Append(Case).Append("\n");
             sb.Append("}\n");
@@ -311,6 +329,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Status.Equals(other.Status)
                 ) &&
                 (
+                    this.FailureReason == other.FailureReason ||
+                    this.FailureReason != null &&
+                    this.FailureReason.Equals(other.FailureReason)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -362,6 +385,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+
+                if (this.FailureReason != null)
+                    hash = hash * 59 + this.FailureReason.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -10,6 +10,7 @@
 | **QueueId** | **Guid?** |  | [optional] |
 | **Participants** | [**List&lt;ConversationSummaryTopicConversationSummaryParticipant&gt;**](ConversationSummaryTopicConversationSummaryParticipant) |  | [optional] |
 | **CommunicationIds** | **List&lt;string&gt;** |  | [optional] |
+| **LatestCommunicationId** | **Guid?** |  | [optional] |
 | **CreatedDate** | **DateTime?** |  | [optional] |
 | **MessageType** | **string** |  | [optional] |
 | **MediaType** | **string** |  | [optional] |
@@ -32,4 +33,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 269.0.0_
+_PureCloudPlatform.Client.V2 270.0.0_

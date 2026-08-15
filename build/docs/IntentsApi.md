@@ -22,6 +22,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostIntentsCustomerintentSourceintentsBulkAdd**](#PostIntentsCustomerintentSourceintentsBulkAdd) | **Post** /api/v2/intents/customerintents/{customerIntentId}/sourceintents/bulk/add | Bulk add source intents to a customer intent |
 | [**PostIntentsCustomerintentSourceintentsBulkRemove**](#PostIntentsCustomerintentSourceintentsBulkRemove) | **Post** /api/v2/intents/customerintents/{customerIntentId}/sourceintents/bulk/remove | Bulk remove source intents mapped to a customer intent |
 | [**PostIntentsCustomerintents**](#PostIntentsCustomerintents) | **Post** /api/v2/intents/customerintents | Create customer intents |
+| [**PostIntentsCustomerintentsBulkRetrieve**](#PostIntentsCustomerintentsBulkRetrieve) | **Post** /api/v2/intents/customerintents/bulk/retrieve | Get customer intents by IDs |
 
 
 
@@ -1053,4 +1054,68 @@ namespace Example
 [**CustomerIntentResponse**](CustomerIntentResponse)
 
 
-_PureCloudPlatform.Client.V2 269.0.0_
+## PostIntentsCustomerintentsBulkRetrieve
+
+> [**List&lt;CustomerIntentResponse&gt;**](CustomerIntentResponse) PostIntentsCustomerintentsBulkRetrieve (BatchGetCustomerIntentsRequest body)
+
+
+Get customer intents by IDs
+
+PostIntentsCustomerintentsBulkRetrieve is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:customerIntentTaxonomy:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntentsCustomerintentsBulkRetrieveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntentsApi();
+            var body = new BatchGetCustomerIntentsRequest(); // BatchGetCustomerIntentsRequest | Customer intent IDs to retrieve
+
+            try
+            { 
+                // Get customer intents by IDs
+                List<CustomerIntentResponse> result = apiInstance.PostIntentsCustomerintentsBulkRetrieve(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntentsApi.PostIntentsCustomerintentsBulkRetrieve: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BatchGetCustomerIntentsRequest**](BatchGetCustomerIntentsRequest)| Customer intent IDs to retrieve |  |
+
+### Return type
+
+[**List<CustomerIntentResponse>**](CustomerIntentResponse)
+
+
+_PureCloudPlatform.Client.V2 270.0.0_

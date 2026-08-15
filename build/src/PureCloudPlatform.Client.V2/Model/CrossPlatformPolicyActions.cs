@@ -29,9 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssignMeteredAssignmentByAgent">AssignMeteredAssignmentByAgent.</param>
         /// <param name="AssignCalibrations">AssignCalibrations.</param>
         /// <param name="RetentionDuration">RetentionDuration.</param>
-        /// <param name="MediaTranscriptions">MediaTranscriptions.</param>
         /// <param name="IntegrationExport">Policy action for exporting recordings using an integration to 3rd party s3..</param>
-        public CrossPlatformPolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<MeteredAssignmentByAgent> AssignMeteredAssignmentByAgent = null, List<CalibrationAssignment> AssignCalibrations = null, RetentionDuration RetentionDuration = null, List<MediaTranscription> MediaTranscriptions = null, IntegrationExport IntegrationExport = null)
+        public CrossPlatformPolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<MeteredAssignmentByAgent> AssignMeteredAssignmentByAgent = null, List<CalibrationAssignment> AssignCalibrations = null, RetentionDuration RetentionDuration = null, IntegrationExport IntegrationExport = null)
         {
             this.RetainRecording = RetainRecording;
             this.DeleteRecording = DeleteRecording;
@@ -41,7 +40,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AssignMeteredAssignmentByAgent = AssignMeteredAssignmentByAgent;
             this.AssignCalibrations = AssignCalibrations;
             this.RetentionDuration = RetentionDuration;
-            this.MediaTranscriptions = MediaTranscriptions;
             this.IntegrationExport = IntegrationExport;
             
         }
@@ -116,14 +114,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets MediaTranscriptions
-        /// </summary>
-        [DataMember(Name="mediaTranscriptions", EmitDefaultValue=false)]
-        public List<MediaTranscription> MediaTranscriptions { get; set; }
-
-
-
-        /// <summary>
         /// Policy action for exporting recordings using an integration to 3rd party s3.
         /// </summary>
         /// <value>Policy action for exporting recordings using an integration to 3rd party s3.</value>
@@ -148,7 +138,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssignMeteredAssignmentByAgent: ").Append(AssignMeteredAssignmentByAgent).Append("\n");
             sb.Append("  AssignCalibrations: ").Append(AssignCalibrations).Append("\n");
             sb.Append("  RetentionDuration: ").Append(RetentionDuration).Append("\n");
-            sb.Append("  MediaTranscriptions: ").Append(MediaTranscriptions).Append("\n");
             sb.Append("  IntegrationExport: ").Append(IntegrationExport).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -231,11 +220,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RetentionDuration.Equals(other.RetentionDuration)
                 ) &&
                 (
-                    this.MediaTranscriptions == other.MediaTranscriptions ||
-                    this.MediaTranscriptions != null &&
-                    this.MediaTranscriptions.SequenceEqual(other.MediaTranscriptions)
-                ) &&
-                (
                     this.IntegrationExport == other.IntegrationExport ||
                     this.IntegrationExport != null &&
                     this.IntegrationExport.Equals(other.IntegrationExport)
@@ -276,9 +260,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RetentionDuration != null)
                     hash = hash * 59 + this.RetentionDuration.GetHashCode();
-
-                if (this.MediaTranscriptions != null)
-                    hash = hash * 59 + this.MediaTranscriptions.GetHashCode();
 
                 if (this.IntegrationExport != null)
                     hash = hash * 59 + this.IntegrationExport.GetHashCode();

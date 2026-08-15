@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class TimeOffLimit :  IEquatable<TimeOffLimit>
     {
         /// <summary>
-        /// Granularity choice for the time off limit
+        /// Deprecated. Granularity choice for the time off limit
         /// </summary>
-        /// <value>Granularity choice for the time off limit</value>
+        /// <value>Deprecated. Granularity choice for the time off limit</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum GranularityEnum
         {
@@ -46,9 +46,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Fifteenminutes
         }
         /// <summary>
-        /// Granularity choice for the time off limit
+        /// Deprecated. Granularity choice for the time off limit
         /// </summary>
-        /// <value>Granularity choice for the time off limit</value>
+        /// <value>Deprecated. Granularity choice for the time off limit</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public GranularityEnum? Granularity { get; set; }
 
@@ -61,9 +61,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TimeOffLimit" /> class.
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object. (required).</param>
-        /// <param name="Granularity">Granularity choice for the time off limit.</param>
-        /// <param name="DefaultLimitMinutes">The default time off limit value in minutes per granularity interval.</param>
-        /// <param name="Metadata">Version metadata for the time off limit.</param>
+        /// <param name="Granularity">Deprecated. Granularity choice for the time off limit.</param>
+        /// <param name="DefaultLimitMinutes">Deprecated. The default time off limit value in minutes per granularity interval.</param>
+        /// <param name="Metadata">Deprecated. Version metadata for the time off limit.</param>
         public TimeOffLimit(string Id = null, GranularityEnum? Granularity = null, int? DefaultLimitMinutes = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Id = Id;
@@ -87,18 +87,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The default time off limit value in minutes per granularity interval
+        /// Deprecated. The default time off limit value in minutes per granularity interval
         /// </summary>
-        /// <value>The default time off limit value in minutes per granularity interval</value>
+        /// <value>Deprecated. The default time off limit value in minutes per granularity interval</value>
         [DataMember(Name="defaultLimitMinutes", EmitDefaultValue=false)]
         public int? DefaultLimitMinutes { get; set; }
 
 
 
         /// <summary>
-        /// Version metadata for the time off limit
+        /// Deprecated. Version metadata for the time off limit
         /// </summary>
-        /// <value>Version metadata for the time off limit</value>
+        /// <value>Deprecated. Version metadata for the time off limit</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
         public WfmVersionedEntityMetadata Metadata { get; set; }
 

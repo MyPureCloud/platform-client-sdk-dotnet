@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class JourneyViewElementFilterPredicate :  IEquatable<JourneyViewElementFilterPredicate>
     {
         /// <summary>
-        /// Optional operator, default is Matches. Valid values: Matches
+        /// Optional operator, default is Matches. Valid values: Matches, NotMatches
         /// </summary>
-        /// <value>Optional operator, default is Matches. Valid values: Matches</value>
+        /// <value>Optional operator, default is Matches. Valid values: Matches, NotMatches</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
         {
@@ -46,9 +46,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Notmatches
         }
         /// <summary>
-        /// Optional operator, default is Matches. Valid values: Matches
+        /// Optional operator, default is Matches. Valid values: Matches, NotMatches
         /// </summary>
-        /// <value>Optional operator, default is Matches. Valid values: Matches</value>
+        /// <value>Optional operator, default is Matches. Valid values: Matches, NotMatches</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? Operator { get; set; }
 
@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Dimension">the element&#39;s attribute being filtered on (required).</param>
         /// <param name="Values">the values of the attribute to filter on (required).</param>
-        /// <param name="Operator">Optional operator, default is Matches. Valid values: Matches.</param>
+        /// <param name="Operator">Optional operator, default is Matches. Valid values: Matches, NotMatches.</param>
         /// <param name="NoValue">set this to true if no specific value to be considered.</param>
         public JourneyViewElementFilterPredicate(string Dimension = null, List<string> Values = null, OperatorEnum? Operator = null, bool? NoValue = null)
         {

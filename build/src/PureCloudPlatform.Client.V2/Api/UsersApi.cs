@@ -1981,7 +1981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Updating some fields, like a user's extension, requires the telephony:extension:assign permission for the relevant division. Without it, the request will return 403 Forbidden.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -1994,7 +1994,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Updating some fields, like a user's extension, requires the telephony:extension:assign permission for the relevant division. Without it, the request will return 403 Forbidden.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -5389,7 +5389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Updating some fields, like a user's extension, requires the telephony:extension:assign permission for the relevant division. Without it, the request will return 403 Forbidden.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -5402,7 +5402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Updating some fields, like a user's extension, requires the telephony:extension:assign permission for the relevant division. Without it, the request will return 403 Forbidden.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -22610,7 +22610,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update user 
-        /// 
+        /// Updating some fields, like a user's extension, requires the telephony:extension:assign permission for the relevant division. Without it, the request will return 403 Forbidden.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -22625,7 +22625,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update user 
-        /// 
+        /// Updating some fields, like a user's extension, requires the telephony:extension:assign permission for the relevant division. Without it, the request will return 403 Forbidden.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -22722,7 +22722,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update user 
-        /// 
+        /// Updating some fields, like a user's extension, requires the telephony:extension:assign permission for the relevant division. Without it, the request will return 403 Forbidden.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -22738,7 +22738,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update user 
-        /// 
+        /// Updating some fields, like a user's extension, requires the telephony:extension:assign permission for the relevant division. Without it, the request will return 403 Forbidden.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>

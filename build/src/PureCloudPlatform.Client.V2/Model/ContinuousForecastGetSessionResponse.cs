@@ -52,64 +52,23 @@ namespace PureCloudPlatform.Client.V2.Model
             Error
         }
         /// <summary>
-        /// State of the forecast data
-        /// </summary>
-        /// <value>State of the forecast data</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum ForecastDataStateEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Current for "Current"
-            /// </summary>
-            [EnumMember(Value = "Current")]
-            Current,
-            
-            /// <summary>
-            /// Enum Stale for "Stale"
-            /// </summary>
-            [EnumMember(Value = "Stale")]
-            Stale,
-            
-            /// <summary>
-            /// Enum Processing for "Processing"
-            /// </summary>
-            [EnumMember(Value = "Processing")]
-            Processing
-        }
-        /// <summary>
         /// State of the latest session
         /// </summary>
         /// <value>State of the latest session</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         /// <summary>
-        /// State of the forecast data
-        /// </summary>
-        /// <value>State of the forecast data</value>
-        [DataMember(Name="forecastDataState", EmitDefaultValue=false)]
-        public ForecastDataStateEnum? ForecastDataState { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="ContinuousForecastGetSessionResponse" /> class.
         /// </summary>
         /// <param name="SessionId">Latest session ID of the business unit.</param>
         /// <param name="LastSuccessfulSessionId">Last successful session ID of the business unit.</param>
         /// <param name="State">State of the latest session.</param>
-        /// <param name="ForecastDataState">State of the forecast data.</param>
         /// <param name="ErrorCode">Failed session error code.</param>
-        public ContinuousForecastGetSessionResponse(string SessionId = null, string LastSuccessfulSessionId = null, StateEnum? State = null, ForecastDataStateEnum? ForecastDataState = null, string ErrorCode = null)
+        public ContinuousForecastGetSessionResponse(string SessionId = null, string LastSuccessfulSessionId = null, StateEnum? State = null, string ErrorCode = null)
         {
             this.SessionId = SessionId;
             this.LastSuccessfulSessionId = LastSuccessfulSessionId;
             this.State = State;
-            this.ForecastDataState = ForecastDataState;
             this.ErrorCode = ErrorCode;
             
         }
@@ -136,8 +95,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
-
-
         /// <summary>
         /// Failed session error code
         /// </summary>
@@ -158,7 +115,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  LastSuccessfulSessionId: ").Append(LastSuccessfulSessionId).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
-            sb.Append("  ForecastDataState: ").Append(ForecastDataState).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -216,11 +172,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.State.Equals(other.State)
                 ) &&
                 (
-                    this.ForecastDataState == other.ForecastDataState ||
-                    this.ForecastDataState != null &&
-                    this.ForecastDataState.Equals(other.ForecastDataState)
-                ) &&
-                (
                     this.ErrorCode == other.ErrorCode ||
                     this.ErrorCode != null &&
                     this.ErrorCode.Equals(other.ErrorCode)
@@ -246,9 +197,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
-
-                if (this.ForecastDataState != null)
-                    hash = hash * 59 + this.ForecastDataState.GetHashCode();
 
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
