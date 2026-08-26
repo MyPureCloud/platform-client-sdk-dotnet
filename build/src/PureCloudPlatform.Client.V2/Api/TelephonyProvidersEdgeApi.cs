@@ -2174,6 +2174,38 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TrunkMetabaseEntityListing> GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
+        /// Get Trunk Base Settings listing for site
+        /// </summary>
+        /// <remarks>
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID for trunk bases</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <returns>TrunkBaseEntityListing</returns>
+        
+        TrunkBaseEntityListing GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId (string siteId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get Trunk Base Settings listing for site
+        /// </summary>
+        /// <remarks>
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID for trunk bases</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <returns>ApiResponse of TrunkBaseEntityListing</returns>
+        
+        ApiResponse<TrunkBaseEntityListing> GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteIdWithHttpInfo (string siteId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
         /// Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance
         /// </summary>
         /// <remarks>
@@ -2490,6 +2522,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of EdgeLogsJobResponse</returns>
         
         ApiResponse<EdgeLogsJobResponse> PostTelephonyProvidersEdgeLogsJobsWithHttpInfo (string edgeId, EdgeLogsJobRequest body);
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>EdgeOfflineConfigurationResponse</returns>
+        
+        EdgeOfflineConfigurationResponse PostTelephonyProvidersEdgeOfflineconfiguration (string edgeId, EdgeOfflineConfiguration body);
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>ApiResponse of EdgeOfflineConfigurationResponse</returns>
+        
+        ApiResponse<EdgeOfflineConfigurationResponse> PostTelephonyProvidersEdgeOfflineconfigurationWithHttpInfo (string edgeId, EdgeOfflineConfiguration body);
 
         /// <summary>
         /// Reboot an Edge
@@ -2930,6 +2988,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of TrunkBase</returns>
         
         ApiResponse<TrunkBase> PostTelephonyProvidersEdgesTrunkbasesettingsWithHttpInfo (TrunkBase body);
+
+        /// <summary>
+        /// Search Trunk Base Settings
+        /// </summary>
+        /// <remarks>
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>TrunkBasesSearchResponse</returns>
+        
+        TrunkBasesSearchResponse PostTelephonyProvidersEdgesTrunkbasesettingsSearch (TelephonySearchRequest body);
+
+        /// <summary>
+        /// Search Trunk Base Settings
+        /// </summary>
+        /// <remarks>
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>ApiResponse of TrunkBasesSearchResponse</returns>
+        
+        ApiResponse<TrunkBasesSearchResponse> PostTelephonyProvidersEdgesTrunkbasesettingsSearchWithHttpInfo (TelephonySearchRequest body);
+
+        /// <summary>
+        /// Search for trunks
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>TrunkInstanceSearchResponse</returns>
+        
+        TrunkInstanceSearchResponse PostTelephonyProvidersEdgesTrunksSearch (TelephonySearchRequest body);
+
+        /// <summary>
+        /// Search for trunks
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>ApiResponse of TrunkInstanceSearchResponse</returns>
+        
+        ApiResponse<TrunkInstanceSearchResponse> PostTelephonyProvidersEdgesTrunksSearchWithHttpInfo (TelephonySearchRequest body);
 
         /// <summary>
         /// Update a edge.
@@ -5488,6 +5594,38 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TrunkMetabaseEntityListing>> GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesAsyncWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
+        /// Get Trunk Base Settings listing for site
+        /// </summary>
+        /// <remarks>
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID for trunk bases</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <returns>Task of TrunkBaseEntityListing</returns>
+        
+        System.Threading.Tasks.Task<TrunkBaseEntityListing> GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteIdAsync (string siteId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get Trunk Base Settings listing for site
+        /// </summary>
+        /// <remarks>
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID for trunk bases</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <returns>Task of ApiResponse (TrunkBaseEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteIdAsyncWithHttpInfo (string siteId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
         /// Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance
         /// </summary>
         /// <remarks>
@@ -5804,6 +5942,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (EdgeLogsJobResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<EdgeLogsJobResponse>> PostTelephonyProvidersEdgeLogsJobsAsyncWithHttpInfo (string edgeId, EdgeLogsJobRequest body);
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>Task of EdgeOfflineConfigurationResponse</returns>
+        
+        System.Threading.Tasks.Task<EdgeOfflineConfigurationResponse> PostTelephonyProvidersEdgeOfflineconfigurationAsync (string edgeId, EdgeOfflineConfiguration body);
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>Task of ApiResponse (EdgeOfflineConfigurationResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<EdgeOfflineConfigurationResponse>> PostTelephonyProvidersEdgeOfflineconfigurationAsyncWithHttpInfo (string edgeId, EdgeOfflineConfiguration body);
 
         /// <summary>
         /// Reboot an Edge
@@ -6244,6 +6408,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PostTelephonyProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo (TrunkBase body);
+
+        /// <summary>
+        /// Search Trunk Base Settings
+        /// </summary>
+        /// <remarks>
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>Task of TrunkBasesSearchResponse</returns>
+        
+        System.Threading.Tasks.Task<TrunkBasesSearchResponse> PostTelephonyProvidersEdgesTrunkbasesettingsSearchAsync (TelephonySearchRequest body);
+
+        /// <summary>
+        /// Search Trunk Base Settings
+        /// </summary>
+        /// <remarks>
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>Task of ApiResponse (TrunkBasesSearchResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TrunkBasesSearchResponse>> PostTelephonyProvidersEdgesTrunkbasesettingsSearchAsyncWithHttpInfo (TelephonySearchRequest body);
+
+        /// <summary>
+        /// Search for trunks
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>Task of TrunkInstanceSearchResponse</returns>
+        
+        System.Threading.Tasks.Task<TrunkInstanceSearchResponse> PostTelephonyProvidersEdgesTrunksSearchAsync (TelephonySearchRequest body);
+
+        /// <summary>
+        /// Search for trunks
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>Task of ApiResponse (TrunkInstanceSearchResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TrunkInstanceSearchResponse>> PostTelephonyProvidersEdgesTrunksSearchAsyncWithHttpInfo (TelephonySearchRequest body);
 
         /// <summary>
         /// Update a edge.
@@ -23725,6 +23937,235 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get Trunk Base Settings listing for site 
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID for trunk bases</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <returns>TrunkBaseEntityListing</returns>
+        
+        public TrunkBaseEntityListing GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId (string siteId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<TrunkBaseEntityListing> localVarResponse = GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteIdWithHttpInfo(siteId, pageNumber, pageSize, sortBy, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Trunk Base Settings listing for site 
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID for trunk bases</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <returns>ApiResponse of TrunkBaseEntityListing</returns>
+        
+        public ApiResponse< TrunkBaseEntityListing > GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteIdWithHttpInfo (string siteId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        { 
+            // verify the required parameter 'siteId' is set
+            if (siteId == null)
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/site/{siteId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (siteId != null) localVarPathParams.Add("siteId", this.Configuration.ApiClient.ParameterToString(siteId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkBaseEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TrunkBaseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkBaseEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Trunk Base Settings listing for site 
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID for trunk bases</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <returns>Task of TrunkBaseEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<TrunkBaseEntityListing> GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteIdAsync (string siteId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<TrunkBaseEntityListing> localVarResponse = await GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteIdAsyncWithHttpInfo(siteId, pageNumber, pageSize, sortBy, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Trunk Base Settings listing for site 
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteId">Site ID for trunk bases</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
+        /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
+        /// <returns>Task of ApiResponse (TrunkBaseEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteIdAsyncWithHttpInfo (string siteId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        { 
+            // verify the required parameter 'siteId' is set
+            if (siteId == null)
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/site/{siteId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (siteId != null) localVarPathParams.Add("siteId", this.Configuration.ApiClient.ParameterToString(siteId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkBaseEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TrunkBaseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkBaseEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance 
         /// 
         /// </summary>
@@ -26395,6 +26836,234 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<EdgeLogsJobResponse>(localVarStatusCode,
                 localVarHeaders,
                 (EdgeLogsJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeLogsJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>EdgeOfflineConfigurationResponse</returns>
+        
+        public EdgeOfflineConfigurationResponse PostTelephonyProvidersEdgeOfflineconfiguration (string edgeId, EdgeOfflineConfiguration body)
+        {
+             ApiResponse<EdgeOfflineConfigurationResponse> localVarResponse = PostTelephonyProvidersEdgeOfflineconfigurationWithHttpInfo(edgeId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>ApiResponse of EdgeOfflineConfigurationResponse</returns>
+        
+        public ApiResponse< EdgeOfflineConfigurationResponse > PostTelephonyProvidersEdgeOfflineconfigurationWithHttpInfo (string edgeId, EdgeOfflineConfiguration body)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeOfflineconfiguration");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeOfflineconfiguration");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/offlineconfiguration";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeOfflineconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostTelephonyProvidersEdgeOfflineconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeOfflineconfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeOfflineConfigurationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeOfflineConfigurationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeOfflineConfigurationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>Task of EdgeOfflineConfigurationResponse</returns>
+        
+        public async System.Threading.Tasks.Task<EdgeOfflineConfigurationResponse> PostTelephonyProvidersEdgeOfflineconfigurationAsync (string edgeId, EdgeOfflineConfiguration body)
+        {
+             ApiResponse<EdgeOfflineConfigurationResponse> localVarResponse = await PostTelephonyProvidersEdgeOfflineconfigurationAsyncWithHttpInfo(edgeId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a file that can be used to configure a hardware Edge&#39;s settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge Id</param>
+        /// <param name="body">EdgeOfflineConfiguration</param>
+        /// <returns>Task of ApiResponse (EdgeOfflineConfigurationResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeOfflineConfigurationResponse>> PostTelephonyProvidersEdgeOfflineconfigurationAsyncWithHttpInfo (string edgeId, EdgeOfflineConfiguration body)
+        { 
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeOfflineconfiguration");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeOfflineconfiguration");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/offlineconfiguration";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeOfflineconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostTelephonyProvidersEdgeOfflineconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgeOfflineconfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EdgeOfflineConfigurationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EdgeOfflineConfigurationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeOfflineConfigurationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -30279,6 +30948,436 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TrunkBase>(localVarStatusCode,
                 localVarHeaders,
                 (TrunkBase) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkBase)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Search Trunk Base Settings 
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>TrunkBasesSearchResponse</returns>
+        
+        public TrunkBasesSearchResponse PostTelephonyProvidersEdgesTrunkbasesettingsSearch (TelephonySearchRequest body)
+        {
+             ApiResponse<TrunkBasesSearchResponse> localVarResponse = PostTelephonyProvidersEdgesTrunkbasesettingsSearchWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search Trunk Base Settings 
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>ApiResponse of TrunkBasesSearchResponse</returns>
+        
+        public ApiResponse< TrunkBasesSearchResponse > PostTelephonyProvidersEdgesTrunkbasesettingsSearchWithHttpInfo (TelephonySearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesTrunkbasesettingsSearch");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/search";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesTrunkbasesettingsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostTelephonyProvidersEdgesTrunkbasesettingsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesTrunkbasesettingsSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkBasesSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (TrunkBasesSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkBasesSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Search Trunk Base Settings 
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>Task of TrunkBasesSearchResponse</returns>
+        
+        public async System.Threading.Tasks.Task<TrunkBasesSearchResponse> PostTelephonyProvidersEdgesTrunkbasesettingsSearchAsync (TelephonySearchRequest body)
+        {
+             ApiResponse<TrunkBasesSearchResponse> localVarResponse = await PostTelephonyProvidersEdgesTrunkbasesettingsSearchAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search Trunk Base Settings 
+        /// Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>Task of ApiResponse (TrunkBasesSearchResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBasesSearchResponse>> PostTelephonyProvidersEdgesTrunkbasesettingsSearchAsyncWithHttpInfo (TelephonySearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesTrunkbasesettingsSearch");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/search";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesTrunkbasesettingsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostTelephonyProvidersEdgesTrunkbasesettingsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesTrunkbasesettingsSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkBasesSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (TrunkBasesSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkBasesSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Search for trunks 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>TrunkInstanceSearchResponse</returns>
+        
+        public TrunkInstanceSearchResponse PostTelephonyProvidersEdgesTrunksSearch (TelephonySearchRequest body)
+        {
+             ApiResponse<TrunkInstanceSearchResponse> localVarResponse = PostTelephonyProvidersEdgesTrunksSearchWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search for trunks 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>ApiResponse of TrunkInstanceSearchResponse</returns>
+        
+        public ApiResponse< TrunkInstanceSearchResponse > PostTelephonyProvidersEdgesTrunksSearchWithHttpInfo (TelephonySearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesTrunksSearch");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/trunks/search";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesTrunksSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostTelephonyProvidersEdgesTrunksSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesTrunksSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkInstanceSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (TrunkInstanceSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkInstanceSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Search for trunks 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>Task of TrunkInstanceSearchResponse</returns>
+        
+        public async System.Threading.Tasks.Task<TrunkInstanceSearchResponse> PostTelephonyProvidersEdgesTrunksSearchAsync (TelephonySearchRequest body)
+        {
+             ApiResponse<TrunkInstanceSearchResponse> localVarResponse = await PostTelephonyProvidersEdgesTrunksSearchAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search for trunks 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Telephony search request</param>
+        /// <returns>Task of ApiResponse (TrunkInstanceSearchResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkInstanceSearchResponse>> PostTelephonyProvidersEdgesTrunksSearchAsyncWithHttpInfo (TelephonySearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesTrunksSearch");
+            
+
+            var localVarPath = "/api/v2/telephony/providers/edges/trunks/search";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesTrunksSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostTelephonyProvidersEdgesTrunksSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyProvidersEdgesTrunksSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkInstanceSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (TrunkInstanceSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkInstanceSearchResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -114,6 +114,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FaxDocumentEntityListing> GetFaxDocumentsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
+        /// Get fax status
+        /// </summary>
+        /// <remarks>
+        /// Retrieves status for an outbound (sent) fax. Only the authenticated user who sent the fax can fetch its status; this operation does not expose inbound or other users' faxes. When the `result` field is present on the response body, it describes the terminal outcome of **transmitting** the fax to the remote endpoint (e.g. SUCCESS or FAILURE). 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxId">Fax ID of an outbound fax sent by the authenticated user only.</param>
+        /// <returns>OutboundFaxStatus</returns>
+        
+        OutboundFaxStatus GetFaxFaxIdStatus (string faxId);
+
+        /// <summary>
+        /// Get fax status
+        /// </summary>
+        /// <remarks>
+        /// Retrieves status for an outbound (sent) fax. Only the authenticated user who sent the fax can fetch its status; this operation does not expose inbound or other users' faxes. When the `result` field is present on the response body, it describes the terminal outcome of **transmitting** the fax to the remote endpoint (e.g. SUCCESS or FAILURE). 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxId">Fax ID of an outbound fax sent by the authenticated user only.</param>
+        /// <returns>ApiResponse of OutboundFaxStatus</returns>
+        
+        ApiResponse<OutboundFaxStatus> GetFaxFaxIdStatusWithHttpInfo (string faxId);
+
+        /// <summary>
         /// Get organization config for given organization
         /// </summary>
         /// <remarks>
@@ -308,6 +332,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (FaxDocumentEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<FaxDocumentEntityListing>> GetFaxDocumentsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get fax status
+        /// </summary>
+        /// <remarks>
+        /// Retrieves status for an outbound (sent) fax. Only the authenticated user who sent the fax can fetch its status; this operation does not expose inbound or other users' faxes. When the `result` field is present on the response body, it describes the terminal outcome of **transmitting** the fax to the remote endpoint (e.g. SUCCESS or FAILURE). 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxId">Fax ID of an outbound fax sent by the authenticated user only.</param>
+        /// <returns>Task of OutboundFaxStatus</returns>
+        
+        System.Threading.Tasks.Task<OutboundFaxStatus> GetFaxFaxIdStatusAsync (string faxId);
+
+        /// <summary>
+        /// Get fax status
+        /// </summary>
+        /// <remarks>
+        /// Retrieves status for an outbound (sent) fax. Only the authenticated user who sent the fax can fetch its status; this operation does not expose inbound or other users' faxes. When the `result` field is present on the response body, it describes the terminal outcome of **transmitting** the fax to the remote endpoint (e.g. SUCCESS or FAILURE). 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxId">Fax ID of an outbound fax sent by the authenticated user only.</param>
+        /// <returns>Task of ApiResponse (OutboundFaxStatus)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OutboundFaxStatus>> GetFaxFaxIdStatusAsyncWithHttpInfo (string faxId);
 
         /// <summary>
         /// Get organization config for given organization
@@ -1306,6 +1354,211 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<FaxDocumentEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (FaxDocumentEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaxDocumentEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get fax status 
+        /// Retrieves status for an outbound (sent) fax. Only the authenticated user who sent the fax can fetch its status; this operation does not expose inbound or other users' faxes. When the `result` field is present on the response body, it describes the terminal outcome of **transmitting** the fax to the remote endpoint (e.g. SUCCESS or FAILURE). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxId">Fax ID of an outbound fax sent by the authenticated user only.</param>
+        /// <returns>OutboundFaxStatus</returns>
+        
+        public OutboundFaxStatus GetFaxFaxIdStatus (string faxId)
+        {
+             ApiResponse<OutboundFaxStatus> localVarResponse = GetFaxFaxIdStatusWithHttpInfo(faxId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get fax status 
+        /// Retrieves status for an outbound (sent) fax. Only the authenticated user who sent the fax can fetch its status; this operation does not expose inbound or other users' faxes. When the `result` field is present on the response body, it describes the terminal outcome of **transmitting** the fax to the remote endpoint (e.g. SUCCESS or FAILURE). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxId">Fax ID of an outbound fax sent by the authenticated user only.</param>
+        /// <returns>ApiResponse of OutboundFaxStatus</returns>
+        
+        public ApiResponse< OutboundFaxStatus > GetFaxFaxIdStatusWithHttpInfo (string faxId)
+        { 
+            // verify the required parameter 'faxId' is set
+            if (faxId == null)
+                throw new ApiException(400, "Missing required parameter 'faxId' when calling FaxApi->GetFaxFaxIdStatus");
+
+            var localVarPath = "/api/v2/fax/{faxId}/status";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (faxId != null) localVarPathParams.Add("faxId", this.Configuration.ApiClient.ParameterToString(faxId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFaxFaxIdStatus: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetFaxFaxIdStatus: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFaxFaxIdStatus: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundFaxStatus>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundFaxStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundFaxStatus)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get fax status 
+        /// Retrieves status for an outbound (sent) fax. Only the authenticated user who sent the fax can fetch its status; this operation does not expose inbound or other users' faxes. When the `result` field is present on the response body, it describes the terminal outcome of **transmitting** the fax to the remote endpoint (e.g. SUCCESS or FAILURE). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxId">Fax ID of an outbound fax sent by the authenticated user only.</param>
+        /// <returns>Task of OutboundFaxStatus</returns>
+        
+        public async System.Threading.Tasks.Task<OutboundFaxStatus> GetFaxFaxIdStatusAsync (string faxId)
+        {
+             ApiResponse<OutboundFaxStatus> localVarResponse = await GetFaxFaxIdStatusAsyncWithHttpInfo(faxId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get fax status 
+        /// Retrieves status for an outbound (sent) fax. Only the authenticated user who sent the fax can fetch its status; this operation does not expose inbound or other users' faxes. When the `result` field is present on the response body, it describes the terminal outcome of **transmitting** the fax to the remote endpoint (e.g. SUCCESS or FAILURE). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="faxId">Fax ID of an outbound fax sent by the authenticated user only.</param>
+        /// <returns>Task of ApiResponse (OutboundFaxStatus)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundFaxStatus>> GetFaxFaxIdStatusAsyncWithHttpInfo (string faxId)
+        { 
+            // verify the required parameter 'faxId' is set
+            if (faxId == null)
+                throw new ApiException(400, "Missing required parameter 'faxId' when calling FaxApi->GetFaxFaxIdStatus");
+            
+
+            var localVarPath = "/api/v2/fax/{faxId}/status";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (faxId != null) localVarPathParams.Add("faxId", this.Configuration.ApiClient.ParameterToString(faxId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFaxFaxIdStatus: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetFaxFaxIdStatus: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFaxFaxIdStatus: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundFaxStatus>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundFaxStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundFaxStatus)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -1,0 +1,17 @@
+# ClusterList
+
+## ININ.PureCloudApi.Model.ClusterList
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Entities** | [**List&lt;Cluster&gt;**](Cluster) |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
+| **SelfUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
+| **Cursors** | [**Cursors**](Cursors) | The cursor that points to the next set of entities being returned. | [optional] |
+
+
+
+_PureCloudPlatform.Client.V2 271.0.0_

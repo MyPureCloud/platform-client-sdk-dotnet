@@ -81,7 +81,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RowsUri">The rows URI for this decision table version..</param>
         /// <param name="Columns">The column definitions of this decision table version..</param>
         /// <param name="Contract">The contract information for this decision table version..</param>
-        public DecisionTableVersion(string Name = null, Division Division = null, int? Version = null, StatusEnum? Status = null, string Description = null, int? RowCount = null, string RowsUri = null, DecisionTableColumns Columns = null, DecisionTableContract Contract = null)
+        /// <param name="Snapshot">Snapshot metadata on this version, if one exists..</param>
+        public DecisionTableVersion(string Name = null, Division Division = null, int? Version = null, StatusEnum? Status = null, string Description = null, int? RowCount = null, string RowsUri = null, DecisionTableColumns Columns = null, DecisionTableContract Contract = null, DecisionTableSnapshot Snapshot = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -92,6 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RowsUri = RowsUri;
             this.Columns = Columns;
             this.Contract = Contract;
+            this.Snapshot = Snapshot;
             
         }
         
@@ -207,6 +209,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Optional note recorded when this version was last published via rollback. Present while Published after rollback; cleared when Superseded. Not set on normal publish.
+        /// </summary>
+        /// <value>Optional note recorded when this version was last published via rollback. Present while Published after rollback; cleared when Superseded. Not set on normal publish.</value>
+        [DataMember(Name="rollbackReason", EmitDefaultValue=false)]
+        public string RollbackReason { get; private set; }
+
+
+
+        /// <summary>
         /// The column definitions of this decision table version.
         /// </summary>
         /// <value>The column definitions of this decision table version.</value>
@@ -221,6 +232,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The contract information for this decision table version.</value>
         [DataMember(Name="contract", EmitDefaultValue=false)]
         public DecisionTableContract Contract { get; set; }
+
+
+
+        /// <summary>
+        /// Snapshot metadata on this version, if one exists.
+        /// </summary>
+        /// <value>Snapshot metadata on this version, if one exists.</value>
+        [DataMember(Name="snapshot", EmitDefaultValue=false)]
+        public DecisionTableSnapshot Snapshot { get; set; }
 
 
 
@@ -254,8 +274,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DatePublished: ").Append(DatePublished).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  PublishedBy: ").Append(PublishedBy).Append("\n");
+            sb.Append("  RollbackReason: ").Append(RollbackReason).Append("\n");
             sb.Append("  Columns: ").Append(Columns).Append("\n");
             sb.Append("  Contract: ").Append(Contract).Append("\n");
+            sb.Append("  Snapshot: ").Append(Snapshot).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -363,6 +385,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PublishedBy.Equals(other.PublishedBy)
                 ) &&
                 (
+                    this.RollbackReason == other.RollbackReason ||
+                    this.RollbackReason != null &&
+                    this.RollbackReason.Equals(other.RollbackReason)
+                ) &&
+                (
                     this.Columns == other.Columns ||
                     this.Columns != null &&
                     this.Columns.Equals(other.Columns)
@@ -371,6 +398,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Contract == other.Contract ||
                     this.Contract != null &&
                     this.Contract.Equals(other.Contract)
+                ) &&
+                (
+                    this.Snapshot == other.Snapshot ||
+                    this.Snapshot != null &&
+                    this.Snapshot.Equals(other.Snapshot)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -429,11 +461,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.PublishedBy != null)
                     hash = hash * 59 + this.PublishedBy.GetHashCode();
 
+                if (this.RollbackReason != null)
+                    hash = hash * 59 + this.RollbackReason.GetHashCode();
+
                 if (this.Columns != null)
                     hash = hash * 59 + this.Columns.GetHashCode();
 
                 if (this.Contract != null)
                     hash = hash * 59 + this.Contract.GetHashCode();
+
+                if (this.Snapshot != null)
+                    hash = hash * 59 + this.Snapshot.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

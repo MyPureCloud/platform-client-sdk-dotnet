@@ -129,20 +129,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The unique identifier for this screen monitoring session
-        /// </summary>
-        /// <value>The unique identifier for this screen monitoring session</value>
-        [DataMember(Name="screenMonitoringId", EmitDefaultValue=false)]
-        public string ScreenMonitoringId { get; set; }
-
-
-
-        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+
+
+
+        /// <summary>
+        /// The unique identifier for this screen monitoring session
+        /// </summary>
+        /// <value>The unique identifier for this screen monitoring session</value>
+        [DataMember(Name="screenMonitoringId", EmitDefaultValue=false)]
+        public string ScreenMonitoringId { get; set; }
 
 
         /// <summary>
@@ -160,8 +160,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
             sb.Append("  MonitoringType: ").Append(MonitoringType).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  ScreenMonitoringId: ").Append(ScreenMonitoringId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  ScreenMonitoringId: ").Append(ScreenMonitoringId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -233,14 +233,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
-                    this.ScreenMonitoringId == other.ScreenMonitoringId ||
-                    this.ScreenMonitoringId != null &&
-                    this.ScreenMonitoringId.Equals(other.ScreenMonitoringId)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
+                    this.ScreenMonitoringId == other.ScreenMonitoringId ||
+                    this.ScreenMonitoringId != null &&
+                    this.ScreenMonitoringId.Equals(other.ScreenMonitoringId)
                 );
         }
 
@@ -273,11 +273,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
 
-                if (this.ScreenMonitoringId != null)
-                    hash = hash * 59 + this.ScreenMonitoringId.GetHashCode();
-
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+
+                if (this.ScreenMonitoringId != null)
+                    hash = hash * 59 + this.ScreenMonitoringId.GetHashCode();
 
                 return hash;
             }

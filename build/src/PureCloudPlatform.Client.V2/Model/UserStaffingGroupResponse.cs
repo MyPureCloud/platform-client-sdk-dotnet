@@ -21,15 +21,37 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStaffingGroupResponse" /> class.
         /// </summary>
+        /// <param name="StartDate">Effective start date of the user assignment in ISO-8601 format or empty value. Empty value means no limit on start-date..</param>
+        /// <param name="EndDate">Effective end date of the user assignment in ISO-8601 format or empty value. Empty value means no limit on end-date..</param>
         /// <param name="User">The user associated with the staffing group.</param>
-        /// <param name="StaffingGroup">The current staffing group of the user.</param>
-        public UserStaffingGroupResponse(UserReference User = null, StaffingGroupReference StaffingGroup = null)
+        /// <param name="StaffingGroup">The staffing group associated with the user.</param>
+        public UserStaffingGroupResponse(String StartDate = null, String EndDate = null, UserReference User = null, StaffingGroupReference StaffingGroup = null)
         {
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
             this.User = User;
             this.StaffingGroup = StaffingGroup;
             
         }
         
+
+
+        /// <summary>
+        /// Effective start date of the user assignment in ISO-8601 format or empty value. Empty value means no limit on start-date.
+        /// </summary>
+        /// <value>Effective start date of the user assignment in ISO-8601 format or empty value. Empty value means no limit on start-date.</value>
+        [DataMember(Name="startDate", EmitDefaultValue=false)]
+        public String StartDate { get; set; }
+
+
+
+        /// <summary>
+        /// Effective end date of the user assignment in ISO-8601 format or empty value. Empty value means no limit on end-date.
+        /// </summary>
+        /// <value>Effective end date of the user assignment in ISO-8601 format or empty value. Empty value means no limit on end-date.</value>
+        [DataMember(Name="endDate", EmitDefaultValue=false)]
+        public String EndDate { get; set; }
+
 
 
         /// <summary>
@@ -42,9 +64,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The current staffing group of the user
+        /// The staffing group associated with the user
         /// </summary>
-        /// <value>The current staffing group of the user</value>
+        /// <value>The staffing group associated with the user</value>
         [DataMember(Name="staffingGroup", EmitDefaultValue=false)]
         public StaffingGroupReference StaffingGroup { get; set; }
 
@@ -58,6 +80,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class UserStaffingGroupResponse {\n");
 
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  StaffingGroup: ").Append(StaffingGroup).Append("\n");
             sb.Append("}\n");
@@ -101,6 +125,16 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.StartDate == other.StartDate ||
+                    this.StartDate != null &&
+                    this.StartDate.Equals(other.StartDate)
+                ) &&
+                (
+                    this.EndDate == other.EndDate ||
+                    this.EndDate != null &&
+                    this.EndDate.Equals(other.EndDate)
+                ) &&
+                (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
@@ -123,6 +157,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.StartDate != null)
+                    hash = hash * 59 + this.StartDate.GetHashCode();
+
+                if (this.EndDate != null)
+                    hash = hash * 59 + this.EndDate.GetHashCode();
+
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
 

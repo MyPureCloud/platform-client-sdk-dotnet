@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Weekly" /> class.
         /// </summary>
-        /// <param name="DownloadUrl">Download URL to fetch the result of weekly time series. This field is populated only if session state is Complete.</param>
+        /// <param name="DownloadUrl">Download URL to fetch the result of weekly time series. This field is populated only if session state is Complete. The downloaded data contains Newline Delimited JSON (NDJSON): one JSON object per line.</param>
         /// <param name="DownloadResult">Result will always come via downloadUrls; however the schema is included for documentation.</param>
         public Weekly(string DownloadUrl = null, List<ContinuousForecastTimeSeries> DownloadResult = null)
         {
@@ -33,9 +33,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Download URL to fetch the result of weekly time series. This field is populated only if session state is Complete
+        /// Download URL to fetch the result of weekly time series. This field is populated only if session state is Complete. The downloaded data contains Newline Delimited JSON (NDJSON): one JSON object per line
         /// </summary>
-        /// <value>Download URL to fetch the result of weekly time series. This field is populated only if session state is Complete</value>
+        /// <value>Download URL to fetch the result of weekly time series. This field is populated only if session state is Complete. The downloaded data contains Newline Delimited JSON (NDJSON): one JSON object per line</value>
         [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
         public string DownloadUrl { get; set; }
 

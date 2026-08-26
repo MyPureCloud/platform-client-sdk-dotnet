@@ -211,12 +211,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ToAddress">The recipient of the text message..</param>
         /// <param name="Direction">The direction of the message..</param>
         /// <param name="MessengerType">Type of text messenger..</param>
-        /// <param name="TextBody">The body of the text message. (Deprecated - Instead use normalizedMessage.text) (required).</param>
         /// <param name="Status">The status of the message. (required).</param>
-        /// <param name="Media">The media details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment).</param>
         /// <param name="CreatedBy">User who sent this message..</param>
         /// <param name="ConversationId">The id of the conversation of this message..</param>
-        public MessageData(string Name = null, string ProviderMessageId = null, DateTime? Timestamp = null, string FromAddress = null, string ToAddress = null, DirectionEnum? Direction = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, StatusEnum? Status = null, List<MessageMedia> Media = null, User CreatedBy = null, string ConversationId = null)
+        public MessageData(string Name = null, string ProviderMessageId = null, DateTime? Timestamp = null, string FromAddress = null, string ToAddress = null, DirectionEnum? Direction = null, MessengerTypeEnum? MessengerType = null, StatusEnum? Status = null, User CreatedBy = null, string ConversationId = null)
         {
             this.Name = Name;
             this.ProviderMessageId = ProviderMessageId;
@@ -225,9 +223,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ToAddress = ToAddress;
             this.Direction = Direction;
             this.MessengerType = MessengerType;
-            this.TextBody = TextBody;
             this.Status = Status;
-            this.Media = Media;
             this.CreatedBy = CreatedBy;
             this.ConversationId = ConversationId;
             
@@ -292,24 +288,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
-        /// <summary>
-        /// The body of the text message. (Deprecated - Instead use normalizedMessage.text)
-        /// </summary>
-        /// <value>The body of the text message. (Deprecated - Instead use normalizedMessage.text)</value>
-        [DataMember(Name="textBody", EmitDefaultValue=false)]
-        public string TextBody { get; set; }
-
-
-
-
-
-        /// <summary>
-        /// The media details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment)
-        /// </summary>
-        /// <value>The media details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment)</value>
-        [DataMember(Name="media", EmitDefaultValue=false)]
-        public List<MessageMedia> Media { get; set; }
-
 
 
         /// <summary>
@@ -373,9 +351,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  MessengerType: ").Append(MessengerType).Append("\n");
-            sb.Append("  TextBody: ").Append(TextBody).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  Media: ").Append(Media).Append("\n");
             sb.Append("  NormalizedMessage: ").Append(NormalizedMessage).Append("\n");
             sb.Append("  NormalizedReceipts: ").Append(NormalizedReceipts).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
@@ -462,19 +438,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessengerType.Equals(other.MessengerType)
                 ) &&
                 (
-                    this.TextBody == other.TextBody ||
-                    this.TextBody != null &&
-                    this.TextBody.Equals(other.TextBody)
-                ) &&
-                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) &&
-                (
-                    this.Media == other.Media ||
-                    this.Media != null &&
-                    this.Media.SequenceEqual(other.Media)
                 ) &&
                 (
                     this.NormalizedMessage == other.NormalizedMessage ||
@@ -538,14 +504,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.MessengerType != null)
                     hash = hash * 59 + this.MessengerType.GetHashCode();
 
-                if (this.TextBody != null)
-                    hash = hash * 59 + this.TextBody.GetHashCode();
-
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-
-                if (this.Media != null)
-                    hash = hash * 59 + this.Media.GetHashCode();
 
                 if (this.NormalizedMessage != null)
                     hash = hash * 59 + this.NormalizedMessage.GetHashCode();

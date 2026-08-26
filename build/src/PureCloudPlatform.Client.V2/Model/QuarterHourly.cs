@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QuarterHourly" /> class.
         /// </summary>
-        /// <param name="DownloadUrls">List of download URLs to fetch the result of quarter hour time series. This field is populated only if session state is Complete.</param>
+        /// <param name="DownloadUrls">List of download URLs to fetch the result of quarter hour time series. This field is populated only if session state is Complete. The downloaded data contains Newline Delimited JSON (NDJSON): one JSON object per line.</param>
         /// <param name="DownloadResult">Result will always come via downloadUrls; however the schema is included for documentation.</param>
         public QuarterHourly(List<string> DownloadUrls = null, List<ContinuousForecastTimeSeries> DownloadResult = null)
         {
@@ -33,9 +33,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of download URLs to fetch the result of quarter hour time series. This field is populated only if session state is Complete
+        /// List of download URLs to fetch the result of quarter hour time series. This field is populated only if session state is Complete. The downloaded data contains Newline Delimited JSON (NDJSON): one JSON object per line
         /// </summary>
-        /// <value>List of download URLs to fetch the result of quarter hour time series. This field is populated only if session state is Complete</value>
+        /// <value>List of download URLs to fetch the result of quarter hour time series. This field is populated only if session state is Complete. The downloaded data contains Newline Delimited JSON (NDJSON): one JSON object per line</value>
         [DataMember(Name="downloadUrls", EmitDefaultValue=false)]
         public List<string> DownloadUrls { get; set; }
 

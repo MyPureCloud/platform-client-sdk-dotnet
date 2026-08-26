@@ -12,10 +12,11 @@
 | **Value** | **double?** | The value the metric will be compared to. | |
 | **Status** | **string** | The status of the entity corresponding to the metric. | [optional] |
 | **Topic** | **string** | The operational console topic corresponding to the metric. | [optional] |
+| **Characteristic** | **string** | The anomaly detection characteristic being evaluated with respect to the metric. | [optional] |
 | **Entity** | [**CommonRulePredicateEntity**](CommonRulePredicateEntity) | The entity whose metric is being represented. | |
 | **MediaType** | **string** | The media type of the conversation the metric describes. | [optional] |
 | **Metric** | **string** | The metric being evaluated. | |
 
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 271.0.0_

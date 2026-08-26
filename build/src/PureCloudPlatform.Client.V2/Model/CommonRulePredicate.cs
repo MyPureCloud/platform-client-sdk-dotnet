@@ -154,6 +154,39 @@ namespace PureCloudPlatform.Client.V2.Model
             Ne
         }
         /// <summary>
+        /// The anomaly detection characteristic being evaluated with respect to the metric.
+        /// </summary>
+        /// <value>The anomaly detection characteristic being evaluated with respect to the metric.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CharacteristicEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Deviation for "Deviation"
+            /// </summary>
+            [EnumMember(Value = "Deviation")]
+            Deviation,
+            
+            /// <summary>
+            /// Enum Score for "Score"
+            /// </summary>
+            [EnumMember(Value = "Score")]
+            Score,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
+        }
+        /// <summary>
         /// The media type of the conversation the metric describes.
         /// </summary>
         /// <value>The media type of the conversation the metric describes.</value>
@@ -400,6 +433,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="comparisonOperator", EmitDefaultValue=false)]
         public ComparisonOperatorEnum? ComparisonOperator { get; set; }
         /// <summary>
+        /// The anomaly detection characteristic being evaluated with respect to the metric.
+        /// </summary>
+        /// <value>The anomaly detection characteristic being evaluated with respect to the metric.</value>
+        [DataMember(Name="characteristic", EmitDefaultValue=false)]
+        public CharacteristicEnum? Characteristic { get; set; }
+        /// <summary>
         /// The media type of the conversation the metric describes.
         /// </summary>
         /// <value>The media type of the conversation the metric describes.</value>
@@ -426,10 +465,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Value">The value the metric will be compared to. (required).</param>
         /// <param name="Status">The status of the entity corresponding to the metric..</param>
         /// <param name="Topic">The operational console topic corresponding to the metric..</param>
+        /// <param name="Characteristic">The anomaly detection characteristic being evaluated with respect to the metric..</param>
         /// <param name="Entity">The entity whose metric is being represented. (required).</param>
         /// <param name="MediaType">The media type of the conversation the metric describes..</param>
         /// <param name="Metric">The metric being evaluated. (required).</param>
-        public CommonRulePredicate(MetricTypeEnum? MetricType = null, MetricValueTypeEnum? MetricValueType = null, ComparisonOperatorEnum? ComparisonOperator = null, double? Value = null, string Status = null, string Topic = null, CommonRulePredicateEntity Entity = null, MediaTypeEnum? MediaType = null, MetricEnum? Metric = null)
+        public CommonRulePredicate(MetricTypeEnum? MetricType = null, MetricValueTypeEnum? MetricValueType = null, ComparisonOperatorEnum? ComparisonOperator = null, double? Value = null, string Status = null, string Topic = null, CharacteristicEnum? Characteristic = null, CommonRulePredicateEntity Entity = null, MediaTypeEnum? MediaType = null, MetricEnum? Metric = null)
         {
             this.MetricType = MetricType;
             this.MetricValueType = MetricValueType;
@@ -437,6 +477,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Value = Value;
             this.Status = Status;
             this.Topic = Topic;
+            this.Characteristic = Characteristic;
             this.Entity = Entity;
             this.MediaType = MediaType;
             this.Metric = Metric;
@@ -478,6 +519,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// The entity whose metric is being represented.
         /// </summary>
@@ -505,6 +548,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Topic: ").Append(Topic).Append("\n");
+            sb.Append("  Characteristic: ").Append(Characteristic).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Metric: ").Append(Metric).Append("\n");
@@ -579,6 +623,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Topic.Equals(other.Topic)
                 ) &&
                 (
+                    this.Characteristic == other.Characteristic ||
+                    this.Characteristic != null &&
+                    this.Characteristic.Equals(other.Characteristic)
+                ) &&
+                (
                     this.Entity == other.Entity ||
                     this.Entity != null &&
                     this.Entity.Equals(other.Entity)
@@ -623,6 +672,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Topic != null)
                     hash = hash * 59 + this.Topic.GetHashCode();
+
+                if (this.Characteristic != null)
+                    hash = hash * 59 + this.Characteristic.GetHashCode();
 
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();

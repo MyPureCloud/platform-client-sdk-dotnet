@@ -46,6 +46,24 @@ namespace PureCloudPlatform.Client.V2.Model
             Presence,
             
             /// <summary>
+            /// Enum Workforcemanagement for "WorkforceManagement"
+            /// </summary>
+            [EnumMember(Value = "WorkforceManagement")]
+            Workforcemanagement,
+            
+            /// <summary>
+            /// Enum Operationalconsole for "OperationalConsole"
+            /// </summary>
+            [EnumMember(Value = "OperationalConsole")]
+            Operationalconsole,
+            
+            /// <summary>
+            /// Enum Anomaly for "Anomaly"
+            /// </summary>
+            [EnumMember(Value = "Anomaly")]
+            Anomaly,
+            
+            /// <summary>
             /// Enum All for "All"
             /// </summary>
             [EnumMember(Value = "All")]

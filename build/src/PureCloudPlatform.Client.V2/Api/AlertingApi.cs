@@ -134,10 +134,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CommonRule> GetAlertingRuleWithHttpInfo (string ruleId);
 
         /// <summary>
-        /// Allows an entity to mute/snooze an alert or update the unread status of the alert.
+        /// Allows an entity to mute/snooze an alert, update the unread status of the alert, or close an alert.
         /// </summary>
         /// <remarks>
-        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals.
+        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals. Closing an alert will mark it as closed.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
@@ -147,10 +147,10 @@ namespace PureCloudPlatform.Client.V2.Api
         CommonAlert PatchAlertingAlert (string alertId, AlertRequest body = null);
 
         /// <summary>
-        /// Allows an entity to mute/snooze an alert or update the unread status of the alert.
+        /// Allows an entity to mute/snooze an alert, update the unread status of the alert, or close an alert.
         /// </summary>
         /// <remarks>
-        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals.
+        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals. Closing an alert will mark it as closed.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
@@ -502,10 +502,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<CommonRule>> GetAlertingRuleAsyncWithHttpInfo (string ruleId);
 
         /// <summary>
-        /// Allows an entity to mute/snooze an alert or update the unread status of the alert.
+        /// Allows an entity to mute/snooze an alert, update the unread status of the alert, or close an alert.
         /// </summary>
         /// <remarks>
-        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals.
+        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals. Closing an alert will mark it as closed.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
@@ -515,10 +515,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<CommonAlert> PatchAlertingAlertAsync (string alertId, AlertRequest body = null);
 
         /// <summary>
-        /// Allows an entity to mute/snooze an alert or update the unread status of the alert.
+        /// Allows an entity to mute/snooze an alert, update the unread status of the alert, or close an alert.
         /// </summary>
         /// <remarks>
-        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals.
+        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals. Closing an alert will mark it as closed.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
@@ -1848,8 +1848,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Allows an entity to mute/snooze an alert or update the unread status of the alert. 
-        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals.
+        /// Allows an entity to mute/snooze an alert, update the unread status of the alert, or close an alert. 
+        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals. Closing an alert will mark it as closed.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
@@ -1863,8 +1863,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Allows an entity to mute/snooze an alert or update the unread status of the alert. 
-        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals.
+        /// Allows an entity to mute/snooze an alert, update the unread status of the alert, or close an alert. 
+        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals. Closing an alert will mark it as closed.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
@@ -1957,8 +1957,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Allows an entity to mute/snooze an alert or update the unread status of the alert. 
-        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals.
+        /// Allows an entity to mute/snooze an alert, update the unread status of the alert, or close an alert. 
+        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals. Closing an alert will mark it as closed.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>
@@ -1973,8 +1973,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Allows an entity to mute/snooze an alert or update the unread status of the alert. 
-        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals.
+        /// Allows an entity to mute/snooze an alert, update the unread status of the alert, or close an alert. 
+        /// Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals. Closing an alert will mark it as closed.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="alertId">Alert ID</param>

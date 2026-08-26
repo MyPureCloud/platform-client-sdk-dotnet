@@ -14,6 +14,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyNumbersRouting**](#GetTelephonyNumbersRouting) | **Get** /api/v2/telephony/numbers/routing | Get Number Routings by organizationId |
 | [**GetTelephonyOrganizationLink**](#GetTelephonyOrganizationLink) | **Get** /api/v2/telephony/organization/link | Get organization links |
 | [**GetTelephonyOrganizationLinkRegions**](#GetTelephonyOrganizationLinkRegions) | **Get** /api/v2/telephony/organization/link/regions | Get all the replica regions by primary region |
+| [**GetTelephonyPrefixes**](#GetTelephonyPrefixes) | **Get** /api/v2/telephony/prefixes | Get prefixes |
+| [**GetTelephonyPrefixesSimulateCall**](#GetTelephonyPrefixesSimulateCall) | **Get** /api/v2/telephony/prefixes/simulate/call | Simulate call to test fraud prefix functionality |
 | [**GetTelephonySettings**](#GetTelephonySettings) | **Get** /api/v2/telephony/settings | Get the global telephony configuration. |
 | [**GetTelephonySipmessagesConversation**](#GetTelephonySipmessagesConversation) | **Get** /api/v2/telephony/sipmessages/conversations/{conversationId} | Get a SIP message. |
 | [**GetTelephonySipmessagesConversationHeaders**](#GetTelephonySipmessagesConversationHeaders) | **Get** /api/v2/telephony/sipmessages/conversations/{conversationId}/headers | Get SIP headers. |
@@ -24,6 +26,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTelephonyNumbersRoutingAll**](#PostTelephonyNumbersRoutingAll) | **Post** /api/v2/telephony/numbers/routing/all | Re-route all numbers on an organization |
 | [**PostTelephonyNumbersRoutingReset**](#PostTelephonyNumbersRoutingReset) | **Post** /api/v2/telephony/numbers/routing/reset | Reset routing for organization |
 | [**PostTelephonyOrganizationLink**](#PostTelephonyOrganizationLink) | **Post** /api/v2/telephony/organization/link | Create a link with an organization |
+| [**PostTelephonyPrefixesBulk**](#PostTelephonyPrefixesBulk) | **Post** /api/v2/telephony/prefixes/bulk | Bulk save prefixes |
 | [**PostTelephonySiptracesDownload**](#PostTelephonySiptracesDownload) | **Post** /api/v2/telephony/siptraces/download | Request a download of a pcap file to S3 |
 | [**PutTelephonyAgentGreetings**](#PutTelephonyAgentGreetings) | **Put** /api/v2/telephony/agents/{agentId}/greetings | Updates an agent&#39;s greetings. |
 | [**PutTelephonyAgentsGreetingsMe**](#PutTelephonyAgentsGreetingsMe) | **Put** /api/v2/telephony/agents/greetings/me | Updates the agent&#39;s own greetings. |
@@ -516,6 +519,138 @@ This endpoint does require any parameters.
 ### Return type
 
 [**List<RegionResponse>**](RegionResponse)
+
+
+## GetTelephonyPrefixes
+
+> [**PrefixListing**](PrefixListing) GetTelephonyPrefixes (string type, string before = null, string after = null, string pageSize = null, string prefix = null)
+
+
+Get prefixes
+
+Requires ALL permissions: 
+
+* telephony:prefix:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyPrefixesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var type = type_example;  // string | Filter by prefix type
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var prefix = prefix_example;  // string | Filter by phone number prefix (optional) 
+
+            try
+            { 
+                // Get prefixes
+                PrefixListing result = apiInstance.GetTelephonyPrefixes(type, before, after, pageSize, prefix);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.GetTelephonyPrefixes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **type** | **string**| Filter by prefix type | <br />**Values**: Allow, Block |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **prefix** | **string**| Filter by phone number prefix | [optional]  |
+
+### Return type
+
+[**PrefixListing**](PrefixListing)
+
+
+## GetTelephonyPrefixesSimulateCall
+
+> [**CallSimulationResult**](CallSimulationResult) GetTelephonyPrefixesSimulateCall (string number)
+
+
+Simulate call to test fraud prefix functionality
+
+Requires ALL permissions: 
+
+* telephony:prefix:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyPrefixesSimulateCallExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var number = number_example;  // string | Phone number to simulate
+
+            try
+            { 
+                // Simulate call to test fraud prefix functionality
+                CallSimulationResult result = apiInstance.GetTelephonyPrefixesSimulateCall(number);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.GetTelephonyPrefixesSimulateCall: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **number** | **string**| Phone number to simulate |  |
+
+### Return type
+
+[**CallSimulationResult**](CallSimulationResult)
 
 
 ## GetTelephonySettings
@@ -1149,6 +1284,68 @@ namespace Example
 [**OrganizationLink**](OrganizationLink)
 
 
+## PostTelephonyPrefixesBulk
+
+> [**BulkPrefixesResponse**](BulkPrefixesResponse) PostTelephonyPrefixesBulk (BulkPrefixesRequest body)
+
+
+Bulk save prefixes
+
+Requires ALL permissions: 
+
+* telephony:prefix:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyPrefixesBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var body = new BulkPrefixesRequest(); // BulkPrefixesRequest | Bulk save request with list of prefixes
+
+            try
+            { 
+                // Bulk save prefixes
+                BulkPrefixesResponse result = apiInstance.PostTelephonyPrefixesBulk(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.PostTelephonyPrefixesBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkPrefixesRequest**](BulkPrefixesRequest)| Bulk save request with list of prefixes |  |
+
+### Return type
+
+[**BulkPrefixesResponse**](BulkPrefixesResponse)
+
+
 ## PostTelephonySiptracesDownload
 
 > [**SipDownloadResponse**](SipDownloadResponse) PostTelephonySiptracesDownload (SIPSearchPublicRequest sIPSearchPublicRequest)
@@ -1399,4 +1596,4 @@ namespace Example
 [**TelephonySettings**](TelephonySettings)
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 271.0.0_

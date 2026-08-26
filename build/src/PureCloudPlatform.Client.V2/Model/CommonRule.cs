@@ -58,6 +58,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Operationalconsole,
             
             /// <summary>
+            /// Enum Anomaly for "Anomaly"
+            /// </summary>
+            [EnumMember(Value = "Anomaly")]
+            Anomaly,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

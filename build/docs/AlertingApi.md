@@ -11,7 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteAlertingRule**](#DeleteAlertingRule) | **Delete** /api/v2/alerting/rules/{ruleId} | Delete a rule. |
 | [**GetAlertingAlert**](#GetAlertingAlert) | **Get** /api/v2/alerting/alerts/{alertId} | Get an alert |
 | [**GetAlertingRule**](#GetAlertingRule) | **Get** /api/v2/alerting/rules/{ruleId} | Get a rule. |
-| [**PatchAlertingAlert**](#PatchAlertingAlert) | **Patch** /api/v2/alerting/alerts/{alertId} | Allows an entity to mute/snooze an alert or update the unread status of the alert. |
+| [**PatchAlertingAlert**](#PatchAlertingAlert) | **Patch** /api/v2/alerting/alerts/{alertId} | Allows an entity to mute/snooze an alert, update the unread status of the alert, or close an alert. |
 | [**PatchAlertingAlertsAll**](#PatchAlertingAlertsAll) | **Patch** /api/v2/alerting/alerts/all | Updates all alerts |
 | [**PatchAlertingAlertsBulk**](#PatchAlertingAlertsBulk) | **Patch** /api/v2/alerting/alerts/bulk | Bulk alert updates |
 | [**PatchAlertingRulesBulk**](#PatchAlertingRulesBulk) | **Patch** /api/v2/alerting/rules/bulk | Bulk update of notification lists |
@@ -332,9 +332,9 @@ namespace Example
 > [**CommonAlert**](CommonAlert) PatchAlertingAlert (string alertId, AlertRequest body = null)
 
 
-Allows an entity to mute/snooze an alert or update the unread status of the alert.
+Allows an entity to mute/snooze an alert, update the unread status of the alert, or close an alert.
 
-Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals.
+Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals. Closing an alert will mark it as closed.
 
 Requires ALL permissions: 
 
@@ -367,7 +367,7 @@ namespace Example
 
             try
             { 
-                // Allows an entity to mute/snooze an alert or update the unread status of the alert.
+                // Allows an entity to mute/snooze an alert, update the unread status of the alert, or close an alert.
                 CommonAlert result = apiInstance.PatchAlertingAlert(alertId, body);
                 Debug.WriteLine(result);
             }
@@ -955,4 +955,4 @@ namespace Example
 [**CommonRule**](CommonRule)
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 271.0.0_

@@ -5726,7 +5726,7 @@ namespace Example
 
 ## GetConversationsMessageDetails
 
-> [**MessageData**](MessageData) GetConversationsMessageDetails (string messageId, bool? useNormalizedMessage = null)
+> [**MessageData**](MessageData) GetConversationsMessageDetails (string messageId)
 
 
 Get message
@@ -5759,12 +5759,11 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var messageId = messageId_example;  // string | messageId
-            var useNormalizedMessage = true;  // bool? | If true, response removes deprecated fields (textBody, media) (optional)  (default to false)
 
             try
             { 
                 // Get message
-                MessageData result = apiInstance.GetConversationsMessageDetails(messageId, useNormalizedMessage);
+                MessageData result = apiInstance.GetConversationsMessageDetails(messageId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5782,7 +5781,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messageId** | **string**| messageId |  |
-| **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media) | [optional] [default to false] |
 
 ### Return type
 
@@ -5791,7 +5789,7 @@ namespace Example
 
 ## GetConversationsMessageMessage
 
-> [**MessageData**](MessageData) GetConversationsMessageMessage (string conversationId, string messageId, bool? useNormalizedMessage = null)
+> [**MessageData**](MessageData) GetConversationsMessageMessage (string conversationId, string messageId)
 
 
 Get conversation message
@@ -5825,12 +5823,11 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var conversationId = conversationId_example;  // string | conversationId
             var messageId = messageId_example;  // string | messageId
-            var useNormalizedMessage = true;  // bool? | If true, response removes deprecated fields (textBody, media) (optional)  (default to false)
 
             try
             { 
                 // Get conversation message
-                MessageData result = apiInstance.GetConversationsMessageMessage(conversationId, messageId, useNormalizedMessage);
+                MessageData result = apiInstance.GetConversationsMessageMessage(conversationId, messageId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5849,7 +5846,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **messageId** | **string**| messageId |  |
-| **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media) | [optional] [default to false] |
 
 ### Return type
 
@@ -16525,7 +16521,7 @@ namespace Example
 
 ## PostConversationsMessageCommunicationMessages
 
-> [**MessageData**](MessageData) PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body, bool? useNormalizedMessage = null)
+> [**MessageData**](MessageData) PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body)
 
 
 Send message
@@ -16562,12 +16558,11 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var communicationId = communicationId_example;  // string | communicationId
             var body = new AdditionalMessage(); // AdditionalMessage | Message
-            var useNormalizedMessage = true;  // bool? | If true, response removes deprecated fields (textBody, media) (optional)  (default to false)
 
             try
             { 
                 // Send message
-                MessageData result = apiInstance.PostConversationsMessageCommunicationMessages(conversationId, communicationId, body, useNormalizedMessage);
+                MessageData result = apiInstance.PostConversationsMessageCommunicationMessages(conversationId, communicationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -16587,7 +16582,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**AdditionalMessage**](AdditionalMessage)| Message |  |
-| **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media) | [optional] [default to false] |
 
 ### Return type
 
@@ -17139,7 +17133,7 @@ namespace Example
 
 ## PostConversationsMessageMessagesBulk
 
-> [**TextMessageListing**](TextMessageListing) PostConversationsMessageMessagesBulk (string conversationId, bool? useNormalizedMessage = null, List<string> body = null)
+> [**TextMessageListing**](TextMessageListing) PostConversationsMessageMessagesBulk (string conversationId, List<string> body = null)
 
 
 Get messages in batch
@@ -17174,13 +17168,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var conversationId = conversationId_example;  // string | 
-            var useNormalizedMessage = true;  // bool? | If true, response removes deprecated fields (textBody, media) (optional)  (default to false)
             var body = new List<string>(); // List<string> | messageIds (optional) 
 
             try
             { 
                 // Get messages in batch
-                TextMessageListing result = apiInstance.PostConversationsMessageMessagesBulk(conversationId, useNormalizedMessage, body);
+                TextMessageListing result = apiInstance.PostConversationsMessageMessagesBulk(conversationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -17198,7 +17191,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**|  |  |
-| **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media) | [optional] [default to false] |
 | **body** | [**List<string>**](string)| messageIds | [optional]  |
 
 ### Return type
@@ -17535,7 +17527,7 @@ namespace Example
 
 ## PostConversationsMessagesAgentless
 
-> [**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse) PostConversationsMessagesAgentless (SendAgentlessOutboundMessageRequest body, bool? useNormalizedMessage = null)
+> [**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse) PostConversationsMessagesAgentless (SendAgentlessOutboundMessageRequest body)
 
 
 Send an agentless outbound message
@@ -17569,12 +17561,11 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var body = new SendAgentlessOutboundMessageRequest(); // SendAgentlessOutboundMessageRequest | Create agentless outbound messaging request
-            var useNormalizedMessage = true;  // bool? | If true, response removes deprecated fields (textBody, messagingTemplate) (optional)  (default to false)
 
             try
             { 
                 // Send an agentless outbound message
-                SendAgentlessOutboundMessageResponse result = apiInstance.PostConversationsMessagesAgentless(body, useNormalizedMessage);
+                SendAgentlessOutboundMessageResponse result = apiInstance.PostConversationsMessagesAgentless(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -17592,7 +17583,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SendAgentlessOutboundMessageRequest**](SendAgentlessOutboundMessageRequest)| Create agentless outbound messaging request |  |
-| **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, messagingTemplate) | [optional] [default to false] |
 
 ### Return type
 
@@ -20507,4 +20497,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 271.0.0_

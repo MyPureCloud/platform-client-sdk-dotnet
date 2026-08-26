@@ -148,6 +148,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteBusinessrulesDecisiontableVersionRowWithHttpInfo (string tableId, int? tableVersion, string rowId);
 
         /// <summary>
+        /// Deletes a decision table version snapshot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <returns></returns>
+        
+        void DeleteBusinessrulesDecisiontableVersionSnapshot (string tableId, int? tableVersion);
+
+        /// <summary>
+        /// Deletes a decision table version snapshot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteBusinessrulesDecisiontableVersionSnapshotWithHttpInfo (string tableId, int? tableVersion);
+
+        /// <summary>
         /// Delete a schema
         /// </summary>
         /// <remarks>
@@ -397,9 +423,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <param name="status">Filter by version status. Repeatable. (optional)</param>
+        /// <param name="hasSnapshot">When true, returns only versions that have snapshot metadata. (optional)</param>
         /// <returns>DecisionTableVersionListing</returns>
         
-        DecisionTableVersionListing GetBusinessrulesDecisiontableVersions (string tableId, string after = null, string pageSize = null);
+        DecisionTableVersionListing GetBusinessrulesDecisiontableVersions (string tableId, string after = null, string pageSize = null, List<string> status = null, bool? hasSnapshot = null);
 
         /// <summary>
         /// Get a list of decision table versions
@@ -411,9 +439,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <param name="status">Filter by version status. Repeatable. (optional)</param>
+        /// <param name="hasSnapshot">When true, returns only versions that have snapshot metadata. (optional)</param>
         /// <returns>ApiResponse of DecisionTableVersionListing</returns>
         
-        ApiResponse<DecisionTableVersionListing> GetBusinessrulesDecisiontableVersionsWithHttpInfo (string tableId, string after = null, string pageSize = null);
+        ApiResponse<DecisionTableVersionListing> GetBusinessrulesDecisiontableVersionsWithHttpInfo (string tableId, string after = null, string pageSize = null, List<string> status = null, bool? hasSnapshot = null);
 
         /// <summary>
         /// Get a list of decision tables.
@@ -504,6 +534,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of BusinessRulesDataSchema</returns>
         
         ApiResponse<BusinessRulesDataSchema> GetBusinessrulesSchemaWithHttpInfo (string schemaId);
+
+        /// <summary>
+        /// Get a schema version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="schemaVersion">Schema version number</param>
+        /// <returns>BusinessRulesDataSchema</returns>
+        
+        BusinessRulesDataSchema GetBusinessrulesSchemaVersion (string schemaId, string schemaVersion);
+
+        /// <summary>
+        /// Get a schema version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="schemaVersion">Schema version number</param>
+        /// <returns>ApiResponse of BusinessRulesDataSchema</returns>
+        
+        ApiResponse<BusinessRulesDataSchema> GetBusinessrulesSchemaVersionWithHttpInfo (string schemaId, string schemaVersion);
+
+        /// <summary>
+        /// List schema versions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of items per page (must be between 1 and 100) (optional)</param>
+        /// <returns>BusinessRulesDataSchemaListing</returns>
+        
+        BusinessRulesDataSchemaListing GetBusinessrulesSchemaVersions (string schemaId, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// List schema versions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of items per page (must be between 1 and 100) (optional)</param>
+        /// <returns>ApiResponse of BusinessRulesDataSchemaListing</returns>
+        
+        ApiResponse<BusinessRulesDataSchemaListing> GetBusinessrulesSchemaVersionsWithHttpInfo (string schemaId, string before = null, string after = null, string pageSize = null);
 
         /// <summary>
         /// Get a list of schemas.
@@ -790,6 +876,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DecisionTableExecutionResponse> PostBusinessrulesDecisiontableVersionExecuteWithHttpInfo (string tableId, int? tableVersion, DecisionTableExecutionRequest body);
 
         /// <summary>
+        /// Re-publish a superseded decision table version as the current published version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Rollback request (optional)</param>
+        /// <returns>DecisionTableVersion</returns>
+        
+        DecisionTableVersion PostBusinessrulesDecisiontableVersionRollback (string tableId, int? tableVersion, RollbackDecisionTableVersionRequest body = null);
+
+        /// <summary>
+        /// Re-publish a superseded decision table version as the current published version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Rollback request (optional)</param>
+        /// <returns>ApiResponse of DecisionTableVersion</returns>
+        
+        ApiResponse<DecisionTableVersion> PostBusinessrulesDecisiontableVersionRollbackWithHttpInfo (string tableId, int? tableVersion, RollbackDecisionTableVersionRequest body = null);
+
+        /// <summary>
         /// Create a decision table row
         /// </summary>
         /// <remarks>
@@ -932,6 +1046,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DecisionTableRowListing</returns>
         
         ApiResponse<DecisionTableRowListing> PostBusinessrulesDecisiontableVersionRowsSearchWithHttpInfo (string tableId, int? tableVersion, SearchDecisionTableRowsRequest body, string pageNumber = null, string pageSize = null);
+
+        /// <summary>
+        /// Creates a decision table version snapshot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Snapshot request</param>
+        /// <returns>DecisionTableVersion</returns>
+        
+        DecisionTableVersion PostBusinessrulesDecisiontableVersionSnapshot (string tableId, int? tableVersion, CreateDecisionTableSnapshotRequest body);
+
+        /// <summary>
+        /// Creates a decision table version snapshot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Snapshot request</param>
+        /// <returns>ApiResponse of DecisionTableVersion</returns>
+        
+        ApiResponse<DecisionTableVersion> PostBusinessrulesDecisiontableVersionSnapshotWithHttpInfo (string tableId, int? tableVersion, CreateDecisionTableSnapshotRequest body);
 
         /// <summary>
         /// Update the Business Rules Schema to the latest version for a given decision table version
@@ -1252,6 +1394,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteBusinessrulesDecisiontableVersionRowAsyncWithHttpInfo (string tableId, int? tableVersion, string rowId);
 
         /// <summary>
+        /// Deletes a decision table version snapshot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteBusinessrulesDecisiontableVersionSnapshotAsync (string tableId, int? tableVersion);
+
+        /// <summary>
+        /// Deletes a decision table version snapshot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteBusinessrulesDecisiontableVersionSnapshotAsyncWithHttpInfo (string tableId, int? tableVersion);
+
+        /// <summary>
         /// Delete a schema
         /// </summary>
         /// <remarks>
@@ -1501,9 +1669,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <param name="status">Filter by version status. Repeatable. (optional)</param>
+        /// <param name="hasSnapshot">When true, returns only versions that have snapshot metadata. (optional)</param>
         /// <returns>Task of DecisionTableVersionListing</returns>
         
-        System.Threading.Tasks.Task<DecisionTableVersionListing> GetBusinessrulesDecisiontableVersionsAsync (string tableId, string after = null, string pageSize = null);
+        System.Threading.Tasks.Task<DecisionTableVersionListing> GetBusinessrulesDecisiontableVersionsAsync (string tableId, string after = null, string pageSize = null, List<string> status = null, bool? hasSnapshot = null);
 
         /// <summary>
         /// Get a list of decision table versions
@@ -1515,9 +1685,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <param name="status">Filter by version status. Repeatable. (optional)</param>
+        /// <param name="hasSnapshot">When true, returns only versions that have snapshot metadata. (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableVersionListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DecisionTableVersionListing>> GetBusinessrulesDecisiontableVersionsAsyncWithHttpInfo (string tableId, string after = null, string pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableVersionListing>> GetBusinessrulesDecisiontableVersionsAsyncWithHttpInfo (string tableId, string after = null, string pageSize = null, List<string> status = null, bool? hasSnapshot = null);
 
         /// <summary>
         /// Get a list of decision tables.
@@ -1608,6 +1780,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (BusinessRulesDataSchema)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchema>> GetBusinessrulesSchemaAsyncWithHttpInfo (string schemaId);
+
+        /// <summary>
+        /// Get a schema version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="schemaVersion">Schema version number</param>
+        /// <returns>Task of BusinessRulesDataSchema</returns>
+        
+        System.Threading.Tasks.Task<BusinessRulesDataSchema> GetBusinessrulesSchemaVersionAsync (string schemaId, string schemaVersion);
+
+        /// <summary>
+        /// Get a schema version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="schemaVersion">Schema version number</param>
+        /// <returns>Task of ApiResponse (BusinessRulesDataSchema)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchema>> GetBusinessrulesSchemaVersionAsyncWithHttpInfo (string schemaId, string schemaVersion);
+
+        /// <summary>
+        /// List schema versions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of items per page (must be between 1 and 100) (optional)</param>
+        /// <returns>Task of BusinessRulesDataSchemaListing</returns>
+        
+        System.Threading.Tasks.Task<BusinessRulesDataSchemaListing> GetBusinessrulesSchemaVersionsAsync (string schemaId, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// List schema versions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of items per page (must be between 1 and 100) (optional)</param>
+        /// <returns>Task of ApiResponse (BusinessRulesDataSchemaListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchemaListing>> GetBusinessrulesSchemaVersionsAsyncWithHttpInfo (string schemaId, string before = null, string after = null, string pageSize = null);
 
         /// <summary>
         /// Get a list of schemas.
@@ -1894,6 +2122,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DecisionTableExecutionResponse>> PostBusinessrulesDecisiontableVersionExecuteAsyncWithHttpInfo (string tableId, int? tableVersion, DecisionTableExecutionRequest body);
 
         /// <summary>
+        /// Re-publish a superseded decision table version as the current published version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Rollback request (optional)</param>
+        /// <returns>Task of DecisionTableVersion</returns>
+        
+        System.Threading.Tasks.Task<DecisionTableVersion> PostBusinessrulesDecisiontableVersionRollbackAsync (string tableId, int? tableVersion, RollbackDecisionTableVersionRequest body = null);
+
+        /// <summary>
+        /// Re-publish a superseded decision table version as the current published version
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Rollback request (optional)</param>
+        /// <returns>Task of ApiResponse (DecisionTableVersion)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableVersion>> PostBusinessrulesDecisiontableVersionRollbackAsyncWithHttpInfo (string tableId, int? tableVersion, RollbackDecisionTableVersionRequest body = null);
+
+        /// <summary>
         /// Create a decision table row
         /// </summary>
         /// <remarks>
@@ -2036,6 +2292,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DecisionTableRowListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DecisionTableRowListing>> PostBusinessrulesDecisiontableVersionRowsSearchAsyncWithHttpInfo (string tableId, int? tableVersion, SearchDecisionTableRowsRequest body, string pageNumber = null, string pageSize = null);
+
+        /// <summary>
+        /// Creates a decision table version snapshot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Snapshot request</param>
+        /// <returns>Task of DecisionTableVersion</returns>
+        
+        System.Threading.Tasks.Task<DecisionTableVersion> PostBusinessrulesDecisiontableVersionSnapshotAsync (string tableId, int? tableVersion, CreateDecisionTableSnapshotRequest body);
+
+        /// <summary>
+        /// Creates a decision table version snapshot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Snapshot request</param>
+        /// <returns>Task of ApiResponse (DecisionTableVersion)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableVersion>> PostBusinessrulesDecisiontableVersionSnapshotAsyncWithHttpInfo (string tableId, int? tableVersion, CreateDecisionTableSnapshotRequest body);
 
         /// <summary>
         /// Update the Business Rules Schema to the latest version for a given decision table version
@@ -3387,6 +3671,222 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteBusinessrulesDecisiontableVersionRow: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontableVersionRow: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Deletes a decision table version snapshot 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <returns></returns>
+        
+        public void DeleteBusinessrulesDecisiontableVersionSnapshot (string tableId, int? tableVersion)
+        {
+             DeleteBusinessrulesDecisiontableVersionSnapshotWithHttpInfo(tableId, tableVersion);
+        }
+
+        /// <summary>
+        /// Deletes a decision table version snapshot 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteBusinessrulesDecisiontableVersionSnapshotWithHttpInfo (string tableId, int? tableVersion)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableVersionSnapshot");
+            // verify the required parameter 'tableVersion' is set
+            if (tableVersion == null)
+                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableVersionSnapshot");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/snapshot";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontableVersionSnapshot: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteBusinessrulesDecisiontableVersionSnapshot: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontableVersionSnapshot: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Deletes a decision table version snapshot 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteBusinessrulesDecisiontableVersionSnapshotAsync (string tableId, int? tableVersion)
+        {
+             await DeleteBusinessrulesDecisiontableVersionSnapshotAsyncWithHttpInfo(tableId, tableVersion);
+
+        }
+
+        /// <summary>
+        /// Deletes a decision table version snapshot 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteBusinessrulesDecisiontableVersionSnapshotAsyncWithHttpInfo (string tableId, int? tableVersion)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableVersionSnapshot");
+            
+            // verify the required parameter 'tableVersion' is set
+            if (tableVersion == null)
+                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableVersionSnapshot");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/snapshot";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontableVersionSnapshot: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteBusinessrulesDecisiontableVersionSnapshot: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteBusinessrulesDecisiontableVersionSnapshot: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -5362,11 +5862,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <param name="status">Filter by version status. Repeatable. (optional)</param>
+        /// <param name="hasSnapshot">When true, returns only versions that have snapshot metadata. (optional)</param>
         /// <returns>DecisionTableVersionListing</returns>
         
-        public DecisionTableVersionListing GetBusinessrulesDecisiontableVersions (string tableId, string after = null, string pageSize = null)
+        public DecisionTableVersionListing GetBusinessrulesDecisiontableVersions (string tableId, string after = null, string pageSize = null, List<string> status = null, bool? hasSnapshot = null)
         {
-             ApiResponse<DecisionTableVersionListing> localVarResponse = GetBusinessrulesDecisiontableVersionsWithHttpInfo(tableId, after, pageSize);
+             ApiResponse<DecisionTableVersionListing> localVarResponse = GetBusinessrulesDecisiontableVersionsWithHttpInfo(tableId, after, pageSize, status, hasSnapshot);
              return localVarResponse.Data;
         }
 
@@ -5378,9 +5880,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <param name="status">Filter by version status. Repeatable. (optional)</param>
+        /// <param name="hasSnapshot">When true, returns only versions that have snapshot metadata. (optional)</param>
         /// <returns>ApiResponse of DecisionTableVersionListing</returns>
         
-        public ApiResponse< DecisionTableVersionListing > GetBusinessrulesDecisiontableVersionsWithHttpInfo (string tableId, string after = null, string pageSize = null)
+        public ApiResponse< DecisionTableVersionListing > GetBusinessrulesDecisiontableVersionsWithHttpInfo (string tableId, string after = null, string pageSize = null, List<string> status = null, bool? hasSnapshot = null)
         { 
             // verify the required parameter 'tableId' is set
             if (tableId == null)
@@ -5422,6 +5926,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (status != null) status.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (hasSnapshot != null) localVarQueryParams.Add(new Tuple<string, string>("hasSnapshot", this.Configuration.ApiClient.ParameterToString(hasSnapshot)));
 
             // Header params
 
@@ -5469,11 +5975,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <param name="status">Filter by version status. Repeatable. (optional)</param>
+        /// <param name="hasSnapshot">When true, returns only versions that have snapshot metadata. (optional)</param>
         /// <returns>Task of DecisionTableVersionListing</returns>
         
-        public async System.Threading.Tasks.Task<DecisionTableVersionListing> GetBusinessrulesDecisiontableVersionsAsync (string tableId, string after = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<DecisionTableVersionListing> GetBusinessrulesDecisiontableVersionsAsync (string tableId, string after = null, string pageSize = null, List<string> status = null, bool? hasSnapshot = null)
         {
-             ApiResponse<DecisionTableVersionListing> localVarResponse = await GetBusinessrulesDecisiontableVersionsAsyncWithHttpInfo(tableId, after, pageSize);
+             ApiResponse<DecisionTableVersionListing> localVarResponse = await GetBusinessrulesDecisiontableVersionsAsyncWithHttpInfo(tableId, after, pageSize, status, hasSnapshot);
              return localVarResponse.Data;
 
         }
@@ -5486,9 +5994,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
+        /// <param name="status">Filter by version status. Repeatable. (optional)</param>
+        /// <param name="hasSnapshot">When true, returns only versions that have snapshot metadata. (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableVersionListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableVersionListing>> GetBusinessrulesDecisiontableVersionsAsyncWithHttpInfo (string tableId, string after = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableVersionListing>> GetBusinessrulesDecisiontableVersionsAsyncWithHttpInfo (string tableId, string after = null, string pageSize = null, List<string> status = null, bool? hasSnapshot = null)
         { 
             // verify the required parameter 'tableId' is set
             if (tableId == null)
@@ -5531,6 +6041,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (status != null) status.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (hasSnapshot != null) localVarQueryParams.Add(new Tuple<string, string>("hasSnapshot", this.Configuration.ApiClient.ParameterToString(hasSnapshot)));
 
             // Header params
 
@@ -6220,6 +6732,447 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<BusinessRulesDataSchema>(localVarStatusCode,
                 localVarHeaders,
                 (BusinessRulesDataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessRulesDataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a schema version 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="schemaVersion">Schema version number</param>
+        /// <returns>BusinessRulesDataSchema</returns>
+        
+        public BusinessRulesDataSchema GetBusinessrulesSchemaVersion (string schemaId, string schemaVersion)
+        {
+             ApiResponse<BusinessRulesDataSchema> localVarResponse = GetBusinessrulesSchemaVersionWithHttpInfo(schemaId, schemaVersion);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a schema version 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="schemaVersion">Schema version number</param>
+        /// <returns>ApiResponse of BusinessRulesDataSchema</returns>
+        
+        public ApiResponse< BusinessRulesDataSchema > GetBusinessrulesSchemaVersionWithHttpInfo (string schemaId, string schemaVersion)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling BusinessRulesApi->GetBusinessrulesSchemaVersion");
+            // verify the required parameter 'schemaVersion' is set
+            if (schemaVersion == null)
+                throw new ApiException(400, "Missing required parameter 'schemaVersion' when calling BusinessRulesApi->GetBusinessrulesSchemaVersion");
+
+            var localVarPath = "/api/v2/businessrules/schemas/{schemaId}/versions/{schemaVersion}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+            if (schemaVersion != null) localVarPathParams.Add("schemaVersion", this.Configuration.ApiClient.ParameterToString(schemaVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetBusinessrulesSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesSchemaVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BusinessRulesDataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (BusinessRulesDataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessRulesDataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a schema version 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="schemaVersion">Schema version number</param>
+        /// <returns>Task of BusinessRulesDataSchema</returns>
+        
+        public async System.Threading.Tasks.Task<BusinessRulesDataSchema> GetBusinessrulesSchemaVersionAsync (string schemaId, string schemaVersion)
+        {
+             ApiResponse<BusinessRulesDataSchema> localVarResponse = await GetBusinessrulesSchemaVersionAsyncWithHttpInfo(schemaId, schemaVersion);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a schema version 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="schemaVersion">Schema version number</param>
+        /// <returns>Task of ApiResponse (BusinessRulesDataSchema)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchema>> GetBusinessrulesSchemaVersionAsyncWithHttpInfo (string schemaId, string schemaVersion)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling BusinessRulesApi->GetBusinessrulesSchemaVersion");
+            
+            // verify the required parameter 'schemaVersion' is set
+            if (schemaVersion == null)
+                throw new ApiException(400, "Missing required parameter 'schemaVersion' when calling BusinessRulesApi->GetBusinessrulesSchemaVersion");
+            
+
+            var localVarPath = "/api/v2/businessrules/schemas/{schemaId}/versions/{schemaVersion}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+            if (schemaVersion != null) localVarPathParams.Add("schemaVersion", this.Configuration.ApiClient.ParameterToString(schemaVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetBusinessrulesSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesSchemaVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BusinessRulesDataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (BusinessRulesDataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessRulesDataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// List schema versions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of items per page (must be between 1 and 100) (optional)</param>
+        /// <returns>BusinessRulesDataSchemaListing</returns>
+        
+        public BusinessRulesDataSchemaListing GetBusinessrulesSchemaVersions (string schemaId, string before = null, string after = null, string pageSize = null)
+        {
+             ApiResponse<BusinessRulesDataSchemaListing> localVarResponse = GetBusinessrulesSchemaVersionsWithHttpInfo(schemaId, before, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List schema versions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of items per page (must be between 1 and 100) (optional)</param>
+        /// <returns>ApiResponse of BusinessRulesDataSchemaListing</returns>
+        
+        public ApiResponse< BusinessRulesDataSchemaListing > GetBusinessrulesSchemaVersionsWithHttpInfo (string schemaId, string before = null, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling BusinessRulesApi->GetBusinessrulesSchemaVersions");
+
+            var localVarPath = "/api/v2/businessrules/schemas/{schemaId}/versions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetBusinessrulesSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BusinessRulesDataSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (BusinessRulesDataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessRulesDataSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// List schema versions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of items per page (must be between 1 and 100) (optional)</param>
+        /// <returns>Task of BusinessRulesDataSchemaListing</returns>
+        
+        public async System.Threading.Tasks.Task<BusinessRulesDataSchemaListing> GetBusinessrulesSchemaVersionsAsync (string schemaId, string before = null, string after = null, string pageSize = null)
+        {
+             ApiResponse<BusinessRulesDataSchemaListing> localVarResponse = await GetBusinessrulesSchemaVersionsAsyncWithHttpInfo(schemaId, before, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List schema versions 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of items per page (must be between 1 and 100) (optional)</param>
+        /// <returns>Task of ApiResponse (BusinessRulesDataSchemaListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchemaListing>> GetBusinessrulesSchemaVersionsAsyncWithHttpInfo (string schemaId, string before = null, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling BusinessRulesApi->GetBusinessrulesSchemaVersions");
+            
+
+            var localVarPath = "/api/v2/businessrules/schemas/{schemaId}/versions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetBusinessrulesSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BusinessRulesDataSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (BusinessRulesDataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessRulesDataSchemaListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8692,6 +9645,240 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Re-publish a superseded decision table version as the current published version 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Rollback request (optional)</param>
+        /// <returns>DecisionTableVersion</returns>
+        
+        public DecisionTableVersion PostBusinessrulesDecisiontableVersionRollback (string tableId, int? tableVersion, RollbackDecisionTableVersionRequest body = null)
+        {
+             ApiResponse<DecisionTableVersion> localVarResponse = PostBusinessrulesDecisiontableVersionRollbackWithHttpInfo(tableId, tableVersion, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Re-publish a superseded decision table version as the current published version 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Rollback request (optional)</param>
+        /// <returns>ApiResponse of DecisionTableVersion</returns>
+        
+        public ApiResponse< DecisionTableVersion > PostBusinessrulesDecisiontableVersionRollbackWithHttpInfo (string tableId, int? tableVersion, RollbackDecisionTableVersionRequest body = null)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRollback");
+            // verify the required parameter 'tableVersion' is set
+            if (tableVersion == null)
+                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRollback");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rollback";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRollback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableVersionRollback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRollback: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableVersion>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableVersion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableVersion)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Re-publish a superseded decision table version as the current published version 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Rollback request (optional)</param>
+        /// <returns>Task of DecisionTableVersion</returns>
+        
+        public async System.Threading.Tasks.Task<DecisionTableVersion> PostBusinessrulesDecisiontableVersionRollbackAsync (string tableId, int? tableVersion, RollbackDecisionTableVersionRequest body = null)
+        {
+             ApiResponse<DecisionTableVersion> localVarResponse = await PostBusinessrulesDecisiontableVersionRollbackAsyncWithHttpInfo(tableId, tableVersion, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Re-publish a superseded decision table version as the current published version 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Rollback request (optional)</param>
+        /// <returns>Task of ApiResponse (DecisionTableVersion)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableVersion>> PostBusinessrulesDecisiontableVersionRollbackAsyncWithHttpInfo (string tableId, int? tableVersion, RollbackDecisionTableVersionRequest body = null)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRollback");
+            
+            // verify the required parameter 'tableVersion' is set
+            if (tableVersion == null)
+                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRollback");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rollback";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRollback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableVersionRollback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionRollback: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableVersion>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableVersion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableVersion)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create a decision table row 
         /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
@@ -9900,6 +11087,247 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DecisionTableRowListing>(localVarStatusCode,
                 localVarHeaders,
                 (DecisionTableRowListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableRowListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Creates a decision table version snapshot 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Snapshot request</param>
+        /// <returns>DecisionTableVersion</returns>
+        
+        public DecisionTableVersion PostBusinessrulesDecisiontableVersionSnapshot (string tableId, int? tableVersion, CreateDecisionTableSnapshotRequest body)
+        {
+             ApiResponse<DecisionTableVersion> localVarResponse = PostBusinessrulesDecisiontableVersionSnapshotWithHttpInfo(tableId, tableVersion, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a decision table version snapshot 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Snapshot request</param>
+        /// <returns>ApiResponse of DecisionTableVersion</returns>
+        
+        public ApiResponse< DecisionTableVersion > PostBusinessrulesDecisiontableVersionSnapshotWithHttpInfo (string tableId, int? tableVersion, CreateDecisionTableSnapshotRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionSnapshot");
+            // verify the required parameter 'tableVersion' is set
+            if (tableVersion == null)
+                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionSnapshot");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionSnapshot");
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/snapshot";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionSnapshot: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableVersionSnapshot: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionSnapshot: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableVersion>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableVersion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableVersion)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Creates a decision table version snapshot 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Snapshot request</param>
+        /// <returns>Task of DecisionTableVersion</returns>
+        
+        public async System.Threading.Tasks.Task<DecisionTableVersion> PostBusinessrulesDecisiontableVersionSnapshotAsync (string tableId, int? tableVersion, CreateDecisionTableSnapshotRequest body)
+        {
+             ApiResponse<DecisionTableVersion> localVarResponse = await PostBusinessrulesDecisiontableVersionSnapshotAsyncWithHttpInfo(tableId, tableVersion, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a decision table version snapshot 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tableId">Table ID</param>
+        /// <param name="tableVersion">Table Version</param>
+        /// <param name="body">Snapshot request</param>
+        /// <returns>Task of ApiResponse (DecisionTableVersion)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableVersion>> PostBusinessrulesDecisiontableVersionSnapshotAsyncWithHttpInfo (string tableId, int? tableVersion, CreateDecisionTableSnapshotRequest body)
+        { 
+            // verify the required parameter 'tableId' is set
+            if (tableId == null)
+                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionSnapshot");
+            
+            // verify the required parameter 'tableVersion' is set
+            if (tableVersion == null)
+                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionSnapshot");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionSnapshot");
+            
+
+            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/snapshot";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
+            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionSnapshot: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostBusinessrulesDecisiontableVersionSnapshot: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesDecisiontableVersionSnapshot: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DecisionTableVersion>(localVarStatusCode,
+                localVarHeaders,
+                (DecisionTableVersion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableVersion)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

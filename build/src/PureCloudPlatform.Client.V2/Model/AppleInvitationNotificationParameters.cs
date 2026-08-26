@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppleInvitationNotificationParameters" /> class.
         /// </summary>
-        /// <param name="ReferenceId">An opaque, caller-supplied string that provides business context for the notification message (e.g., an order number or case ID)..</param>
+        /// <param name="ReferenceId">An opaque, caller-supplied string that provides business context for the notification message (e.g., an order number or case ID). Max: 1000 characters. Must not be empty and must not contain &#39;?&#39; or apostrophe (&#39;) characters..</param>
         public AppleInvitationNotificationParameters(string ReferenceId = null)
         {
             this.ReferenceId = ReferenceId;
@@ -31,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// An opaque, caller-supplied string that provides business context for the notification message (e.g., an order number or case ID).
+        /// An opaque, caller-supplied string that provides business context for the notification message (e.g., an order number or case ID). Max: 1000 characters. Must not be empty and must not contain &#39;?&#39; or apostrophe (&#39;) characters.
         /// </summary>
-        /// <value>An opaque, caller-supplied string that provides business context for the notification message (e.g., an order number or case ID).</value>
+        /// <value>An opaque, caller-supplied string that provides business context for the notification message (e.g., an order number or case ID). Max: 1000 characters. Must not be empty and must not contain &#39;?&#39; or apostrophe (&#39;) characters.</value>
         [DataMember(Name="referenceId", EmitDefaultValue=false)]
         public string ReferenceId { get; set; }
 

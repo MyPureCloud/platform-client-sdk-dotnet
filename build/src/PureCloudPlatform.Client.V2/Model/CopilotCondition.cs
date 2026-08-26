@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Conversationend for "ConversationEnd"
             /// </summary>
             [EnumMember(Value = "ConversationEnd")]
-            Conversationend
+            Conversationend,
+            
+            /// <summary>
+            /// Enum Sentiment for "Sentiment"
+            /// </summary>
+            [EnumMember(Value = "Sentiment")]
+            Sentiment
         }
         /// <summary>
         /// Type of condition.

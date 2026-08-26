@@ -12,9 +12,9 @@
 | **ParticipantId** | **string** | The ID of the participant being monitored (for conversation-level monitoring) | [optional] |
 | **MonitoringType** | **string** | The type of screen monitoring session | |
 | **DateCreated** | **DateTime?** | The date and time when the screen monitoring session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
-| **ScreenMonitoringId** | **string** | The unique identifier for this screen monitoring session | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
+| **ScreenMonitoringId** | **string** | The unique identifier for this screen monitoring session | |
 
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 271.0.0_

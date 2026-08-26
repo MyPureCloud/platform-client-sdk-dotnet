@@ -212,6 +212,62 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<RegionResponse>> GetTelephonyOrganizationLinkRegionsWithHttpInfo ();
 
         /// <summary>
+        /// Get prefixes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Filter by prefix type</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="prefix">Filter by phone number prefix (optional)</param>
+        /// <returns>PrefixListing</returns>
+        
+        PrefixListing GetTelephonyPrefixes (string type, string before = null, string after = null, string pageSize = null, string prefix = null);
+
+        /// <summary>
+        /// Get prefixes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Filter by prefix type</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="prefix">Filter by phone number prefix (optional)</param>
+        /// <returns>ApiResponse of PrefixListing</returns>
+        
+        ApiResponse<PrefixListing> GetTelephonyPrefixesWithHttpInfo (string type, string before = null, string after = null, string pageSize = null, string prefix = null);
+
+        /// <summary>
+        /// Simulate call to test fraud prefix functionality
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="number">Phone number to simulate</param>
+        /// <returns>CallSimulationResult</returns>
+        
+        CallSimulationResult GetTelephonyPrefixesSimulateCall (string number);
+
+        /// <summary>
+        /// Simulate call to test fraud prefix functionality
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="number">Phone number to simulate</param>
+        /// <returns>ApiResponse of CallSimulationResult</returns>
+        
+        ApiResponse<CallSimulationResult> GetTelephonyPrefixesSimulateCallWithHttpInfo (string number);
+
+        /// <summary>
         /// Get the global telephony configuration.
         /// </summary>
         /// <remarks>
@@ -462,6 +518,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of OrganizationLink</returns>
         
         ApiResponse<OrganizationLink> PostTelephonyOrganizationLinkWithHttpInfo (CreateOrganizationLink body);
+
+        /// <summary>
+        /// Bulk save prefixes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk save request with list of prefixes</param>
+        /// <returns>BulkPrefixesResponse</returns>
+        
+        BulkPrefixesResponse PostTelephonyPrefixesBulk (BulkPrefixesRequest body);
+
+        /// <summary>
+        /// Bulk save prefixes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk save request with list of prefixes</param>
+        /// <returns>ApiResponse of BulkPrefixesResponse</returns>
+        
+        ApiResponse<BulkPrefixesResponse> PostTelephonyPrefixesBulkWithHttpInfo (BulkPrefixesRequest body);
 
         /// <summary>
         /// Request a download of a pcap file to S3
@@ -762,6 +842,62 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<RegionResponse>>> GetTelephonyOrganizationLinkRegionsAsyncWithHttpInfo ();
 
         /// <summary>
+        /// Get prefixes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Filter by prefix type</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="prefix">Filter by phone number prefix (optional)</param>
+        /// <returns>Task of PrefixListing</returns>
+        
+        System.Threading.Tasks.Task<PrefixListing> GetTelephonyPrefixesAsync (string type, string before = null, string after = null, string pageSize = null, string prefix = null);
+
+        /// <summary>
+        /// Get prefixes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Filter by prefix type</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="prefix">Filter by phone number prefix (optional)</param>
+        /// <returns>Task of ApiResponse (PrefixListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<PrefixListing>> GetTelephonyPrefixesAsyncWithHttpInfo (string type, string before = null, string after = null, string pageSize = null, string prefix = null);
+
+        /// <summary>
+        /// Simulate call to test fraud prefix functionality
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="number">Phone number to simulate</param>
+        /// <returns>Task of CallSimulationResult</returns>
+        
+        System.Threading.Tasks.Task<CallSimulationResult> GetTelephonyPrefixesSimulateCallAsync (string number);
+
+        /// <summary>
+        /// Simulate call to test fraud prefix functionality
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="number">Phone number to simulate</param>
+        /// <returns>Task of ApiResponse (CallSimulationResult)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CallSimulationResult>> GetTelephonyPrefixesSimulateCallAsyncWithHttpInfo (string number);
+
+        /// <summary>
         /// Get the global telephony configuration.
         /// </summary>
         /// <remarks>
@@ -1012,6 +1148,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (OrganizationLink)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<OrganizationLink>> PostTelephonyOrganizationLinkAsyncWithHttpInfo (CreateOrganizationLink body);
+
+        /// <summary>
+        /// Bulk save prefixes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk save request with list of prefixes</param>
+        /// <returns>Task of BulkPrefixesResponse</returns>
+        
+        System.Threading.Tasks.Task<BulkPrefixesResponse> PostTelephonyPrefixesBulkAsync (BulkPrefixesRequest body);
+
+        /// <summary>
+        /// Bulk save prefixes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk save request with list of prefixes</param>
+        /// <returns>Task of ApiResponse (BulkPrefixesResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkPrefixesResponse>> PostTelephonyPrefixesBulkAsyncWithHttpInfo (BulkPrefixesRequest body);
 
         /// <summary>
         /// Request a download of a pcap file to S3
@@ -2805,6 +2965,440 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<List<RegionResponse>>(localVarStatusCode,
                 localVarHeaders,
                 (List<RegionResponse>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RegionResponse>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get prefixes 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Filter by prefix type</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="prefix">Filter by phone number prefix (optional)</param>
+        /// <returns>PrefixListing</returns>
+        
+        public PrefixListing GetTelephonyPrefixes (string type, string before = null, string after = null, string pageSize = null, string prefix = null)
+        {
+             ApiResponse<PrefixListing> localVarResponse = GetTelephonyPrefixesWithHttpInfo(type, before, after, pageSize, prefix);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get prefixes 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Filter by prefix type</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="prefix">Filter by phone number prefix (optional)</param>
+        /// <returns>ApiResponse of PrefixListing</returns>
+        
+        public ApiResponse< PrefixListing > GetTelephonyPrefixesWithHttpInfo (string type, string before = null, string after = null, string pageSize = null, string prefix = null)
+        { 
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling TelephonyApi->GetTelephonyPrefixes");
+
+            var localVarPath = "/api/v2/telephony/prefixes";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (prefix != null) localVarQueryParams.Add(new Tuple<string, string>("prefix", this.Configuration.ApiClient.ParameterToString(prefix)));
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyPrefixes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetTelephonyPrefixes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyPrefixes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PrefixListing>(localVarStatusCode,
+                localVarHeaders,
+                (PrefixListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PrefixListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get prefixes 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Filter by prefix type</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="prefix">Filter by phone number prefix (optional)</param>
+        /// <returns>Task of PrefixListing</returns>
+        
+        public async System.Threading.Tasks.Task<PrefixListing> GetTelephonyPrefixesAsync (string type, string before = null, string after = null, string pageSize = null, string prefix = null)
+        {
+             ApiResponse<PrefixListing> localVarResponse = await GetTelephonyPrefixesAsyncWithHttpInfo(type, before, after, pageSize, prefix);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get prefixes 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Filter by prefix type</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="prefix">Filter by phone number prefix (optional)</param>
+        /// <returns>Task of ApiResponse (PrefixListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<PrefixListing>> GetTelephonyPrefixesAsyncWithHttpInfo (string type, string before = null, string after = null, string pageSize = null, string prefix = null)
+        { 
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling TelephonyApi->GetTelephonyPrefixes");
+            
+
+            var localVarPath = "/api/v2/telephony/prefixes";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (prefix != null) localVarQueryParams.Add(new Tuple<string, string>("prefix", this.Configuration.ApiClient.ParameterToString(prefix)));
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyPrefixes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetTelephonyPrefixes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyPrefixes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PrefixListing>(localVarStatusCode,
+                localVarHeaders,
+                (PrefixListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PrefixListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Simulate call to test fraud prefix functionality 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="number">Phone number to simulate</param>
+        /// <returns>CallSimulationResult</returns>
+        
+        public CallSimulationResult GetTelephonyPrefixesSimulateCall (string number)
+        {
+             ApiResponse<CallSimulationResult> localVarResponse = GetTelephonyPrefixesSimulateCallWithHttpInfo(number);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Simulate call to test fraud prefix functionality 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="number">Phone number to simulate</param>
+        /// <returns>ApiResponse of CallSimulationResult</returns>
+        
+        public ApiResponse< CallSimulationResult > GetTelephonyPrefixesSimulateCallWithHttpInfo (string number)
+        { 
+            // verify the required parameter 'number' is set
+            if (number == null)
+                throw new ApiException(400, "Missing required parameter 'number' when calling TelephonyApi->GetTelephonyPrefixesSimulateCall");
+
+            var localVarPath = "/api/v2/telephony/prefixes/simulate/call";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (number != null) localVarQueryParams.Add(new Tuple<string, string>("number", this.Configuration.ApiClient.ParameterToString(number)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyPrefixesSimulateCall: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetTelephonyPrefixesSimulateCall: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyPrefixesSimulateCall: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallSimulationResult>(localVarStatusCode,
+                localVarHeaders,
+                (CallSimulationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallSimulationResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Simulate call to test fraud prefix functionality 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="number">Phone number to simulate</param>
+        /// <returns>Task of CallSimulationResult</returns>
+        
+        public async System.Threading.Tasks.Task<CallSimulationResult> GetTelephonyPrefixesSimulateCallAsync (string number)
+        {
+             ApiResponse<CallSimulationResult> localVarResponse = await GetTelephonyPrefixesSimulateCallAsyncWithHttpInfo(number);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Simulate call to test fraud prefix functionality 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="number">Phone number to simulate</param>
+        /// <returns>Task of ApiResponse (CallSimulationResult)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CallSimulationResult>> GetTelephonyPrefixesSimulateCallAsyncWithHttpInfo (string number)
+        { 
+            // verify the required parameter 'number' is set
+            if (number == null)
+                throw new ApiException(400, "Missing required parameter 'number' when calling TelephonyApi->GetTelephonyPrefixesSimulateCall");
+            
+
+            var localVarPath = "/api/v2/telephony/prefixes/simulate/call";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (number != null) localVarQueryParams.Add(new Tuple<string, string>("number", this.Configuration.ApiClient.ParameterToString(number)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyPrefixesSimulateCall: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetTelephonyPrefixesSimulateCall: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyPrefixesSimulateCall: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CallSimulationResult>(localVarStatusCode,
+                localVarHeaders,
+                (CallSimulationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallSimulationResult)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -4940,6 +5534,221 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<OrganizationLink>(localVarStatusCode,
                 localVarHeaders,
                 (OrganizationLink) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationLink)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Bulk save prefixes 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk save request with list of prefixes</param>
+        /// <returns>BulkPrefixesResponse</returns>
+        
+        public BulkPrefixesResponse PostTelephonyPrefixesBulk (BulkPrefixesRequest body)
+        {
+             ApiResponse<BulkPrefixesResponse> localVarResponse = PostTelephonyPrefixesBulkWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk save prefixes 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk save request with list of prefixes</param>
+        /// <returns>ApiResponse of BulkPrefixesResponse</returns>
+        
+        public ApiResponse< BulkPrefixesResponse > PostTelephonyPrefixesBulkWithHttpInfo (BulkPrefixesRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyApi->PostTelephonyPrefixesBulk");
+
+            var localVarPath = "/api/v2/telephony/prefixes/bulk";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyPrefixesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostTelephonyPrefixesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyPrefixesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkPrefixesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkPrefixesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkPrefixesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Bulk save prefixes 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk save request with list of prefixes</param>
+        /// <returns>Task of BulkPrefixesResponse</returns>
+        
+        public async System.Threading.Tasks.Task<BulkPrefixesResponse> PostTelephonyPrefixesBulkAsync (BulkPrefixesRequest body)
+        {
+             ApiResponse<BulkPrefixesResponse> localVarResponse = await PostTelephonyPrefixesBulkAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Bulk save prefixes 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Bulk save request with list of prefixes</param>
+        /// <returns>Task of ApiResponse (BulkPrefixesResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkPrefixesResponse>> PostTelephonyPrefixesBulkAsyncWithHttpInfo (BulkPrefixesRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyApi->PostTelephonyPrefixesBulk");
+            
+
+            var localVarPath = "/api/v2/telephony/prefixes/bulk";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyPrefixesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostTelephonyPrefixesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTelephonyPrefixesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkPrefixesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkPrefixesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkPrefixesResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -81,9 +81,10 @@ namespace Example
 
 Get information about the support of features for all the languages or only for a certain language.
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * assistants:copilot:view
+* assistants:copilotFeatureSupport:view
 
 ### Example
 ```{"language":"csharp"}
@@ -200,4 +201,4 @@ namespace Example
 [**Copilot**](Copilot)
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 271.0.0_

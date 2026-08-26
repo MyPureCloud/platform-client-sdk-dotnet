@@ -172,6 +172,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Number of snapshotted versions on this decision table.
+        /// </summary>
+        /// <value>Number of snapshotted versions on this decision table.</value>
+        [DataMember(Name="snapshotCount", EmitDefaultValue=false)]
+        public int? SnapshotCount { get; private set; }
+
+
+
+        /// <summary>
         /// The column definitions of this decision table.
         /// </summary>
         /// <value>The column definitions of this decision table.</value>
@@ -216,6 +225,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Published: ").Append(Published).Append("\n");
             sb.Append("  Latest: ").Append(Latest).Append("\n");
             sb.Append("  LatestVersionStatus: ").Append(LatestVersionStatus).Append("\n");
+            sb.Append("  SnapshotCount: ").Append(SnapshotCount).Append("\n");
             sb.Append("  Columns: ").Append(Columns).Append("\n");
             sb.Append("  PublishedContract: ").Append(PublishedContract).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -310,6 +320,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LatestVersionStatus.Equals(other.LatestVersionStatus)
                 ) &&
                 (
+                    this.SnapshotCount == other.SnapshotCount ||
+                    this.SnapshotCount != null &&
+                    this.SnapshotCount.Equals(other.SnapshotCount)
+                ) &&
+                (
                     this.Columns == other.Columns ||
                     this.Columns != null &&
                     this.Columns.Equals(other.Columns)
@@ -366,6 +381,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LatestVersionStatus != null)
                     hash = hash * 59 + this.LatestVersionStatus.GetHashCode();
+
+                if (this.SnapshotCount != null)
+                    hash = hash * 59 + this.SnapshotCount.GetHashCode();
 
                 if (this.Columns != null)
                     hash = hash * 59 + this.Columns.GetHashCode();

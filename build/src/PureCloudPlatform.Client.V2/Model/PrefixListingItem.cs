@@ -1,0 +1,183 @@
+using System;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using PureCloudPlatform.Client.V2.Client;
+
+namespace PureCloudPlatform.Client.V2.Model
+{
+    /// <summary>
+    /// PrefixListingItem
+    /// </summary>
+    [DataContract]
+    public partial class PrefixListingItem :  IEquatable<PrefixListingItem>
+    {
+        /// <summary>
+        /// Prefix type: allow or block
+        /// </summary>
+        /// <value>Prefix type: allow or block</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Allow for "Allow"
+            /// </summary>
+            [EnumMember(Value = "Allow")]
+            Allow,
+            
+            /// <summary>
+            /// Enum Block for "Block"
+            /// </summary>
+            [EnumMember(Value = "Block")]
+            Block
+        }
+        /// <summary>
+        /// Prefix type: allow or block
+        /// </summary>
+        /// <value>Prefix type: allow or block</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PrefixListingItem" /> class.
+        /// </summary>
+        /// <param name="CountryCode">The ITU-T E.164 country code (numeric, max 4 digits).</param>
+        /// <param name="Number">The DID (Direct Inward Dialing) number (numeric, max 20 digits).</param>
+        /// <param name="Type">Prefix type: allow or block.</param>
+        public PrefixListingItem(string CountryCode = null, string Number = null, TypeEnum? Type = null)
+        {
+            this.CountryCode = CountryCode;
+            this.Number = Number;
+            this.Type = Type;
+            
+        }
+        
+
+
+        /// <summary>
+        /// The ITU-T E.164 country code (numeric, max 4 digits)
+        /// </summary>
+        /// <value>The ITU-T E.164 country code (numeric, max 4 digits)</value>
+        [DataMember(Name="countryCode", EmitDefaultValue=false)]
+        public string CountryCode { get; set; }
+
+
+
+        /// <summary>
+        /// The DID (Direct Inward Dialing) number (numeric, max 20 digits)
+        /// </summary>
+        /// <value>The DID (Direct Inward Dialing) number (numeric, max 20 digits)</value>
+        [DataMember(Name="number", EmitDefaultValue=false)]
+        public string Number { get; set; }
+
+
+
+
+        /// <summary>
+        /// Returns the string presentation of the object
+        /// </summary>
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.Append("class PrefixListingItem {\n");
+
+            sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
+            sb.Append("  Number: ").Append(Number).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
+        }
+  
+        /// <summary>
+        /// Returns the JSON string presentation of the object
+        /// </summary>
+        /// <returns>JSON string presentation of the object</returns>
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this, new JsonSerializerSettings
+            {
+                MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+                Formatting = Formatting.Indented
+            });
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="obj">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object obj)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            return this.Equals(obj as PrefixListingItem);
+        }
+
+        /// <summary>
+        /// Returns true if PrefixListingItem instances are equal
+        /// </summary>
+        /// <param name="other">Instance of PrefixListingItem to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(PrefixListingItem other)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            if (other == null)
+                return false;
+
+            return true &&
+                (
+                    this.CountryCode == other.CountryCode ||
+                    this.CountryCode != null &&
+                    this.CountryCode.Equals(other.CountryCode)
+                ) &&
+                (
+                    this.Number == other.Number ||
+                    this.Number != null &&
+                    this.Number.Equals(other.Number)
+                ) &&
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            // credit: http://stackoverflow.com/a/263416/677735
+            unchecked // Overflow is fine, just wrap
+            {
+                int hash = 41;
+                // Suitable nullity checks etc, of course :)
+                if (this.CountryCode != null)
+                    hash = hash * 59 + this.CountryCode.GetHashCode();
+
+                if (this.Number != null)
+                    hash = hash * 59 + this.Number.GetHashCode();
+
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
+
+                return hash;
+            }
+        }
+    }
+
+}

@@ -90,7 +90,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PlanningPeriod">Planning period settings for scheduling. Only one of planningPeriod or monthlyPlanningPeriod may be defined.</param>
         /// <param name="MonthlyPlanningPeriod">Monthly planning period setting for scheduling. Only one of planningPeriod or monthlyPlanningPeriod may be defined.</param>
         /// <param name="StartDayOfWeekend">Start day of weekend for scheduling.</param>
-        public SchedulingSettingsRequest(int? MaxOccupancyPercentForDeferredWork = null, double? DefaultShrinkagePercent = null, ShrinkageOverrides ShrinkageOverrides = null, ValueWrapperPlanningPeriodSettings PlanningPeriod = null, ValueWrapperMonthlyPlanningPeriodSettings MonthlyPlanningPeriod = null, StartDayOfWeekendEnum? StartDayOfWeekend = null)
+        /// <param name="ScheduleVisibility">Schedule visibility settings for agents.</param>
+        public SchedulingSettingsRequest(int? MaxOccupancyPercentForDeferredWork = null, double? DefaultShrinkagePercent = null, ShrinkageOverrides ShrinkageOverrides = null, ValueWrapperPlanningPeriodSettings PlanningPeriod = null, ValueWrapperMonthlyPlanningPeriodSettings MonthlyPlanningPeriod = null, StartDayOfWeekendEnum? StartDayOfWeekend = null, ScheduleVisibilitySettingsRequest ScheduleVisibility = null)
         {
             this.MaxOccupancyPercentForDeferredWork = MaxOccupancyPercentForDeferredWork;
             this.DefaultShrinkagePercent = DefaultShrinkagePercent;
@@ -98,6 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PlanningPeriod = PlanningPeriod;
             this.MonthlyPlanningPeriod = MonthlyPlanningPeriod;
             this.StartDayOfWeekend = StartDayOfWeekend;
+            this.ScheduleVisibility = ScheduleVisibility;
             
         }
         
@@ -149,6 +151,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Schedule visibility settings for agents
+        /// </summary>
+        /// <value>Schedule visibility settings for agents</value>
+        [DataMember(Name="scheduleVisibility", EmitDefaultValue=false)]
+        public ScheduleVisibilitySettingsRequest ScheduleVisibility { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -164,6 +175,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PlanningPeriod: ").Append(PlanningPeriod).Append("\n");
             sb.Append("  MonthlyPlanningPeriod: ").Append(MonthlyPlanningPeriod).Append("\n");
             sb.Append("  StartDayOfWeekend: ").Append(StartDayOfWeekend).Append("\n");
+            sb.Append("  ScheduleVisibility: ").Append(ScheduleVisibility).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -233,6 +245,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StartDayOfWeekend == other.StartDayOfWeekend ||
                     this.StartDayOfWeekend != null &&
                     this.StartDayOfWeekend.Equals(other.StartDayOfWeekend)
+                ) &&
+                (
+                    this.ScheduleVisibility == other.ScheduleVisibility ||
+                    this.ScheduleVisibility != null &&
+                    this.ScheduleVisibility.Equals(other.ScheduleVisibility)
                 );
         }
 
@@ -264,6 +281,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.StartDayOfWeekend != null)
                     hash = hash * 59 + this.StartDayOfWeekend.GetHashCode();
+
+                if (this.ScheduleVisibility != null)
+                    hash = hash * 59 + this.ScheduleVisibility.GetHashCode();
 
                 return hash;
             }

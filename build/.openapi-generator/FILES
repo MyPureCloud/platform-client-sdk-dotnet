@@ -742,6 +742,7 @@ docs/BulkEntityErrorExternalContact.md
 docs/BulkEntityErrorExternalOrganization.md
 docs/BulkEntityErrorExternalOrganizationEnrichRequest.md
 docs/BulkEntityErrorNote.md
+docs/BulkEntityErrorPrefix.md
 docs/BulkEntityErrorRelationship.md
 docs/BulkError.md
 docs/BulkErrorDetail.md
@@ -777,6 +778,8 @@ docs/BulkOrganizationsEnrichRequest.md
 docs/BulkOrganizationsEnrichResponse.md
 docs/BulkOrganizationsRequest.md
 docs/BulkOrganizationsResponse.md
+docs/BulkPrefixesRequest.md
+docs/BulkPrefixesResponse.md
 docs/BulkPublishOpportunitiesResponse.md
 docs/BulkRelationshipsRequest.md
 docs/BulkRelationshipsResponse.md
@@ -792,6 +795,7 @@ docs/BulkResponseResultExternalOrganizationExternalOrganizationBulkEntityErrorEx
 docs/BulkResponseResultExternalOrganizationExternalOrganizationEnrichRequestBulkEntityErrorExternalOrganizationEnrichRequest.md
 docs/BulkResponseResultNoteEntityBulkEntityErrorEntity.md
 docs/BulkResponseResultNoteNoteBulkEntityErrorNote.md
+docs/BulkResponseResultPrefixPrefixBulkEntityErrorPrefix.md
 docs/BulkResponseResultRelationshipEntityBulkEntityErrorEntity.md
 docs/BulkResponseResultRelationshipRelationshipBulkEntityErrorRelationship.md
 docs/BulkResponseResultVoidEntityBulkEntityErrorEntity.md
@@ -853,6 +857,7 @@ docs/CallMediaPolicy.md
 docs/CallMediaPolicyConditions.md
 docs/CallRecord.md
 docs/CallRoute.md
+docs/CallSimulationResult.md
 docs/CallTarget.md
 docs/CallToAction.md
 docs/CallableContactsDiagnostic.md
@@ -930,6 +935,8 @@ docs/CapacityPlanDeleteRequest.md
 docs/CapacityPlanForecastInputsResponse.md
 docs/CapacityPlanForecastInputsTemplate.md
 docs/CapacityPlanForecastMetrics.md
+docs/CapacityPlanImportedForecast.md
+docs/CapacityPlanImportedForecastRequest.md
 docs/CapacityPlanListItem.md
 docs/CapacityPlanMetadata.md
 docs/CapacityPlanMetricsSummary.md
@@ -1061,6 +1068,12 @@ docs/ClientUsageQueryResponse.md
 docs/ClonedUser.md
 docs/ClonedUserEntityListing.md
 docs/CloseButtonStyleProperties.md
+docs/Cluster.md
+docs/ClusterList.md
+docs/ClusterScan.md
+docs/ClusterScanList.md
+docs/ClusterScanStatistics.md
+docs/ClusterStatistics.md
 docs/CoachingAnnotation.md
 docs/CoachingAnnotationCreateRequest.md
 docs/CoachingAnnotationList.md
@@ -1210,6 +1223,7 @@ docs/ContactListingRequest.md
 docs/ContactListingResponse.md
 docs/ContactPhoneNumberColumn.md
 docs/ContactSort.md
+docs/ContactVertex.md
 docs/ContactableStatus.md
 docs/ContactlistDownloadReadyExportUri.md
 docs/ContactlistDownloadReadyObject.md
@@ -1765,6 +1779,7 @@ docs/CopilotFallbackAction.md
 docs/CopilotNluDomain.md
 docs/CopilotNluDomainVersion.md
 docs/CopilotRule.md
+docs/CopilotSentimentSettings.md
 docs/CopilotTranscriptionConfig.md
 docs/CopyAttachmentsRequest.md
 docs/CopyBuForecastRequest.md
@@ -1799,6 +1814,7 @@ docs/CreateDecisionTableColumnsRequest.md
 docs/CreateDecisionTableImportJobRequest.md
 docs/CreateDecisionTableRequest.md
 docs/CreateDecisionTableRowRequest.md
+docs/CreateDecisionTableSnapshotRequest.md
 docs/CreateDecisionTableVersionRequest.md
 docs/CreateEmailRequest.md
 docs/CreateExternalEventsConfigurationRequest.md
@@ -2082,6 +2098,7 @@ docs/DeleteBusinessrulesDecisiontableExport-example.txt
 docs/DeleteBusinessrulesDecisiontableImport-example.txt
 docs/DeleteBusinessrulesDecisiontableVersion-example.txt
 docs/DeleteBusinessrulesDecisiontableVersionRow-example.txt
+docs/DeleteBusinessrulesDecisiontableVersionSnapshot-example.txt
 docs/DeleteBusinessrulesSchema-example.txt
 docs/DeleteCasemanagementCase-example.txt
 docs/DeleteCasemanagementCaseCommentsMeCommentId-example.txt
@@ -2720,6 +2737,10 @@ docs/EdgeMetricsTopicUriReference.md
 docs/EdgeNetworkDiagnostic.md
 docs/EdgeNetworkDiagnosticRequest.md
 docs/EdgeNetworkDiagnosticResponse.md
+docs/EdgeOfflineConfiguration.md
+docs/EdgeOfflineConfigurationInterface.md
+docs/EdgeOfflineConfigurationNetwork.md
+docs/EdgeOfflineConfigurationResponse.md
 docs/EdgeRebootParameters.md
 docs/EdgeServiceStateRequest.md
 docs/EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate.md
@@ -3448,6 +3469,8 @@ docs/GetBusinessrulesDecisiontableVersions-example.txt
 docs/GetBusinessrulesDecisiontables-example.txt
 docs/GetBusinessrulesDecisiontablesSearch-example.txt
 docs/GetBusinessrulesSchema-example.txt
+docs/GetBusinessrulesSchemaVersion-example.txt
+docs/GetBusinessrulesSchemaVersions-example.txt
 docs/GetBusinessrulesSchemas-example.txt
 docs/GetBusinessrulesSchemasCoretype-example.txt
 docs/GetBusinessrulesSchemasCoretypes-example.txt
@@ -3681,6 +3704,14 @@ docs/GetExternalcontactsContactsSchemasCoretypes-example.txt
 docs/GetExternalcontactsContactsSchemasLimits-example.txt
 docs/GetExternalcontactsExternalsource-example.txt
 docs/GetExternalcontactsExternalsources-example.txt
+docs/GetExternalcontactsGraphsClusterscan-example.txt
+docs/GetExternalcontactsGraphsClusterscanCluster-example.txt
+docs/GetExternalcontactsGraphsClusterscanClusters-example.txt
+docs/GetExternalcontactsGraphsClusterscanStatistics-example.txt
+docs/GetExternalcontactsGraphsClusterscans-example.txt
+docs/GetExternalcontactsGraphsClusterscansLatest-example.txt
+docs/GetExternalcontactsGraphsClusterscansLatestStatistics-example.txt
+docs/GetExternalcontactsGraphsSettings-example.txt
 docs/GetExternalcontactsImportCsvSetting-example.txt
 docs/GetExternalcontactsImportCsvSettings-example.txt
 docs/GetExternalcontactsImportCsvUploadDetails-example.txt
@@ -3723,6 +3754,7 @@ docs/GetExternalcontactsSettings-example.txt
 docs/GetFaxDocument-example.txt
 docs/GetFaxDocumentContent-example.txt
 docs/GetFaxDocuments-example.txt
+docs/GetFaxFaxIdStatus-example.txt
 docs/GetFaxSettings-example.txt
 docs/GetFaxSummary-example.txt
 docs/GetFieldconfig-example.txt
@@ -4516,6 +4548,8 @@ docs/GetTelephonyMediaregions-example.txt
 docs/GetTelephonyNumbersRouting-example.txt
 docs/GetTelephonyOrganizationLink-example.txt
 docs/GetTelephonyOrganizationLinkRegions-example.txt
+docs/GetTelephonyPrefixes-example.txt
+docs/GetTelephonyPrefixesSimulateCall-example.txt
 docs/GetTelephonyProvidersEdge-example.txt
 docs/GetTelephonyProvidersEdgeDiagnosticNslookup-example.txt
 docs/GetTelephonyProvidersEdgeDiagnosticPing-example.txt
@@ -4584,6 +4618,7 @@ docs/GetTelephonyProvidersEdgesTrunkMetrics-example.txt
 docs/GetTelephonyProvidersEdgesTrunkbasesetting-example.txt
 docs/GetTelephonyProvidersEdgesTrunkbasesettings-example.txt
 docs/GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases-example.txt
+docs/GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId-example.txt
 docs/GetTelephonyProvidersEdgesTrunkbasesettingsTemplate-example.txt
 docs/GetTelephonyProvidersEdgesTrunks-example.txt
 docs/GetTelephonyProvidersEdgesTrunksMetrics-example.txt
@@ -4868,7 +4903,11 @@ docs/GrammarLanguage.md
 docs/GrammarLanguageFileMetadata.md
 docs/GrammarLanguageUpdate.md
 docs/GrammarListing.md
+docs/Graph.md
 docs/GraphApiSettings.md
+docs/GraphEdge.md
+docs/GraphSettings.md
+docs/GraphVertices.md
 docs/Greeting.md
 docs/GreetingAudioFile.md
 docs/GreetingListing.md
@@ -4962,6 +5001,7 @@ docs/IVREntityListing.md
 docs/IVRIdentityResolutionConfig.md
 docs/Icon.md
 docs/IdentifierClaimRequest.md
+docs/IdentifierVertex.md
 docs/IdentityNow.md
 docs/IdentityProvider.md
 docs/IdentityProviderApi.json
@@ -5680,6 +5720,8 @@ docs/MemberEntity.md
 docs/MemberGroup.md
 docs/MemberListing.md
 docs/MergeContactsRequest.md
+docs/MergeError.md
+docs/MergeInfo.md
 docs/MergeOperation.md
 docs/MergeRequest.md
 docs/Message.md
@@ -6003,6 +6045,7 @@ docs/OutboundDomain.md
 docs/OutboundDomainCreateRequest.md
 docs/OutboundDomainEntityListing.md
 docs/OutboundDomainPatchRequest.md
+docs/OutboundFaxStatus.md
 docs/OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes.md
 docs/OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampaignPostContactEmailEvent.md
 docs/OutboundMessagingCampaignPostContactSmsEventTopicOutboundMessagingCampaignPostContactSMSEvent.md
@@ -6648,11 +6691,13 @@ docs/PostBusinessrulesDecisiontableExports-example.txt
 docs/PostBusinessrulesDecisiontableImports-example.txt
 docs/PostBusinessrulesDecisiontableVersionCopy-example.txt
 docs/PostBusinessrulesDecisiontableVersionExecute-example.txt
+docs/PostBusinessrulesDecisiontableVersionRollback-example.txt
 docs/PostBusinessrulesDecisiontableVersionRows-example.txt
 docs/PostBusinessrulesDecisiontableVersionRowsBulkAdd-example.txt
 docs/PostBusinessrulesDecisiontableVersionRowsBulkRemove-example.txt
 docs/PostBusinessrulesDecisiontableVersionRowsBulkUpdate-example.txt
 docs/PostBusinessrulesDecisiontableVersionRowsSearch-example.txt
+docs/PostBusinessrulesDecisiontableVersionSnapshot-example.txt
 docs/PostBusinessrulesDecisiontableVersionSync-example.txt
 docs/PostBusinessrulesDecisiontableVersions-example.txt
 docs/PostBusinessrulesDecisiontables-example.txt
@@ -7228,6 +7273,7 @@ docs/PostTelephonyNumbersRouting-example.txt
 docs/PostTelephonyNumbersRoutingAll-example.txt
 docs/PostTelephonyNumbersRoutingReset-example.txt
 docs/PostTelephonyOrganizationLink-example.txt
+docs/PostTelephonyPrefixesBulk-example.txt
 docs/PostTelephonyProvidersEdgeDiagnosticNslookup-example.txt
 docs/PostTelephonyProvidersEdgeDiagnosticPing-example.txt
 docs/PostTelephonyProvidersEdgeDiagnosticRoute-example.txt
@@ -7235,6 +7281,7 @@ docs/PostTelephonyProvidersEdgeDiagnosticTracepath-example.txt
 docs/PostTelephonyProvidersEdgeLogicalinterfaces-example.txt
 docs/PostTelephonyProvidersEdgeLogsJobUpload-example.txt
 docs/PostTelephonyProvidersEdgeLogsJobs-example.txt
+docs/PostTelephonyProvidersEdgeOfflineconfiguration-example.txt
 docs/PostTelephonyProvidersEdgeReboot-example.txt
 docs/PostTelephonyProvidersEdgeSoftwareupdate-example.txt
 docs/PostTelephonyProvidersEdgeStatuscode-example.txt
@@ -7254,6 +7301,8 @@ docs/PostTelephonyProvidersEdgesSites-example.txt
 docs/PostTelephonyProvidersEdgesSitesSearch-example.txt
 docs/PostTelephonyProvidersEdgesSitesSearch-example.txt
 docs/PostTelephonyProvidersEdgesTrunkbasesettings-example.txt
+docs/PostTelephonyProvidersEdgesTrunkbasesettingsSearch-example.txt
+docs/PostTelephonyProvidersEdgesTrunksSearch-example.txt
 docs/PostTelephonySiptracesDownload-example.txt
 docs/PostTextMessage.md
 docs/PostTextRequest.md
@@ -7453,6 +7502,9 @@ docs/PredictorModelRetrainingError.md
 docs/PredictorModels.md
 docs/PredictorSchedule.md
 docs/PredictorWorkloadBalancing.md
+docs/Prefix.md
+docs/PrefixListing.md
+docs/PrefixListingItem.md
 docs/PreprocessingRule.md
 docs/PresenceApi.json
 docs/PresenceApi.md
@@ -7586,6 +7638,8 @@ docs/PutExternalcontactsContactNote-example.txt
 docs/PutExternalcontactsContactsSchema-example.txt
 docs/PutExternalcontactsConversation-example.txt
 docs/PutExternalcontactsExternalsource-example.txt
+docs/PutExternalcontactsGraphsClusterscanClusterMerge-example.txt
+docs/PutExternalcontactsGraphsSettings-example.txt
 docs/PutExternalcontactsImportCsvSetting-example.txt
 docs/PutExternalcontactsImportJob-example.txt
 docs/PutExternalcontactsImportSetting-example.txt
@@ -8382,6 +8436,7 @@ docs/RoleDivision.md
 docs/RoleDivisionGrants.md
 docs/RoleDivisionPair.md
 docs/RoleSettings.md
+docs/RollbackDecisionTableVersionRequest.md
 docs/Room.md
 docs/RoomParticipant.md
 docs/RoomParticipantResponse.md
@@ -8978,6 +9033,8 @@ docs/TelephonyApi.json
 docs/TelephonyApi.md
 docs/TelephonyProvidersEdgeApi.json
 docs/TelephonyProvidersEdgeApi.md
+docs/TelephonySearchCriteria.md
+docs/TelephonySearchRequest.md
 docs/TelephonySettings.md
 docs/TemplateParameter.md
 docs/TemporalUnit.md
@@ -9138,10 +9195,12 @@ docs/Trunk.md
 docs/TrunkBase.md
 docs/TrunkBaseAssignment.md
 docs/TrunkBaseEntityListing.md
+docs/TrunkBasesSearchResponse.md
 docs/TrunkConnectedStatus.md
 docs/TrunkEntityListing.md
 docs/TrunkErrorInfo.md
 docs/TrunkErrorInfoDetails.md
+docs/TrunkInstanceSearchResponse.md
 docs/TrunkInstanceTopicTrunk.md
 docs/TrunkInstanceTopicTrunkConnectedStatus.md
 docs/TrunkInstanceTopicTrunkErrorInfo.md
@@ -9599,6 +9658,7 @@ docs/ValidationServiceRequest.md
 docs/ValueWrapperActivityCodeStyle.md
 docs/ValueWrapperActivityPlanServiceGoalImpactOverrides.md
 docs/ValueWrapperBuShortTermForecastReference.md
+docs/ValueWrapperCapacityPlanImportedForecastRequest.md
 docs/ValueWrapperDate.md
 docs/ValueWrapperGroupSettings.md
 docs/ValueWrapperHrisTimeOffType.md
@@ -10957,6 +11017,7 @@ src/PureCloudPlatform.Client.V2/Model/BulkEntityErrorExternalContact.cs
 src/PureCloudPlatform.Client.V2/Model/BulkEntityErrorExternalOrganization.cs
 src/PureCloudPlatform.Client.V2/Model/BulkEntityErrorExternalOrganizationEnrichRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkEntityErrorNote.cs
+src/PureCloudPlatform.Client.V2/Model/BulkEntityErrorPrefix.cs
 src/PureCloudPlatform.Client.V2/Model/BulkEntityErrorRelationship.cs
 src/PureCloudPlatform.Client.V2/Model/BulkError.cs
 src/PureCloudPlatform.Client.V2/Model/BulkErrorDetail.cs
@@ -10992,6 +11053,8 @@ src/PureCloudPlatform.Client.V2/Model/BulkOrganizationsEnrichRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkOrganizationsEnrichResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkOrganizationsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkOrganizationsResponse.cs
+src/PureCloudPlatform.Client.V2/Model/BulkPrefixesRequest.cs
+src/PureCloudPlatform.Client.V2/Model/BulkPrefixesResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkPublishOpportunitiesResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkRelationshipsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkRelationshipsResponse.cs
@@ -11007,6 +11070,7 @@ src/PureCloudPlatform.Client.V2/Model/BulkResponseResultExternalOrganizationExte
 src/PureCloudPlatform.Client.V2/Model/BulkResponseResultExternalOrganizationExternalOrganizationEnrichRequestBulkEntityErrorExternalOrganizationEnrichRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResponseResultNoteEntityBulkEntityErrorEntity.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResponseResultNoteNoteBulkEntityErrorNote.cs
+src/PureCloudPlatform.Client.V2/Model/BulkResponseResultPrefixPrefixBulkEntityErrorPrefix.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResponseResultRelationshipEntityBulkEntityErrorEntity.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResponseResultRelationshipRelationshipBulkEntityErrorRelationship.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResponseResultVoidEntityBulkEntityErrorEntity.cs
@@ -11066,6 +11130,7 @@ src/PureCloudPlatform.Client.V2/Model/CallMediaPolicy.cs
 src/PureCloudPlatform.Client.V2/Model/CallMediaPolicyConditions.cs
 src/PureCloudPlatform.Client.V2/Model/CallRecord.cs
 src/PureCloudPlatform.Client.V2/Model/CallRoute.cs
+src/PureCloudPlatform.Client.V2/Model/CallSimulationResult.cs
 src/PureCloudPlatform.Client.V2/Model/CallTarget.cs
 src/PureCloudPlatform.Client.V2/Model/CallToAction.cs
 src/PureCloudPlatform.Client.V2/Model/CallableContactsDiagnostic.cs
@@ -11143,6 +11208,8 @@ src/PureCloudPlatform.Client.V2/Model/CapacityPlanDeleteRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CapacityPlanForecastInputsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CapacityPlanForecastInputsTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/CapacityPlanForecastMetrics.cs
+src/PureCloudPlatform.Client.V2/Model/CapacityPlanImportedForecast.cs
+src/PureCloudPlatform.Client.V2/Model/CapacityPlanImportedForecastRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CapacityPlanListItem.cs
 src/PureCloudPlatform.Client.V2/Model/CapacityPlanMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/CapacityPlanMetricsSummary.cs
@@ -11268,6 +11335,12 @@ src/PureCloudPlatform.Client.V2/Model/ClientUsageQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ClonedUser.cs
 src/PureCloudPlatform.Client.V2/Model/ClonedUserEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/CloseButtonStyleProperties.cs
+src/PureCloudPlatform.Client.V2/Model/Cluster.cs
+src/PureCloudPlatform.Client.V2/Model/ClusterList.cs
+src/PureCloudPlatform.Client.V2/Model/ClusterScan.cs
+src/PureCloudPlatform.Client.V2/Model/ClusterScanList.cs
+src/PureCloudPlatform.Client.V2/Model/ClusterScanStatistics.cs
+src/PureCloudPlatform.Client.V2/Model/ClusterStatistics.cs
 src/PureCloudPlatform.Client.V2/Model/CoachingAnnotation.cs
 src/PureCloudPlatform.Client.V2/Model/CoachingAnnotationCreateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CoachingAnnotationList.cs
@@ -11415,6 +11488,7 @@ src/PureCloudPlatform.Client.V2/Model/ContactListingRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListingResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ContactPhoneNumberColumn.cs
 src/PureCloudPlatform.Client.V2/Model/ContactSort.cs
+src/PureCloudPlatform.Client.V2/Model/ContactVertex.cs
 src/PureCloudPlatform.Client.V2/Model/ContactableStatus.cs
 src/PureCloudPlatform.Client.V2/Model/ContactlistDownloadReadyExportUri.cs
 src/PureCloudPlatform.Client.V2/Model/ContactlistDownloadReadyObject.cs
@@ -11966,6 +12040,7 @@ src/PureCloudPlatform.Client.V2/Model/CopilotFallbackAction.cs
 src/PureCloudPlatform.Client.V2/Model/CopilotNluDomain.cs
 src/PureCloudPlatform.Client.V2/Model/CopilotNluDomainVersion.cs
 src/PureCloudPlatform.Client.V2/Model/CopilotRule.cs
+src/PureCloudPlatform.Client.V2/Model/CopilotSentimentSettings.cs
 src/PureCloudPlatform.Client.V2/Model/CopilotTranscriptionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/CopyAttachmentsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CopyBuForecastRequest.cs
@@ -12000,6 +12075,7 @@ src/PureCloudPlatform.Client.V2/Model/CreateDecisionTableColumnsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateDecisionTableImportJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateDecisionTableRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateDecisionTableRowRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CreateDecisionTableSnapshotRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateDecisionTableVersionRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateEmailRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateExternalEventsConfigurationRequest.cs
@@ -12539,6 +12615,10 @@ src/PureCloudPlatform.Client.V2/Model/EdgeMetricsTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeNetworkDiagnostic.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeNetworkDiagnosticRequest.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeNetworkDiagnosticResponse.cs
+src/PureCloudPlatform.Client.V2/Model/EdgeOfflineConfiguration.cs
+src/PureCloudPlatform.Client.V2/Model/EdgeOfflineConfigurationInterface.cs
+src/PureCloudPlatform.Client.V2/Model/EdgeOfflineConfigurationNetwork.cs
+src/PureCloudPlatform.Client.V2/Model/EdgeOfflineConfigurationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeRebootParameters.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeServiceStateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate.cs
@@ -13084,7 +13164,11 @@ src/PureCloudPlatform.Client.V2/Model/GrammarLanguage.cs
 src/PureCloudPlatform.Client.V2/Model/GrammarLanguageFileMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/GrammarLanguageUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/GrammarListing.cs
+src/PureCloudPlatform.Client.V2/Model/Graph.cs
 src/PureCloudPlatform.Client.V2/Model/GraphApiSettings.cs
+src/PureCloudPlatform.Client.V2/Model/GraphEdge.cs
+src/PureCloudPlatform.Client.V2/Model/GraphSettings.cs
+src/PureCloudPlatform.Client.V2/Model/GraphVertices.cs
 src/PureCloudPlatform.Client.V2/Model/Greeting.cs
 src/PureCloudPlatform.Client.V2/Model/GreetingAudioFile.cs
 src/PureCloudPlatform.Client.V2/Model/GreetingListing.cs
@@ -13172,6 +13256,7 @@ src/PureCloudPlatform.Client.V2/Model/IVREntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/IVRIdentityResolutionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/Icon.cs
 src/PureCloudPlatform.Client.V2/Model/IdentifierClaimRequest.cs
+src/PureCloudPlatform.Client.V2/Model/IdentifierVertex.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityNow.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityProvider.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityProviderEntityListing.cs
@@ -13866,6 +13951,8 @@ src/PureCloudPlatform.Client.V2/Model/MemberEntity.cs
 src/PureCloudPlatform.Client.V2/Model/MemberGroup.cs
 src/PureCloudPlatform.Client.V2/Model/MemberListing.cs
 src/PureCloudPlatform.Client.V2/Model/MergeContactsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/MergeError.cs
+src/PureCloudPlatform.Client.V2/Model/MergeInfo.cs
 src/PureCloudPlatform.Client.V2/Model/MergeOperation.cs
 src/PureCloudPlatform.Client.V2/Model/MergeRequest.cs
 src/PureCloudPlatform.Client.V2/Model/Message.cs
@@ -14171,6 +14258,7 @@ src/PureCloudPlatform.Client.V2/Model/OutboundDomain.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundDomainCreateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundDomainEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundDomainPatchRequest.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundFaxStatus.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampaignPostContactEmailEvent.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingCampaignPostContactSmsEventTopicOutboundMessagingCampaignPostContactSMSEvent.cs
@@ -14431,6 +14519,9 @@ src/PureCloudPlatform.Client.V2/Model/PredictorModelRetrainingError.cs
 src/PureCloudPlatform.Client.V2/Model/PredictorModels.cs
 src/PureCloudPlatform.Client.V2/Model/PredictorSchedule.cs
 src/PureCloudPlatform.Client.V2/Model/PredictorWorkloadBalancing.cs
+src/PureCloudPlatform.Client.V2/Model/Prefix.cs
+src/PureCloudPlatform.Client.V2/Model/PrefixListing.cs
+src/PureCloudPlatform.Client.V2/Model/PrefixListingItem.cs
 src/PureCloudPlatform.Client.V2/Model/PreprocessingRule.cs
 src/PureCloudPlatform.Client.V2/Model/PresenceDefinition.cs
 src/PureCloudPlatform.Client.V2/Model/PresenceDetailQueryClause.cs
@@ -15068,6 +15159,7 @@ src/PureCloudPlatform.Client.V2/Model/RoleDivision.cs
 src/PureCloudPlatform.Client.V2/Model/RoleDivisionGrants.cs
 src/PureCloudPlatform.Client.V2/Model/RoleDivisionPair.cs
 src/PureCloudPlatform.Client.V2/Model/RoleSettings.cs
+src/PureCloudPlatform.Client.V2/Model/RollbackDecisionTableVersionRequest.cs
 src/PureCloudPlatform.Client.V2/Model/Room.cs
 src/PureCloudPlatform.Client.V2/Model/RoomParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/RoomParticipantResponse.cs
@@ -15636,6 +15728,8 @@ src/PureCloudPlatform.Client.V2/Model/TeamReference.cs
 src/PureCloudPlatform.Client.V2/Model/TeamSearchCriteria.cs
 src/PureCloudPlatform.Client.V2/Model/TeamSearchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TeamsSearchResponse.cs
+src/PureCloudPlatform.Client.V2/Model/TelephonySearchCriteria.cs
+src/PureCloudPlatform.Client.V2/Model/TelephonySearchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TelephonySettings.cs
 src/PureCloudPlatform.Client.V2/Model/TemplateParameter.cs
 src/PureCloudPlatform.Client.V2/Model/TemporalUnit.cs
@@ -15792,10 +15886,12 @@ src/PureCloudPlatform.Client.V2/Model/Trunk.cs
 src/PureCloudPlatform.Client.V2/Model/TrunkBase.cs
 src/PureCloudPlatform.Client.V2/Model/TrunkBaseAssignment.cs
 src/PureCloudPlatform.Client.V2/Model/TrunkBaseEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/TrunkBasesSearchResponse.cs
 src/PureCloudPlatform.Client.V2/Model/TrunkConnectedStatus.cs
 src/PureCloudPlatform.Client.V2/Model/TrunkEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TrunkErrorInfo.cs
 src/PureCloudPlatform.Client.V2/Model/TrunkErrorInfoDetails.cs
+src/PureCloudPlatform.Client.V2/Model/TrunkInstanceSearchResponse.cs
 src/PureCloudPlatform.Client.V2/Model/TrunkInstanceTopicTrunk.cs
 src/PureCloudPlatform.Client.V2/Model/TrunkInstanceTopicTrunkConnectedStatus.cs
 src/PureCloudPlatform.Client.V2/Model/TrunkInstanceTopicTrunkErrorInfo.cs
@@ -16241,6 +16337,7 @@ src/PureCloudPlatform.Client.V2/Model/ValidationServiceRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperActivityCodeStyle.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperActivityPlanServiceGoalImpactOverrides.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperBuShortTermForecastReference.cs
+src/PureCloudPlatform.Client.V2/Model/ValueWrapperCapacityPlanImportedForecastRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperDate.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperGroupSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperHrisTimeOffType.cs

@@ -52,11 +52,50 @@ namespace PureCloudPlatform.Client.V2.Model
             Unknown
         }
         /// <summary>
+        /// The type of the participant whose turn triggered the suggestion.
+        /// </summary>
+        /// <value>The type of the participant whose turn triggered the suggestion.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ParticipantTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Agent for "Agent"
+            /// </summary>
+            [EnumMember(Value = "Agent")]
+            Agent,
+            
+            /// <summary>
+            /// Enum Customer for "Customer"
+            /// </summary>
+            [EnumMember(Value = "Customer")]
+            Customer
+        }
+        /// <summary>
         /// The media type of the conversation in which the suggestion event was raised.
         /// </summary>
         /// <value>The media type of the conversation in which the suggestion event was raised.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; private set; }
+        /// <summary>
+        /// The type of the participant whose turn triggered the suggestion.
+        /// </summary>
+        /// <value>The type of the participant whose turn triggered the suggestion.</value>
+        [DataMember(Name="participantType", EmitDefaultValue=false)]
+        public ParticipantTypeEnum? ParticipantType { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SuggestionContext" /> class.
         /// </summary>
@@ -73,6 +112,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The queue used to assign the interaction to the user, if any.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public AddressableEntityRef Queue { get; private set; }
+
+
 
 
 
@@ -133,6 +174,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  ParticipantType: ").Append(ParticipantType).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("  Utterance: ").Append(Utterance).Append("\n");
@@ -189,6 +231,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaType.Equals(other.MediaType)
                 ) &&
                 (
+                    this.ParticipantType == other.ParticipantType ||
+                    this.ParticipantType != null &&
+                    this.ParticipantType.Equals(other.ParticipantType)
+                ) &&
+                (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
@@ -231,6 +278,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
+
+                if (this.ParticipantType != null)
+                    hash = hash * 59 + this.ParticipantType.GetHashCode();
 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();

@@ -758,6 +758,226 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CursorExternalSourceListing> GetExternalcontactsExternalsourcesWithHttpInfo (string cursor = null, int? limit = null, string name = null, bool? active = null);
 
         /// <summary>
+        /// Returns a single cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>ClusterScan</returns>
+        
+        ClusterScan GetExternalcontactsGraphsClusterscan (string scanId, List<string> expand = null);
+
+        /// <summary>
+        /// Returns a single cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>ApiResponse of ClusterScan</returns>
+        
+        ApiResponse<ClusterScan> GetExternalcontactsGraphsClusterscanWithHttpInfo (string scanId, List<string> expand = null);
+
+        /// <summary>
+        /// Returns a single cluster found by a scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>Cluster</returns>
+        
+        Cluster GetExternalcontactsGraphsClusterscanCluster (string scanId, string clusterId);
+
+        /// <summary>
+        /// Returns a single cluster found by a scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>ApiResponse of Cluster</returns>
+        
+        ApiResponse<Cluster> GetExternalcontactsGraphsClusterscanClusterWithHttpInfo (string scanId, string clusterId);
+
+        /// <summary>
+        /// Returns a list of clusters found by a scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="divisionIds">which divisions to filter results to, up to 50 (defaults to all divisions use has access to) (optional)</param>
+        /// <param name="mergeInfoStatus">which merge statuses to filter results to (optional)</param>
+        /// <returns>ClusterList</returns>
+        
+        ClusterList GetExternalcontactsGraphsClusterscanClusters (string scanId, int? limit = null, string cursor = null, List<string> divisionIds = null, string mergeInfoStatus = null);
+
+        /// <summary>
+        /// Returns a list of clusters found by a scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="divisionIds">which divisions to filter results to, up to 50 (defaults to all divisions use has access to) (optional)</param>
+        /// <param name="mergeInfoStatus">which merge statuses to filter results to (optional)</param>
+        /// <returns>ApiResponse of ClusterList</returns>
+        
+        ApiResponse<ClusterList> GetExternalcontactsGraphsClusterscanClustersWithHttpInfo (string scanId, int? limit = null, string cursor = null, List<string> divisionIds = null, string mergeInfoStatus = null);
+
+        /// <summary>
+        /// Returns the statistics about a single cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <returns>ClusterScanStatistics</returns>
+        
+        ClusterScanStatistics GetExternalcontactsGraphsClusterscanStatistics (string scanId);
+
+        /// <summary>
+        /// Returns the statistics about a single cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <returns>ApiResponse of ClusterScanStatistics</returns>
+        
+        ApiResponse<ClusterScanStatistics> GetExternalcontactsGraphsClusterscanStatisticsWithHttpInfo (string scanId);
+
+        /// <summary>
+        /// Returns a list of cluster scans
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>ClusterScanList</returns>
+        
+        ClusterScanList GetExternalcontactsGraphsClusterscans (int? limit = null, string cursor = null, List<string> expand = null);
+
+        /// <summary>
+        /// Returns a list of cluster scans
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>ApiResponse of ClusterScanList</returns>
+        
+        ApiResponse<ClusterScanList> GetExternalcontactsGraphsClusterscansWithHttpInfo (int? limit = null, string cursor = null, List<string> expand = null);
+
+        /// <summary>
+        /// Returns the latest cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>ClusterScan</returns>
+        
+        ClusterScan GetExternalcontactsGraphsClusterscansLatest (List<string> expand = null);
+
+        /// <summary>
+        /// Returns the latest cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>ApiResponse of ClusterScan</returns>
+        
+        ApiResponse<ClusterScan> GetExternalcontactsGraphsClusterscansLatestWithHttpInfo (List<string> expand = null);
+
+        /// <summary>
+        /// Returns the statistics about the latest cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ClusterScanStatistics</returns>
+        
+        ClusterScanStatistics GetExternalcontactsGraphsClusterscansLatestStatistics ();
+
+        /// <summary>
+        /// Returns the statistics about the latest cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ClusterScanStatistics</returns>
+        
+        ApiResponse<ClusterScanStatistics> GetExternalcontactsGraphsClusterscansLatestStatisticsWithHttpInfo ();
+
+        /// <summary>
+        /// Returns the org-wide settings for ExternalContact graph operations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>GraphSettings</returns>
+        
+        GraphSettings GetExternalcontactsGraphsSettings ();
+
+        /// <summary>
+        /// Returns the org-wide settings for ExternalContact graph operations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of GraphSettings</returns>
+        
+        ApiResponse<GraphSettings> GetExternalcontactsGraphsSettingsWithHttpInfo ();
+
+        /// <summary>
         /// Get settings for CSV import
         /// </summary>
         /// <remarks>
@@ -3242,6 +3462,60 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ExternalSource> PutExternalcontactsExternalsourceWithHttpInfo (string externalSourceId, ExternalSource body);
 
         /// <summary>
+        /// Merge a single cluster found by a scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>Cluster</returns>
+        
+        Cluster PutExternalcontactsGraphsClusterscanClusterMerge (string scanId, string clusterId);
+
+        /// <summary>
+        /// Merge a single cluster found by a scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>ApiResponse of Cluster</returns>
+        
+        ApiResponse<Cluster> PutExternalcontactsGraphsClusterscanClusterMergeWithHttpInfo (string scanId, string clusterId);
+
+        /// <summary>
+        /// Updates the org-wide settings for ExternalContact graph operations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OrgConfiguration</param>
+        /// <returns>GraphSettings</returns>
+        
+        GraphSettings PutExternalcontactsGraphsSettings (GraphSettings body);
+
+        /// <summary>
+        /// Updates the org-wide settings for ExternalContact graph operations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OrgConfiguration</param>
+        /// <returns>ApiResponse of GraphSettings</returns>
+        
+        ApiResponse<GraphSettings> PutExternalcontactsGraphsSettingsWithHttpInfo (GraphSettings body);
+
+        /// <summary>
         /// Update settings for CSV import
         /// </summary>
         /// <remarks>
@@ -4196,6 +4470,226 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (CursorExternalSourceListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CursorExternalSourceListing>> GetExternalcontactsExternalsourcesAsyncWithHttpInfo (string cursor = null, int? limit = null, string name = null, bool? active = null);
+
+        /// <summary>
+        /// Returns a single cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ClusterScan</returns>
+        
+        System.Threading.Tasks.Task<ClusterScan> GetExternalcontactsGraphsClusterscanAsync (string scanId, List<string> expand = null);
+
+        /// <summary>
+        /// Returns a single cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ApiResponse (ClusterScan)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ClusterScan>> GetExternalcontactsGraphsClusterscanAsyncWithHttpInfo (string scanId, List<string> expand = null);
+
+        /// <summary>
+        /// Returns a single cluster found by a scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>Task of Cluster</returns>
+        
+        System.Threading.Tasks.Task<Cluster> GetExternalcontactsGraphsClusterscanClusterAsync (string scanId, string clusterId);
+
+        /// <summary>
+        /// Returns a single cluster found by a scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>Task of ApiResponse (Cluster)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Cluster>> GetExternalcontactsGraphsClusterscanClusterAsyncWithHttpInfo (string scanId, string clusterId);
+
+        /// <summary>
+        /// Returns a list of clusters found by a scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="divisionIds">which divisions to filter results to, up to 50 (defaults to all divisions use has access to) (optional)</param>
+        /// <param name="mergeInfoStatus">which merge statuses to filter results to (optional)</param>
+        /// <returns>Task of ClusterList</returns>
+        
+        System.Threading.Tasks.Task<ClusterList> GetExternalcontactsGraphsClusterscanClustersAsync (string scanId, int? limit = null, string cursor = null, List<string> divisionIds = null, string mergeInfoStatus = null);
+
+        /// <summary>
+        /// Returns a list of clusters found by a scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="divisionIds">which divisions to filter results to, up to 50 (defaults to all divisions use has access to) (optional)</param>
+        /// <param name="mergeInfoStatus">which merge statuses to filter results to (optional)</param>
+        /// <returns>Task of ApiResponse (ClusterList)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ClusterList>> GetExternalcontactsGraphsClusterscanClustersAsyncWithHttpInfo (string scanId, int? limit = null, string cursor = null, List<string> divisionIds = null, string mergeInfoStatus = null);
+
+        /// <summary>
+        /// Returns the statistics about a single cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <returns>Task of ClusterScanStatistics</returns>
+        
+        System.Threading.Tasks.Task<ClusterScanStatistics> GetExternalcontactsGraphsClusterscanStatisticsAsync (string scanId);
+
+        /// <summary>
+        /// Returns the statistics about a single cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <returns>Task of ApiResponse (ClusterScanStatistics)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ClusterScanStatistics>> GetExternalcontactsGraphsClusterscanStatisticsAsyncWithHttpInfo (string scanId);
+
+        /// <summary>
+        /// Returns a list of cluster scans
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ClusterScanList</returns>
+        
+        System.Threading.Tasks.Task<ClusterScanList> GetExternalcontactsGraphsClusterscansAsync (int? limit = null, string cursor = null, List<string> expand = null);
+
+        /// <summary>
+        /// Returns a list of cluster scans
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ApiResponse (ClusterScanList)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ClusterScanList>> GetExternalcontactsGraphsClusterscansAsyncWithHttpInfo (int? limit = null, string cursor = null, List<string> expand = null);
+
+        /// <summary>
+        /// Returns the latest cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ClusterScan</returns>
+        
+        System.Threading.Tasks.Task<ClusterScan> GetExternalcontactsGraphsClusterscansLatestAsync (List<string> expand = null);
+
+        /// <summary>
+        /// Returns the latest cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ApiResponse (ClusterScan)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ClusterScan>> GetExternalcontactsGraphsClusterscansLatestAsyncWithHttpInfo (List<string> expand = null);
+
+        /// <summary>
+        /// Returns the statistics about the latest cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ClusterScanStatistics</returns>
+        
+        System.Threading.Tasks.Task<ClusterScanStatistics> GetExternalcontactsGraphsClusterscansLatestStatisticsAsync ();
+
+        /// <summary>
+        /// Returns the statistics about the latest cluster scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ClusterScanStatistics)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ClusterScanStatistics>> GetExternalcontactsGraphsClusterscansLatestStatisticsAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Returns the org-wide settings for ExternalContact graph operations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of GraphSettings</returns>
+        
+        System.Threading.Tasks.Task<GraphSettings> GetExternalcontactsGraphsSettingsAsync ();
+
+        /// <summary>
+        /// Returns the org-wide settings for ExternalContact graph operations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (GraphSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GraphSettings>> GetExternalcontactsGraphsSettingsAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get settings for CSV import
@@ -6680,6 +7174,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ExternalSource)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ExternalSource>> PutExternalcontactsExternalsourceAsyncWithHttpInfo (string externalSourceId, ExternalSource body);
+
+        /// <summary>
+        /// Merge a single cluster found by a scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>Task of Cluster</returns>
+        
+        System.Threading.Tasks.Task<Cluster> PutExternalcontactsGraphsClusterscanClusterMergeAsync (string scanId, string clusterId);
+
+        /// <summary>
+        /// Merge a single cluster found by a scan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>Task of ApiResponse (Cluster)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Cluster>> PutExternalcontactsGraphsClusterscanClusterMergeAsyncWithHttpInfo (string scanId, string clusterId);
+
+        /// <summary>
+        /// Updates the org-wide settings for ExternalContact graph operations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OrgConfiguration</param>
+        /// <returns>Task of GraphSettings</returns>
+        
+        System.Threading.Tasks.Task<GraphSettings> PutExternalcontactsGraphsSettingsAsync (GraphSettings body);
+
+        /// <summary>
+        /// Updates the org-wide settings for ExternalContact graph operations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OrgConfiguration</param>
+        /// <returns>Task of ApiResponse (GraphSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GraphSettings>> PutExternalcontactsGraphsSettingsAsyncWithHttpInfo (GraphSettings body);
 
         /// <summary>
         /// Update settings for CSV import
@@ -13038,6 +13586,1693 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CursorExternalSourceListing>(localVarStatusCode,
                 localVarHeaders,
                 (CursorExternalSourceListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorExternalSourceListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Returns a single cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>ClusterScan</returns>
+        
+        public ClusterScan GetExternalcontactsGraphsClusterscan (string scanId, List<string> expand = null)
+        {
+             ApiResponse<ClusterScan> localVarResponse = GetExternalcontactsGraphsClusterscanWithHttpInfo(scanId, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns a single cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>ApiResponse of ClusterScan</returns>
+        
+        public ApiResponse< ClusterScan > GetExternalcontactsGraphsClusterscanWithHttpInfo (string scanId, List<string> expand = null)
+        { 
+            // verify the required parameter 'scanId' is set
+            if (scanId == null)
+                throw new ApiException(400, "Missing required parameter 'scanId' when calling ExternalContactsApi->GetExternalcontactsGraphsClusterscan");
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scanId != null) localVarPathParams.Add("scanId", this.Configuration.ApiClient.ParameterToString(scanId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscan: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClusterScan>(localVarStatusCode,
+                localVarHeaders,
+                (ClusterScan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterScan)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Returns a single cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ClusterScan</returns>
+        
+        public async System.Threading.Tasks.Task<ClusterScan> GetExternalcontactsGraphsClusterscanAsync (string scanId, List<string> expand = null)
+        {
+             ApiResponse<ClusterScan> localVarResponse = await GetExternalcontactsGraphsClusterscanAsyncWithHttpInfo(scanId, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns a single cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ApiResponse (ClusterScan)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ClusterScan>> GetExternalcontactsGraphsClusterscanAsyncWithHttpInfo (string scanId, List<string> expand = null)
+        { 
+            // verify the required parameter 'scanId' is set
+            if (scanId == null)
+                throw new ApiException(400, "Missing required parameter 'scanId' when calling ExternalContactsApi->GetExternalcontactsGraphsClusterscan");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scanId != null) localVarPathParams.Add("scanId", this.Configuration.ApiClient.ParameterToString(scanId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscan: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClusterScan>(localVarStatusCode,
+                localVarHeaders,
+                (ClusterScan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterScan)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Returns a single cluster found by a scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>Cluster</returns>
+        
+        public Cluster GetExternalcontactsGraphsClusterscanCluster (string scanId, string clusterId)
+        {
+             ApiResponse<Cluster> localVarResponse = GetExternalcontactsGraphsClusterscanClusterWithHttpInfo(scanId, clusterId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns a single cluster found by a scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>ApiResponse of Cluster</returns>
+        
+        public ApiResponse< Cluster > GetExternalcontactsGraphsClusterscanClusterWithHttpInfo (string scanId, string clusterId)
+        { 
+            // verify the required parameter 'scanId' is set
+            if (scanId == null)
+                throw new ApiException(400, "Missing required parameter 'scanId' when calling ExternalContactsApi->GetExternalcontactsGraphsClusterscanCluster");
+            // verify the required parameter 'clusterId' is set
+            if (clusterId == null)
+                throw new ApiException(400, "Missing required parameter 'clusterId' when calling ExternalContactsApi->GetExternalcontactsGraphsClusterscanCluster");
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters/{clusterId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scanId != null) localVarPathParams.Add("scanId", this.Configuration.ApiClient.ParameterToString(scanId));
+            if (clusterId != null) localVarPathParams.Add("clusterId", this.Configuration.ApiClient.ParameterToString(clusterId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscanCluster: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscanCluster: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscanCluster: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Cluster>(localVarStatusCode,
+                localVarHeaders,
+                (Cluster) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cluster)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Returns a single cluster found by a scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>Task of Cluster</returns>
+        
+        public async System.Threading.Tasks.Task<Cluster> GetExternalcontactsGraphsClusterscanClusterAsync (string scanId, string clusterId)
+        {
+             ApiResponse<Cluster> localVarResponse = await GetExternalcontactsGraphsClusterscanClusterAsyncWithHttpInfo(scanId, clusterId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns a single cluster found by a scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>Task of ApiResponse (Cluster)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Cluster>> GetExternalcontactsGraphsClusterscanClusterAsyncWithHttpInfo (string scanId, string clusterId)
+        { 
+            // verify the required parameter 'scanId' is set
+            if (scanId == null)
+                throw new ApiException(400, "Missing required parameter 'scanId' when calling ExternalContactsApi->GetExternalcontactsGraphsClusterscanCluster");
+            
+            // verify the required parameter 'clusterId' is set
+            if (clusterId == null)
+                throw new ApiException(400, "Missing required parameter 'clusterId' when calling ExternalContactsApi->GetExternalcontactsGraphsClusterscanCluster");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters/{clusterId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scanId != null) localVarPathParams.Add("scanId", this.Configuration.ApiClient.ParameterToString(scanId));
+            if (clusterId != null) localVarPathParams.Add("clusterId", this.Configuration.ApiClient.ParameterToString(clusterId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscanCluster: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscanCluster: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscanCluster: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Cluster>(localVarStatusCode,
+                localVarHeaders,
+                (Cluster) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cluster)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Returns a list of clusters found by a scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="divisionIds">which divisions to filter results to, up to 50 (defaults to all divisions use has access to) (optional)</param>
+        /// <param name="mergeInfoStatus">which merge statuses to filter results to (optional)</param>
+        /// <returns>ClusterList</returns>
+        
+        public ClusterList GetExternalcontactsGraphsClusterscanClusters (string scanId, int? limit = null, string cursor = null, List<string> divisionIds = null, string mergeInfoStatus = null)
+        {
+             ApiResponse<ClusterList> localVarResponse = GetExternalcontactsGraphsClusterscanClustersWithHttpInfo(scanId, limit, cursor, divisionIds, mergeInfoStatus);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns a list of clusters found by a scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="divisionIds">which divisions to filter results to, up to 50 (defaults to all divisions use has access to) (optional)</param>
+        /// <param name="mergeInfoStatus">which merge statuses to filter results to (optional)</param>
+        /// <returns>ApiResponse of ClusterList</returns>
+        
+        public ApiResponse< ClusterList > GetExternalcontactsGraphsClusterscanClustersWithHttpInfo (string scanId, int? limit = null, string cursor = null, List<string> divisionIds = null, string mergeInfoStatus = null)
+        { 
+            // verify the required parameter 'scanId' is set
+            if (scanId == null)
+                throw new ApiException(400, "Missing required parameter 'scanId' when calling ExternalContactsApi->GetExternalcontactsGraphsClusterscanClusters");
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scanId != null) localVarPathParams.Add("scanId", this.Configuration.ApiClient.ParameterToString(scanId));
+
+            // Query params
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (mergeInfoStatus != null) localVarQueryParams.Add(new Tuple<string, string>("mergeInfo.status", this.Configuration.ApiClient.ParameterToString(mergeInfoStatus)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscanClusters: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscanClusters: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscanClusters: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClusterList>(localVarStatusCode,
+                localVarHeaders,
+                (ClusterList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Returns a list of clusters found by a scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="divisionIds">which divisions to filter results to, up to 50 (defaults to all divisions use has access to) (optional)</param>
+        /// <param name="mergeInfoStatus">which merge statuses to filter results to (optional)</param>
+        /// <returns>Task of ClusterList</returns>
+        
+        public async System.Threading.Tasks.Task<ClusterList> GetExternalcontactsGraphsClusterscanClustersAsync (string scanId, int? limit = null, string cursor = null, List<string> divisionIds = null, string mergeInfoStatus = null)
+        {
+             ApiResponse<ClusterList> localVarResponse = await GetExternalcontactsGraphsClusterscanClustersAsyncWithHttpInfo(scanId, limit, cursor, divisionIds, mergeInfoStatus);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns a list of clusters found by a scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="divisionIds">which divisions to filter results to, up to 50 (defaults to all divisions use has access to) (optional)</param>
+        /// <param name="mergeInfoStatus">which merge statuses to filter results to (optional)</param>
+        /// <returns>Task of ApiResponse (ClusterList)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ClusterList>> GetExternalcontactsGraphsClusterscanClustersAsyncWithHttpInfo (string scanId, int? limit = null, string cursor = null, List<string> divisionIds = null, string mergeInfoStatus = null)
+        { 
+            // verify the required parameter 'scanId' is set
+            if (scanId == null)
+                throw new ApiException(400, "Missing required parameter 'scanId' when calling ExternalContactsApi->GetExternalcontactsGraphsClusterscanClusters");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scanId != null) localVarPathParams.Add("scanId", this.Configuration.ApiClient.ParameterToString(scanId));
+
+            // Query params
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (mergeInfoStatus != null) localVarQueryParams.Add(new Tuple<string, string>("mergeInfo.status", this.Configuration.ApiClient.ParameterToString(mergeInfoStatus)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscanClusters: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscanClusters: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscanClusters: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClusterList>(localVarStatusCode,
+                localVarHeaders,
+                (ClusterList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Returns the statistics about a single cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <returns>ClusterScanStatistics</returns>
+        
+        public ClusterScanStatistics GetExternalcontactsGraphsClusterscanStatistics (string scanId)
+        {
+             ApiResponse<ClusterScanStatistics> localVarResponse = GetExternalcontactsGraphsClusterscanStatisticsWithHttpInfo(scanId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the statistics about a single cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <returns>ApiResponse of ClusterScanStatistics</returns>
+        
+        public ApiResponse< ClusterScanStatistics > GetExternalcontactsGraphsClusterscanStatisticsWithHttpInfo (string scanId)
+        { 
+            // verify the required parameter 'scanId' is set
+            if (scanId == null)
+                throw new ApiException(400, "Missing required parameter 'scanId' when calling ExternalContactsApi->GetExternalcontactsGraphsClusterscanStatistics");
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}/statistics";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scanId != null) localVarPathParams.Add("scanId", this.Configuration.ApiClient.ParameterToString(scanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscanStatistics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscanStatistics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscanStatistics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClusterScanStatistics>(localVarStatusCode,
+                localVarHeaders,
+                (ClusterScanStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterScanStatistics)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Returns the statistics about a single cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <returns>Task of ClusterScanStatistics</returns>
+        
+        public async System.Threading.Tasks.Task<ClusterScanStatistics> GetExternalcontactsGraphsClusterscanStatisticsAsync (string scanId)
+        {
+             ApiResponse<ClusterScanStatistics> localVarResponse = await GetExternalcontactsGraphsClusterscanStatisticsAsyncWithHttpInfo(scanId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns the statistics about a single cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <returns>Task of ApiResponse (ClusterScanStatistics)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ClusterScanStatistics>> GetExternalcontactsGraphsClusterscanStatisticsAsyncWithHttpInfo (string scanId)
+        { 
+            // verify the required parameter 'scanId' is set
+            if (scanId == null)
+                throw new ApiException(400, "Missing required parameter 'scanId' when calling ExternalContactsApi->GetExternalcontactsGraphsClusterscanStatistics");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}/statistics";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scanId != null) localVarPathParams.Add("scanId", this.Configuration.ApiClient.ParameterToString(scanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscanStatistics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscanStatistics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscanStatistics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClusterScanStatistics>(localVarStatusCode,
+                localVarHeaders,
+                (ClusterScanStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterScanStatistics)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Returns a list of cluster scans 
+        /// 
+        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>ClusterScanList</returns>
+        
+        public ClusterScanList GetExternalcontactsGraphsClusterscans (int? limit = null, string cursor = null, List<string> expand = null)
+        {
+             ApiResponse<ClusterScanList> localVarResponse = GetExternalcontactsGraphsClusterscansWithHttpInfo(limit, cursor, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns a list of cluster scans 
+        /// 
+        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>ApiResponse of ClusterScanList</returns>
+        
+        public ApiResponse< ClusterScanList > GetExternalcontactsGraphsClusterscansWithHttpInfo (int? limit = null, string cursor = null, List<string> expand = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscans: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscans: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscans: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClusterScanList>(localVarStatusCode,
+                localVarHeaders,
+                (ClusterScanList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterScanList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Returns a list of cluster scans 
+        /// 
+        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ClusterScanList</returns>
+        
+        public async System.Threading.Tasks.Task<ClusterScanList> GetExternalcontactsGraphsClusterscansAsync (int? limit = null, string cursor = null, List<string> expand = null)
+        {
+             ApiResponse<ClusterScanList> localVarResponse = await GetExternalcontactsGraphsClusterscansAsyncWithHttpInfo(limit, cursor, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns a list of cluster scans 
+        /// 
+        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
+        /// <param name="cursor">Cursor to continue scanning (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ApiResponse (ClusterScanList)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ClusterScanList>> GetExternalcontactsGraphsClusterscansAsyncWithHttpInfo (int? limit = null, string cursor = null, List<string> expand = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscans: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscans: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscans: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClusterScanList>(localVarStatusCode,
+                localVarHeaders,
+                (ClusterScanList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterScanList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Returns the latest cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>ClusterScan</returns>
+        
+        public ClusterScan GetExternalcontactsGraphsClusterscansLatest (List<string> expand = null)
+        {
+             ApiResponse<ClusterScan> localVarResponse = GetExternalcontactsGraphsClusterscansLatestWithHttpInfo(expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the latest cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>ApiResponse of ClusterScan</returns>
+        
+        public ApiResponse< ClusterScan > GetExternalcontactsGraphsClusterscansLatestWithHttpInfo (List<string> expand = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/latest";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscansLatest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscansLatest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscansLatest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClusterScan>(localVarStatusCode,
+                localVarHeaders,
+                (ClusterScan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterScan)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Returns the latest cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ClusterScan</returns>
+        
+        public async System.Threading.Tasks.Task<ClusterScan> GetExternalcontactsGraphsClusterscansLatestAsync (List<string> expand = null)
+        {
+             ApiResponse<ClusterScan> localVarResponse = await GetExternalcontactsGraphsClusterscansLatestAsyncWithHttpInfo(expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns the latest cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <returns>Task of ApiResponse (ClusterScan)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ClusterScan>> GetExternalcontactsGraphsClusterscansLatestAsyncWithHttpInfo (List<string> expand = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/latest";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscansLatest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscansLatest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscansLatest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClusterScan>(localVarStatusCode,
+                localVarHeaders,
+                (ClusterScan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterScan)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Returns the statistics about the latest cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ClusterScanStatistics</returns>
+        
+        public ClusterScanStatistics GetExternalcontactsGraphsClusterscansLatestStatistics ()
+        {
+             ApiResponse<ClusterScanStatistics> localVarResponse = GetExternalcontactsGraphsClusterscansLatestStatisticsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the statistics about the latest cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ClusterScanStatistics</returns>
+        
+        public ApiResponse< ClusterScanStatistics > GetExternalcontactsGraphsClusterscansLatestStatisticsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/latest/statistics";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscansLatestStatistics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscansLatestStatistics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscansLatestStatistics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClusterScanStatistics>(localVarStatusCode,
+                localVarHeaders,
+                (ClusterScanStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterScanStatistics)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Returns the statistics about the latest cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ClusterScanStatistics</returns>
+        
+        public async System.Threading.Tasks.Task<ClusterScanStatistics> GetExternalcontactsGraphsClusterscansLatestStatisticsAsync ()
+        {
+             ApiResponse<ClusterScanStatistics> localVarResponse = await GetExternalcontactsGraphsClusterscansLatestStatisticsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns the statistics about the latest cluster scan 
+        /// 
+        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ClusterScanStatistics)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ClusterScanStatistics>> GetExternalcontactsGraphsClusterscansLatestStatisticsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/latest/statistics";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscansLatestStatistics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsClusterscansLatestStatistics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscansLatestStatistics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClusterScanStatistics>(localVarStatusCode,
+                localVarHeaders,
+                (ClusterScanStatistics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterScanStatistics)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Returns the org-wide settings for ExternalContact graph operations 
+        /// 
+        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>GraphSettings</returns>
+        
+        public GraphSettings GetExternalcontactsGraphsSettings ()
+        {
+             ApiResponse<GraphSettings> localVarResponse = GetExternalcontactsGraphsSettingsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the org-wide settings for ExternalContact graph operations 
+        /// 
+        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of GraphSettings</returns>
+        
+        public ApiResponse< GraphSettings > GetExternalcontactsGraphsSettingsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/settings";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GraphSettings>(localVarStatusCode,
+                localVarHeaders,
+                (GraphSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GraphSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Returns the org-wide settings for ExternalContact graph operations 
+        /// 
+        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of GraphSettings</returns>
+        
+        public async System.Threading.Tasks.Task<GraphSettings> GetExternalcontactsGraphsSettingsAsync ()
+        {
+             ApiResponse<GraphSettings> localVarResponse = await GetExternalcontactsGraphsSettingsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns the org-wide settings for ExternalContact graph operations 
+        /// 
+        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (GraphSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GraphSettings>> GetExternalcontactsGraphsSettingsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/settings";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetExternalcontactsGraphsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GraphSettings>(localVarStatusCode,
+                localVarHeaders,
+                (GraphSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GraphSettings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -33976,6 +36211,447 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ExternalSource>(localVarStatusCode,
                 localVarHeaders,
                 (ExternalSource) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalSource)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Merge a single cluster found by a scan 
+        /// 
+        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>Cluster</returns>
+        
+        public Cluster PutExternalcontactsGraphsClusterscanClusterMerge (string scanId, string clusterId)
+        {
+             ApiResponse<Cluster> localVarResponse = PutExternalcontactsGraphsClusterscanClusterMergeWithHttpInfo(scanId, clusterId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Merge a single cluster found by a scan 
+        /// 
+        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>ApiResponse of Cluster</returns>
+        
+        public ApiResponse< Cluster > PutExternalcontactsGraphsClusterscanClusterMergeWithHttpInfo (string scanId, string clusterId)
+        { 
+            // verify the required parameter 'scanId' is set
+            if (scanId == null)
+                throw new ApiException(400, "Missing required parameter 'scanId' when calling ExternalContactsApi->PutExternalcontactsGraphsClusterscanClusterMerge");
+            // verify the required parameter 'clusterId' is set
+            if (clusterId == null)
+                throw new ApiException(400, "Missing required parameter 'clusterId' when calling ExternalContactsApi->PutExternalcontactsGraphsClusterscanClusterMerge");
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters/{clusterId}/merge";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scanId != null) localVarPathParams.Add("scanId", this.Configuration.ApiClient.ParameterToString(scanId));
+            if (clusterId != null) localVarPathParams.Add("clusterId", this.Configuration.ApiClient.ParameterToString(clusterId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsGraphsClusterscanClusterMerge: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutExternalcontactsGraphsClusterscanClusterMerge: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsGraphsClusterscanClusterMerge: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Cluster>(localVarStatusCode,
+                localVarHeaders,
+                (Cluster) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cluster)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Merge a single cluster found by a scan 
+        /// 
+        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>Task of Cluster</returns>
+        
+        public async System.Threading.Tasks.Task<Cluster> PutExternalcontactsGraphsClusterscanClusterMergeAsync (string scanId, string clusterId)
+        {
+             ApiResponse<Cluster> localVarResponse = await PutExternalcontactsGraphsClusterscanClusterMergeAsyncWithHttpInfo(scanId, clusterId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Merge a single cluster found by a scan 
+        /// 
+        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scanId">Cluster scan ID</param>
+        /// <param name="clusterId">Cluster ID</param>
+        /// <returns>Task of ApiResponse (Cluster)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Cluster>> PutExternalcontactsGraphsClusterscanClusterMergeAsyncWithHttpInfo (string scanId, string clusterId)
+        { 
+            // verify the required parameter 'scanId' is set
+            if (scanId == null)
+                throw new ApiException(400, "Missing required parameter 'scanId' when calling ExternalContactsApi->PutExternalcontactsGraphsClusterscanClusterMerge");
+            
+            // verify the required parameter 'clusterId' is set
+            if (clusterId == null)
+                throw new ApiException(400, "Missing required parameter 'clusterId' when calling ExternalContactsApi->PutExternalcontactsGraphsClusterscanClusterMerge");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters/{clusterId}/merge";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scanId != null) localVarPathParams.Add("scanId", this.Configuration.ApiClient.ParameterToString(scanId));
+            if (clusterId != null) localVarPathParams.Add("clusterId", this.Configuration.ApiClient.ParameterToString(clusterId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsGraphsClusterscanClusterMerge: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutExternalcontactsGraphsClusterscanClusterMerge: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsGraphsClusterscanClusterMerge: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Cluster>(localVarStatusCode,
+                localVarHeaders,
+                (Cluster) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Cluster)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Updates the org-wide settings for ExternalContact graph operations 
+        /// 
+        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OrgConfiguration</param>
+        /// <returns>GraphSettings</returns>
+        
+        public GraphSettings PutExternalcontactsGraphsSettings (GraphSettings body)
+        {
+             ApiResponse<GraphSettings> localVarResponse = PutExternalcontactsGraphsSettingsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Updates the org-wide settings for ExternalContact graph operations 
+        /// 
+        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OrgConfiguration</param>
+        /// <returns>ApiResponse of GraphSettings</returns>
+        
+        public ApiResponse< GraphSettings > PutExternalcontactsGraphsSettingsWithHttpInfo (GraphSettings body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsGraphsSettings");
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/settings";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsGraphsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutExternalcontactsGraphsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsGraphsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GraphSettings>(localVarStatusCode,
+                localVarHeaders,
+                (GraphSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GraphSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Updates the org-wide settings for ExternalContact graph operations 
+        /// 
+        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OrgConfiguration</param>
+        /// <returns>Task of GraphSettings</returns>
+        
+        public async System.Threading.Tasks.Task<GraphSettings> PutExternalcontactsGraphsSettingsAsync (GraphSettings body)
+        {
+             ApiResponse<GraphSettings> localVarResponse = await PutExternalcontactsGraphsSettingsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Updates the org-wide settings for ExternalContact graph operations 
+        /// 
+        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">OrgConfiguration</param>
+        /// <returns>Task of ApiResponse (GraphSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GraphSettings>> PutExternalcontactsGraphsSettingsAsyncWithHttpInfo (GraphSettings body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsGraphsSettings");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/graphs/settings";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsGraphsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutExternalcontactsGraphsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsGraphsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GraphSettings>(localVarStatusCode,
+                localVarHeaders,
+                (GraphSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GraphSettings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

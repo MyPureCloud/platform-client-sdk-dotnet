@@ -21,12 +21,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NluDetectionResponse" /> class.
         /// </summary>
-        /// <param name="Output">Output.</param>
         /// <param name="Input">Input.</param>
-        public NluDetectionResponse(NluDetectionOutput Output = null, NluDetectionInput Input = null)
+        /// <param name="Output">Output.</param>
+        public NluDetectionResponse(NluDetectionInput Input = null, NluDetectionOutput Output = null)
         {
-            this.Output = Output;
             this.Input = Input;
+            this.Output = Output;
             
         }
         
@@ -42,18 +42,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Output
-        /// </summary>
-        [DataMember(Name="output", EmitDefaultValue=false)]
-        public NluDetectionOutput Output { get; set; }
-
-
-
-        /// <summary>
         /// Gets or Sets Input
         /// </summary>
         [DataMember(Name="input", EmitDefaultValue=false)]
         public NluDetectionInput Input { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Output
+        /// </summary>
+        [DataMember(Name="output", EmitDefaultValue=false)]
+        public NluDetectionOutput Output { get; set; }
 
 
         /// <summary>
@@ -66,8 +66,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class NluDetectionResponse {\n");
 
             sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  Output: ").Append(Output).Append("\n");
             sb.Append("  Input: ").Append(Input).Append("\n");
+            sb.Append("  Output: ").Append(Output).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -114,14 +114,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
-                    this.Output == other.Output ||
-                    this.Output != null &&
-                    this.Output.Equals(other.Output)
-                ) &&
-                (
                     this.Input == other.Input ||
                     this.Input != null &&
                     this.Input.Equals(other.Input)
+                ) &&
+                (
+                    this.Output == other.Output ||
+                    this.Output != null &&
+                    this.Output.Equals(other.Output)
                 );
         }
 
@@ -139,11 +139,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
 
-                if (this.Output != null)
-                    hash = hash * 59 + this.Output.GetHashCode();
-
                 if (this.Input != null)
                     hash = hash * 59 + this.Input.GetHashCode();
+
+                if (this.Output != null)
+                    hash = hash * 59 + this.Output.GetHashCode();
 
                 return hash;
             }

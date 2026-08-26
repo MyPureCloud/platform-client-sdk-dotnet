@@ -25,13 +25,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Zero">Zero.</param>
         /// <param name="Nano">Nano.</param>
         /// <param name="Negative">Negative.</param>
+        /// <param name="Positive">Positive.</param>
         /// <param name="Units">Units.</param>
-        public Duration(long? Seconds = null, bool? Zero = null, int? Nano = null, bool? Negative = null, List<TemporalUnit> Units = null)
+        public Duration(long? Seconds = null, bool? Zero = null, int? Nano = null, bool? Negative = null, bool? Positive = null, List<TemporalUnit> Units = null)
         {
             this.Seconds = Seconds;
             this.Zero = Zero;
             this.Nano = Nano;
             this.Negative = Negative;
+            this.Positive = Positive;
             this.Units = Units;
             
         }
@@ -71,6 +73,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets Positive
+        /// </summary>
+        [DataMember(Name="positive", EmitDefaultValue=false)]
+        public bool? Positive { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Units
         /// </summary>
         [DataMember(Name="units", EmitDefaultValue=false)]
@@ -90,6 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Zero: ").Append(Zero).Append("\n");
             sb.Append("  Nano: ").Append(Nano).Append("\n");
             sb.Append("  Negative: ").Append(Negative).Append("\n");
+            sb.Append("  Positive: ").Append(Positive).Append("\n");
             sb.Append("  Units: ").Append(Units).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -152,6 +163,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Negative.Equals(other.Negative)
                 ) &&
                 (
+                    this.Positive == other.Positive ||
+                    this.Positive != null &&
+                    this.Positive.Equals(other.Positive)
+                ) &&
+                (
                     this.Units == other.Units ||
                     this.Units != null &&
                     this.Units.SequenceEqual(other.Units)
@@ -180,6 +196,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Negative != null)
                     hash = hash * 59 + this.Negative.GetHashCode();
+
+                if (this.Positive != null)
+                    hash = hash * 59 + this.Positive.GetHashCode();
 
                 if (this.Units != null)
                     hash = hash * 59 + this.Units.GetHashCode();
