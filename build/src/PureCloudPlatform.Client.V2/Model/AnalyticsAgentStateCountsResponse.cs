@@ -25,12 +25,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PresenceCounts">List of count by presences.</param>
         /// <param name="RoutingStatusCounts">List of count by routing statuses.</param>
         /// <param name="IsOutOfOfficeCounts">List of count by out of office states.</param>
-        public AnalyticsAgentStateCountsResponse(List<AgentStateSegmentTypeCount> SegmentCounts = null, List<AgentStatePresenceCount> PresenceCounts = null, List<AgentStateRoutingStatusCount> RoutingStatusCounts = null, List<AgentStateIsOutOfOfficeCount> IsOutOfOfficeCounts = null)
+        /// <param name="AdherenceStateCounts">List of count by adherence state.</param>
+        /// <param name="ScheduledActivityCategoryCounts">List of count by scheduled activity category.</param>
+        /// <param name="ActualActivityCategoryCounts">List of count by actual activity category.</param>
+        public AnalyticsAgentStateCountsResponse(List<AgentStateSegmentTypeCount> SegmentCounts = null, List<AgentStatePresenceCount> PresenceCounts = null, List<AgentStateRoutingStatusCount> RoutingStatusCounts = null, List<AgentStateIsOutOfOfficeCount> IsOutOfOfficeCounts = null, List<AgentStateAdherenceStateCount> AdherenceStateCounts = null, List<AgentStateActivityCategoryCount> ScheduledActivityCategoryCounts = null, List<AgentStateActivityCategoryCount> ActualActivityCategoryCounts = null)
         {
             this.SegmentCounts = SegmentCounts;
             this.PresenceCounts = PresenceCounts;
             this.RoutingStatusCounts = RoutingStatusCounts;
             this.IsOutOfOfficeCounts = IsOutOfOfficeCounts;
+            this.AdherenceStateCounts = AdherenceStateCounts;
+            this.ScheduledActivityCategoryCounts = ScheduledActivityCategoryCounts;
+            this.ActualActivityCategoryCounts = ActualActivityCategoryCounts;
             
         }
         
@@ -71,6 +77,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<AgentStateIsOutOfOfficeCount> IsOutOfOfficeCounts { get; set; }
 
 
+
+        /// <summary>
+        /// List of count by adherence state
+        /// </summary>
+        /// <value>List of count by adherence state</value>
+        [DataMember(Name="adherenceStateCounts", EmitDefaultValue=false)]
+        public List<AgentStateAdherenceStateCount> AdherenceStateCounts { get; set; }
+
+
+
+        /// <summary>
+        /// List of count by scheduled activity category
+        /// </summary>
+        /// <value>List of count by scheduled activity category</value>
+        [DataMember(Name="scheduledActivityCategoryCounts", EmitDefaultValue=false)]
+        public List<AgentStateActivityCategoryCount> ScheduledActivityCategoryCounts { get; set; }
+
+
+
+        /// <summary>
+        /// List of count by actual activity category
+        /// </summary>
+        /// <value>List of count by actual activity category</value>
+        [DataMember(Name="actualActivityCategoryCounts", EmitDefaultValue=false)]
+        public List<AgentStateActivityCategoryCount> ActualActivityCategoryCounts { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +117,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PresenceCounts: ").Append(PresenceCounts).Append("\n");
             sb.Append("  RoutingStatusCounts: ").Append(RoutingStatusCounts).Append("\n");
             sb.Append("  IsOutOfOfficeCounts: ").Append(IsOutOfOfficeCounts).Append("\n");
+            sb.Append("  AdherenceStateCounts: ").Append(AdherenceStateCounts).Append("\n");
+            sb.Append("  ScheduledActivityCategoryCounts: ").Append(ScheduledActivityCategoryCounts).Append("\n");
+            sb.Append("  ActualActivityCategoryCounts: ").Append(ActualActivityCategoryCounts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -143,6 +179,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsOutOfOfficeCounts == other.IsOutOfOfficeCounts ||
                     this.IsOutOfOfficeCounts != null &&
                     this.IsOutOfOfficeCounts.SequenceEqual(other.IsOutOfOfficeCounts)
+                ) &&
+                (
+                    this.AdherenceStateCounts == other.AdherenceStateCounts ||
+                    this.AdherenceStateCounts != null &&
+                    this.AdherenceStateCounts.SequenceEqual(other.AdherenceStateCounts)
+                ) &&
+                (
+                    this.ScheduledActivityCategoryCounts == other.ScheduledActivityCategoryCounts ||
+                    this.ScheduledActivityCategoryCounts != null &&
+                    this.ScheduledActivityCategoryCounts.SequenceEqual(other.ScheduledActivityCategoryCounts)
+                ) &&
+                (
+                    this.ActualActivityCategoryCounts == other.ActualActivityCategoryCounts ||
+                    this.ActualActivityCategoryCounts != null &&
+                    this.ActualActivityCategoryCounts.SequenceEqual(other.ActualActivityCategoryCounts)
                 );
         }
 
@@ -168,6 +219,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IsOutOfOfficeCounts != null)
                     hash = hash * 59 + this.IsOutOfOfficeCounts.GetHashCode();
+
+                if (this.AdherenceStateCounts != null)
+                    hash = hash * 59 + this.AdherenceStateCounts.GetHashCode();
+
+                if (this.ScheduledActivityCategoryCounts != null)
+                    hash = hash * 59 + this.ScheduledActivityCategoryCounts.GetHashCode();
+
+                if (this.ActualActivityCategoryCounts != null)
+                    hash = hash * 59 + this.ActualActivityCategoryCounts.GetHashCode();
 
                 return hash;
             }

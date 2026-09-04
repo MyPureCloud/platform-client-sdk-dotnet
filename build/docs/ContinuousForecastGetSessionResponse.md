@@ -6,11 +6,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **SessionId** | **string** | Latest session ID of the business unit | [optional] |
-| **LastSuccessfulSessionId** | **string** | Last successful session ID of the business unit | [optional] |
-| **State** | **string** | State of the latest session | [optional] |
-| **ErrorCode** | **string** | Failed session error code | [optional] |
+| **SessionId** | **string** | The ID of the latest session, regardless of the session&#39;s status | |
+| **LastSuccessfulSessionId** | **string** | The ID of the last session that has a state of Complete | |
+| **State** | **string** | The state of the latest session | |
+| **ErrorCode** | **string** | The error code if the latest session has a state of Error | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 271.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

@@ -66,13 +66,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateVerifierRequest" /> class.
         /// </summary>
-        /// <param name="Algorithm">The hashing algorithm for the TOTP verifier. (required).</param>
-        /// <param name="Digits">The number of digits in the TOTP code. Must be between 6 and 12. (required).</param>
-        /// <param name="Enabled">Indicates whether this verifier will be enabled. (required).</param>
+        /// <param name="Algorithm">The hashing algorithm for the TOTP verifier..</param>
+        /// <param name="Digits">The number of digits in the TOTP code. Must be between 6 and 12..</param>
+        /// <param name="Enabled">Indicates whether this verifier will be enabled..</param>
         /// <param name="Name">The name of the verifier. Maximum length is 100 characters. (required).</param>
-        /// <param name="Period">The time period in seconds for the TOTP code. (required).</param>
-        /// <param name="SecretSize">The size of the shared secret in bytes. Must be between 10 and 64. (required).</param>
-        /// <param name="Default">Indicates whether this will be the default verifier. (required).</param>
+        /// <param name="Period">The time period in seconds for the TOTP code..</param>
+        /// <param name="SecretSize">The size of the shared secret in bytes. Must be between 10 and 64..</param>
+        /// <param name="Default">Indicates whether this will be the default verifier..</param>
         public CreateVerifierRequest(AlgorithmEnum? Algorithm = null, int? Digits = null, bool? Enabled = null, string Name = null, int? Period = null, int? SecretSize = null, bool? Default = null)
         {
             this.Algorithm = Algorithm;

@@ -42,7 +42,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sessionsnotdeleted for "SessionsNotDeleted"
             /// </summary>
             [EnumMember(Value = "SessionsNotDeleted")]
-            Sessionsnotdeleted
+            Sessionsnotdeleted,
+            
+            /// <summary>
+            /// Enum Invaliduserids for "InvalidUserIds"
+            /// </summary>
+            [EnumMember(Value = "InvalidUserIds")]
+            Invaliduserids,
+            
+            /// <summary>
+            /// Enum Invalidfacilitatorid for "InvalidFacilitatorId"
+            /// </summary>
+            [EnumMember(Value = "InvalidFacilitatorId")]
+            Invalidfacilitatorid,
+            
+            /// <summary>
+            /// Enum Ruleerror for "RuleError"
+            /// </summary>
+            [EnumMember(Value = "RuleError")]
+            Ruleerror,
+            
+            /// <summary>
+            /// Enum Invalidoccurrence for "InvalidOccurrence"
+            /// </summary>
+            [EnumMember(Value = "InvalidOccurrence")]
+            Invalidoccurrence,
+            
+            /// <summary>
+            /// Enum Noschedulefound for "NoScheduleFound"
+            /// </summary>
+            [EnumMember(Value = "NoScheduleFound")]
+            Noschedulefound,
+            
+            /// <summary>
+            /// Enum Sessionusersnotremoved for "SessionUsersNotRemoved"
+            /// </summary>
+            [EnumMember(Value = "SessionUsersNotRemoved")]
+            Sessionusersnotremoved
         }
         /// <summary>
         /// Gets or Sets ExceptionType

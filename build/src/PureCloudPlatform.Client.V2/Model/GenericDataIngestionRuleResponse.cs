@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// DataIngestionRuleResponse
+    /// GenericDataIngestionRuleResponse
     /// </summary>
     [DataContract]
-    public partial class DataIngestionRuleResponse :  IEquatable<DataIngestionRuleResponse>
+    public partial class GenericDataIngestionRuleResponse :  IEquatable<GenericDataIngestionRuleResponse>
     {
         /// <summary>
         /// The status of the data ingestion rule.
@@ -76,7 +76,7 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="DataIngestionRuleResponse" /> class.
+        /// Initializes a new instance of the <see cref="GenericDataIngestionRuleResponse" /> class.
         /// </summary>
         /// <param name="Id">ID of the data ingestion rule..</param>
         /// <param name="Name">The name of the data ingestion rule..</param>
@@ -84,7 +84,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">The status of the data ingestion rule..</param>
         /// <param name="Version">The version number of the data ingestion rule..</param>
         /// <param name="IngestionRuleInfo">The Info about ingestion rule..</param>
-        public DataIngestionRuleResponse(string Id = null, string Name = null, string Description = null, StatusEnum? Status = null, int? Version = null, MessageInfo IngestionRuleInfo = null)
+        /// <param name="Countries">ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide..</param>
+        public GenericDataIngestionRuleResponse(string Id = null, string Name = null, string Description = null, StatusEnum? Status = null, int? Version = null, MessageInfo IngestionRuleInfo = null, List<string> Countries = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -92,6 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Status = Status;
             this.Version = Version;
             this.IngestionRuleInfo = IngestionRuleInfo;
+            this.Countries = Countries;
             
         }
         
@@ -172,11 +174,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide.
+        /// ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide.
         /// </summary>
-        /// <value>The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide.</value>
+        /// <value>ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide.</value>
         [DataMember(Name="countries", EmitDefaultValue=false)]
-        public List<string> Countries { get; private set; }
+        public List<string> Countries { get; set; }
 
 
 
@@ -195,7 +197,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DataIngestionRuleResponse {\n");
+            sb.Append("class GenericDataIngestionRuleResponse {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -233,15 +235,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DataIngestionRuleResponse);
+            return this.Equals(obj as GenericDataIngestionRuleResponse);
         }
 
         /// <summary>
-        /// Returns true if DataIngestionRuleResponse instances are equal
+        /// Returns true if GenericDataIngestionRuleResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of DataIngestionRuleResponse to be compared</param>
+        /// <param name="other">Instance of GenericDataIngestionRuleResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DataIngestionRuleResponse other)
+        public bool Equals(GenericDataIngestionRuleResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -57,10 +57,47 @@ namespace PureCloudPlatform.Client.V2.Model
             Email
         }
         /// <summary>
+        /// Gets or Sets ParticipantType
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ParticipantTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "UNKNOWN"
+            /// </summary>
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Agent for "AGENT"
+            /// </summary>
+            [EnumMember(Value = "AGENT")]
+            Agent,
+            
+            /// <summary>
+            /// Enum Customer for "CUSTOMER"
+            /// </summary>
+            [EnumMember(Value = "CUSTOMER")]
+            Customer
+        }
+        /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
+        /// <summary>
+        /// Gets or Sets ParticipantType
+        /// </summary>
+        [DataMember(Name="participantType", EmitDefaultValue=false)]
+        public ParticipantTypeEnum? ParticipantType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationScriptSuggestionsTopicSuggestionContext" /> class.
         /// </summary>
@@ -74,7 +111,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueryStatement">QueryStatement.</param>
         /// <param name="Language">Language.</param>
         /// <param name="QueryReformulationContext">QueryReformulationContext.</param>
-        public ConversationScriptSuggestionsTopicSuggestionContext(Guid? QueueId = null, MediaTypeEnum? MediaType = null, Guid? UserId = null, Guid? ExternalContactId = null, Guid? AssistantId = null, Guid? UtteranceId = null, string MessageId = null, string QueryStatement = null, string Language = null, ConversationScriptSuggestionsTopicQueryReformulationContext QueryReformulationContext = null)
+        /// <param name="ParticipantType">ParticipantType.</param>
+        public ConversationScriptSuggestionsTopicSuggestionContext(Guid? QueueId = null, MediaTypeEnum? MediaType = null, Guid? UserId = null, Guid? ExternalContactId = null, Guid? AssistantId = null, Guid? UtteranceId = null, string MessageId = null, string QueryStatement = null, string Language = null, ConversationScriptSuggestionsTopicQueryReformulationContext QueryReformulationContext = null, ParticipantTypeEnum? ParticipantType = null)
         {
             this.QueueId = QueueId;
             this.MediaType = MediaType;
@@ -86,6 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.QueryStatement = QueryStatement;
             this.Language = Language;
             this.QueryReformulationContext = QueryReformulationContext;
+            this.ParticipantType = ParticipantType;
             
         }
         
@@ -164,6 +203,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationScriptSuggestionsTopicQueryReformulationContext QueryReformulationContext { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -183,6 +224,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QueryStatement: ").Append(QueryStatement).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  QueryReformulationContext: ").Append(QueryReformulationContext).Append("\n");
+            sb.Append("  ParticipantType: ").Append(ParticipantType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -272,6 +314,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueryReformulationContext == other.QueryReformulationContext ||
                     this.QueryReformulationContext != null &&
                     this.QueryReformulationContext.Equals(other.QueryReformulationContext)
+                ) &&
+                (
+                    this.ParticipantType == other.ParticipantType ||
+                    this.ParticipantType != null &&
+                    this.ParticipantType.Equals(other.ParticipantType)
                 );
         }
 
@@ -315,6 +362,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QueryReformulationContext != null)
                     hash = hash * 59 + this.QueryReformulationContext.GetHashCode();
+
+                if (this.ParticipantType != null)
+                    hash = hash * 59 + this.ParticipantType.GetHashCode();
 
                 return hash;
             }

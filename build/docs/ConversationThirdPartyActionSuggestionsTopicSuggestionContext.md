@@ -16,7 +16,8 @@
 | **QueryStatement** | **string** |  | [optional] |
 | **Language** | **string** |  | [optional] |
 | **QueryReformulationContext** | [**ConversationThirdPartyActionSuggestionsTopicQueryReformulationContext**](ConversationThirdPartyActionSuggestionsTopicQueryReformulationContext) |  | [optional] |
+| **ParticipantType** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 271.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

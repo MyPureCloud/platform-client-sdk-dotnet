@@ -148,6 +148,18 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Nagentdeclined for "nAgentDeclined"
+            /// </summary>
+            [EnumMember(Value = "nAgentDeclined")]
+            Nagentdeclined,
+            
+            /// <summary>
+            /// Enum Nalertexpired for "nAlertExpired"
+            /// </summary>
+            [EnumMember(Value = "nAlertExpired")]
+            Nalertexpired,
+            
+            /// <summary>
             /// Enum Nblindtransferred for "nBlindTransferred"
             /// </summary>
             [EnumMember(Value = "nBlindTransferred")]

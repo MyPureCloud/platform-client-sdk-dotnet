@@ -175,6 +175,38 @@ namespace PureCloudPlatform.Client.V2.Model
             Unknown
         }
         /// <summary>
+        /// Gets or Sets Characteristic
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CharacteristicEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Deviation for "Deviation"
+            /// </summary>
+            [EnumMember(Value = "Deviation")]
+            Deviation,
+            
+            /// <summary>
+            /// Enum Score for "Score"
+            /// </summary>
+            [EnumMember(Value = "Score")]
+            Score
+        }
+        /// <summary>
         /// Gets or Sets ComparisonOperator
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
@@ -246,6 +278,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
         /// <summary>
+        /// Gets or Sets Characteristic
+        /// </summary>
+        [DataMember(Name="characteristic", EmitDefaultValue=false)]
+        public CharacteristicEnum? Characteristic { get; set; }
+        /// <summary>
         /// Gets or Sets ComparisonOperator
         /// </summary>
         [DataMember(Name="comparisonOperator", EmitDefaultValue=false)]
@@ -262,8 +299,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">Status.</param>
         /// <param name="MediaType">MediaType.</param>
         /// <param name="Topic">Topic.</param>
+        /// <param name="Characteristic">Characteristic.</param>
         /// <param name="ComparisonOperator">ComparisonOperator.</param>
-        public V2MobiusRulesTopicConditionRulePredicate(Guid? Id = null, V2MobiusRulesTopicEntityProperties Entity = null, string Metric = null, MetricTypeEnum? MetricType = null, MetricValueTypeEnum? MetricValueType = null, double? Value = null, string Status = null, MediaTypeEnum? MediaType = null, string Topic = null, ComparisonOperatorEnum? ComparisonOperator = null)
+        public V2MobiusRulesTopicConditionRulePredicate(Guid? Id = null, V2MobiusRulesTopicEntityProperties Entity = null, string Metric = null, MetricTypeEnum? MetricType = null, MetricValueTypeEnum? MetricValueType = null, double? Value = null, string Status = null, MediaTypeEnum? MediaType = null, string Topic = null, CharacteristicEnum? Characteristic = null, ComparisonOperatorEnum? ComparisonOperator = null)
         {
             this.Id = Id;
             this.Entity = Entity;
@@ -274,6 +312,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Status = Status;
             this.MediaType = MediaType;
             this.Topic = Topic;
+            this.Characteristic = Characteristic;
             this.ComparisonOperator = ComparisonOperator;
             
         }
@@ -335,6 +374,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -353,6 +394,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Topic: ").Append(Topic).Append("\n");
+            sb.Append("  Characteristic: ").Append(Characteristic).Append("\n");
             sb.Append("  ComparisonOperator: ").Append(ComparisonOperator).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -440,6 +482,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Topic.Equals(other.Topic)
                 ) &&
                 (
+                    this.Characteristic == other.Characteristic ||
+                    this.Characteristic != null &&
+                    this.Characteristic.Equals(other.Characteristic)
+                ) &&
+                (
                     this.ComparisonOperator == other.ComparisonOperator ||
                     this.ComparisonOperator != null &&
                     this.ComparisonOperator.Equals(other.ComparisonOperator)
@@ -483,6 +530,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Topic != null)
                     hash = hash * 59 + this.Topic.GetHashCode();
+
+                if (this.Characteristic != null)
+                    hash = hash * 59 + this.Characteristic.GetHashCode();
 
                 if (this.ComparisonOperator != null)
                     hash = hash * 59 + this.ComparisonOperator.GetHashCode();

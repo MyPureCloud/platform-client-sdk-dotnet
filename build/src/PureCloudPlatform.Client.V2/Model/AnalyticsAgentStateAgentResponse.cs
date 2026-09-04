@@ -151,6 +151,246 @@ namespace PureCloudPlatform.Client.V2.Model
             Communicating
         }
         /// <summary>
+        /// The user's adherence state
+        /// </summary>
+        /// <value>The user's adherence state</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AdherenceStateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Inadherence for "InAdherence"
+            /// </summary>
+            [EnumMember(Value = "InAdherence")]
+            Inadherence,
+            
+            /// <summary>
+            /// Enum Outofadherence for "OutOfAdherence"
+            /// </summary>
+            [EnumMember(Value = "OutOfAdherence")]
+            Outofadherence,
+            
+            /// <summary>
+            /// Enum Unscheduled for "Unscheduled"
+            /// </summary>
+            [EnumMember(Value = "Unscheduled")]
+            Unscheduled,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Ignored for "Ignored"
+            /// </summary>
+            [EnumMember(Value = "Ignored")]
+            Ignored,
+            
+            /// <summary>
+            /// Enum Explained for "Explained"
+            /// </summary>
+            [EnumMember(Value = "Explained")]
+            Explained
+        }
+        /// <summary>
+        /// The user's adherence impact
+        /// </summary>
+        /// <value>The user's adherence impact</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AdherenceImpactEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Positive for "Positive"
+            /// </summary>
+            [EnumMember(Value = "Positive")]
+            Positive,
+            
+            /// <summary>
+            /// Enum Negative for "Negative"
+            /// </summary>
+            [EnumMember(Value = "Negative")]
+            Negative,
+            
+            /// <summary>
+            /// Enum Neutral for "Neutral"
+            /// </summary>
+            [EnumMember(Value = "Neutral")]
+            Neutral,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
+        }
+        /// <summary>
+        /// The user's scheduled activity category
+        /// </summary>
+        /// <value>The user's scheduled activity category</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ScheduledActivityCategoryEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Onqueuework for "OnQueueWork"
+            /// </summary>
+            [EnumMember(Value = "OnQueueWork")]
+            Onqueuework,
+            
+            /// <summary>
+            /// Enum Break for "Break"
+            /// </summary>
+            [EnumMember(Value = "Break")]
+            Break,
+            
+            /// <summary>
+            /// Enum Meal for "Meal"
+            /// </summary>
+            [EnumMember(Value = "Meal")]
+            Meal,
+            
+            /// <summary>
+            /// Enum Meeting for "Meeting"
+            /// </summary>
+            [EnumMember(Value = "Meeting")]
+            Meeting,
+            
+            /// <summary>
+            /// Enum Offqueuework for "OffQueueWork"
+            /// </summary>
+            [EnumMember(Value = "OffQueueWork")]
+            Offqueuework,
+            
+            /// <summary>
+            /// Enum Timeoff for "TimeOff"
+            /// </summary>
+            [EnumMember(Value = "TimeOff")]
+            Timeoff,
+            
+            /// <summary>
+            /// Enum Training for "Training"
+            /// </summary>
+            [EnumMember(Value = "Training")]
+            Training,
+            
+            /// <summary>
+            /// Enum Unavailable for "Unavailable"
+            /// </summary>
+            [EnumMember(Value = "Unavailable")]
+            Unavailable,
+            
+            /// <summary>
+            /// Enum Unscheduled for "Unscheduled"
+            /// </summary>
+            [EnumMember(Value = "Unscheduled")]
+            Unscheduled,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
+        }
+        /// <summary>
+        /// The user's actual activity category
+        /// </summary>
+        /// <value>The user's actual activity category</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ActualActivityCategoryEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Onqueuework for "OnQueueWork"
+            /// </summary>
+            [EnumMember(Value = "OnQueueWork")]
+            Onqueuework,
+            
+            /// <summary>
+            /// Enum Break for "Break"
+            /// </summary>
+            [EnumMember(Value = "Break")]
+            Break,
+            
+            /// <summary>
+            /// Enum Meal for "Meal"
+            /// </summary>
+            [EnumMember(Value = "Meal")]
+            Meal,
+            
+            /// <summary>
+            /// Enum Meeting for "Meeting"
+            /// </summary>
+            [EnumMember(Value = "Meeting")]
+            Meeting,
+            
+            /// <summary>
+            /// Enum Offqueuework for "OffQueueWork"
+            /// </summary>
+            [EnumMember(Value = "OffQueueWork")]
+            Offqueuework,
+            
+            /// <summary>
+            /// Enum Timeoff for "TimeOff"
+            /// </summary>
+            [EnumMember(Value = "TimeOff")]
+            Timeoff,
+            
+            /// <summary>
+            /// Enum Training for "Training"
+            /// </summary>
+            [EnumMember(Value = "Training")]
+            Training,
+            
+            /// <summary>
+            /// Enum Unavailable for "Unavailable"
+            /// </summary>
+            [EnumMember(Value = "Unavailable")]
+            Unavailable,
+            
+            /// <summary>
+            /// Enum Unscheduled for "Unscheduled"
+            /// </summary>
+            [EnumMember(Value = "Unscheduled")]
+            Unscheduled,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
+        }
+        /// <summary>
         /// The user's system presence
         /// </summary>
         /// <value>The user's system presence</value>
@@ -162,6 +402,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The user's routing status</value>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public RoutingStatusEnum? RoutingStatus { get; set; }
+        /// <summary>
+        /// The user's adherence state
+        /// </summary>
+        /// <value>The user's adherence state</value>
+        [DataMember(Name="adherenceState", EmitDefaultValue=false)]
+        public AdherenceStateEnum? AdherenceState { get; set; }
+        /// <summary>
+        /// The user's adherence impact
+        /// </summary>
+        /// <value>The user's adherence impact</value>
+        [DataMember(Name="adherenceImpact", EmitDefaultValue=false)]
+        public AdherenceImpactEnum? AdherenceImpact { get; set; }
+        /// <summary>
+        /// The user's scheduled activity category
+        /// </summary>
+        /// <value>The user's scheduled activity category</value>
+        [DataMember(Name="scheduledActivityCategory", EmitDefaultValue=false)]
+        public ScheduledActivityCategoryEnum? ScheduledActivityCategory { get; set; }
+        /// <summary>
+        /// The user's actual activity category
+        /// </summary>
+        /// <value>The user's actual activity category</value>
+        [DataMember(Name="actualActivityCategory", EmitDefaultValue=false)]
+        public ActualActivityCategoryEnum? ActualActivityCategory { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsAgentStateAgentResponse" /> class.
         /// </summary>
@@ -177,7 +441,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoutingStatus">The user&#39;s routing status.</param>
         /// <param name="RoutingStatusDate">The timestamp for when the user&#39;s routing status began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="IsOutOfOffice">Whether the user is out of office.</param>
-        public AnalyticsAgentStateAgentResponse(string UserId = null, string DivisionId = null, string UserName = null, string ManagerId = null, int? SessionCount = null, List<AnalyticsAgentStateAgentSessionResult> Sessions = null, SystemPresenceEnum? SystemPresence = null, string OrganizationPresenceId = null, DateTime? PresenceDate = null, RoutingStatusEnum? RoutingStatus = null, DateTime? RoutingStatusDate = null, bool? IsOutOfOffice = null)
+        /// <param name="ManagementUnitId">The id of the user&#39;s management unit.</param>
+        /// <param name="BusinessUnitId">The id of the user&#39;s business unit.</param>
+        /// <param name="AdherenceState">The user&#39;s adherence state.</param>
+        /// <param name="AdherenceImpact">The user&#39;s adherence impact.</param>
+        /// <param name="AdherenceDate">The timestamp for when the user&#39;s adherence state began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ScheduledActivityCodeId">The id of the user&#39;s scheduled activity code.</param>
+        /// <param name="ScheduledActivityCategory">The user&#39;s scheduled activity category.</param>
+        /// <param name="ActualActivityCategory">The user&#39;s actual activity category.</param>
+        public AnalyticsAgentStateAgentResponse(string UserId = null, string DivisionId = null, string UserName = null, string ManagerId = null, int? SessionCount = null, List<AnalyticsAgentStateAgentSessionResult> Sessions = null, SystemPresenceEnum? SystemPresence = null, string OrganizationPresenceId = null, DateTime? PresenceDate = null, RoutingStatusEnum? RoutingStatus = null, DateTime? RoutingStatusDate = null, bool? IsOutOfOffice = null, string ManagementUnitId = null, string BusinessUnitId = null, AdherenceStateEnum? AdherenceState = null, AdherenceImpactEnum? AdherenceImpact = null, DateTime? AdherenceDate = null, string ScheduledActivityCodeId = null, ScheduledActivityCategoryEnum? ScheduledActivityCategory = null, ActualActivityCategoryEnum? ActualActivityCategory = null)
         {
             this.UserId = UserId;
             this.DivisionId = DivisionId;
@@ -191,6 +463,14 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RoutingStatus = RoutingStatus;
             this.RoutingStatusDate = RoutingStatusDate;
             this.IsOutOfOffice = IsOutOfOffice;
+            this.ManagementUnitId = ManagementUnitId;
+            this.BusinessUnitId = BusinessUnitId;
+            this.AdherenceState = AdherenceState;
+            this.AdherenceImpact = AdherenceImpact;
+            this.AdherenceDate = AdherenceDate;
+            this.ScheduledActivityCodeId = ScheduledActivityCodeId;
+            this.ScheduledActivityCategory = ScheduledActivityCategory;
+            this.ActualActivityCategory = ActualActivityCategory;
             
         }
         
@@ -289,6 +569,50 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? IsOutOfOffice { get; set; }
 
 
+
+        /// <summary>
+        /// The id of the user&#39;s management unit
+        /// </summary>
+        /// <value>The id of the user&#39;s management unit</value>
+        [DataMember(Name="managementUnitId", EmitDefaultValue=false)]
+        public string ManagementUnitId { get; set; }
+
+
+
+        /// <summary>
+        /// The id of the user&#39;s business unit
+        /// </summary>
+        /// <value>The id of the user&#39;s business unit</value>
+        [DataMember(Name="businessUnitId", EmitDefaultValue=false)]
+        public string BusinessUnitId { get; set; }
+
+
+
+
+
+
+
+        /// <summary>
+        /// The timestamp for when the user&#39;s adherence state began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The timestamp for when the user&#39;s adherence state began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="adherenceDate", EmitDefaultValue=false)]
+        public DateTime? AdherenceDate { get; set; }
+
+
+
+        /// <summary>
+        /// The id of the user&#39;s scheduled activity code
+        /// </summary>
+        /// <value>The id of the user&#39;s scheduled activity code</value>
+        [DataMember(Name="scheduledActivityCodeId", EmitDefaultValue=false)]
+        public string ScheduledActivityCodeId { get; set; }
+
+
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -310,6 +634,14 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
             sb.Append("  RoutingStatusDate: ").Append(RoutingStatusDate).Append("\n");
             sb.Append("  IsOutOfOffice: ").Append(IsOutOfOffice).Append("\n");
+            sb.Append("  ManagementUnitId: ").Append(ManagementUnitId).Append("\n");
+            sb.Append("  BusinessUnitId: ").Append(BusinessUnitId).Append("\n");
+            sb.Append("  AdherenceState: ").Append(AdherenceState).Append("\n");
+            sb.Append("  AdherenceImpact: ").Append(AdherenceImpact).Append("\n");
+            sb.Append("  AdherenceDate: ").Append(AdherenceDate).Append("\n");
+            sb.Append("  ScheduledActivityCodeId: ").Append(ScheduledActivityCodeId).Append("\n");
+            sb.Append("  ScheduledActivityCategory: ").Append(ScheduledActivityCategory).Append("\n");
+            sb.Append("  ActualActivityCategory: ").Append(ActualActivityCategory).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -409,6 +741,46 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsOutOfOffice == other.IsOutOfOffice ||
                     this.IsOutOfOffice != null &&
                     this.IsOutOfOffice.Equals(other.IsOutOfOffice)
+                ) &&
+                (
+                    this.ManagementUnitId == other.ManagementUnitId ||
+                    this.ManagementUnitId != null &&
+                    this.ManagementUnitId.Equals(other.ManagementUnitId)
+                ) &&
+                (
+                    this.BusinessUnitId == other.BusinessUnitId ||
+                    this.BusinessUnitId != null &&
+                    this.BusinessUnitId.Equals(other.BusinessUnitId)
+                ) &&
+                (
+                    this.AdherenceState == other.AdherenceState ||
+                    this.AdherenceState != null &&
+                    this.AdherenceState.Equals(other.AdherenceState)
+                ) &&
+                (
+                    this.AdherenceImpact == other.AdherenceImpact ||
+                    this.AdherenceImpact != null &&
+                    this.AdherenceImpact.Equals(other.AdherenceImpact)
+                ) &&
+                (
+                    this.AdherenceDate == other.AdherenceDate ||
+                    this.AdherenceDate != null &&
+                    this.AdherenceDate.Equals(other.AdherenceDate)
+                ) &&
+                (
+                    this.ScheduledActivityCodeId == other.ScheduledActivityCodeId ||
+                    this.ScheduledActivityCodeId != null &&
+                    this.ScheduledActivityCodeId.Equals(other.ScheduledActivityCodeId)
+                ) &&
+                (
+                    this.ScheduledActivityCategory == other.ScheduledActivityCategory ||
+                    this.ScheduledActivityCategory != null &&
+                    this.ScheduledActivityCategory.Equals(other.ScheduledActivityCategory)
+                ) &&
+                (
+                    this.ActualActivityCategory == other.ActualActivityCategory ||
+                    this.ActualActivityCategory != null &&
+                    this.ActualActivityCategory.Equals(other.ActualActivityCategory)
                 );
         }
 
@@ -458,6 +830,30 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IsOutOfOffice != null)
                     hash = hash * 59 + this.IsOutOfOffice.GetHashCode();
+
+                if (this.ManagementUnitId != null)
+                    hash = hash * 59 + this.ManagementUnitId.GetHashCode();
+
+                if (this.BusinessUnitId != null)
+                    hash = hash * 59 + this.BusinessUnitId.GetHashCode();
+
+                if (this.AdherenceState != null)
+                    hash = hash * 59 + this.AdherenceState.GetHashCode();
+
+                if (this.AdherenceImpact != null)
+                    hash = hash * 59 + this.AdherenceImpact.GetHashCode();
+
+                if (this.AdherenceDate != null)
+                    hash = hash * 59 + this.AdherenceDate.GetHashCode();
+
+                if (this.ScheduledActivityCodeId != null)
+                    hash = hash * 59 + this.ScheduledActivityCodeId.GetHashCode();
+
+                if (this.ScheduledActivityCategory != null)
+                    hash = hash * 59 + this.ScheduledActivityCategory.GetHashCode();
+
+                if (this.ActualActivityCategory != null)
+                    hash = hash * 59 + this.ActualActivityCategory.GetHashCode();
 
                 return hash;
             }

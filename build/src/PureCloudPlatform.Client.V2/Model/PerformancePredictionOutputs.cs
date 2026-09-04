@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PerformancePredictionOutputs" /> class.
         /// </summary>
-        /// <param name="CalculationStartDate">Date as an ISO-8601 string, corresponding to the beginning of the performance prediction results (required).</param>
+        /// <param name="CalculationStartDate">The beginning of the performance prediction results, in ISO-8601 format (required).</param>
         /// <param name="CalculationIntervalLengthMinutes">Interval length of the response metrics (required).</param>
         /// <param name="PlanningGroupResults">List of planning group level performance prediction results (required).</param>
         public PerformancePredictionOutputs(DateTime? CalculationStartDate = null, int? CalculationIntervalLengthMinutes = null, List<PlanningGroupOutputs> PlanningGroupResults = null)
@@ -41,9 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Date as an ISO-8601 string, corresponding to the beginning of the performance prediction results
+        /// The beginning of the performance prediction results, in ISO-8601 format
         /// </summary>
-        /// <value>Date as an ISO-8601 string, corresponding to the beginning of the performance prediction results</value>
+        /// <value>The beginning of the performance prediction results, in ISO-8601 format</value>
         [DataMember(Name="calculationStartDate", EmitDefaultValue=false)]
         public DateTime? CalculationStartDate { get; set; }
 

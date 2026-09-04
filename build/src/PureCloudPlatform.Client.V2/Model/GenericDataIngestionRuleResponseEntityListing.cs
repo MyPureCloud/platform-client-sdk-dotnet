@@ -13,13 +13,13 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// DataIngestionRuleResponseEntityListing
+    /// GenericDataIngestionRuleResponseEntityListing
     /// </summary>
     [DataContract]
-    public partial class DataIngestionRuleResponseEntityListing :  IEquatable<DataIngestionRuleResponseEntityListing>, IPagedResource<DataIngestionRuleResponse>
+    public partial class GenericDataIngestionRuleResponseEntityListing :  IEquatable<GenericDataIngestionRuleResponseEntityListing>, IPagedResource<GenericDataIngestionRuleResponse>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DataIngestionRuleResponseEntityListing" /> class.
+        /// Initializes a new instance of the <see cref="GenericDataIngestionRuleResponseEntityListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="PageSize">PageSize.</param>
@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NextUri">NextUri.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public DataIngestionRuleResponseEntityListing(List<DataIngestionRuleResponse> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string LastUri = null, string FirstUri = null, string SelfUri = null, string NextUri = null, string PreviousUri = null, int? PageCount = null)
+        public GenericDataIngestionRuleResponseEntityListing(List<GenericDataIngestionRuleResponse> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string LastUri = null, string FirstUri = null, string SelfUri = null, string NextUri = null, string PreviousUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<DataIngestionRuleResponse> Entities { get; set; }
+        public List<GenericDataIngestionRuleResponse> Entities { get; set; }
 
 
 
@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DataIngestionRuleResponseEntityListing {\n");
+            sb.Append("class GenericDataIngestionRuleResponseEntityListing {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
@@ -171,15 +171,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DataIngestionRuleResponseEntityListing);
+            return this.Equals(obj as GenericDataIngestionRuleResponseEntityListing);
         }
 
         /// <summary>
-        /// Returns true if DataIngestionRuleResponseEntityListing instances are equal
+        /// Returns true if GenericDataIngestionRuleResponseEntityListing instances are equal
         /// </summary>
-        /// <param name="other">Instance of DataIngestionRuleResponseEntityListing to be compared</param>
+        /// <param name="other">Instance of GenericDataIngestionRuleResponseEntityListing to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DataIngestionRuleResponseEntityListing other)
+        public bool Equals(GenericDataIngestionRuleResponseEntityListing other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

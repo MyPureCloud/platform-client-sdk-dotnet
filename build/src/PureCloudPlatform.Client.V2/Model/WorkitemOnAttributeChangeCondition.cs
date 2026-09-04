@@ -37,7 +37,94 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Statusid for "statusId"
             /// </summary>
             [EnumMember(Value = "statusId")]
-            Statusid
+            Statusid,
+            
+            /// <summary>
+            /// Enum Priority for "priority"
+            /// </summary>
+            [EnumMember(Value = "priority")]
+            Priority,
+            
+            /// <summary>
+            /// Enum Queueid for "queueId"
+            /// </summary>
+            [EnumMember(Value = "queueId")]
+            Queueid,
+            
+            /// <summary>
+            /// Enum Assigneeid for "assigneeId"
+            /// </summary>
+            [EnumMember(Value = "assigneeId")]
+            Assigneeid,
+            
+            /// <summary>
+            /// Enum Assignmentstate for "assignmentState"
+            /// </summary>
+            [EnumMember(Value = "assignmentState")]
+            Assignmentstate,
+            
+            /// <summary>
+            /// Enum Languageid for "languageId"
+            /// </summary>
+            [EnumMember(Value = "languageId")]
+            Languageid,
+            
+            /// <summary>
+            /// Enum Externaltag for "externalTag"
+            /// </summary>
+            [EnumMember(Value = "externalTag")]
+            Externaltag,
+            
+            /// <summary>
+            /// Enum Wrapup for "wrapup"
+            /// </summary>
+            [EnumMember(Value = "wrapup")]
+            Wrapup
+        }
+        /// <summary>
+        /// The comparison operator used to evaluate the priority attribute against the value. Only supported for the priority attribute.
+        /// </summary>
+        /// <value>The comparison operator used to evaluate the priority attribute against the value. Only supported for the priority attribute.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum OperatorEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Eq for "EQ"
+            /// </summary>
+            [EnumMember(Value = "EQ")]
+            Eq,
+            
+            /// <summary>
+            /// Enum Gt for "GT"
+            /// </summary>
+            [EnumMember(Value = "GT")]
+            Gt,
+            
+            /// <summary>
+            /// Enum Lt for "LT"
+            /// </summary>
+            [EnumMember(Value = "LT")]
+            Lt,
+            
+            /// <summary>
+            /// Enum Gte for "GTE"
+            /// </summary>
+            [EnumMember(Value = "GTE")]
+            Gte,
+            
+            /// <summary>
+            /// Enum Lte for "LTE"
+            /// </summary>
+            [EnumMember(Value = "LTE")]
+            Lte
         }
         /// <summary>
         /// The name of the workitem attribute whose change will be evaluated as part of the rule.
@@ -45,6 +132,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the workitem attribute whose change will be evaluated as part of the rule.</value>
         [DataMember(Name="attribute", EmitDefaultValue=false)]
         public AttributeEnum? Attribute { get; set; }
+        /// <summary>
+        /// The comparison operator used to evaluate the priority attribute against the value. Only supported for the priority attribute.
+        /// </summary>
+        /// <value>The comparison operator used to evaluate the priority attribute against the value. Only supported for the priority attribute.</value>
+        [DataMember(Name="operator", EmitDefaultValue=false)]
+        public OperatorEnum? Operator { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkitemOnAttributeChangeCondition" /> class.
@@ -55,13 +148,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WorkitemOnAttributeChangeCondition" /> class.
         /// </summary>
         /// <param name="Attribute">The name of the workitem attribute whose change will be evaluated as part of the rule. (required).</param>
-        /// <param name="NewValue">The new value of the attribute. If the attribute is updated to this value this part of the condition will be met. (required).</param>
+        /// <param name="NewValue">The new value of the attribute. If the attribute is updated to this value this part of the condition will be met. Required for exact-match conditions (when operator is not set)..</param>
         /// <param name="OldValue">The old value of the attribute. If the attribute was updated from this value this part of the condition will be met..</param>
-        public WorkitemOnAttributeChangeCondition(AttributeEnum? Attribute = null, string NewValue = null, string OldValue = null)
+        /// <param name="Operator">The comparison operator used to evaluate the priority attribute against the value. Only supported for the priority attribute..</param>
+        /// <param name="Value">The numeric value compared against the priority attribute using the operator. Required when operator is set. Only supported for the priority attribute..</param>
+        public WorkitemOnAttributeChangeCondition(AttributeEnum? Attribute = null, string NewValue = null, string OldValue = null, OperatorEnum? Operator = null, int? Value = null)
         {
             this.Attribute = Attribute;
             this.NewValue = NewValue;
             this.OldValue = OldValue;
+            this.Operator = Operator;
+            this.Value = Value;
             
         }
         
@@ -70,9 +167,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The new value of the attribute. If the attribute is updated to this value this part of the condition will be met.
+        /// The new value of the attribute. If the attribute is updated to this value this part of the condition will be met. Required for exact-match conditions (when operator is not set).
         /// </summary>
-        /// <value>The new value of the attribute. If the attribute is updated to this value this part of the condition will be met.</value>
+        /// <value>The new value of the attribute. If the attribute is updated to this value this part of the condition will be met. Required for exact-match conditions (when operator is not set).</value>
         [DataMember(Name="newValue", EmitDefaultValue=false)]
         public string NewValue { get; set; }
 
@@ -84,6 +181,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The old value of the attribute. If the attribute was updated from this value this part of the condition will be met.</value>
         [DataMember(Name="oldValue", EmitDefaultValue=false)]
         public string OldValue { get; set; }
+
+
+
+
+
+        /// <summary>
+        /// The numeric value compared against the priority attribute using the operator. Required when operator is set. Only supported for the priority attribute.
+        /// </summary>
+        /// <value>The numeric value compared against the priority attribute using the operator. Required when operator is set. Only supported for the priority attribute.</value>
+        [DataMember(Name="value", EmitDefaultValue=false)]
+        public int? Value { get; set; }
 
 
         /// <summary>
@@ -98,6 +206,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Attribute: ").Append(Attribute).Append("\n");
             sb.Append("  NewValue: ").Append(NewValue).Append("\n");
             sb.Append("  OldValue: ").Append(OldValue).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -152,6 +262,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OldValue == other.OldValue ||
                     this.OldValue != null &&
                     this.OldValue.Equals(other.OldValue)
+                ) &&
+                (
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
+                ) &&
+                (
+                    this.Value == other.Value ||
+                    this.Value != null &&
+                    this.Value.Equals(other.Value)
                 );
         }
 
@@ -174,6 +294,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OldValue != null)
                     hash = hash * 59 + this.OldValue.GetHashCode();
+
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
+
+                if (this.Value != null)
+                    hash = hash * 59 + this.Value.GetHashCode();
 
                 return hash;
             }

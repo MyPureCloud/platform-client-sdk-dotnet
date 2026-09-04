@@ -174,15 +174,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide.
-        /// </summary>
-        /// <value>The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide.</value>
-        [DataMember(Name="countries", EmitDefaultValue=false)]
-        public List<string> Countries { get; private set; }
-
-
-
-        /// <summary>
         /// The external source associated with this open data ingestion rule, which is used when performing identity resolution
         /// </summary>
         /// <value>The external source associated with this open data ingestion rule, which is used when performing identity resolution</value>
@@ -217,7 +208,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Platform: ").Append(Platform).Append("\n");
             sb.Append("  IngestionRuleInfo: ").Append(IngestionRuleInfo).Append("\n");
-            sb.Append("  Countries: ").Append(Countries).Append("\n");
             sb.Append("  ExternalSource: ").Append(ExternalSource).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -306,11 +296,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IngestionRuleInfo.Equals(other.IngestionRuleInfo)
                 ) &&
                 (
-                    this.Countries == other.Countries ||
-                    this.Countries != null &&
-                    this.Countries.SequenceEqual(other.Countries)
-                ) &&
-                (
                     this.ExternalSource == other.ExternalSource ||
                     this.ExternalSource != null &&
                     this.ExternalSource.Equals(other.ExternalSource)
@@ -359,9 +344,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IngestionRuleInfo != null)
                     hash = hash * 59 + this.IngestionRuleInfo.GetHashCode();
-
-                if (this.Countries != null)
-                    hash = hash * 59 + this.Countries.GetHashCode();
 
                 if (this.ExternalSource != null)
                     hash = hash * 59 + this.ExternalSource.GetHashCode();

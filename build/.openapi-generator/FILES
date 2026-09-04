@@ -231,7 +231,6 @@ docs/AgentUtilizationAggregateQueryFilter.md
 docs/AgentUtilizationAggregateQueryPredicate.md
 docs/AgentUtilizationAggregateQueryResponse.md
 docs/AgentUtilizationAggregationQuery.md
-docs/AgentUtilizationAggregationSort.md
 docs/AgentUtilizationAggregationView.md
 docs/AgentUtilizationAsyncAggregateQueryResponse.md
 docs/AgentUtilizationAsyncAggregationQuery.md
@@ -299,6 +298,8 @@ docs/AlertingApi.json
 docs/AlertingApi.md
 docs/AlertingUnreadStatus.md
 docs/AllTimePoints.md
+docs/AllocationOutputsTemplate.md
+docs/AllocationResultsTemplate.md
 docs/Alteration.md
 docs/AlternativeShiftAgentScheduledShift.md
 docs/AlternativeShiftAsyncResponse.md
@@ -1222,6 +1223,9 @@ docs/ContactListing.md
 docs/ContactListingRequest.md
 docs/ContactListingResponse.md
 docs/ContactPhoneNumberColumn.md
+docs/ContactSearchOperation.md
+docs/ContactSearchRequest.md
+docs/ContactSimpleSearch.md
 docs/ContactSort.md
 docs/ContactVertex.md
 docs/ContactableStatus.md
@@ -1967,8 +1971,6 @@ docs/DataExtractionFileSchemaListing.md
 docs/DataExtractionFileUrl.md
 docs/DataExtractionFileUrlListing.md
 docs/DataIngestionRuleCriteria.md
-docs/DataIngestionRuleResponse.md
-docs/DataIngestionRuleResponseEntityListing.md
 docs/DataIngestionRuleStatusPatchRequest.md
 docs/DataIngestionRulesMetadata.md
 docs/DataPrivacyApi.json
@@ -2104,6 +2106,7 @@ docs/DeleteCasemanagementCase-example.txt
 docs/DeleteCasemanagementCaseCommentsMeCommentId-example.txt
 docs/DeleteCasemanagementCaseplan-example.txt
 docs/DeleteCasemanagementCaseplanDataschema-example.txt
+docs/DeleteCasemanagementCaseplanStageplan-example.txt
 docs/DeleteChatsRoomMessage-example.txt
 docs/DeleteChatsRoomMessagesPin-example.txt
 docs/DeleteChatsRoomParticipant-example.txt
@@ -3261,6 +3264,8 @@ docs/GenerateBuForecastRequest.md
 docs/GenerateGuideContentRequest.md
 docs/GenerateMeetingIdRequest.md
 docs/GeneratedGuideContent.md
+docs/GenericDataIngestionRuleResponse.md
+docs/GenericDataIngestionRuleResponseEntityListing.md
 docs/GenericSAML.md
 docs/GenericTemplate.md
 docs/GenesysBotConnector.md
@@ -6708,6 +6713,8 @@ docs/PostCasemanagementCaseComments-example.txt
 docs/PostCasemanagementCaseTerminateJobs-example.txt
 docs/PostCasemanagementCaseplanDataschemas-example.txt
 docs/PostCasemanagementCaseplanPublish-example.txt
+docs/PostCasemanagementCaseplanStageplanReposition-example.txt
+docs/PostCasemanagementCaseplanStageplans-example.txt
 docs/PostCasemanagementCaseplanVersions-example.txt
 docs/PostCasemanagementCaseplans-example.txt
 docs/PostCasemanagementCaseplansQuery-example.txt
@@ -6882,6 +6889,7 @@ docs/PostExternalcontactsContactsEnrich-example.txt
 docs/PostExternalcontactsContactsExports-example.txt
 docs/PostExternalcontactsContactsMerge-example.txt
 docs/PostExternalcontactsContactsSchemas-example.txt
+docs/PostExternalcontactsContactsSearch-example.txt
 docs/PostExternalcontactsExternalsources-example.txt
 docs/PostExternalcontactsIdentifierlookup-example.txt
 docs/PostExternalcontactsIdentifierlookupContacts-example.txt
@@ -8835,8 +8843,10 @@ docs/Stage.md
 docs/StageListing.md
 docs/StageReference.md
 docs/Stageplan.md
+docs/StageplanCreate.md
 docs/StageplanListing.md
 docs/StageplanReference.md
+docs/StageplanReposition.md
 docs/StageplanUpdate.md
 docs/StarrableDivision.md
 docs/StartScreenMonitorResponseBody.md
@@ -10522,7 +10532,6 @@ src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregationQuery.cs
-src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAsyncAggregationQuery.cs
@@ -10588,6 +10597,8 @@ src/PureCloudPlatform.Client.V2/Model/AlertSummaryEntity.cs
 src/PureCloudPlatform.Client.V2/Model/AlertablePresences.cs
 src/PureCloudPlatform.Client.V2/Model/AlertingUnreadStatus.cs
 src/PureCloudPlatform.Client.V2/Model/AllTimePoints.cs
+src/PureCloudPlatform.Client.V2/Model/AllocationOutputsTemplate.cs
+src/PureCloudPlatform.Client.V2/Model/AllocationResultsTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/Alteration.cs
 src/PureCloudPlatform.Client.V2/Model/AlternativeShiftAgentScheduledShift.cs
 src/PureCloudPlatform.Client.V2/Model/AlternativeShiftAsyncResponse.cs
@@ -11487,6 +11498,9 @@ src/PureCloudPlatform.Client.V2/Model/ContactListing.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListingRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListingResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ContactPhoneNumberColumn.cs
+src/PureCloudPlatform.Client.V2/Model/ContactSearchOperation.cs
+src/PureCloudPlatform.Client.V2/Model/ContactSearchRequest.cs
+src/PureCloudPlatform.Client.V2/Model/ContactSimpleSearch.cs
 src/PureCloudPlatform.Client.V2/Model/ContactSort.cs
 src/PureCloudPlatform.Client.V2/Model/ContactVertex.cs
 src/PureCloudPlatform.Client.V2/Model/ContactableStatus.cs
@@ -12226,8 +12240,6 @@ src/PureCloudPlatform.Client.V2/Model/DataExtractionFileSchemaListing.cs
 src/PureCloudPlatform.Client.V2/Model/DataExtractionFileUrl.cs
 src/PureCloudPlatform.Client.V2/Model/DataExtractionFileUrlListing.cs
 src/PureCloudPlatform.Client.V2/Model/DataIngestionRuleCriteria.cs
-src/PureCloudPlatform.Client.V2/Model/DataIngestionRuleResponse.cs
-src/PureCloudPlatform.Client.V2/Model/DataIngestionRuleResponseEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DataIngestionRuleStatusPatchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/DataIngestionRulesMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/DataRange.cs
@@ -13123,6 +13135,8 @@ src/PureCloudPlatform.Client.V2/Model/GenerateBuForecastRequest.cs
 src/PureCloudPlatform.Client.V2/Model/GenerateGuideContentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/GenerateMeetingIdRequest.cs
 src/PureCloudPlatform.Client.V2/Model/GeneratedGuideContent.cs
+src/PureCloudPlatform.Client.V2/Model/GenericDataIngestionRuleResponse.cs
+src/PureCloudPlatform.Client.V2/Model/GenericDataIngestionRuleResponseEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/GenericSAML.cs
 src/PureCloudPlatform.Client.V2/Model/GenericTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/GenesysBotConnector.cs
@@ -15542,8 +15556,10 @@ src/PureCloudPlatform.Client.V2/Model/Stage.cs
 src/PureCloudPlatform.Client.V2/Model/StageListing.cs
 src/PureCloudPlatform.Client.V2/Model/StageReference.cs
 src/PureCloudPlatform.Client.V2/Model/Stageplan.cs
+src/PureCloudPlatform.Client.V2/Model/StageplanCreate.cs
 src/PureCloudPlatform.Client.V2/Model/StageplanListing.cs
 src/PureCloudPlatform.Client.V2/Model/StageplanReference.cs
+src/PureCloudPlatform.Client.V2/Model/StageplanReposition.cs
 src/PureCloudPlatform.Client.V2/Model/StageplanUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/StarrableDivision.cs
 src/PureCloudPlatform.Client.V2/Model/StartScreenMonitorResponseBody.cs

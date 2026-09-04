@@ -5468,7 +5468,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AgentStateCountsRequest**](AgentStateCountsRequest)| query |  |
-| **groupBy** | [**List<string>**](string)| Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType | [optional] <br />**Values**: segmentType, presence, routingStatus, isOutOfOffice |
+| **groupBy** | [**List<string>**](string)| Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType | [optional] <br />**Values**: segmentType, presence, routingStatus, isOutOfOffice, adherenceState, scheduledActivityCategory, actualActivityCategory |
 
 ### Return type
 
@@ -8864,4 +8864,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 271.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

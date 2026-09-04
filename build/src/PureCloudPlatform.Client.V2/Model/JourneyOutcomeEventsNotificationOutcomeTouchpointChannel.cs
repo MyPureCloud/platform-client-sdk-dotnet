@@ -42,13 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Contentoffer for "ContentOffer"
             /// </summary>
             [EnumMember(Value = "ContentOffer")]
-            Contentoffer,
-            
-            /// <summary>
-            /// Enum Webchat for "Webchat"
-            /// </summary>
-            [EnumMember(Value = "Webchat")]
-            Webchat
+            Contentoffer
         }
         /// <summary>
         /// Gets or Sets Type

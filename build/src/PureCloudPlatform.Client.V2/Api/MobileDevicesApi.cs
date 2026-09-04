@@ -16,7 +16,7 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
 
         /// <summary>
-        /// Delete device
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device
         /// </summary>
         /// <remarks>
         /// 
@@ -24,11 +24,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void DeleteMobiledevice (string deviceId);
 
         /// <summary>
-        /// Delete device
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device
         /// </summary>
         /// <remarks>
         /// 
@@ -36,11 +36,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> DeleteMobiledeviceWithHttpInfo (string deviceId);
 
         /// <summary>
-        /// Get device
+        /// (Deprecated) Get device
         /// </summary>
         /// <remarks>
         /// 
@@ -48,11 +48,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>UserDevice</returns>
-        
+        [Obsolete]
         UserDevice GetMobiledevice (string deviceId);
 
         /// <summary>
-        /// Get device
+        /// (Deprecated) Get device
         /// </summary>
         /// <remarks>
         /// 
@@ -60,11 +60,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>ApiResponse of UserDevice</returns>
-        
+        [Obsolete]
         ApiResponse<UserDevice> GetMobiledeviceWithHttpInfo (string deviceId);
 
         /// <summary>
-        /// Get a list of all devices.
+        /// (Deprecated) Get a list of all devices.
         /// </summary>
         /// <remarks>
         /// 
@@ -74,11 +74,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>DirectoryUserDevicesListing</returns>
-        
+        [Obsolete]
         DirectoryUserDevicesListing GetMobiledevices (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
-        /// Get a list of all devices.
+        /// (Deprecated) Get a list of all devices.
         /// </summary>
         /// <remarks>
         /// 
@@ -88,11 +88,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>ApiResponse of DirectoryUserDevicesListing</returns>
-        
+        [Obsolete]
         ApiResponse<DirectoryUserDevicesListing> GetMobiledevicesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
-        /// Create User device
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device
         /// </summary>
         /// <remarks>
         /// 
@@ -100,11 +100,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Device</param>
         /// <returns>UserDevice</returns>
-        
+        [Obsolete]
         UserDevice PostMobiledevices (UserDevice body);
 
         /// <summary>
-        /// Create User device
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device
         /// </summary>
         /// <remarks>
         /// 
@@ -112,11 +112,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Device</param>
         /// <returns>ApiResponse of UserDevice</returns>
-        
+        [Obsolete]
         ApiResponse<UserDevice> PostMobiledevicesWithHttpInfo (UserDevice body);
 
         /// <summary>
-        /// Update device
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device
         /// </summary>
         /// <remarks>
         /// 
@@ -125,11 +125,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <param name="body">Device (optional)</param>
         /// <returns>UserDevice</returns>
-        
+        [Obsolete]
         UserDevice PutMobiledevice (string deviceId, UserDevice body = null);
 
         /// <summary>
-        /// Update device
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device
         /// </summary>
         /// <remarks>
         /// 
@@ -138,7 +138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <param name="body">Device (optional)</param>
         /// <returns>ApiResponse of UserDevice</returns>
-        
+        [Obsolete]
         ApiResponse<UserDevice> PutMobiledeviceWithHttpInfo (string deviceId, UserDevice body = null);
 
         #endregion Synchronous Operations
@@ -146,7 +146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
 
         /// <summary>
-        /// Delete device
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device
         /// </summary>
         /// <remarks>
         /// 
@@ -154,11 +154,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task DeleteMobiledeviceAsync (string deviceId);
 
         /// <summary>
-        /// Delete device
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device
         /// </summary>
         /// <remarks>
         /// 
@@ -166,11 +166,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMobiledeviceAsyncWithHttpInfo (string deviceId);
 
         /// <summary>
-        /// Get device
+        /// (Deprecated) Get device
         /// </summary>
         /// <remarks>
         /// 
@@ -178,11 +178,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of UserDevice</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<UserDevice> GetMobiledeviceAsync (string deviceId);
 
         /// <summary>
-        /// Get device
+        /// (Deprecated) Get device
         /// </summary>
         /// <remarks>
         /// 
@@ -190,11 +190,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of ApiResponse (UserDevice)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<UserDevice>> GetMobiledeviceAsyncWithHttpInfo (string deviceId);
 
         /// <summary>
-        /// Get a list of all devices.
+        /// (Deprecated) Get a list of all devices.
         /// </summary>
         /// <remarks>
         /// 
@@ -204,11 +204,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>Task of DirectoryUserDevicesListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<DirectoryUserDevicesListing> GetMobiledevicesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
-        /// Get a list of all devices.
+        /// (Deprecated) Get a list of all devices.
         /// </summary>
         /// <remarks>
         /// 
@@ -218,11 +218,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (DirectoryUserDevicesListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<DirectoryUserDevicesListing>> GetMobiledevicesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
-        /// Create User device
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device
         /// </summary>
         /// <remarks>
         /// 
@@ -230,11 +230,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Device</param>
         /// <returns>Task of UserDevice</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<UserDevice> PostMobiledevicesAsync (UserDevice body);
 
         /// <summary>
-        /// Create User device
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device
         /// </summary>
         /// <remarks>
         /// 
@@ -242,11 +242,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Device</param>
         /// <returns>Task of ApiResponse (UserDevice)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<UserDevice>> PostMobiledevicesAsyncWithHttpInfo (UserDevice body);
 
         /// <summary>
-        /// Update device
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device
         /// </summary>
         /// <remarks>
         /// 
@@ -255,11 +255,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <param name="body">Device (optional)</param>
         /// <returns>Task of UserDevice</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<UserDevice> PutMobiledeviceAsync (string deviceId, UserDevice body = null);
 
         /// <summary>
-        /// Update device
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device
         /// </summary>
         /// <remarks>
         /// 
@@ -268,7 +268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deviceId">Device ID</param>
         /// <param name="body">Device (optional)</param>
         /// <returns>Task of ApiResponse (UserDevice)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<UserDevice>> PutMobiledeviceAsyncWithHttpInfo (string deviceId, UserDevice body = null);
 
         #endregion Asynchronous Operations
@@ -364,26 +364,26 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete device 
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void DeleteMobiledevice (string deviceId)
         {
              DeleteMobiledeviceWithHttpInfo(deviceId);
         }
 
         /// <summary>
-        /// Delete device 
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> DeleteMobiledeviceWithHttpInfo (string deviceId)
         { 
             // verify the required parameter 'deviceId' is set
@@ -464,13 +464,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete device 
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task DeleteMobiledeviceAsync (string deviceId)
         {
              await DeleteMobiledeviceAsyncWithHttpInfo(deviceId);
@@ -478,13 +478,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete device 
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMobiledeviceAsyncWithHttpInfo (string deviceId)
         { 
             // verify the required parameter 'deviceId' is set
@@ -567,13 +567,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get device 
+        /// (Deprecated) Get device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>UserDevice</returns>
-        
+        [Obsolete]
         public UserDevice GetMobiledevice (string deviceId)
         {
              ApiResponse<UserDevice> localVarResponse = GetMobiledeviceWithHttpInfo(deviceId);
@@ -581,13 +581,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get device 
+        /// (Deprecated) Get device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>ApiResponse of UserDevice</returns>
-        
+        [Obsolete]
         public ApiResponse< UserDevice > GetMobiledeviceWithHttpInfo (string deviceId)
         { 
             // verify the required parameter 'deviceId' is set
@@ -668,13 +668,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get device 
+        /// (Deprecated) Get device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of UserDevice</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<UserDevice> GetMobiledeviceAsync (string deviceId)
         {
              ApiResponse<UserDevice> localVarResponse = await GetMobiledeviceAsyncWithHttpInfo(deviceId);
@@ -683,13 +683,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get device 
+        /// (Deprecated) Get device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <returns>Task of ApiResponse (UserDevice)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<UserDevice>> GetMobiledeviceAsyncWithHttpInfo (string deviceId)
         { 
             // verify the required parameter 'deviceId' is set
@@ -772,7 +772,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of all devices. 
+        /// (Deprecated) Get a list of all devices. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -780,7 +780,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>DirectoryUserDevicesListing</returns>
-        
+        [Obsolete]
         public DirectoryUserDevicesListing GetMobiledevices (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<DirectoryUserDevicesListing> localVarResponse = GetMobiledevicesWithHttpInfo(pageSize, pageNumber, sortOrder);
@@ -788,7 +788,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of all devices. 
+        /// (Deprecated) Get a list of all devices. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -796,7 +796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>ApiResponse of DirectoryUserDevicesListing</returns>
-        
+        [Obsolete]
         public ApiResponse< DirectoryUserDevicesListing > GetMobiledevicesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
 
@@ -876,7 +876,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of all devices. 
+        /// (Deprecated) Get a list of all devices. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -884,7 +884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>Task of DirectoryUserDevicesListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<DirectoryUserDevicesListing> GetMobiledevicesAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
              ApiResponse<DirectoryUserDevicesListing> localVarResponse = await GetMobiledevicesAsyncWithHttpInfo(pageSize, pageNumber, sortOrder);
@@ -893,7 +893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of all devices. 
+        /// (Deprecated) Get a list of all devices. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -901,7 +901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (DirectoryUserDevicesListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<DirectoryUserDevicesListing>> GetMobiledevicesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
 
@@ -982,13 +982,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create User device 
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Device</param>
         /// <returns>UserDevice</returns>
-        
+        [Obsolete]
         public UserDevice PostMobiledevices (UserDevice body)
         {
              ApiResponse<UserDevice> localVarResponse = PostMobiledevicesWithHttpInfo(body);
@@ -996,13 +996,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create User device 
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Device</param>
         /// <returns>ApiResponse of UserDevice</returns>
-        
+        [Obsolete]
         public ApiResponse< UserDevice > PostMobiledevicesWithHttpInfo (UserDevice body)
         { 
             // verify the required parameter 'body' is set
@@ -1088,13 +1088,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create User device 
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Device</param>
         /// <returns>Task of UserDevice</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<UserDevice> PostMobiledevicesAsync (UserDevice body)
         {
              ApiResponse<UserDevice> localVarResponse = await PostMobiledevicesAsyncWithHttpInfo(body);
@@ -1103,13 +1103,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create User device 
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Device</param>
         /// <returns>Task of ApiResponse (UserDevice)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<UserDevice>> PostMobiledevicesAsyncWithHttpInfo (UserDevice body)
         { 
             // verify the required parameter 'body' is set
@@ -1197,14 +1197,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update device 
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <param name="body">Device (optional)</param>
         /// <returns>UserDevice</returns>
-        
+        [Obsolete]
         public UserDevice PutMobiledevice (string deviceId, UserDevice body = null)
         {
              ApiResponse<UserDevice> localVarResponse = PutMobiledeviceWithHttpInfo(deviceId, body);
@@ -1212,14 +1212,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update device 
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <param name="body">Device (optional)</param>
         /// <returns>ApiResponse of UserDevice</returns>
-        
+        [Obsolete]
         public ApiResponse< UserDevice > PutMobiledeviceWithHttpInfo (string deviceId, UserDevice body = null)
         { 
             // verify the required parameter 'deviceId' is set
@@ -1306,14 +1306,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update device 
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <param name="body">Device (optional)</param>
         /// <returns>Task of UserDevice</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<UserDevice> PutMobiledeviceAsync (string deviceId, UserDevice body = null)
         {
              ApiResponse<UserDevice> localVarResponse = await PutMobiledeviceAsyncWithHttpInfo(deviceId, body);
@@ -1322,14 +1322,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update device 
+        /// (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceId">Device ID</param>
         /// <param name="body">Device (optional)</param>
         /// <returns>Task of ApiResponse (UserDevice)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<UserDevice>> PutMobiledeviceAsyncWithHttpInfo (string deviceId, UserDevice body = null)
         { 
             // verify the required parameter 'deviceId' is set

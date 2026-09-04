@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PerformancePredictionUploadSchema" /> class.
         /// </summary>
-        /// <param name="CalculationStartDate">Date as an ISO-8601 string, corresponding to the beginning of the performance prediction results (required).</param>
+        /// <param name="CalculationStartDate">The beginning of the performance prediction results, in ISO-8601 format (required).</param>
         /// <param name="OnQueueTimes">List of agent on-queue times by management unit (required).</param>
         public PerformancePredictionUploadSchema(DateTime? CalculationStartDate = null, List<MuAgentQueueTimeRequest> OnQueueTimes = null)
         {
@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Date as an ISO-8601 string, corresponding to the beginning of the performance prediction results
+        /// The beginning of the performance prediction results, in ISO-8601 format
         /// </summary>
-        /// <value>Date as an ISO-8601 string, corresponding to the beginning of the performance prediction results</value>
+        /// <value>The beginning of the performance prediction results, in ISO-8601 format</value>
         [DataMember(Name="calculationStartDate", EmitDefaultValue=false)]
         public DateTime? CalculationStartDate { get; set; }
 

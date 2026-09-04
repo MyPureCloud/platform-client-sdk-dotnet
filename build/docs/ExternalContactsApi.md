@@ -117,6 +117,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostExternalcontactsContactsExports**](#PostExternalcontactsContactsExports) | **Post** /api/v2/externalcontacts/contacts/exports | Create bulk export |
 | [**PostExternalcontactsContactsMerge**](#PostExternalcontactsContactsMerge) | **Post** /api/v2/externalcontacts/contacts/merge | Merge up to 25 contacts into a new contact record |
 | [**PostExternalcontactsContactsSchemas**](#PostExternalcontactsContactsSchemas) | **Post** /api/v2/externalcontacts/contacts/schemas | Create a schema |
+| [**PostExternalcontactsContactsSearch**](#PostExternalcontactsContactsSearch) | **Post** /api/v2/externalcontacts/contacts/search | Search for external contacts |
 | [**PostExternalcontactsExternalsources**](#PostExternalcontactsExternalsources) | **Post** /api/v2/externalcontacts/externalsources | Create an External Source |
 | [**PostExternalcontactsIdentifierlookup**](#PostExternalcontactsIdentifierlookup) | **Post** /api/v2/externalcontacts/identifierlookup | Fetch a contact using an identifier type and value. |
 | [**PostExternalcontactsIdentifierlookupContacts**](#PostExternalcontactsIdentifierlookupContacts) | **Post** /api/v2/externalcontacts/identifierlookup/contacts | Fetch a contact using an identifier type and value. |
@@ -7269,6 +7270,68 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
+## PostExternalcontactsContactsSearch
+
+> [**ContactListing**](ContactListing) PostExternalcontactsContactsSearch (ContactSearchRequest body)
+
+
+Search for external contacts
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsContactsSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new ContactSearchRequest(); // ContactSearchRequest | Search request
+
+            try
+            { 
+                // Search for external contacts
+                ContactListing result = apiInstance.PostExternalcontactsContactsSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsContactsSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContactSearchRequest**](ContactSearchRequest)| Search request |  |
+
+### Return type
+
+[**ContactListing**](ContactListing)
+
+
 ## PostExternalcontactsExternalsources
 
 > [**ExternalSource**](ExternalSource) PostExternalcontactsExternalsources (ExternalSource body)
@@ -9392,4 +9455,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 271.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

@@ -1028,7 +1028,7 @@ namespace Example
 
 ## GetSocialmediaTopicDataingestionrules
 
-> [**DataIngestionRuleResponseEntityListing**](DataIngestionRuleResponseEntityListing) GetSocialmediaTopicDataingestionrules (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
+> [**GenericDataIngestionRuleResponseEntityListing**](GenericDataIngestionRuleResponseEntityListing) GetSocialmediaTopicDataingestionrules (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
 
 
 Retrieve all social topic data ingestion rules with pagination.
@@ -1067,7 +1067,7 @@ namespace Example
             try
             { 
                 // Retrieve all social topic data ingestion rules with pagination.
-                DataIngestionRuleResponseEntityListing result = apiInstance.GetSocialmediaTopicDataingestionrules(topicId, pageNumber, pageSize, includeDeleted);
+                GenericDataIngestionRuleResponseEntityListing result = apiInstance.GetSocialmediaTopicDataingestionrules(topicId, pageNumber, pageSize, includeDeleted);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1091,7 +1091,7 @@ namespace Example
 
 ### Return type
 
-[**DataIngestionRuleResponseEntityListing**](DataIngestionRuleResponseEntityListing)
+[**GenericDataIngestionRuleResponseEntityListing**](GenericDataIngestionRuleResponseEntityListing)
 
 
 ## GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId
@@ -3816,4 +3816,4 @@ namespace Example
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatform.Client.V2 271.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

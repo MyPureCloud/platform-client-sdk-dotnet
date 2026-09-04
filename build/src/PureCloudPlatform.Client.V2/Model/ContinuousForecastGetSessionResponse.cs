@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ContinuousForecastGetSessionResponse :  IEquatable<ContinuousForecastGetSessionResponse>
     {
         /// <summary>
-        /// State of the latest session
+        /// The state of the latest session
         /// </summary>
-        /// <value>State of the latest session</value>
+        /// <value>The state of the latest session</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
@@ -52,18 +52,24 @@ namespace PureCloudPlatform.Client.V2.Model
             Error
         }
         /// <summary>
-        /// State of the latest session
+        /// The state of the latest session
         /// </summary>
-        /// <value>State of the latest session</value>
+        /// <value>The state of the latest session</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ContinuousForecastGetSessionResponse" /> class.
         /// </summary>
-        /// <param name="SessionId">Latest session ID of the business unit.</param>
-        /// <param name="LastSuccessfulSessionId">Last successful session ID of the business unit.</param>
-        /// <param name="State">State of the latest session.</param>
-        /// <param name="ErrorCode">Failed session error code.</param>
+        [JsonConstructorAttribute]
+        protected ContinuousForecastGetSessionResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ContinuousForecastGetSessionResponse" /> class.
+        /// </summary>
+        /// <param name="SessionId">The ID of the latest session, regardless of the session&#39;s status (required).</param>
+        /// <param name="LastSuccessfulSessionId">The ID of the last session that has a state of Complete (required).</param>
+        /// <param name="State">The state of the latest session (required).</param>
+        /// <param name="ErrorCode">The error code if the latest session has a state of Error.</param>
         public ContinuousForecastGetSessionResponse(string SessionId = null, string LastSuccessfulSessionId = null, StateEnum? State = null, string ErrorCode = null)
         {
             this.SessionId = SessionId;
@@ -76,18 +82,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Latest session ID of the business unit
+        /// The ID of the latest session, regardless of the session&#39;s status
         /// </summary>
-        /// <value>Latest session ID of the business unit</value>
+        /// <value>The ID of the latest session, regardless of the session&#39;s status</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
 
 
 
         /// <summary>
-        /// Last successful session ID of the business unit
+        /// The ID of the last session that has a state of Complete
         /// </summary>
-        /// <value>Last successful session ID of the business unit</value>
+        /// <value>The ID of the last session that has a state of Complete</value>
         [DataMember(Name="lastSuccessfulSessionId", EmitDefaultValue=false)]
         public string LastSuccessfulSessionId { get; set; }
 
@@ -96,9 +102,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Failed session error code
+        /// The error code if the latest session has a state of Error
         /// </summary>
-        /// <value>Failed session error code</value>
+        /// <value>The error code if the latest session has a state of Error</value>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
 

@@ -8,9 +8,10 @@
 |------------ | ------------- | ------------- | -------------|
 | **OperationId** | **string** |  | [optional] |
 | **DownloadUrl** | **string** |  | [optional] |
+| **AllocationDownloadUrl** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
 | **Error** | [**PerformancePredictionRecalculationCompleteEventTopicErrorBody**](PerformancePredictionRecalculationCompleteEventTopicErrorBody) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 271.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

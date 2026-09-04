@@ -348,7 +348,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Apple for "APPLE"
             /// </summary>
             [EnumMember(Value = "APPLE")]
-            Apple
+            Apple,
+            
+            /// <summary>
+            /// Enum Linkedin for "LINKEDIN"
+            /// </summary>
+            [EnumMember(Value = "LINKEDIN")]
+            Linkedin
         }
         /// <summary>
         /// Gets or Sets AcdOutcome

@@ -1,12 +1,12 @@
-# DataIngestionRuleResponseEntityListing
+# GenericDataIngestionRuleResponseEntityListing
 
-## ININ.PureCloudApi.Model.DataIngestionRuleResponseEntityListing
+## ININ.PureCloudApi.Model.GenericDataIngestionRuleResponseEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DataIngestionRuleResponse&gt;**](DataIngestionRuleResponse) |  | [optional] |
+| **Entities** | [**List&lt;GenericDataIngestionRuleResponse&gt;**](GenericDataIngestionRuleResponse) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 271.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

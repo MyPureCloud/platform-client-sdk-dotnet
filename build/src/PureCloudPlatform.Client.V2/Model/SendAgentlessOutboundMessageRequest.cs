@@ -80,14 +80,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="FromAddress">The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned SMS phone number. For a WhatsApp, Open and Apple messenger types use the provisioned integration’s ID. For WebMessaging use the DeploymentId (required).</param>
         /// <param name="ToAddress">The messaging address of the recipient of the message. For an Apple Invitation and SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234. For WhatsApp messenger type, use a WhatsApp ID of a phone number. E.g for a E.164 formatted phone number &#x60;+13175555555&#x60;, a WhatsApp ID would be 13175555555. For WebMessaging this cannot be used, instead use externalContactId.</param>
+        /// <param name="ExternalContactId">The externalContactId of the recipient of the message. Supported for WebMessaging, SMS, and Open messenger types only. For WebMessaging it is required..</param>
         /// <param name="ToAddressMessengerType">The recipient messaging address messenger type. (required).</param>
         /// <param name="TextBody">The text of the message to send. This field is required in the case of SMS messenger type. Maximum character counts are: SMS - 765 characters, other channels - 2000 characters..</param>
         /// <param name="MessagingTemplate">The messaging template to use in the case of WhatsApp messenger type. This field is required when using WhatsApp messenger type.</param>
         /// <param name="UseExistingActiveConversation">Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false.</param>
-        public SendAgentlessOutboundMessageRequest(string FromAddress = null, string ToAddress = null, ToAddressMessengerTypeEnum? ToAddressMessengerType = null, string TextBody = null, SendMessagingTemplateRequest MessagingTemplate = null, bool? UseExistingActiveConversation = null)
+        public SendAgentlessOutboundMessageRequest(string FromAddress = null, string ToAddress = null, string ExternalContactId = null, ToAddressMessengerTypeEnum? ToAddressMessengerType = null, string TextBody = null, SendMessagingTemplateRequest MessagingTemplate = null, bool? UseExistingActiveConversation = null)
         {
             this.FromAddress = FromAddress;
             this.ToAddress = ToAddress;
+            this.ExternalContactId = ExternalContactId;
             this.ToAddressMessengerType = ToAddressMessengerType;
             this.TextBody = TextBody;
             this.MessagingTemplate = MessagingTemplate;
@@ -112,6 +114,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The messaging address of the recipient of the message. For an Apple Invitation and SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234. For WhatsApp messenger type, use a WhatsApp ID of a phone number. E.g for a E.164 formatted phone number &#x60;+13175555555&#x60;, a WhatsApp ID would be 13175555555. For WebMessaging this cannot be used, instead use externalContactId</value>
         [DataMember(Name="toAddress", EmitDefaultValue=false)]
         public string ToAddress { get; set; }
+
+
+
+        /// <summary>
+        /// The externalContactId of the recipient of the message. Supported for WebMessaging, SMS, and Open messenger types only. For WebMessaging it is required.
+        /// </summary>
+        /// <value>The externalContactId of the recipient of the message. Supported for WebMessaging, SMS, and Open messenger types only. For WebMessaging it is required.</value>
+        [DataMember(Name="externalContactId", EmitDefaultValue=false)]
+        public string ExternalContactId { get; set; }
 
 
 
@@ -154,6 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
+            sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  ToAddressMessengerType: ").Append(ToAddressMessengerType).Append("\n");
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
             sb.Append("  MessagingTemplate: ").Append(MessagingTemplate).Append("\n");
@@ -209,6 +221,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ToAddress.Equals(other.ToAddress)
                 ) &&
                 (
+                    this.ExternalContactId == other.ExternalContactId ||
+                    this.ExternalContactId != null &&
+                    this.ExternalContactId.Equals(other.ExternalContactId)
+                ) &&
+                (
                     this.ToAddressMessengerType == other.ToAddressMessengerType ||
                     this.ToAddressMessengerType != null &&
                     this.ToAddressMessengerType.Equals(other.ToAddressMessengerType)
@@ -246,6 +263,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ToAddress != null)
                     hash = hash * 59 + this.ToAddress.GetHashCode();
+
+                if (this.ExternalContactId != null)
+                    hash = hash * 59 + this.ExternalContactId.GetHashCode();
 
                 if (this.ToAddressMessengerType != null)
                     hash = hash * 59 + this.ToAddressMessengerType.GetHashCode();

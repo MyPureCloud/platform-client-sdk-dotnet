@@ -424,9 +424,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>DataIngestionRuleResponseEntityListing</returns>
+        /// <returns>GenericDataIngestionRuleResponseEntityListing</returns>
         
-        DataIngestionRuleResponseEntityListing GetSocialmediaTopicDataingestionrules (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
+        GenericDataIngestionRuleResponseEntityListing GetSocialmediaTopicDataingestionrules (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
 
         /// <summary>
         /// Retrieve all social topic data ingestion rules with pagination.
@@ -439,9 +439,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>ApiResponse of DataIngestionRuleResponseEntityListing</returns>
+        /// <returns>ApiResponse of GenericDataIngestionRuleResponseEntityListing</returns>
         
-        ApiResponse<DataIngestionRuleResponseEntityListing> GetSocialmediaTopicDataingestionrulesWithHttpInfo (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
+        ApiResponse<GenericDataIngestionRuleResponseEntityListing> GetSocialmediaTopicDataingestionrulesWithHttpInfo (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
 
         /// <summary>
         /// Get a single Facebook data ingestion rule.
@@ -2016,9 +2016,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>Task of DataIngestionRuleResponseEntityListing</returns>
+        /// <returns>Task of GenericDataIngestionRuleResponseEntityListing</returns>
         
-        System.Threading.Tasks.Task<DataIngestionRuleResponseEntityListing> GetSocialmediaTopicDataingestionrulesAsync (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
+        System.Threading.Tasks.Task<GenericDataIngestionRuleResponseEntityListing> GetSocialmediaTopicDataingestionrulesAsync (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
 
         /// <summary>
         /// Retrieve all social topic data ingestion rules with pagination.
@@ -2031,9 +2031,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>Task of ApiResponse (DataIngestionRuleResponseEntityListing)</returns>
+        /// <returns>Task of ApiResponse (GenericDataIngestionRuleResponseEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DataIngestionRuleResponseEntityListing>> GetSocialmediaTopicDataingestionrulesAsyncWithHttpInfo (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
+        System.Threading.Tasks.Task<ApiResponse<GenericDataIngestionRuleResponseEntityListing>> GetSocialmediaTopicDataingestionrulesAsyncWithHttpInfo (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
 
         /// <summary>
         /// Get a single Facebook data ingestion rule.
@@ -6500,11 +6500,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>DataIngestionRuleResponseEntityListing</returns>
+        /// <returns>GenericDataIngestionRuleResponseEntityListing</returns>
         
-        public DataIngestionRuleResponseEntityListing GetSocialmediaTopicDataingestionrules (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
+        public GenericDataIngestionRuleResponseEntityListing GetSocialmediaTopicDataingestionrules (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
         {
-             ApiResponse<DataIngestionRuleResponseEntityListing> localVarResponse = GetSocialmediaTopicDataingestionrulesWithHttpInfo(topicId, pageNumber, pageSize, includeDeleted);
+             ApiResponse<GenericDataIngestionRuleResponseEntityListing> localVarResponse = GetSocialmediaTopicDataingestionrulesWithHttpInfo(topicId, pageNumber, pageSize, includeDeleted);
              return localVarResponse.Data;
         }
 
@@ -6517,9 +6517,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>ApiResponse of DataIngestionRuleResponseEntityListing</returns>
+        /// <returns>ApiResponse of GenericDataIngestionRuleResponseEntityListing</returns>
         
-        public ApiResponse< DataIngestionRuleResponseEntityListing > GetSocialmediaTopicDataingestionrulesWithHttpInfo (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
+        public ApiResponse< GenericDataIngestionRuleResponseEntityListing > GetSocialmediaTopicDataingestionrulesWithHttpInfo (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
         { 
             // verify the required parameter 'topicId' is set
             if (topicId == null)
@@ -6593,9 +6593,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataIngestionRuleResponseEntityListing>(localVarStatusCode,
+            return new ApiResponse<GenericDataIngestionRuleResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (DataIngestionRuleResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataIngestionRuleResponseEntityListing)),
+                (GenericDataIngestionRuleResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenericDataIngestionRuleResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6610,11 +6610,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>Task of DataIngestionRuleResponseEntityListing</returns>
+        /// <returns>Task of GenericDataIngestionRuleResponseEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<DataIngestionRuleResponseEntityListing> GetSocialmediaTopicDataingestionrulesAsync (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
+        public async System.Threading.Tasks.Task<GenericDataIngestionRuleResponseEntityListing> GetSocialmediaTopicDataingestionrulesAsync (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
         {
-             ApiResponse<DataIngestionRuleResponseEntityListing> localVarResponse = await GetSocialmediaTopicDataingestionrulesAsyncWithHttpInfo(topicId, pageNumber, pageSize, includeDeleted);
+             ApiResponse<GenericDataIngestionRuleResponseEntityListing> localVarResponse = await GetSocialmediaTopicDataingestionrulesAsyncWithHttpInfo(topicId, pageNumber, pageSize, includeDeleted);
              return localVarResponse.Data;
 
         }
@@ -6628,9 +6628,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>Task of ApiResponse (DataIngestionRuleResponseEntityListing)</returns>
+        /// <returns>Task of ApiResponse (GenericDataIngestionRuleResponseEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DataIngestionRuleResponseEntityListing>> GetSocialmediaTopicDataingestionrulesAsyncWithHttpInfo (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GenericDataIngestionRuleResponseEntityListing>> GetSocialmediaTopicDataingestionrulesAsyncWithHttpInfo (string topicId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
         { 
             // verify the required parameter 'topicId' is set
             if (topicId == null)
@@ -6705,9 +6705,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataIngestionRuleResponseEntityListing>(localVarStatusCode,
+            return new ApiResponse<GenericDataIngestionRuleResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (DataIngestionRuleResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataIngestionRuleResponseEntityListing)),
+                (GenericDataIngestionRuleResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenericDataIngestionRuleResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

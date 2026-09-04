@@ -66,12 +66,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="OperationId">OperationId.</param>
         /// <param name="DownloadUrl">DownloadUrl.</param>
+        /// <param name="AllocationDownloadUrl">AllocationDownloadUrl.</param>
         /// <param name="State">State.</param>
         /// <param name="Error">Error.</param>
-        public PerformancePredictionRecalculationCompleteEventTopicPerformancePredictionUserRecalculationNotification(string OperationId = null, string DownloadUrl = null, StateEnum? State = null, PerformancePredictionRecalculationCompleteEventTopicErrorBody Error = null)
+        public PerformancePredictionRecalculationCompleteEventTopicPerformancePredictionUserRecalculationNotification(string OperationId = null, string DownloadUrl = null, string AllocationDownloadUrl = null, StateEnum? State = null, PerformancePredictionRecalculationCompleteEventTopicErrorBody Error = null)
         {
             this.OperationId = OperationId;
             this.DownloadUrl = DownloadUrl;
+            this.AllocationDownloadUrl = AllocationDownloadUrl;
             this.State = State;
             this.Error = Error;
             
@@ -95,6 +97,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Gets or Sets AllocationDownloadUrl
+        /// </summary>
+        [DataMember(Name="allocationDownloadUrl", EmitDefaultValue=false)]
+        public string AllocationDownloadUrl { get; set; }
+
+
+
 
 
         /// <summary>
@@ -115,6 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  OperationId: ").Append(OperationId).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
+            sb.Append("  AllocationDownloadUrl: ").Append(AllocationDownloadUrl).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("}\n");
@@ -168,6 +179,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DownloadUrl.Equals(other.DownloadUrl)
                 ) &&
                 (
+                    this.AllocationDownloadUrl == other.AllocationDownloadUrl ||
+                    this.AllocationDownloadUrl != null &&
+                    this.AllocationDownloadUrl.Equals(other.AllocationDownloadUrl)
+                ) &&
+                (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
@@ -195,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
+
+                if (this.AllocationDownloadUrl != null)
+                    hash = hash * 59 + this.AllocationDownloadUrl.GetHashCode();
 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();

@@ -116,6 +116,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteCasemanagementCaseplanDataschemaWithHttpInfo (string caseplanId, string schemaKeyName);
 
         /// <summary>
+        /// Delete a Stageplan from a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <returns>Object</returns>
+        
+        Object DeleteCasemanagementCaseplanStageplan (string caseplanId, string stageplanId);
+
+        /// <summary>
+        /// Delete a Stageplan from a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <returns>ApiResponse of Object</returns>
+        
+        ApiResponse<Object> DeleteCasemanagementCaseplanStageplanWithHttpInfo (string caseplanId, string stageplanId);
+
+        /// <summary>
         /// Get a Case.
         /// </summary>
         /// <remarks>
@@ -1086,6 +1114,64 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Caseplan> PostCasemanagementCaseplanPublishWithHttpInfo (string caseplanId);
 
         /// <summary>
+        /// Reposition a Stageplan within a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan reposition request.</param>
+        /// <returns>Object</returns>
+        
+        Object PostCasemanagementCaseplanStageplanReposition (string caseplanId, string stageplanId, StageplanReposition body);
+
+        /// <summary>
+        /// Reposition a Stageplan within a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan reposition request.</param>
+        /// <returns>ApiResponse of Object</returns>
+        
+        ApiResponse<Object> PostCasemanagementCaseplanStageplanRepositionWithHttpInfo (string caseplanId, string stageplanId, StageplanReposition body);
+
+        /// <summary>
+        /// Create a Stageplan on a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Stageplan create request.</param>
+        /// <returns>Stageplan</returns>
+        
+        Stageplan PostCasemanagementCaseplanStageplans (string caseplanId, StageplanCreate body);
+
+        /// <summary>
+        /// Create a Stageplan on a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Stageplan create request.</param>
+        /// <returns>ApiResponse of Stageplan</returns>
+        
+        ApiResponse<Stageplan> PostCasemanagementCaseplanStageplansWithHttpInfo (string caseplanId, StageplanCreate body);
+
+        /// <summary>
         /// Create Caseplan version.
         /// </summary>
         /// <remarks>
@@ -1388,6 +1474,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCasemanagementCaseplanDataschemaAsyncWithHttpInfo (string caseplanId, string schemaKeyName);
+
+        /// <summary>
+        /// Delete a Stageplan from a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <returns>Task of Object</returns>
+        
+        System.Threading.Tasks.Task<Object> DeleteCasemanagementCaseplanStageplanAsync (string caseplanId, string stageplanId);
+
+        /// <summary>
+        /// Delete a Stageplan from a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCasemanagementCaseplanStageplanAsyncWithHttpInfo (string caseplanId, string stageplanId);
 
         /// <summary>
         /// Get a Case.
@@ -2358,6 +2472,64 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Caseplan)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Caseplan>> PostCasemanagementCaseplanPublishAsyncWithHttpInfo (string caseplanId);
+
+        /// <summary>
+        /// Reposition a Stageplan within a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan reposition request.</param>
+        /// <returns>Task of Object</returns>
+        
+        System.Threading.Tasks.Task<Object> PostCasemanagementCaseplanStageplanRepositionAsync (string caseplanId, string stageplanId, StageplanReposition body);
+
+        /// <summary>
+        /// Reposition a Stageplan within a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan reposition request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostCasemanagementCaseplanStageplanRepositionAsyncWithHttpInfo (string caseplanId, string stageplanId, StageplanReposition body);
+
+        /// <summary>
+        /// Create a Stageplan on a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Stageplan create request.</param>
+        /// <returns>Task of Stageplan</returns>
+        
+        System.Threading.Tasks.Task<Stageplan> PostCasemanagementCaseplanStageplansAsync (string caseplanId, StageplanCreate body);
+
+        /// <summary>
+        /// Create a Stageplan on a draft Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Stageplan create request.</param>
+        /// <returns>Task of ApiResponse (Stageplan)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Stageplan>> PostCasemanagementCaseplanStageplansAsyncWithHttpInfo (string caseplanId, StageplanCreate body);
 
         /// <summary>
         /// Create Caseplan version.
@@ -3487,6 +3659,228 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteCasemanagementCaseplanDataschema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteCasemanagementCaseplanDataschema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a Stageplan from a draft Caseplan. 
+        /// 
+        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <returns>Object</returns>
+        
+        public Object DeleteCasemanagementCaseplanStageplan (string caseplanId, string stageplanId)
+        {
+             ApiResponse<Object> localVarResponse = DeleteCasemanagementCaseplanStageplanWithHttpInfo(caseplanId, stageplanId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete a Stageplan from a draft Caseplan. 
+        /// 
+        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <returns>ApiResponse of Object</returns>
+        
+        public ApiResponse< Object > DeleteCasemanagementCaseplanStageplanWithHttpInfo (string caseplanId, string stageplanId)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->DeleteCasemanagementCaseplanStageplan");
+            // verify the required parameter 'stageplanId' is set
+            if (stageplanId == null)
+                throw new ApiException(400, "Missing required parameter 'stageplanId' when calling CaseManagementApi->DeleteCasemanagementCaseplanStageplan");
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+            if (stageplanId != null) localVarPathParams.Add("stageplanId", this.Configuration.ApiClient.ParameterToString(stageplanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCasemanagementCaseplanStageplan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteCasemanagementCaseplanStageplan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCasemanagementCaseplanStageplan: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a Stageplan from a draft Caseplan. 
+        /// 
+        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <returns>Task of Object</returns>
+        
+        public async System.Threading.Tasks.Task<Object> DeleteCasemanagementCaseplanStageplanAsync (string caseplanId, string stageplanId)
+        {
+             ApiResponse<Object> localVarResponse = await DeleteCasemanagementCaseplanStageplanAsyncWithHttpInfo(caseplanId, stageplanId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete a Stageplan from a draft Caseplan. 
+        /// 
+        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCasemanagementCaseplanStageplanAsyncWithHttpInfo (string caseplanId, string stageplanId)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->DeleteCasemanagementCaseplanStageplan");
+            
+            // verify the required parameter 'stageplanId' is set
+            if (stageplanId == null)
+                throw new ApiException(400, "Missing required parameter 'stageplanId' when calling CaseManagementApi->DeleteCasemanagementCaseplanStageplan");
+            
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+            if (stageplanId != null) localVarPathParams.Add("stageplanId", this.Configuration.ApiClient.ParameterToString(stageplanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCasemanagementCaseplanStageplan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteCasemanagementCaseplanStageplan: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCasemanagementCaseplanStageplan: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -11360,6 +11754,483 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Caseplan>(localVarStatusCode,
                 localVarHeaders,
                 (Caseplan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Caseplan)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Reposition a Stageplan within a draft Caseplan. 
+        /// 
+        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan reposition request.</param>
+        /// <returns>Object</returns>
+        
+        public Object PostCasemanagementCaseplanStageplanReposition (string caseplanId, string stageplanId, StageplanReposition body)
+        {
+             ApiResponse<Object> localVarResponse = PostCasemanagementCaseplanStageplanRepositionWithHttpInfo(caseplanId, stageplanId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Reposition a Stageplan within a draft Caseplan. 
+        /// 
+        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan reposition request.</param>
+        /// <returns>ApiResponse of Object</returns>
+        
+        public ApiResponse< Object > PostCasemanagementCaseplanStageplanRepositionWithHttpInfo (string caseplanId, string stageplanId, StageplanReposition body)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->PostCasemanagementCaseplanStageplanReposition");
+            // verify the required parameter 'stageplanId' is set
+            if (stageplanId == null)
+                throw new ApiException(400, "Missing required parameter 'stageplanId' when calling CaseManagementApi->PostCasemanagementCaseplanStageplanReposition");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCaseplanStageplanReposition");
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId}/reposition";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+            if (stageplanId != null) localVarPathParams.Add("stageplanId", this.Configuration.ApiClient.ParameterToString(stageplanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplanStageplanReposition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostCasemanagementCaseplanStageplanReposition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplanStageplanReposition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Reposition a Stageplan within a draft Caseplan. 
+        /// 
+        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan reposition request.</param>
+        /// <returns>Task of Object</returns>
+        
+        public async System.Threading.Tasks.Task<Object> PostCasemanagementCaseplanStageplanRepositionAsync (string caseplanId, string stageplanId, StageplanReposition body)
+        {
+             ApiResponse<Object> localVarResponse = await PostCasemanagementCaseplanStageplanRepositionAsyncWithHttpInfo(caseplanId, stageplanId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Reposition a Stageplan within a draft Caseplan. 
+        /// 
+        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="stageplanId">Stageplan identifier.</param>
+        /// <param name="body">Stageplan reposition request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostCasemanagementCaseplanStageplanRepositionAsyncWithHttpInfo (string caseplanId, string stageplanId, StageplanReposition body)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->PostCasemanagementCaseplanStageplanReposition");
+            
+            // verify the required parameter 'stageplanId' is set
+            if (stageplanId == null)
+                throw new ApiException(400, "Missing required parameter 'stageplanId' when calling CaseManagementApi->PostCasemanagementCaseplanStageplanReposition");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCaseplanStageplanReposition");
+            
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId}/reposition";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+            if (stageplanId != null) localVarPathParams.Add("stageplanId", this.Configuration.ApiClient.ParameterToString(stageplanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplanStageplanReposition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostCasemanagementCaseplanStageplanReposition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplanStageplanReposition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a Stageplan on a draft Caseplan. 
+        /// 
+        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Stageplan create request.</param>
+        /// <returns>Stageplan</returns>
+        
+        public Stageplan PostCasemanagementCaseplanStageplans (string caseplanId, StageplanCreate body)
+        {
+             ApiResponse<Stageplan> localVarResponse = PostCasemanagementCaseplanStageplansWithHttpInfo(caseplanId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a Stageplan on a draft Caseplan. 
+        /// 
+        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Stageplan create request.</param>
+        /// <returns>ApiResponse of Stageplan</returns>
+        
+        public ApiResponse< Stageplan > PostCasemanagementCaseplanStageplansWithHttpInfo (string caseplanId, StageplanCreate body)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->PostCasemanagementCaseplanStageplans");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCaseplanStageplans");
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/stageplans";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplanStageplans: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostCasemanagementCaseplanStageplans: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplanStageplans: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Stageplan>(localVarStatusCode,
+                localVarHeaders,
+                (Stageplan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Stageplan)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a Stageplan on a draft Caseplan. 
+        /// 
+        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Stageplan create request.</param>
+        /// <returns>Task of Stageplan</returns>
+        
+        public async System.Threading.Tasks.Task<Stageplan> PostCasemanagementCaseplanStageplansAsync (string caseplanId, StageplanCreate body)
+        {
+             ApiResponse<Stageplan> localVarResponse = await PostCasemanagementCaseplanStageplansAsyncWithHttpInfo(caseplanId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a Stageplan on a draft Caseplan. 
+        /// 
+        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan identifier.</param>
+        /// <param name="body">Stageplan create request.</param>
+        /// <returns>Task of ApiResponse (Stageplan)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Stageplan>> PostCasemanagementCaseplanStageplansAsyncWithHttpInfo (string caseplanId, StageplanCreate body)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->PostCasemanagementCaseplanStageplans");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCaseplanStageplans");
+            
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/stageplans";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplanStageplans: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostCasemanagementCaseplanStageplans: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplanStageplans: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Stageplan>(localVarStatusCode,
+                localVarHeaders,
+                (Stageplan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Stageplan)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
