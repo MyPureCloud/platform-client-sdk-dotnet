@@ -10,8 +10,9 @@
 | **Zero** | **bool?** |  | [optional] |
 | **Nano** | **int?** |  | [optional] |
 | **Negative** | **bool?** |  | [optional] |
+| **Positive** | **bool?** |  | [optional] |
 | **Units** | [**List&lt;TemporalUnit&gt;**](TemporalUnit) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

@@ -10,7 +10,10 @@
 | **PresenceCounts** | [**List&lt;AgentStatePresenceCount&gt;**](AgentStatePresenceCount) | List of count by presences | [optional] |
 | **RoutingStatusCounts** | [**List&lt;AgentStateRoutingStatusCount&gt;**](AgentStateRoutingStatusCount) | List of count by routing statuses | [optional] |
 | **IsOutOfOfficeCounts** | [**List&lt;AgentStateIsOutOfOfficeCount&gt;**](AgentStateIsOutOfOfficeCount) | List of count by out of office states | [optional] |
+| **AdherenceStateCounts** | [**List&lt;AgentStateAdherenceStateCount&gt;**](AgentStateAdherenceStateCount) | List of count by adherence state | [optional] |
+| **ScheduledActivityCategoryCounts** | [**List&lt;AgentStateActivityCategoryCount&gt;**](AgentStateActivityCategoryCount) | List of count by scheduled activity category | [optional] |
+| **ActualActivityCategoryCounts** | [**List&lt;AgentStateActivityCategoryCount&gt;**](AgentStateActivityCategoryCount) | List of count by actual activity category | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

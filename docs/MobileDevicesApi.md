@@ -6,11 +6,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteMobiledevice**](#DeleteMobiledevice) | **Delete** /api/v2/mobiledevices/{deviceId} | Delete device |
-| [**GetMobiledevice**](#GetMobiledevice) | **Get** /api/v2/mobiledevices/{deviceId} | Get device |
-| [**GetMobiledevices**](#GetMobiledevices) | **Get** /api/v2/mobiledevices | Get a list of all devices. |
-| [**PostMobiledevices**](#PostMobiledevices) | **Post** /api/v2/mobiledevices | Create User device |
-| [**PutMobiledevice**](#PutMobiledevice) | **Put** /api/v2/mobiledevices/{deviceId} | Update device |
+| [**DeleteMobiledevice**](#DeleteMobiledevice) | **Delete** /api/v2/mobiledevices/{deviceId} | (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device |
+| [**GetMobiledevice**](#GetMobiledevice) | **Get** /api/v2/mobiledevices/{deviceId} | (Deprecated) Get device |
+| [**GetMobiledevices**](#GetMobiledevices) | **Get** /api/v2/mobiledevices | (Deprecated) Get a list of all devices. |
+| [**PostMobiledevices**](#PostMobiledevices) | **Post** /api/v2/mobiledevices | (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device |
+| [**PutMobiledevice**](#PutMobiledevice) | **Put** /api/v2/mobiledevices/{deviceId} | (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device |
 
 
 
@@ -18,8 +18,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 > void DeleteMobiledevice (string deviceId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Delete device
+(Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device
 
 Requires NO permissions: 
 
@@ -50,7 +53,7 @@ namespace Example
 
             try
             { 
-                // Delete device
+                // (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device
                 apiInstance.DeleteMobiledevice(deviceId);
             }
             catch (Exception e)
@@ -78,8 +81,11 @@ void (empty response body)
 
 > [**UserDevice**](UserDevice) GetMobiledevice (string deviceId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Get device
+(Deprecated) Get device
 
 Requires NO permissions: 
 
@@ -110,7 +116,7 @@ namespace Example
 
             try
             { 
-                // Get device
+                // (Deprecated) Get device
                 UserDevice result = apiInstance.GetMobiledevice(deviceId);
                 Debug.WriteLine(result);
             }
@@ -139,8 +145,11 @@ namespace Example
 
 > [**DirectoryUserDevicesListing**](DirectoryUserDevicesListing) GetMobiledevices (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Get a list of all devices.
+(Deprecated) Get a list of all devices.
 
 Requires NO permissions: 
 
@@ -173,7 +182,7 @@ namespace Example
 
             try
             { 
-                // Get a list of all devices.
+                // (Deprecated) Get a list of all devices.
                 DirectoryUserDevicesListing result = apiInstance.GetMobiledevices(pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -204,8 +213,11 @@ namespace Example
 
 > [**UserDevice**](UserDevice) PostMobiledevices (UserDevice body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Create User device
+(Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device
 
 Requires NO permissions: 
 
@@ -236,7 +248,7 @@ namespace Example
 
             try
             { 
-                // Create User device
+                // (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device
                 UserDevice result = apiInstance.PostMobiledevices(body);
                 Debug.WriteLine(result);
             }
@@ -265,8 +277,11 @@ namespace Example
 
 > [**UserDevice**](UserDevice) PutMobiledevice (string deviceId, UserDevice body = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Update device
+(Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device
 
 Requires NO permissions: 
 
@@ -298,7 +313,7 @@ namespace Example
 
             try
             { 
-                // Update device
+                // (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device
                 UserDevice result = apiInstance.PutMobiledevice(deviceId, body);
                 Debug.WriteLine(result);
             }
@@ -324,4 +339,4 @@ namespace Example
 [**UserDevice**](UserDevice)
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

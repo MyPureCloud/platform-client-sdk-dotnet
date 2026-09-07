@@ -11,13 +11,13 @@
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
 | **ContactsCount** | **long?** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
+| **SelfUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
-| **SelfUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

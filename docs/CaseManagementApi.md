@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteCasemanagementCaseCommentsMeCommentId**](#DeleteCasemanagementCaseCommentsMeCommentId) | **Delete** /api/v2/casemanagement/cases/{caseId}/comments/me/{commentId} | Delete my Comment. |
 | [**DeleteCasemanagementCaseplan**](#DeleteCasemanagementCaseplan) | **Delete** /api/v2/casemanagement/caseplans/{caseplanId} | Delete a Caseplan. |
 | [**DeleteCasemanagementCaseplanDataschema**](#DeleteCasemanagementCaseplanDataschema) | **Delete** /api/v2/casemanagement/caseplans/{caseplanId}/dataschemas/{schemaKeyName} | Remove a data schema from a draft Caseplan. |
+| [**DeleteCasemanagementCaseplanStageplan**](#DeleteCasemanagementCaseplanStageplan) | **Delete** /api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId} | Delete a Stageplan from a draft Caseplan. |
 | [**GetCasemanagementCase**](#GetCasemanagementCase) | **Get** /api/v2/casemanagement/cases/{caseId} | Get a Case. |
 | [**GetCasemanagementCaseAssociation**](#GetCasemanagementCaseAssociation) | **Get** /api/v2/casemanagement/cases/{caseId}/associations/{associationId} | Get a Case Association. |
 | [**GetCasemanagementCaseAssociations**](#GetCasemanagementCaseAssociations) | **Get** /api/v2/casemanagement/cases/{caseId}/associations | Get a list of Case associations for the Case. |
@@ -45,6 +46,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostCasemanagementCaseTerminateJobs**](#PostCasemanagementCaseTerminateJobs) | **Post** /api/v2/casemanagement/cases/{caseId}/terminate/jobs | Create a Terminate Job for a Case. |
 | [**PostCasemanagementCaseplanDataschemas**](#PostCasemanagementCaseplanDataschemas) | **Post** /api/v2/casemanagement/caseplans/{caseplanId}/dataschemas | Add a data schema to a draft Caseplan. |
 | [**PostCasemanagementCaseplanPublish**](#PostCasemanagementCaseplanPublish) | **Post** /api/v2/casemanagement/caseplans/{caseplanId}/publish | Publish Caseplan. |
+| [**PostCasemanagementCaseplanStageplanReposition**](#PostCasemanagementCaseplanStageplanReposition) | **Post** /api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId}/reposition | Reposition a Stageplan within a draft Caseplan. |
+| [**PostCasemanagementCaseplanStageplans**](#PostCasemanagementCaseplanStageplans) | **Post** /api/v2/casemanagement/caseplans/{caseplanId}/stageplans | Create a Stageplan on a draft Caseplan. |
 | [**PostCasemanagementCaseplanVersions**](#PostCasemanagementCaseplanVersions) | **Post** /api/v2/casemanagement/caseplans/{caseplanId}/versions | Create Caseplan version. |
 | [**PostCasemanagementCaseplans**](#PostCasemanagementCaseplans) | **Post** /api/v2/casemanagement/caseplans | Create a Caseplan. |
 | [**PostCasemanagementCaseplansQuery**](#PostCasemanagementCaseplansQuery) | **Post** /api/v2/casemanagement/caseplans/query | Query for Caseplans. |
@@ -302,6 +305,72 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **caseplanId** | **string**| Caseplan identifier. |  |
 | **schemaKeyName** | **string**| Schema key (for example \&quot;default\&quot;). |  |
+
+### Return type
+
+**Object**
+
+
+## DeleteCasemanagementCaseplanStageplan
+
+> **Object** DeleteCasemanagementCaseplanStageplan (string caseplanId, string stageplanId)
+
+
+Delete a Stageplan from a draft Caseplan.
+
+DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* caseManagement:stageplan:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteCasemanagementCaseplanStageplanExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var stageplanId = stageplanId_example;  // string | Stageplan identifier.
+
+            try
+            { 
+                // Delete a Stageplan from a draft Caseplan.
+                Object result = apiInstance.DeleteCasemanagementCaseplanStageplan(caseplanId, stageplanId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.DeleteCasemanagementCaseplanStageplan: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **stageplanId** | **string**| Stageplan identifier. |  |
 
 ### Return type
 
@@ -2608,6 +2677,140 @@ namespace Example
 [**Caseplan**](Caseplan)
 
 
+## PostCasemanagementCaseplanStageplanReposition
+
+> **Object** PostCasemanagementCaseplanStageplanReposition (string caseplanId, string stageplanId, StageplanReposition body)
+
+
+Reposition a Stageplan within a draft Caseplan.
+
+PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* caseManagement:stageplan:reposition
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostCasemanagementCaseplanStageplanRepositionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var stageplanId = stageplanId_example;  // string | Stageplan identifier.
+            var body = new StageplanReposition(); // StageplanReposition | Stageplan reposition request.
+
+            try
+            { 
+                // Reposition a Stageplan within a draft Caseplan.
+                Object result = apiInstance.PostCasemanagementCaseplanStageplanReposition(caseplanId, stageplanId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.PostCasemanagementCaseplanStageplanReposition: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **stageplanId** | **string**| Stageplan identifier. |  |
+| **body** | [**StageplanReposition**](StageplanReposition)| Stageplan reposition request. |  |
+
+### Return type
+
+**Object**
+
+
+## PostCasemanagementCaseplanStageplans
+
+> [**Stageplan**](Stageplan) PostCasemanagementCaseplanStageplans (string caseplanId, StageplanCreate body)
+
+
+Create a Stageplan on a draft Caseplan.
+
+PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* caseManagement:stageplan:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostCasemanagementCaseplanStageplansExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseplanId = caseplanId_example;  // string | Caseplan identifier.
+            var body = new StageplanCreate(); // StageplanCreate | Stageplan create request.
+
+            try
+            { 
+                // Create a Stageplan on a draft Caseplan.
+                Stageplan result = apiInstance.PostCasemanagementCaseplanStageplans(caseplanId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.PostCasemanagementCaseplanStageplans: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseplanId** | **string**| Caseplan identifier. |  |
+| **body** | [**StageplanCreate**](StageplanCreate)| Stageplan create request. |  |
+
+### Return type
+
+[**Stageplan**](Stageplan)
+
+
 ## PostCasemanagementCaseplanVersions
 
 > [**Caseplan**](Caseplan) PostCasemanagementCaseplanVersions (string caseplanId)
@@ -3114,4 +3317,4 @@ namespace Example
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

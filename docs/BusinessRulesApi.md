@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteBusinessrulesDecisiontableImport**](#DeleteBusinessrulesDecisiontableImport) | **Delete** /api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId} | Delete decision table row import job |
 | [**DeleteBusinessrulesDecisiontableVersion**](#DeleteBusinessrulesDecisiontableVersion) | **Delete** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion} | Delete a decision table version |
 | [**DeleteBusinessrulesDecisiontableVersionRow**](#DeleteBusinessrulesDecisiontableVersionRow) | **Delete** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId} | Delete a decision table row |
+| [**DeleteBusinessrulesDecisiontableVersionSnapshot**](#DeleteBusinessrulesDecisiontableVersionSnapshot) | **Delete** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/snapshot | Deletes a decision table version snapshot |
 | [**DeleteBusinessrulesSchema**](#DeleteBusinessrulesSchema) | **Delete** /api/v2/businessrules/schemas/{schemaId} | Delete a schema |
 | [**GetBusinessrulesDecisiontable**](#GetBusinessrulesDecisiontable) | **Get** /api/v2/businessrules/decisiontables/{tableId} | Get a decision table |
 | [**GetBusinessrulesDecisiontableExport**](#GetBusinessrulesDecisiontableExport) | **Get** /api/v2/businessrules/decisiontables/{tableId}/exports/{exportJobId} | Get an export job for a decision table |
@@ -24,6 +25,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetBusinessrulesDecisiontables**](#GetBusinessrulesDecisiontables) | **Get** /api/v2/businessrules/decisiontables | Get a list of decision tables. |
 | [**GetBusinessrulesDecisiontablesSearch**](#GetBusinessrulesDecisiontablesSearch) | **Get** /api/v2/businessrules/decisiontables/search | Search for decision tables. |
 | [**GetBusinessrulesSchema**](#GetBusinessrulesSchema) | **Get** /api/v2/businessrules/schemas/{schemaId} | Get a schema |
+| [**GetBusinessrulesSchemaVersion**](#GetBusinessrulesSchemaVersion) | **Get** /api/v2/businessrules/schemas/{schemaId}/versions/{schemaVersion} | Get a schema version |
+| [**GetBusinessrulesSchemaVersions**](#GetBusinessrulesSchemaVersions) | **Get** /api/v2/businessrules/schemas/{schemaId}/versions | List schema versions |
 | [**GetBusinessrulesSchemas**](#GetBusinessrulesSchemas) | **Get** /api/v2/businessrules/schemas | Get a list of schemas. |
 | [**GetBusinessrulesSchemasCoretype**](#GetBusinessrulesSchemasCoretype) | **Get** /api/v2/businessrules/schemas/coretypes/{coreTypeName} | Get a specific named core type. |
 | [**GetBusinessrulesSchemasCoretypes**](#GetBusinessrulesSchemasCoretypes) | **Get** /api/v2/businessrules/schemas/coretypes | Get the core types from which all schemas are built. |
@@ -35,11 +38,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostBusinessrulesDecisiontableImports**](#PostBusinessrulesDecisiontableImports) | **Post** /api/v2/businessrules/decisiontables/{tableId}/imports | Create a decision table row import job |
 | [**PostBusinessrulesDecisiontableVersionCopy**](#PostBusinessrulesDecisiontableVersionCopy) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/copy | Copy a decision table version |
 | [**PostBusinessrulesDecisiontableVersionExecute**](#PostBusinessrulesDecisiontableVersionExecute) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/execute | Execute a decision table version |
+| [**PostBusinessrulesDecisiontableVersionRollback**](#PostBusinessrulesDecisiontableVersionRollback) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rollback | Re-publish a superseded decision table version as the current published version |
 | [**PostBusinessrulesDecisiontableVersionRows**](#PostBusinessrulesDecisiontableVersionRows) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows | Create a decision table row |
 | [**PostBusinessrulesDecisiontableVersionRowsBulkAdd**](#PostBusinessrulesDecisiontableVersionRowsBulkAdd) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/add | Bulk add decision table rows |
 | [**PostBusinessrulesDecisiontableVersionRowsBulkRemove**](#PostBusinessrulesDecisiontableVersionRowsBulkRemove) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/remove | Bulk delete decision table rows |
 | [**PostBusinessrulesDecisiontableVersionRowsBulkUpdate**](#PostBusinessrulesDecisiontableVersionRowsBulkUpdate) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/update | Bulk update decision table rows |
 | [**PostBusinessrulesDecisiontableVersionRowsSearch**](#PostBusinessrulesDecisiontableVersionRowsSearch) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/search | Search for decision table rows |
+| [**PostBusinessrulesDecisiontableVersionSnapshot**](#PostBusinessrulesDecisiontableVersionSnapshot) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/snapshot | Creates a decision table version snapshot |
 | [**PostBusinessrulesDecisiontableVersionSync**](#PostBusinessrulesDecisiontableVersionSync) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/sync | Update the Business Rules Schema to the latest version for a given decision table version |
 | [**PostBusinessrulesDecisiontableVersions**](#PostBusinessrulesDecisiontableVersions) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions | Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version. |
 | [**PostBusinessrulesDecisiontables**](#PostBusinessrulesDecisiontables) | **Post** /api/v2/businessrules/decisiontables | Create a decision table |
@@ -364,6 +369,69 @@ namespace Example
 | **tableId** | **string**| Table ID |  |
 | **tableVersion** | **int?**| Table Version |  |
 | **rowId** | **string**| Row ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteBusinessrulesDecisiontableVersionSnapshot
+
+> void DeleteBusinessrulesDecisiontableVersionSnapshot (string tableId, int? tableVersion)
+
+
+Deletes a decision table version snapshot
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableSnapshot:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteBusinessrulesDecisiontableVersionSnapshotExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var tableVersion = 56;  // int? | Table Version
+
+            try
+            { 
+                // Deletes a decision table version snapshot
+                apiInstance.DeleteBusinessrulesDecisiontableVersionSnapshot(tableId, tableVersion);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.DeleteBusinessrulesDecisiontableVersionSnapshot: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **tableVersion** | **int?**| Table Version |  |
 
 ### Return type
 
@@ -953,7 +1021,7 @@ namespace Example
 
 ## GetBusinessrulesDecisiontableVersions
 
-> [**DecisionTableVersionListing**](DecisionTableVersionListing) GetBusinessrulesDecisiontableVersions (string tableId, string after = null, string pageSize = null)
+> [**DecisionTableVersionListing**](DecisionTableVersionListing) GetBusinessrulesDecisiontableVersions (string tableId, string after = null, string pageSize = null, List<string> status = null, bool? hasSnapshot = null)
 
 
 Get a list of decision table versions
@@ -987,11 +1055,13 @@ namespace Example
             var tableId = tableId_example;  // string | Table ID
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 100. (optional) 
+            var status = new List<string>(); // List<string> | Filter by version status. Repeatable. (optional) 
+            var hasSnapshot = true;  // bool? | When true, returns only versions that have snapshot metadata. (optional) 
 
             try
             { 
                 // Get a list of decision table versions
-                DecisionTableVersionListing result = apiInstance.GetBusinessrulesDecisiontableVersions(tableId, after, pageSize);
+                DecisionTableVersionListing result = apiInstance.GetBusinessrulesDecisiontableVersions(tableId, after, pageSize, status, hasSnapshot);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1011,6 +1081,8 @@ namespace Example
 | **tableId** | **string**| Table ID |  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 100. | [optional]  |
+| **status** | [**List<string>**](string)| Filter by version status. Repeatable. | [optional] <br />**Values**: Draft, Published, Error, Preparing, Superseded |
+| **hasSnapshot** | **bool?**| When true, returns only versions that have snapshot metadata. | [optional]  |
 
 ### Return type
 
@@ -1219,6 +1291,138 @@ namespace Example
 ### Return type
 
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
+
+
+## GetBusinessrulesSchemaVersion
+
+> [**BusinessRulesDataSchema**](BusinessRulesDataSchema) GetBusinessrulesSchemaVersion (string schemaId, string schemaVersion)
+
+
+Get a schema version
+
+Requires ANY permissions: 
+
+* businessrules:businessRulesSchema:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetBusinessrulesSchemaVersionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var schemaId = schemaId_example;  // string | Schema ID
+            var schemaVersion = schemaVersion_example;  // string | Schema version number
+
+            try
+            { 
+                // Get a schema version
+                BusinessRulesDataSchema result = apiInstance.GetBusinessrulesSchemaVersion(schemaId, schemaVersion);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.GetBusinessrulesSchemaVersion: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **schemaId** | **string**| Schema ID |  |
+| **schemaVersion** | **string**| Schema version number |  |
+
+### Return type
+
+[**BusinessRulesDataSchema**](BusinessRulesDataSchema)
+
+
+## GetBusinessrulesSchemaVersions
+
+> [**BusinessRulesDataSchemaListing**](BusinessRulesDataSchemaListing) GetBusinessrulesSchemaVersions (string schemaId, string before = null, string after = null, string pageSize = null)
+
+
+List schema versions
+
+Requires ANY permissions: 
+
+* businessrules:businessRulesSchema:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetBusinessrulesSchemaVersionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var schemaId = schemaId_example;  // string | Schema ID
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of items per page (must be between 1 and 100) (optional) 
+
+            try
+            { 
+                // List schema versions
+                BusinessRulesDataSchemaListing result = apiInstance.GetBusinessrulesSchemaVersions(schemaId, before, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.GetBusinessrulesSchemaVersions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **schemaId** | **string**| Schema ID |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of items per page (must be between 1 and 100) | [optional]  |
+
+### Return type
+
+[**BusinessRulesDataSchemaListing**](BusinessRulesDataSchemaListing)
 
 
 ## GetBusinessrulesSchemas
@@ -1927,6 +2131,72 @@ namespace Example
 [**DecisionTableExecutionResponse**](DecisionTableExecutionResponse)
 
 
+## PostBusinessrulesDecisiontableVersionRollback
+
+> [**DecisionTableVersion**](DecisionTableVersion) PostBusinessrulesDecisiontableVersionRollback (string tableId, int? tableVersion, RollbackDecisionTableVersionRequest body = null)
+
+
+Re-publish a superseded decision table version as the current published version
+
+Requires ANY permissions: 
+
+* businessrules:decisionTable:rollback
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostBusinessrulesDecisiontableVersionRollbackExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var tableVersion = 56;  // int? | Table Version
+            var body = new RollbackDecisionTableVersionRequest(); // RollbackDecisionTableVersionRequest | Rollback request (optional) 
+
+            try
+            { 
+                // Re-publish a superseded decision table version as the current published version
+                DecisionTableVersion result = apiInstance.PostBusinessrulesDecisiontableVersionRollback(tableId, tableVersion, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.PostBusinessrulesDecisiontableVersionRollback: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **tableVersion** | **int?**| Table Version |  |
+| **body** | [**RollbackDecisionTableVersionRequest**](RollbackDecisionTableVersionRequest)| Rollback request | [optional]  |
+
+### Return type
+
+[**DecisionTableVersion**](DecisionTableVersion)
+
+
 ## PostBusinessrulesDecisiontableVersionRows
 
 > [**DecisionTableRow**](DecisionTableRow) PostBusinessrulesDecisiontableVersionRows (string tableId, int? tableVersion, CreateDecisionTableRowRequest body)
@@ -2270,6 +2540,72 @@ namespace Example
 ### Return type
 
 [**DecisionTableRowListing**](DecisionTableRowListing)
+
+
+## PostBusinessrulesDecisiontableVersionSnapshot
+
+> [**DecisionTableVersion**](DecisionTableVersion) PostBusinessrulesDecisiontableVersionSnapshot (string tableId, int? tableVersion, CreateDecisionTableSnapshotRequest body)
+
+
+Creates a decision table version snapshot
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableSnapshot:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostBusinessrulesDecisiontableVersionSnapshotExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new BusinessRulesApi();
+            var tableId = tableId_example;  // string | Table ID
+            var tableVersion = 56;  // int? | Table Version
+            var body = new CreateDecisionTableSnapshotRequest(); // CreateDecisionTableSnapshotRequest | Snapshot request
+
+            try
+            { 
+                // Creates a decision table version snapshot
+                DecisionTableVersion result = apiInstance.PostBusinessrulesDecisiontableVersionSnapshot(tableId, tableVersion, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling BusinessRulesApi.PostBusinessrulesDecisiontableVersionSnapshot: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tableId** | **string**| Table ID |  |
+| **tableVersion** | **int?**| Table Version |  |
+| **body** | [**CreateDecisionTableSnapshotRequest**](CreateDecisionTableSnapshotRequest)| Snapshot request |  |
+
+### Return type
+
+[**DecisionTableVersion**](DecisionTableVersion)
 
 
 ## PostBusinessrulesDecisiontableVersionSync
@@ -2727,4 +3063,4 @@ namespace Example
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFaxDocument**](#GetFaxDocument) | **Get** /api/v2/fax/documents/{documentId} | Get a document. |
 | [**GetFaxDocumentContent**](#GetFaxDocumentContent) | **Get** /api/v2/fax/documents/{documentId}/content | Download a fax document. |
 | [**GetFaxDocuments**](#GetFaxDocuments) | **Get** /api/v2/fax/documents | Get a list of fax documents. |
+| [**GetFaxFaxIdStatus**](#GetFaxFaxIdStatus) | **Get** /api/v2/fax/{faxId}/status | Get fax status |
 | [**GetFaxSettings**](#GetFaxSettings) | **Get** /api/v2/fax/settings | Get organization config for given organization |
 | [**GetFaxSummary**](#GetFaxSummary) | **Get** /api/v2/fax/summary | Get fax summary |
 | [**PutFaxDocument**](#PutFaxDocument) | **Put** /api/v2/fax/documents/{documentId} | Update a fax document. |
@@ -262,6 +263,70 @@ namespace Example
 [**FaxDocumentEntityListing**](FaxDocumentEntityListing)
 
 
+## GetFaxFaxIdStatus
+
+> [**OutboundFaxStatus**](OutboundFaxStatus) GetFaxFaxIdStatus (string faxId)
+
+
+Get fax status
+
+Retrieves status for an outbound (sent) fax. Only the authenticated user who sent the fax can fetch its status; this operation does not expose inbound or other users' faxes. When the `result` field is present on the response body, it describes the terminal outcome of **transmitting** the fax to the remote endpoint (e.g. SUCCESS or FAILURE). 
+
+Requires ANY permissions: 
+
+* conversation:fax:send
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFaxFaxIdStatusExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new FaxApi();
+            var faxId = faxId_example;  // string | Fax ID of an outbound fax sent by the authenticated user only.
+
+            try
+            { 
+                // Get fax status
+                OutboundFaxStatus result = apiInstance.GetFaxFaxIdStatus(faxId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaxApi.GetFaxFaxIdStatus: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **faxId** | **string**| Fax ID of an outbound fax sent by the authenticated user only. |  |
+
+### Return type
+
+[**OutboundFaxStatus**](OutboundFaxStatus)
+
+
 ## GetFaxSettings
 
 > [**FaxConfig**](FaxConfig) GetFaxSettings ()
@@ -499,4 +564,4 @@ namespace Example
 [**FaxConfig**](FaxConfig)
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

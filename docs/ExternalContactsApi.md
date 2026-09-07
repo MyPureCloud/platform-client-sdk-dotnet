@@ -35,6 +35,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsContactsSchemasLimits**](#GetExternalcontactsContactsSchemasLimits) | **Get** /api/v2/externalcontacts/contacts/schemas/limits | Get quantitative limits on schemas |
 | [**GetExternalcontactsExternalsource**](#GetExternalcontactsExternalsource) | **Get** /api/v2/externalcontacts/externalsources/{externalSourceId} | Fetch an External Source |
 | [**GetExternalcontactsExternalsources**](#GetExternalcontactsExternalsources) | **Get** /api/v2/externalcontacts/externalsources | Fetch a list of External Sources |
+| [**GetExternalcontactsGraphsClusterscan**](#GetExternalcontactsGraphsClusterscan) | **Get** /api/v2/externalcontacts/graphs/clusterscans/{scanId} | Returns a single cluster scan |
+| [**GetExternalcontactsGraphsClusterscanCluster**](#GetExternalcontactsGraphsClusterscanCluster) | **Get** /api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters/{clusterId} | Returns a single cluster found by a scan |
+| [**GetExternalcontactsGraphsClusterscanClusters**](#GetExternalcontactsGraphsClusterscanClusters) | **Get** /api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters | Returns a list of clusters found by a scan |
+| [**GetExternalcontactsGraphsClusterscanStatistics**](#GetExternalcontactsGraphsClusterscanStatistics) | **Get** /api/v2/externalcontacts/graphs/clusterscans/{scanId}/statistics | Returns the statistics about a single cluster scan |
+| [**GetExternalcontactsGraphsClusterscans**](#GetExternalcontactsGraphsClusterscans) | **Get** /api/v2/externalcontacts/graphs/clusterscans | Returns a list of cluster scans |
+| [**GetExternalcontactsGraphsClusterscansLatest**](#GetExternalcontactsGraphsClusterscansLatest) | **Get** /api/v2/externalcontacts/graphs/clusterscans/latest | Returns the latest cluster scan |
+| [**GetExternalcontactsGraphsClusterscansLatestStatistics**](#GetExternalcontactsGraphsClusterscansLatestStatistics) | **Get** /api/v2/externalcontacts/graphs/clusterscans/latest/statistics | Returns the statistics about the latest cluster scan |
+| [**GetExternalcontactsGraphsSettings**](#GetExternalcontactsGraphsSettings) | **Get** /api/v2/externalcontacts/graphs/settings | Returns the org-wide settings for ExternalContact graph operations |
 | [**GetExternalcontactsImportCsvSetting**](#GetExternalcontactsImportCsvSetting) | **Get** /api/v2/externalcontacts/import/csv/settings/{settingsId} | Get settings for CSV import |
 | [**GetExternalcontactsImportCsvSettings**](#GetExternalcontactsImportCsvSettings) | **Get** /api/v2/externalcontacts/import/csv/settings | Retrieve all settings for organization filtered by externalSettingsId if provided |
 | [**GetExternalcontactsImportCsvUploadDetails**](#GetExternalcontactsImportCsvUploadDetails) | **Get** /api/v2/externalcontacts/import/csv/uploads/{uploadId}/details | Get details for CSV upload |
@@ -109,6 +117,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostExternalcontactsContactsExports**](#PostExternalcontactsContactsExports) | **Post** /api/v2/externalcontacts/contacts/exports | Create bulk export |
 | [**PostExternalcontactsContactsMerge**](#PostExternalcontactsContactsMerge) | **Post** /api/v2/externalcontacts/contacts/merge | Merge up to 25 contacts into a new contact record |
 | [**PostExternalcontactsContactsSchemas**](#PostExternalcontactsContactsSchemas) | **Post** /api/v2/externalcontacts/contacts/schemas | Create a schema |
+| [**PostExternalcontactsContactsSearch**](#PostExternalcontactsContactsSearch) | **Post** /api/v2/externalcontacts/contacts/search | Search for external contacts |
 | [**PostExternalcontactsExternalsources**](#PostExternalcontactsExternalsources) | **Post** /api/v2/externalcontacts/externalsources | Create an External Source |
 | [**PostExternalcontactsIdentifierlookup**](#PostExternalcontactsIdentifierlookup) | **Post** /api/v2/externalcontacts/identifierlookup | Fetch a contact using an identifier type and value. |
 | [**PostExternalcontactsIdentifierlookupContacts**](#PostExternalcontactsIdentifierlookupContacts) | **Post** /api/v2/externalcontacts/identifierlookup/contacts | Fetch a contact using an identifier type and value. |
@@ -132,6 +141,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutExternalcontactsContactsSchema**](#PutExternalcontactsContactsSchema) | **Put** /api/v2/externalcontacts/contacts/schemas/{schemaId} | Update a schema |
 | [**PutExternalcontactsConversation**](#PutExternalcontactsConversation) | **Put** /api/v2/externalcontacts/conversations/{conversationId} | Associate/disassociate an external contact with a conversation |
 | [**PutExternalcontactsExternalsource**](#PutExternalcontactsExternalsource) | **Put** /api/v2/externalcontacts/externalsources/{externalSourceId} | Update an External Source |
+| [**PutExternalcontactsGraphsClusterscanClusterMerge**](#PutExternalcontactsGraphsClusterscanClusterMerge) | **Put** /api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters/{clusterId}/merge | Merge a single cluster found by a scan |
+| [**PutExternalcontactsGraphsSettings**](#PutExternalcontactsGraphsSettings) | **Put** /api/v2/externalcontacts/graphs/settings | Updates the org-wide settings for ExternalContact graph operations |
 | [**PutExternalcontactsImportCsvSetting**](#PutExternalcontactsImportCsvSetting) | **Put** /api/v2/externalcontacts/import/csv/settings/{settingsId} | Update settings for CSV import |
 | [**PutExternalcontactsImportJob**](#PutExternalcontactsImportJob) | **Put** /api/v2/externalcontacts/import/jobs/{jobId} | Update Job&#39;s workflow status |
 | [**PutExternalcontactsImportSetting**](#PutExternalcontactsImportSetting) | **Put** /api/v2/externalcontacts/import/settings/{settingsId} | Update settings |
@@ -1987,6 +1998,524 @@ namespace Example
 ### Return type
 
 [**CursorExternalSourceListing**](CursorExternalSourceListing)
+
+
+## GetExternalcontactsGraphsClusterscan
+
+> [**ClusterScan**](ClusterScan) GetExternalcontactsGraphsClusterscan (string scanId, List<string> expand = null)
+
+
+Returns a single cluster scan
+
+GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:graphClusterScan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsGraphsClusterscanExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var scanId = scanId_example;  // string | Cluster scan ID
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
+
+            try
+            { 
+                // Returns a single cluster scan
+                ClusterScan result = apiInstance.GetExternalcontactsGraphsClusterscan(scanId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsGraphsClusterscan: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scanId** | **string**| Cluster scan ID |  |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: statistics.aggregated |
+
+### Return type
+
+[**ClusterScan**](ClusterScan)
+
+
+## GetExternalcontactsGraphsClusterscanCluster
+
+> [**Cluster**](Cluster) GetExternalcontactsGraphsClusterscanCluster (string scanId, string clusterId)
+
+
+Returns a single cluster found by a scan
+
+GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:graphCluster:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsGraphsClusterscanClusterExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var scanId = scanId_example;  // string | Cluster scan ID
+            var clusterId = clusterId_example;  // string | Cluster ID
+
+            try
+            { 
+                // Returns a single cluster found by a scan
+                Cluster result = apiInstance.GetExternalcontactsGraphsClusterscanCluster(scanId, clusterId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsGraphsClusterscanCluster: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scanId** | **string**| Cluster scan ID |  |
+| **clusterId** | **string**| Cluster ID |  |
+
+### Return type
+
+[**Cluster**](Cluster)
+
+
+## GetExternalcontactsGraphsClusterscanClusters
+
+> [**ClusterList**](ClusterList) GetExternalcontactsGraphsClusterscanClusters (string scanId, int? limit = null, string cursor = null, List<string> divisionIds = null, string mergeInfoStatus = null)
+
+
+Returns a list of clusters found by a scan
+
+GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:graphCluster:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsGraphsClusterscanClustersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var scanId = scanId_example;  // string | Cluster scan ID
+            var limit = 56;  // int? | Max number of records to return (must be between 1 and 100) (optional)  (default to 20)
+            var cursor = cursor_example;  // string | Cursor to continue scanning (optional) 
+            var divisionIds = new List<string>(); // List<string> | which divisions to filter results to, up to 50 (defaults to all divisions use has access to) (optional) 
+            var mergeInfoStatus = mergeInfoStatus_example;  // string | which merge statuses to filter results to (optional) 
+
+            try
+            { 
+                // Returns a list of clusters found by a scan
+                ClusterList result = apiInstance.GetExternalcontactsGraphsClusterscanClusters(scanId, limit, cursor, divisionIds, mergeInfoStatus);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsGraphsClusterscanClusters: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scanId** | **string**| Cluster scan ID |  |
+| **limit** | **int?**| Max number of records to return (must be between 1 and 100) | [optional] [default to 20] |
+| **cursor** | **string**| Cursor to continue scanning | [optional]  |
+| **divisionIds** | [**List<string>**](string)| which divisions to filter results to, up to 50 (defaults to all divisions use has access to) | [optional]  |
+| **mergeInfoStatus** | **string**| which merge statuses to filter results to | [optional] <br />**Values**: AutoQueued, AutoSucceeded, AutoFailed, ManualQueued, ManualSucceeded, ManualFailed, NotMerged |
+
+### Return type
+
+[**ClusterList**](ClusterList)
+
+
+## GetExternalcontactsGraphsClusterscanStatistics
+
+> [**ClusterScanStatistics**](ClusterScanStatistics) GetExternalcontactsGraphsClusterscanStatistics (string scanId)
+
+
+Returns the statistics about a single cluster scan
+
+GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:graphClusterScan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsGraphsClusterscanStatisticsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var scanId = scanId_example;  // string | Cluster scan ID
+
+            try
+            { 
+                // Returns the statistics about a single cluster scan
+                ClusterScanStatistics result = apiInstance.GetExternalcontactsGraphsClusterscanStatistics(scanId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsGraphsClusterscanStatistics: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scanId** | **string**| Cluster scan ID |  |
+
+### Return type
+
+[**ClusterScanStatistics**](ClusterScanStatistics)
+
+
+## GetExternalcontactsGraphsClusterscans
+
+> [**ClusterScanList**](ClusterScanList) GetExternalcontactsGraphsClusterscans (int? limit = null, string cursor = null, List<string> expand = null)
+
+
+Returns a list of cluster scans
+
+GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:graphClusterScan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsGraphsClusterscansExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var limit = 56;  // int? | Max number of records to return (must be between 1 and 100) (optional)  (default to 20)
+            var cursor = cursor_example;  // string | Cursor to continue scanning (optional) 
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
+
+            try
+            { 
+                // Returns a list of cluster scans
+                ClusterScanList result = apiInstance.GetExternalcontactsGraphsClusterscans(limit, cursor, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsGraphsClusterscans: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **limit** | **int?**| Max number of records to return (must be between 1 and 100) | [optional] [default to 20] |
+| **cursor** | **string**| Cursor to continue scanning | [optional]  |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: statistics.aggregated |
+
+### Return type
+
+[**ClusterScanList**](ClusterScanList)
+
+
+## GetExternalcontactsGraphsClusterscansLatest
+
+> [**ClusterScan**](ClusterScan) GetExternalcontactsGraphsClusterscansLatest (List<string> expand = null)
+
+
+Returns the latest cluster scan
+
+GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsGraphsClusterscansLatestExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
+
+            try
+            { 
+                // Returns the latest cluster scan
+                ClusterScan result = apiInstance.GetExternalcontactsGraphsClusterscansLatest(expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsGraphsClusterscansLatest: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: statistics.aggregated |
+
+### Return type
+
+[**ClusterScan**](ClusterScan)
+
+
+## GetExternalcontactsGraphsClusterscansLatestStatistics
+
+> [**ClusterScanStatistics**](ClusterScanStatistics) GetExternalcontactsGraphsClusterscansLatestStatistics ()
+
+
+Returns the statistics about the latest cluster scan
+
+GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsGraphsClusterscansLatestStatisticsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+
+            try
+            { 
+                // Returns the statistics about the latest cluster scan
+                ClusterScanStatistics result = apiInstance.GetExternalcontactsGraphsClusterscansLatestStatistics();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsGraphsClusterscansLatestStatistics: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**ClusterScanStatistics**](ClusterScanStatistics)
+
+
+## GetExternalcontactsGraphsSettings
+
+> [**GraphSettings**](GraphSettings) GetExternalcontactsGraphsSettings ()
+
+
+Returns the org-wide settings for ExternalContact graph operations
+
+GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:graphSettingsGlobal:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsGraphsSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+
+            try
+            { 
+                // Returns the org-wide settings for ExternalContact graph operations
+                GraphSettings result = apiInstance.GetExternalcontactsGraphsSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsGraphsSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**GraphSettings**](GraphSettings)
 
 
 ## GetExternalcontactsImportCsvSetting
@@ -6741,6 +7270,68 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
+## PostExternalcontactsContactsSearch
+
+> [**ContactListing**](ContactListing) PostExternalcontactsContactsSearch (ContactSearchRequest body)
+
+
+Search for external contacts
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsContactsSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new ContactSearchRequest(); // ContactSearchRequest | Search request
+
+            try
+            { 
+                // Search for external contacts
+                ContactListing result = apiInstance.PostExternalcontactsContactsSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsContactsSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContactSearchRequest**](ContactSearchRequest)| Search request |  |
+
+### Return type
+
+[**ContactListing**](ContactListing)
+
+
 ## PostExternalcontactsExternalsources
 
 > [**ExternalSource**](ExternalSource) PostExternalcontactsExternalsources (ExternalSource body)
@@ -8217,6 +8808,136 @@ namespace Example
 [**ExternalSource**](ExternalSource)
 
 
+## PutExternalcontactsGraphsClusterscanClusterMerge
+
+> [**Cluster**](Cluster) PutExternalcontactsGraphsClusterscanClusterMerge (string scanId, string clusterId)
+
+
+Merge a single cluster found by a scan
+
+PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:graphCluster:merge
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutExternalcontactsGraphsClusterscanClusterMergeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var scanId = scanId_example;  // string | Cluster scan ID
+            var clusterId = clusterId_example;  // string | Cluster ID
+
+            try
+            { 
+                // Merge a single cluster found by a scan
+                Cluster result = apiInstance.PutExternalcontactsGraphsClusterscanClusterMerge(scanId, clusterId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PutExternalcontactsGraphsClusterscanClusterMerge: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scanId** | **string**| Cluster scan ID |  |
+| **clusterId** | **string**| Cluster ID |  |
+
+### Return type
+
+[**Cluster**](Cluster)
+
+
+## PutExternalcontactsGraphsSettings
+
+> [**GraphSettings**](GraphSettings) PutExternalcontactsGraphsSettings (GraphSettings body)
+
+
+Updates the org-wide settings for ExternalContact graph operations
+
+PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:graphSettingsGlobal:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutExternalcontactsGraphsSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new GraphSettings(); // GraphSettings | OrgConfiguration
+
+            try
+            { 
+                // Updates the org-wide settings for ExternalContact graph operations
+                GraphSettings result = apiInstance.PutExternalcontactsGraphsSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PutExternalcontactsGraphsSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**GraphSettings**](GraphSettings)| OrgConfiguration |  |
+
+### Return type
+
+[**GraphSettings**](GraphSettings)
+
+
 ## PutExternalcontactsImportCsvSetting
 
 > [**CsvSettings**](CsvSettings) PutExternalcontactsImportCsvSetting (string settingsId, CsvSettings body)
@@ -8734,4 +9455,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

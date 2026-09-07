@@ -86,6 +86,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesTrunkbasesetting**](#GetTelephonyProvidersEdgesTrunkbasesetting) | **Get** /api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId} | Get a Trunk Base Settings object by ID |
 | [**GetTelephonyProvidersEdgesTrunkbasesettings**](#GetTelephonyProvidersEdgesTrunkbasesettings) | **Get** /api/v2/telephony/providers/edges/trunkbasesettings | Get Trunk Base Settings listing |
 | [**GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases**](#GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases) | **Get** /api/v2/telephony/providers/edges/trunkbasesettings/availablemetabases | Get a list of available makes and models to create a new Trunk Base Settings |
+| [**GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId**](#GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId) | **Get** /api/v2/telephony/providers/edges/trunkbasesettings/site/{siteId} | Get Trunk Base Settings listing for site |
 | [**GetTelephonyProvidersEdgesTrunkbasesettingsTemplate**](#GetTelephonyProvidersEdgesTrunkbasesettingsTemplate) | **Get** /api/v2/telephony/providers/edges/trunkbasesettings/template | Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance |
 | [**GetTelephonyProvidersEdgesTrunks**](#GetTelephonyProvidersEdgesTrunks) | **Get** /api/v2/telephony/providers/edges/trunks | Get the list of available trunks. |
 | [**GetTelephonyProvidersEdgesTrunksMetrics**](#GetTelephonyProvidersEdgesTrunksMetrics) | **Get** /api/v2/telephony/providers/edges/trunks/metrics | Get the metrics for a list of trunks. |
@@ -98,6 +99,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTelephonyProvidersEdgeLogicalinterfaces**](#PostTelephonyProvidersEdgeLogicalinterfaces) | **Post** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces | Create an edge logical interface. |
 | [**PostTelephonyProvidersEdgeLogsJobUpload**](#PostTelephonyProvidersEdgeLogsJobUpload) | **Post** /api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}/upload | Request that the specified fileIds be uploaded from the Edge. |
 | [**PostTelephonyProvidersEdgeLogsJobs**](#PostTelephonyProvidersEdgeLogsJobs) | **Post** /api/v2/telephony/providers/edges/{edgeId}/logs/jobs | Create a job to upload a list of Edge logs. |
+| [**PostTelephonyProvidersEdgeOfflineconfiguration**](#PostTelephonyProvidersEdgeOfflineconfiguration) | **Post** /api/v2/telephony/providers/edges/{edgeId}/offlineconfiguration | Create a file that can be used to configure a hardware Edge&#39;s settings. |
 | [**PostTelephonyProvidersEdgeReboot**](#PostTelephonyProvidersEdgeReboot) | **Post** /api/v2/telephony/providers/edges/{edgeId}/reboot | Reboot an Edge |
 | [**PostTelephonyProvidersEdgeSoftwareupdate**](#PostTelephonyProvidersEdgeSoftwareupdate) | **Post** /api/v2/telephony/providers/edges/{edgeId}/softwareupdate | Starts a software update for this edge. |
 | [**PostTelephonyProvidersEdgeStatuscode**](#PostTelephonyProvidersEdgeStatuscode) | **Post** /api/v2/telephony/providers/edges/{edgeId}/statuscode | Take an Edge in or out of service |
@@ -116,6 +118,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTelephonyProvidersEdgesSites**](#PostTelephonyProvidersEdgesSites) | **Post** /api/v2/telephony/providers/edges/sites | Create a Site. |
 | [**PostTelephonyProvidersEdgesSitesSearch**](#PostTelephonyProvidersEdgesSitesSearch) | **Post** /api/v2/telephony/providers/edges/sites/search | Search sites |
 | [**PostTelephonyProvidersEdgesTrunkbasesettings**](#PostTelephonyProvidersEdgesTrunkbasesettings) | **Post** /api/v2/telephony/providers/edges/trunkbasesettings | Create a Trunk Base Settings object |
+| [**PostTelephonyProvidersEdgesTrunkbasesettingsSearch**](#PostTelephonyProvidersEdgesTrunkbasesettingsSearch) | **Post** /api/v2/telephony/providers/edges/trunkbasesettings/search | Search Trunk Base Settings |
+| [**PostTelephonyProvidersEdgesTrunksSearch**](#PostTelephonyProvidersEdgesTrunksSearch) | **Post** /api/v2/telephony/providers/edges/trunks/search | Search for trunks |
 | [**PutTelephonyProvidersEdge**](#PutTelephonyProvidersEdge) | **Put** /api/v2/telephony/providers/edges/{edgeId} | Update a edge. |
 | [**PutTelephonyProvidersEdgeLogicalinterface**](#PutTelephonyProvidersEdgeLogicalinterface) | **Put** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Update an edge logical interface. |
 | [**PutTelephonyProvidersEdgesAlertablepresences**](#PutTelephonyProvidersEdgesAlertablepresences) | **Put** /api/v2/telephony/providers/edges/alertablepresences | Creates or updates alertable presences overrides. |
@@ -5323,6 +5327,78 @@ namespace Example
 [**TrunkMetabaseEntityListing**](TrunkMetabaseEntityListing)
 
 
+## GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId
+
+> [**TrunkBaseEntityListing**](TrunkBaseEntityListing) GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId (string siteId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+
+
+Get Trunk Base Settings listing for site
+
+Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var siteId = siteId_example;  // string | Site ID for trunk bases
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to "name")
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ASC")
+
+            try
+            { 
+                // Get Trunk Base Settings listing for site
+                TrunkBaseEntityListing result = apiInstance.GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId(siteId, pageNumber, pageSize, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **siteId** | **string**| Site ID for trunk bases |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Value by which to sort | [optional] [default to "name"] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
+
+### Return type
+
+[**TrunkBaseEntityListing**](TrunkBaseEntityListing)
+
+
 ## GetTelephonyProvidersEdgesTrunkbasesettingsTemplate
 
 > [**TrunkBase**](TrunkBase) GetTelephonyProvidersEdgesTrunkbasesettingsTemplate (string trunkMetabaseId)
@@ -6099,6 +6175,70 @@ namespace Example
 ### Return type
 
 [**EdgeLogsJobResponse**](EdgeLogsJobResponse)
+
+
+## PostTelephonyProvidersEdgeOfflineconfiguration
+
+> [**EdgeOfflineConfigurationResponse**](EdgeOfflineConfigurationResponse) PostTelephonyProvidersEdgeOfflineconfiguration (string edgeId, EdgeOfflineConfiguration body)
+
+
+Create a file that can be used to configure a hardware Edge's settings.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyProvidersEdgeOfflineconfigurationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge Id
+            var body = new EdgeOfflineConfiguration(); // EdgeOfflineConfiguration | EdgeOfflineConfiguration
+
+            try
+            { 
+                // Create a file that can be used to configure a hardware Edge's settings.
+                EdgeOfflineConfigurationResponse result = apiInstance.PostTelephonyProvidersEdgeOfflineconfiguration(edgeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostTelephonyProvidersEdgeOfflineconfiguration: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge Id |  |
+| **body** | [**EdgeOfflineConfiguration**](EdgeOfflineConfiguration)| EdgeOfflineConfiguration |  |
+
+### Return type
+
+[**EdgeOfflineConfigurationResponse**](EdgeOfflineConfigurationResponse)
 
 
 ## PostTelephonyProvidersEdgeReboot
@@ -7222,6 +7362,132 @@ namespace Example
 [**TrunkBase**](TrunkBase)
 
 
+## PostTelephonyProvidersEdgesTrunkbasesettingsSearch
+
+> [**TrunkBasesSearchResponse**](TrunkBasesSearchResponse) PostTelephonyProvidersEdgesTrunkbasesettingsSearch (TelephonySearchRequest body)
+
+
+Search Trunk Base Settings
+
+Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyProvidersEdgesTrunkbasesettingsSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var body = new TelephonySearchRequest(); // TelephonySearchRequest | Telephony search request
+
+            try
+            { 
+                // Search Trunk Base Settings
+                TrunkBasesSearchResponse result = apiInstance.PostTelephonyProvidersEdgesTrunkbasesettingsSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostTelephonyProvidersEdgesTrunkbasesettingsSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**TelephonySearchRequest**](TelephonySearchRequest)| Telephony search request |  |
+
+### Return type
+
+[**TrunkBasesSearchResponse**](TrunkBasesSearchResponse)
+
+
+## PostTelephonyProvidersEdgesTrunksSearch
+
+> [**TrunkInstanceSearchResponse**](TrunkInstanceSearchResponse) PostTelephonyProvidersEdgesTrunksSearch (TelephonySearchRequest body)
+
+
+Search for trunks
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTelephonyProvidersEdgesTrunksSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var body = new TelephonySearchRequest(); // TelephonySearchRequest | Telephony search request
+
+            try
+            { 
+                // Search for trunks
+                TrunkInstanceSearchResponse result = apiInstance.PostTelephonyProvidersEdgesTrunksSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostTelephonyProvidersEdgesTrunksSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**TelephonySearchRequest**](TelephonySearchRequest)| Telephony search request |  |
+
+### Return type
+
+[**TrunkInstanceSearchResponse**](TrunkInstanceSearchResponse)
+
+
 ## PutTelephonyProvidersEdge
 
 > [**Edge**](Edge) PutTelephonyProvidersEdge (string edgeId, Edge body)
@@ -8185,4 +8451,4 @@ namespace Example
 [**TrunkBase**](TrunkBase)
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_

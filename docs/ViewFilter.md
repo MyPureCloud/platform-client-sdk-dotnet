@@ -242,6 +242,10 @@
 | **SocialSourceTypes** | **List&lt;string&gt;** | A set of Source Types for social filtering | [optional] |
 | **SocialFollowerRange** | [**SocialNumericRange**](SocialNumericRange) | The follower range used to filter the view | [optional] |
 | **SocialVerificationStatus** | **bool?** | Filter to indicate if the posts from verified user | [optional] |
+| **SocialEngagementLikes** | [**NumericRange**](NumericRange) | The likes range used to filter the view | [optional] |
+| **SocialEngagementShares** | [**NumericRange**](NumericRange) | The shares range used to filter the view | [optional] |
+| **SocialEngagementComments** | [**NumericRange**](NumericRange) | The comments range used to filter the view | [optional] |
+| **SocialEngagementViews** | [**NumericRange**](NumericRange) | The views range used to filter the view | [optional] |
 | **SessionExpired** | **bool?** | Filter to indicate for if session is expired | [optional] |
 | **ScreenMonitored** | **bool?** | Filter to indicate if the interaction was screen monitored | [optional] |
 | **EngagementSources** | **List&lt;string&gt;** | The engagement sources used to filter the view | [optional] |
@@ -251,4 +255,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 270.0.0_
+_PureCloudPlatform.Client.V2 272.0.0_
