@@ -151,7 +151,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssistantId">Assistant ID..</param>
         /// <param name="MediaType">Media type..</param>
         /// <param name="Direction">Direction of the conversation..</param>
-        public ChecklistInferenceJobResponse(string Id = null, StatusEnum? Status = null, ErrorInfo Error = null, AgentChecklistInfo AgentChecklistInfo = null, DateTime? JobStartTime = null, DateTime? JobEndTime = null, string Language = null, string AgentId = null, string ParticipantId = null, string QueueId = null, string AssistantId = null, MediaTypeEnum? MediaType = null, DirectionEnum? Direction = null)
+        /// <param name="Preview">Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events..</param>
+        public ChecklistInferenceJobResponse(string Id = null, StatusEnum? Status = null, ErrorInfo Error = null, AgentChecklistInfo AgentChecklistInfo = null, DateTime? JobStartTime = null, DateTime? JobEndTime = null, string Language = null, string AgentId = null, string ParticipantId = null, string QueueId = null, string AssistantId = null, MediaTypeEnum? MediaType = null, DirectionEnum? Direction = null, bool? Preview = null)
         {
             this.Id = Id;
             this.Status = Status;
@@ -166,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AssistantId = AssistantId;
             this.MediaType = MediaType;
             this.Direction = Direction;
+            this.Preview = Preview;
             
         }
         
@@ -268,6 +270,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events.
+        /// </summary>
+        /// <value>Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events.</value>
+        [DataMember(Name="preview", EmitDefaultValue=false)]
+        public bool? Preview { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -297,6 +308,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssistantId: ").Append(AssistantId).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
+            sb.Append("  Preview: ").Append(Preview).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -404,6 +416,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Direction.Equals(other.Direction)
                 ) &&
                 (
+                    this.Preview == other.Preview ||
+                    this.Preview != null &&
+                    this.Preview.Equals(other.Preview)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -459,6 +476,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
+
+                if (this.Preview != null)
+                    hash = hash * 59 + this.Preview.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

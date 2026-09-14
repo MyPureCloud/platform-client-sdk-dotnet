@@ -337,7 +337,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Elgr for "el-GR"
             /// </summary>
             [EnumMember(Value = "el-GR")]
-            Elgr
+            Elgr,
+            
+            /// <summary>
+            /// Enum Arsa for "ar-SA"
+            /// </summary>
+            [EnumMember(Value = "ar-SA")]
+            Arsa
         }
         /// <summary>
         /// The appType

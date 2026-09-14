@@ -36,7 +36,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ClearSystemData">Whether to clear system data.</param>
         /// <param name="DivisionIdForTargetContactLists">Id of the division to be used for the creation of the target contact lists. If not provided, Home division will be used..</param>
         /// <param name="FileSpecificationTemplateId">File specification template ID.</param>
-        public ContactListUploadUrlRequest(int? SignedUrlTimeoutSeconds = null, string ContentType = null, string Id = null, string ContactIdName = null, string ImportTemplateId = null, string ListNamePrefix = null, bool? ClearSystemData = null, string DivisionIdForTargetContactLists = null, string FileSpecificationTemplateId = null)
+        /// <param name="RetentionTypeColumn">The column name from your file to get retention type values from..</param>
+        /// <param name="RetentionDaysColumn">The column name from your file to get retention day values from..</param>
+        /// <param name="RetentionDateExpirationColumn">The column name from your file to get date expiration values from..</param>
+        public ContactListUploadUrlRequest(int? SignedUrlTimeoutSeconds = null, string ContentType = null, string Id = null, string ContactIdName = null, string ImportTemplateId = null, string ListNamePrefix = null, bool? ClearSystemData = null, string DivisionIdForTargetContactLists = null, string FileSpecificationTemplateId = null, string RetentionTypeColumn = null, string RetentionDaysColumn = null, string RetentionDateExpirationColumn = null)
         {
             this.SignedUrlTimeoutSeconds = SignedUrlTimeoutSeconds;
             this.ContentType = ContentType;
@@ -47,6 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ClearSystemData = ClearSystemData;
             this.DivisionIdForTargetContactLists = DivisionIdForTargetContactLists;
             this.FileSpecificationTemplateId = FileSpecificationTemplateId;
+            this.RetentionTypeColumn = RetentionTypeColumn;
+            this.RetentionDaysColumn = RetentionDaysColumn;
+            this.RetentionDateExpirationColumn = RetentionDateExpirationColumn;
             
         }
         
@@ -132,6 +138,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public string FileSpecificationTemplateId { get; set; }
 
 
+
+        /// <summary>
+        /// The column name from your file to get retention type values from.
+        /// </summary>
+        /// <value>The column name from your file to get retention type values from.</value>
+        [DataMember(Name="retentionTypeColumn", EmitDefaultValue=false)]
+        public string RetentionTypeColumn { get; set; }
+
+
+
+        /// <summary>
+        /// The column name from your file to get retention day values from.
+        /// </summary>
+        /// <value>The column name from your file to get retention day values from.</value>
+        [DataMember(Name="retentionDaysColumn", EmitDefaultValue=false)]
+        public string RetentionDaysColumn { get; set; }
+
+
+
+        /// <summary>
+        /// The column name from your file to get date expiration values from.
+        /// </summary>
+        /// <value>The column name from your file to get date expiration values from.</value>
+        [DataMember(Name="retentionDateExpirationColumn", EmitDefaultValue=false)]
+        public string RetentionDateExpirationColumn { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -150,6 +183,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ClearSystemData: ").Append(ClearSystemData).Append("\n");
             sb.Append("  DivisionIdForTargetContactLists: ").Append(DivisionIdForTargetContactLists).Append("\n");
             sb.Append("  FileSpecificationTemplateId: ").Append(FileSpecificationTemplateId).Append("\n");
+            sb.Append("  RetentionTypeColumn: ").Append(RetentionTypeColumn).Append("\n");
+            sb.Append("  RetentionDaysColumn: ").Append(RetentionDaysColumn).Append("\n");
+            sb.Append("  RetentionDateExpirationColumn: ").Append(RetentionDateExpirationColumn).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -234,6 +270,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FileSpecificationTemplateId == other.FileSpecificationTemplateId ||
                     this.FileSpecificationTemplateId != null &&
                     this.FileSpecificationTemplateId.Equals(other.FileSpecificationTemplateId)
+                ) &&
+                (
+                    this.RetentionTypeColumn == other.RetentionTypeColumn ||
+                    this.RetentionTypeColumn != null &&
+                    this.RetentionTypeColumn.Equals(other.RetentionTypeColumn)
+                ) &&
+                (
+                    this.RetentionDaysColumn == other.RetentionDaysColumn ||
+                    this.RetentionDaysColumn != null &&
+                    this.RetentionDaysColumn.Equals(other.RetentionDaysColumn)
+                ) &&
+                (
+                    this.RetentionDateExpirationColumn == other.RetentionDateExpirationColumn ||
+                    this.RetentionDateExpirationColumn != null &&
+                    this.RetentionDateExpirationColumn.Equals(other.RetentionDateExpirationColumn)
                 );
         }
 
@@ -274,6 +325,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FileSpecificationTemplateId != null)
                     hash = hash * 59 + this.FileSpecificationTemplateId.GetHashCode();
+
+                if (this.RetentionTypeColumn != null)
+                    hash = hash * 59 + this.RetentionTypeColumn.GetHashCode();
+
+                if (this.RetentionDaysColumn != null)
+                    hash = hash * 59 + this.RetentionDaysColumn.GetHashCode();
+
+                if (this.RetentionDateExpirationColumn != null)
+                    hash = hash * 59 + this.RetentionDateExpirationColumn.GetHashCode();
 
                 return hash;
             }

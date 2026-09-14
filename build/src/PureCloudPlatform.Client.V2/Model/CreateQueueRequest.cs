@@ -160,6 +160,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageInQueueFlow">The in-queue flow to use for message conversations waiting in queue..</param>
         /// <param name="WhisperPrompt">The prompt used for whisper on the queue, if configured..</param>
         /// <param name="OnHoldPrompt">The audio to be played when calls on this queue are on hold. If not configured, the default on-hold music will play..</param>
+        /// <param name="DefaultMediaLanguage">The canonical language code (e.g. en-US) used for the default media language on the queue..</param>
         /// <param name="AutoAnswerOnly">Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered..</param>
         /// <param name="CannedResponseLibraries">Canned response library IDs and mode with which they are associated with the queue.</param>
         /// <param name="EnableTranscription">Indicates whether voice transcription is enabled for this queue..</param>
@@ -175,7 +176,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PeerId">The ID of an associated external queue..</param>
         /// <param name="SuppressInQueueCallRecording">Indicates whether recording in-queue calls is suppressed for this queue..</param>
         /// <param name="SourceQueueId">The id of an existing queue to copy the settings (does not include GPR settings) from when creating a new queue..</param>
-        public CreateQueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, ConditionalGroupActivation ConditionalGroupActivation = null, Bullseye Bullseye = null, ScoringMethodEnum? ScoringMethod = null, LastAgentRoutingModeEnum? LastAgentRoutingMode = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, CannedResponseLibraries CannedResponseLibraries = null, bool? EnableTranscription = null, bool? EnableAudioMonitoring = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null, string SourceQueueId = null)
+        public CreateQueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, ConditionalGroupActivation ConditionalGroupActivation = null, Bullseye Bullseye = null, ScoringMethodEnum? ScoringMethod = null, LastAgentRoutingModeEnum? LastAgentRoutingMode = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, string DefaultMediaLanguage = null, bool? AutoAnswerOnly = null, CannedResponseLibraries CannedResponseLibraries = null, bool? EnableTranscription = null, bool? EnableAudioMonitoring = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null, string SourceQueueId = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -199,6 +200,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessageInQueueFlow = MessageInQueueFlow;
             this.WhisperPrompt = WhisperPrompt;
             this.OnHoldPrompt = OnHoldPrompt;
+            this.DefaultMediaLanguage = DefaultMediaLanguage;
             this.AutoAnswerOnly = AutoAnswerOnly;
             this.CannedResponseLibraries = CannedResponseLibraries;
             this.EnableTranscription = EnableTranscription;
@@ -433,6 +435,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The canonical language code (e.g. en-US) used for the default media language on the queue.
+        /// </summary>
+        /// <value>The canonical language code (e.g. en-US) used for the default media language on the queue.</value>
+        [DataMember(Name="defaultMediaLanguage", EmitDefaultValue=false)]
+        public string DefaultMediaLanguage { get; set; }
+
+
+
+        /// <summary>
         /// Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered.
         /// </summary>
         /// <value>Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered.</value>
@@ -610,6 +621,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessageInQueueFlow: ").Append(MessageInQueueFlow).Append("\n");
             sb.Append("  WhisperPrompt: ").Append(WhisperPrompt).Append("\n");
             sb.Append("  OnHoldPrompt: ").Append(OnHoldPrompt).Append("\n");
+            sb.Append("  DefaultMediaLanguage: ").Append(DefaultMediaLanguage).Append("\n");
             sb.Append("  AutoAnswerOnly: ").Append(AutoAnswerOnly).Append("\n");
             sb.Append("  CannedResponseLibraries: ").Append(CannedResponseLibraries).Append("\n");
             sb.Append("  EnableTranscription: ").Append(EnableTranscription).Append("\n");
@@ -797,6 +809,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OnHoldPrompt.Equals(other.OnHoldPrompt)
                 ) &&
                 (
+                    this.DefaultMediaLanguage == other.DefaultMediaLanguage ||
+                    this.DefaultMediaLanguage != null &&
+                    this.DefaultMediaLanguage.Equals(other.DefaultMediaLanguage)
+                ) &&
+                (
                     this.AutoAnswerOnly == other.AutoAnswerOnly ||
                     this.AutoAnswerOnly != null &&
                     this.AutoAnswerOnly.Equals(other.AutoAnswerOnly)
@@ -966,6 +983,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OnHoldPrompt != null)
                     hash = hash * 59 + this.OnHoldPrompt.GetHashCode();
+
+                if (this.DefaultMediaLanguage != null)
+                    hash = hash * 59 + this.DefaultMediaLanguage.GetHashCode();
 
                 if (this.AutoAnswerOnly != null)
                     hash = hash * 59 + this.AutoAnswerOnly.GetHashCode();

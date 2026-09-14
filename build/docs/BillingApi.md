@@ -190,7 +190,7 @@ namespace Example
             var apiInstance = new BillingApi();
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 10. (optional) 
             var dateStart = 2013-10-20;  // String | Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
             var dateEnd = 2013-10-20;  // String | End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
             var status = status_example;  // string | Filter by the status of contracts (optional) 
@@ -218,7 +218,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 10. | [optional]  |
 | **dateStart** | **String**| Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **dateEnd** | **String**| End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **status** | **string**| Filter by the status of contracts | [optional] <br />**Values**: Active, Inactive |
@@ -576,4 +576,4 @@ namespace Example
 [**TrusteeBillingOverview**](TrusteeBillingOverview)
 
 
-_PureCloudPlatform.Client.V2 272.0.0_
+_PureCloudPlatform.Client.V2 273.0.0_

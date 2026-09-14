@@ -724,7 +724,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -737,7 +736,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -750,7 +748,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -763,7 +760,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -828,7 +824,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
@@ -842,7 +837,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
@@ -1296,7 +1290,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Case query job create request.</param>
@@ -1309,7 +1302,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Case query job create request.</param>
@@ -2084,7 +2076,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -2097,7 +2088,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -2110,7 +2100,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -2123,7 +2112,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -2188,7 +2176,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
@@ -2202,7 +2189,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
@@ -2656,7 +2642,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Case query job create request.</param>
@@ -2669,7 +2654,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Case query job create request.</param>
@@ -8401,7 +8385,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a case query job by id 
         /// 
-        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -8416,7 +8399,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a case query job by id 
         /// 
-        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -8504,7 +8486,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a case query job by id 
         /// 
-        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -8520,7 +8501,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a case query job by id 
         /// 
-        /// GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -8610,7 +8590,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get results for a case query job 
         /// 
-        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -8625,7 +8604,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get results for a case query job 
         /// 
-        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -8713,7 +8691,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get results for a case query job 
         /// 
-        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -8729,7 +8706,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get results for a case query job 
         /// 
-        /// GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">Job ID</param>
@@ -9258,7 +9234,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the ownerId of a Case 
         /// 
-        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
@@ -9274,7 +9249,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the ownerId of a Case 
         /// 
-        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
@@ -9372,7 +9346,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the ownerId of a Case 
         /// 
-        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
@@ -9389,7 +9362,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the ownerId of a Case 
         /// 
-        /// PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
@@ -13305,7 +13277,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Case query job. 
         /// 
-        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Case query job create request.</param>
@@ -13320,7 +13291,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Case query job. 
         /// 
-        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Case query job create request.</param>
@@ -13413,7 +13383,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Case query job. 
         /// 
-        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Case query job create request.</param>
@@ -13429,7 +13398,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Case query job. 
         /// 
-        /// PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Case query job create request.</param>

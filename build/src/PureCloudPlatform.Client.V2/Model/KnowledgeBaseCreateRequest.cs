@@ -337,7 +337,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Elgr for "el-GR"
             /// </summary>
             [EnumMember(Value = "el-GR")]
-            Elgr
+            Elgr,
+            
+            /// <summary>
+            /// Enum Arsa for "ar-SA"
+            /// </summary>
+            [EnumMember(Value = "ar-SA")]
+            Arsa
         }
         /// <summary>
         /// Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA] which might have a lower accuracy.

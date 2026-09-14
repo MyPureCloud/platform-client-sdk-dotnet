@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class WorkitemQueryJobSort :  IEquatable<WorkitemQueryJobSort>
     {
         /// <summary>
-        /// Specify an attribute for sorting.
+        /// Specify an attribute for sorting. Use 'customFields' to sort by a custom field, in which case the customField property is required.
         /// </summary>
-        /// <value>Specify an attribute for sorting.</value>
+        /// <value>Specify an attribute for sorting. Use 'customFields' to sort by a custom field, in which case the customField property is required.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum NameEnum
         {
@@ -49,23 +49,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Priority for "priority"
             /// </summary>
             [EnumMember(Value = "priority")]
-            Priority
+            Priority,
+            
+            /// <summary>
+            /// Enum Customfields for "customFields"
+            /// </summary>
+            [EnumMember(Value = "customFields")]
+            Customfields
         }
         /// <summary>
-        /// Specify an attribute for sorting.
+        /// Specify an attribute for sorting. Use 'customFields' to sort by a custom field, in which case the customField property is required.
         /// </summary>
-        /// <value>Specify an attribute for sorting.</value>
+        /// <value>Specify an attribute for sorting. Use 'customFields' to sort by a custom field, in which case the customField property is required.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public NameEnum? Name { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkitemQueryJobSort" /> class.
         /// </summary>
-        /// <param name="Name">Specify an attribute for sorting..</param>
+        /// <param name="Name">Specify an attribute for sorting. Use &#39;customFields&#39; to sort by a custom field, in which case the customField property is required..</param>
         /// <param name="Ascending">Sort Ascending.</param>
-        public WorkitemQueryJobSort(NameEnum? Name = null, bool? Ascending = null)
+        /// <param name="CustomField">The key of the custom field to sort by. Required when name is &#39;customFields&#39; and must not be set otherwise..</param>
+        public WorkitemQueryJobSort(NameEnum? Name = null, bool? Ascending = null, string CustomField = null)
         {
             this.Name = Name;
             this.Ascending = Ascending;
+            this.CustomField = CustomField;
             
         }
         
@@ -81,6 +89,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Ascending { get; set; }
 
 
+
+        /// <summary>
+        /// The key of the custom field to sort by. Required when name is &#39;customFields&#39; and must not be set otherwise.
+        /// </summary>
+        /// <value>The key of the custom field to sort by. Required when name is &#39;customFields&#39; and must not be set otherwise.</value>
+        [DataMember(Name="customField", EmitDefaultValue=false)]
+        public string CustomField { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Ascending: ").Append(Ascending).Append("\n");
+            sb.Append("  CustomField: ").Append(CustomField).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,6 +159,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Ascending == other.Ascending ||
                     this.Ascending != null &&
                     this.Ascending.Equals(other.Ascending)
+                ) &&
+                (
+                    this.CustomField == other.CustomField ||
+                    this.CustomField != null &&
+                    this.CustomField.Equals(other.CustomField)
                 );
         }
 
@@ -160,6 +183,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Ascending != null)
                     hash = hash * 59 + this.Ascending.GetHashCode();
+
+                if (this.CustomField != null)
+                    hash = hash * 59 + this.CustomField.GetHashCode();
 
                 return hash;
             }

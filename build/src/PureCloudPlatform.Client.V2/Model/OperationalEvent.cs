@@ -31,10 +31,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ParentEntityId">The unique identifier for the parent of the entity.</param>
         /// <param name="Conversation">The link to a conversation.</param>
         /// <param name="DateCreated">The date when the event created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DateModified">The date and time the entity affected by the event was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="EntityModifiedBy">The unique identifier of the user who last modified the entity affected by the event..</param>
         /// <param name="EntityVersion">The version of the entity in the providing service.</param>
         /// <param name="PhoneNumber">The phone number associated with the event.</param>
         /// <param name="ExternalContactId">The external contact ID associated with the event.</param>
-        public OperationalEvent(AddressableEntityRef EventDefinition = null, string EntityId = null, string EntityToken = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string ParentEntityId = null, AddressableEntityRef Conversation = null, DateTime? DateCreated = null, string EntityVersion = null, string PhoneNumber = null, string ExternalContactId = null)
+        public OperationalEvent(AddressableEntityRef EventDefinition = null, string EntityId = null, string EntityToken = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string ParentEntityId = null, AddressableEntityRef Conversation = null, DateTime? DateCreated = null, DateTime? DateModified = null, string EntityModifiedBy = null, string EntityVersion = null, string PhoneNumber = null, string ExternalContactId = null)
         {
             this.EventDefinition = EventDefinition;
             this.EntityId = EntityId;
@@ -46,6 +48,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ParentEntityId = ParentEntityId;
             this.Conversation = Conversation;
             this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.EntityModifiedBy = EntityModifiedBy;
             this.EntityVersion = EntityVersion;
             this.PhoneNumber = PhoneNumber;
             this.ExternalContactId = ExternalContactId;
@@ -145,6 +149,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The date and time the entity affected by the event was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date and time the entity affected by the event was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; set; }
+
+
+
+        /// <summary>
+        /// The unique identifier of the user who last modified the entity affected by the event.
+        /// </summary>
+        /// <value>The unique identifier of the user who last modified the entity affected by the event.</value>
+        [DataMember(Name="entityModifiedBy", EmitDefaultValue=false)]
+        public string EntityModifiedBy { get; set; }
+
+
+
+        /// <summary>
         /// The version of the entity in the providing service
         /// </summary>
         /// <value>The version of the entity in the providing service</value>
@@ -189,6 +211,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ParentEntityId: ").Append(ParentEntityId).Append("\n");
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  EntityModifiedBy: ").Append(EntityModifiedBy).Append("\n");
             sb.Append("  EntityVersion: ").Append(EntityVersion).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
@@ -283,6 +307,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.DateModified == other.DateModified ||
+                    this.DateModified != null &&
+                    this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.EntityModifiedBy == other.EntityModifiedBy ||
+                    this.EntityModifiedBy != null &&
+                    this.EntityModifiedBy.Equals(other.EntityModifiedBy)
+                ) &&
+                (
                     this.EntityVersion == other.EntityVersion ||
                     this.EntityVersion != null &&
                     this.EntityVersion.Equals(other.EntityVersion)
@@ -339,6 +373,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.DateModified != null)
+                    hash = hash * 59 + this.DateModified.GetHashCode();
+
+                if (this.EntityModifiedBy != null)
+                    hash = hash * 59 + this.EntityModifiedBy.GetHashCode();
 
                 if (this.EntityVersion != null)
                     hash = hash * 59 + this.EntityVersion.GetHashCode();

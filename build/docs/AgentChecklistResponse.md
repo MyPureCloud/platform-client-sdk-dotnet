@@ -19,6 +19,7 @@
 | **AssistantId** | **string** | Assistant ID. | [optional] |
 | **MediaType** | **string** | Media type. | [optional] |
 | **Direction** | **string** | Direction of the conversation. | [optional] |
+| **Preview** | **bool?** | Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events. | [optional] |
 | **EvaluationStartDate** | **DateTime?** | Date when the checklist evaluation began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **EvaluationLastModifiedDate** | **DateTime?** | Date when the checklist was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **EvaluationFinalizedDate** | **DateTime?** | Date when the checklist was finalized. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -30,4 +31,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 272.0.0_
+_PureCloudPlatform.Client.V2 273.0.0_

@@ -46,11 +46,50 @@ namespace PureCloudPlatform.Client.V2.Model
             CallsThatReachedQueue
         }
         /// <summary>
+        /// The default type of retention for newly created contact lists and contact list templates. Valid values: Never, Today, RetentionDays.
+        /// </summary>
+        /// <value>The default type of retention for newly created contact lists and contact list templates. Valid values: Never, Today, RetentionDays.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ContactListDefaultRetentionTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Never for "Never"
+            /// </summary>
+            [EnumMember(Value = "Never")]
+            Never,
+            
+            /// <summary>
+            /// Enum Today for "Today"
+            /// </summary>
+            [EnumMember(Value = "Today")]
+            Today,
+            
+            /// <summary>
+            /// Enum Retentiondays for "RetentionDays"
+            /// </summary>
+            [EnumMember(Value = "RetentionDays")]
+            Retentiondays
+        }
+        /// <summary>
         /// The denominator to be used in determining the compliance abandon rate
         /// </summary>
         /// <value>The denominator to be used in determining the compliance abandon rate</value>
         [DataMember(Name="complianceAbandonRateDenominator", EmitDefaultValue=false)]
         public ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator { get; set; }
+        /// <summary>
+        /// The default type of retention for newly created contact lists and contact list templates. Valid values: Never, Today, RetentionDays.
+        /// </summary>
+        /// <value>The default type of retention for newly created contact lists and contact list templates. Valid values: Never, Today, RetentionDays.</value>
+        [DataMember(Name="contactListDefaultRetentionType", EmitDefaultValue=false)]
+        public ContactListDefaultRetentionTypeEnum? ContactListDefaultRetentionType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="OutboundSettings" /> class.
         /// </summary>
@@ -63,7 +102,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ComplianceAbandonRateDenominator">The denominator to be used in determining the compliance abandon rate.</param>
         /// <param name="AutomaticTimeZoneMapping">The settings for automatic time zone mapping. Note that changing these settings will change them for both voice and messaging campaigns..</param>
         /// <param name="RescheduleTimeZoneSkippedContacts">Whether or not to reschedule time-zone blocked contacts.</param>
-        public OutboundSettings(string Name = null, int? Version = null, int? MaxCallsPerAgent = null, double? MaxCallsPerAgentDecimal = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null, AutomaticTimeZoneMappingSettings AutomaticTimeZoneMapping = null, bool? RescheduleTimeZoneSkippedContacts = null)
+        /// <param name="ContactListDefaultRetentionType">The default type of retention for newly created contact lists and contact list templates. Valid values: Never, Today, RetentionDays..</param>
+        /// <param name="ContactListDefaultRetentionDays">The default number of days to retain newly created contact lists and contact list templates. Only applicable when retentionType is RetentionDays..</param>
+        /// <param name="TimeZone">The time zone for newly created lists&#39; retention when option Today is used; for example, Africa/Abidjan. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London.</param>
+        public OutboundSettings(string Name = null, int? Version = null, int? MaxCallsPerAgent = null, double? MaxCallsPerAgentDecimal = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null, AutomaticTimeZoneMappingSettings AutomaticTimeZoneMapping = null, bool? RescheduleTimeZoneSkippedContacts = null, ContactListDefaultRetentionTypeEnum? ContactListDefaultRetentionType = null, int? ContactListDefaultRetentionDays = null, string TimeZone = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -74,6 +116,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
             this.AutomaticTimeZoneMapping = AutomaticTimeZoneMapping;
             this.RescheduleTimeZoneSkippedContacts = RescheduleTimeZoneSkippedContacts;
+            this.ContactListDefaultRetentionType = ContactListDefaultRetentionType;
+            this.ContactListDefaultRetentionDays = ContactListDefaultRetentionDays;
+            this.TimeZone = TimeZone;
             
         }
         
@@ -188,6 +233,26 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+        /// <summary>
+        /// The default number of days to retain newly created contact lists and contact list templates. Only applicable when retentionType is RetentionDays.
+        /// </summary>
+        /// <value>The default number of days to retain newly created contact lists and contact list templates. Only applicable when retentionType is RetentionDays.</value>
+        [DataMember(Name="contactListDefaultRetentionDays", EmitDefaultValue=false)]
+        public int? ContactListDefaultRetentionDays { get; set; }
+
+
+
+        /// <summary>
+        /// The time zone for newly created lists&#39; retention when option Today is used; for example, Africa/Abidjan. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
+        /// </summary>
+        /// <value>The time zone for newly created lists&#39; retention when option Today is used; for example, Africa/Abidjan. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London</value>
+        [DataMember(Name="timeZone", EmitDefaultValue=false)]
+        public string TimeZone { get; set; }
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -218,6 +283,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ComplianceAbandonRateDenominator: ").Append(ComplianceAbandonRateDenominator).Append("\n");
             sb.Append("  AutomaticTimeZoneMapping: ").Append(AutomaticTimeZoneMapping).Append("\n");
             sb.Append("  RescheduleTimeZoneSkippedContacts: ").Append(RescheduleTimeZoneSkippedContacts).Append("\n");
+            sb.Append("  ContactListDefaultRetentionType: ").Append(ContactListDefaultRetentionType).Append("\n");
+            sb.Append("  ContactListDefaultRetentionDays: ").Append(ContactListDefaultRetentionDays).Append("\n");
+            sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -325,6 +393,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RescheduleTimeZoneSkippedContacts.Equals(other.RescheduleTimeZoneSkippedContacts)
                 ) &&
                 (
+                    this.ContactListDefaultRetentionType == other.ContactListDefaultRetentionType ||
+                    this.ContactListDefaultRetentionType != null &&
+                    this.ContactListDefaultRetentionType.Equals(other.ContactListDefaultRetentionType)
+                ) &&
+                (
+                    this.ContactListDefaultRetentionDays == other.ContactListDefaultRetentionDays ||
+                    this.ContactListDefaultRetentionDays != null &&
+                    this.ContactListDefaultRetentionDays.Equals(other.ContactListDefaultRetentionDays)
+                ) &&
+                (
+                    this.TimeZone == other.TimeZone ||
+                    this.TimeZone != null &&
+                    this.TimeZone.Equals(other.TimeZone)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -380,6 +463,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RescheduleTimeZoneSkippedContacts != null)
                     hash = hash * 59 + this.RescheduleTimeZoneSkippedContacts.GetHashCode();
+
+                if (this.ContactListDefaultRetentionType != null)
+                    hash = hash * 59 + this.ContactListDefaultRetentionType.GetHashCode();
+
+                if (this.ContactListDefaultRetentionDays != null)
+                    hash = hash * 59 + this.ContactListDefaultRetentionDays.GetHashCode();
+
+                if (this.TimeZone != null)
+                    hash = hash * 59 + this.TimeZone.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

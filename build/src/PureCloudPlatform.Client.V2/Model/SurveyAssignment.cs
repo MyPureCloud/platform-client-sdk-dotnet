@@ -32,13 +32,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InviteTimeInterval">An ISO 8601 repeated interval consisting of the number of repetitions, the start datetime, and the interval (e.g. R2/2018-03-01T13:00:00Z/P1M10DT2H30M). Total duration must not exceed 90 days..</param>
         /// <param name="SendingUser">User together with sendingDomain used to send email, null to use no-reply.</param>
         /// <param name="SendingDomain">Validated email domain, required (required).</param>
-        public SurveyAssignment(PublishedSurveyFormReference SurveyForm = null, DomainEntityRef Flow = null, string InviteTimeInterval = null, string SendingUser = null, string SendingDomain = null)
+        /// <param name="UseThreadingTimelineForSendTime">If true, the survey invitation send time will be calculated using the threading timeline. If false or unspecified, a fixed 72-hour delay will be used. Default is false for new policies..</param>
+        public SurveyAssignment(PublishedSurveyFormReference SurveyForm = null, DomainEntityRef Flow = null, string InviteTimeInterval = null, string SendingUser = null, string SendingDomain = null, bool? UseThreadingTimelineForSendTime = null)
         {
             this.SurveyForm = SurveyForm;
             this.Flow = Flow;
             this.InviteTimeInterval = InviteTimeInterval;
             this.SendingUser = SendingUser;
             this.SendingDomain = SendingDomain;
+            this.UseThreadingTimelineForSendTime = UseThreadingTimelineForSendTime;
             
         }
         
@@ -88,6 +90,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string SendingDomain { get; set; }
 
 
+
+        /// <summary>
+        /// If true, the survey invitation send time will be calculated using the threading timeline. If false or unspecified, a fixed 72-hour delay will be used. Default is false for new policies.
+        /// </summary>
+        /// <value>If true, the survey invitation send time will be calculated using the threading timeline. If false or unspecified, a fixed 72-hour delay will be used. Default is false for new policies.</value>
+        [DataMember(Name="useThreadingTimelineForSendTime", EmitDefaultValue=false)]
+        public bool? UseThreadingTimelineForSendTime { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InviteTimeInterval: ").Append(InviteTimeInterval).Append("\n");
             sb.Append("  SendingUser: ").Append(SendingUser).Append("\n");
             sb.Append("  SendingDomain: ").Append(SendingDomain).Append("\n");
+            sb.Append("  UseThreadingTimelineForSendTime: ").Append(UseThreadingTimelineForSendTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -166,6 +178,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SendingDomain == other.SendingDomain ||
                     this.SendingDomain != null &&
                     this.SendingDomain.Equals(other.SendingDomain)
+                ) &&
+                (
+                    this.UseThreadingTimelineForSendTime == other.UseThreadingTimelineForSendTime ||
+                    this.UseThreadingTimelineForSendTime != null &&
+                    this.UseThreadingTimelineForSendTime.Equals(other.UseThreadingTimelineForSendTime)
                 );
         }
 
@@ -194,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SendingDomain != null)
                     hash = hash * 59 + this.SendingDomain.GetHashCode();
+
+                if (this.UseThreadingTimelineForSendTime != null)
+                    hash = hash * 59 + this.UseThreadingTimelineForSendTime.GetHashCode();
 
                 return hash;
             }

@@ -165,6 +165,18 @@ namespace PureCloudPlatform.Client.V2.Model
             CampaignRuleStartError,
             
             /// <summary>
+            /// Enum CampaignRuleQueueActionThrottled for "CAMPAIGN_RULE_QUEUE_ACTION_THROTTLED"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_RULE_QUEUE_ACTION_THROTTLED")]
+            CampaignRuleQueueActionThrottled,
+            
+            /// <summary>
+            /// Enum CampaignRuleQueueNotFound for "CAMPAIGN_RULE_QUEUE_NOT_FOUND"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_RULE_QUEUE_NOT_FOUND")]
+            CampaignRuleQueueNotFound,
+            
+            /// <summary>
             /// Enum CampaignScriptStageMissing for "CAMPAIGN_SCRIPT_STAGE_MISSING"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_SCRIPT_STAGE_MISSING")]

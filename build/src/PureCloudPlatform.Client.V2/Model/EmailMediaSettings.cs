@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ServiceLevel">The targeted service level for the media type.</param>
         /// <param name="AutoAnswerAlertToneSeconds">How long to play the alerting tone for an auto-answer interaction.</param>
         /// <param name="ManualAnswerAlertToneSeconds">How long to play the alerting tone for a manual-answer interaction.</param>
-        public EmailMediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null)
+        /// <param name="AllOutboundEmailAddresses">The list of email addresses that are assigned to the queue and can be used by agents as an outbound email address..</param>
+        public EmailMediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, List<QueueEmailAddress> AllOutboundEmailAddresses = null)
         {
             this.EnableAutoAnswer = EnableAutoAnswer;
             this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
             this.ServiceLevel = ServiceLevel;
             this.AutoAnswerAlertToneSeconds = AutoAnswerAlertToneSeconds;
             this.ManualAnswerAlertToneSeconds = ManualAnswerAlertToneSeconds;
+            this.AllOutboundEmailAddresses = AllOutboundEmailAddresses;
             
         }
         
@@ -82,6 +84,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public double? ManualAnswerAlertToneSeconds { get; set; }
 
 
+
+        /// <summary>
+        /// The list of email addresses that are assigned to the queue and can be used by agents as an outbound email address.
+        /// </summary>
+        /// <value>The list of email addresses that are assigned to the queue and can be used by agents as an outbound email address.</value>
+        [DataMember(Name="allOutboundEmailAddresses", EmitDefaultValue=false)]
+        public List<QueueEmailAddress> AllOutboundEmailAddresses { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
             sb.Append("  AutoAnswerAlertToneSeconds: ").Append(AutoAnswerAlertToneSeconds).Append("\n");
             sb.Append("  ManualAnswerAlertToneSeconds: ").Append(ManualAnswerAlertToneSeconds).Append("\n");
+            sb.Append("  AllOutboundEmailAddresses: ").Append(AllOutboundEmailAddresses).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +172,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ManualAnswerAlertToneSeconds == other.ManualAnswerAlertToneSeconds ||
                     this.ManualAnswerAlertToneSeconds != null &&
                     this.ManualAnswerAlertToneSeconds.Equals(other.ManualAnswerAlertToneSeconds)
+                ) &&
+                (
+                    this.AllOutboundEmailAddresses == other.AllOutboundEmailAddresses ||
+                    this.AllOutboundEmailAddresses != null &&
+                    this.AllOutboundEmailAddresses.SequenceEqual(other.AllOutboundEmailAddresses)
                 );
         }
 
@@ -188,6 +205,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ManualAnswerAlertToneSeconds != null)
                     hash = hash * 59 + this.ManualAnswerAlertToneSeconds.GetHashCode();
+
+                if (this.AllOutboundEmailAddresses != null)
+                    hash = hash * 59 + this.AllOutboundEmailAddresses.GetHashCode();
 
                 return hash;
             }

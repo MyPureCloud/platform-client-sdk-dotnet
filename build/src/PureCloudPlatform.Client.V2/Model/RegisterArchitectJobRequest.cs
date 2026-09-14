@@ -21,11 +21,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RegisterArchitectJobRequest" /> class.
         /// </summary>
-        public RegisterArchitectJobRequest()
+        /// <param name="CreateStubs">If true, flow stubs will be created for any dependencies during the job..</param>
+        public RegisterArchitectJobRequest(bool? CreateStubs = null)
         {
+            this.CreateStubs = CreateStubs;
             
         }
         
+
+
+        /// <summary>
+        /// If true, flow stubs will be created for any dependencies during the job.
+        /// </summary>
+        /// <value>If true, flow stubs will be created for any dependencies during the job.</value>
+        [DataMember(Name="createStubs", EmitDefaultValue=false)]
+        public bool? CreateStubs { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class RegisterArchitectJobRequest {\n");
 
+            sb.Append("  CreateStubs: ").Append(CreateStubs).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +87,12 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.CreateStubs == other.CreateStubs ||
+                    this.CreateStubs != null &&
+                    this.CreateStubs.Equals(other.CreateStubs)
+                );
         }
 
         /// <summary>
@@ -89,6 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.CreateStubs != null)
+                    hash = hash * 59 + this.CreateStubs.GetHashCode();
+
                 return hash;
             }
         }

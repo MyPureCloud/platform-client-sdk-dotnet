@@ -79,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 10. (optional)</param>
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="status">Filter by the status of contracts (optional)</param>
@@ -98,7 +98,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 10. (optional)</param>
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="status">Filter by the status of contracts (optional)</param>
@@ -321,7 +321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 10. (optional)</param>
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="status">Filter by the status of contracts (optional)</param>
@@ -340,7 +340,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 10. (optional)</param>
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="status">Filter by the status of contracts (optional)</param>
@@ -1026,7 +1026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 10. (optional)</param>
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="status">Filter by the status of contracts (optional)</param>
@@ -1047,7 +1047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 10. (optional)</param>
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="status">Filter by the status of contracts (optional)</param>
@@ -1144,7 +1144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 10. (optional)</param>
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="status">Filter by the status of contracts (optional)</param>
@@ -1166,7 +1166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 10. (optional)</param>
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="status">Filter by the status of contracts (optional)</param>

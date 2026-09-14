@@ -81,6 +81,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitSchedulingRun**](#GetWorkforcemanagementBusinessunitSchedulingRun) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Get a scheduling run |
 | [**GetWorkforcemanagementBusinessunitSchedulingRunResult**](#GetWorkforcemanagementBusinessunitSchedulingRunResult) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}/result | Get the result of a rescheduling operation |
 | [**GetWorkforcemanagementBusinessunitSchedulingRuns**](#GetWorkforcemanagementBusinessunitSchedulingRuns) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs | Get the list of scheduling runs |
+| [**GetWorkforcemanagementBusinessunitSchedulingpreferencesSettings**](#GetWorkforcemanagementBusinessunitSchedulingpreferencesSettings) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulingpreferences/settings | Get business unit scheduling preferences settings |
 | [**GetWorkforcemanagementBusinessunitServicegoaltemplate**](#GetWorkforcemanagementBusinessunitServicegoaltemplate) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Get a service goal template |
 | [**GetWorkforcemanagementBusinessunitServicegoaltemplates**](#GetWorkforcemanagementBusinessunitServicegoaltemplates) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates | Gets list of service goal templates |
 | [**GetWorkforcemanagementBusinessunitShifttradingTradesEvaluateJob**](#GetWorkforcemanagementBusinessunitShifttradingTradesEvaluateJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/evaluate/jobs/{jobId} | View results of the evaluate shift trades in a management unit per week operation. Only the user who started the operation can query the status |
@@ -156,6 +157,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementSchedulebidSchedulesets**](#GetWorkforcemanagementSchedulebidSchedulesets) | **Get** /api/v2/workforcemanagement/schedulebids/{bidId}/schedulesets | Gets an agent&#39;s schedule sets for a bid |
 | [**GetWorkforcemanagementSchedulebids**](#GetWorkforcemanagementSchedulebids) | **Get** /api/v2/workforcemanagement/schedulebids | Gets the list of schedule bids that belong to an agent. It will fetch an open bid or upcoming bid or a bid that is closed recently |
 | [**GetWorkforcemanagementSchedulingjob**](#GetWorkforcemanagementSchedulingjob) | **Get** /api/v2/workforcemanagement/schedulingjobs/{jobId} | Get status of the scheduling job |
+| [**GetWorkforcemanagementSchedulingpreferencesSettings**](#GetWorkforcemanagementSchedulingpreferencesSettings) | **Get** /api/v2/workforcemanagement/schedulingpreferences/settings | Get scheduling preferences settings for the agent&#39;s business unit |
 | [**GetWorkforcemanagementShifttrades**](#GetWorkforcemanagementShifttrades) | **Get** /api/v2/workforcemanagement/shifttrades | Gets all of my shift trades |
 | [**GetWorkforcemanagementShifttradingTradeJob**](#GetWorkforcemanagementShifttradingTradeJob) | **Get** /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/jobs/{jobId} | View result of update trade operation. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementShifttradingTradeMatchJob**](#GetWorkforcemanagementShifttradingTradeMatchJob) | **Get** /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/match/jobs/{jobId} | View result of match shift trade operation. Only the receiving user who started the operation can query the status. |
@@ -191,6 +193,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementBusinessunitSchedulebidGroupPreferences**](#PatchWorkforcemanagementBusinessunitSchedulebidGroupPreferences) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}/preferences | Overrides the assigned schedule bid for the specified agents |
 | [**PatchWorkforcemanagementBusinessunitSchedulerSettings**](#PatchWorkforcemanagementBusinessunitSchedulerSettings) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduler/settings | Update scheduler settings for a business unit |
 | [**PatchWorkforcemanagementBusinessunitSchedulingRun**](#PatchWorkforcemanagementBusinessunitSchedulingRun) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Mark a schedule run as applied |
+| [**PatchWorkforcemanagementBusinessunitSchedulingpreferencesSettings**](#PatchWorkforcemanagementBusinessunitSchedulingpreferencesSettings) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulingpreferences/settings | Update business unit scheduling preferences settings |
 | [**PatchWorkforcemanagementBusinessunitServicegoaltemplate**](#PatchWorkforcemanagementBusinessunitServicegoaltemplate) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Updates a service goal template |
 | [**PatchWorkforcemanagementBusinessunitStaffinggroup**](#PatchWorkforcemanagementBusinessunitStaffinggroup) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId} | Updates a staffing group |
 | [**PatchWorkforcemanagementBusinessunitTimeoffplan**](#PatchWorkforcemanagementBusinessunitTimeoffplan) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} | Updates a time-off plan |
@@ -208,6 +211,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementManagementunitWeekShifttrade**](#PatchWorkforcemanagementManagementunitWeekShifttrade) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId} | Updates a shift trade. This route can only be called by the initiating agent |
 | [**PatchWorkforcemanagementManagementunitWorkplan**](#PatchWorkforcemanagementManagementunitWorkplan) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId} | Update a work plan |
 | [**PatchWorkforcemanagementManagementunitWorkplanrotation**](#PatchWorkforcemanagementManagementunitWorkplanrotation) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId} | Update a work plan rotation |
+| [**PatchWorkforcemanagementSchedulingpreferences**](#PatchWorkforcemanagementSchedulingpreferences) | **Patch** /api/v2/workforcemanagement/schedulingpreferences | Update agent scheduling preferences |
 | [**PatchWorkforcemanagementTimeoffrequest**](#PatchWorkforcemanagementTimeoffrequest) | **Patch** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Update a time off request for the current user |
 | [**PatchWorkforcemanagementUnavailabletimes**](#PatchWorkforcemanagementUnavailabletimes) | **Patch** /api/v2/workforcemanagement/unavailabletimes | Update agent unavailable times |
 | [**PatchWorkforcemanagementUserWorkplanbidranks**](#PatchWorkforcemanagementUserWorkplanbidranks) | **Patch** /api/v2/workforcemanagement/users/{userId}/workplanbidranks | Update work plan bid ranks for a user |
@@ -218,6 +222,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementAdherenceHistoricalBulk**](#PostWorkforcemanagementAdherenceHistoricalBulk) | **Post** /api/v2/workforcemanagement/adherence/historical/bulk | Request a historical adherence report in bulk |
 | [**PostWorkforcemanagementAgentAdherenceExplanations**](#PostWorkforcemanagementAgentAdherenceExplanations) | **Post** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations | Add an adherence explanation for the requested user |
 | [**PostWorkforcemanagementAgentAdherenceExplanationsQuery**](#PostWorkforcemanagementAgentAdherenceExplanationsQuery) | **Post** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/query | Query adherence explanations for the given agent across a specified range |
+| [**PostWorkforcemanagementAgentSchedulingpreferencesQuery**](#PostWorkforcemanagementAgentSchedulingpreferencesQuery) | **Post** /api/v2/workforcemanagement/agents/{agentId}/schedulingpreferences/query | Get agent scheduling preferences |
 | [**PostWorkforcemanagementAgentUnavailabletimesQuery**](#PostWorkforcemanagementAgentUnavailabletimesQuery) | **Post** /api/v2/workforcemanagement/agents/{agentId}/unavailabletimes/query | Get agent unavailable times |
 | [**PostWorkforcemanagementAgents**](#PostWorkforcemanagementAgents) | **Post** /api/v2/workforcemanagement/agents | Move agents in and out of management unit |
 | [**PostWorkforcemanagementAgentsIntegrationsHrisQuery**](#PostWorkforcemanagementAgentsIntegrationsHrisQuery) | **Post** /api/v2/workforcemanagement/agents/integrations/hris/query | Query integrations for agents |
@@ -332,6 +337,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementManagementunits**](#PostWorkforcemanagementManagementunits) | **Post** /api/v2/workforcemanagement/managementunits | Add a management unit |
 | [**PostWorkforcemanagementNotificationsUpdate**](#PostWorkforcemanagementNotificationsUpdate) | **Post** /api/v2/workforcemanagement/notifications/update | Mark a list of notifications as read or unread |
 | [**PostWorkforcemanagementSchedules**](#PostWorkforcemanagementSchedules) | **Post** /api/v2/workforcemanagement/schedules | Get published schedule for the current user |
+| [**PostWorkforcemanagementSchedulingpreferencesQuery**](#PostWorkforcemanagementSchedulingpreferencesQuery) | **Post** /api/v2/workforcemanagement/schedulingpreferences/query | Get agent scheduling preferences |
 | [**PostWorkforcemanagementShifttradingTradeJobs**](#PostWorkforcemanagementShifttradingTradeJobs) | **Post** /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/jobs | Updates a shift trade. This route can only be called by the initiating user |
 | [**PostWorkforcemanagementShifttradingTradeMatchJobs**](#PostWorkforcemanagementShifttradingTradeMatchJobs) | **Post** /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/match/jobs | Matches a shift trade. This route can only be called by the receiving user |
 | [**PostWorkforcemanagementShifttradingTradeStateJobs**](#PostWorkforcemanagementShifttradingTradeStateJobs) | **Post** /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/state/jobs | Update trade state by a user |
@@ -346,6 +352,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery**](#PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery) | **Post** /api/v2/workforcemanagement/timeoffrequests/integrationstatus/query | Retrieves integration statuses for a list of current user time off requests |
 | [**PostWorkforcemanagementUnavailabletimesQuery**](#PostWorkforcemanagementUnavailabletimesQuery) | **Post** /api/v2/workforcemanagement/unavailabletimes/query | Get agent unavailable times |
 | [**PostWorkforcemanagementUnavailabletimesValidationJobs**](#PostWorkforcemanagementUnavailabletimesValidationJobs) | **Post** /api/v2/workforcemanagement/unavailabletimes/validation/jobs | Validates proposed changes to an agent&#39;s unavailable time spans against scheduling rules and constraints for a specific week |
+| [**PostWorkforcemanagementUsersActivity**](#PostWorkforcemanagementUsersActivity) | **Post** /api/v2/workforcemanagement/users/activity | Get a list of UserScheduleAdherence records for the requested users |
 | [**PutWorkforcemanagementAgentIntegrationsHris**](#PutWorkforcemanagementAgentIntegrationsHris) | **Put** /api/v2/workforcemanagement/agents/{agentId}/integrations/hris | Update integrations for agent |
 | [**PutWorkforcemanagementBusinessunitTimeofflimitValues**](#PutWorkforcemanagementBusinessunitTimeofflimitValues) | **Put** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values | Sets daily values for a date range of time-off limit object |
 | [**PutWorkforcemanagementManagementunitTimeofflimitValues**](#PutWorkforcemanagementManagementunitTimeofflimitValues) | **Put** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values | Sets daily values for a date range of time off limit object |
@@ -5351,6 +5358,70 @@ namespace Example
 ### Return type
 
 [**BuScheduleRunListing**](BuScheduleRunListing)
+
+
+## GetWorkforcemanagementBusinessunitSchedulingpreferencesSettings
+
+> [**BusinessUnitSchedulingPreferencesSettingsResponse**](BusinessUnitSchedulingPreferencesSettingsResponse) GetWorkforcemanagementBusinessunitSchedulingpreferencesSettings (string businessUnitId)
+
+
+Get business unit scheduling preferences settings
+
+GetWorkforcemanagementBusinessunitSchedulingpreferencesSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* wfm:schedulingPreferencesSettings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitSchedulingpreferencesSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+
+            try
+            { 
+                // Get business unit scheduling preferences settings
+                BusinessUnitSchedulingPreferencesSettingsResponse result = apiInstance.GetWorkforcemanagementBusinessunitSchedulingpreferencesSettings(businessUnitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitSchedulingpreferencesSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+
+### Return type
+
+[**BusinessUnitSchedulingPreferencesSettingsResponse**](BusinessUnitSchedulingPreferencesSettingsResponse)
 
 
 ## GetWorkforcemanagementBusinessunitServicegoaltemplate
@@ -10390,6 +10461,65 @@ namespace Example
 [**SchedulingStatusResponse**](SchedulingStatusResponse)
 
 
+## GetWorkforcemanagementSchedulingpreferencesSettings
+
+> [**BusinessUnitSchedulingPreferencesSettingsResponse**](BusinessUnitSchedulingPreferencesSettingsResponse) GetWorkforcemanagementSchedulingpreferencesSettings ()
+
+
+Get scheduling preferences settings for the agent's business unit
+
+GetWorkforcemanagementSchedulingpreferencesSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* wfm:agentSchedulingPreferencesSettings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementSchedulingpreferencesSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+
+            try
+            { 
+                // Get scheduling preferences settings for the agent's business unit
+                BusinessUnitSchedulingPreferencesSettingsResponse result = apiInstance.GetWorkforcemanagementSchedulingpreferencesSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementSchedulingpreferencesSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**BusinessUnitSchedulingPreferencesSettingsResponse**](BusinessUnitSchedulingPreferencesSettingsResponse)
+
+
 ## GetWorkforcemanagementShifttrades
 
 > [**ShiftTradeListResponse**](ShiftTradeListResponse) GetWorkforcemanagementShifttrades ()
@@ -12627,6 +12757,72 @@ namespace Example
 void (empty response body)
 
 
+## PatchWorkforcemanagementBusinessunitSchedulingpreferencesSettings
+
+> [**BusinessUnitSchedulingPreferencesSettingsResponse**](BusinessUnitSchedulingPreferencesSettingsResponse) PatchWorkforcemanagementBusinessunitSchedulingpreferencesSettings (string businessUnitId, UpdateBusinessUnitSchedulingPreferencesSettingsRequest body)
+
+
+Update business unit scheduling preferences settings
+
+PatchWorkforcemanagementBusinessunitSchedulingpreferencesSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* wfm:schedulingPreferencesSettings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitSchedulingpreferencesSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new UpdateBusinessUnitSchedulingPreferencesSettingsRequest(); // UpdateBusinessUnitSchedulingPreferencesSettingsRequest | body
+
+            try
+            { 
+                // Update business unit scheduling preferences settings
+                BusinessUnitSchedulingPreferencesSettingsResponse result = apiInstance.PatchWorkforcemanagementBusinessunitSchedulingpreferencesSettings(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitSchedulingpreferencesSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**UpdateBusinessUnitSchedulingPreferencesSettingsRequest**](UpdateBusinessUnitSchedulingPreferencesSettingsRequest)| body |  |
+
+### Return type
+
+[**BusinessUnitSchedulingPreferencesSettingsResponse**](BusinessUnitSchedulingPreferencesSettingsResponse)
+
+
 ## PatchWorkforcemanagementBusinessunitServicegoaltemplate
 
 > [**ServiceGoalTemplate**](ServiceGoalTemplate) PatchWorkforcemanagementBusinessunitServicegoaltemplate (string businessUnitId, string serviceGoalTemplateId, UpdateServiceGoalTemplate body)
@@ -13765,6 +13961,70 @@ namespace Example
 [**WorkPlanRotationResponse**](WorkPlanRotationResponse)
 
 
+## PatchWorkforcemanagementSchedulingpreferences
+
+> [**AgentSchedulingPreferenceListing**](AgentSchedulingPreferenceListing) PatchWorkforcemanagementSchedulingpreferences (UpdateAgentSchedulingPreferencesRequest body)
+
+
+Update agent scheduling preferences
+
+PatchWorkforcemanagementSchedulingpreferences is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* wfm:agentSchedulingPreferences:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementSchedulingpreferencesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new UpdateAgentSchedulingPreferencesRequest(); // UpdateAgentSchedulingPreferencesRequest | body
+
+            try
+            { 
+                // Update agent scheduling preferences
+                AgentSchedulingPreferenceListing result = apiInstance.PatchWorkforcemanagementSchedulingpreferences(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementSchedulingpreferences: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UpdateAgentSchedulingPreferencesRequest**](UpdateAgentSchedulingPreferencesRequest)| body |  |
+
+### Return type
+
+[**AgentSchedulingPreferenceListing**](AgentSchedulingPreferenceListing)
+
+
 ## PatchWorkforcemanagementTimeoffrequest
 
 > [**TimeOffRequestResponse**](TimeOffRequestResponse) PatchWorkforcemanagementTimeoffrequest (string timeOffRequestId, AgentTimeOffRequestPatch body)
@@ -14401,6 +14661,72 @@ namespace Example
 ### Return type
 
 [**AgentQueryAdherenceExplanationsResponse**](AgentQueryAdherenceExplanationsResponse)
+
+
+## PostWorkforcemanagementAgentSchedulingpreferencesQuery
+
+> [**AgentSchedulingPreferenceListing**](AgentSchedulingPreferenceListing) PostWorkforcemanagementAgentSchedulingpreferencesQuery (string agentId, QueryAgentSchedulingPreferencesRequest body)
+
+
+Get agent scheduling preferences
+
+PostWorkforcemanagementAgentSchedulingpreferencesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* wfm:schedulingPreferencesQuery:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAgentSchedulingpreferencesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var agentId = agentId_example;  // string | The ID of the agent
+            var body = new QueryAgentSchedulingPreferencesRequest(); // QueryAgentSchedulingPreferencesRequest | body
+
+            try
+            { 
+                // Get agent scheduling preferences
+                AgentSchedulingPreferenceListing result = apiInstance.PostWorkforcemanagementAgentSchedulingpreferencesQuery(agentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAgentSchedulingpreferencesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentId** | **string**| The ID of the agent |  |
+| **body** | [**QueryAgentSchedulingPreferencesRequest**](QueryAgentSchedulingPreferencesRequest)| body |  |
+
+### Return type
+
+[**AgentSchedulingPreferenceListing**](AgentSchedulingPreferenceListing)
 
 
 ## PostWorkforcemanagementAgentUnavailabletimesQuery
@@ -21927,6 +22253,70 @@ namespace Example
 [**UserScheduleContainer**](UserScheduleContainer)
 
 
+## PostWorkforcemanagementSchedulingpreferencesQuery
+
+> [**AgentSchedulingPreferenceListing**](AgentSchedulingPreferenceListing) PostWorkforcemanagementSchedulingpreferencesQuery (QueryAgentSchedulingPreferencesRequest body)
+
+
+Get agent scheduling preferences
+
+PostWorkforcemanagementSchedulingpreferencesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* wfm:agentSchedulingPreferencesQuery:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementSchedulingpreferencesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new QueryAgentSchedulingPreferencesRequest(); // QueryAgentSchedulingPreferencesRequest | body
+
+            try
+            { 
+                // Get agent scheduling preferences
+                AgentSchedulingPreferenceListing result = apiInstance.PostWorkforcemanagementSchedulingpreferencesQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementSchedulingpreferencesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**QueryAgentSchedulingPreferencesRequest**](QueryAgentSchedulingPreferencesRequest)| body |  |
+
+### Return type
+
+[**AgentSchedulingPreferenceListing**](AgentSchedulingPreferenceListing)
+
+
 ## PostWorkforcemanagementShifttradingTradeJobs
 
 > [**ShiftTradeUpdateTradeJobResponse**](ShiftTradeUpdateTradeJobResponse) PostWorkforcemanagementShifttradingTradeJobs (string tradeId, UpdateShiftTradeJobRequest body, bool? forceAsync = null)
@@ -22823,6 +23213,68 @@ namespace Example
 [**ValidateAgentUnavailableTimesResponse**](ValidateAgentUnavailableTimesResponse)
 
 
+## PostWorkforcemanagementUsersActivity
+
+> [**UserActivityListing**](UserActivityListing) PostWorkforcemanagementUsersActivity (UsersActivityRequest body)
+
+
+Get a list of UserScheduleAdherence records for the requested users
+
+Requires ANY permissions: 
+
+* analytics:userObservation:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementUsersActivityExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new UsersActivityRequest(); // UsersActivityRequest | Request body
+
+            try
+            { 
+                // Get a list of UserScheduleAdherence records for the requested users
+                UserActivityListing result = apiInstance.PostWorkforcemanagementUsersActivity(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementUsersActivity: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UsersActivityRequest**](UsersActivityRequest)| Request body |  |
+
+### Return type
+
+[**UserActivityListing**](UserActivityListing)
+
+
 ## PutWorkforcemanagementAgentIntegrationsHris
 
 > [**AgentIntegrationsResponse**](AgentIntegrationsResponse) PutWorkforcemanagementAgentIntegrationsHris (string agentId, AgentIntegrationsRequest body)
@@ -23090,4 +23542,4 @@ namespace Example
 [**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
 
 
-_PureCloudPlatform.Client.V2 272.0.0_
+_PureCloudPlatform.Client.V2 273.0.0_

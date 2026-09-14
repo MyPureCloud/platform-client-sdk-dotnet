@@ -18,19 +18,13 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WhatsAppEmbeddedSignupIntegrationRequest :  IEquatable<WhatsAppEmbeddedSignupIntegrationRequest>
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="WhatsAppEmbeddedSignupIntegrationRequest" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected WhatsAppEmbeddedSignupIntegrationRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WhatsAppEmbeddedSignupIntegrationRequest" /> class.
-        /// </summary>
-        /// <param name="Name">The name of the WhatsApp Integration (required).</param>
+        /// <param name="Name">The name of the WhatsApp Integration. Required for Embedded Signup v2; optional for v4 (set later via PATCH)..</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
         /// <param name="MessagingSetting">Defines the message settings to be applied for this integration.</param>
-        /// <param name="EmbeddedSignupAccessToken">The access token returned from the embedded signup flow (required).</param>
+        /// <param name="EmbeddedSignupAccessToken">The access token returned from the embedded signup flow. Not required for versions v4 or later..</param>
         public WhatsAppEmbeddedSignupIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingRequestReference MessagingSetting = null, string EmbeddedSignupAccessToken = null)
         {
             this.Name = Name;
@@ -52,9 +46,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The name of the WhatsApp Integration
+        /// The name of the WhatsApp Integration. Required for Embedded Signup v2; optional for v4 (set later via PATCH).
         /// </summary>
-        /// <value>The name of the WhatsApp Integration</value>
+        /// <value>The name of the WhatsApp Integration. Required for Embedded Signup v2; optional for v4 (set later via PATCH).</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
@@ -79,9 +73,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The access token returned from the embedded signup flow
+        /// The access token returned from the embedded signup flow. Not required for versions v4 or later.
         /// </summary>
-        /// <value>The access token returned from the embedded signup flow</value>
+        /// <value>The access token returned from the embedded signup flow. Not required for versions v4 or later.</value>
         [DataMember(Name="embeddedSignupAccessToken", EmitDefaultValue=false)]
         public string EmbeddedSignupAccessToken { get; set; }
 

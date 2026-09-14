@@ -140,17 +140,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TimeOffRequestQueryBody" /> class.
         /// </summary>
         /// <param name="Ids">The set of ids to filter time off requests.</param>
-        /// <param name="UserIds">The set of user ids to filter time off requests.</param>
+        /// <param name="UserIds">The set of user ids to filter time off requests. Omit to query all users in the management unit. Note: If teamIds is also specified, only time off requests for users in the requested teams will be returned.</param>
         /// <param name="Statuses">The set of statuses to filter time off requests.</param>
         /// <param name="Substatuses">The set of substatuses to filter time off requests.</param>
         /// <param name="DateRange">The inclusive range of dates to filter time off requests.</param>
-        public TimeOffRequestQueryBody(List<string> Ids = null, List<string> UserIds = null, List<StatusesEnum> Statuses = null, List<SubstatusesEnum> Substatuses = null, DateRange DateRange = null)
+        /// <param name="TeamIds">The IDs of work teams to query. If null or not set, results will be queried for requested users if applicable or otherwise all users in the management unit.</param>
+        public TimeOffRequestQueryBody(List<string> Ids = null, List<string> UserIds = null, List<StatusesEnum> Statuses = null, List<SubstatusesEnum> Substatuses = null, DateRange DateRange = null, List<string> TeamIds = null)
         {
             this.Ids = Ids;
             this.UserIds = UserIds;
             this.Statuses = Statuses;
             this.Substatuses = Substatuses;
             this.DateRange = DateRange;
+            this.TeamIds = TeamIds;
             
         }
         
@@ -166,9 +168,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The set of user ids to filter time off requests
+        /// The set of user ids to filter time off requests. Omit to query all users in the management unit. Note: If teamIds is also specified, only time off requests for users in the requested teams will be returned
         /// </summary>
-        /// <value>The set of user ids to filter time off requests</value>
+        /// <value>The set of user ids to filter time off requests. Omit to query all users in the management unit. Note: If teamIds is also specified, only time off requests for users in the requested teams will be returned</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
 
@@ -200,6 +202,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateRange DateRange { get; set; }
 
 
+
+        /// <summary>
+        /// The IDs of work teams to query. If null or not set, results will be queried for requested users if applicable or otherwise all users in the management unit
+        /// </summary>
+        /// <value>The IDs of work teams to query. If null or not set, results will be queried for requested users if applicable or otherwise all users in the management unit</value>
+        [DataMember(Name="teamIds", EmitDefaultValue=false)]
+        public List<string> TeamIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -214,6 +225,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Statuses: ").Append(Statuses).Append("\n");
             sb.Append("  Substatuses: ").Append(Substatuses).Append("\n");
             sb.Append("  DateRange: ").Append(DateRange).Append("\n");
+            sb.Append("  TeamIds: ").Append(TeamIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -278,6 +290,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateRange == other.DateRange ||
                     this.DateRange != null &&
                     this.DateRange.Equals(other.DateRange)
+                ) &&
+                (
+                    this.TeamIds == other.TeamIds ||
+                    this.TeamIds != null &&
+                    this.TeamIds.SequenceEqual(other.TeamIds)
                 );
         }
 
@@ -306,6 +323,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateRange != null)
                     hash = hash * 59 + this.DateRange.GetHashCode();
+
+                if (this.TeamIds != null)
+                    hash = hash * 59 + this.TeamIds.GetHashCode();
 
                 return hash;
             }

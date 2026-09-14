@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HeaderEntry" /> class.
         /// </summary>
-        /// <param name="Key">The key of the header (e.g., &#39;Subject&#39;, &#39;From&#39;, &#39;X-Custom-Header&#39;)..</param>
+        /// <param name="Key">The key of the custom header (e.g., &#39;X-Custom-Header&#39;, &#39;X-Ticket-ID&#39;). Restricted headers such as &#39;Subject&#39;, &#39;From&#39;, and &#39;Message-ID&#39; are not allowed and will result in a 400 Bad Request..</param>
         /// <param name="Value">The value of the header..</param>
         public HeaderEntry(string Key = null, string Value = null)
         {
@@ -33,9 +33,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The key of the header (e.g., &#39;Subject&#39;, &#39;From&#39;, &#39;X-Custom-Header&#39;).
+        /// The key of the custom header (e.g., &#39;X-Custom-Header&#39;, &#39;X-Ticket-ID&#39;). Restricted headers such as &#39;Subject&#39;, &#39;From&#39;, and &#39;Message-ID&#39; are not allowed and will result in a 400 Bad Request.
         /// </summary>
-        /// <value>The key of the header (e.g., &#39;Subject&#39;, &#39;From&#39;, &#39;X-Custom-Header&#39;).</value>
+        /// <value>The key of the custom header (e.g., &#39;X-Custom-Header&#39;, &#39;X-Ticket-ID&#39;). Restricted headers such as &#39;Subject&#39;, &#39;From&#39;, and &#39;Message-ID&#39; are not allowed and will result in a 400 Bad Request.</value>
         [DataMember(Name="key", EmitDefaultValue=false)]
         public string Key { get; set; }
 

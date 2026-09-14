@@ -59,14 +59,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The type of verifier..</param>
         /// <param name="Enabled">Indicates whether this verifier is enabled..</param>
         /// <param name="KeyUri">The key URI for TOTP authenticator app registration..</param>
+        /// <param name="EncodedQuickResponseCode">Base64-encoded PNG of the TOTP registration QR code..</param>
         /// <param name="Default">Indicates whether this is the default verifier..</param>
-        public CreateVerifierResponse(string Id = null, string Name = null, TypeEnum? Type = null, bool? Enabled = null, string KeyUri = null, bool? Default = null)
+        public CreateVerifierResponse(string Id = null, string Name = null, TypeEnum? Type = null, bool? Enabled = null, string KeyUri = null, string EncodedQuickResponseCode = null, bool? Default = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Type = Type;
             this.Enabled = Enabled;
             this.KeyUri = KeyUri;
+            this.EncodedQuickResponseCode = EncodedQuickResponseCode;
             this.Default = Default;
             
         }
@@ -112,6 +114,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Base64-encoded PNG of the TOTP registration QR code.
+        /// </summary>
+        /// <value>Base64-encoded PNG of the TOTP registration QR code.</value>
+        [DataMember(Name="encodedQuickResponseCode", EmitDefaultValue=false)]
+        public string EncodedQuickResponseCode { get; set; }
+
+
+
+        /// <summary>
         /// Indicates whether this is the default verifier.
         /// </summary>
         /// <value>Indicates whether this is the default verifier.</value>
@@ -133,6 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  KeyUri: ").Append(KeyUri).Append("\n");
+            sb.Append("  EncodedQuickResponseCode: ").Append(EncodedQuickResponseCode).Append("\n");
             sb.Append("  Default: ").Append(Default).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -200,6 +212,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.KeyUri.Equals(other.KeyUri)
                 ) &&
                 (
+                    this.EncodedQuickResponseCode == other.EncodedQuickResponseCode ||
+                    this.EncodedQuickResponseCode != null &&
+                    this.EncodedQuickResponseCode.Equals(other.EncodedQuickResponseCode)
+                ) &&
+                (
                     this.Default == other.Default ||
                     this.Default != null &&
                     this.Default.Equals(other.Default)
@@ -231,6 +248,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.KeyUri != null)
                     hash = hash * 59 + this.KeyUri.GetHashCode();
+
+                if (this.EncodedQuickResponseCode != null)
+                    hash = hash * 59 + this.EncodedQuickResponseCode.GetHashCode();
 
                 if (this.Default != null)
                     hash = hash * 59 + this.Default.GetHashCode();

@@ -204,6 +204,8 @@ docs/AgentScheduleBiddingPreferenceResponse.md
 docs/AgentScheduleBids.md
 docs/AgentScheduleShiftActivity.md
 docs/AgentScheduleUnavailableTime.md
+docs/AgentSchedulingPreference.md
+docs/AgentSchedulingPreferenceListing.md
 docs/AgentScoringRule.md
 docs/AgentScoringRuleEntityListing.md
 docs/AgentStateActivityCategoryCount.md
@@ -738,6 +740,7 @@ docs/BulkContactsResponse.md
 docs/BulkDeleteDecisionTableRowsRequest.md
 docs/BulkDeleteResponse.md
 docs/BulkEntityErrorContactEnrichRequest.md
+docs/BulkEntityErrorContactList.md
 docs/BulkEntityErrorEntity.md
 docs/BulkEntityErrorExternalContact.md
 docs/BulkEntityErrorExternalOrganization.md
@@ -788,6 +791,7 @@ docs/BulkRemoveOpportunitiesResponse.md
 docs/BulkRemoveOpportunitiesResult.md
 docs/BulkRemoveSourceIntentsRequest.md
 docs/BulkResponse.md
+docs/BulkResponseResultContactListContactListBulkEntityErrorContactList.md
 docs/BulkResponseResultExternalContactContactEnrichRequestBulkEntityErrorContactEnrichRequest.md
 docs/BulkResponseResultExternalContactEntityBulkEntityErrorEntity.md
 docs/BulkResponseResultExternalContactExternalContactBulkEntityErrorExternalContact.md
@@ -829,6 +833,7 @@ docs/BusinessUnitListItem.md
 docs/BusinessUnitListing.md
 docs/BusinessUnitReference.md
 docs/BusinessUnitResponse.md
+docs/BusinessUnitSchedulingPreferencesSettingsResponse.md
 docs/BusinessUnitSettingsResponse.md
 docs/Button.md
 docs/ButtonComponent.md
@@ -1222,6 +1227,8 @@ docs/ContactListUploadUrlRequest.md
 docs/ContactListing.md
 docs/ContactListingRequest.md
 docs/ContactListingResponse.md
+docs/ContactListsBulkEditRequest.md
+docs/ContactListsBulkEditResponse.md
 docs/ContactPhoneNumberColumn.md
 docs/ContactSearchOperation.md
 docs/ContactSearchRequest.md
@@ -1332,7 +1339,9 @@ docs/ConversationAppSettings.md
 docs/ConversationAssociation.md
 docs/ConversationAsyncAggregateQueryResponse.md
 docs/ConversationAsyncAggregationQuery.md
+docs/ConversationAttribute.md
 docs/ConversationAttributeProperties.md
+docs/ConversationAttributeSchema.md
 docs/ConversationBasic.md
 docs/ConversationCallEventTopicCallConversation.md
 docs/ConversationCallEventTopicCallMediaParticipant.md
@@ -4793,6 +4802,7 @@ docs/GetWorkforcemanagementBusinessunitSchedulerSettings-example.txt
 docs/GetWorkforcemanagementBusinessunitSchedulingRun-example.txt
 docs/GetWorkforcemanagementBusinessunitSchedulingRunResult-example.txt
 docs/GetWorkforcemanagementBusinessunitSchedulingRuns-example.txt
+docs/GetWorkforcemanagementBusinessunitSchedulingpreferencesSettings-example.txt
 docs/GetWorkforcemanagementBusinessunitServicegoaltemplate-example.txt
 docs/GetWorkforcemanagementBusinessunitServicegoaltemplates-example.txt
 docs/GetWorkforcemanagementBusinessunitShifttradingTradesEvaluateJob-example.txt
@@ -4868,6 +4878,7 @@ docs/GetWorkforcemanagementSchedulebidPreference-example.txt
 docs/GetWorkforcemanagementSchedulebidSchedulesets-example.txt
 docs/GetWorkforcemanagementSchedulebids-example.txt
 docs/GetWorkforcemanagementSchedulingjob-example.txt
+docs/GetWorkforcemanagementSchedulingpreferencesSettings-example.txt
 docs/GetWorkforcemanagementShifttrades-example.txt
 docs/GetWorkforcemanagementShifttradingTradeJob-example.txt
 docs/GetWorkforcemanagementShifttradingTradeMatchJob-example.txt
@@ -5437,6 +5448,7 @@ docs/KnowledgeSearchPreviewRequest.md
 docs/KnowledgeSearchPreviewResponse.md
 docs/KnowledgeSearchResult.md
 docs/KnowledgeSetting.md
+docs/KnowledgeSettingDynamicFilter.md
 docs/KnowledgeSettingListing.md
 docs/KnowledgeSettings.md
 docs/KnowledgeSettingsRequest.md
@@ -6450,6 +6462,7 @@ docs/PatchWorkforcemanagementBusinessunitSchedulebidGroup-example.txt
 docs/PatchWorkforcemanagementBusinessunitSchedulebidGroupPreferences-example.txt
 docs/PatchWorkforcemanagementBusinessunitSchedulerSettings-example.txt
 docs/PatchWorkforcemanagementBusinessunitSchedulingRun-example.txt
+docs/PatchWorkforcemanagementBusinessunitSchedulingpreferencesSettings-example.txt
 docs/PatchWorkforcemanagementBusinessunitServicegoaltemplate-example.txt
 docs/PatchWorkforcemanagementBusinessunitStaffinggroup-example.txt
 docs/PatchWorkforcemanagementBusinessunitTimeoffplan-example.txt
@@ -6467,6 +6480,7 @@ docs/PatchWorkforcemanagementManagementunitUserTimeoffrequest-example.txt
 docs/PatchWorkforcemanagementManagementunitWeekShifttrade-example.txt
 docs/PatchWorkforcemanagementManagementunitWorkplan-example.txt
 docs/PatchWorkforcemanagementManagementunitWorkplanrotation-example.txt
+docs/PatchWorkforcemanagementSchedulingpreferences-example.txt
 docs/PatchWorkforcemanagementTimeoffrequest-example.txt
 docs/PatchWorkforcemanagementUnavailabletimes-example.txt
 docs/PatchWorkforcemanagementUserWorkplanbidranks-example.txt
@@ -7127,6 +7141,7 @@ docs/PostOutboundContactlistfilters-example.txt
 docs/PostOutboundContactlistfiltersBulkRetrieve-example.txt
 docs/PostOutboundContactlistfiltersPreview-example.txt
 docs/PostOutboundContactlists-example.txt
+docs/PostOutboundContactlistsBulkUpdate-example.txt
 docs/PostOutboundContactlistsUploads-example.txt
 docs/PostOutboundContactlisttemplates-example.txt
 docs/PostOutboundContactlisttemplatesBulkAdd-example.txt
@@ -7369,6 +7384,7 @@ docs/PostWorkforcemanagementAdherenceExplanationsQuery-example.txt
 docs/PostWorkforcemanagementAdherenceHistoricalBulk-example.txt
 docs/PostWorkforcemanagementAgentAdherenceExplanations-example.txt
 docs/PostWorkforcemanagementAgentAdherenceExplanationsQuery-example.txt
+docs/PostWorkforcemanagementAgentSchedulingpreferencesQuery-example.txt
 docs/PostWorkforcemanagementAgentUnavailabletimesQuery-example.txt
 docs/PostWorkforcemanagementAgents-example.txt
 docs/PostWorkforcemanagementAgentsIntegrationsHrisQuery-example.txt
@@ -7483,6 +7499,7 @@ docs/PostWorkforcemanagementManagementunitWorkplans-example.txt
 docs/PostWorkforcemanagementManagementunits-example.txt
 docs/PostWorkforcemanagementNotificationsUpdate-example.txt
 docs/PostWorkforcemanagementSchedules-example.txt
+docs/PostWorkforcemanagementSchedulingpreferencesQuery-example.txt
 docs/PostWorkforcemanagementShifttradingTradeJobs-example.txt
 docs/PostWorkforcemanagementShifttradingTradeMatchJobs-example.txt
 docs/PostWorkforcemanagementShifttradingTradeStateJobs-example.txt
@@ -7497,6 +7514,7 @@ docs/PostWorkforcemanagementTimeoffrequestsEstimate-example.txt
 docs/PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery-example.txt
 docs/PostWorkforcemanagementUnavailabletimesQuery-example.txt
 docs/PostWorkforcemanagementUnavailabletimesValidationJobs-example.txt
+docs/PostWorkforcemanagementUsersActivity-example.txt
 docs/PredictionResults.md
 docs/PredictiveRouting.md
 docs/PredictiveRoutingCustomKpiAttributionEvent.md
@@ -7873,6 +7891,7 @@ docs/QuarterHourly.md
 docs/QueryAdherenceExplanationsResponse.md
 docs/QueryAgentScheduleUnavailableTimesRequest.md
 docs/QueryAgentScheduleUnavailableTimesResponse.md
+docs/QueryAgentSchedulingPreferencesRequest.md
 docs/QueryAgentShiftTradeListJobRequest.md
 docs/QueryAgentUnavailableTimesRequest.md
 docs/QueryAgentUnavailableTimesValidationJobResponse.md
@@ -9302,11 +9321,13 @@ docs/UpdateActivityCodeRequest.md
 docs/UpdateActivityPlanRequest.md
 docs/UpdateAdherenceExplanationStatusRequest.md
 docs/UpdateAgentScheduleBiddingPreference.md
+docs/UpdateAgentSchedulingPreferencesRequest.md
 docs/UpdateAgentWorkPlanBiddingPreference.md
 docs/UpdateAgenticVirtualAgent.md
 docs/UpdateAlternativeShiftBuSettingsRequest.md
 docs/UpdateAnalyticsDataRetentionRequest.md
 docs/UpdateBusinessUnitRequest.md
+docs/UpdateBusinessUnitSchedulingPreferencesSettingsRequest.md
 docs/UpdateBusinessUnitSettingsRequest.md
 docs/UpdateCapacityPlanRequest.md
 docs/UpdateCoachingAppointmentRequest.md
@@ -9381,15 +9402,21 @@ docs/UsageExecutionResult.md
 docs/UsageItem.md
 docs/UsageQuerySortBy.md
 docs/User.md
+docs/UserActivity.md
+docs/UserActivityAdherencePresence.md
 docs/UserActivityData.md
 docs/UserActivityEntityData.md
+docs/UserActivityListing.md
 docs/UserActivityMetricValue.md
+docs/UserActivityOutOfOffice.md
+docs/UserActivityPresenceDefinition.md
 docs/UserActivityQuery.md
 docs/UserActivityQueryClause.md
 docs/UserActivityQueryFilter.md
 docs/UserActivityQueryMetric.md
 docs/UserActivityQueryPredicate.md
 docs/UserActivityResponse.md
+docs/UserActivityRoutingStatus.md
 docs/UserAgentInfo.md
 docs/UserAggregateDataContainer.md
 docs/UserAggregateQueryClause.md
@@ -9507,6 +9534,7 @@ docs/UserTokensTopicUriReference.md
 docs/UserTransferEvent.md
 docs/UserTrendData.md
 docs/UserVideoSettings.md
+docs/UsersActivityRequest.md
 docs/UsersApi.json
 docs/UsersApi.md
 docs/UsersRuleReference.md
@@ -10507,6 +10535,8 @@ src/PureCloudPlatform.Client.V2/Model/AgentScheduleBiddingPreferenceResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentScheduleBids.cs
 src/PureCloudPlatform.Client.V2/Model/AgentScheduleShiftActivity.cs
 src/PureCloudPlatform.Client.V2/Model/AgentScheduleUnavailableTime.cs
+src/PureCloudPlatform.Client.V2/Model/AgentSchedulingPreference.cs
+src/PureCloudPlatform.Client.V2/Model/AgentSchedulingPreferenceListing.cs
 src/PureCloudPlatform.Client.V2/Model/AgentScoringRule.cs
 src/PureCloudPlatform.Client.V2/Model/AgentScoringRuleEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateActivityCategoryCount.cs
@@ -11023,6 +11053,7 @@ src/PureCloudPlatform.Client.V2/Model/BulkContactsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkDeleteDecisionTableRowsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkDeleteResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkEntityErrorContactEnrichRequest.cs
+src/PureCloudPlatform.Client.V2/Model/BulkEntityErrorContactList.cs
 src/PureCloudPlatform.Client.V2/Model/BulkEntityErrorEntity.cs
 src/PureCloudPlatform.Client.V2/Model/BulkEntityErrorExternalContact.cs
 src/PureCloudPlatform.Client.V2/Model/BulkEntityErrorExternalOrganization.cs
@@ -11073,6 +11104,7 @@ src/PureCloudPlatform.Client.V2/Model/BulkRemoveOpportunitiesResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkRemoveOpportunitiesResult.cs
 src/PureCloudPlatform.Client.V2/Model/BulkRemoveSourceIntentsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResponse.cs
+src/PureCloudPlatform.Client.V2/Model/BulkResponseResultContactListContactListBulkEntityErrorContactList.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResponseResultExternalContactContactEnrichRequestBulkEntityErrorContactEnrichRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResponseResultExternalContactEntityBulkEntityErrorEntity.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResponseResultExternalContactExternalContactBulkEntityErrorExternalContact.cs
@@ -11112,6 +11144,7 @@ src/PureCloudPlatform.Client.V2/Model/BusinessUnitListItem.cs
 src/PureCloudPlatform.Client.V2/Model/BusinessUnitListing.cs
 src/PureCloudPlatform.Client.V2/Model/BusinessUnitReference.cs
 src/PureCloudPlatform.Client.V2/Model/BusinessUnitResponse.cs
+src/PureCloudPlatform.Client.V2/Model/BusinessUnitSchedulingPreferencesSettingsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BusinessUnitSettingsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/Button.cs
 src/PureCloudPlatform.Client.V2/Model/ButtonComponent.cs
@@ -11497,6 +11530,8 @@ src/PureCloudPlatform.Client.V2/Model/ContactListUploadUrlRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListing.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListingRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListingResponse.cs
+src/PureCloudPlatform.Client.V2/Model/ContactListsBulkEditRequest.cs
+src/PureCloudPlatform.Client.V2/Model/ContactListsBulkEditResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ContactPhoneNumberColumn.cs
 src/PureCloudPlatform.Client.V2/Model/ContactSearchOperation.cs
 src/PureCloudPlatform.Client.V2/Model/ContactSearchRequest.cs
@@ -11605,7 +11640,9 @@ src/PureCloudPlatform.Client.V2/Model/ConversationAppSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAssociation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAsyncAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAttributeProperties.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationAttributeSchema.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationBasic.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicCallConversation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicCallMediaParticipant.cs
@@ -13689,6 +13726,7 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchPreviewRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchPreviewResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchResult.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSetting.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeSettingDynamicFilter.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSettingListing.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSettings.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSettingsRequest.cs
@@ -14606,6 +14644,7 @@ src/PureCloudPlatform.Client.V2/Model/QuarterHourly.cs
 src/PureCloudPlatform.Client.V2/Model/QueryAdherenceExplanationsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/QueryAgentScheduleUnavailableTimesRequest.cs
 src/PureCloudPlatform.Client.V2/Model/QueryAgentScheduleUnavailableTimesResponse.cs
+src/PureCloudPlatform.Client.V2/Model/QueryAgentSchedulingPreferencesRequest.cs
 src/PureCloudPlatform.Client.V2/Model/QueryAgentShiftTradeListJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/QueryAgentUnavailableTimesRequest.cs
 src/PureCloudPlatform.Client.V2/Model/QueryAgentUnavailableTimesValidationJobResponse.cs
@@ -15999,11 +16038,13 @@ src/PureCloudPlatform.Client.V2/Model/UpdateActivityCodeRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateActivityPlanRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateAdherenceExplanationStatusRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateAgentScheduleBiddingPreference.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateAgentSchedulingPreferencesRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateAgentWorkPlanBiddingPreference.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateAgenticVirtualAgent.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateAlternativeShiftBuSettingsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateAnalyticsDataRetentionRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateBusinessUnitRequest.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateBusinessUnitSchedulingPreferencesSettingsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateBusinessUnitSettingsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateCapacityPlanRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateCoachingAppointmentRequest.cs
@@ -16074,15 +16115,21 @@ src/PureCloudPlatform.Client.V2/Model/UsageExecutionResult.cs
 src/PureCloudPlatform.Client.V2/Model/UsageItem.cs
 src/PureCloudPlatform.Client.V2/Model/UsageQuerySortBy.cs
 src/PureCloudPlatform.Client.V2/Model/User.cs
+src/PureCloudPlatform.Client.V2/Model/UserActivity.cs
+src/PureCloudPlatform.Client.V2/Model/UserActivityAdherencePresence.cs
 src/PureCloudPlatform.Client.V2/Model/UserActivityData.cs
 src/PureCloudPlatform.Client.V2/Model/UserActivityEntityData.cs
+src/PureCloudPlatform.Client.V2/Model/UserActivityListing.cs
 src/PureCloudPlatform.Client.V2/Model/UserActivityMetricValue.cs
+src/PureCloudPlatform.Client.V2/Model/UserActivityOutOfOffice.cs
+src/PureCloudPlatform.Client.V2/Model/UserActivityPresenceDefinition.cs
 src/PureCloudPlatform.Client.V2/Model/UserActivityQuery.cs
 src/PureCloudPlatform.Client.V2/Model/UserActivityQueryClause.cs
 src/PureCloudPlatform.Client.V2/Model/UserActivityQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/UserActivityQueryMetric.cs
 src/PureCloudPlatform.Client.V2/Model/UserActivityQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/UserActivityResponse.cs
+src/PureCloudPlatform.Client.V2/Model/UserActivityRoutingStatus.cs
 src/PureCloudPlatform.Client.V2/Model/UserAgentInfo.cs
 src/PureCloudPlatform.Client.V2/Model/UserAggregateDataContainer.cs
 src/PureCloudPlatform.Client.V2/Model/UserAggregateQueryClause.cs
@@ -16198,6 +16245,7 @@ src/PureCloudPlatform.Client.V2/Model/UserTokensTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/UserTransferEvent.cs
 src/PureCloudPlatform.Client.V2/Model/UserTrendData.cs
 src/PureCloudPlatform.Client.V2/Model/UserVideoSettings.cs
+src/PureCloudPlatform.Client.V2/Model/UsersActivityRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UsersRuleReference.cs
 src/PureCloudPlatform.Client.V2/Model/UsersRulesCreateRuleRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UsersRulesCriteria.cs

@@ -18,6 +18,45 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactList :  IEquatable<ContactList>
     {
+        /// <summary>
+        /// The type of retention for this list. Valid values: Never, Today, RetentionDays
+        /// </summary>
+        /// <value>The type of retention for this list. Valid values: Never, Today, RetentionDays</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum RetentionTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Never for "Never"
+            /// </summary>
+            [EnumMember(Value = "Never")]
+            Never,
+            
+            /// <summary>
+            /// Enum Today for "Today"
+            /// </summary>
+            [EnumMember(Value = "Today")]
+            Today,
+            
+            /// <summary>
+            /// Enum Retentiondays for "RetentionDays"
+            /// </summary>
+            [EnumMember(Value = "RetentionDays")]
+            Retentiondays
+        }
+        /// <summary>
+        /// The type of retention for this list. Valid values: Never, Today, RetentionDays
+        /// </summary>
+        /// <value>The type of retention for this list. Valid values: Never, Today, RetentionDays</value>
+        [DataMember(Name="retentionType", EmitDefaultValue=false)]
+        public RetentionTypeEnum? RetentionType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactList" /> class.
@@ -41,7 +80,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ZipCodeColumnName">The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true..</param>
         /// <param name="ColumnDataTypeSpecifications">The settings of the columns selected for dynamic queueing.</param>
         /// <param name="TrimWhitespace">Whether to trim white space when importing a contactlist csv file, default value &#x3D; true.</param>
-        public ContactList(string Name = null, int? Version = null, DomainEntityRef Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, List<EmailColumn> EmailColumns = null, List<WhatsAppColumn> WhatsAppColumns = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, DomainEntityRef AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, List<ColumnDataTypeSpecification> ColumnDataTypeSpecifications = null, bool? TrimWhitespace = null)
+        /// <param name="RetentionType">The type of retention for this list. Valid values: Never, Today, RetentionDays.</param>
+        /// <param name="RetentionDays">The number of days to retain this list. Required when retentionType is RetentionDays..</param>
+        /// <param name="TimeZone">The time zone for this contact list; for example, Africa/Abidjan. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London.</param>
+        public ContactList(string Name = null, int? Version = null, DomainEntityRef Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, List<EmailColumn> EmailColumns = null, List<WhatsAppColumn> WhatsAppColumns = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, DomainEntityRef AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, List<ColumnDataTypeSpecification> ColumnDataTypeSpecifications = null, bool? TrimWhitespace = null, RetentionTypeEnum? RetentionType = null, int? RetentionDays = null, string TimeZone = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -57,6 +99,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ZipCodeColumnName = ZipCodeColumnName;
             this.ColumnDataTypeSpecifications = ColumnDataTypeSpecifications;
             this.TrimWhitespace = TrimWhitespace;
+            this.RetentionType = RetentionType;
+            this.RetentionDays = RetentionDays;
+            this.TimeZone = TimeZone;
             
         }
         
@@ -232,6 +277,35 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+        /// <summary>
+        /// The number of days to retain this list. Required when retentionType is RetentionDays.
+        /// </summary>
+        /// <value>The number of days to retain this list. Required when retentionType is RetentionDays.</value>
+        [DataMember(Name="retentionDays", EmitDefaultValue=false)]
+        public int? RetentionDays { get; set; }
+
+
+
+        /// <summary>
+        /// The expiration date of the contact list. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The expiration date of the contact list. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateExpiration", EmitDefaultValue=false)]
+        public DateTime? DateExpiration { get; private set; }
+
+
+
+        /// <summary>
+        /// The time zone for this contact list; for example, Africa/Abidjan. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
+        /// </summary>
+        /// <value>The time zone for this contact list; for example, Africa/Abidjan. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London</value>
+        [DataMember(Name="timeZone", EmitDefaultValue=false)]
+        public string TimeZone { get; set; }
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -268,6 +342,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ZipCodeColumnName: ").Append(ZipCodeColumnName).Append("\n");
             sb.Append("  ColumnDataTypeSpecifications: ").Append(ColumnDataTypeSpecifications).Append("\n");
             sb.Append("  TrimWhitespace: ").Append(TrimWhitespace).Append("\n");
+            sb.Append("  RetentionType: ").Append(RetentionType).Append("\n");
+            sb.Append("  RetentionDays: ").Append(RetentionDays).Append("\n");
+            sb.Append("  DateExpiration: ").Append(DateExpiration).Append("\n");
+            sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -405,6 +483,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TrimWhitespace.Equals(other.TrimWhitespace)
                 ) &&
                 (
+                    this.RetentionType == other.RetentionType ||
+                    this.RetentionType != null &&
+                    this.RetentionType.Equals(other.RetentionType)
+                ) &&
+                (
+                    this.RetentionDays == other.RetentionDays ||
+                    this.RetentionDays != null &&
+                    this.RetentionDays.Equals(other.RetentionDays)
+                ) &&
+                (
+                    this.DateExpiration == other.DateExpiration ||
+                    this.DateExpiration != null &&
+                    this.DateExpiration.Equals(other.DateExpiration)
+                ) &&
+                (
+                    this.TimeZone == other.TimeZone ||
+                    this.TimeZone != null &&
+                    this.TimeZone.Equals(other.TimeZone)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -478,6 +576,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TrimWhitespace != null)
                     hash = hash * 59 + this.TrimWhitespace.GetHashCode();
+
+                if (this.RetentionType != null)
+                    hash = hash * 59 + this.RetentionType.GetHashCode();
+
+                if (this.RetentionDays != null)
+                    hash = hash * 59 + this.RetentionDays.GetHashCode();
+
+                if (this.DateExpiration != null)
+                    hash = hash * 59 + this.DateExpiration.GetHashCode();
+
+                if (this.TimeZone != null)
+                    hash = hash * 59 + this.TimeZone.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

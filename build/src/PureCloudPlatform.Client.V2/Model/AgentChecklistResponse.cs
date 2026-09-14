@@ -157,6 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssistantId">Assistant ID..</param>
         /// <param name="MediaType">Media type..</param>
         /// <param name="Direction">Direction of the conversation..</param>
+        /// <param name="Preview">Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events..</param>
         /// <param name="EvaluationStartDate">Date when the checklist evaluation began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EvaluationLastModifiedDate">Date when the checklist was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EvaluationFinalizedDate">Date when the checklist was finalized. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -164,7 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Success">Whether activation succeeded for this checklist (bulk activation). Omitted for non-bulk responses..</param>
         /// <param name="ErrorCode">Error code when success is false..</param>
         /// <param name="ErrorMessage">Error message when success is false..</param>
-        public AgentChecklistResponse(string Id = null, string Name = null, List<ChecklistItem> ChecklistItems = null, List<ActivationTrigger> ActivationTriggers = null, StatusEnum? Status = null, string ExitReason = null, string Language = null, string AgentId = null, string ParticipantId = null, string QueueId = null, string AssistantId = null, MediaTypeEnum? MediaType = null, DirectionEnum? Direction = null, DateTime? EvaluationStartDate = null, DateTime? EvaluationLastModifiedDate = null, DateTime? EvaluationFinalizedDate = null, DateTime? EvaluationFinalizedWithAcwDate = null, bool? Success = null, string ErrorCode = null, string ErrorMessage = null)
+        public AgentChecklistResponse(string Id = null, string Name = null, List<ChecklistItem> ChecklistItems = null, List<ActivationTrigger> ActivationTriggers = null, StatusEnum? Status = null, string ExitReason = null, string Language = null, string AgentId = null, string ParticipantId = null, string QueueId = null, string AssistantId = null, MediaTypeEnum? MediaType = null, DirectionEnum? Direction = null, bool? Preview = null, DateTime? EvaluationStartDate = null, DateTime? EvaluationLastModifiedDate = null, DateTime? EvaluationFinalizedDate = null, DateTime? EvaluationFinalizedWithAcwDate = null, bool? Success = null, string ErrorCode = null, string ErrorMessage = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -179,6 +180,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AssistantId = AssistantId;
             this.MediaType = MediaType;
             this.Direction = Direction;
+            this.Preview = Preview;
             this.EvaluationStartDate = EvaluationStartDate;
             this.EvaluationLastModifiedDate = EvaluationLastModifiedDate;
             this.EvaluationFinalizedDate = EvaluationFinalizedDate;
@@ -288,6 +290,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events.
+        /// </summary>
+        /// <value>Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events.</value>
+        [DataMember(Name="preview", EmitDefaultValue=false)]
+        public bool? Preview { get; set; }
+
+
+
+        /// <summary>
         /// Date when the checklist evaluation began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date when the checklist evaluation began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -380,6 +391,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssistantId: ").Append(AssistantId).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
+            sb.Append("  Preview: ").Append(Preview).Append("\n");
             sb.Append("  EvaluationStartDate: ").Append(EvaluationStartDate).Append("\n");
             sb.Append("  EvaluationLastModifiedDate: ").Append(EvaluationLastModifiedDate).Append("\n");
             sb.Append("  EvaluationFinalizedDate: ").Append(EvaluationFinalizedDate).Append("\n");
@@ -494,6 +506,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Direction.Equals(other.Direction)
                 ) &&
                 (
+                    this.Preview == other.Preview ||
+                    this.Preview != null &&
+                    this.Preview.Equals(other.Preview)
+                ) &&
+                (
                     this.EvaluationStartDate == other.EvaluationStartDate ||
                     this.EvaluationStartDate != null &&
                     this.EvaluationStartDate.Equals(other.EvaluationStartDate)
@@ -584,6 +601,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
+
+                if (this.Preview != null)
+                    hash = hash * 59 + this.Preview.GetHashCode();
 
                 if (this.EvaluationStartDate != null)
                     hash = hash * 59 + this.EvaluationStartDate.GetHashCode();

@@ -136,7 +136,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Validation">The validation configuration for the variable. Optional - if not present, no validation is applied..</param>
         /// <param name="ListValues">The values configuration for List variables. Only applicable when type is &#39;List&#39;..</param>
         /// <param name="ListVariables">The variables that the list result will be stored in. Only applicable when type is &#39;List&#39;..</param>
-        public Variable(string Name = null, TypeEnum? Type = null, ScopeEnum? Scope = null, string Description = null, Object Validation = null, Object ListValues = null, List<Variable> ListVariables = null)
+        /// <param name="CustomConversationAttributes">The Conversation Custom Attributes (CCA) for this variable. When present, the variable value is bound to the specified conversation attributes..</param>
+        public Variable(string Name = null, TypeEnum? Type = null, ScopeEnum? Scope = null, string Description = null, Object Validation = null, Object ListValues = null, List<Variable> ListVariables = null, List<ConversationAttribute> CustomConversationAttributes = null)
         {
             this.Name = Name;
             this.Type = Type;
@@ -145,6 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Validation = Validation;
             this.ListValues = ListValues;
             this.ListVariables = ListVariables;
+            this.CustomConversationAttributes = CustomConversationAttributes;
             
         }
         
@@ -198,6 +200,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<Variable> ListVariables { get; set; }
 
 
+
+        /// <summary>
+        /// The Conversation Custom Attributes (CCA) for this variable. When present, the variable value is bound to the specified conversation attributes.
+        /// </summary>
+        /// <value>The Conversation Custom Attributes (CCA) for this variable. When present, the variable value is bound to the specified conversation attributes.</value>
+        [DataMember(Name="customConversationAttributes", EmitDefaultValue=false)]
+        public List<ConversationAttribute> CustomConversationAttributes { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -214,6 +225,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Validation: ").Append(Validation).Append("\n");
             sb.Append("  ListValues: ").Append(ListValues).Append("\n");
             sb.Append("  ListVariables: ").Append(ListVariables).Append("\n");
+            sb.Append("  CustomConversationAttributes: ").Append(CustomConversationAttributes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -288,6 +300,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ListVariables == other.ListVariables ||
                     this.ListVariables != null &&
                     this.ListVariables.SequenceEqual(other.ListVariables)
+                ) &&
+                (
+                    this.CustomConversationAttributes == other.CustomConversationAttributes ||
+                    this.CustomConversationAttributes != null &&
+                    this.CustomConversationAttributes.SequenceEqual(other.CustomConversationAttributes)
                 );
         }
 
@@ -322,6 +339,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ListVariables != null)
                     hash = hash * 59 + this.ListVariables.GetHashCode();
+
+                if (this.CustomConversationAttributes != null)
+                    hash = hash * 59 + this.CustomConversationAttributes.GetHashCode();
 
                 return hash;
             }

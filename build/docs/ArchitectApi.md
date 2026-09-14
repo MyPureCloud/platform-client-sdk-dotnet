@@ -3006,7 +3006,7 @@ namespace Example
 
 ## GetArchitectPrompts
 
-> [**PromptEntityListing**](PromptEntityListing) GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
+> [**PromptEntityListing**](PromptEntityListing) GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null, List<string> divisionId = null)
 
 
 Get a pageable list of user prompts
@@ -3049,11 +3049,12 @@ namespace Example
             var includeMediaUris = true;  // bool? | Include the media URIs for each resource (optional)  (default to true)
             var includeResources = true;  // bool? | Include the resources for each system prompt (optional)  (default to true)
             var language = new List<string>(); // List<string> | Filter the resources down to the provided languages (optional) 
+            var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
 
             try
             { 
                 // Get a pageable list of user prompts
-                PromptEntityListing result = apiInstance.GetArchitectPrompts(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder, includeMediaUris, includeResources, language);
+                PromptEntityListing result = apiInstance.GetArchitectPrompts(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder, includeMediaUris, includeResources, language, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3080,6 +3081,7 @@ namespace Example
 | **includeMediaUris** | **bool?**| Include the media URIs for each resource | [optional] [default to true] |
 | **includeResources** | **bool?**| Include the resources for each system prompt | [optional] [default to true] |
 | **language** | [**List<string>**](string)| Filter the resources down to the provided languages | [optional]  |
+| **divisionId** | [**List<string>**](string)| division ID(s) | [optional]  |
 
 ### Return type
 
@@ -9006,7 +9008,7 @@ namespace Example
 
 ## PostFlowsJobs
 
-> [**RegisterArchitectJobResponse**](RegisterArchitectJobResponse) PostFlowsJobs (Object body = null)
+> [**RegisterArchitectJobResponse**](RegisterArchitectJobResponse) PostFlowsJobs (RegisterArchitectJobRequest body = null)
 
 
 Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
@@ -9037,7 +9039,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ArchitectApi();
-            var body = ;  // Object |  (optional) 
+            var body = new RegisterArchitectJobRequest(); // RegisterArchitectJobRequest |  (optional) 
 
             try
             { 
@@ -9059,7 +9061,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | **Object**|  | [optional]  |
+| **body** | [**RegisterArchitectJobRequest**](RegisterArchitectJobRequest)|  | [optional]  |
 
 ### Return type
 
@@ -10238,4 +10240,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 272.0.0_
+_PureCloudPlatform.Client.V2 273.0.0_

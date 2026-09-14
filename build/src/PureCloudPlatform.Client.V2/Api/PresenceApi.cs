@@ -320,7 +320,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>UserPresence</returns>
         
@@ -333,7 +333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>ApiResponse of UserPresence</returns>
         
@@ -346,7 +346,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <returns>UserPresence</returns>
         
         UserPresence GetUserPresencesPurecloud (string userId);
@@ -358,7 +358,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <returns>ApiResponse of UserPresence</returns>
         
         ApiResponse<UserPresence> GetUserPresencesPurecloudWithHttpInfo (string userId);
@@ -420,7 +420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>UserPresence</returns>
@@ -434,7 +434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>ApiResponse of UserPresence</returns>
@@ -448,7 +448,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="body">User presence</param>
         /// <returns>UserPresence</returns>
         
@@ -461,7 +461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="body">User presence</param>
         /// <returns>ApiResponse of UserPresence</returns>
         
@@ -1000,7 +1000,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>Task of UserPresence</returns>
         
@@ -1013,7 +1013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         
@@ -1026,7 +1026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <returns>Task of UserPresence</returns>
         
         System.Threading.Tasks.Task<UserPresence> GetUserPresencesPurecloudAsync (string userId);
@@ -1038,7 +1038,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresencesPurecloudAsyncWithHttpInfo (string userId);
@@ -1100,7 +1100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of UserPresence</returns>
@@ -1114,7 +1114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
@@ -1128,7 +1128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of UserPresence</returns>
         
@@ -1141,7 +1141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         
@@ -3917,7 +3917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>UserPresence</returns>
         
@@ -3932,7 +3932,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>ApiResponse of UserPresence</returns>
         
@@ -4024,7 +4024,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>Task of UserPresence</returns>
         
@@ -4040,7 +4040,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a user's presence for the specified source that is not specifically listed.  Used to support custom presence sources. This endpoint does not support registered presence sources.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         
@@ -4135,7 +4135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <returns>UserPresence</returns>
         
         public UserPresence GetUserPresencesPurecloud (string userId)
@@ -4149,7 +4149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <returns>ApiResponse of UserPresence</returns>
         
         public ApiResponse< UserPresence > GetUserPresencesPurecloudWithHttpInfo (string userId)
@@ -4236,7 +4236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <returns>Task of UserPresence</returns>
         
         public async System.Threading.Tasks.Task<UserPresence> GetUserPresencesPurecloudAsync (string userId)
@@ -4251,7 +4251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the default Genesys Cloud user presence source PURECLOUD
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresencesPurecloudAsyncWithHttpInfo (string userId)
@@ -4749,7 +4749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>UserPresence</returns>
@@ -4765,7 +4765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>ApiResponse of UserPresence</returns>
@@ -4867,7 +4867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of UserPresence</returns>
@@ -4884,7 +4884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch a user's presence for the specified source that is not specifically listed. This endpoint does not support registered presence sources. The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="sourceId">Presence source ID</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
@@ -4990,7 +4990,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="body">User presence</param>
         /// <returns>UserPresence</returns>
         
@@ -5005,7 +5005,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="body">User presence</param>
         /// <returns>ApiResponse of UserPresence</returns>
         
@@ -5102,7 +5102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of UserPresence</returns>
         
@@ -5118,7 +5118,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">user Id</param>
+        /// <param name="userId">User ID (UUID)</param>
         /// <param name="body">User presence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         

@@ -28,9 +28,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ChecklistInferenceJobPayload" /> class.
         /// </summary>
         /// <param name="ConversationContext">List of conversations on which checklist evaluation is to be done. (required).</param>
-        public ChecklistInferenceJobPayload(List<ConversationContext> ConversationContext = null)
+        /// <param name="Preview">Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events..</param>
+        public ChecklistInferenceJobPayload(List<ConversationContext> ConversationContext = null, bool? Preview = null)
         {
             this.ConversationContext = ConversationContext;
+            this.Preview = Preview;
             
         }
         
@@ -44,6 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ConversationContext> ConversationContext { get; set; }
 
 
+
+        /// <summary>
+        /// Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events.
+        /// </summary>
+        /// <value>Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events.</value>
+        [DataMember(Name="preview", EmitDefaultValue=false)]
+        public bool? Preview { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ChecklistInferenceJobPayload {\n");
 
             sb.Append("  ConversationContext: ").Append(ConversationContext).Append("\n");
+            sb.Append("  Preview: ").Append(Preview).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationContext == other.ConversationContext ||
                     this.ConversationContext != null &&
                     this.ConversationContext.SequenceEqual(other.ConversationContext)
+                ) &&
+                (
+                    this.Preview == other.Preview ||
+                    this.Preview != null &&
+                    this.Preview.Equals(other.Preview)
                 );
         }
 
@@ -114,6 +131,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.ConversationContext != null)
                     hash = hash * 59 + this.ConversationContext.GetHashCode();
+
+                if (this.Preview != null)
+                    hash = hash * 59 + this.Preview.GetHashCode();
 
                 return hash;
             }

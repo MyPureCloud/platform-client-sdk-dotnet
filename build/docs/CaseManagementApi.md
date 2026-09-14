@@ -1720,8 +1720,6 @@ namespace Example
 
 Get a case query job by id
 
-GetCasemanagementCasesQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * caseManagement:queryJob:view
@@ -1783,8 +1781,6 @@ namespace Example
 
 
 Get results for a case query job
-
-GetCasemanagementCasesQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1975,8 +1971,6 @@ namespace Example
 
 
 Update the ownerId of a Case
-
-PatchCasemanagementCaseOwner is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3130,8 +3124,6 @@ namespace Example
 
 Create a Case query job.
 
-PostCasemanagementCasesQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * caseManagement:queryJob:add
@@ -3317,4 +3309,4 @@ namespace Example
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatform.Client.V2 272.0.0_
+_PureCloudPlatform.Client.V2 273.0.0_

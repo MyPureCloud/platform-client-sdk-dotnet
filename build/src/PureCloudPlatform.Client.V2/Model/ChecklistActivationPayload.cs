@@ -142,7 +142,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssistantId">Assistant ID..</param>
         /// <param name="MediaType">Media type..</param>
         /// <param name="Direction">Direction of the conversation..</param>
-        public ChecklistActivationPayload(ActivationTriggerTypeEnum? ActivationTriggerType = null, string IntentId = null, string IntentName = null, string Language = null, string AgentId = null, string ParticipantId = null, string QueueId = null, string AssistantId = null, MediaTypeEnum? MediaType = null, DirectionEnum? Direction = null)
+        /// <param name="Preview">Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events..</param>
+        public ChecklistActivationPayload(ActivationTriggerTypeEnum? ActivationTriggerType = null, string IntentId = null, string IntentName = null, string Language = null, string AgentId = null, string ParticipantId = null, string QueueId = null, string AssistantId = null, MediaTypeEnum? MediaType = null, DirectionEnum? Direction = null, bool? Preview = null)
         {
             this.ActivationTriggerType = ActivationTriggerType;
             this.IntentId = IntentId;
@@ -154,6 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AssistantId = AssistantId;
             this.MediaType = MediaType;
             this.Direction = Direction;
+            this.Preview = Preview;
             
         }
         
@@ -227,6 +229,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events.
+        /// </summary>
+        /// <value>Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events.</value>
+        [DataMember(Name="preview", EmitDefaultValue=false)]
+        public bool? Preview { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -246,6 +257,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssistantId: ").Append(AssistantId).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
+            sb.Append("  Preview: ").Append(Preview).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -335,6 +347,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Direction == other.Direction ||
                     this.Direction != null &&
                     this.Direction.Equals(other.Direction)
+                ) &&
+                (
+                    this.Preview == other.Preview ||
+                    this.Preview != null &&
+                    this.Preview.Equals(other.Preview)
                 );
         }
 
@@ -378,6 +395,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
+
+                if (this.Preview != null)
+                    hash = hash * 59 + this.Preview.GetHashCode();
 
                 return hash;
             }

@@ -123,6 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Triggersourcetype,
             
             /// <summary>
+            /// Enum Triggertype for "triggerType"
+            /// </summary>
+            [EnumMember(Value = "triggerType")]
+            Triggertype,
+            
+            /// <summary>
             /// Enum Userid for "userId"
             /// </summary>
             [EnumMember(Value = "userId")]

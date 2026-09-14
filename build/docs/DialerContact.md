@@ -20,8 +20,11 @@
 | **ContactColumnTimeZones** | [**Dictionary&lt;string, ContactColumnTimeZone&gt;**](ContactColumnTimeZone) | Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip | [optional] |
 | **ConfigurationOverrides** | [**ConfigurationOverrides**](ConfigurationOverrides) | the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue | [optional] |
 | **DateCreated** | **DateTime?** | Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **RetentionType** | **string** | The type of retention for this contact. Valid values: Never, Today, RetentionDays, DateExpiration | [optional] |
+| **RetentionDays** | **int?** | The number of days to retain this contact. Required when retentionType is RetentionDays. | [optional] |
+| **DateExpiration** | **DateTime?** | The expiration date of the contact. Required when retentionType is DateExpiration. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 272.0.0_
+_PureCloudPlatform.Client.V2 273.0.0_

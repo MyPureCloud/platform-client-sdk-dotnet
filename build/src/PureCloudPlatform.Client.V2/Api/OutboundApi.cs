@@ -1679,11 +1679,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
+        /// <param name="dateExpiration">Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ContactListEntityListing</returns>
         
-        ContactListEntityListing GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
+        ContactListEntityListing GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string timeZone = null, List<string> dateExpiration = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Query a list of contact lists.
@@ -1701,11 +1703,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
+        /// <param name="dateExpiration">Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of ContactListEntityListing</returns>
         
-        ApiResponse<ContactListEntityListing> GetOutboundContactlistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<ContactListEntityListing> GetOutboundContactlistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string timeZone = null, List<string> dateExpiration = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a basic ContactList information object
@@ -1811,11 +1815,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ContactListTemplateEntityListing</returns>
         
-        ContactListTemplateEntityListing GetOutboundContactlisttemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        ContactListTemplateEntityListing GetOutboundContactlisttemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string timeZone = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Query a list of contact list templates
@@ -1829,11 +1834,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of ContactListTemplateEntityListing</returns>
         
-        ApiResponse<ContactListTemplateEntityListing> GetOutboundContactlisttemplatesWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<ContactListTemplateEntityListing> GetOutboundContactlisttemplatesWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string timeZone = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get diagnostic summary for a single campaign
@@ -3608,6 +3614,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ContactList</returns>
         
         ApiResponse<ContactList> PostOutboundContactlistsWithHttpInfo (ContactList body);
+
+        /// <summary>
+        /// Bulk update contact lists.
+        /// </summary>
+        /// <remarks>
+        /// A maximum of 100 contact lists can be updated per request.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact lists bulk edit request.</param>
+        /// <returns>ContactListsBulkEditResponse</returns>
+        
+        ContactListsBulkEditResponse PostOutboundContactlistsBulkUpdate (ContactListsBulkEditRequest body);
+
+        /// <summary>
+        /// Bulk update contact lists.
+        /// </summary>
+        /// <remarks>
+        /// A maximum of 100 contact lists can be updated per request.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact lists bulk edit request.</param>
+        /// <returns>ApiResponse of ContactListsBulkEditResponse</returns>
+        
+        ApiResponse<ContactListsBulkEditResponse> PostOutboundContactlistsBulkUpdateWithHttpInfo (ContactListsBulkEditRequest body);
 
         /// <summary>
         /// Generate presigned upload URL for contact list.
@@ -6365,11 +6395,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
+        /// <param name="dateExpiration">Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ContactListEntityListing</returns>
         
-        System.Threading.Tasks.Task<ContactListEntityListing> GetOutboundContactlistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ContactListEntityListing> GetOutboundContactlistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string timeZone = null, List<string> dateExpiration = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Query a list of contact lists.
@@ -6387,11 +6419,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
+        /// <param name="dateExpiration">Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (ContactListEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetOutboundContactlistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetOutboundContactlistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string timeZone = null, List<string> dateExpiration = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a basic ContactList information object
@@ -6497,11 +6531,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ContactListTemplateEntityListing</returns>
         
-        System.Threading.Tasks.Task<ContactListTemplateEntityListing> GetOutboundContactlisttemplatesAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ContactListTemplateEntityListing> GetOutboundContactlisttemplatesAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string timeZone = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Query a list of contact list templates
@@ -6515,11 +6550,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (ContactListTemplateEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ContactListTemplateEntityListing>> GetOutboundContactlisttemplatesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactListTemplateEntityListing>> GetOutboundContactlisttemplatesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string timeZone = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get diagnostic summary for a single campaign
@@ -8294,6 +8330,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ContactList)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ContactList>> PostOutboundContactlistsAsyncWithHttpInfo (ContactList body);
+
+        /// <summary>
+        /// Bulk update contact lists.
+        /// </summary>
+        /// <remarks>
+        /// A maximum of 100 contact lists can be updated per request.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact lists bulk edit request.</param>
+        /// <returns>Task of ContactListsBulkEditResponse</returns>
+        
+        System.Threading.Tasks.Task<ContactListsBulkEditResponse> PostOutboundContactlistsBulkUpdateAsync (ContactListsBulkEditRequest body);
+
+        /// <summary>
+        /// Bulk update contact lists.
+        /// </summary>
+        /// <remarks>
+        /// A maximum of 100 contact lists can be updated per request.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact lists bulk edit request.</param>
+        /// <returns>Task of ApiResponse (ContactListsBulkEditResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContactListsBulkEditResponse>> PostOutboundContactlistsBulkUpdateAsyncWithHttpInfo (ContactListsBulkEditRequest body);
 
         /// <summary>
         /// Generate presigned upload URL for contact list.
@@ -22584,13 +22644,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
+        /// <param name="dateExpiration">Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ContactListEntityListing</returns>
         
-        public ContactListEntityListing GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
+        public ContactListEntityListing GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string timeZone = null, List<string> dateExpiration = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<ContactListEntityListing> localVarResponse = GetOutboundContactlistsWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, id, divisionId, sortBy, sortOrder);
+             ApiResponse<ContactListEntityListing> localVarResponse = GetOutboundContactlistsWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, id, divisionId, timeZone, dateExpiration, sortBy, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -22608,11 +22670,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
+        /// <param name="dateExpiration">Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of ContactListEntityListing</returns>
         
-        public ApiResponse< ContactListEntityListing > GetOutboundContactlistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< ContactListEntityListing > GetOutboundContactlistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string timeZone = null, List<string> dateExpiration = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/outbound/contactlists";
@@ -22657,6 +22721,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (timeZone != null) localVarQueryParams.Add(new Tuple<string, string>("timeZone", this.Configuration.ApiClient.ParameterToString(timeZone)));
+            if (dateExpiration != null) dateExpiration.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("dateExpiration", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
@@ -22712,13 +22778,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
+        /// <param name="dateExpiration">Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ContactListEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<ContactListEntityListing> GetOutboundContactlistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ContactListEntityListing> GetOutboundContactlistsAsync (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string timeZone = null, List<string> dateExpiration = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<ContactListEntityListing> localVarResponse = await GetOutboundContactlistsAsyncWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, id, divisionId, sortBy, sortOrder);
+             ApiResponse<ContactListEntityListing> localVarResponse = await GetOutboundContactlistsAsyncWithHttpInfo(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, id, divisionId, timeZone, dateExpiration, sortBy, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -22737,11 +22805,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="id">id (optional)</param>
         /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
+        /// <param name="dateExpiration">Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (ContactListEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetOutboundContactlistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetOutboundContactlistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string timeZone = null, List<string> dateExpiration = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/outbound/contactlists";
@@ -22786,6 +22856,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (timeZone != null) localVarQueryParams.Add(new Tuple<string, string>("timeZone", this.Configuration.ApiClient.ParameterToString(timeZone)));
+            if (dateExpiration != null) dateExpiration.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("dateExpiration", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
@@ -23506,13 +23578,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ContactListTemplateEntityListing</returns>
         
-        public ContactListTemplateEntityListing GetOutboundContactlisttemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        public ContactListTemplateEntityListing GetOutboundContactlisttemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string timeZone = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<ContactListTemplateEntityListing> localVarResponse = GetOutboundContactlisttemplatesWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
+             ApiResponse<ContactListTemplateEntityListing> localVarResponse = GetOutboundContactlisttemplatesWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, timeZone, sortBy, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -23526,11 +23599,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of ContactListTemplateEntityListing</returns>
         
-        public ApiResponse< ContactListTemplateEntityListing > GetOutboundContactlisttemplatesWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< ContactListTemplateEntityListing > GetOutboundContactlisttemplatesWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string timeZone = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/outbound/contactlisttemplates";
@@ -23571,6 +23645,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (allowEmptyResult != null) localVarQueryParams.Add(new Tuple<string, string>("allowEmptyResult", this.Configuration.ApiClient.ParameterToString(allowEmptyResult)));
             if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (timeZone != null) localVarQueryParams.Add(new Tuple<string, string>("timeZone", this.Configuration.ApiClient.ParameterToString(timeZone)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
@@ -23622,13 +23697,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ContactListTemplateEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<ContactListTemplateEntityListing> GetOutboundContactlisttemplatesAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ContactListTemplateEntityListing> GetOutboundContactlisttemplatesAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string timeZone = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<ContactListTemplateEntityListing> localVarResponse = await GetOutboundContactlisttemplatesAsyncWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
+             ApiResponse<ContactListTemplateEntityListing> localVarResponse = await GetOutboundContactlisttemplatesAsyncWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, timeZone, sortBy, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -23643,11 +23719,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
         /// <param name="filterType">Filter type (optional, default to Prefix)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="timeZone">Filter by time zone (optional)</param>
         /// <param name="sortBy">Sort by (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (ContactListTemplateEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ContactListTemplateEntityListing>> GetOutboundContactlisttemplatesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListTemplateEntityListing>> GetOutboundContactlisttemplatesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string timeZone = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/outbound/contactlisttemplates";
@@ -23688,6 +23765,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (allowEmptyResult != null) localVarQueryParams.Add(new Tuple<string, string>("allowEmptyResult", this.Configuration.ApiClient.ParameterToString(allowEmptyResult)));
             if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (timeZone != null) localVarQueryParams.Add(new Tuple<string, string>("timeZone", this.Configuration.ApiClient.ParameterToString(timeZone)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
@@ -38018,6 +38096,221 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ContactList>(localVarStatusCode,
                 localVarHeaders,
                 (ContactList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Bulk update contact lists. 
+        /// A maximum of 100 contact lists can be updated per request.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact lists bulk edit request.</param>
+        /// <returns>ContactListsBulkEditResponse</returns>
+        
+        public ContactListsBulkEditResponse PostOutboundContactlistsBulkUpdate (ContactListsBulkEditRequest body)
+        {
+             ApiResponse<ContactListsBulkEditResponse> localVarResponse = PostOutboundContactlistsBulkUpdateWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Bulk update contact lists. 
+        /// A maximum of 100 contact lists can be updated per request.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact lists bulk edit request.</param>
+        /// <returns>ApiResponse of ContactListsBulkEditResponse</returns>
+        
+        public ApiResponse< ContactListsBulkEditResponse > PostOutboundContactlistsBulkUpdateWithHttpInfo (ContactListsBulkEditRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistsBulkUpdate");
+
+            var localVarPath = "/api/v2/outbound/contactlists/bulk/update";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistsBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostOutboundContactlistsBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistsBulkUpdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListsBulkEditResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListsBulkEditResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListsBulkEditResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Bulk update contact lists. 
+        /// A maximum of 100 contact lists can be updated per request.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact lists bulk edit request.</param>
+        /// <returns>Task of ContactListsBulkEditResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ContactListsBulkEditResponse> PostOutboundContactlistsBulkUpdateAsync (ContactListsBulkEditRequest body)
+        {
+             ApiResponse<ContactListsBulkEditResponse> localVarResponse = await PostOutboundContactlistsBulkUpdateAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Bulk update contact lists. 
+        /// A maximum of 100 contact lists can be updated per request.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Contact lists bulk edit request.</param>
+        /// <returns>Task of ApiResponse (ContactListsBulkEditResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListsBulkEditResponse>> PostOutboundContactlistsBulkUpdateAsyncWithHttpInfo (ContactListsBulkEditRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistsBulkUpdate");
+            
+
+            var localVarPath = "/api/v2/outbound/contactlists/bulk/update";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistsBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostOutboundContactlistsBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistsBulkUpdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListsBulkEditResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListsBulkEditResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListsBulkEditResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

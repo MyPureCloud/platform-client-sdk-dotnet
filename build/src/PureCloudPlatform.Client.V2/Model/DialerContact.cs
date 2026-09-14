@@ -18,6 +18,51 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerContact :  IEquatable<DialerContact>
     {
+        /// <summary>
+        /// The type of retention for this contact. Valid values: Never, Today, RetentionDays, DateExpiration
+        /// </summary>
+        /// <value>The type of retention for this contact. Valid values: Never, Today, RetentionDays, DateExpiration</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum RetentionTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Never for "Never"
+            /// </summary>
+            [EnumMember(Value = "Never")]
+            Never,
+            
+            /// <summary>
+            /// Enum Today for "Today"
+            /// </summary>
+            [EnumMember(Value = "Today")]
+            Today,
+            
+            /// <summary>
+            /// Enum Retentiondays for "RetentionDays"
+            /// </summary>
+            [EnumMember(Value = "RetentionDays")]
+            Retentiondays,
+            
+            /// <summary>
+            /// Enum Dateexpiration for "DateExpiration"
+            /// </summary>
+            [EnumMember(Value = "DateExpiration")]
+            Dateexpiration
+        }
+        /// <summary>
+        /// The type of retention for this contact. Valid values: Never, Today, RetentionDays, DateExpiration
+        /// </summary>
+        /// <value>The type of retention for this contact. Valid values: Never, Today, RetentionDays, DateExpiration</value>
+        [DataMember(Name="retentionType", EmitDefaultValue=false)]
+        public RetentionTypeEnum? RetentionType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContact" /> class.
@@ -34,7 +79,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Callable">Indicates whether or not the contact can be called..</param>
         /// <param name="PhoneNumberStatus">A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not..</param>
         /// <param name="ContactableStatus">A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type..</param>
-        public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, string> Data = null, Dictionary<string, MessageEvaluation> LatestWhatsAppEvaluations = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, Dictionary<string, ContactableStatus> ContactableStatus = null)
+        /// <param name="RetentionType">The type of retention for this contact. Valid values: Never, Today, RetentionDays, DateExpiration.</param>
+        /// <param name="RetentionDays">The number of days to retain this contact. Required when retentionType is RetentionDays..</param>
+        /// <param name="DateExpiration">The expiration date of the contact. Required when retentionType is DateExpiration. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, string> Data = null, Dictionary<string, MessageEvaluation> LatestWhatsAppEvaluations = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, Dictionary<string, ContactableStatus> ContactableStatus = null, RetentionTypeEnum? RetentionType = null, int? RetentionDays = null, DateTime? DateExpiration = null)
         {
             this.Name = Name;
             this.ContactListId = ContactListId;
@@ -43,6 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Callable = Callable;
             this.PhoneNumberStatus = PhoneNumberStatus;
             this.ContactableStatus = ContactableStatus;
+            this.RetentionType = RetentionType;
+            this.RetentionDays = RetentionDays;
+            this.DateExpiration = DateExpiration;
             
         }
         
@@ -173,6 +224,26 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+        /// <summary>
+        /// The number of days to retain this contact. Required when retentionType is RetentionDays.
+        /// </summary>
+        /// <value>The number of days to retain this contact. Required when retentionType is RetentionDays.</value>
+        [DataMember(Name="retentionDays", EmitDefaultValue=false)]
+        public int? RetentionDays { get; set; }
+
+
+
+        /// <summary>
+        /// The expiration date of the contact. Required when retentionType is DateExpiration. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The expiration date of the contact. Required when retentionType is DateExpiration. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateExpiration", EmitDefaultValue=false)]
+        public DateTime? DateExpiration { get; set; }
+
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -204,6 +275,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContactColumnTimeZones: ").Append(ContactColumnTimeZones).Append("\n");
             sb.Append("  ConfigurationOverrides: ").Append(ConfigurationOverrides).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  RetentionType: ").Append(RetentionType).Append("\n");
+            sb.Append("  RetentionDays: ").Append(RetentionDays).Append("\n");
+            sb.Append("  DateExpiration: ").Append(DateExpiration).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -316,6 +390,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.RetentionType == other.RetentionType ||
+                    this.RetentionType != null &&
+                    this.RetentionType.Equals(other.RetentionType)
+                ) &&
+                (
+                    this.RetentionDays == other.RetentionDays ||
+                    this.RetentionDays != null &&
+                    this.RetentionDays.Equals(other.RetentionDays)
+                ) &&
+                (
+                    this.DateExpiration == other.DateExpiration ||
+                    this.DateExpiration != null &&
+                    this.DateExpiration.Equals(other.DateExpiration)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -374,6 +463,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.RetentionType != null)
+                    hash = hash * 59 + this.RetentionType.GetHashCode();
+
+                if (this.RetentionDays != null)
+                    hash = hash * 59 + this.RetentionDays.GetHashCode();
+
+                if (this.DateExpiration != null)
+                    hash = hash * 59 + this.DateExpiration.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

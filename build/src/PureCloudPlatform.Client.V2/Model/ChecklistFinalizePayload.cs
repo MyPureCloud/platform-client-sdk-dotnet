@@ -28,9 +28,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ChecklistFinalizePayload" /> class.
         /// </summary>
         /// <param name="ExitReason">Exit reason provided at the time of finalizing the checklist. (required).</param>
-        public ChecklistFinalizePayload(string ExitReason = null)
+        /// <param name="Preview">Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events..</param>
+        public ChecklistFinalizePayload(string ExitReason = null, bool? Preview = null)
         {
             this.ExitReason = ExitReason;
+            this.Preview = Preview;
             
         }
         
@@ -44,6 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ExitReason { get; set; }
 
 
+
+        /// <summary>
+        /// Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events.
+        /// </summary>
+        /// <value>Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events.</value>
+        [DataMember(Name="preview", EmitDefaultValue=false)]
+        public bool? Preview { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ChecklistFinalizePayload {\n");
 
             sb.Append("  ExitReason: ").Append(ExitReason).Append("\n");
+            sb.Append("  Preview: ").Append(Preview).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExitReason == other.ExitReason ||
                     this.ExitReason != null &&
                     this.ExitReason.Equals(other.ExitReason)
+                ) &&
+                (
+                    this.Preview == other.Preview ||
+                    this.Preview != null &&
+                    this.Preview.Equals(other.Preview)
                 );
         }
 
@@ -114,6 +131,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.ExitReason != null)
                     hash = hash * 59 + this.ExitReason.GetHashCode();
+
+                if (this.Preview != null)
+                    hash = hash * 59 + this.Preview.GetHashCode();
 
                 return hash;
             }
