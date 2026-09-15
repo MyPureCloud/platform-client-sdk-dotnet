@@ -2417,7 +2417,7 @@ namespace Example
 | **name** | **string**| Case insensitive partial name to filter by | [optional]  |
 | **ids** | [**List<string>**](string)| Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional]  |
 | **dialects** | [**List<string>**](string)| Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. | [optional] <br />**Values**: en-US, es-US, en-AU, en-GB, en-ZA, es-ES, en-IN, fr-FR, fr-CA, it-IT, de-DE, pt-BR, pl-PL, pt-PT, nl-NL, ko-KR |
-| **sortBy** | **string**| Sort results by. Defaults to name | [optional] <br />**Values**: name, matchingType |
+| **sortBy** | **string**| Sort results by. Defaults to name | [optional] <br />**Values**: name, matchingType, realTime |
 | **sortOrder** | **string**| Sort order. Defaults to asc | [optional] <br />**Values**: asc, desc |
 
 ### Return type
@@ -4240,4 +4240,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 272.0.0_
+_PureCloudPlatform.Client.V2 273.0.0_

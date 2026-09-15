@@ -1,0 +1,14 @@
+# QueryAgentSchedulingPreferencesRequest
+
+## ININ.PureCloudApi.Model.QueryAgentSchedulingPreferencesRequest
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **StartDate** | **DateTime?** | The earliest date to retrieve agent scheduling preferences. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+| **EndDate** | **DateTime?** | The latest date to retrieve agent scheduling preferences. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+
+
+
+_PureCloudPlatform.Client.V2 273.0.0_

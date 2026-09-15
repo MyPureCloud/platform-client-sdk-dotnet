@@ -824,7 +824,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new PresenceApi();
-            var userId = userId_example;  // string | user Id
+            var userId = userId_example;  // string | User ID (UUID)
             var sourceId = sourceId_example;  // string | Presence source ID
 
             try
@@ -847,7 +847,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| user Id |  |
+| **userId** | **string**| User ID (UUID) |  |
 | **sourceId** | **string**| Presence source ID |  |
 
 ### Return type
@@ -889,7 +889,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new PresenceApi();
-            var userId = userId_example;  // string | user Id
+            var userId = userId_example;  // string | User ID (UUID)
 
             try
             { 
@@ -911,7 +911,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| user Id |  |
+| **userId** | **string**| User ID (UUID) |  |
 
 ### Return type
 
@@ -1076,7 +1076,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new PresenceApi();
-            var userId = userId_example;  // string | user Id
+            var userId = userId_example;  // string | User ID (UUID)
             var sourceId = sourceId_example;  // string | Presence source ID
             var body = new UserPresence(); // UserPresence | User presence
 
@@ -1100,7 +1100,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| user Id |  |
+| **userId** | **string**| User ID (UUID) |  |
 | **sourceId** | **string**| Presence source ID |  |
 | **body** | [**UserPresence**](UserPresence)| User presence |  |
 
@@ -1143,7 +1143,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new PresenceApi();
-            var userId = userId_example;  // string | user Id
+            var userId = userId_example;  // string | User ID (UUID)
             var body = new UserPresence(); // UserPresence | User presence
 
             try
@@ -1166,7 +1166,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **userId** | **string**| user Id |  |
+| **userId** | **string**| User ID (UUID) |  |
 | **body** | [**UserPresence**](UserPresence)| User presence |  |
 
 ### Return type
@@ -1746,4 +1746,4 @@ namespace Example
 [**List<UserPresence>**](UserPresence)
 
 
-_PureCloudPlatform.Client.V2 272.0.0_
+_PureCloudPlatform.Client.V2 273.0.0_

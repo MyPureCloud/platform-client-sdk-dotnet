@@ -16,10 +16,12 @@
 | **ParentEntityId** | **string** | The unique identifier for the parent of the entity | [optional] |
 | **Conversation** | [**AddressableEntityRef**](AddressableEntityRef) | The link to a conversation | [optional] |
 | **DateCreated** | **DateTime?** | The date when the event created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DateModified** | **DateTime?** | The date and time the entity affected by the event was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **EntityModifiedBy** | **string** | The unique identifier of the user who last modified the entity affected by the event. | [optional] |
 | **EntityVersion** | **string** | The version of the entity in the providing service | [optional] |
 | **PhoneNumber** | **string** | The phone number associated with the event | [optional] |
 | **ExternalContactId** | **string** | The external contact ID associated with the event | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 272.0.0_
+_PureCloudPlatform.Client.V2 273.0.0_

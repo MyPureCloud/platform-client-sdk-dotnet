@@ -13,7 +13,8 @@
 | **Validation** | **Object** | The validation configuration for the variable. Optional - if not present, no validation is applied. | [optional] |
 | **ListValues** | **Object** | The values configuration for List variables. Only applicable when type is &#39;List&#39;. | [optional] |
 | **ListVariables** | [**List&lt;Variable&gt;**](Variable) | The variables that the list result will be stored in. Only applicable when type is &#39;List&#39;. | [optional] |
+| **CustomConversationAttributes** | [**List&lt;ConversationAttribute&gt;**](ConversationAttribute) | The Conversation Custom Attributes (CCA) for this variable. When present, the variable value is bound to the specified conversation attributes. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 272.0.0_
+_PureCloudPlatform.Client.V2 273.0.0_

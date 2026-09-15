@@ -564,4 +564,4 @@ namespace Example
 [**FaxConfig**](FaxConfig)
 
 
-_PureCloudPlatform.Client.V2 272.0.0_
+_PureCloudPlatform.Client.V2 273.0.0_

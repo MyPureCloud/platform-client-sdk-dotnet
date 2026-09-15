@@ -139,6 +139,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundContactlistfiltersBulkRetrieve**](#PostOutboundContactlistfiltersBulkRetrieve) | **Post** /api/v2/outbound/contactlistfilters/bulk/retrieve | Retrieve multiple contact list filters |
 | [**PostOutboundContactlistfiltersPreview**](#PostOutboundContactlistfiltersPreview) | **Post** /api/v2/outbound/contactlistfilters/preview | Get a preview of the output of a contact list filter |
 | [**PostOutboundContactlists**](#PostOutboundContactlists) | **Post** /api/v2/outbound/contactlists | Create a contact List. |
+| [**PostOutboundContactlistsBulkUpdate**](#PostOutboundContactlistsBulkUpdate) | **Post** /api/v2/outbound/contactlists/bulk/update | Bulk update contact lists. |
 | [**PostOutboundContactlistsUploads**](#PostOutboundContactlistsUploads) | **Post** /api/v2/outbound/contactlists/uploads | Generate presigned upload URL for contact list. |
 | [**PostOutboundContactlisttemplates**](#PostOutboundContactlisttemplates) | **Post** /api/v2/outbound/contactlisttemplates | Create Contact List Template |
 | [**PostOutboundContactlisttemplatesBulkAdd**](#PostOutboundContactlisttemplatesBulkAdd) | **Post** /api/v2/outbound/contactlisttemplates/bulk/add | Add multiple contact list templates |
@@ -4197,7 +4198,7 @@ namespace Example
 
 ## GetOutboundContactlists
 
-> [**ContactListEntityListing**](ContactListEntityListing) GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
+> [**ContactListEntityListing**](ContactListEntityListing) GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string timeZone = null, List<string> dateExpiration = null, string sortBy = null, string sortOrder = null)
 
 
 Query a list of contact lists.
@@ -4239,13 +4240,15 @@ namespace Example
             var name = name_example;  // string | Name (optional) 
             var id = new List<string>(); // List<string> | id (optional) 
             var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            var timeZone = timeZone_example;  // string | Filter by time zone (optional) 
+            var dateExpiration = new List<string>(); // List<string> | Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
 
             try
             { 
                 // Query a list of contact lists.
-                ContactListEntityListing result = apiInstance.GetOutboundContactlists(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, id, divisionId, sortBy, sortOrder);
+                ContactListEntityListing result = apiInstance.GetOutboundContactlists(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, id, divisionId, timeZone, dateExpiration, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4271,6 +4274,8 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **id** | [**List<string>**](string)| id | [optional]  |
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
+| **timeZone** | **string**| Filter by time zone | [optional]  |
+| **dateExpiration** | [**List<string>**](string)| Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 
@@ -4491,7 +4496,7 @@ namespace Example
 
 ## GetOutboundContactlisttemplates
 
-> [**ContactListTemplateEntityListing**](ContactListTemplateEntityListing) GetOutboundContactlisttemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+> [**ContactListTemplateEntityListing**](ContactListTemplateEntityListing) GetOutboundContactlisttemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string timeZone = null, string sortBy = null, string sortOrder = null)
 
 
 Query a list of contact list templates
@@ -4527,13 +4532,14 @@ namespace Example
             var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
             var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
             var name = name_example;  // string | Name (optional) 
+            var timeZone = timeZone_example;  // string | Filter by time zone (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
 
             try
             { 
                 // Query a list of contact list templates
-                ContactListTemplateEntityListing result = apiInstance.GetOutboundContactlisttemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
+                ContactListTemplateEntityListing result = apiInstance.GetOutboundContactlisttemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, timeZone, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4555,6 +4561,7 @@ namespace Example
 | **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
+| **timeZone** | **string**| Filter by time zone | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 
@@ -8864,6 +8871,70 @@ namespace Example
 [**ContactList**](ContactList)
 
 
+## PostOutboundContactlistsBulkUpdate
+
+> [**ContactListsBulkEditResponse**](ContactListsBulkEditResponse) PostOutboundContactlistsBulkUpdate (ContactListsBulkEditRequest body)
+
+
+Bulk update contact lists.
+
+A maximum of 100 contact lists can be updated per request.
+
+Requires ANY permissions: 
+
+* outbound:contactList:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundContactlistsBulkUpdateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var body = new ContactListsBulkEditRequest(); // ContactListsBulkEditRequest | Contact lists bulk edit request.
+
+            try
+            { 
+                // Bulk update contact lists.
+                ContactListsBulkEditResponse result = apiInstance.PostOutboundContactlistsBulkUpdate(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlistsBulkUpdate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContactListsBulkEditRequest**](ContactListsBulkEditRequest)| Contact lists bulk edit request. |  |
+
+### Return type
+
+[**ContactListsBulkEditResponse**](ContactListsBulkEditResponse)
+
+
 ## PostOutboundContactlistsUploads
 
 > [**UploadUrlResponse**](UploadUrlResponse) PostOutboundContactlistsUploads (ContactListUploadUrlRequest body)
@@ -11608,4 +11679,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 272.0.0_
+_PureCloudPlatform.Client.V2 273.0.0_

@@ -1061,8 +1061,6 @@ namespace Example
 
 Get customer intents by IDs
 
-PostIntentsCustomerintentsBulkRetrieve is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * externalContacts:customerIntentTaxonomy:view
@@ -1118,4 +1116,4 @@ namespace Example
 [**List<CustomerIntentResponse>**](CustomerIntentResponse)
 
 
-_PureCloudPlatform.Client.V2 272.0.0_
+_PureCloudPlatform.Client.V2 273.0.0_
