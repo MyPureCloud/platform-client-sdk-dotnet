@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ColumnDataTypeSpecification :  IEquatable<ColumnDataTypeSpecification>
     {
         /// <summary>
-        /// The data type of the column selected for dynamic queueing (TEXT, NUMERIC or TIMESTAMP)
+        /// The data type of the column selected for dynamic queueing (TEXT, NUMERIC, TIMESTAMP or DATETIME). DATETIME supports dates from 1000-01-01 to 9999-12-31; TIMESTAMP is limited to 1970-01-01 through 2038-01-19.
         /// </summary>
-        /// <value>The data type of the column selected for dynamic queueing (TEXT, NUMERIC or TIMESTAMP)</value>
+        /// <value>The data type of the column selected for dynamic queueing (TEXT, NUMERIC, TIMESTAMP or DATETIME). DATETIME supports dates from 1000-01-01 to 9999-12-31; TIMESTAMP is limited to 1970-01-01 through 2038-01-19.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ColumnDataTypeEnum
         {
@@ -49,19 +49,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Timestamp for "TIMESTAMP"
             /// </summary>
             [EnumMember(Value = "TIMESTAMP")]
-            Timestamp
+            Timestamp,
+            
+            /// <summary>
+            /// Enum Datetime for "DATETIME"
+            /// </summary>
+            [EnumMember(Value = "DATETIME")]
+            Datetime
         }
         /// <summary>
-        /// The data type of the column selected for dynamic queueing (TEXT, NUMERIC or TIMESTAMP)
+        /// The data type of the column selected for dynamic queueing (TEXT, NUMERIC, TIMESTAMP or DATETIME). DATETIME supports dates from 1000-01-01 to 9999-12-31; TIMESTAMP is limited to 1970-01-01 through 2038-01-19.
         /// </summary>
-        /// <value>The data type of the column selected for dynamic queueing (TEXT, NUMERIC or TIMESTAMP)</value>
+        /// <value>The data type of the column selected for dynamic queueing (TEXT, NUMERIC, TIMESTAMP or DATETIME). DATETIME supports dates from 1000-01-01 to 9999-12-31; TIMESTAMP is limited to 1970-01-01 through 2038-01-19.</value>
         [DataMember(Name="columnDataType", EmitDefaultValue=false)]
         public ColumnDataTypeEnum? ColumnDataType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ColumnDataTypeSpecification" /> class.
         /// </summary>
         /// <param name="ColumnName">The column name of a column selected for dynamic queueing.</param>
-        /// <param name="ColumnDataType">The data type of the column selected for dynamic queueing (TEXT, NUMERIC or TIMESTAMP).</param>
+        /// <param name="ColumnDataType">The data type of the column selected for dynamic queueing (TEXT, NUMERIC, TIMESTAMP or DATETIME). DATETIME supports dates from 1000-01-01 to 9999-12-31; TIMESTAMP is limited to 1970-01-01 through 2038-01-19..</param>
         /// <param name="Min">The minimum length of the numeric column selected for dynamic queueing.</param>
         /// <param name="Max">The maximum length of the numeric column selected for dynamic queueing.</param>
         /// <param name="MaxLength">The maximum length of the text column selected for dynamic queueing.</param>

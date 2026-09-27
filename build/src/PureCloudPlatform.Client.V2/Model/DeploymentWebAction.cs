@@ -34,12 +34,6 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Webchat for "webchat"
-            /// </summary>
-            [EnumMember(Value = "webchat")]
-            Webchat,
-            
-            /// <summary>
             /// Enum Webmessagingoffer for "webMessagingOffer"
             /// </summary>
             [EnumMember(Value = "webMessagingOffer")]

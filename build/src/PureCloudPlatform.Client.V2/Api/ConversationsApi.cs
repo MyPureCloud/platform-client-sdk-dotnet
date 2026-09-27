@@ -7030,6 +7030,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PostConversationsMessageParticipantReplaceWithHttpInfo (string conversationId, string participantId, TransferRequest body);
 
         /// <summary>
+        /// The User performing this action will takeover the conversation from the participant specified.
+        /// </summary>
+        /// <remarks>
+        /// This operation allows a user performing the action to take over a conversation from the participant specified. The user must be monitoring the participant and must have the necessary permissions to perform the takeover action.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The id of the conversation being taken over</param>
+        /// <param name="participantId">The id of the participant being taken over.</param>
+        /// <returns></returns>
+        
+        void PostConversationsMessageParticipantTakeover (string conversationId, string participantId);
+
+        /// <summary>
+        /// The User performing this action will takeover the conversation from the participant specified.
+        /// </summary>
+        /// <remarks>
+        /// This operation allows a user performing the action to take over a conversation from the participant specified. The user must be monitoring the participant and must have the necessary permissions to perform the takeover action.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The id of the conversation being taken over</param>
+        /// <param name="participantId">The id of the participant being taken over.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PostConversationsMessageParticipantTakeoverWithHttpInfo (string conversationId, string participantId);
+
+        /// <summary>
         /// Create an outbound messaging conversation.
         /// </summary>
         /// <remarks>
@@ -15254,6 +15280,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsMessageParticipantReplaceAsyncWithHttpInfo (string conversationId, string participantId, TransferRequest body);
+
+        /// <summary>
+        /// The User performing this action will takeover the conversation from the participant specified.
+        /// </summary>
+        /// <remarks>
+        /// This operation allows a user performing the action to take over a conversation from the participant specified. The user must be monitoring the participant and must have the necessary permissions to perform the takeover action.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The id of the conversation being taken over</param>
+        /// <param name="participantId">The id of the participant being taken over.</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PostConversationsMessageParticipantTakeoverAsync (string conversationId, string participantId);
+
+        /// <summary>
+        /// The User performing this action will takeover the conversation from the participant specified.
+        /// </summary>
+        /// <remarks>
+        /// This operation allows a user performing the action to take over a conversation from the participant specified. The user must be monitoring the participant and must have the necessary permissions to perform the takeover action.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The id of the conversation being taken over</param>
+        /// <param name="participantId">The id of the participant being taken over.</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsMessageParticipantTakeoverAsyncWithHttpInfo (string conversationId, string participantId);
 
         /// <summary>
         /// Create an outbound messaging conversation.
@@ -75383,6 +75435,222 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostConversationsMessageParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageParticipantReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// The User performing this action will takeover the conversation from the participant specified. 
+        /// This operation allows a user performing the action to take over a conversation from the participant specified. The user must be monitoring the participant and must have the necessary permissions to perform the takeover action.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The id of the conversation being taken over</param>
+        /// <param name="participantId">The id of the participant being taken over.</param>
+        /// <returns></returns>
+        
+        public void PostConversationsMessageParticipantTakeover (string conversationId, string participantId)
+        {
+             PostConversationsMessageParticipantTakeoverWithHttpInfo(conversationId, participantId);
+        }
+
+        /// <summary>
+        /// The User performing this action will takeover the conversation from the participant specified. 
+        /// This operation allows a user performing the action to take over a conversation from the participant specified. The user must be monitoring the participant and must have the necessary permissions to perform the takeover action.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The id of the conversation being taken over</param>
+        /// <param name="participantId">The id of the participant being taken over.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PostConversationsMessageParticipantTakeoverWithHttpInfo (string conversationId, string participantId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsMessageParticipantTakeover");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationsMessageParticipantTakeover");
+
+            var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/takeover";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", this.Configuration.ApiClient.ParameterToString(participantId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageParticipantTakeover: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostConversationsMessageParticipantTakeover: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageParticipantTakeover: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// The User performing this action will takeover the conversation from the participant specified. 
+        /// This operation allows a user performing the action to take over a conversation from the participant specified. The user must be monitoring the participant and must have the necessary permissions to perform the takeover action.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The id of the conversation being taken over</param>
+        /// <param name="participantId">The id of the participant being taken over.</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PostConversationsMessageParticipantTakeoverAsync (string conversationId, string participantId)
+        {
+             await PostConversationsMessageParticipantTakeoverAsyncWithHttpInfo(conversationId, participantId);
+
+        }
+
+        /// <summary>
+        /// The User performing this action will takeover the conversation from the participant specified. 
+        /// This operation allows a user performing the action to take over a conversation from the participant specified. The user must be monitoring the participant and must have the necessary permissions to perform the takeover action.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The id of the conversation being taken over</param>
+        /// <param name="participantId">The id of the participant being taken over.</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsMessageParticipantTakeoverAsyncWithHttpInfo (string conversationId, string participantId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsMessageParticipantTakeover");
+            
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationsMessageParticipantTakeover");
+            
+
+            var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/takeover";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", this.Configuration.ApiClient.ParameterToString(participantId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageParticipantTakeover: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostConversationsMessageParticipantTakeover: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageParticipantTakeover: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,

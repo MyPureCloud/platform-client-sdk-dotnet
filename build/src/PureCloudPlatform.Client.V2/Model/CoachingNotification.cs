@@ -55,7 +55,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Statuschange for "StatusChange"
             /// </summary>
             [EnumMember(Value = "StatusChange")]
-            Statuschange
+            Statuschange,
+            
+            /// <summary>
+            /// Enum Annotationadded for "AnnotationAdded"
+            /// </summary>
+            [EnumMember(Value = "AnnotationAdded")]
+            Annotationadded,
+            
+            /// <summary>
+            /// Enum Annotationedited for "AnnotationEdited"
+            /// </summary>
+            [EnumMember(Value = "AnnotationEdited")]
+            Annotationedited,
+            
+            /// <summary>
+            /// Enum Annotationdeleted for "AnnotationDeleted"
+            /// </summary>
+            [EnumMember(Value = "AnnotationDeleted")]
+            Annotationdeleted
         }
         /// <summary>
         /// The relationship of this user to this notification's appointment

@@ -1444,9 +1444,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
-        /// <returns>List&lt;KeyPerformanceIndicator&gt;</returns>
+        /// <returns>KeyPerformanceIndicatorEntityListing</returns>
         
-        List<KeyPerformanceIndicator> GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null, List<string> expand = null);
+        KeyPerformanceIndicatorEntityListing GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of Key Performance Indicators
@@ -1457,9 +1457,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
-        /// <returns>ApiResponse of List&lt;KeyPerformanceIndicator&gt;</returns>
+        /// <returns>ApiResponse of KeyPerformanceIndicatorEntityListing</returns>
         
-        ApiResponse<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo (string kpiGroup = null, List<string> expand = null);
+        ApiResponse<KeyPerformanceIndicatorEntityListing> GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo (string kpiGroup = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of Key Performance Indicators Types available.
@@ -3445,7 +3445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a benefit assessment job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Queues with Benefit Assessment results less than 7 days old are skipped. If every queue in the requested divisions has recent results, the request is rejected.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -3457,7 +3457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a benefit assessment job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Queues with Benefit Assessment results less than 7 days old are skipped. If every queue in the requested divisions has recent results, the request is rejected.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -6058,9 +6058,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
-        /// <returns>Task of List&lt;KeyPerformanceIndicator&gt;</returns>
+        /// <returns>Task of KeyPerformanceIndicatorEntityListing</returns>
         
-        System.Threading.Tasks.Task<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsAsync (string kpiGroup = null, List<string> expand = null);
+        System.Threading.Tasks.Task<KeyPerformanceIndicatorEntityListing> GetRoutingPredictorsKeyperformanceindicatorsAsync (string kpiGroup = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of Key Performance Indicators
@@ -6071,9 +6071,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;KeyPerformanceIndicator&gt;)</returns>
+        /// <returns>Task of ApiResponse (KeyPerformanceIndicatorEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<List<KeyPerformanceIndicator>>> GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo (string kpiGroup = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<KeyPerformanceIndicatorEntityListing>> GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo (string kpiGroup = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of Key Performance Indicators Types available.
@@ -8059,7 +8059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a benefit assessment job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Queues with Benefit Assessment results less than 7 days old are skipped. If every queue in the requested divisions has recent results, the request is rejected.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -8071,7 +8071,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a benefit assessment job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Queues with Benefit Assessment results less than 7 days old are skipped. If every queue in the requested divisions has recent results, the request is rejected.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -20950,11 +20950,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
-        /// <returns>List&lt;KeyPerformanceIndicator&gt;</returns>
+        /// <returns>KeyPerformanceIndicatorEntityListing</returns>
         
-        public List<KeyPerformanceIndicator> GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null, List<string> expand = null)
+        public KeyPerformanceIndicatorEntityListing GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null, List<string> expand = null)
         {
-             ApiResponse<List<KeyPerformanceIndicator>> localVarResponse = GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo(kpiGroup, expand);
+             ApiResponse<KeyPerformanceIndicatorEntityListing> localVarResponse = GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo(kpiGroup, expand);
              return localVarResponse.Data;
         }
 
@@ -20965,9 +20965,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
-        /// <returns>ApiResponse of List&lt;KeyPerformanceIndicator&gt;</returns>
+        /// <returns>ApiResponse of KeyPerformanceIndicatorEntityListing</returns>
         
-        public ApiResponse< List<KeyPerformanceIndicator> > GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo (string kpiGroup = null, List<string> expand = null)
+        public ApiResponse< KeyPerformanceIndicatorEntityListing > GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo (string kpiGroup = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators";
@@ -21036,9 +21036,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicators: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<KeyPerformanceIndicator>>(localVarStatusCode,
+            return new ApiResponse<KeyPerformanceIndicatorEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (List<KeyPerformanceIndicator>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<KeyPerformanceIndicator>)),
+                (KeyPerformanceIndicatorEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyPerformanceIndicatorEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -21051,11 +21051,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
-        /// <returns>Task of List&lt;KeyPerformanceIndicator&gt;</returns>
+        /// <returns>Task of KeyPerformanceIndicatorEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsAsync (string kpiGroup = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<KeyPerformanceIndicatorEntityListing> GetRoutingPredictorsKeyperformanceindicatorsAsync (string kpiGroup = null, List<string> expand = null)
         {
-             ApiResponse<List<KeyPerformanceIndicator>> localVarResponse = await GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo(kpiGroup, expand);
+             ApiResponse<KeyPerformanceIndicatorEntityListing> localVarResponse = await GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo(kpiGroup, expand);
              return localVarResponse.Data;
 
         }
@@ -21067,9 +21067,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;KeyPerformanceIndicator&gt;)</returns>
+        /// <returns>Task of ApiResponse (KeyPerformanceIndicatorEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<List<KeyPerformanceIndicator>>> GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo (string kpiGroup = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KeyPerformanceIndicatorEntityListing>> GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo (string kpiGroup = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators";
@@ -21138,9 +21138,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicators: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<KeyPerformanceIndicator>>(localVarStatusCode,
+            return new ApiResponse<KeyPerformanceIndicatorEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (List<KeyPerformanceIndicator>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<KeyPerformanceIndicator>)),
+                (KeyPerformanceIndicatorEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyPerformanceIndicatorEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -36808,7 +36808,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a benefit assessment job. 
-        /// 
+        /// Queues with Benefit Assessment results less than 7 days old are skipped. If every queue in the requested divisions has recent results, the request is rejected.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -36822,7 +36822,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a benefit assessment job. 
-        /// 
+        /// Queues with Benefit Assessment results less than 7 days old are skipped. If every queue in the requested divisions has recent results, the request is rejected.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -36911,7 +36911,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a benefit assessment job. 
-        /// 
+        /// Queues with Benefit Assessment results less than 7 days old are skipped. If every queue in the requested divisions has recent results, the request is rejected.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -36926,7 +36926,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a benefit assessment job. 
-        /// 
+        /// Queues with Benefit Assessment results less than 7 days old are skipped. If every queue in the requested divisions has recent results, the request is rejected.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>

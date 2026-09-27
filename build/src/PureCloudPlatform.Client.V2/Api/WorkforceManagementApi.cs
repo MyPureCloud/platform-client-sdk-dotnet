@@ -16,6 +16,30 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
 
         /// <summary>
+        /// Delete an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to delete</param>
+        /// <returns></returns>
+        
+        void DeleteWorkforcemanagementAdherenceAdjustment (string adjustmentId);
+
+        /// <summary>
+        /// Delete an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to delete</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteWorkforcemanagementAdherenceAdjustmentWithHttpInfo (string adjustmentId);
+
+        /// <summary>
         /// Delete business unit
         /// </summary>
         /// <remarks>
@@ -64,6 +88,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         
         ApiResponse<Object> DeleteWorkforcemanagementBusinessunitActivitycodeWithHttpInfo (string businessUnitId, string activityCodeId);
+
+        /// <summary>
+        /// Delete an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to delete</param>
+        /// <returns></returns>
+        
+        void DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode (string businessUnitId, string reasonCodeId);
+
+        /// <summary>
+        /// Delete an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to delete</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithHttpInfo (string businessUnitId, string reasonCodeId);
+
+        /// <summary>
+        /// Delete adherence adjustment reason codes in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to delete</param>
+        /// <returns></returns>
+        
+        void DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk (string businessUnitId, List<string> ids);
+
+        /// <summary>
+        /// Delete adherence adjustment reason codes in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to delete</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithHttpInfo (string businessUnitId, List<string> ids);
 
         /// <summary>
         /// Delete staffing group allocations history created for a capacity plan before the given date
@@ -588,6 +664,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<UserScheduleAdherence>> GetWorkforcemanagementAdherenceWithHttpInfo (List<string> userId);
 
         /// <summary>
+        /// Get an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>CurrentAgentAdherenceAdjustment</returns>
+        
+        CurrentAgentAdherenceAdjustment GetWorkforcemanagementAdherenceAdjustment (string adjustmentId);
+
+        /// <summary>
+        /// Get an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>ApiResponse of CurrentAgentAdherenceAdjustment</returns>
+        
+        ApiResponse<CurrentAgentAdherenceAdjustment> GetWorkforcemanagementAdherenceAdjustmentWithHttpInfo (string adjustmentId);
+
+        /// <summary>
         /// Get an adherence explanation for the current user
         /// </summary>
         /// <remarks>
@@ -682,6 +782,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
         
         ApiResponse<WfmHistoricalAdherenceResponse> GetWorkforcemanagementAdherenceHistoricalJobWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Get an adherence adjustment for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>AdherenceAdjustment</returns>
+        
+        AdherenceAdjustment GetWorkforcemanagementAgentAdherenceAdjustment (string agentId, string adjustmentId);
+
+        /// <summary>
+        /// Get an adherence adjustment for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>ApiResponse of AdherenceAdjustment</returns>
+        
+        ApiResponse<AdherenceAdjustment> GetWorkforcemanagementAgentAdherenceAdjustmentWithHttpInfo (string agentId, string adjustmentId);
 
         /// <summary>
         /// Get an adherence explanation
@@ -1052,6 +1178,150 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ActivityPlanResponse> GetWorkforcemanagementBusinessunitActivityplanWithHttpInfo (string businessUnitId, string activityPlanId);
 
         /// <summary>
+        /// Gets an activity plan deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the deletion job</param>
+        /// <param name="jobId">The ID of the activity plan deletion job</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        ActivityPlanJobResponse GetWorkforcemanagementBusinessunitActivityplanDeletionsJob (string businessUnitId, string activityPlanId, string jobId);
+
+        /// <summary>
+        /// Gets an activity plan deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the deletion job</param>
+        /// <param name="jobId">The ID of the activity plan deletion job</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        ApiResponse<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanDeletionsJobWithHttpInfo (string businessUnitId, string activityPlanId, string jobId);
+
+        /// <summary>
+        /// Gets the latest job for an activity plan in the business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the run job</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        ActivityPlanJobResponse GetWorkforcemanagementBusinessunitActivityplanJobs (string businessUnitId, string activityPlanId);
+
+        /// <summary>
+        /// Gets the latest job for an activity plan in the business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the run job</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        ApiResponse<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanJobsWithHttpInfo (string businessUnitId, string activityPlanId);
+
+        /// <summary>
+        /// Gets a session users deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="jobId">The ID of the activity plan occurrence session users deletion job</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        ActivityPlanJobResponse GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, string jobId);
+
+        /// <summary>
+        /// Gets a session users deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="jobId">The ID of the activity plan occurrence session users deletion job</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        ApiResponse<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, string jobId);
+
+        /// <summary>
+        /// Gets an activity plan sessions deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan sessions deletion job</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        ActivityPlanJobResponse GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob (string businessUnitId, string activityPlanId, string occurrenceId, string jobId);
+
+        /// <summary>
+        /// Gets an activity plan sessions deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan sessions deletion job</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        ApiResponse<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string jobId);
+
+        /// <summary>
+        /// Gets an occurrences deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="jobId">The ID of the activity plan occurrences deletion job</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        ActivityPlanJobResponse GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob (string businessUnitId, string activityPlanId, string jobId);
+
+        /// <summary>
+        /// Gets an occurrences deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="jobId">The ID of the activity plan occurrences deletion job</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        ApiResponse<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobWithHttpInfo (string businessUnitId, string activityPlanId, string jobId);
+
+        /// <summary>
         /// Gets an activity plan run job
         /// </summary>
         /// <remarks>
@@ -1128,6 +1398,182 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ActivityPlanJobListing</returns>
         
         ApiResponse<ActivityPlanJobListing> GetWorkforcemanagementBusinessunitActivityplansJobsWithHttpInfo (string businessUnitId);
+
+        /// <summary>
+        /// Get adherence adjustments in bulk by ID for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="adjustmentIds">The IDs of the adherence adjustments to fetch</param>
+        /// <returns>AdherenceAdjustmentsListing</returns>
+        
+        AdherenceAdjustmentsListing GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk (string businessUnitId, List<string> adjustmentIds);
+
+        /// <summary>
+        /// Get adherence adjustments in bulk by ID for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="adjustmentIds">The IDs of the adherence adjustments to fetch</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsListing</returns>
+        
+        ApiResponse<AdherenceAdjustmentsListing> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkWithHttpInfo (string businessUnitId, List<string> adjustmentIds);
+
+        /// <summary>
+        /// Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="jobId">The ID of the query job</param>
+        /// <returns>BuAdherenceAdjustmentsQueryJob</returns>
+        
+        BuAdherenceAdjustmentsQueryJob GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob (string businessUnitId, string jobId);
+
+        /// <summary>
+        /// Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="jobId">The ID of the query job</param>
+        /// <returns>ApiResponse of BuAdherenceAdjustmentsQueryJob</returns>
+        
+        ApiResponse<BuAdherenceAdjustmentsQueryJob> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobWithHttpInfo (string businessUnitId, string jobId);
+
+        /// <summary>
+        /// Get query job history for the logged in user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>BuAdherenceAdjustmentsQueryJobsReferenceListing</returns>
+        
+        BuAdherenceAdjustmentsQueryJobsReferenceListing GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs (string businessUnitId);
+
+        /// <summary>
+        /// Get query job history for the logged in user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>ApiResponse of BuAdherenceAdjustmentsQueryJobsReferenceListing</returns>
+        
+        ApiResponse<BuAdherenceAdjustmentsQueryJobsReferenceListing> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsWithHttpInfo (string businessUnitId);
+
+        /// <summary>
+        /// Get an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to fetch</param>
+        /// <returns>AdherenceAdjustmentsReasonCode</returns>
+        
+        AdherenceAdjustmentsReasonCode GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode (string businessUnitId, string reasonCodeId);
+
+        /// <summary>
+        /// Get an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to fetch</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCode</returns>
+        
+        ApiResponse<AdherenceAdjustmentsReasonCode> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithHttpInfo (string businessUnitId, string reasonCodeId);
+
+        /// <summary>
+        /// Get adherence adjustment reason codes for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        AdherenceAdjustmentsReasonCodesListing GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes (string businessUnitId);
+
+        /// <summary>
+        /// Get adherence adjustment reason codes for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        ApiResponse<AdherenceAdjustmentsReasonCodesListing> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesWithHttpInfo (string businessUnitId);
+
+        /// <summary>
+        /// Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to fetch</param>
+        /// <returns>AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        AdherenceAdjustmentsReasonCodesListing GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk (string businessUnitId, List<string> ids);
+
+        /// <summary>
+        /// Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to fetch</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        ApiResponse<AdherenceAdjustmentsReasonCodesListing> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithHttpInfo (string businessUnitId, List<string> ids);
+
+        /// <summary>
+        /// Get adherence adjustments settings for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>BuAdherenceAdjustmentsSettings</returns>
+        
+        BuAdherenceAdjustmentsSettings GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings (string businessUnitId);
+
+        /// <summary>
+        /// Get adherence adjustments settings for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>ApiResponse of BuAdherenceAdjustmentsSettings</returns>
+        
+        ApiResponse<BuAdherenceAdjustmentsSettings> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsWithHttpInfo (string businessUnitId);
 
         /// <summary>
         /// Get alternative shifts settings for a business unit
@@ -4428,6 +4874,60 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentWorkPlanBids> GetWorkforcemanagementWorkplanbidsWithHttpInfo ();
 
         /// <summary>
+        /// Update an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to update</param>
+        /// <param name="body">body</param>
+        /// <returns>CurrentAgentAdherenceAdjustment</returns>
+        
+        CurrentAgentAdherenceAdjustment PatchWorkforcemanagementAdherenceAdjustment (string adjustmentId, UpdateAdherenceAdjustmentAgentRequest body);
+
+        /// <summary>
+        /// Update an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to update</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of CurrentAgentAdherenceAdjustment</returns>
+        
+        ApiResponse<CurrentAgentAdherenceAdjustment> PatchWorkforcemanagementAdherenceAdjustmentWithHttpInfo (string adjustmentId, UpdateAdherenceAdjustmentAgentRequest body);
+
+        /// <summary>
+        /// Update an adherence adjustment for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <param name="body">body</param>
+        /// <returns>AdherenceAdjustment</returns>
+        
+        AdherenceAdjustment PatchWorkforcemanagementAgentAdherenceAdjustment (string agentId, string adjustmentId, UpdateAdherenceAdjustmentAdminRequest body);
+
+        /// <summary>
+        /// Update an adherence adjustment for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AdherenceAdjustment</returns>
+        
+        ApiResponse<AdherenceAdjustment> PatchWorkforcemanagementAgentAdherenceAdjustmentWithHttpInfo (string agentId, string adjustmentId, UpdateAdherenceAdjustmentAdminRequest body);
+
+        /// <summary>
         /// Update an adherence explanation
         /// </summary>
         /// <remarks>
@@ -4454,6 +4954,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of AdherenceExplanationAsyncResponse</returns>
         
         ApiResponse<AdherenceExplanationAsyncResponse> PatchWorkforcemanagementAgentAdherenceExplanationWithHttpInfo (string agentId, string explanationId, UpdateAdherenceExplanationStatusRequest body);
+
+        /// <summary>
+        /// Update unavailable times for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// Large requests will be partitioned into multiple internal processing batches. Validation will occur against each internal batch independently rather than against the final combined state represented by the entire request
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <returns>BulkUpdateAgentUnavailableTimesResponse</returns>
+        
+        BulkUpdateAgentUnavailableTimesResponse PatchWorkforcemanagementAgentUnavailabletimes (string agentId, UpdateUnavailableTimesRequest body);
+
+        /// <summary>
+        /// Update unavailable times for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// Large requests will be partitioned into multiple internal processing batches. Validation will occur against each internal batch independently rather than against the final combined state represented by the entire request
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of BulkUpdateAgentUnavailableTimesResponse</returns>
+        
+        ApiResponse<BulkUpdateAgentUnavailableTimesResponse> PatchWorkforcemanagementAgentUnavailabletimesWithHttpInfo (string agentId, UpdateUnavailableTimesRequest body);
 
         /// <summary>
         /// Update my alternative shifts trade by trade ID
@@ -4614,6 +5140,112 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ActivityPlanResponse</returns>
         
         ApiResponse<ActivityPlanResponse> PatchWorkforcemanagementBusinessunitActivityplanWithHttpInfo (string businessUnitId, string activityPlanId, UpdateActivityPlanRequest body);
+
+        /// <summary>
+        /// Update adherence adjustments in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>AdherenceAdjustmentsListing</returns>
+        
+        AdherenceAdjustmentsListing PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk (string businessUnitId, UpdateAdherenceAdjustmentsBulkRequest body);
+
+        /// <summary>
+        /// Update adherence adjustments in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsListing</returns>
+        
+        ApiResponse<AdherenceAdjustmentsListing> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkWithHttpInfo (string businessUnitId, UpdateAdherenceAdjustmentsBulkRequest body);
+
+        /// <summary>
+        /// Update an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to update</param>
+        /// <param name="body">body</param>
+        /// <returns>AdherenceAdjustmentsReasonCode</returns>
+        
+        AdherenceAdjustmentsReasonCode PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode (string businessUnitId, string reasonCodeId, UpdateAdherenceAdjustmentsReasonCodeRequest body);
+
+        /// <summary>
+        /// Update an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to update</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCode</returns>
+        
+        ApiResponse<AdherenceAdjustmentsReasonCode> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithHttpInfo (string businessUnitId, string reasonCodeId, UpdateAdherenceAdjustmentsReasonCodeRequest body);
+
+        /// <summary>
+        /// Update adherence adjustment reason codes in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        AdherenceAdjustmentsReasonCodesListing PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk (string businessUnitId, UpdateAdherenceAdjustmentsReasonCodesBulkRequest body);
+
+        /// <summary>
+        /// Update adherence adjustment reason codes in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        ApiResponse<AdherenceAdjustmentsReasonCodesListing> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithHttpInfo (string businessUnitId, UpdateAdherenceAdjustmentsReasonCodesBulkRequest body);
+
+        /// <summary>
+        /// Update adherence adjustments settings for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>BuAdherenceAdjustmentsSettings</returns>
+        
+        BuAdherenceAdjustmentsSettings PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings (string businessUnitId, UpdateBuAdherenceAdjustmentsSettingsRequest body);
+
+        /// <summary>
+        /// Update adherence adjustments settings for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of BuAdherenceAdjustmentsSettings</returns>
+        
+        ApiResponse<BuAdherenceAdjustmentsSettings> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsWithHttpInfo (string businessUnitId, UpdateBuAdherenceAdjustmentsSettingsRequest body);
 
         /// <summary>
         /// Update alternative shifts settings for a business unit
@@ -5554,6 +6186,60 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentWorkPlanBiddingPreferenceResponse> PatchWorkforcemanagementWorkplanbidPreferencesWithHttpInfo (string bidId, UpdateAgentWorkPlanBiddingPreference body);
 
         /// <summary>
+        /// Submit an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>CurrentAgentAdherenceAdjustment</returns>
+        
+        CurrentAgentAdherenceAdjustment PostWorkforcemanagementAdherenceAdjustments (AddAdherenceAdjustmentAgentRequest body);
+
+        /// <summary>
+        /// Submit an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of CurrentAgentAdherenceAdjustment</returns>
+        
+        ApiResponse<CurrentAgentAdherenceAdjustment> PostWorkforcemanagementAdherenceAdjustmentsWithHttpInfo (AddAdherenceAdjustmentAgentRequest body);
+
+        /// <summary>
+        /// Query adherence adjustments for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>CurrentAgentCursorAdherenceAdjustmentsListing</returns>
+        
+        CurrentAgentCursorAdherenceAdjustmentsListing PostWorkforcemanagementAdherenceAdjustmentsQuery (AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Query adherence adjustments for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>ApiResponse of CurrentAgentCursorAdherenceAdjustmentsListing</returns>
+        
+        ApiResponse<CurrentAgentCursorAdherenceAdjustmentsListing> PostWorkforcemanagementAdherenceAdjustmentsQueryWithHttpInfo (AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
         /// Submit an adherence explanation for the current user
         /// </summary>
         /// <remarks>
@@ -5628,6 +6314,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of WfmHistoricalAdherenceBulkResponse</returns>
         
         ApiResponse<WfmHistoricalAdherenceBulkResponse> PostWorkforcemanagementAdherenceHistoricalBulkWithHttpInfo (WfmHistoricalAdherenceBulkQuery body);
+
+        /// <summary>
+        /// Query adherence adjustments for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>CursorAdherenceAdjustmentsListing</returns>
+        
+        CursorAdherenceAdjustmentsListing PostWorkforcemanagementAgentAdherenceAdjustmentsQuery (string agentId, AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Query adherence adjustments for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>ApiResponse of CursorAdherenceAdjustmentsListing</returns>
+        
+        ApiResponse<CursorAdherenceAdjustmentsListing> PostWorkforcemanagementAgentAdherenceAdjustmentsQueryWithHttpInfo (string agentId, AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null);
 
         /// <summary>
         /// Add an adherence explanation for the requested user
@@ -6064,6 +6782,122 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BusinessUnitActivityCode> PostWorkforcemanagementBusinessunitActivitycodesWithHttpInfo (string businessUnitId, CreateActivityCodeRequest body);
 
         /// <summary>
+        /// Delete an activity plan
+        /// </summary>
+        /// <remarks>
+        /// Triggers a job to delete the activity plan. No further changes to the activity plan can be made
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan to delete</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        ActivityPlanJobResponse PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs (string businessUnitId, string activityPlanId);
+
+        /// <summary>
+        /// Delete an activity plan
+        /// </summary>
+        /// <remarks>
+        /// Triggers a job to delete the activity plan. No further changes to the activity plan can be made
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan to delete</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        ApiResponse<ActivityPlanJobResponse> PostWorkforcemanagementBusinessunitActivityplanDeletionsJobsWithHttpInfo (string businessUnitId, string activityPlanId);
+
+        /// <summary>
+        /// Triggers a job to delete users from a session in the activity plan occurrence
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="body">body</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        ActivityPlanJobResponse PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, ActivityPlanDeletionSessionUserIds body);
+
+        /// <summary>
+        /// Triggers a job to delete users from a session in the activity plan occurrence
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        ApiResponse<ActivityPlanJobResponse> PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobsWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, ActivityPlanDeletionSessionUserIds body);
+
+        /// <summary>
+        /// Triggers a job to delete sessions for the activity plan occurrence
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="body">body</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        ActivityPlanJobResponse PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs (string businessUnitId, string activityPlanId, string occurrenceId, ActivityPlanDeletionSessionIds body);
+
+        /// <summary>
+        /// Triggers a job to delete sessions for the activity plan occurrence
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        ApiResponse<ActivityPlanJobResponse> PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobsWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, ActivityPlanDeletionSessionIds body);
+
+        /// <summary>
+        /// Delete occurrences for the activity plan
+        /// </summary>
+        /// <remarks>
+        /// Triggers a job to delete occurrences of the activity plan. The activity plan cannot be updated until the job completes
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="body">body</param>
+        /// <returns>ActivityPlanOccurrencesDeletionJobResponse</returns>
+        
+        ActivityPlanOccurrencesDeletionJobResponse PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs (string businessUnitId, string activityPlanId, ActivityPlanDeletionOccurrenceIds body);
+
+        /// <summary>
+        /// Delete occurrences for the activity plan
+        /// </summary>
+        /// <remarks>
+        /// Triggers a job to delete occurrences of the activity plan. The activity plan cannot be updated until the job completes
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ActivityPlanOccurrencesDeletionJobResponse</returns>
+        
+        ApiResponse<ActivityPlanOccurrencesDeletionJobResponse> PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobsWithHttpInfo (string businessUnitId, string activityPlanId, ActivityPlanDeletionOccurrenceIds body);
+
+        /// <summary>
         /// Run an activity plan manually
         /// </summary>
         /// <remarks>
@@ -6114,6 +6948,116 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ActivityPlanResponse</returns>
         
         ApiResponse<ActivityPlanResponse> PostWorkforcemanagementBusinessunitActivityplansWithHttpInfo (string businessUnitId, CreateActivityPlanRequest body);
+
+        /// <summary>
+        /// Query adherence adjustments for a business unit. Results will be returned using cursor pagination
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>CursorAdherenceAdjustmentsListing</returns>
+        
+        CursorAdherenceAdjustmentsListing PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Query adherence adjustments for a business unit. Results will be returned using cursor pagination
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>ApiResponse of CursorAdherenceAdjustmentsListing</returns>
+        
+        ApiResponse<CursorAdherenceAdjustmentsListing> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryWithHttpInfo (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Creates an async query job for adherence adjustments in a business unit.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>BuAdherenceAdjustmentsQueryJob</returns>
+        
+        BuAdherenceAdjustmentsQueryJob PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body);
+
+        /// <summary>
+        /// Creates an async query job for adherence adjustments in a business unit.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of BuAdherenceAdjustmentsQueryJob</returns>
+        
+        ApiResponse<BuAdherenceAdjustmentsQueryJob> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsWithHttpInfo (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body);
+
+        /// <summary>
+        /// Create an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>AdherenceAdjustmentsReasonCode</returns>
+        
+        AdherenceAdjustmentsReasonCode PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes (string businessUnitId, CreateAdherenceAdjustmentsReasonCodeRequest body);
+
+        /// <summary>
+        /// Create an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCode</returns>
+        
+        ApiResponse<AdherenceAdjustmentsReasonCode> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesWithHttpInfo (string businessUnitId, CreateAdherenceAdjustmentsReasonCodeRequest body);
+
+        /// <summary>
+        /// Create adherence adjustment reason codes in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        AdherenceAdjustmentsReasonCodesListing PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk (string businessUnitId, CreateAdherenceAdjustmentsReasonCodesBulkRequest body);
+
+        /// <summary>
+        /// Create adherence adjustment reason codes in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        ApiResponse<AdherenceAdjustmentsReasonCodesListing> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithHttpInfo (string businessUnitId, CreateAdherenceAdjustmentsReasonCodesBulkRequest body);
 
         /// <summary>
         /// Query adherence explanations across an entire business unit for the requested period
@@ -9328,6 +10272,30 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
 
         /// <summary>
+        /// Delete an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to delete</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteWorkforcemanagementAdherenceAdjustmentAsync (string adjustmentId);
+
+        /// <summary>
+        /// Delete an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementAdherenceAdjustmentAsyncWithHttpInfo (string adjustmentId);
+
+        /// <summary>
         /// Delete business unit
         /// </summary>
         /// <remarks>
@@ -9376,6 +10344,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitActivitycodeAsyncWithHttpInfo (string businessUnitId, string activityCodeId);
+
+        /// <summary>
+        /// Delete an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to delete</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsync (string businessUnitId, string reasonCodeId);
+
+        /// <summary>
+        /// Delete an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsyncWithHttpInfo (string businessUnitId, string reasonCodeId);
+
+        /// <summary>
+        /// Delete adherence adjustment reason codes in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to delete</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsync (string businessUnitId, List<string> ids);
+
+        /// <summary>
+        /// Delete adherence adjustment reason codes in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsyncWithHttpInfo (string businessUnitId, List<string> ids);
 
         /// <summary>
         /// Delete staffing group allocations history created for a capacity plan before the given date
@@ -9900,6 +10920,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<UserScheduleAdherence>>> GetWorkforcemanagementAdherenceAsyncWithHttpInfo (List<string> userId);
 
         /// <summary>
+        /// Get an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>Task of CurrentAgentAdherenceAdjustment</returns>
+        
+        System.Threading.Tasks.Task<CurrentAgentAdherenceAdjustment> GetWorkforcemanagementAdherenceAdjustmentAsync (string adjustmentId);
+
+        /// <summary>
+        /// Get an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>Task of ApiResponse (CurrentAgentAdherenceAdjustment)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CurrentAgentAdherenceAdjustment>> GetWorkforcemanagementAdherenceAdjustmentAsyncWithHttpInfo (string adjustmentId);
+
+        /// <summary>
         /// Get an adherence explanation for the current user
         /// </summary>
         /// <remarks>
@@ -9994,6 +11038,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> GetWorkforcemanagementAdherenceHistoricalJobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Get an adherence adjustment for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>Task of AdherenceAdjustment</returns>
+        
+        System.Threading.Tasks.Task<AdherenceAdjustment> GetWorkforcemanagementAgentAdherenceAdjustmentAsync (string agentId, string adjustmentId);
+
+        /// <summary>
+        /// Get an adherence adjustment for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustment)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustment>> GetWorkforcemanagementAgentAdherenceAdjustmentAsyncWithHttpInfo (string agentId, string adjustmentId);
 
         /// <summary>
         /// Get an adherence explanation
@@ -10364,6 +11434,150 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ActivityPlanResponse>> GetWorkforcemanagementBusinessunitActivityplanAsyncWithHttpInfo (string businessUnitId, string activityPlanId);
 
         /// <summary>
+        /// Gets an activity plan deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the deletion job</param>
+        /// <param name="jobId">The ID of the activity plan deletion job</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        System.Threading.Tasks.Task<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanDeletionsJobAsync (string businessUnitId, string activityPlanId, string jobId);
+
+        /// <summary>
+        /// Gets an activity plan deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the deletion job</param>
+        /// <param name="jobId">The ID of the activity plan deletion job</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanDeletionsJobAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string jobId);
+
+        /// <summary>
+        /// Gets the latest job for an activity plan in the business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the run job</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        System.Threading.Tasks.Task<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanJobsAsync (string businessUnitId, string activityPlanId);
+
+        /// <summary>
+        /// Gets the latest job for an activity plan in the business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the run job</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId);
+
+        /// <summary>
+        /// Gets a session users deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="jobId">The ID of the activity plan occurrence session users deletion job</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        System.Threading.Tasks.Task<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobAsync (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, string jobId);
+
+        /// <summary>
+        /// Gets a session users deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="jobId">The ID of the activity plan occurrence session users deletion job</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, string jobId);
+
+        /// <summary>
+        /// Gets an activity plan sessions deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan sessions deletion job</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        System.Threading.Tasks.Task<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobAsync (string businessUnitId, string activityPlanId, string occurrenceId, string jobId);
+
+        /// <summary>
+        /// Gets an activity plan sessions deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan sessions deletion job</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string jobId);
+
+        /// <summary>
+        /// Gets an occurrences deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="jobId">The ID of the activity plan occurrences deletion job</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        System.Threading.Tasks.Task<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobAsync (string businessUnitId, string activityPlanId, string jobId);
+
+        /// <summary>
+        /// Gets an occurrences deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="jobId">The ID of the activity plan occurrences deletion job</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string jobId);
+
+        /// <summary>
         /// Gets an activity plan run job
         /// </summary>
         /// <remarks>
@@ -10440,6 +11654,182 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ActivityPlanJobListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobListing>> GetWorkforcemanagementBusinessunitActivityplansJobsAsyncWithHttpInfo (string businessUnitId);
+
+        /// <summary>
+        /// Get adherence adjustments in bulk by ID for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="adjustmentIds">The IDs of the adherence adjustments to fetch</param>
+        /// <returns>Task of AdherenceAdjustmentsListing</returns>
+        
+        System.Threading.Tasks.Task<AdherenceAdjustmentsListing> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkAsync (string businessUnitId, List<string> adjustmentIds);
+
+        /// <summary>
+        /// Get adherence adjustments in bulk by ID for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="adjustmentIds">The IDs of the adherence adjustments to fetch</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsListing>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkAsyncWithHttpInfo (string businessUnitId, List<string> adjustmentIds);
+
+        /// <summary>
+        /// Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="jobId">The ID of the query job</param>
+        /// <returns>Task of BuAdherenceAdjustmentsQueryJob</returns>
+        
+        System.Threading.Tasks.Task<BuAdherenceAdjustmentsQueryJob> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobAsync (string businessUnitId, string jobId);
+
+        /// <summary>
+        /// Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="jobId">The ID of the query job</param>
+        /// <returns>Task of ApiResponse (BuAdherenceAdjustmentsQueryJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BuAdherenceAdjustmentsQueryJob>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobAsyncWithHttpInfo (string businessUnitId, string jobId);
+
+        /// <summary>
+        /// Get query job history for the logged in user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>Task of BuAdherenceAdjustmentsQueryJobsReferenceListing</returns>
+        
+        System.Threading.Tasks.Task<BuAdherenceAdjustmentsQueryJobsReferenceListing> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsAsync (string businessUnitId);
+
+        /// <summary>
+        /// Get query job history for the logged in user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>Task of ApiResponse (BuAdherenceAdjustmentsQueryJobsReferenceListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BuAdherenceAdjustmentsQueryJobsReferenceListing>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsAsyncWithHttpInfo (string businessUnitId);
+
+        /// <summary>
+        /// Get an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to fetch</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCode</returns>
+        
+        System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCode> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsync (string businessUnitId, string reasonCodeId);
+
+        /// <summary>
+        /// Get an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to fetch</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCode)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCode>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsyncWithHttpInfo (string businessUnitId, string reasonCodeId);
+
+        /// <summary>
+        /// Get adherence adjustment reason codes for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCodesListing> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesAsync (string businessUnitId);
+
+        /// <summary>
+        /// Get adherence adjustment reason codes for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCodesListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCodesListing>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesAsyncWithHttpInfo (string businessUnitId);
+
+        /// <summary>
+        /// Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to fetch</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCodesListing> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsync (string businessUnitId, List<string> ids);
+
+        /// <summary>
+        /// Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to fetch</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCodesListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCodesListing>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsyncWithHttpInfo (string businessUnitId, List<string> ids);
+
+        /// <summary>
+        /// Get adherence adjustments settings for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>Task of BuAdherenceAdjustmentsSettings</returns>
+        
+        System.Threading.Tasks.Task<BuAdherenceAdjustmentsSettings> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsAsync (string businessUnitId);
+
+        /// <summary>
+        /// Get adherence adjustments settings for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>Task of ApiResponse (BuAdherenceAdjustmentsSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BuAdherenceAdjustmentsSettings>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsAsyncWithHttpInfo (string businessUnitId);
 
         /// <summary>
         /// Get alternative shifts settings for a business unit
@@ -13740,6 +15130,60 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AgentWorkPlanBids>> GetWorkforcemanagementWorkplanbidsAsyncWithHttpInfo ();
 
         /// <summary>
+        /// Update an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to update</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of CurrentAgentAdherenceAdjustment</returns>
+        
+        System.Threading.Tasks.Task<CurrentAgentAdherenceAdjustment> PatchWorkforcemanagementAdherenceAdjustmentAsync (string adjustmentId, UpdateAdherenceAdjustmentAgentRequest body);
+
+        /// <summary>
+        /// Update an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to update</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (CurrentAgentAdherenceAdjustment)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CurrentAgentAdherenceAdjustment>> PatchWorkforcemanagementAdherenceAdjustmentAsyncWithHttpInfo (string adjustmentId, UpdateAdherenceAdjustmentAgentRequest body);
+
+        /// <summary>
+        /// Update an adherence adjustment for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AdherenceAdjustment</returns>
+        
+        System.Threading.Tasks.Task<AdherenceAdjustment> PatchWorkforcemanagementAgentAdherenceAdjustmentAsync (string agentId, string adjustmentId, UpdateAdherenceAdjustmentAdminRequest body);
+
+        /// <summary>
+        /// Update an adherence adjustment for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustment)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustment>> PatchWorkforcemanagementAgentAdherenceAdjustmentAsyncWithHttpInfo (string agentId, string adjustmentId, UpdateAdherenceAdjustmentAdminRequest body);
+
+        /// <summary>
         /// Update an adherence explanation
         /// </summary>
         /// <remarks>
@@ -13766,6 +15210,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (AdherenceExplanationAsyncResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationAsyncResponse>> PatchWorkforcemanagementAgentAdherenceExplanationAsyncWithHttpInfo (string agentId, string explanationId, UpdateAdherenceExplanationStatusRequest body);
+
+        /// <summary>
+        /// Update unavailable times for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// Large requests will be partitioned into multiple internal processing batches. Validation will occur against each internal batch independently rather than against the final combined state represented by the entire request
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of BulkUpdateAgentUnavailableTimesResponse</returns>
+        
+        System.Threading.Tasks.Task<BulkUpdateAgentUnavailableTimesResponse> PatchWorkforcemanagementAgentUnavailabletimesAsync (string agentId, UpdateUnavailableTimesRequest body);
+
+        /// <summary>
+        /// Update unavailable times for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// Large requests will be partitioned into multiple internal processing batches. Validation will occur against each internal batch independently rather than against the final combined state represented by the entire request
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (BulkUpdateAgentUnavailableTimesResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BulkUpdateAgentUnavailableTimesResponse>> PatchWorkforcemanagementAgentUnavailabletimesAsyncWithHttpInfo (string agentId, UpdateUnavailableTimesRequest body);
 
         /// <summary>
         /// Update my alternative shifts trade by trade ID
@@ -13926,6 +15396,112 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ActivityPlanResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ActivityPlanResponse>> PatchWorkforcemanagementBusinessunitActivityplanAsyncWithHttpInfo (string businessUnitId, string activityPlanId, UpdateActivityPlanRequest body);
+
+        /// <summary>
+        /// Update adherence adjustments in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AdherenceAdjustmentsListing</returns>
+        
+        System.Threading.Tasks.Task<AdherenceAdjustmentsListing> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkAsync (string businessUnitId, UpdateAdherenceAdjustmentsBulkRequest body);
+
+        /// <summary>
+        /// Update adherence adjustments in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsListing>> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkAsyncWithHttpInfo (string businessUnitId, UpdateAdherenceAdjustmentsBulkRequest body);
+
+        /// <summary>
+        /// Update an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to update</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCode</returns>
+        
+        System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCode> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsync (string businessUnitId, string reasonCodeId, UpdateAdherenceAdjustmentsReasonCodeRequest body);
+
+        /// <summary>
+        /// Update an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to update</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCode)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCode>> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsyncWithHttpInfo (string businessUnitId, string reasonCodeId, UpdateAdherenceAdjustmentsReasonCodeRequest body);
+
+        /// <summary>
+        /// Update adherence adjustment reason codes in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCodesListing> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsync (string businessUnitId, UpdateAdherenceAdjustmentsReasonCodesBulkRequest body);
+
+        /// <summary>
+        /// Update adherence adjustment reason codes in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCodesListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCodesListing>> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsyncWithHttpInfo (string businessUnitId, UpdateAdherenceAdjustmentsReasonCodesBulkRequest body);
+
+        /// <summary>
+        /// Update adherence adjustments settings for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of BuAdherenceAdjustmentsSettings</returns>
+        
+        System.Threading.Tasks.Task<BuAdherenceAdjustmentsSettings> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsAsync (string businessUnitId, UpdateBuAdherenceAdjustmentsSettingsRequest body);
+
+        /// <summary>
+        /// Update adherence adjustments settings for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (BuAdherenceAdjustmentsSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BuAdherenceAdjustmentsSettings>> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsAsyncWithHttpInfo (string businessUnitId, UpdateBuAdherenceAdjustmentsSettingsRequest body);
 
         /// <summary>
         /// Update alternative shifts settings for a business unit
@@ -14866,6 +16442,60 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AgentWorkPlanBiddingPreferenceResponse>> PatchWorkforcemanagementWorkplanbidPreferencesAsyncWithHttpInfo (string bidId, UpdateAgentWorkPlanBiddingPreference body);
 
         /// <summary>
+        /// Submit an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>Task of CurrentAgentAdherenceAdjustment</returns>
+        
+        System.Threading.Tasks.Task<CurrentAgentAdherenceAdjustment> PostWorkforcemanagementAdherenceAdjustmentsAsync (AddAdherenceAdjustmentAgentRequest body);
+
+        /// <summary>
+        /// Submit an adherence adjustment for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (CurrentAgentAdherenceAdjustment)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CurrentAgentAdherenceAdjustment>> PostWorkforcemanagementAdherenceAdjustmentsAsyncWithHttpInfo (AddAdherenceAdjustmentAgentRequest body);
+
+        /// <summary>
+        /// Query adherence adjustments for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>Task of CurrentAgentCursorAdherenceAdjustmentsListing</returns>
+        
+        System.Threading.Tasks.Task<CurrentAgentCursorAdherenceAdjustmentsListing> PostWorkforcemanagementAdherenceAdjustmentsQueryAsync (AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Query adherence adjustments for the current user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>Task of ApiResponse (CurrentAgentCursorAdherenceAdjustmentsListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CurrentAgentCursorAdherenceAdjustmentsListing>> PostWorkforcemanagementAdherenceAdjustmentsQueryAsyncWithHttpInfo (AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
         /// Submit an adherence explanation for the current user
         /// </summary>
         /// <remarks>
@@ -14940,6 +16570,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceBulkResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceBulkResponse>> PostWorkforcemanagementAdherenceHistoricalBulkAsyncWithHttpInfo (WfmHistoricalAdherenceBulkQuery body);
+
+        /// <summary>
+        /// Query adherence adjustments for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>Task of CursorAdherenceAdjustmentsListing</returns>
+        
+        System.Threading.Tasks.Task<CursorAdherenceAdjustmentsListing> PostWorkforcemanagementAgentAdherenceAdjustmentsQueryAsync (string agentId, AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Query adherence adjustments for the requested agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>Task of ApiResponse (CursorAdherenceAdjustmentsListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CursorAdherenceAdjustmentsListing>> PostWorkforcemanagementAgentAdherenceAdjustmentsQueryAsyncWithHttpInfo (string agentId, AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null);
 
         /// <summary>
         /// Add an adherence explanation for the requested user
@@ -15376,6 +17038,122 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitActivityCode>> PostWorkforcemanagementBusinessunitActivitycodesAsyncWithHttpInfo (string businessUnitId, CreateActivityCodeRequest body);
 
         /// <summary>
+        /// Delete an activity plan
+        /// </summary>
+        /// <remarks>
+        /// Triggers a job to delete the activity plan. No further changes to the activity plan can be made
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan to delete</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        System.Threading.Tasks.Task<ActivityPlanJobResponse> PostWorkforcemanagementBusinessunitActivityplanDeletionsJobsAsync (string businessUnitId, string activityPlanId);
+
+        /// <summary>
+        /// Delete an activity plan
+        /// </summary>
+        /// <remarks>
+        /// Triggers a job to delete the activity plan. No further changes to the activity plan can be made
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan to delete</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> PostWorkforcemanagementBusinessunitActivityplanDeletionsJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId);
+
+        /// <summary>
+        /// Triggers a job to delete users from a session in the activity plan occurrence
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        System.Threading.Tasks.Task<ActivityPlanJobResponse> PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobsAsync (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, ActivityPlanDeletionSessionUserIds body);
+
+        /// <summary>
+        /// Triggers a job to delete users from a session in the activity plan occurrence
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, ActivityPlanDeletionSessionUserIds body);
+
+        /// <summary>
+        /// Triggers a job to delete sessions for the activity plan occurrence
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        System.Threading.Tasks.Task<ActivityPlanJobResponse> PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobsAsync (string businessUnitId, string activityPlanId, string occurrenceId, ActivityPlanDeletionSessionIds body);
+
+        /// <summary>
+        /// Triggers a job to delete sessions for the activity plan occurrence
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, ActivityPlanDeletionSessionIds body);
+
+        /// <summary>
+        /// Delete occurrences for the activity plan
+        /// </summary>
+        /// <remarks>
+        /// Triggers a job to delete occurrences of the activity plan. The activity plan cannot be updated until the job completes
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ActivityPlanOccurrencesDeletionJobResponse</returns>
+        
+        System.Threading.Tasks.Task<ActivityPlanOccurrencesDeletionJobResponse> PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobsAsync (string businessUnitId, string activityPlanId, ActivityPlanDeletionOccurrenceIds body);
+
+        /// <summary>
+        /// Delete occurrences for the activity plan
+        /// </summary>
+        /// <remarks>
+        /// Triggers a job to delete occurrences of the activity plan. The activity plan cannot be updated until the job completes
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ActivityPlanOccurrencesDeletionJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivityPlanOccurrencesDeletionJobResponse>> PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId, ActivityPlanDeletionOccurrenceIds body);
+
+        /// <summary>
         /// Run an activity plan manually
         /// </summary>
         /// <remarks>
@@ -15426,6 +17204,116 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ActivityPlanResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ActivityPlanResponse>> PostWorkforcemanagementBusinessunitActivityplansAsyncWithHttpInfo (string businessUnitId, CreateActivityPlanRequest body);
+
+        /// <summary>
+        /// Query adherence adjustments for a business unit. Results will be returned using cursor pagination
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>Task of CursorAdherenceAdjustmentsListing</returns>
+        
+        System.Threading.Tasks.Task<CursorAdherenceAdjustmentsListing> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryAsync (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Query adherence adjustments for a business unit. Results will be returned using cursor pagination
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>Task of ApiResponse (CursorAdherenceAdjustmentsListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CursorAdherenceAdjustmentsListing>> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryAsyncWithHttpInfo (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null);
+
+        /// <summary>
+        /// Creates an async query job for adherence adjustments in a business unit.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of BuAdherenceAdjustmentsQueryJob</returns>
+        
+        System.Threading.Tasks.Task<BuAdherenceAdjustmentsQueryJob> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsAsync (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body);
+
+        /// <summary>
+        /// Creates an async query job for adherence adjustments in a business unit.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (BuAdherenceAdjustmentsQueryJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BuAdherenceAdjustmentsQueryJob>> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsAsyncWithHttpInfo (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body);
+
+        /// <summary>
+        /// Create an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCode</returns>
+        
+        System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCode> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesAsync (string businessUnitId, CreateAdherenceAdjustmentsReasonCodeRequest body);
+
+        /// <summary>
+        /// Create an adherence adjustment reason code for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCode)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCode>> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesAsyncWithHttpInfo (string businessUnitId, CreateAdherenceAdjustmentsReasonCodeRequest body);
+
+        /// <summary>
+        /// Create adherence adjustment reason codes in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCodesListing> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsync (string businessUnitId, CreateAdherenceAdjustmentsReasonCodesBulkRequest body);
+
+        /// <summary>
+        /// Create adherence adjustment reason codes in bulk for a business unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCodesListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCodesListing>> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsyncWithHttpInfo (string businessUnitId, CreateAdherenceAdjustmentsReasonCodesBulkRequest body);
 
         /// <summary>
         /// Query adherence explanations across an entire business unit for the requested period
@@ -18728,6 +20616,209 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Delete an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to delete</param>
+        /// <returns></returns>
+        
+        public void DeleteWorkforcemanagementAdherenceAdjustment (string adjustmentId)
+        {
+             DeleteWorkforcemanagementAdherenceAdjustmentWithHttpInfo(adjustmentId);
+        }
+
+        /// <summary>
+        /// Delete an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to delete</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteWorkforcemanagementAdherenceAdjustmentWithHttpInfo (string adjustmentId)
+        { 
+            // verify the required parameter 'adjustmentId' is set
+            if (adjustmentId == null)
+                throw new ApiException(400, "Missing required parameter 'adjustmentId' when calling WorkforceManagementApi->DeleteWorkforcemanagementAdherenceAdjustment");
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (adjustmentId != null) localVarPathParams.Add("adjustmentId", this.Configuration.ApiClient.ParameterToString(adjustmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteWorkforcemanagementAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementAdherenceAdjustment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to delete</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteWorkforcemanagementAdherenceAdjustmentAsync (string adjustmentId)
+        {
+             await DeleteWorkforcemanagementAdherenceAdjustmentAsyncWithHttpInfo(adjustmentId);
+
+        }
+
+        /// <summary>
+        /// Delete an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementAdherenceAdjustmentAsyncWithHttpInfo (string adjustmentId)
+        { 
+            // verify the required parameter 'adjustmentId' is set
+            if (adjustmentId == null)
+                throw new ApiException(400, "Missing required parameter 'adjustmentId' when calling WorkforceManagementApi->DeleteWorkforcemanagementAdherenceAdjustment");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (adjustmentId != null) localVarPathParams.Add("adjustmentId", this.Configuration.ApiClient.ParameterToString(adjustmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteWorkforcemanagementAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementAdherenceAdjustment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Delete business unit 
         /// A business unit cannot be deleted if it contains one or more management units
         /// </summary>
@@ -19136,6 +21227,438 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteWorkforcemanagementBusinessunitActivitycode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementBusinessunitActivitycode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to delete</param>
+        /// <returns></returns>
+        
+        public void DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode (string businessUnitId, string reasonCodeId)
+        {
+             DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithHttpInfo(businessUnitId, reasonCodeId);
+        }
+
+        /// <summary>
+        /// Delete an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to delete</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithHttpInfo (string businessUnitId, string reasonCodeId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+            // verify the required parameter 'reasonCodeId' is set
+            if (reasonCodeId == null)
+                throw new ApiException(400, "Missing required parameter 'reasonCodeId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (reasonCodeId != null) localVarPathParams.Add("reasonCodeId", this.Configuration.ApiClient.ParameterToString(reasonCodeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to delete</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsync (string businessUnitId, string reasonCodeId)
+        {
+             await DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsyncWithHttpInfo(businessUnitId, reasonCodeId);
+
+        }
+
+        /// <summary>
+        /// Delete an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsyncWithHttpInfo (string businessUnitId, string reasonCodeId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+            
+            // verify the required parameter 'reasonCodeId' is set
+            if (reasonCodeId == null)
+                throw new ApiException(400, "Missing required parameter 'reasonCodeId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (reasonCodeId != null) localVarPathParams.Add("reasonCodeId", this.Configuration.ApiClient.ParameterToString(reasonCodeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete adherence adjustment reason codes in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to delete</param>
+        /// <returns></returns>
+        
+        public void DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk (string businessUnitId, List<string> ids)
+        {
+             DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithHttpInfo(businessUnitId, ids);
+        }
+
+        /// <summary>
+        /// Delete adherence adjustment reason codes in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to delete</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithHttpInfo (string businessUnitId, List<string> ids)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+            if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete adherence adjustment reason codes in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to delete</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsync (string businessUnitId, List<string> ids)
+        {
+             await DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsyncWithHttpInfo(businessUnitId, ids);
+
+        }
+
+        /// <summary>
+        /// Delete adherence adjustment reason codes in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsyncWithHttpInfo (string businessUnitId, List<string> ids)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+            
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+            if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -23477,6 +26000,211 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>CurrentAgentAdherenceAdjustment</returns>
+        
+        public CurrentAgentAdherenceAdjustment GetWorkforcemanagementAdherenceAdjustment (string adjustmentId)
+        {
+             ApiResponse<CurrentAgentAdherenceAdjustment> localVarResponse = GetWorkforcemanagementAdherenceAdjustmentWithHttpInfo(adjustmentId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>ApiResponse of CurrentAgentAdherenceAdjustment</returns>
+        
+        public ApiResponse< CurrentAgentAdherenceAdjustment > GetWorkforcemanagementAdherenceAdjustmentWithHttpInfo (string adjustmentId)
+        { 
+            // verify the required parameter 'adjustmentId' is set
+            if (adjustmentId == null)
+                throw new ApiException(400, "Missing required parameter 'adjustmentId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherenceAdjustment");
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (adjustmentId != null) localVarPathParams.Add("adjustmentId", this.Configuration.ApiClient.ParameterToString(adjustmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAdherenceAdjustment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CurrentAgentAdherenceAdjustment>(localVarStatusCode,
+                localVarHeaders,
+                (CurrentAgentAdherenceAdjustment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CurrentAgentAdherenceAdjustment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>Task of CurrentAgentAdherenceAdjustment</returns>
+        
+        public async System.Threading.Tasks.Task<CurrentAgentAdherenceAdjustment> GetWorkforcemanagementAdherenceAdjustmentAsync (string adjustmentId)
+        {
+             ApiResponse<CurrentAgentAdherenceAdjustment> localVarResponse = await GetWorkforcemanagementAdherenceAdjustmentAsyncWithHttpInfo(adjustmentId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>Task of ApiResponse (CurrentAgentAdherenceAdjustment)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CurrentAgentAdherenceAdjustment>> GetWorkforcemanagementAdherenceAdjustmentAsyncWithHttpInfo (string adjustmentId)
+        { 
+            // verify the required parameter 'adjustmentId' is set
+            if (adjustmentId == null)
+                throw new ApiException(400, "Missing required parameter 'adjustmentId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherenceAdjustment");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (adjustmentId != null) localVarPathParams.Add("adjustmentId", this.Configuration.ApiClient.ParameterToString(adjustmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAdherenceAdjustment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CurrentAgentAdherenceAdjustment>(localVarStatusCode,
+                localVarHeaders,
+                (CurrentAgentAdherenceAdjustment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CurrentAgentAdherenceAdjustment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get an adherence explanation for the current user 
         /// 
         /// </summary>
@@ -24290,6 +27018,224 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WfmHistoricalAdherenceResponse>(localVarStatusCode,
                 localVarHeaders,
                 (WfmHistoricalAdherenceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmHistoricalAdherenceResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an adherence adjustment for the requested agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>AdherenceAdjustment</returns>
+        
+        public AdherenceAdjustment GetWorkforcemanagementAgentAdherenceAdjustment (string agentId, string adjustmentId)
+        {
+             ApiResponse<AdherenceAdjustment> localVarResponse = GetWorkforcemanagementAgentAdherenceAdjustmentWithHttpInfo(agentId, adjustmentId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an adherence adjustment for the requested agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>ApiResponse of AdherenceAdjustment</returns>
+        
+        public ApiResponse< AdherenceAdjustment > GetWorkforcemanagementAgentAdherenceAdjustmentWithHttpInfo (string agentId, string adjustmentId)
+        { 
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementAgentAdherenceAdjustment");
+            // verify the required parameter 'adjustmentId' is set
+            if (adjustmentId == null)
+                throw new ApiException(400, "Missing required parameter 'adjustmentId' when calling WorkforceManagementApi->GetWorkforcemanagementAgentAdherenceAdjustment");
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/{adjustmentId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+            if (adjustmentId != null) localVarPathParams.Add("adjustmentId", this.Configuration.ApiClient.ParameterToString(adjustmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAgentAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementAgentAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAgentAdherenceAdjustment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustment>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an adherence adjustment for the requested agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>Task of AdherenceAdjustment</returns>
+        
+        public async System.Threading.Tasks.Task<AdherenceAdjustment> GetWorkforcemanagementAgentAdherenceAdjustmentAsync (string agentId, string adjustmentId)
+        {
+             ApiResponse<AdherenceAdjustment> localVarResponse = await GetWorkforcemanagementAgentAdherenceAdjustmentAsyncWithHttpInfo(agentId, adjustmentId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an adherence adjustment for the requested agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustment)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustment>> GetWorkforcemanagementAgentAdherenceAdjustmentAsyncWithHttpInfo (string agentId, string adjustmentId)
+        { 
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementAgentAdherenceAdjustment");
+            
+            // verify the required parameter 'adjustmentId' is set
+            if (adjustmentId == null)
+                throw new ApiException(400, "Missing required parameter 'adjustmentId' when calling WorkforceManagementApi->GetWorkforcemanagementAgentAdherenceAdjustment");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/{adjustmentId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+            if (adjustmentId != null) localVarPathParams.Add("adjustmentId", this.Configuration.ApiClient.ParameterToString(adjustmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAgentAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementAgentAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAgentAdherenceAdjustment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustment>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustment)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -27396,6 +30342,1187 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Gets an activity plan deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the deletion job</param>
+        /// <param name="jobId">The ID of the activity plan deletion job</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        public ActivityPlanJobResponse GetWorkforcemanagementBusinessunitActivityplanDeletionsJob (string businessUnitId, string activityPlanId, string jobId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = GetWorkforcemanagementBusinessunitActivityplanDeletionsJobWithHttpInfo(businessUnitId, activityPlanId, jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets an activity plan deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the deletion job</param>
+        /// <param name="jobId">The ID of the activity plan deletion job</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        public ApiResponse< ActivityPlanJobResponse > GetWorkforcemanagementBusinessunitActivityplanDeletionsJobWithHttpInfo (string businessUnitId, string activityPlanId, string jobId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanDeletionsJob");
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanDeletionsJob");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanDeletionsJob");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanDeletionsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Gets an activity plan deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the deletion job</param>
+        /// <param name="jobId">The ID of the activity plan deletion job</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanDeletionsJobAsync (string businessUnitId, string activityPlanId, string jobId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = await GetWorkforcemanagementBusinessunitActivityplanDeletionsJobAsyncWithHttpInfo(businessUnitId, activityPlanId, jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets an activity plan deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the deletion job</param>
+        /// <param name="jobId">The ID of the activity plan deletion job</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanDeletionsJobAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string jobId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanDeletionsJob");
+            
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanDeletionsJob");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanDeletionsJob");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanDeletionsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Gets the latest job for an activity plan in the business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the run job</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        public ActivityPlanJobResponse GetWorkforcemanagementBusinessunitActivityplanJobs (string businessUnitId, string activityPlanId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = GetWorkforcemanagementBusinessunitActivityplanJobsWithHttpInfo(businessUnitId, activityPlanId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets the latest job for an activity plan in the business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the run job</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        public ApiResponse< ActivityPlanJobResponse > GetWorkforcemanagementBusinessunitActivityplanJobsWithHttpInfo (string businessUnitId, string activityPlanId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanJobs");
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanJobs");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/jobs";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Gets the latest job for an activity plan in the business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the run job</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanJobsAsync (string businessUnitId, string activityPlanId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = await GetWorkforcemanagementBusinessunitActivityplanJobsAsyncWithHttpInfo(businessUnitId, activityPlanId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets the latest job for an activity plan in the business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan associated with the run job</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanJobs");
+            
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanJobs");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/jobs";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Gets a session users deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="jobId">The ID of the activity plan occurrence session users deletion job</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        public ActivityPlanJobResponse GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, string jobId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobWithHttpInfo(businessUnitId, activityPlanId, occurrenceId, sessionId, jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a session users deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="jobId">The ID of the activity plan occurrence session users deletion job</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        public ApiResponse< ActivityPlanJobResponse > GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, string jobId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob");
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob");
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob");
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Gets a session users deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="jobId">The ID of the activity plan occurrence session users deletion job</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobAsync (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, string jobId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = await GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobAsyncWithHttpInfo(businessUnitId, activityPlanId, occurrenceId, sessionId, jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a session users deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="jobId">The ID of the activity plan occurrence session users deletion job</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, string jobId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob");
+            
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob");
+            
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob");
+            
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Gets an activity plan sessions deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan sessions deletion job</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        public ActivityPlanJobResponse GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob (string businessUnitId, string activityPlanId, string occurrenceId, string jobId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobWithHttpInfo(businessUnitId, activityPlanId, occurrenceId, jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets an activity plan sessions deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan sessions deletion job</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        public ApiResponse< ActivityPlanJobResponse > GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string jobId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob");
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob");
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Gets an activity plan sessions deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan sessions deletion job</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobAsync (string businessUnitId, string activityPlanId, string occurrenceId, string jobId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = await GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobAsyncWithHttpInfo(businessUnitId, activityPlanId, occurrenceId, jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets an activity plan sessions deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan sessions deletion job</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string jobId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob");
+            
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob");
+            
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Gets an occurrences deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="jobId">The ID of the activity plan occurrences deletion job</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        public ActivityPlanJobResponse GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob (string businessUnitId, string activityPlanId, string jobId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobWithHttpInfo(businessUnitId, activityPlanId, jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets an occurrences deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="jobId">The ID of the activity plan occurrences deletion job</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        public ApiResponse< ActivityPlanJobResponse > GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobWithHttpInfo (string businessUnitId, string activityPlanId, string jobId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob");
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Gets an occurrences deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="jobId">The ID of the activity plan occurrences deletion job</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobAsync (string businessUnitId, string activityPlanId, string jobId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = await GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobAsyncWithHttpInfo(businessUnitId, activityPlanId, jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets an occurrences deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="jobId">The ID of the activity plan occurrences deletion job</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string jobId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob");
+            
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Gets an activity plan run job 
         /// 
         /// </summary>
@@ -28036,6 +32163,1493 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ActivityPlanJobListing>(localVarStatusCode,
                 localVarHeaders,
                 (ActivityPlanJobListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get adherence adjustments in bulk by ID for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="adjustmentIds">The IDs of the adherence adjustments to fetch</param>
+        /// <returns>AdherenceAdjustmentsListing</returns>
+        
+        public AdherenceAdjustmentsListing GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk (string businessUnitId, List<string> adjustmentIds)
+        {
+             ApiResponse<AdherenceAdjustmentsListing> localVarResponse = GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkWithHttpInfo(businessUnitId, adjustmentIds);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get adherence adjustments in bulk by ID for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="adjustmentIds">The IDs of the adherence adjustments to fetch</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsListing</returns>
+        
+        public ApiResponse< AdherenceAdjustmentsListing > GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkWithHttpInfo (string businessUnitId, List<string> adjustmentIds)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk");
+            // verify the required parameter 'adjustmentIds' is set
+            if (adjustmentIds == null)
+                throw new ApiException(400, "Missing required parameter 'adjustmentIds' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/bulk";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+            if (adjustmentIds != null) adjustmentIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("adjustmentIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsListing>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get adherence adjustments in bulk by ID for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="adjustmentIds">The IDs of the adherence adjustments to fetch</param>
+        /// <returns>Task of AdherenceAdjustmentsListing</returns>
+        
+        public async System.Threading.Tasks.Task<AdherenceAdjustmentsListing> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkAsync (string businessUnitId, List<string> adjustmentIds)
+        {
+             ApiResponse<AdherenceAdjustmentsListing> localVarResponse = await GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkAsyncWithHttpInfo(businessUnitId, adjustmentIds);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get adherence adjustments in bulk by ID for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="adjustmentIds">The IDs of the adherence adjustments to fetch</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsListing>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkAsyncWithHttpInfo (string businessUnitId, List<string> adjustmentIds)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk");
+            
+            // verify the required parameter 'adjustmentIds' is set
+            if (adjustmentIds == null)
+                throw new ApiException(400, "Missing required parameter 'adjustmentIds' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/bulk";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+            if (adjustmentIds != null) adjustmentIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("adjustmentIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsListing>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="jobId">The ID of the query job</param>
+        /// <returns>BuAdherenceAdjustmentsQueryJob</returns>
+        
+        public BuAdherenceAdjustmentsQueryJob GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob (string businessUnitId, string jobId)
+        {
+             ApiResponse<BuAdherenceAdjustmentsQueryJob> localVarResponse = GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobWithHttpInfo(businessUnitId, jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="jobId">The ID of the query job</param>
+        /// <returns>ApiResponse of BuAdherenceAdjustmentsQueryJob</returns>
+        
+        public ApiResponse< BuAdherenceAdjustmentsQueryJob > GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobWithHttpInfo (string businessUnitId, string jobId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAdherenceAdjustmentsQueryJob>(localVarStatusCode,
+                localVarHeaders,
+                (BuAdherenceAdjustmentsQueryJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAdherenceAdjustmentsQueryJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="jobId">The ID of the query job</param>
+        /// <returns>Task of BuAdherenceAdjustmentsQueryJob</returns>
+        
+        public async System.Threading.Tasks.Task<BuAdherenceAdjustmentsQueryJob> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobAsync (string businessUnitId, string jobId)
+        {
+             ApiResponse<BuAdherenceAdjustmentsQueryJob> localVarResponse = await GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobAsyncWithHttpInfo(businessUnitId, jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="jobId">The ID of the query job</param>
+        /// <returns>Task of ApiResponse (BuAdherenceAdjustmentsQueryJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BuAdherenceAdjustmentsQueryJob>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobAsyncWithHttpInfo (string businessUnitId, string jobId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAdherenceAdjustmentsQueryJob>(localVarStatusCode,
+                localVarHeaders,
+                (BuAdherenceAdjustmentsQueryJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAdherenceAdjustmentsQueryJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get query job history for the logged in user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>BuAdherenceAdjustmentsQueryJobsReferenceListing</returns>
+        
+        public BuAdherenceAdjustmentsQueryJobsReferenceListing GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs (string businessUnitId)
+        {
+             ApiResponse<BuAdherenceAdjustmentsQueryJobsReferenceListing> localVarResponse = GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsWithHttpInfo(businessUnitId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get query job history for the logged in user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>ApiResponse of BuAdherenceAdjustmentsQueryJobsReferenceListing</returns>
+        
+        public ApiResponse< BuAdherenceAdjustmentsQueryJobsReferenceListing > GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsWithHttpInfo (string businessUnitId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAdherenceAdjustmentsQueryJobsReferenceListing>(localVarStatusCode,
+                localVarHeaders,
+                (BuAdherenceAdjustmentsQueryJobsReferenceListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAdherenceAdjustmentsQueryJobsReferenceListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get query job history for the logged in user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>Task of BuAdherenceAdjustmentsQueryJobsReferenceListing</returns>
+        
+        public async System.Threading.Tasks.Task<BuAdherenceAdjustmentsQueryJobsReferenceListing> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsAsync (string businessUnitId)
+        {
+             ApiResponse<BuAdherenceAdjustmentsQueryJobsReferenceListing> localVarResponse = await GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsAsyncWithHttpInfo(businessUnitId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get query job history for the logged in user. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>Task of ApiResponse (BuAdherenceAdjustmentsQueryJobsReferenceListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BuAdherenceAdjustmentsQueryJobsReferenceListing>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsAsyncWithHttpInfo (string businessUnitId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAdherenceAdjustmentsQueryJobsReferenceListing>(localVarStatusCode,
+                localVarHeaders,
+                (BuAdherenceAdjustmentsQueryJobsReferenceListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAdherenceAdjustmentsQueryJobsReferenceListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to fetch</param>
+        /// <returns>AdherenceAdjustmentsReasonCode</returns>
+        
+        public AdherenceAdjustmentsReasonCode GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode (string businessUnitId, string reasonCodeId)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCode> localVarResponse = GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithHttpInfo(businessUnitId, reasonCodeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to fetch</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCode</returns>
+        
+        public ApiResponse< AdherenceAdjustmentsReasonCode > GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithHttpInfo (string businessUnitId, string reasonCodeId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+            // verify the required parameter 'reasonCodeId' is set
+            if (reasonCodeId == null)
+                throw new ApiException(400, "Missing required parameter 'reasonCodeId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (reasonCodeId != null) localVarPathParams.Add("reasonCodeId", this.Configuration.ApiClient.ParameterToString(reasonCodeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCode>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCode)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to fetch</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCode</returns>
+        
+        public async System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCode> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsync (string businessUnitId, string reasonCodeId)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCode> localVarResponse = await GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsyncWithHttpInfo(businessUnitId, reasonCodeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to fetch</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCode)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCode>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsyncWithHttpInfo (string businessUnitId, string reasonCodeId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+            
+            // verify the required parameter 'reasonCodeId' is set
+            if (reasonCodeId == null)
+                throw new ApiException(400, "Missing required parameter 'reasonCodeId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (reasonCodeId != null) localVarPathParams.Add("reasonCodeId", this.Configuration.ApiClient.ParameterToString(reasonCodeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCode>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCode)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get adherence adjustment reason codes for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        public AdherenceAdjustmentsReasonCodesListing GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes (string businessUnitId)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCodesListing> localVarResponse = GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesWithHttpInfo(businessUnitId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get adherence adjustment reason codes for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        public ApiResponse< AdherenceAdjustmentsReasonCodesListing > GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesWithHttpInfo (string businessUnitId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCodesListing>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCodesListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCodesListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get adherence adjustment reason codes for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        public async System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCodesListing> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesAsync (string businessUnitId)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCodesListing> localVarResponse = await GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesAsyncWithHttpInfo(businessUnitId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get adherence adjustment reason codes for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCodesListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCodesListing>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesAsyncWithHttpInfo (string businessUnitId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCodesListing>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCodesListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCodesListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to fetch</param>
+        /// <returns>AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        public AdherenceAdjustmentsReasonCodesListing GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk (string businessUnitId, List<string> ids)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCodesListing> localVarResponse = GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithHttpInfo(businessUnitId, ids);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to fetch</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        public ApiResponse< AdherenceAdjustmentsReasonCodesListing > GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithHttpInfo (string businessUnitId, List<string> ids)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+            if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCodesListing>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCodesListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCodesListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to fetch</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        public async System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCodesListing> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsync (string businessUnitId, List<string> ids)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCodesListing> localVarResponse = await GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsyncWithHttpInfo(businessUnitId, ids);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="ids">The IDs of the reason codes to fetch</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCodesListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCodesListing>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsyncWithHttpInfo (string businessUnitId, List<string> ids)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+            
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+            if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCodesListing>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCodesListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCodesListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get adherence adjustments settings for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>BuAdherenceAdjustmentsSettings</returns>
+        
+        public BuAdherenceAdjustmentsSettings GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings (string businessUnitId)
+        {
+             ApiResponse<BuAdherenceAdjustmentsSettings> localVarResponse = GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsWithHttpInfo(businessUnitId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get adherence adjustments settings for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>ApiResponse of BuAdherenceAdjustmentsSettings</returns>
+        
+        public ApiResponse< BuAdherenceAdjustmentsSettings > GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsWithHttpInfo (string businessUnitId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/settings";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAdherenceAdjustmentsSettings>(localVarStatusCode,
+                localVarHeaders,
+                (BuAdherenceAdjustmentsSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAdherenceAdjustmentsSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get adherence adjustments settings for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>Task of BuAdherenceAdjustmentsSettings</returns>
+        
+        public async System.Threading.Tasks.Task<BuAdherenceAdjustmentsSettings> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsAsync (string businessUnitId)
+        {
+             ApiResponse<BuAdherenceAdjustmentsSettings> localVarResponse = await GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsAsyncWithHttpInfo(businessUnitId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get adherence adjustments settings for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <returns>Task of ApiResponse (BuAdherenceAdjustmentsSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BuAdherenceAdjustmentsSettings>> GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsAsyncWithHttpInfo (string businessUnitId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/settings";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAdherenceAdjustmentsSettings>(localVarStatusCode,
+                localVarHeaders,
+                (BuAdherenceAdjustmentsSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAdherenceAdjustmentsSettings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -55210,6 +60824,475 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to update</param>
+        /// <param name="body">body</param>
+        /// <returns>CurrentAgentAdherenceAdjustment</returns>
+        
+        public CurrentAgentAdherenceAdjustment PatchWorkforcemanagementAdherenceAdjustment (string adjustmentId, UpdateAdherenceAdjustmentAgentRequest body)
+        {
+             ApiResponse<CurrentAgentAdherenceAdjustment> localVarResponse = PatchWorkforcemanagementAdherenceAdjustmentWithHttpInfo(adjustmentId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to update</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of CurrentAgentAdherenceAdjustment</returns>
+        
+        public ApiResponse< CurrentAgentAdherenceAdjustment > PatchWorkforcemanagementAdherenceAdjustmentWithHttpInfo (string adjustmentId, UpdateAdherenceAdjustmentAgentRequest body)
+        { 
+            // verify the required parameter 'adjustmentId' is set
+            if (adjustmentId == null)
+                throw new ApiException(400, "Missing required parameter 'adjustmentId' when calling WorkforceManagementApi->PatchWorkforcemanagementAdherenceAdjustment");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementAdherenceAdjustment");
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (adjustmentId != null) localVarPathParams.Add("adjustmentId", this.Configuration.ApiClient.ParameterToString(adjustmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementAdherenceAdjustment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CurrentAgentAdherenceAdjustment>(localVarStatusCode,
+                localVarHeaders,
+                (CurrentAgentAdherenceAdjustment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CurrentAgentAdherenceAdjustment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to update</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of CurrentAgentAdherenceAdjustment</returns>
+        
+        public async System.Threading.Tasks.Task<CurrentAgentAdherenceAdjustment> PatchWorkforcemanagementAdherenceAdjustmentAsync (string adjustmentId, UpdateAdherenceAdjustmentAgentRequest body)
+        {
+             ApiResponse<CurrentAgentAdherenceAdjustment> localVarResponse = await PatchWorkforcemanagementAdherenceAdjustmentAsyncWithHttpInfo(adjustmentId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="adjustmentId">The ID of the adherence adjustment to update</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (CurrentAgentAdherenceAdjustment)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CurrentAgentAdherenceAdjustment>> PatchWorkforcemanagementAdherenceAdjustmentAsyncWithHttpInfo (string adjustmentId, UpdateAdherenceAdjustmentAgentRequest body)
+        { 
+            // verify the required parameter 'adjustmentId' is set
+            if (adjustmentId == null)
+                throw new ApiException(400, "Missing required parameter 'adjustmentId' when calling WorkforceManagementApi->PatchWorkforcemanagementAdherenceAdjustment");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementAdherenceAdjustment");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (adjustmentId != null) localVarPathParams.Add("adjustmentId", this.Configuration.ApiClient.ParameterToString(adjustmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementAdherenceAdjustment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CurrentAgentAdherenceAdjustment>(localVarStatusCode,
+                localVarHeaders,
+                (CurrentAgentAdherenceAdjustment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CurrentAgentAdherenceAdjustment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update an adherence adjustment for the requested agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <param name="body">body</param>
+        /// <returns>AdherenceAdjustment</returns>
+        
+        public AdherenceAdjustment PatchWorkforcemanagementAgentAdherenceAdjustment (string agentId, string adjustmentId, UpdateAdherenceAdjustmentAdminRequest body)
+        {
+             ApiResponse<AdherenceAdjustment> localVarResponse = PatchWorkforcemanagementAgentAdherenceAdjustmentWithHttpInfo(agentId, adjustmentId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an adherence adjustment for the requested agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AdherenceAdjustment</returns>
+        
+        public ApiResponse< AdherenceAdjustment > PatchWorkforcemanagementAgentAdherenceAdjustmentWithHttpInfo (string agentId, string adjustmentId, UpdateAdherenceAdjustmentAdminRequest body)
+        { 
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->PatchWorkforcemanagementAgentAdherenceAdjustment");
+            // verify the required parameter 'adjustmentId' is set
+            if (adjustmentId == null)
+                throw new ApiException(400, "Missing required parameter 'adjustmentId' when calling WorkforceManagementApi->PatchWorkforcemanagementAgentAdherenceAdjustment");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementAgentAdherenceAdjustment");
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/{adjustmentId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+            if (adjustmentId != null) localVarPathParams.Add("adjustmentId", this.Configuration.ApiClient.ParameterToString(adjustmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementAgentAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementAgentAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementAgentAdherenceAdjustment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustment>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an adherence adjustment for the requested agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AdherenceAdjustment</returns>
+        
+        public async System.Threading.Tasks.Task<AdherenceAdjustment> PatchWorkforcemanagementAgentAdherenceAdjustmentAsync (string agentId, string adjustmentId, UpdateAdherenceAdjustmentAdminRequest body)
+        {
+             ApiResponse<AdherenceAdjustment> localVarResponse = await PatchWorkforcemanagementAgentAdherenceAdjustmentAsyncWithHttpInfo(agentId, adjustmentId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an adherence adjustment for the requested agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="adjustmentId">The ID of the adherence adjustment</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustment)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustment>> PatchWorkforcemanagementAgentAdherenceAdjustmentAsyncWithHttpInfo (string agentId, string adjustmentId, UpdateAdherenceAdjustmentAdminRequest body)
+        { 
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->PatchWorkforcemanagementAgentAdherenceAdjustment");
+            
+            // verify the required parameter 'adjustmentId' is set
+            if (adjustmentId == null)
+                throw new ApiException(400, "Missing required parameter 'adjustmentId' when calling WorkforceManagementApi->PatchWorkforcemanagementAgentAdherenceAdjustment");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementAgentAdherenceAdjustment");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/{adjustmentId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+            if (adjustmentId != null) localVarPathParams.Add("adjustmentId", this.Configuration.ApiClient.ParameterToString(adjustmentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementAgentAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementAgentAdherenceAdjustment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementAgentAdherenceAdjustment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustment>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update an adherence explanation 
         /// 
         /// </summary>
@@ -55444,6 +61527,234 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AdherenceExplanationAsyncResponse>(localVarStatusCode,
                 localVarHeaders,
                 (AdherenceExplanationAsyncResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceExplanationAsyncResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update unavailable times for the requested agent 
+        /// Large requests will be partitioned into multiple internal processing batches. Validation will occur against each internal batch independently rather than against the final combined state represented by the entire request
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <returns>BulkUpdateAgentUnavailableTimesResponse</returns>
+        
+        public BulkUpdateAgentUnavailableTimesResponse PatchWorkforcemanagementAgentUnavailabletimes (string agentId, UpdateUnavailableTimesRequest body)
+        {
+             ApiResponse<BulkUpdateAgentUnavailableTimesResponse> localVarResponse = PatchWorkforcemanagementAgentUnavailabletimesWithHttpInfo(agentId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update unavailable times for the requested agent 
+        /// Large requests will be partitioned into multiple internal processing batches. Validation will occur against each internal batch independently rather than against the final combined state represented by the entire request
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of BulkUpdateAgentUnavailableTimesResponse</returns>
+        
+        public ApiResponse< BulkUpdateAgentUnavailableTimesResponse > PatchWorkforcemanagementAgentUnavailabletimesWithHttpInfo (string agentId, UpdateUnavailableTimesRequest body)
+        { 
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->PatchWorkforcemanagementAgentUnavailabletimes");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementAgentUnavailabletimes");
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/unavailabletimes";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementAgentUnavailabletimes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementAgentUnavailabletimes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementAgentUnavailabletimes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkUpdateAgentUnavailableTimesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkUpdateAgentUnavailableTimesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkUpdateAgentUnavailableTimesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update unavailable times for the requested agent 
+        /// Large requests will be partitioned into multiple internal processing batches. Validation will occur against each internal batch independently rather than against the final combined state represented by the entire request
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of BulkUpdateAgentUnavailableTimesResponse</returns>
+        
+        public async System.Threading.Tasks.Task<BulkUpdateAgentUnavailableTimesResponse> PatchWorkforcemanagementAgentUnavailabletimesAsync (string agentId, UpdateUnavailableTimesRequest body)
+        {
+             ApiResponse<BulkUpdateAgentUnavailableTimesResponse> localVarResponse = await PatchWorkforcemanagementAgentUnavailabletimesAsyncWithHttpInfo(agentId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update unavailable times for the requested agent 
+        /// Large requests will be partitioned into multiple internal processing batches. Validation will occur against each internal batch independently rather than against the final combined state represented by the entire request
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (BulkUpdateAgentUnavailableTimesResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BulkUpdateAgentUnavailableTimesResponse>> PatchWorkforcemanagementAgentUnavailabletimesAsyncWithHttpInfo (string agentId, UpdateUnavailableTimesRequest body)
+        { 
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->PatchWorkforcemanagementAgentUnavailabletimes");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementAgentUnavailabletimes");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/unavailabletimes";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementAgentUnavailabletimes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementAgentUnavailabletimes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementAgentUnavailabletimes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BulkUpdateAgentUnavailableTimesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BulkUpdateAgentUnavailableTimesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkUpdateAgentUnavailableTimesResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -56831,6 +63142,931 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ActivityPlanResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ActivityPlanResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update adherence adjustments in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>AdherenceAdjustmentsListing</returns>
+        
+        public AdherenceAdjustmentsListing PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk (string businessUnitId, UpdateAdherenceAdjustmentsBulkRequest body)
+        {
+             ApiResponse<AdherenceAdjustmentsListing> localVarResponse = PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update adherence adjustments in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsListing</returns>
+        
+        public ApiResponse< AdherenceAdjustmentsListing > PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkWithHttpInfo (string businessUnitId, UpdateAdherenceAdjustmentsBulkRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/bulk";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsListing>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update adherence adjustments in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AdherenceAdjustmentsListing</returns>
+        
+        public async System.Threading.Tasks.Task<AdherenceAdjustmentsListing> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkAsync (string businessUnitId, UpdateAdherenceAdjustmentsBulkRequest body)
+        {
+             ApiResponse<AdherenceAdjustmentsListing> localVarResponse = await PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkAsyncWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update adherence adjustments in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsListing>> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkAsyncWithHttpInfo (string businessUnitId, UpdateAdherenceAdjustmentsBulkRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/bulk";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsListing>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to update</param>
+        /// <param name="body">body</param>
+        /// <returns>AdherenceAdjustmentsReasonCode</returns>
+        
+        public AdherenceAdjustmentsReasonCode PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode (string businessUnitId, string reasonCodeId, UpdateAdherenceAdjustmentsReasonCodeRequest body)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCode> localVarResponse = PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithHttpInfo(businessUnitId, reasonCodeId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to update</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCode</returns>
+        
+        public ApiResponse< AdherenceAdjustmentsReasonCode > PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithHttpInfo (string businessUnitId, string reasonCodeId, UpdateAdherenceAdjustmentsReasonCodeRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+            // verify the required parameter 'reasonCodeId' is set
+            if (reasonCodeId == null)
+                throw new ApiException(400, "Missing required parameter 'reasonCodeId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (reasonCodeId != null) localVarPathParams.Add("reasonCodeId", this.Configuration.ApiClient.ParameterToString(reasonCodeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCode>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCode)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to update</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCode</returns>
+        
+        public async System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCode> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsync (string businessUnitId, string reasonCodeId, UpdateAdherenceAdjustmentsReasonCodeRequest body)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCode> localVarResponse = await PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsyncWithHttpInfo(businessUnitId, reasonCodeId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="reasonCodeId">The ID of the reason code to update</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCode)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCode>> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeAsyncWithHttpInfo (string businessUnitId, string reasonCodeId, UpdateAdherenceAdjustmentsReasonCodeRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+            
+            // verify the required parameter 'reasonCodeId' is set
+            if (reasonCodeId == null)
+                throw new ApiException(400, "Missing required parameter 'reasonCodeId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (reasonCodeId != null) localVarPathParams.Add("reasonCodeId", this.Configuration.ApiClient.ParameterToString(reasonCodeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCode>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCode)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update adherence adjustment reason codes in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        public AdherenceAdjustmentsReasonCodesListing PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk (string businessUnitId, UpdateAdherenceAdjustmentsReasonCodesBulkRequest body)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCodesListing> localVarResponse = PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update adherence adjustment reason codes in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        public ApiResponse< AdherenceAdjustmentsReasonCodesListing > PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithHttpInfo (string businessUnitId, UpdateAdherenceAdjustmentsReasonCodesBulkRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCodesListing>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCodesListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCodesListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update adherence adjustment reason codes in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        public async System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCodesListing> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsync (string businessUnitId, UpdateAdherenceAdjustmentsReasonCodesBulkRequest body)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCodesListing> localVarResponse = await PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsyncWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update adherence adjustment reason codes in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCodesListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCodesListing>> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsyncWithHttpInfo (string businessUnitId, UpdateAdherenceAdjustmentsReasonCodesBulkRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCodesListing>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCodesListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCodesListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update adherence adjustments settings for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>BuAdherenceAdjustmentsSettings</returns>
+        
+        public BuAdherenceAdjustmentsSettings PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings (string businessUnitId, UpdateBuAdherenceAdjustmentsSettingsRequest body)
+        {
+             ApiResponse<BuAdherenceAdjustmentsSettings> localVarResponse = PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update adherence adjustments settings for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of BuAdherenceAdjustmentsSettings</returns>
+        
+        public ApiResponse< BuAdherenceAdjustmentsSettings > PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsWithHttpInfo (string businessUnitId, UpdateBuAdherenceAdjustmentsSettingsRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/settings";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAdherenceAdjustmentsSettings>(localVarStatusCode,
+                localVarHeaders,
+                (BuAdherenceAdjustmentsSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAdherenceAdjustmentsSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update adherence adjustments settings for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of BuAdherenceAdjustmentsSettings</returns>
+        
+        public async System.Threading.Tasks.Task<BuAdherenceAdjustmentsSettings> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsAsync (string businessUnitId, UpdateBuAdherenceAdjustmentsSettingsRequest body)
+        {
+             ApiResponse<BuAdherenceAdjustmentsSettings> localVarResponse = await PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsAsyncWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update adherence adjustments settings for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (BuAdherenceAdjustmentsSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BuAdherenceAdjustmentsSettings>> PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsAsyncWithHttpInfo (string businessUnitId, UpdateBuAdherenceAdjustmentsSettingsRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/settings";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAdherenceAdjustmentsSettings>(localVarStatusCode,
+                localVarHeaders,
+                (BuAdherenceAdjustmentsSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAdherenceAdjustmentsSettings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -64912,6 +72148,454 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Submit an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>CurrentAgentAdherenceAdjustment</returns>
+        
+        public CurrentAgentAdherenceAdjustment PostWorkforcemanagementAdherenceAdjustments (AddAdherenceAdjustmentAgentRequest body)
+        {
+             ApiResponse<CurrentAgentAdherenceAdjustment> localVarResponse = PostWorkforcemanagementAdherenceAdjustmentsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Submit an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of CurrentAgentAdherenceAdjustment</returns>
+        
+        public ApiResponse< CurrentAgentAdherenceAdjustment > PostWorkforcemanagementAdherenceAdjustmentsWithHttpInfo (AddAdherenceAdjustmentAgentRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAdherenceAdjustments");
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/adjustments";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAdherenceAdjustments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementAdherenceAdjustments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAdherenceAdjustments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CurrentAgentAdherenceAdjustment>(localVarStatusCode,
+                localVarHeaders,
+                (CurrentAgentAdherenceAdjustment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CurrentAgentAdherenceAdjustment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Submit an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>Task of CurrentAgentAdherenceAdjustment</returns>
+        
+        public async System.Threading.Tasks.Task<CurrentAgentAdherenceAdjustment> PostWorkforcemanagementAdherenceAdjustmentsAsync (AddAdherenceAdjustmentAgentRequest body)
+        {
+             ApiResponse<CurrentAgentAdherenceAdjustment> localVarResponse = await PostWorkforcemanagementAdherenceAdjustmentsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Submit an adherence adjustment for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (CurrentAgentAdherenceAdjustment)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CurrentAgentAdherenceAdjustment>> PostWorkforcemanagementAdherenceAdjustmentsAsyncWithHttpInfo (AddAdherenceAdjustmentAgentRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAdherenceAdjustments");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/adjustments";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAdherenceAdjustments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementAdherenceAdjustments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAdherenceAdjustments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CurrentAgentAdherenceAdjustment>(localVarStatusCode,
+                localVarHeaders,
+                (CurrentAgentAdherenceAdjustment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CurrentAgentAdherenceAdjustment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query adherence adjustments for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>CurrentAgentCursorAdherenceAdjustmentsListing</returns>
+        
+        public CurrentAgentCursorAdherenceAdjustmentsListing PostWorkforcemanagementAdherenceAdjustmentsQuery (AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+        {
+             ApiResponse<CurrentAgentCursorAdherenceAdjustmentsListing> localVarResponse = PostWorkforcemanagementAdherenceAdjustmentsQueryWithHttpInfo(body, before, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query adherence adjustments for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>ApiResponse of CurrentAgentCursorAdherenceAdjustmentsListing</returns>
+        
+        public ApiResponse< CurrentAgentCursorAdherenceAdjustmentsListing > PostWorkforcemanagementAdherenceAdjustmentsQueryWithHttpInfo (AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAdherenceAdjustmentsQuery");
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/adjustments/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAdherenceAdjustmentsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementAdherenceAdjustmentsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAdherenceAdjustmentsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CurrentAgentCursorAdherenceAdjustmentsListing>(localVarStatusCode,
+                localVarHeaders,
+                (CurrentAgentCursorAdherenceAdjustmentsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CurrentAgentCursorAdherenceAdjustmentsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query adherence adjustments for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>Task of CurrentAgentCursorAdherenceAdjustmentsListing</returns>
+        
+        public async System.Threading.Tasks.Task<CurrentAgentCursorAdherenceAdjustmentsListing> PostWorkforcemanagementAdherenceAdjustmentsQueryAsync (AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+        {
+             ApiResponse<CurrentAgentCursorAdherenceAdjustmentsListing> localVarResponse = await PostWorkforcemanagementAdherenceAdjustmentsQueryAsyncWithHttpInfo(body, before, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query adherence adjustments for the current user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>Task of ApiResponse (CurrentAgentCursorAdherenceAdjustmentsListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CurrentAgentCursorAdherenceAdjustmentsListing>> PostWorkforcemanagementAdherenceAdjustmentsQueryAsyncWithHttpInfo (AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAdherenceAdjustmentsQuery");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/adjustments/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAdherenceAdjustmentsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementAdherenceAdjustmentsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAdherenceAdjustmentsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CurrentAgentCursorAdherenceAdjustmentsListing>(localVarStatusCode,
+                localVarHeaders,
+                (CurrentAgentCursorAdherenceAdjustmentsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CurrentAgentCursorAdherenceAdjustmentsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Submit an adherence explanation for the current user 
         /// 
         /// </summary>
@@ -65562,6 +73246,252 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WfmHistoricalAdherenceBulkResponse>(localVarStatusCode,
                 localVarHeaders,
                 (WfmHistoricalAdherenceBulkResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmHistoricalAdherenceBulkResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query adherence adjustments for the requested agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>CursorAdherenceAdjustmentsListing</returns>
+        
+        public CursorAdherenceAdjustmentsListing PostWorkforcemanagementAgentAdherenceAdjustmentsQuery (string agentId, AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+        {
+             ApiResponse<CursorAdherenceAdjustmentsListing> localVarResponse = PostWorkforcemanagementAgentAdherenceAdjustmentsQueryWithHttpInfo(agentId, body, before, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query adherence adjustments for the requested agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>ApiResponse of CursorAdherenceAdjustmentsListing</returns>
+        
+        public ApiResponse< CursorAdherenceAdjustmentsListing > PostWorkforcemanagementAgentAdherenceAdjustmentsQueryWithHttpInfo (string agentId, AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->PostWorkforcemanagementAgentAdherenceAdjustmentsQuery");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentAdherenceAdjustmentsQuery");
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAgentAdherenceAdjustmentsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementAgentAdherenceAdjustmentsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAgentAdherenceAdjustmentsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorAdherenceAdjustmentsListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorAdherenceAdjustmentsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorAdherenceAdjustmentsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query adherence adjustments for the requested agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>Task of CursorAdherenceAdjustmentsListing</returns>
+        
+        public async System.Threading.Tasks.Task<CursorAdherenceAdjustmentsListing> PostWorkforcemanagementAgentAdherenceAdjustmentsQueryAsync (string agentId, AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+        {
+             ApiResponse<CursorAdherenceAdjustmentsListing> localVarResponse = await PostWorkforcemanagementAgentAdherenceAdjustmentsQueryAsyncWithHttpInfo(agentId, body, before, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query adherence adjustments for the requested agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The ID of the agent</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>Task of ApiResponse (CursorAdherenceAdjustmentsListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CursorAdherenceAdjustmentsListing>> PostWorkforcemanagementAgentAdherenceAdjustmentsQueryAsyncWithHttpInfo (string agentId, AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->PostWorkforcemanagementAgentAdherenceAdjustmentsQuery");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentAdherenceAdjustmentsQuery");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAgentAdherenceAdjustmentsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementAgentAdherenceAdjustmentsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAgentAdherenceAdjustmentsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorAdherenceAdjustmentsListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorAdherenceAdjustmentsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorAdherenceAdjustmentsListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -69328,6 +77258,986 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Delete an activity plan 
+        /// Triggers a job to delete the activity plan. No further changes to the activity plan can be made
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan to delete</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        public ActivityPlanJobResponse PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs (string businessUnitId, string activityPlanId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = PostWorkforcemanagementBusinessunitActivityplanDeletionsJobsWithHttpInfo(businessUnitId, activityPlanId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an activity plan 
+        /// Triggers a job to delete the activity plan. No further changes to the activity plan can be made
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan to delete</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        public ApiResponse< ActivityPlanJobResponse > PostWorkforcemanagementBusinessunitActivityplanDeletionsJobsWithHttpInfo (string businessUnitId, string activityPlanId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs");
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an activity plan 
+        /// Triggers a job to delete the activity plan. No further changes to the activity plan can be made
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan to delete</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ActivityPlanJobResponse> PostWorkforcemanagementBusinessunitActivityplanDeletionsJobsAsync (string businessUnitId, string activityPlanId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = await PostWorkforcemanagementBusinessunitActivityplanDeletionsJobsAsyncWithHttpInfo(businessUnitId, activityPlanId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete an activity plan 
+        /// Triggers a job to delete the activity plan. No further changes to the activity plan can be made
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan to delete</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> PostWorkforcemanagementBusinessunitActivityplanDeletionsJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs");
+            
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Triggers a job to delete users from a session in the activity plan occurrence 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="body">body</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        public ActivityPlanJobResponse PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, ActivityPlanDeletionSessionUserIds body)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobsWithHttpInfo(businessUnitId, activityPlanId, occurrenceId, sessionId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Triggers a job to delete users from a session in the activity plan occurrence 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        public ApiResponse< ActivityPlanJobResponse > PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobsWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, ActivityPlanDeletionSessionUserIds body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs");
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs");
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs");
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Triggers a job to delete users from a session in the activity plan occurrence 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ActivityPlanJobResponse> PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobsAsync (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, ActivityPlanDeletionSessionUserIds body)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = await PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobsAsyncWithHttpInfo(businessUnitId, activityPlanId, occurrenceId, sessionId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Triggers a job to delete users from a session in the activity plan occurrence 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="sessionId">The ID of the activity plan occurrence session</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, ActivityPlanDeletionSessionUserIds body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs");
+            
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs");
+            
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs");
+            
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Triggers a job to delete sessions for the activity plan occurrence 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="body">body</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        public ActivityPlanJobResponse PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs (string businessUnitId, string activityPlanId, string occurrenceId, ActivityPlanDeletionSessionIds body)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobsWithHttpInfo(businessUnitId, activityPlanId, occurrenceId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Triggers a job to delete sessions for the activity plan occurrence 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        public ApiResponse< ActivityPlanJobResponse > PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobsWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, ActivityPlanDeletionSessionIds body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs");
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs");
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Triggers a job to delete sessions for the activity plan occurrence 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ActivityPlanJobResponse> PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobsAsync (string businessUnitId, string activityPlanId, string occurrenceId, ActivityPlanDeletionSessionIds body)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = await PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobsAsyncWithHttpInfo(businessUnitId, activityPlanId, occurrenceId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Triggers a job to delete sessions for the activity plan occurrence 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, ActivityPlanDeletionSessionIds body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs");
+            
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs");
+            
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete occurrences for the activity plan 
+        /// Triggers a job to delete occurrences of the activity plan. The activity plan cannot be updated until the job completes
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="body">body</param>
+        /// <returns>ActivityPlanOccurrencesDeletionJobResponse</returns>
+        
+        public ActivityPlanOccurrencesDeletionJobResponse PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs (string businessUnitId, string activityPlanId, ActivityPlanDeletionOccurrenceIds body)
+        {
+             ApiResponse<ActivityPlanOccurrencesDeletionJobResponse> localVarResponse = PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobsWithHttpInfo(businessUnitId, activityPlanId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete occurrences for the activity plan 
+        /// Triggers a job to delete occurrences of the activity plan. The activity plan cannot be updated until the job completes
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of ActivityPlanOccurrencesDeletionJobResponse</returns>
+        
+        public ApiResponse< ActivityPlanOccurrencesDeletionJobResponse > PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobsWithHttpInfo (string businessUnitId, string activityPlanId, ActivityPlanDeletionOccurrenceIds body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs");
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanOccurrencesDeletionJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanOccurrencesDeletionJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanOccurrencesDeletionJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete occurrences for the activity plan 
+        /// Triggers a job to delete occurrences of the activity plan. The activity plan cannot be updated until the job completes
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ActivityPlanOccurrencesDeletionJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ActivityPlanOccurrencesDeletionJobResponse> PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobsAsync (string businessUnitId, string activityPlanId, ActivityPlanDeletionOccurrenceIds body)
+        {
+             ApiResponse<ActivityPlanOccurrencesDeletionJobResponse> localVarResponse = await PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobsAsyncWithHttpInfo(businessUnitId, activityPlanId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete occurrences for the activity plan 
+        /// Triggers a job to delete occurrences of the activity plan. The activity plan cannot be updated until the job completes
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (ActivityPlanOccurrencesDeletionJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityPlanOccurrencesDeletionJobResponse>> PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId, ActivityPlanDeletionOccurrenceIds body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs");
+            
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanOccurrencesDeletionJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanOccurrencesDeletionJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanOccurrencesDeletionJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Run an activity plan manually 
         /// Triggers a job running the activity plan. The activity plan cannot be updated until the job completes
         /// </summary>
@@ -69767,6 +78677,936 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ActivityPlanResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ActivityPlanResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query adherence adjustments for a business unit. Results will be returned using cursor pagination 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>CursorAdherenceAdjustmentsListing</returns>
+        
+        public CursorAdherenceAdjustmentsListing PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+        {
+             ApiResponse<CursorAdherenceAdjustmentsListing> localVarResponse = PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryWithHttpInfo(businessUnitId, body, before, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query adherence adjustments for a business unit. Results will be returned using cursor pagination 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>ApiResponse of CursorAdherenceAdjustmentsListing</returns>
+        
+        public ApiResponse< CursorAdherenceAdjustmentsListing > PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryWithHttpInfo (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorAdherenceAdjustmentsListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorAdherenceAdjustmentsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorAdherenceAdjustmentsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query adherence adjustments for a business unit. Results will be returned using cursor pagination 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>Task of CursorAdherenceAdjustmentsListing</returns>
+        
+        public async System.Threading.Tasks.Task<CursorAdherenceAdjustmentsListing> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryAsync (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+        {
+             ApiResponse<CursorAdherenceAdjustmentsListing> localVarResponse = await PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryAsyncWithHttpInfo(businessUnitId, body, before, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query adherence adjustments for a business unit. Results will be returned using cursor pagination 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The maximum page size is 500. (optional, default to "25")</param>
+        /// <returns>Task of ApiResponse (CursorAdherenceAdjustmentsListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CursorAdherenceAdjustmentsListing>> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryAsyncWithHttpInfo (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorAdherenceAdjustmentsListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorAdherenceAdjustmentsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorAdherenceAdjustmentsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Creates an async query job for adherence adjustments in a business unit. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>BuAdherenceAdjustmentsQueryJob</returns>
+        
+        public BuAdherenceAdjustmentsQueryJob PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body)
+        {
+             ApiResponse<BuAdherenceAdjustmentsQueryJob> localVarResponse = PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates an async query job for adherence adjustments in a business unit. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of BuAdherenceAdjustmentsQueryJob</returns>
+        
+        public ApiResponse< BuAdherenceAdjustmentsQueryJob > PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsWithHttpInfo (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAdherenceAdjustmentsQueryJob>(localVarStatusCode,
+                localVarHeaders,
+                (BuAdherenceAdjustmentsQueryJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAdherenceAdjustmentsQueryJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Creates an async query job for adherence adjustments in a business unit. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of BuAdherenceAdjustmentsQueryJob</returns>
+        
+        public async System.Threading.Tasks.Task<BuAdherenceAdjustmentsQueryJob> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsAsync (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body)
+        {
+             ApiResponse<BuAdherenceAdjustmentsQueryJob> localVarResponse = await PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsAsyncWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates an async query job for adherence adjustments in a business unit. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (BuAdherenceAdjustmentsQueryJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BuAdherenceAdjustmentsQueryJob>> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsAsyncWithHttpInfo (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuAdherenceAdjustmentsQueryJob>(localVarStatusCode,
+                localVarHeaders,
+                (BuAdherenceAdjustmentsQueryJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAdherenceAdjustmentsQueryJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>AdherenceAdjustmentsReasonCode</returns>
+        
+        public AdherenceAdjustmentsReasonCode PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes (string businessUnitId, CreateAdherenceAdjustmentsReasonCodeRequest body)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCode> localVarResponse = PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCode</returns>
+        
+        public ApiResponse< AdherenceAdjustmentsReasonCode > PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesWithHttpInfo (string businessUnitId, CreateAdherenceAdjustmentsReasonCodeRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCode>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCode)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCode</returns>
+        
+        public async System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCode> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesAsync (string businessUnitId, CreateAdherenceAdjustmentsReasonCodeRequest body)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCode> localVarResponse = await PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesAsyncWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create an adherence adjustment reason code for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCode)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCode>> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesAsyncWithHttpInfo (string businessUnitId, CreateAdherenceAdjustmentsReasonCodeRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCode>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCode)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create adherence adjustment reason codes in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        public AdherenceAdjustmentsReasonCodesListing PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk (string businessUnitId, CreateAdherenceAdjustmentsReasonCodesBulkRequest body)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCodesListing> localVarResponse = PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create adherence adjustment reason codes in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        public ApiResponse< AdherenceAdjustmentsReasonCodesListing > PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithHttpInfo (string businessUnitId, CreateAdherenceAdjustmentsReasonCodesBulkRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCodesListing>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCodesListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCodesListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create adherence adjustment reason codes in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of AdherenceAdjustmentsReasonCodesListing</returns>
+        
+        public async System.Threading.Tasks.Task<AdherenceAdjustmentsReasonCodesListing> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsync (string businessUnitId, CreateAdherenceAdjustmentsReasonCodesBulkRequest body)
+        {
+             ApiResponse<AdherenceAdjustmentsReasonCodesListing> localVarResponse = await PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsyncWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create adherence adjustment reason codes in bulk for a business unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AdherenceAdjustmentsReasonCodesListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AdherenceAdjustmentsReasonCodesListing>> PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkAsyncWithHttpInfo (string businessUnitId, CreateAdherenceAdjustmentsReasonCodesBulkRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdherenceAdjustmentsReasonCodesListing>(localVarStatusCode,
+                localVarHeaders,
+                (AdherenceAdjustmentsReasonCodesListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceAdjustmentsReasonCodesListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

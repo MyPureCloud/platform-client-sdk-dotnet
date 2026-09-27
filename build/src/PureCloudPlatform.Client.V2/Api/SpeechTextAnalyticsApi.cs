@@ -522,6 +522,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ProgramInsightsSettings> GetSpeechandtextanalyticsProgramSettingsInsightsWithHttpInfo (string programId);
 
         /// <summary>
+        /// Get program processing settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <returns>ProgramProcessingSettings</returns>
+        
+        ProgramProcessingSettings GetSpeechandtextanalyticsProgramSettingsProcessing (string programId);
+
+        /// <summary>
+        /// Get program processing settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <returns>ApiResponse of ProgramProcessingSettings</returns>
+        
+        ApiResponse<ProgramProcessingSettings> GetSpeechandtextanalyticsProgramSettingsProcessingWithHttpInfo (string programId);
+
+        /// <summary>
         /// Get transcription engine settings of a program
         /// </summary>
         /// <remarks>
@@ -682,6 +706,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ProgramInsightsSettingsEntityListing</returns>
         
         ApiResponse<ProgramInsightsSettingsEntityListing> GetSpeechandtextanalyticsProgramsSettingsInsightsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> programIds = null);
+
+        /// <summary>
+        /// Get the list of program processing settings for the organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to 100)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="programIds">Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional)</param>
+        /// <returns>ProgramProcessingSettingsEntityListing</returns>
+        
+        ProgramProcessingSettingsEntityListing GetSpeechandtextanalyticsProgramsSettingsProcessing (int? pageSize = null, int? pageNumber = null, List<string> programIds = null);
+
+        /// <summary>
+        /// Get the list of program processing settings for the organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to 100)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="programIds">Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional)</param>
+        /// <returns>ApiResponse of ProgramProcessingSettingsEntityListing</returns>
+        
+        ApiResponse<ProgramProcessingSettingsEntityListing> GetSpeechandtextanalyticsProgramsSettingsProcessingWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> programIds = null);
 
         /// <summary>
         /// Get a Speech &amp; Text Analytics program-topic links job by id
@@ -1164,6 +1216,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of TranslateSupportedLanguageList</returns>
         
         ApiResponse<TranslateSupportedLanguageList> GetSpeechandtextanalyticsTranslationsLanguagesWithHttpInfo ();
+
+        /// <summary>
+        /// Update program processing settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <param name="body">Program processing settings</param>
+        /// <returns>ProgramProcessingSettingsPatchResponse</returns>
+        
+        ProgramProcessingSettingsPatchResponse PatchSpeechandtextanalyticsProgramSettingsProcessing (string programId, ProcessingSettingsRequest body);
+
+        /// <summary>
+        /// Update program processing settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <param name="body">Program processing settings</param>
+        /// <returns>ApiResponse of ProgramProcessingSettingsPatchResponse</returns>
+        
+        ApiResponse<ProgramProcessingSettingsPatchResponse> PatchSpeechandtextanalyticsProgramSettingsProcessingWithHttpInfo (string programId, ProcessingSettingsRequest body);
 
         /// <summary>
         /// Patch Speech And Text Analytics Settings
@@ -2196,6 +2274,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ProgramInsightsSettings>> GetSpeechandtextanalyticsProgramSettingsInsightsAsyncWithHttpInfo (string programId);
 
         /// <summary>
+        /// Get program processing settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <returns>Task of ProgramProcessingSettings</returns>
+        
+        System.Threading.Tasks.Task<ProgramProcessingSettings> GetSpeechandtextanalyticsProgramSettingsProcessingAsync (string programId);
+
+        /// <summary>
+        /// Get program processing settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <returns>Task of ApiResponse (ProgramProcessingSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ProgramProcessingSettings>> GetSpeechandtextanalyticsProgramSettingsProcessingAsyncWithHttpInfo (string programId);
+
+        /// <summary>
         /// Get transcription engine settings of a program
         /// </summary>
         /// <remarks>
@@ -2356,6 +2458,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ProgramInsightsSettingsEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ProgramInsightsSettingsEntityListing>> GetSpeechandtextanalyticsProgramsSettingsInsightsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> programIds = null);
+
+        /// <summary>
+        /// Get the list of program processing settings for the organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to 100)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="programIds">Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional)</param>
+        /// <returns>Task of ProgramProcessingSettingsEntityListing</returns>
+        
+        System.Threading.Tasks.Task<ProgramProcessingSettingsEntityListing> GetSpeechandtextanalyticsProgramsSettingsProcessingAsync (int? pageSize = null, int? pageNumber = null, List<string> programIds = null);
+
+        /// <summary>
+        /// Get the list of program processing settings for the organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to 100)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="programIds">Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional)</param>
+        /// <returns>Task of ApiResponse (ProgramProcessingSettingsEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ProgramProcessingSettingsEntityListing>> GetSpeechandtextanalyticsProgramsSettingsProcessingAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> programIds = null);
 
         /// <summary>
         /// Get a Speech &amp; Text Analytics program-topic links job by id
@@ -2838,6 +2968,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (TranslateSupportedLanguageList)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TranslateSupportedLanguageList>> GetSpeechandtextanalyticsTranslationsLanguagesAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Update program processing settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <param name="body">Program processing settings</param>
+        /// <returns>Task of ProgramProcessingSettingsPatchResponse</returns>
+        
+        System.Threading.Tasks.Task<ProgramProcessingSettingsPatchResponse> PatchSpeechandtextanalyticsProgramSettingsProcessingAsync (string programId, ProcessingSettingsRequest body);
+
+        /// <summary>
+        /// Update program processing settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <param name="body">Program processing settings</param>
+        /// <returns>Task of ApiResponse (ProgramProcessingSettingsPatchResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ProgramProcessingSettingsPatchResponse>> PatchSpeechandtextanalyticsProgramSettingsProcessingAsyncWithHttpInfo (string programId, ProcessingSettingsRequest body);
 
         /// <summary>
         /// Patch Speech And Text Analytics Settings
@@ -7609,6 +7765,211 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get program processing settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <returns>ProgramProcessingSettings</returns>
+        
+        public ProgramProcessingSettings GetSpeechandtextanalyticsProgramSettingsProcessing (string programId)
+        {
+             ApiResponse<ProgramProcessingSettings> localVarResponse = GetSpeechandtextanalyticsProgramSettingsProcessingWithHttpInfo(programId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get program processing settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <returns>ApiResponse of ProgramProcessingSettings</returns>
+        
+        public ApiResponse< ProgramProcessingSettings > GetSpeechandtextanalyticsProgramSettingsProcessingWithHttpInfo (string programId)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramSettingsProcessing");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/settings/processing";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramSettingsProcessing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetSpeechandtextanalyticsProgramSettingsProcessing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramSettingsProcessing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ProgramProcessingSettings>(localVarStatusCode,
+                localVarHeaders,
+                (ProgramProcessingSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramProcessingSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get program processing settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <returns>Task of ProgramProcessingSettings</returns>
+        
+        public async System.Threading.Tasks.Task<ProgramProcessingSettings> GetSpeechandtextanalyticsProgramSettingsProcessingAsync (string programId)
+        {
+             ApiResponse<ProgramProcessingSettings> localVarResponse = await GetSpeechandtextanalyticsProgramSettingsProcessingAsyncWithHttpInfo(programId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get program processing settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <returns>Task of ApiResponse (ProgramProcessingSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ProgramProcessingSettings>> GetSpeechandtextanalyticsProgramSettingsProcessingAsyncWithHttpInfo (string programId)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramSettingsProcessing");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/settings/processing";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramSettingsProcessing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetSpeechandtextanalyticsProgramSettingsProcessing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramSettingsProcessing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ProgramProcessingSettings>(localVarStatusCode,
+                localVarHeaders,
+                (ProgramProcessingSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramProcessingSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get transcription engine settings of a program 
         /// 
         /// </summary>
@@ -8865,6 +9226,216 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ProgramInsightsSettingsEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (ProgramInsightsSettingsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramInsightsSettingsEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the list of program processing settings for the organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to 100)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="programIds">Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional)</param>
+        /// <returns>ProgramProcessingSettingsEntityListing</returns>
+        
+        public ProgramProcessingSettingsEntityListing GetSpeechandtextanalyticsProgramsSettingsProcessing (int? pageSize = null, int? pageNumber = null, List<string> programIds = null)
+        {
+             ApiResponse<ProgramProcessingSettingsEntityListing> localVarResponse = GetSpeechandtextanalyticsProgramsSettingsProcessingWithHttpInfo(pageSize, pageNumber, programIds);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of program processing settings for the organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to 100)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="programIds">Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional)</param>
+        /// <returns>ApiResponse of ProgramProcessingSettingsEntityListing</returns>
+        
+        public ApiResponse< ProgramProcessingSettingsEntityListing > GetSpeechandtextanalyticsProgramsSettingsProcessingWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> programIds = null)
+        { 
+
+            var localVarPath = "/api/v2/speechandtextanalytics/programs/settings/processing";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (programIds != null) programIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("programIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramsSettingsProcessing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetSpeechandtextanalyticsProgramsSettingsProcessing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramsSettingsProcessing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ProgramProcessingSettingsEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ProgramProcessingSettingsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramProcessingSettingsEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the list of program processing settings for the organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to 100)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="programIds">Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional)</param>
+        /// <returns>Task of ProgramProcessingSettingsEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<ProgramProcessingSettingsEntityListing> GetSpeechandtextanalyticsProgramsSettingsProcessingAsync (int? pageSize = null, int? pageNumber = null, List<string> programIds = null)
+        {
+             ApiResponse<ProgramProcessingSettingsEntityListing> localVarResponse = await GetSpeechandtextanalyticsProgramsSettingsProcessingAsyncWithHttpInfo(pageSize, pageNumber, programIds);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of program processing settings for the organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to 100)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="programIds">Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional)</param>
+        /// <returns>Task of ApiResponse (ProgramProcessingSettingsEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ProgramProcessingSettingsEntityListing>> GetSpeechandtextanalyticsProgramsSettingsProcessingAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> programIds = null)
+        { 
+
+            var localVarPath = "/api/v2/speechandtextanalytics/programs/settings/processing";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (programIds != null) programIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("programIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramsSettingsProcessing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetSpeechandtextanalyticsProgramsSettingsProcessing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramsSettingsProcessing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ProgramProcessingSettingsEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ProgramProcessingSettingsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramProcessingSettingsEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -12762,6 +13333,234 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TranslateSupportedLanguageList>(localVarStatusCode,
                 localVarHeaders,
                 (TranslateSupportedLanguageList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TranslateSupportedLanguageList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update program processing settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <param name="body">Program processing settings</param>
+        /// <returns>ProgramProcessingSettingsPatchResponse</returns>
+        
+        public ProgramProcessingSettingsPatchResponse PatchSpeechandtextanalyticsProgramSettingsProcessing (string programId, ProcessingSettingsRequest body)
+        {
+             ApiResponse<ProgramProcessingSettingsPatchResponse> localVarResponse = PatchSpeechandtextanalyticsProgramSettingsProcessingWithHttpInfo(programId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update program processing settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <param name="body">Program processing settings</param>
+        /// <returns>ApiResponse of ProgramProcessingSettingsPatchResponse</returns>
+        
+        public ApiResponse< ProgramProcessingSettingsPatchResponse > PatchSpeechandtextanalyticsProgramSettingsProcessingWithHttpInfo (string programId, ProcessingSettingsRequest body)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->PatchSpeechandtextanalyticsProgramSettingsProcessing");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PatchSpeechandtextanalyticsProgramSettingsProcessing");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/settings/processing";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSpeechandtextanalyticsProgramSettingsProcessing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchSpeechandtextanalyticsProgramSettingsProcessing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSpeechandtextanalyticsProgramSettingsProcessing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ProgramProcessingSettingsPatchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ProgramProcessingSettingsPatchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramProcessingSettingsPatchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update program processing settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <param name="body">Program processing settings</param>
+        /// <returns>Task of ProgramProcessingSettingsPatchResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ProgramProcessingSettingsPatchResponse> PatchSpeechandtextanalyticsProgramSettingsProcessingAsync (string programId, ProcessingSettingsRequest body)
+        {
+             ApiResponse<ProgramProcessingSettingsPatchResponse> localVarResponse = await PatchSpeechandtextanalyticsProgramSettingsProcessingAsyncWithHttpInfo(programId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update program processing settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">The id of the program</param>
+        /// <param name="body">Program processing settings</param>
+        /// <returns>Task of ApiResponse (ProgramProcessingSettingsPatchResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ProgramProcessingSettingsPatchResponse>> PatchSpeechandtextanalyticsProgramSettingsProcessingAsyncWithHttpInfo (string programId, ProcessingSettingsRequest body)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->PatchSpeechandtextanalyticsProgramSettingsProcessing");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PatchSpeechandtextanalyticsProgramSettingsProcessing");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/settings/processing";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSpeechandtextanalyticsProgramSettingsProcessing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchSpeechandtextanalyticsProgramSettingsProcessing: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSpeechandtextanalyticsProgramSettingsProcessing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ProgramProcessingSettingsPatchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ProgramProcessingSettingsPatchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramProcessingSettingsPatchResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

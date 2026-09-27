@@ -150,7 +150,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Wrapupcodesgenerated for "wrapupCodesGenerated"
             /// </summary>
             [EnumMember(Value = "wrapupCodesGenerated")]
-            Wrapupcodesgenerated
+            Wrapupcodesgenerated,
+            
+            /// <summary>
+            /// Enum Wrapupcodessupported for "wrapupCodesSupported"
+            /// </summary>
+            [EnumMember(Value = "wrapupCodesSupported")]
+            Wrapupcodessupported
         }
         /// <summary>
         /// Gets or Sets Metrics

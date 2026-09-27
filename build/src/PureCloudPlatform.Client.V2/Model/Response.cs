@@ -134,8 +134,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessagingTemplate">An optional messaging template definition for responseType.MessagingTemplate..</param>
         /// <param name="Assets">Assets used in the response.</param>
         /// <param name="Footer">Footer template definition for responseType.Footer..</param>
+        /// <param name="Form">Form template definition for responseType.Form..</param>
         /// <param name="AppleInvitation">Apple Messages for Business invitation template definition for responseType.AppleInvitation..</param>
-        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, ResponseTypeEnum? ResponseType = null, MessagingTemplate MessagingTemplate = null, List<RmsAssetAddressableRef> Assets = null, FooterTemplate Footer = null, AppleInvitation AppleInvitation = null)
+        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, ResponseTypeEnum? ResponseType = null, MessagingTemplate MessagingTemplate = null, List<RmsAssetAddressableRef> Assets = null, FooterTemplate Footer = null, Form Form = null, AppleInvitation AppleInvitation = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -148,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessagingTemplate = MessagingTemplate;
             this.Assets = Assets;
             this.Footer = Footer;
+            this.Form = Form;
             this.AppleInvitation = AppleInvitation;
             
         }
@@ -266,6 +268,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Form template definition for responseType.Form.
+        /// </summary>
+        /// <value>Form template definition for responseType.Form.</value>
+        [DataMember(Name="form", EmitDefaultValue=false)]
+        public Form Form { get; set; }
+
+
+
+        /// <summary>
         /// Apple Messages for Business invitation template definition for responseType.AppleInvitation.
         /// </summary>
         /// <value>Apple Messages for Business invitation template definition for responseType.AppleInvitation.</value>
@@ -305,6 +316,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessagingTemplate: ").Append(MessagingTemplate).Append("\n");
             sb.Append("  Assets: ").Append(Assets).Append("\n");
             sb.Append("  Footer: ").Append(Footer).Append("\n");
+            sb.Append("  Form: ").Append(Form).Append("\n");
             sb.Append("  AppleInvitation: ").Append(AppleInvitation).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -418,6 +430,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Footer.Equals(other.Footer)
                 ) &&
                 (
+                    this.Form == other.Form ||
+                    this.Form != null &&
+                    this.Form.Equals(other.Form)
+                ) &&
+                (
                     this.AppleInvitation == other.AppleInvitation ||
                     this.AppleInvitation != null &&
                     this.AppleInvitation.Equals(other.AppleInvitation)
@@ -481,6 +498,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Footer != null)
                     hash = hash * 59 + this.Footer.GetHashCode();
+
+                if (this.Form != null)
+                    hash = hash * 59 + this.Form.GetHashCode();
 
                 if (this.AppleInvitation != null)
                     hash = hash * 59 + this.AppleInvitation.GetHashCode();

@@ -272,6 +272,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessageParticipantCommunicationWrapup**](#PostConversationsMessageParticipantCommunicationWrapup) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsMessageParticipantMonitor**](#PostConversationsMessageParticipantMonitor) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
 | [**PostConversationsMessageParticipantReplace**](#PostConversationsMessageParticipantReplace) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsMessageParticipantTakeover**](#PostConversationsMessageParticipantTakeover) | **Post** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/takeover | The User performing this action will takeover the conversation from the participant specified. |
 | [**PostConversationsMessages**](#PostConversationsMessages) | **Post** /api/v2/conversations/messages | Create an outbound messaging conversation. |
 | [**PostConversationsMessagesAgentless**](#PostConversationsMessagesAgentless) | **Post** /api/v2/conversations/messages/agentless | Send an agentless outbound message |
 | [**PostConversationsMessagesInboundOpen**](#PostConversationsMessagesInboundOpen) | **Post** /api/v2/conversations/messages/inbound/open | Send an inbound Open Message |
@@ -17461,6 +17462,71 @@ namespace Example
 void (empty response body)
 
 
+## PostConversationsMessageParticipantTakeover
+
+> void PostConversationsMessageParticipantTakeover (string conversationId, string participantId)
+
+
+The User performing this action will takeover the conversation from the participant specified.
+
+This operation allows a user performing the action to take over a conversation from the participant specified. The user must be monitoring the participant and must have the necessary permissions to perform the takeover action.
+
+Requires ANY permissions: 
+
+* conversation:message:takeover
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessageParticipantTakeoverExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | The id of the conversation being taken over
+            var participantId = participantId_example;  // string | The id of the participant being taken over.
+
+            try
+            { 
+                // The User performing this action will takeover the conversation from the participant specified.
+                apiInstance.PostConversationsMessageParticipantTakeover(conversationId, participantId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageParticipantTakeover: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| The id of the conversation being taken over |  |
+| **participantId** | **string**| The id of the participant being taken over. |  |
+
+### Return type
+
+void (empty response body)
+
+
 ## PostConversationsMessages
 
 > [**CreateOutboundMessagingConversationResponse**](CreateOutboundMessagingConversationResponse) PostConversationsMessages (CreateOutboundMessagingConversationRequest body)
@@ -20497,4 +20563,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 273.0.0_
+_PureCloudPlatform.Client.V2 274.0.0_

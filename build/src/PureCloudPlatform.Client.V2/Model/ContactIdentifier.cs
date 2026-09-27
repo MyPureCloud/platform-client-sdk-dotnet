@@ -97,7 +97,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Externalid for "ExternalId"
             /// </summary>
             [EnumMember(Value = "ExternalId")]
-            Externalid
+            Externalid,
+            
+            /// <summary>
+            /// Enum Socialinstagramhandle for "SocialInstagramHandle"
+            /// </summary>
+            [EnumMember(Value = "SocialInstagramHandle")]
+            Socialinstagramhandle
         }
         /// <summary>
         /// The type of this identifier

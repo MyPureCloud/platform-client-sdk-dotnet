@@ -1118,7 +1118,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsDataextractionDownload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">Unique file Id to download</param>
@@ -1131,7 +1130,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsDataextractionDownload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">Unique file Id to download</param>
@@ -1144,7 +1142,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsDataextractionDownloadsMetadata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
@@ -1162,7 +1159,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsDataextractionDownloadsMetadata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
@@ -2548,7 +2544,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsDataextractionDownloadsBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -2561,7 +2556,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsDataextractionDownloadsBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -4608,7 +4602,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsDataextractionDownload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">Unique file Id to download</param>
@@ -4621,7 +4614,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsDataextractionDownload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">Unique file Id to download</param>
@@ -4634,7 +4626,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsDataextractionDownloadsMetadata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
@@ -4652,7 +4643,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAnalyticsDataextractionDownloadsMetadata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
@@ -6038,7 +6028,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsDataextractionDownloadsBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -6051,7 +6040,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsDataextractionDownloadsBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -16033,7 +16021,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get analytics data warehouse file download 
         /// 
-        /// GetAnalyticsDataextractionDownload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">Unique file Id to download</param>
@@ -16047,7 +16034,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get analytics data warehouse file download 
         /// 
-        /// GetAnalyticsDataextractionDownload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">Unique file Id to download</param>
@@ -16135,7 +16121,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get analytics data warehouse file download 
         /// 
-        /// GetAnalyticsDataextractionDownload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">Unique file Id to download</param>
@@ -16150,7 +16135,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get analytics data warehouse file download 
         /// 
-        /// GetAnalyticsDataextractionDownload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="downloadId">Unique file Id to download</param>
@@ -16240,7 +16224,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get metadata on files available for extraction 
         /// 
-        /// GetAnalyticsDataextractionDownloadsMetadata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
@@ -16260,7 +16243,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get metadata on files available for extraction 
         /// 
-        /// GetAnalyticsDataextractionDownloadsMetadata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
@@ -16355,7 +16337,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get metadata on files available for extraction 
         /// 
-        /// GetAnalyticsDataextractionDownloadsMetadata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
@@ -16376,7 +16357,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get metadata on files available for extraction 
         /// 
-        /// GetAnalyticsDataextractionDownloadsMetadata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
@@ -27932,7 +27912,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get download URLs for analytics data warehouse files 
         /// 
-        /// PostAnalyticsDataextractionDownloadsBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -27947,7 +27926,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get download URLs for analytics data warehouse files 
         /// 
-        /// PostAnalyticsDataextractionDownloadsBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -28040,7 +28018,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get download URLs for analytics data warehouse files 
         /// 
-        /// PostAnalyticsDataextractionDownloadsBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>
@@ -28056,7 +28033,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get download URLs for analytics data warehouse files 
         /// 
-        /// PostAnalyticsDataextractionDownloadsBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">request</param>

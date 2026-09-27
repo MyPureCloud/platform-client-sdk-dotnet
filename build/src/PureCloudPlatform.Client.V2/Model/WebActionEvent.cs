@@ -29,7 +29,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Action">The action that triggered the event. (required).</param>
         /// <param name="ActionMap">The action map that triggered the action. (required).</param>
-        /// <param name="ActionTarget">Deprecated. The target for engagement actions. (required).</param>
         /// <param name="TimeToDisposition">Milliseconds elapsed until the action is disposed..</param>
         /// <param name="ErrorCode">Code of the error returned when the action fails..</param>
         /// <param name="ErrorMessage">Message of the error returned when the action fails..</param>
@@ -41,11 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IpOrganization">Visitor&#39;s IP-based organization or ISP name..</param>
         /// <param name="MktCampaign">Marketing / traffic source information..</param>
         /// <param name="VisitReferrer">Visit&#39;s referrer..</param>
-        public WebActionEvent(EventAction Action = null, ActionEventActionMap ActionMap = null, AddressableEntityRef ActionTarget = null, long? TimeToDisposition = null, string ErrorCode = null, string ErrorMessage = null, string UserAgentString = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyCampaign MktCampaign = null, Referrer VisitReferrer = null)
+        public WebActionEvent(EventAction Action = null, ActionEventActionMap ActionMap = null, long? TimeToDisposition = null, string ErrorCode = null, string ErrorMessage = null, string UserAgentString = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyCampaign MktCampaign = null, Referrer VisitReferrer = null)
         {
             this.Action = Action;
             this.ActionMap = ActionMap;
-            this.ActionTarget = ActionTarget;
             this.TimeToDisposition = TimeToDisposition;
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
@@ -77,15 +75,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The action map that triggered the action.</value>
         [DataMember(Name="actionMap", EmitDefaultValue=false)]
         public ActionEventActionMap ActionMap { get; set; }
-
-
-
-        /// <summary>
-        /// Deprecated. The target for engagement actions.
-        /// </summary>
-        /// <value>Deprecated. The target for engagement actions.</value>
-        [DataMember(Name="actionTarget", EmitDefaultValue=false)]
-        public AddressableEntityRef ActionTarget { get; set; }
 
 
 
@@ -198,7 +187,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ActionMap: ").Append(ActionMap).Append("\n");
-            sb.Append("  ActionTarget: ").Append(ActionTarget).Append("\n");
             sb.Append("  TimeToDisposition: ").Append(TimeToDisposition).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
@@ -259,11 +247,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActionMap == other.ActionMap ||
                     this.ActionMap != null &&
                     this.ActionMap.Equals(other.ActionMap)
-                ) &&
-                (
-                    this.ActionTarget == other.ActionTarget ||
-                    this.ActionTarget != null &&
-                    this.ActionTarget.Equals(other.ActionTarget)
                 ) &&
                 (
                     this.TimeToDisposition == other.TimeToDisposition ||
@@ -338,9 +321,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ActionMap != null)
                     hash = hash * 59 + this.ActionMap.GetHashCode();
-
-                if (this.ActionTarget != null)
-                    hash = hash * 59 + this.ActionTarget.GetHashCode();
 
                 if (this.TimeToDisposition != null)
                     hash = hash * 59 + this.TimeToDisposition.GetHashCode();

@@ -18,6 +18,63 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TtsVoiceEntity :  IEquatable<TtsVoiceEntity>
     {
+        /// <summary>
+        /// The type of the TTS voice
+        /// </summary>
+        /// <value>The type of the TTS voice</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum VoiceTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Standard for "Standard"
+            /// </summary>
+            [EnumMember(Value = "Standard")]
+            Standard,
+            
+            /// <summary>
+            /// Enum Neural for "Neural"
+            /// </summary>
+            [EnumMember(Value = "Neural")]
+            Neural,
+            
+            /// <summary>
+            /// Enum Wavenet for "Wavenet"
+            /// </summary>
+            [EnumMember(Value = "Wavenet")]
+            Wavenet,
+            
+            /// <summary>
+            /// Enum Generative for "Generative"
+            /// </summary>
+            [EnumMember(Value = "Generative")]
+            Generative,
+            
+            /// <summary>
+            /// Enum Chirp3 for "Chirp3"
+            /// </summary>
+            [EnumMember(Value = "Chirp3")]
+            Chirp3,
+            
+            /// <summary>
+            /// Enum Gemini for "Gemini"
+            /// </summary>
+            [EnumMember(Value = "Gemini")]
+            Gemini
+        }
+        /// <summary>
+        /// The type of the TTS voice
+        /// </summary>
+        /// <value>The type of the TTS voice</value>
+        [DataMember(Name="voiceType", EmitDefaultValue=false)]
+        public VoiceTypeEnum? VoiceType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TtsVoiceEntity" /> class.
@@ -28,17 +85,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TtsVoiceEntity" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
+        /// <param name="DisplayName">The display name of the TTS voice.</param>
         /// <param name="Gender">The gender of the TTS voice (required).</param>
+        /// <param name="VoiceType">The type of the TTS voice.</param>
         /// <param name="Language">The language supported by the TTS voice (required).</param>
         /// <param name="Engine">Ths TTS engine this voice belongs to (required).</param>
         /// <param name="IsDefault">The voice is the default voice for its language.</param>
-        public TtsVoiceEntity(string Name = null, string Gender = null, string Language = null, TtsEngineEntity Engine = null, bool? IsDefault = null)
+        /// <param name="SupportedModels">The models supported by the TTS voice.</param>
+        /// <param name="Provider">The provider of the TTS voice.</param>
+        public TtsVoiceEntity(string Name = null, string DisplayName = null, string Gender = null, VoiceTypeEnum? VoiceType = null, string Language = null, TtsEngineEntity Engine = null, bool? IsDefault = null, List<string> SupportedModels = null, string Provider = null)
         {
             this.Name = Name;
+            this.DisplayName = DisplayName;
             this.Gender = Gender;
+            this.VoiceType = VoiceType;
             this.Language = Language;
             this.Engine = Engine;
             this.IsDefault = IsDefault;
+            this.SupportedModels = SupportedModels;
+            this.Provider = Provider;
             
         }
         
@@ -62,11 +127,22 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The display name of the TTS voice
+        /// </summary>
+        /// <value>The display name of the TTS voice</value>
+        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        public string DisplayName { get; set; }
+
+
+
+        /// <summary>
         /// The gender of the TTS voice
         /// </summary>
         /// <value>The gender of the TTS voice</value>
         [DataMember(Name="gender", EmitDefaultValue=false)]
         public string Gender { get; set; }
+
+
 
 
 
@@ -98,6 +174,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The models supported by the TTS voice
+        /// </summary>
+        /// <value>The models supported by the TTS voice</value>
+        [DataMember(Name="supportedModels", EmitDefaultValue=false)]
+        public List<string> SupportedModels { get; set; }
+
+
+
+        /// <summary>
+        /// The provider of the TTS voice
+        /// </summary>
+        /// <value>The provider of the TTS voice</value>
+        [DataMember(Name="provider", EmitDefaultValue=false)]
+        public string Provider { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -116,10 +210,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Gender: ").Append(Gender).Append("\n");
+            sb.Append("  VoiceType: ").Append(VoiceType).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Engine: ").Append(Engine).Append("\n");
             sb.Append("  IsDefault: ").Append(IsDefault).Append("\n");
+            sb.Append("  SupportedModels: ").Append(SupportedModels).Append("\n");
+            sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -172,9 +270,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.DisplayName == other.DisplayName ||
+                    this.DisplayName != null &&
+                    this.DisplayName.Equals(other.DisplayName)
+                ) &&
+                (
                     this.Gender == other.Gender ||
                     this.Gender != null &&
                     this.Gender.Equals(other.Gender)
+                ) &&
+                (
+                    this.VoiceType == other.VoiceType ||
+                    this.VoiceType != null &&
+                    this.VoiceType.Equals(other.VoiceType)
                 ) &&
                 (
                     this.Language == other.Language ||
@@ -190,6 +298,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsDefault == other.IsDefault ||
                     this.IsDefault != null &&
                     this.IsDefault.Equals(other.IsDefault)
+                ) &&
+                (
+                    this.SupportedModels == other.SupportedModels ||
+                    this.SupportedModels != null &&
+                    this.SupportedModels.SequenceEqual(other.SupportedModels)
+                ) &&
+                (
+                    this.Provider == other.Provider ||
+                    this.Provider != null &&
+                    this.Provider.Equals(other.Provider)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -215,8 +333,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
 
+                if (this.DisplayName != null)
+                    hash = hash * 59 + this.DisplayName.GetHashCode();
+
                 if (this.Gender != null)
                     hash = hash * 59 + this.Gender.GetHashCode();
+
+                if (this.VoiceType != null)
+                    hash = hash * 59 + this.VoiceType.GetHashCode();
 
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
@@ -226,6 +350,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IsDefault != null)
                     hash = hash * 59 + this.IsDefault.GetHashCode();
+
+                if (this.SupportedModels != null)
+                    hash = hash * 59 + this.SupportedModels.GetHashCode();
+
+                if (this.Provider != null)
+                    hash = hash * 59 + this.Provider.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

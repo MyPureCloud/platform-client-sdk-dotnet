@@ -184,8 +184,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Version">The version of the Case..</param>
         /// <param name="Reference">The reference identifier of the Case..</param>
+        /// <param name="ExternalId">The identifier of the Case in an external system..</param>
         /// <param name="Caseplan">The Caseplan the Case was created from..</param>
         /// <param name="Summary">Overview information for the Case..</param>
+        /// <param name="Description">The description of the Case..</param>
         /// <param name="Owner">The owner of the Case..</param>
         /// <param name="Status">The status of the Case..</param>
         /// <param name="Priority">The priority of the Case..</param>
@@ -200,14 +202,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreationStatus">The creation status of the Case..</param>
         /// <param name="TtlSeconds">The time-to-live in seconds for the lifetime of the Case..</param>
         /// <param name="FailureReason">The reason the Case failed, if applicable..</param>
-        public Case(string Name = null, StarrableDivision Division = null, int? Version = null, string Reference = null, CaseplanReference Caseplan = null, string Summary = null, CaseUserReference Owner = null, StatusEnum? Status = null, PriorityEnum? Priority = null, DateTime? DateDue = null, DateTime? DateStarted = null, DateTime? DateClosed = null, DateTime? DateCreated = null, DateTime? DateModified = null, CaseUserReference ModifiedBy = null, CaseExternalContactReference ExternalContact = null, CustomerIntentReference CustomerIntent = null, CreationStatusEnum? CreationStatus = null, int? TtlSeconds = null, FailureReason FailureReason = null)
+        public Case(string Name = null, StarrableDivision Division = null, int? Version = null, string Reference = null, string ExternalId = null, CaseplanReference Caseplan = null, string Summary = null, string Description = null, CaseUserReference Owner = null, StatusEnum? Status = null, PriorityEnum? Priority = null, DateTime? DateDue = null, DateTime? DateStarted = null, DateTime? DateClosed = null, DateTime? DateCreated = null, DateTime? DateModified = null, CaseUserReference ModifiedBy = null, CaseExternalContactReference ExternalContact = null, CustomerIntentReference CustomerIntent = null, CreationStatusEnum? CreationStatus = null, int? TtlSeconds = null, FailureReason FailureReason = null)
         {
             this.Name = Name;
             this.Division = Division;
             this.Version = Version;
             this.Reference = Reference;
+            this.ExternalId = ExternalId;
             this.Caseplan = Caseplan;
             this.Summary = Summary;
+            this.Description = Description;
             this.Owner = Owner;
             this.Status = Status;
             this.Priority = Priority;
@@ -273,6 +277,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The identifier of the Case in an external system.
+        /// </summary>
+        /// <value>The identifier of the Case in an external system.</value>
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
+
+
+
+        /// <summary>
         /// The Caseplan the Case was created from.
         /// </summary>
         /// <value>The Caseplan the Case was created from.</value>
@@ -287,6 +300,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Overview information for the Case.</value>
         [DataMember(Name="summary", EmitDefaultValue=false)]
         public string Summary { get; set; }
+
+
+
+        /// <summary>
+        /// The description of the Case.
+        /// </summary>
+        /// <value>The description of the Case.</value>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
 
 
 
@@ -417,8 +439,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Reference: ").Append(Reference).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  Caseplan: ").Append(Caseplan).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Owner: ").Append(Owner).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
@@ -500,6 +524,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Reference.Equals(other.Reference)
                 ) &&
                 (
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
                     this.Caseplan == other.Caseplan ||
                     this.Caseplan != null &&
                     this.Caseplan.Equals(other.Caseplan)
@@ -508,6 +537,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Summary == other.Summary ||
                     this.Summary != null &&
                     this.Summary.Equals(other.Summary)
+                ) &&
+                (
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
                 ) &&
                 (
                     this.Owner == other.Owner ||
@@ -612,11 +646,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Reference != null)
                     hash = hash * 59 + this.Reference.GetHashCode();
 
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
+
                 if (this.Caseplan != null)
                     hash = hash * 59 + this.Caseplan.GetHashCode();
 
                 if (this.Summary != null)
                     hash = hash * 59 + this.Summary.GetHashCode();
+
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
 
                 if (this.Owner != null)
                     hash = hash * 59 + this.Owner.GetHashCode();

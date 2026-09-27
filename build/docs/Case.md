@@ -11,8 +11,10 @@
 | **Division** | [**StarrableDivision**](StarrableDivision) | The division to which this entity belongs. | [optional] |
 | **Version** | **int?** | The version of the Case. | [optional] |
 | **Reference** | **string** | The reference identifier of the Case. | [optional] |
+| **ExternalId** | **string** | The identifier of the Case in an external system. | [optional] |
 | **Caseplan** | [**CaseplanReference**](CaseplanReference) | The Caseplan the Case was created from. | [optional] |
 | **Summary** | **string** | Overview information for the Case. | [optional] |
+| **Description** | **string** | The description of the Case. | [optional] |
 | **Owner** | [**CaseUserReference**](CaseUserReference) | The owner of the Case. | [optional] |
 | **Status** | **string** | The status of the Case. | [optional] |
 | **Priority** | **string** | The priority of the Case. | [optional] |
@@ -31,4 +33,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 273.0.0_
+_PureCloudPlatform.Client.V2 274.0.0_

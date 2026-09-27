@@ -34,15 +34,15 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Totp for "TOTP"
+            /// Enum Totp for "totp"
             /// </summary>
-            [EnumMember(Value = "TOTP")]
+            [EnumMember(Value = "totp")]
             Totp,
             
             /// <summary>
-            /// Enum Webauthn for "WEBAUTHN"
+            /// Enum Webauthn for "webauthn"
             /// </summary>
-            [EnumMember(Value = "WEBAUTHN")]
+            [EnumMember(Value = "webauthn")]
             Webauthn
         }
         /// <summary>

@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="V3SynchronizationUploadUrlRequest" /> class.
         /// </summary>
-        /// <param name="FileName">Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%&#x60;]\&quot;&gt;[~&lt;#| (required).</param>
+        /// <param name="FileName">Path and name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%&#x60;]\&quot;&gt;[~&lt;#| (required).</param>
         /// <param name="ContentMd5">Content MD5 of the file to upload encoded in base64, example: \&quot;f8VicOenD6gaWTW3Lqy+KQ&#x3D;&#x3D;\&quot;. Not the hexadecimal representation as \&quot;7fc56270e7a70fa81a5935b72eacbe29\&quot;..</param>
         /// <param name="ContentType">The content type of the file to upload.</param>
         /// <param name="ContentLength">The length of the file to upload in bytes.</param>
@@ -45,9 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%&#x60;]\&quot;&gt;[~&lt;#|
+        /// Path and name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%&#x60;]\&quot;&gt;[~&lt;#|
         /// </summary>
-        /// <value>Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%&#x60;]\&quot;&gt;[~&lt;#|</value>
+        /// <value>Path and name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%&#x60;]\&quot;&gt;[~&lt;#|</value>
         [DataMember(Name="fileName", EmitDefaultValue=false)]
         public string FileName { get; set; }
 

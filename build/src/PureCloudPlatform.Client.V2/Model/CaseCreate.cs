@@ -30,16 +30,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CaseplanId">The ID of the Caseplan used to create the Case. (required).</param>
         /// <param name="OwnerId">The ID of the owner of the Case..</param>
         /// <param name="Summary">Overview information for the Case. Valid length between 3 and 512 characters..</param>
+        /// <param name="Description">The description of the Case. Maximum length of 512 characters..</param>
+        /// <param name="ExternalId">The identifier of the Case in an external system. Minimum length is 1 character. Maximum length of 64 characters..</param>
         /// <param name="ExternalContactId">The ID of the External Contact associated with the Case. (required).</param>
         /// <param name="ConversationId">The ID of the Conversation associated with the Case..</param>
         /// <param name="WorkitemId">The ID of the Workitem associated with the Case..</param>
         /// <param name="TtlSeconds">Epoch timestamp in seconds for the Case time-to-live. Cannot be more than 365 days after the current time..</param>
         /// <param name="Intake">The intake data for the Case. Maximum of 10 intake objects allowed..</param>
-        public CaseCreate(string CaseplanId = null, string OwnerId = null, string Summary = null, string ExternalContactId = null, string ConversationId = null, string WorkitemId = null, int? TtlSeconds = null, List<Intake> Intake = null)
+        public CaseCreate(string CaseplanId = null, string OwnerId = null, string Summary = null, string Description = null, string ExternalId = null, string ExternalContactId = null, string ConversationId = null, string WorkitemId = null, int? TtlSeconds = null, List<Intake> Intake = null)
         {
             this.CaseplanId = CaseplanId;
             this.OwnerId = OwnerId;
             this.Summary = Summary;
+            this.Description = Description;
+            this.ExternalId = ExternalId;
             this.ExternalContactId = ExternalContactId;
             this.ConversationId = ConversationId;
             this.WorkitemId = WorkitemId;
@@ -74,6 +78,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Overview information for the Case. Valid length between 3 and 512 characters.</value>
         [DataMember(Name="summary", EmitDefaultValue=false)]
         public string Summary { get; set; }
+
+
+
+        /// <summary>
+        /// The description of the Case. Maximum length of 512 characters.
+        /// </summary>
+        /// <value>The description of the Case. Maximum length of 512 characters.</value>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+
+
+
+        /// <summary>
+        /// The identifier of the Case in an external system. Minimum length is 1 character. Maximum length of 64 characters.
+        /// </summary>
+        /// <value>The identifier of the Case in an external system. Minimum length is 1 character. Maximum length of 64 characters.</value>
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
 
 
 
@@ -133,6 +155,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CaseplanId: ").Append(CaseplanId).Append("\n");
             sb.Append("  OwnerId: ").Append(OwnerId).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  WorkitemId: ").Append(WorkitemId).Append("\n");
@@ -194,6 +218,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Summary.Equals(other.Summary)
                 ) &&
                 (
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
+                ) &&
+                (
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
                     this.ExternalContactId == other.ExternalContactId ||
                     this.ExternalContactId != null &&
                     this.ExternalContactId.Equals(other.ExternalContactId)
@@ -239,6 +273,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Summary != null)
                     hash = hash * 59 + this.Summary.GetHashCode();
+
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
+
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
 
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();

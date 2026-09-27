@@ -2880,8 +2880,6 @@ namespace Example
 
 Get analytics data warehouse file download
 
-GetAnalyticsDataextractionDownload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:datawarehouse:view
@@ -2942,8 +2940,6 @@ void (empty response body)
 
 
 Get metadata on files available for extraction
-
-GetAnalyticsDataextractionDownloadsMetadata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6428,8 +6424,6 @@ namespace Example
 
 Get download URLs for analytics data warehouse files
 
-PostAnalyticsDataextractionDownloadsBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:datawarehouse:view
@@ -8864,4 +8858,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 273.0.0_
+_PureCloudPlatform.Client.V2 274.0.0_

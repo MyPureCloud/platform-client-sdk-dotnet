@@ -820,6 +820,62 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Case> PatchCasemanagementCaseDatedueWithHttpInfo (string caseId, CaseDateDueUpdate body);
 
         /// <summary>
+        /// Update the description of a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchCasemanagementCaseDescription is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Description update.</param>
+        /// <returns>Case</returns>
+        
+        Case PatchCasemanagementCaseDescription (string caseId, CaseDescriptionUpdate body);
+
+        /// <summary>
+        /// Update the description of a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchCasemanagementCaseDescription is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Description update.</param>
+        /// <returns>ApiResponse of Case</returns>
+        
+        ApiResponse<Case> PatchCasemanagementCaseDescriptionWithHttpInfo (string caseId, CaseDescriptionUpdate body);
+
+        /// <summary>
+        /// Update the external identifier of a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchCasemanagementCaseExternalid is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">External identifier update.</param>
+        /// <returns>Case</returns>
+        
+        Case PatchCasemanagementCaseExternalid (string caseId, CaseExternalIdUpdate body);
+
+        /// <summary>
+        /// Update the external identifier of a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchCasemanagementCaseExternalid is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">External identifier update.</param>
+        /// <returns>ApiResponse of Case</returns>
+        
+        ApiResponse<Case> PatchCasemanagementCaseExternalidWithHttpInfo (string caseId, CaseExternalIdUpdate body);
+
+        /// <summary>
         /// Update the ownerId of a Case
         /// </summary>
         /// <remarks>
@@ -2170,6 +2226,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Case)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCaseDatedueAsyncWithHttpInfo (string caseId, CaseDateDueUpdate body);
+
+        /// <summary>
+        /// Update the description of a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchCasemanagementCaseDescription is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Description update.</param>
+        /// <returns>Task of Case</returns>
+        
+        System.Threading.Tasks.Task<Case> PatchCasemanagementCaseDescriptionAsync (string caseId, CaseDescriptionUpdate body);
+
+        /// <summary>
+        /// Update the description of a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchCasemanagementCaseDescription is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Description update.</param>
+        /// <returns>Task of ApiResponse (Case)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCaseDescriptionAsyncWithHttpInfo (string caseId, CaseDescriptionUpdate body);
+
+        /// <summary>
+        /// Update the external identifier of a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchCasemanagementCaseExternalid is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">External identifier update.</param>
+        /// <returns>Task of Case</returns>
+        
+        System.Threading.Tasks.Task<Case> PatchCasemanagementCaseExternalidAsync (string caseId, CaseExternalIdUpdate body);
+
+        /// <summary>
+        /// Update the external identifier of a Case.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchCasemanagementCaseExternalid is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">External identifier update.</param>
+        /// <returns>Task of ApiResponse (Case)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCaseExternalidAsyncWithHttpInfo (string caseId, CaseExternalIdUpdate body);
 
         /// <summary>
         /// Update the ownerId of a Case
@@ -9221,6 +9333,470 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchCasemanagementCaseDatedue: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseDatedue: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Case>(localVarStatusCode,
+                localVarHeaders,
+                (Case) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Case)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update the description of a Case. 
+        /// 
+        /// PatchCasemanagementCaseDescription is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Description update.</param>
+        /// <returns>Case</returns>
+        
+        public Case PatchCasemanagementCaseDescription (string caseId, CaseDescriptionUpdate body)
+        {
+             ApiResponse<Case> localVarResponse = PatchCasemanagementCaseDescriptionWithHttpInfo(caseId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the description of a Case. 
+        /// 
+        /// PatchCasemanagementCaseDescription is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Description update.</param>
+        /// <returns>ApiResponse of Case</returns>
+        
+        public ApiResponse< Case > PatchCasemanagementCaseDescriptionWithHttpInfo (string caseId, CaseDescriptionUpdate body)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->PatchCasemanagementCaseDescription");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PatchCasemanagementCaseDescription");
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/description";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseDescription: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchCasemanagementCaseDescription: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseDescription: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Case>(localVarStatusCode,
+                localVarHeaders,
+                (Case) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Case)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update the description of a Case. 
+        /// 
+        /// PatchCasemanagementCaseDescription is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Description update.</param>
+        /// <returns>Task of Case</returns>
+        
+        public async System.Threading.Tasks.Task<Case> PatchCasemanagementCaseDescriptionAsync (string caseId, CaseDescriptionUpdate body)
+        {
+             ApiResponse<Case> localVarResponse = await PatchCasemanagementCaseDescriptionAsyncWithHttpInfo(caseId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the description of a Case. 
+        /// 
+        /// PatchCasemanagementCaseDescription is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">Description update.</param>
+        /// <returns>Task of ApiResponse (Case)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCaseDescriptionAsyncWithHttpInfo (string caseId, CaseDescriptionUpdate body)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->PatchCasemanagementCaseDescription");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PatchCasemanagementCaseDescription");
+            
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/description";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseDescription: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchCasemanagementCaseDescription: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseDescription: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Case>(localVarStatusCode,
+                localVarHeaders,
+                (Case) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Case)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update the external identifier of a Case. 
+        /// 
+        /// PatchCasemanagementCaseExternalid is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">External identifier update.</param>
+        /// <returns>Case</returns>
+        
+        public Case PatchCasemanagementCaseExternalid (string caseId, CaseExternalIdUpdate body)
+        {
+             ApiResponse<Case> localVarResponse = PatchCasemanagementCaseExternalidWithHttpInfo(caseId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the external identifier of a Case. 
+        /// 
+        /// PatchCasemanagementCaseExternalid is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">External identifier update.</param>
+        /// <returns>ApiResponse of Case</returns>
+        
+        public ApiResponse< Case > PatchCasemanagementCaseExternalidWithHttpInfo (string caseId, CaseExternalIdUpdate body)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->PatchCasemanagementCaseExternalid");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PatchCasemanagementCaseExternalid");
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/externalid";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseExternalid: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchCasemanagementCaseExternalid: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseExternalid: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Case>(localVarStatusCode,
+                localVarHeaders,
+                (Case) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Case)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update the external identifier of a Case. 
+        /// 
+        /// PatchCasemanagementCaseExternalid is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">External identifier update.</param>
+        /// <returns>Task of Case</returns>
+        
+        public async System.Threading.Tasks.Task<Case> PatchCasemanagementCaseExternalidAsync (string caseId, CaseExternalIdUpdate body)
+        {
+             ApiResponse<Case> localVarResponse = await PatchCasemanagementCaseExternalidAsyncWithHttpInfo(caseId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the external identifier of a Case. 
+        /// 
+        /// PatchCasemanagementCaseExternalid is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseId">Case identifier.</param>
+        /// <param name="body">External identifier update.</param>
+        /// <returns>Task of ApiResponse (Case)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Case>> PatchCasemanagementCaseExternalidAsyncWithHttpInfo (string caseId, CaseExternalIdUpdate body)
+        { 
+            // verify the required parameter 'caseId' is set
+            if (caseId == null)
+                throw new ApiException(400, "Missing required parameter 'caseId' when calling CaseManagementApi->PatchCasemanagementCaseExternalid");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PatchCasemanagementCaseExternalid");
+            
+
+            var localVarPath = "/api/v2/casemanagement/cases/{caseId}/externalid";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseExternalid: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchCasemanagementCaseExternalid: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchCasemanagementCaseExternalid: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Case>(localVarStatusCode,
                 localVarHeaders,

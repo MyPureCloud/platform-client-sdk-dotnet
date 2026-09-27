@@ -39,6 +39,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Bot,
             
             /// <summary>
+            /// Enum Businessprocess for "businessprocess"
+            /// </summary>
+            [EnumMember(Value = "businessprocess")]
+            Businessprocess,
+            
+            /// <summary>
             /// Enum Commonmodule for "commonmodule"
             /// </summary>
             [EnumMember(Value = "commonmodule")]

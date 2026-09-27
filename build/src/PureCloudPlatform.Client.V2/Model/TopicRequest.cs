@@ -70,6 +70,33 @@ namespace PureCloudPlatform.Client.V2.Model
             _90
         }
         /// <summary>
+        /// The topic matching type Lexical or Semantic, default value is Semantic
+        /// </summary>
+        /// <value>The topic matching type Lexical or Semantic, default value is Semantic</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MatchingTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Lexical for "Lexical"
+            /// </summary>
+            [EnumMember(Value = "Lexical")]
+            Lexical,
+            
+            /// <summary>
+            /// Enum Semantic for "Semantic"
+            /// </summary>
+            [EnumMember(Value = "Semantic")]
+            Semantic
+        }
+        /// <summary>
         /// The topic participants, default value is All
         /// </summary>
         /// <value>The topic participants, default value is All</value>
@@ -109,6 +136,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="strictness", EmitDefaultValue=false)]
         public StrictnessEnum? Strictness { get; set; }
         /// <summary>
+        /// The topic matching type Lexical or Semantic, default value is Semantic
+        /// </summary>
+        /// <value>The topic matching type Lexical or Semantic, default value is Semantic</value>
+        [DataMember(Name="matchingType", EmitDefaultValue=false)]
+        public MatchingTypeEnum? MatchingType { get; set; }
+        /// <summary>
         /// The topic participants, default value is All
         /// </summary>
         /// <value>The topic participants, default value is All</value>
@@ -127,16 +160,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">The topic description.</param>
         /// <param name="Strictness">The topic strictness, default value is 72.</param>
         /// <param name="ProgramIds">The ids of programs associated to the topic.</param>
+        /// <param name="MatchingType">The topic matching type Lexical or Semantic, default value is Semantic.</param>
         /// <param name="Tags">The topic tags.</param>
         /// <param name="Dialect">The topic dialect (required).</param>
         /// <param name="Participants">The topic participants, default value is All.</param>
         /// <param name="Phrases">The topic phrases.</param>
-        public TopicRequest(string Name = null, string Description = null, StrictnessEnum? Strictness = null, List<string> ProgramIds = null, List<string> Tags = null, string Dialect = null, ParticipantsEnum? Participants = null, List<Phrase> Phrases = null)
+        public TopicRequest(string Name = null, string Description = null, StrictnessEnum? Strictness = null, List<string> ProgramIds = null, MatchingTypeEnum? MatchingType = null, List<string> Tags = null, string Dialect = null, ParticipantsEnum? Participants = null, List<Phrase> Phrases = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.Strictness = Strictness;
             this.ProgramIds = ProgramIds;
+            this.MatchingType = MatchingType;
             this.Tags = Tags;
             this.Dialect = Dialect;
             this.Participants = Participants;
@@ -172,6 +207,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The ids of programs associated to the topic</value>
         [DataMember(Name="programIds", EmitDefaultValue=false)]
         public List<string> ProgramIds { get; set; }
+
+
 
 
 
@@ -216,6 +253,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Strictness: ").Append(Strictness).Append("\n");
             sb.Append("  ProgramIds: ").Append(ProgramIds).Append("\n");
+            sb.Append("  MatchingType: ").Append(MatchingType).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  Dialect: ").Append(Dialect).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
@@ -281,6 +319,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ProgramIds.SequenceEqual(other.ProgramIds)
                 ) &&
                 (
+                    this.MatchingType == other.MatchingType ||
+                    this.MatchingType != null &&
+                    this.MatchingType.Equals(other.MatchingType)
+                ) &&
+                (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
@@ -324,6 +367,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ProgramIds != null)
                     hash = hash * 59 + this.ProgramIds.GetHashCode();
+
+                if (this.MatchingType != null)
+                    hash = hash * 59 + this.MatchingType.GetHashCode();
 
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();

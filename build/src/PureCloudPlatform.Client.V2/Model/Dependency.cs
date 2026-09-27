@@ -93,6 +93,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Bridgeaction,
             
             /// <summary>
+            /// Enum Businessprocessflow for "BUSINESSPROCESSFLOW"
+            /// </summary>
+            [EnumMember(Value = "BUSINESSPROCESSFLOW")]
+            Businessprocessflow,
+            
+            /// <summary>
             /// Enum Commonmoduleflow for "COMMONMODULEFLOW"
             /// </summary>
             [EnumMember(Value = "COMMONMODULEFLOW")]

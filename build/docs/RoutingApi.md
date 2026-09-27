@@ -3701,7 +3701,7 @@ namespace Example
 
 ## GetRoutingPredictorsKeyperformanceindicators
 
-> [**List&lt;KeyPerformanceIndicator&gt;**](KeyPerformanceIndicator) GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null, List<string> expand = null)
+> [**KeyPerformanceIndicatorEntityListing**](KeyPerformanceIndicatorEntityListing) GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null, List<string> expand = null)
 
 
 Get a list of Key Performance Indicators
@@ -3738,7 +3738,7 @@ namespace Example
             try
             { 
                 // Get a list of Key Performance Indicators
-                List<KeyPerformanceIndicator> result = apiInstance.GetRoutingPredictorsKeyperformanceindicators(kpiGroup, expand);
+                KeyPerformanceIndicatorEntityListing result = apiInstance.GetRoutingPredictorsKeyperformanceindicators(kpiGroup, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3760,7 +3760,7 @@ namespace Example
 
 ### Return type
 
-[**List<KeyPerformanceIndicator>**](KeyPerformanceIndicator)
+[**KeyPerformanceIndicatorEntityListing**](KeyPerformanceIndicatorEntityListing)
 
 
 ## GetRoutingPredictorsKeyperformanceindicatortypes
@@ -8470,6 +8470,8 @@ namespace Example
 
 Create a benefit assessment job.
 
+Queues with Benefit Assessment results less than 7 days old are skipped. If every queue in the requested divisions has recent results, the request is rejected.
+
 Requires ANY permissions: 
 
 * routing:assessment:add
@@ -11447,4 +11449,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 273.0.0_
+_PureCloudPlatform.Client.V2 274.0.0_

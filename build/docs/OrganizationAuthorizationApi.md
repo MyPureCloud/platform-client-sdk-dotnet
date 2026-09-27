@@ -566,6 +566,7 @@ Delete Cloned User
 
 Requires ANY permissions: 
 
+* authorization:orgTrusteeClonedUser:delete
 * authorization:orgTrusteeUser:delete
 
 ### Example
@@ -1637,6 +1638,7 @@ Get Cloned User
 
 Requires ANY permissions: 
 
+* authorization:orgTrusteeClonedUser:view
 * authorization:orgTrusteeUser:view
 
 ### Example
@@ -1701,6 +1703,7 @@ The list of cloned users in the trustor organization (i.e. users with a native u
 
 Requires ANY permissions: 
 
+* authorization:orgTrusteeClonedUser:view
 * authorization:orgTrusteeUser:view
 
 ### Example
@@ -2940,8 +2943,9 @@ namespace Example
 
 Creates a clone of the trustee user in the trustor org.
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
+* authorization:orgTrusteeClonedUser:add
 * authorization:orgTrusteeUser:add
 
 ### Example
@@ -3125,4 +3129,4 @@ namespace Example
 [**TrustUser**](TrustUser)
 
 
-_PureCloudPlatform.Client.V2 273.0.0_
+_PureCloudPlatform.Client.V2 274.0.0_
