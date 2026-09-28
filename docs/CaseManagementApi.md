@@ -35,6 +35,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetCasemanagementCasesQueryJobResults**](#GetCasemanagementCasesQueryJobResults) | **Get** /api/v2/casemanagement/cases/query/jobs/{jobId}/results | Get results for a case query job |
 | [**GetCasemanagementCasesReference**](#GetCasemanagementCasesReference) | **Get** /api/v2/casemanagement/cases/references/{referenceId} | Get a Case by reference. |
 | [**PatchCasemanagementCaseDatedue**](#PatchCasemanagementCaseDatedue) | **Patch** /api/v2/casemanagement/cases/{caseId}/datedue | Update the due date of a Case. |
+| [**PatchCasemanagementCaseDescription**](#PatchCasemanagementCaseDescription) | **Patch** /api/v2/casemanagement/cases/{caseId}/description | Update the description of a Case. |
+| [**PatchCasemanagementCaseExternalid**](#PatchCasemanagementCaseExternalid) | **Patch** /api/v2/casemanagement/cases/{caseId}/externalid | Update the external identifier of a Case. |
 | [**PatchCasemanagementCaseOwner**](#PatchCasemanagementCaseOwner) | **Patch** /api/v2/casemanagement/cases/{caseId}/owner | Update the ownerId of a Case |
 | [**PatchCasemanagementCasePriority**](#PatchCasemanagementCasePriority) | **Patch** /api/v2/casemanagement/cases/{caseId}/priority | Update priority of a Case. |
 | [**PatchCasemanagementCaseSummary**](#PatchCasemanagementCaseSummary) | **Patch** /api/v2/casemanagement/cases/{caseId}/summary | Update summary of a Case. |
@@ -1965,6 +1967,138 @@ namespace Example
 [**Case**](Case)
 
 
+## PatchCasemanagementCaseDescription
+
+> [**Case**](Case) PatchCasemanagementCaseDescription (string caseId, CaseDescriptionUpdate body)
+
+
+Update the description of a Case.
+
+PatchCasemanagementCaseDescription is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* caseManagement:caseDescription:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchCasemanagementCaseDescriptionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseId = caseId_example;  // string | Case identifier.
+            var body = new CaseDescriptionUpdate(); // CaseDescriptionUpdate | Description update.
+
+            try
+            { 
+                // Update the description of a Case.
+                Case result = apiInstance.PatchCasemanagementCaseDescription(caseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.PatchCasemanagementCaseDescription: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseId** | **string**| Case identifier. |  |
+| **body** | [**CaseDescriptionUpdate**](CaseDescriptionUpdate)| Description update. |  |
+
+### Return type
+
+[**Case**](Case)
+
+
+## PatchCasemanagementCaseExternalid
+
+> [**Case**](Case) PatchCasemanagementCaseExternalid (string caseId, CaseExternalIdUpdate body)
+
+
+Update the external identifier of a Case.
+
+PatchCasemanagementCaseExternalid is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* caseManagement:caseExternalId:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchCasemanagementCaseExternalidExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseId = caseId_example;  // string | Case identifier.
+            var body = new CaseExternalIdUpdate(); // CaseExternalIdUpdate | External identifier update.
+
+            try
+            { 
+                // Update the external identifier of a Case.
+                Case result = apiInstance.PatchCasemanagementCaseExternalid(caseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.PatchCasemanagementCaseExternalid: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseId** | **string**| Case identifier. |  |
+| **body** | [**CaseExternalIdUpdate**](CaseExternalIdUpdate)| External identifier update. |  |
+
+### Return type
+
+[**Case**](Case)
+
+
 ## PatchCasemanagementCaseOwner
 
 > [**Case**](Case) PatchCasemanagementCaseOwner (string caseId, CaseOwnerUpdate body)
@@ -3309,4 +3443,4 @@ namespace Example
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatform.Client.V2 273.0.0_
+_PureCloudPlatform.Client.V2 274.0.0_

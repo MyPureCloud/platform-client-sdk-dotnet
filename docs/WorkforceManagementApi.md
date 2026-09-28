@@ -6,8 +6,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteWorkforcemanagementAdherenceAdjustment**](#DeleteWorkforcemanagementAdherenceAdjustment) | **Delete** /api/v2/workforcemanagement/adherence/adjustments/{adjustmentId} | Delete an adherence adjustment for the current user |
 | [**DeleteWorkforcemanagementBusinessunit**](#DeleteWorkforcemanagementBusinessunit) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId} | Delete business unit |
 | [**DeleteWorkforcemanagementBusinessunitActivitycode**](#DeleteWorkforcemanagementBusinessunitActivitycode) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId} | Deletes an activity code |
+| [**DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode**](#DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId} | Delete an adherence adjustment reason code for a business unit |
+| [**DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk**](#DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk | Delete adherence adjustment reason codes in bulk for a business unit |
 | [**DeleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory**](#DeleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory | Delete staffing group allocations history created for a capacity plan before the given date |
 | [**DeleteWorkforcemanagementBusinessunitPlanninggroup**](#DeleteWorkforcemanagementBusinessunitPlanninggroup) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Deletes the planning group |
 | [**DeleteWorkforcemanagementBusinessunitSchedulebid**](#DeleteWorkforcemanagementBusinessunitSchedulebid) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId} | Delete a schedule bid |
@@ -28,10 +31,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteWorkforcemanagementManagementunitWorkplan**](#DeleteWorkforcemanagementManagementunitWorkplan) | **Delete** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId} | Delete a work plan |
 | [**DeleteWorkforcemanagementManagementunitWorkplanrotation**](#DeleteWorkforcemanagementManagementunitWorkplanrotation) | **Delete** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId} | Delete a work plan rotation |
 | [**GetWorkforcemanagementAdherence**](#GetWorkforcemanagementAdherence) | **Get** /api/v2/workforcemanagement/adherence | Get a list of UserScheduleAdherence records for the requested users |
+| [**GetWorkforcemanagementAdherenceAdjustment**](#GetWorkforcemanagementAdherenceAdjustment) | **Get** /api/v2/workforcemanagement/adherence/adjustments/{adjustmentId} | Get an adherence adjustment for the current user |
 | [**GetWorkforcemanagementAdherenceExplanation**](#GetWorkforcemanagementAdherenceExplanation) | **Get** /api/v2/workforcemanagement/adherence/explanations/{explanationId} | Get an adherence explanation for the current user |
 | [**GetWorkforcemanagementAdherenceExplanationsJob**](#GetWorkforcemanagementAdherenceExplanationsJob) | **Get** /api/v2/workforcemanagement/adherence/explanations/jobs/{jobId} | Query the status of an adherence explanation operation. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementAdherenceHistoricalBulkJob**](#GetWorkforcemanagementAdherenceHistoricalBulkJob) | **Get** /api/v2/workforcemanagement/adherence/historical/bulk/jobs/{jobId} | Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementAdherenceHistoricalJob**](#GetWorkforcemanagementAdherenceHistoricalJob) | **Get** /api/v2/workforcemanagement/adherence/historical/jobs/{jobId} | Query the status of a historical adherence request operation. Only the user who started the operation can query the status |
+| [**GetWorkforcemanagementAgentAdherenceAdjustment**](#GetWorkforcemanagementAgentAdherenceAdjustment) | **Get** /api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/{adjustmentId} | Get an adherence adjustment for the requested agent |
 | [**GetWorkforcemanagementAgentAdherenceExplanation**](#GetWorkforcemanagementAgentAdherenceExplanation) | **Get** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId} | Get an adherence explanation |
 | [**GetWorkforcemanagementAgentManagementunit**](#GetWorkforcemanagementAgentManagementunit) | **Get** /api/v2/workforcemanagement/agents/{agentId}/managementunit | Get the management unit to which the agent belongs |
 | [**GetWorkforcemanagementAgentsMeAdherenceHistoricalJob**](#GetWorkforcemanagementAgentsMeAdherenceHistoricalJob) | **Get** /api/v2/workforcemanagement/agents/me/adherence/historical/jobs/{jobId} | Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status |
@@ -47,9 +52,21 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitActivitycode**](#GetWorkforcemanagementBusinessunitActivitycode) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId} | Get an activity code |
 | [**GetWorkforcemanagementBusinessunitActivitycodes**](#GetWorkforcemanagementBusinessunitActivitycodes) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes | Get activity codes |
 | [**GetWorkforcemanagementBusinessunitActivityplan**](#GetWorkforcemanagementBusinessunitActivityplan) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId} | Get an activity plan |
+| [**GetWorkforcemanagementBusinessunitActivityplanDeletionsJob**](#GetWorkforcemanagementBusinessunitActivityplanDeletionsJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs/{jobId} | Gets an activity plan deletion job |
+| [**GetWorkforcemanagementBusinessunitActivityplanJobs**](#GetWorkforcemanagementBusinessunitActivityplanJobs) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/jobs | Gets the latest job for an activity plan in the business unit |
+| [**GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob**](#GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs/{jobId} | Gets a session users deletion job |
+| [**GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob**](#GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs/{jobId} | Gets an activity plan sessions deletion job |
+| [**GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob**](#GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs/{jobId} | Gets an occurrences deletion job |
 | [**GetWorkforcemanagementBusinessunitActivityplanRunsJob**](#GetWorkforcemanagementBusinessunitActivityplanRunsJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs/{jobId} | Gets an activity plan run job |
 | [**GetWorkforcemanagementBusinessunitActivityplans**](#GetWorkforcemanagementBusinessunitActivityplans) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans | Get activity plans |
 | [**GetWorkforcemanagementBusinessunitActivityplansJobs**](#GetWorkforcemanagementBusinessunitActivityplansJobs) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/jobs | Gets the latest job for all activity plans in the business unit |
+| [**GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk**](#GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/bulk | Get adherence adjustments in bulk by ID for a business unit |
+| [**GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob**](#GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs/{jobId} | Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status |
+| [**GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs**](#GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs | Get query job history for the logged in user. |
+| [**GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode**](#GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId} | Get an adherence adjustment reason code for a business unit |
+| [**GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes**](#GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes | Get adherence adjustment reason codes for a business unit |
+| [**GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk**](#GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk | Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes. |
+| [**GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings**](#GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/settings | Get adherence adjustments settings for a business unit |
 | [**GetWorkforcemanagementBusinessunitAlternativeshiftsSettings**](#GetWorkforcemanagementBusinessunitAlternativeshiftsSettings) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings | Get alternative shifts settings for a business unit |
 | [**GetWorkforcemanagementBusinessunitAlternativeshiftsTrade**](#GetWorkforcemanagementBusinessunitAlternativeshiftsTrade) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/{tradeId} | Get an alternative shifts trade in a business unit for a given trade ID |
 | [**GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob**](#GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search/jobs/{jobId} | Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status |
@@ -176,13 +193,20 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementWorkplanbidPreferences**](#GetWorkforcemanagementWorkplanbidPreferences) | **Get** /api/v2/workforcemanagement/workplanbids/{bidId}/preferences | Gets an agent&#39;s work plan bidding preference |
 | [**GetWorkforcemanagementWorkplanbidWorkplans**](#GetWorkforcemanagementWorkplanbidWorkplans) | **Get** /api/v2/workforcemanagement/workplanbids/{bidId}/workplans | Gets an agent&#39;s work plans for a bid |
 | [**GetWorkforcemanagementWorkplanbids**](#GetWorkforcemanagementWorkplanbids) | **Get** /api/v2/workforcemanagement/workplanbids | Gets the list of work plan bids that belong to an agent |
+| [**PatchWorkforcemanagementAdherenceAdjustment**](#PatchWorkforcemanagementAdherenceAdjustment) | **Patch** /api/v2/workforcemanagement/adherence/adjustments/{adjustmentId} | Update an adherence adjustment for the current user |
+| [**PatchWorkforcemanagementAgentAdherenceAdjustment**](#PatchWorkforcemanagementAgentAdherenceAdjustment) | **Patch** /api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/{adjustmentId} | Update an adherence adjustment for the requested agent |
 | [**PatchWorkforcemanagementAgentAdherenceExplanation**](#PatchWorkforcemanagementAgentAdherenceExplanation) | **Patch** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId} | Update an adherence explanation |
+| [**PatchWorkforcemanagementAgentUnavailabletimes**](#PatchWorkforcemanagementAgentUnavailabletimes) | **Patch** /api/v2/workforcemanagement/agents/{agentId}/unavailabletimes | Update unavailable times for the requested agent |
 | [**PatchWorkforcemanagementAlternativeshiftsTrade**](#PatchWorkforcemanagementAlternativeshiftsTrade) | **Patch** /api/v2/workforcemanagement/alternativeshifts/trades/{tradeId} | Update my alternative shifts trade by trade ID |
 | [**PatchWorkforcemanagementAlternativeshiftsTradesStateJobs**](#PatchWorkforcemanagementAlternativeshiftsTradesStateJobs) | **Patch** /api/v2/workforcemanagement/alternativeshifts/trades/state/jobs | Bulk update alternative shift trade states |
 | [**PatchWorkforcemanagementBusinessunit**](#PatchWorkforcemanagementBusinessunit) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId} | Update business unit |
 | [**PatchWorkforcemanagementBusinessunitActivitycode**](#PatchWorkforcemanagementBusinessunitActivitycode) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId} | Update an activity code |
 | [**PatchWorkforcemanagementBusinessunitActivitycodesBulk**](#PatchWorkforcemanagementBusinessunitActivitycodesBulk) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/bulk | Update multiple activity codes |
 | [**PatchWorkforcemanagementBusinessunitActivityplan**](#PatchWorkforcemanagementBusinessunitActivityplan) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId} | Update an activity plan |
+| [**PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk**](#PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/bulk | Update adherence adjustments in bulk for a business unit |
+| [**PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode**](#PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId} | Update an adherence adjustment reason code for a business unit |
+| [**PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk**](#PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk | Update adherence adjustment reason codes in bulk for a business unit |
+| [**PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings**](#PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/settings | Update adherence adjustments settings for a business unit |
 | [**PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings**](#PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings | Update alternative shifts settings for a business unit |
 | [**PatchWorkforcemanagementBusinessunitCapacityplan**](#PatchWorkforcemanagementBusinessunitCapacityplan) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId} | Update a capacity plan configuration |
 | [**PatchWorkforcemanagementBusinessunitMinimumstaffingSettings**](#PatchWorkforcemanagementBusinessunitMinimumstaffingSettings) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/minimumstaffing/settings | Update minimum staffing settings for a business unit |
@@ -217,9 +241,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementUserWorkplanbidranks**](#PatchWorkforcemanagementUserWorkplanbidranks) | **Patch** /api/v2/workforcemanagement/users/{userId}/workplanbidranks | Update work plan bid ranks for a user |
 | [**PatchWorkforcemanagementUsersWorkplanbidranksBulk**](#PatchWorkforcemanagementUsersWorkplanbidranksBulk) | **Patch** /api/v2/workforcemanagement/users/workplanbidranks/bulk | Update bulk work plan bid ranks on users. Max 50 users can be updated at a time. |
 | [**PatchWorkforcemanagementWorkplanbidPreferences**](#PatchWorkforcemanagementWorkplanbidPreferences) | **Patch** /api/v2/workforcemanagement/workplanbids/{bidId}/preferences | Update an agent&#39;s work plan bidding preference |
+| [**PostWorkforcemanagementAdherenceAdjustments**](#PostWorkforcemanagementAdherenceAdjustments) | **Post** /api/v2/workforcemanagement/adherence/adjustments | Submit an adherence adjustment for the current user |
+| [**PostWorkforcemanagementAdherenceAdjustmentsQuery**](#PostWorkforcemanagementAdherenceAdjustmentsQuery) | **Post** /api/v2/workforcemanagement/adherence/adjustments/query | Query adherence adjustments for the current user |
 | [**PostWorkforcemanagementAdherenceExplanations**](#PostWorkforcemanagementAdherenceExplanations) | **Post** /api/v2/workforcemanagement/adherence/explanations | Submit an adherence explanation for the current user |
 | [**PostWorkforcemanagementAdherenceExplanationsQuery**](#PostWorkforcemanagementAdherenceExplanationsQuery) | **Post** /api/v2/workforcemanagement/adherence/explanations/query | Query adherence explanations for the current user |
 | [**PostWorkforcemanagementAdherenceHistoricalBulk**](#PostWorkforcemanagementAdherenceHistoricalBulk) | **Post** /api/v2/workforcemanagement/adherence/historical/bulk | Request a historical adherence report in bulk |
+| [**PostWorkforcemanagementAgentAdherenceAdjustmentsQuery**](#PostWorkforcemanagementAgentAdherenceAdjustmentsQuery) | **Post** /api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/query | Query adherence adjustments for the requested agent |
 | [**PostWorkforcemanagementAgentAdherenceExplanations**](#PostWorkforcemanagementAgentAdherenceExplanations) | **Post** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations | Add an adherence explanation for the requested user |
 | [**PostWorkforcemanagementAgentAdherenceExplanationsQuery**](#PostWorkforcemanagementAgentAdherenceExplanationsQuery) | **Post** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/query | Query adherence explanations for the given agent across a specified range |
 | [**PostWorkforcemanagementAgentSchedulingpreferencesQuery**](#PostWorkforcemanagementAgentSchedulingpreferencesQuery) | **Post** /api/v2/workforcemanagement/agents/{agentId}/schedulingpreferences/query | Get agent scheduling preferences |
@@ -237,8 +264,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementAlternativeshiftsOffersSearchJobs**](#PostWorkforcemanagementAlternativeshiftsOffersSearchJobs) | **Post** /api/v2/workforcemanagement/alternativeshifts/offers/search/jobs | Request a search of alternative shift offers for a given shift |
 | [**PostWorkforcemanagementAlternativeshiftsTrades**](#PostWorkforcemanagementAlternativeshiftsTrades) | **Post** /api/v2/workforcemanagement/alternativeshifts/trades | Create my alternative shift trade using an existing offer&#39;s jobId |
 | [**PostWorkforcemanagementBusinessunitActivitycodes**](#PostWorkforcemanagementBusinessunitActivitycodes) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes | Create a new activity code |
+| [**PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs**](#PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs | Delete an activity plan |
+| [**PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs**](#PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs | Triggers a job to delete users from a session in the activity plan occurrence |
+| [**PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs**](#PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs | Triggers a job to delete sessions for the activity plan occurrence |
+| [**PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs**](#PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs | Delete occurrences for the activity plan |
 | [**PostWorkforcemanagementBusinessunitActivityplanRunsJobs**](#PostWorkforcemanagementBusinessunitActivityplanRunsJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs | Run an activity plan manually |
 | [**PostWorkforcemanagementBusinessunitActivityplans**](#PostWorkforcemanagementBusinessunitActivityplans) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans | Create an activity plan |
+| [**PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery**](#PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query | Query adherence adjustments for a business unit. Results will be returned using cursor pagination |
+| [**PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs**](#PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs | Creates an async query job for adherence adjustments in a business unit. |
+| [**PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes**](#PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes | Create an adherence adjustment reason code for a business unit |
+| [**PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk**](#PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk | Create adherence adjustment reason codes in bulk for a business unit |
 | [**PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery**](#PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/explanations/query | Query adherence explanations across an entire business unit for the requested period |
 | [**PostWorkforcemanagementBusinessunitAgentschedulesSearch**](#PostWorkforcemanagementBusinessunitAgentschedulesSearch) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/agentschedules/search | Search published schedules |
 | [**PostWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch**](#PostWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search | List alternative shifts trades for a given management unit or agent |
@@ -358,6 +393,67 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutWorkforcemanagementManagementunitTimeofflimitValues**](#PutWorkforcemanagementManagementunitTimeofflimitValues) | **Put** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values | Sets daily values for a date range of time off limit object |
 | [**PutWorkforcemanagementSchedulebidPreference**](#PutWorkforcemanagementSchedulebidPreference) | **Put** /api/v2/workforcemanagement/schedulebids/{bidId}/preference | Update an agent&#39;s schedule set preference |
 
+
+
+## DeleteWorkforcemanagementAdherenceAdjustment
+
+> void DeleteWorkforcemanagementAdherenceAdjustment (string adjustmentId)
+
+
+Delete an adherence adjustment for the current user
+
+Requires ANY permissions: 
+
+* wfm:agentAdherenceAdjustments:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWorkforcemanagementAdherenceAdjustmentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var adjustmentId = adjustmentId_example;  // string | The ID of the adherence adjustment to delete
+
+            try
+            { 
+                // Delete an adherence adjustment for the current user
+                apiInstance.DeleteWorkforcemanagementAdherenceAdjustment(adjustmentId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.DeleteWorkforcemanagementAdherenceAdjustment: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **adjustmentId** | **string**| The ID of the adherence adjustment to delete |  |
+
+### Return type
+
+void (empty response body)
 
 
 ## DeleteWorkforcemanagementBusinessunit
@@ -480,6 +576,132 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
 | **activityCodeId** | **string**| The ID of the activity code to delete |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode
+
+> void DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode (string businessUnitId, string reasonCodeId)
+
+
+Delete an adherence adjustment reason code for a business unit
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var reasonCodeId = reasonCodeId_example;  // string | The ID of the reason code to delete
+
+            try
+            { 
+                // Delete an adherence adjustment reason code for a business unit
+                apiInstance.DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode(businessUnitId, reasonCodeId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **reasonCodeId** | **string**| The ID of the reason code to delete |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk
+
+> void DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk (string businessUnitId, List<string> ids)
+
+
+Delete adherence adjustment reason codes in bulk for a business unit
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var ids = new List<string>(); // List<string> | The IDs of the reason codes to delete
+
+            try
+            { 
+                // Delete adherence adjustment reason codes in bulk for a business unit
+                apiInstance.DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId, ids);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.DeleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **ids** | [**List<string>**](string)| The IDs of the reason codes to delete |  |
 
 ### Return type
 
@@ -1755,6 +1977,68 @@ namespace Example
 [**List<UserScheduleAdherence>**](UserScheduleAdherence)
 
 
+## GetWorkforcemanagementAdherenceAdjustment
+
+> [**CurrentAgentAdherenceAdjustment**](CurrentAgentAdherenceAdjustment) GetWorkforcemanagementAdherenceAdjustment (string adjustmentId)
+
+
+Get an adherence adjustment for the current user
+
+Requires ANY permissions: 
+
+* wfm:agentAdherenceAdjustments:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementAdherenceAdjustmentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var adjustmentId = adjustmentId_example;  // string | The ID of the adherence adjustment
+
+            try
+            { 
+                // Get an adherence adjustment for the current user
+                CurrentAgentAdherenceAdjustment result = apiInstance.GetWorkforcemanagementAdherenceAdjustment(adjustmentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementAdherenceAdjustment: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **adjustmentId** | **string**| The ID of the adherence adjustment |  |
+
+### Return type
+
+[**CurrentAgentAdherenceAdjustment**](CurrentAgentAdherenceAdjustment)
+
+
 ## GetWorkforcemanagementAdherenceExplanation
 
 > [**AdherenceExplanationResponse**](AdherenceExplanationResponse) GetWorkforcemanagementAdherenceExplanation (string explanationId)
@@ -2005,6 +2289,70 @@ namespace Example
 ### Return type
 
 [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse)
+
+
+## GetWorkforcemanagementAgentAdherenceAdjustment
+
+> [**AdherenceAdjustment**](AdherenceAdjustment) GetWorkforcemanagementAgentAdherenceAdjustment (string agentId, string adjustmentId)
+
+
+Get an adherence adjustment for the requested agent
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementAgentAdherenceAdjustmentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var agentId = agentId_example;  // string | The ID of the agent
+            var adjustmentId = adjustmentId_example;  // string | The ID of the adherence adjustment
+
+            try
+            { 
+                // Get an adherence adjustment for the requested agent
+                AdherenceAdjustment result = apiInstance.GetWorkforcemanagementAgentAdherenceAdjustment(agentId, adjustmentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementAgentAdherenceAdjustment: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentId** | **string**| The ID of the agent |  |
+| **adjustmentId** | **string**| The ID of the adherence adjustment |  |
+
+### Return type
+
+[**AdherenceAdjustment**](AdherenceAdjustment)
 
 
 ## GetWorkforcemanagementAgentAdherenceExplanation
@@ -3159,6 +3507,340 @@ namespace Example
 [**ActivityPlanResponse**](ActivityPlanResponse)
 
 
+## GetWorkforcemanagementBusinessunitActivityplanDeletionsJob
+
+> [**ActivityPlanJobResponse**](ActivityPlanJobResponse) GetWorkforcemanagementBusinessunitActivityplanDeletionsJob (string businessUnitId, string activityPlanId, string jobId)
+
+
+Gets an activity plan deletion job
+
+Requires ANY permissions: 
+
+* wfm:activityPlanDeletionJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitActivityplanDeletionsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan associated with the deletion job
+            var jobId = jobId_example;  // string | The ID of the activity plan deletion job
+
+            try
+            { 
+                // Gets an activity plan deletion job
+                ActivityPlanJobResponse result = apiInstance.GetWorkforcemanagementBusinessunitActivityplanDeletionsJob(businessUnitId, activityPlanId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitActivityplanDeletionsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan associated with the deletion job |  |
+| **jobId** | **string**| The ID of the activity plan deletion job |  |
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## GetWorkforcemanagementBusinessunitActivityplanJobs
+
+> [**ActivityPlanJobResponse**](ActivityPlanJobResponse) GetWorkforcemanagementBusinessunitActivityplanJobs (string businessUnitId, string activityPlanId)
+
+
+Gets the latest job for an activity plan in the business unit
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitActivityplanJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan associated with the run job
+
+            try
+            { 
+                // Gets the latest job for an activity plan in the business unit
+                ActivityPlanJobResponse result = apiInstance.GetWorkforcemanagementBusinessunitActivityplanJobs(businessUnitId, activityPlanId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitActivityplanJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan associated with the run job |  |
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob
+
+> [**ActivityPlanJobResponse**](ActivityPlanJobResponse) GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, string jobId)
+
+
+Gets a session users deletion job
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceSessionUserDeletionJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan
+            var occurrenceId = occurrenceId_example;  // string | The ID of the activity plan occurrence
+            var sessionId = sessionId_example;  // string | The ID of the activity plan occurrence session
+            var jobId = jobId_example;  // string | The ID of the activity plan occurrence session users deletion job
+
+            try
+            { 
+                // Gets a session users deletion job
+                ActivityPlanJobResponse result = apiInstance.GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob(businessUnitId, activityPlanId, occurrenceId, sessionId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan |  |
+| **occurrenceId** | **string**| The ID of the activity plan occurrence |  |
+| **sessionId** | **string**| The ID of the activity plan occurrence session |  |
+| **jobId** | **string**| The ID of the activity plan occurrence session users deletion job |  |
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob
+
+> [**ActivityPlanJobResponse**](ActivityPlanJobResponse) GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob (string businessUnitId, string activityPlanId, string occurrenceId, string jobId)
+
+
+Gets an activity plan sessions deletion job
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceSessionDeletionJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan
+            var occurrenceId = occurrenceId_example;  // string | The ID of the activity plan occurrence
+            var jobId = jobId_example;  // string | The ID of the activity plan sessions deletion job
+
+            try
+            { 
+                // Gets an activity plan sessions deletion job
+                ActivityPlanJobResponse result = apiInstance.GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob(businessUnitId, activityPlanId, occurrenceId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan |  |
+| **occurrenceId** | **string**| The ID of the activity plan occurrence |  |
+| **jobId** | **string**| The ID of the activity plan sessions deletion job |  |
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob
+
+> [**ActivityPlanJobResponse**](ActivityPlanJobResponse) GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob (string businessUnitId, string activityPlanId, string jobId)
+
+
+Gets an occurrences deletion job
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceDeletionJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan
+            var jobId = jobId_example;  // string | The ID of the activity plan occurrences deletion job
+
+            try
+            { 
+                // Gets an occurrences deletion job
+                ActivityPlanJobResponse result = apiInstance.GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob(businessUnitId, activityPlanId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan |  |
+| **jobId** | **string**| The ID of the activity plan occurrences deletion job |  |
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
 ## GetWorkforcemanagementBusinessunitActivityplanRunsJob
 
 > [**ActivityPlanJobResponse**](ActivityPlanJobResponse) GetWorkforcemanagementBusinessunitActivityplanRunsJob (string businessUnitId, string activityPlanId, string jobId)
@@ -3349,6 +4031,450 @@ namespace Example
 ### Return type
 
 [**ActivityPlanJobListing**](ActivityPlanJobListing)
+
+
+## GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk
+
+> [**AdherenceAdjustmentsListing**](AdherenceAdjustmentsListing) GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk (string businessUnitId, List<string> adjustmentIds)
+
+
+Get adherence adjustments in bulk by ID for a business unit
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var adjustmentIds = new List<string>(); // List<string> | The IDs of the adherence adjustments to fetch
+
+            try
+            { 
+                // Get adherence adjustments in bulk by ID for a business unit
+                AdherenceAdjustmentsListing result = apiInstance.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk(businessUnitId, adjustmentIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **adjustmentIds** | [**List<string>**](string)| The IDs of the adherence adjustments to fetch |  |
+
+### Return type
+
+[**AdherenceAdjustmentsListing**](AdherenceAdjustmentsListing)
+
+
+## GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob
+
+> [**BuAdherenceAdjustmentsQueryJob**](BuAdherenceAdjustmentsQueryJob) GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob (string businessUnitId, string jobId)
+
+
+Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var jobId = jobId_example;  // string | The ID of the query job
+
+            try
+            { 
+                // Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status
+                BuAdherenceAdjustmentsQueryJob result = apiInstance.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob(businessUnitId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **jobId** | **string**| The ID of the query job |  |
+
+### Return type
+
+[**BuAdherenceAdjustmentsQueryJob**](BuAdherenceAdjustmentsQueryJob)
+
+
+## GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs
+
+> [**BuAdherenceAdjustmentsQueryJobsReferenceListing**](BuAdherenceAdjustmentsQueryJobsReferenceListing) GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs (string businessUnitId)
+
+
+Get query job history for the logged in user.
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+
+            try
+            { 
+                // Get query job history for the logged in user.
+                BuAdherenceAdjustmentsQueryJobsReferenceListing result = apiInstance.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs(businessUnitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+
+### Return type
+
+[**BuAdherenceAdjustmentsQueryJobsReferenceListing**](BuAdherenceAdjustmentsQueryJobsReferenceListing)
+
+
+## GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode
+
+> [**AdherenceAdjustmentsReasonCode**](AdherenceAdjustmentsReasonCode) GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode (string businessUnitId, string reasonCodeId)
+
+
+Get an adherence adjustment reason code for a business unit
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var reasonCodeId = reasonCodeId_example;  // string | The ID of the reason code to fetch
+
+            try
+            { 
+                // Get an adherence adjustment reason code for a business unit
+                AdherenceAdjustmentsReasonCode result = apiInstance.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode(businessUnitId, reasonCodeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **reasonCodeId** | **string**| The ID of the reason code to fetch |  |
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCode**](AdherenceAdjustmentsReasonCode)
+
+
+## GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes
+
+> [**AdherenceAdjustmentsReasonCodesListing**](AdherenceAdjustmentsReasonCodesListing) GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes (string businessUnitId)
+
+
+Get adherence adjustment reason codes for a business unit
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+
+            try
+            { 
+                // Get adherence adjustment reason codes for a business unit
+                AdherenceAdjustmentsReasonCodesListing result = apiInstance.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes(businessUnitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCodesListing**](AdherenceAdjustmentsReasonCodesListing)
+
+
+## GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk
+
+> [**AdherenceAdjustmentsReasonCodesListing**](AdherenceAdjustmentsReasonCodesListing) GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk (string businessUnitId, List<string> ids)
+
+
+Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes.
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var ids = new List<string>(); // List<string> | The IDs of the reason codes to fetch
+
+            try
+            { 
+                // Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes.
+                AdherenceAdjustmentsReasonCodesListing result = apiInstance.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId, ids);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **ids** | [**List<string>**](string)| The IDs of the reason codes to fetch |  |
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCodesListing**](AdherenceAdjustmentsReasonCodesListing)
+
+
+## GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings
+
+> [**BuAdherenceAdjustmentsSettings**](BuAdherenceAdjustmentsSettings) GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings (string businessUnitId)
+
+
+Get adherence adjustments settings for a business unit
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsSettings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+
+            try
+            { 
+                // Get adherence adjustments settings for a business unit
+                BuAdherenceAdjustmentsSettings result = apiInstance.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings(businessUnitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+
+### Return type
+
+[**BuAdherenceAdjustmentsSettings**](BuAdherenceAdjustmentsSettings)
 
 
 ## GetWorkforcemanagementBusinessunitAlternativeshiftsSettings
@@ -11639,6 +12765,136 @@ This endpoint does require any parameters.
 [**AgentWorkPlanBids**](AgentWorkPlanBids)
 
 
+## PatchWorkforcemanagementAdherenceAdjustment
+
+> [**CurrentAgentAdherenceAdjustment**](CurrentAgentAdherenceAdjustment) PatchWorkforcemanagementAdherenceAdjustment (string adjustmentId, UpdateAdherenceAdjustmentAgentRequest body)
+
+
+Update an adherence adjustment for the current user
+
+Requires ANY permissions: 
+
+* wfm:agentAdherenceAdjustments:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementAdherenceAdjustmentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var adjustmentId = adjustmentId_example;  // string | The ID of the adherence adjustment to update
+            var body = new UpdateAdherenceAdjustmentAgentRequest(); // UpdateAdherenceAdjustmentAgentRequest | body
+
+            try
+            { 
+                // Update an adherence adjustment for the current user
+                CurrentAgentAdherenceAdjustment result = apiInstance.PatchWorkforcemanagementAdherenceAdjustment(adjustmentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementAdherenceAdjustment: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **adjustmentId** | **string**| The ID of the adherence adjustment to update |  |
+| **body** | [**UpdateAdherenceAdjustmentAgentRequest**](UpdateAdherenceAdjustmentAgentRequest)| body |  |
+
+### Return type
+
+[**CurrentAgentAdherenceAdjustment**](CurrentAgentAdherenceAdjustment)
+
+
+## PatchWorkforcemanagementAgentAdherenceAdjustment
+
+> [**AdherenceAdjustment**](AdherenceAdjustment) PatchWorkforcemanagementAgentAdherenceAdjustment (string agentId, string adjustmentId, UpdateAdherenceAdjustmentAdminRequest body)
+
+
+Update an adherence adjustment for the requested agent
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementAgentAdherenceAdjustmentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var agentId = agentId_example;  // string | The ID of the agent
+            var adjustmentId = adjustmentId_example;  // string | The ID of the adherence adjustment
+            var body = new UpdateAdherenceAdjustmentAdminRequest(); // UpdateAdherenceAdjustmentAdminRequest | body
+
+            try
+            { 
+                // Update an adherence adjustment for the requested agent
+                AdherenceAdjustment result = apiInstance.PatchWorkforcemanagementAgentAdherenceAdjustment(agentId, adjustmentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementAgentAdherenceAdjustment: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentId** | **string**| The ID of the agent |  |
+| **adjustmentId** | **string**| The ID of the adherence adjustment |  |
+| **body** | [**UpdateAdherenceAdjustmentAdminRequest**](UpdateAdherenceAdjustmentAdminRequest)| body |  |
+
+### Return type
+
+[**AdherenceAdjustment**](AdherenceAdjustment)
+
+
 ## PatchWorkforcemanagementAgentAdherenceExplanation
 
 > [**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse) PatchWorkforcemanagementAgentAdherenceExplanation (string agentId, string explanationId, UpdateAdherenceExplanationStatusRequest body)
@@ -11703,6 +12959,72 @@ namespace Example
 ### Return type
 
 [**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse)
+
+
+## PatchWorkforcemanagementAgentUnavailabletimes
+
+> [**BulkUpdateAgentUnavailableTimesResponse**](BulkUpdateAgentUnavailableTimesResponse) PatchWorkforcemanagementAgentUnavailabletimes (string agentId, UpdateUnavailableTimesRequest body)
+
+
+Update unavailable times for the requested agent
+
+Large requests will be partitioned into multiple internal processing batches. Validation will occur against each internal batch independently rather than against the final combined state represented by the entire request
+
+Requires ANY permissions: 
+
+* wfm:unavailableTimes:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementAgentUnavailabletimesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var agentId = agentId_example;  // string | The ID of the agent
+            var body = new UpdateUnavailableTimesRequest(); // UpdateUnavailableTimesRequest | body
+
+            try
+            { 
+                // Update unavailable times for the requested agent
+                BulkUpdateAgentUnavailableTimesResponse result = apiInstance.PatchWorkforcemanagementAgentUnavailabletimes(agentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementAgentUnavailabletimes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentId** | **string**| The ID of the agent |  |
+| **body** | [**UpdateUnavailableTimesRequest**](UpdateUnavailableTimesRequest)| body |  |
+
+### Return type
+
+[**BulkUpdateAgentUnavailableTimesResponse**](BulkUpdateAgentUnavailableTimesResponse)
 
 
 ## PatchWorkforcemanagementAlternativeshiftsTrade
@@ -12093,6 +13415,264 @@ namespace Example
 ### Return type
 
 [**ActivityPlanResponse**](ActivityPlanResponse)
+
+
+## PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk
+
+> [**AdherenceAdjustmentsListing**](AdherenceAdjustmentsListing) PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk (string businessUnitId, UpdateAdherenceAdjustmentsBulkRequest body)
+
+
+Update adherence adjustments in bulk for a business unit
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new UpdateAdherenceAdjustmentsBulkRequest(); // UpdateAdherenceAdjustmentsBulkRequest | body
+
+            try
+            { 
+                // Update adherence adjustments in bulk for a business unit
+                AdherenceAdjustmentsListing result = apiInstance.PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**UpdateAdherenceAdjustmentsBulkRequest**](UpdateAdherenceAdjustmentsBulkRequest)| body |  |
+
+### Return type
+
+[**AdherenceAdjustmentsListing**](AdherenceAdjustmentsListing)
+
+
+## PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode
+
+> [**AdherenceAdjustmentsReasonCode**](AdherenceAdjustmentsReasonCode) PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode (string businessUnitId, string reasonCodeId, UpdateAdherenceAdjustmentsReasonCodeRequest body)
+
+
+Update an adherence adjustment reason code for a business unit
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var reasonCodeId = reasonCodeId_example;  // string | The ID of the reason code to update
+            var body = new UpdateAdherenceAdjustmentsReasonCodeRequest(); // UpdateAdherenceAdjustmentsReasonCodeRequest | body
+
+            try
+            { 
+                // Update an adherence adjustment reason code for a business unit
+                AdherenceAdjustmentsReasonCode result = apiInstance.PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode(businessUnitId, reasonCodeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **reasonCodeId** | **string**| The ID of the reason code to update |  |
+| **body** | [**UpdateAdherenceAdjustmentsReasonCodeRequest**](UpdateAdherenceAdjustmentsReasonCodeRequest)| body |  |
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCode**](AdherenceAdjustmentsReasonCode)
+
+
+## PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk
+
+> [**AdherenceAdjustmentsReasonCodesListing**](AdherenceAdjustmentsReasonCodesListing) PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk (string businessUnitId, UpdateAdherenceAdjustmentsReasonCodesBulkRequest body)
+
+
+Update adherence adjustment reason codes in bulk for a business unit
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new UpdateAdherenceAdjustmentsReasonCodesBulkRequest(); // UpdateAdherenceAdjustmentsReasonCodesBulkRequest | body
+
+            try
+            { 
+                // Update adherence adjustment reason codes in bulk for a business unit
+                AdherenceAdjustmentsReasonCodesListing result = apiInstance.PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**UpdateAdherenceAdjustmentsReasonCodesBulkRequest**](UpdateAdherenceAdjustmentsReasonCodesBulkRequest)| body |  |
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCodesListing**](AdherenceAdjustmentsReasonCodesListing)
+
+
+## PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings
+
+> [**BuAdherenceAdjustmentsSettings**](BuAdherenceAdjustmentsSettings) PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings (string businessUnitId, UpdateBuAdherenceAdjustmentsSettingsRequest body)
+
+
+Update adherence adjustments settings for a business unit
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsSettings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new UpdateBuAdherenceAdjustmentsSettingsRequest(); // UpdateBuAdherenceAdjustmentsSettingsRequest | body
+
+            try
+            { 
+                // Update adherence adjustments settings for a business unit
+                BuAdherenceAdjustmentsSettings result = apiInstance.PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**UpdateBuAdherenceAdjustmentsSettingsRequest**](UpdateBuAdherenceAdjustmentsSettingsRequest)| body |  |
+
+### Return type
+
+[**BuAdherenceAdjustmentsSettings**](BuAdherenceAdjustmentsSettings)
 
 
 ## PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings
@@ -14341,6 +15921,136 @@ namespace Example
 [**AgentWorkPlanBiddingPreferenceResponse**](AgentWorkPlanBiddingPreferenceResponse)
 
 
+## PostWorkforcemanagementAdherenceAdjustments
+
+> [**CurrentAgentAdherenceAdjustment**](CurrentAgentAdherenceAdjustment) PostWorkforcemanagementAdherenceAdjustments (AddAdherenceAdjustmentAgentRequest body)
+
+
+Submit an adherence adjustment for the current user
+
+Requires ANY permissions: 
+
+* wfm:agentAdherenceAdjustments:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAdherenceAdjustmentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new AddAdherenceAdjustmentAgentRequest(); // AddAdherenceAdjustmentAgentRequest | body
+
+            try
+            { 
+                // Submit an adherence adjustment for the current user
+                CurrentAgentAdherenceAdjustment result = apiInstance.PostWorkforcemanagementAdherenceAdjustments(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAdherenceAdjustments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AddAdherenceAdjustmentAgentRequest**](AddAdherenceAdjustmentAgentRequest)| body |  |
+
+### Return type
+
+[**CurrentAgentAdherenceAdjustment**](CurrentAgentAdherenceAdjustment)
+
+
+## PostWorkforcemanagementAdherenceAdjustmentsQuery
+
+> [**CurrentAgentCursorAdherenceAdjustmentsListing**](CurrentAgentCursorAdherenceAdjustmentsListing) PostWorkforcemanagementAdherenceAdjustmentsQuery (AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+
+
+Query adherence adjustments for the current user
+
+Requires ANY permissions: 
+
+* wfm:agentAdherenceAdjustments:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAdherenceAdjustmentsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new AgentQueryAdherenceAdjustmentsRequest(); // AgentQueryAdherenceAdjustmentsRequest | body
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | The page size for the listing. The maximum page size is 500. (optional)  (default to "25")
+
+            try
+            { 
+                // Query adherence adjustments for the current user
+                CurrentAgentCursorAdherenceAdjustmentsListing result = apiInstance.PostWorkforcemanagementAdherenceAdjustmentsQuery(body, before, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAdherenceAdjustmentsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AgentQueryAdherenceAdjustmentsRequest**](AgentQueryAdherenceAdjustmentsRequest)| body |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| The page size for the listing. The maximum page size is 500. | [optional] [default to "25"] |
+
+### Return type
+
+[**CurrentAgentCursorAdherenceAdjustmentsListing**](CurrentAgentCursorAdherenceAdjustmentsListing)
+
+
 ## PostWorkforcemanagementAdherenceExplanations
 
 > [**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse) PostWorkforcemanagementAdherenceExplanations (AddAdherenceExplanationAgentRequest body)
@@ -14529,6 +16239,76 @@ namespace Example
 ### Return type
 
 [**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse)
+
+
+## PostWorkforcemanagementAgentAdherenceAdjustmentsQuery
+
+> [**CursorAdherenceAdjustmentsListing**](CursorAdherenceAdjustmentsListing) PostWorkforcemanagementAgentAdherenceAdjustmentsQuery (string agentId, AgentQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+
+
+Query adherence adjustments for the requested agent
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAgentAdherenceAdjustmentsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var agentId = agentId_example;  // string | The ID of the agent
+            var body = new AgentQueryAdherenceAdjustmentsRequest(); // AgentQueryAdherenceAdjustmentsRequest | body
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | The page size for the listing. The maximum page size is 500. (optional)  (default to "25")
+
+            try
+            { 
+                // Query adherence adjustments for the requested agent
+                CursorAdherenceAdjustmentsListing result = apiInstance.PostWorkforcemanagementAgentAdherenceAdjustmentsQuery(agentId, body, before, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAgentAdherenceAdjustmentsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentId** | **string**| The ID of the agent |  |
+| **body** | [**AgentQueryAdherenceAdjustmentsRequest**](AgentQueryAdherenceAdjustmentsRequest)| body |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| The page size for the listing. The maximum page size is 500. | [optional] [default to "25"] |
+
+### Return type
+
+[**CursorAdherenceAdjustmentsListing**](CursorAdherenceAdjustmentsListing)
 
 
 ## PostWorkforcemanagementAgentAdherenceExplanations
@@ -15620,6 +17400,278 @@ namespace Example
 [**BusinessUnitActivityCode**](BusinessUnitActivityCode)
 
 
+## PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs
+
+> [**ActivityPlanJobResponse**](ActivityPlanJobResponse) PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs (string businessUnitId, string activityPlanId)
+
+
+Delete an activity plan
+
+Triggers a job to delete the activity plan. No further changes to the activity plan can be made
+
+Requires ANY permissions: 
+
+* wfm:activityPlanDeletionJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitActivityplanDeletionsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan to delete
+
+            try
+            { 
+                // Delete an activity plan
+                ActivityPlanJobResponse result = apiInstance.PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs(businessUnitId, activityPlanId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan to delete |  |
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs
+
+> [**ActivityPlanJobResponse**](ActivityPlanJobResponse) PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, ActivityPlanDeletionSessionUserIds body)
+
+
+Triggers a job to delete users from a session in the activity plan occurrence
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceSessionUserDeletionJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan
+            var occurrenceId = occurrenceId_example;  // string | The ID of the activity plan occurrence
+            var sessionId = sessionId_example;  // string | The ID of the activity plan occurrence session
+            var body = new ActivityPlanDeletionSessionUserIds(); // ActivityPlanDeletionSessionUserIds | body
+
+            try
+            { 
+                // Triggers a job to delete users from a session in the activity plan occurrence
+                ActivityPlanJobResponse result = apiInstance.PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs(businessUnitId, activityPlanId, occurrenceId, sessionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan |  |
+| **occurrenceId** | **string**| The ID of the activity plan occurrence |  |
+| **sessionId** | **string**| The ID of the activity plan occurrence session |  |
+| **body** | [**ActivityPlanDeletionSessionUserIds**](ActivityPlanDeletionSessionUserIds)| body |  |
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs
+
+> [**ActivityPlanJobResponse**](ActivityPlanJobResponse) PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs (string businessUnitId, string activityPlanId, string occurrenceId, ActivityPlanDeletionSessionIds body)
+
+
+Triggers a job to delete sessions for the activity plan occurrence
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceSessionDeletionJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan
+            var occurrenceId = occurrenceId_example;  // string | The ID of the activity plan occurrence
+            var body = new ActivityPlanDeletionSessionIds(); // ActivityPlanDeletionSessionIds | body
+
+            try
+            { 
+                // Triggers a job to delete sessions for the activity plan occurrence
+                ActivityPlanJobResponse result = apiInstance.PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs(businessUnitId, activityPlanId, occurrenceId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan |  |
+| **occurrenceId** | **string**| The ID of the activity plan occurrence |  |
+| **body** | [**ActivityPlanDeletionSessionIds**](ActivityPlanDeletionSessionIds)| body |  |
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs
+
+> [**ActivityPlanOccurrencesDeletionJobResponse**](ActivityPlanOccurrencesDeletionJobResponse) PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs (string businessUnitId, string activityPlanId, ActivityPlanDeletionOccurrenceIds body)
+
+
+Delete occurrences for the activity plan
+
+Triggers a job to delete occurrences of the activity plan. The activity plan cannot be updated until the job completes
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceDeletionJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan
+            var body = new ActivityPlanDeletionOccurrenceIds(); // ActivityPlanDeletionOccurrenceIds | body
+
+            try
+            { 
+                // Delete occurrences for the activity plan
+                ActivityPlanOccurrencesDeletionJobResponse result = apiInstance.PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs(businessUnitId, activityPlanId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan |  |
+| **body** | [**ActivityPlanDeletionOccurrenceIds**](ActivityPlanDeletionOccurrenceIds)| body |  |
+
+### Return type
+
+[**ActivityPlanOccurrencesDeletionJobResponse**](ActivityPlanOccurrencesDeletionJobResponse)
+
+
 ## PostWorkforcemanagementBusinessunitActivityplanRunsJobs
 
 > [**ActivityPlanRunJobResponse**](ActivityPlanRunJobResponse) PostWorkforcemanagementBusinessunitActivityplanRunsJobs (string businessUnitId, string activityPlanId)
@@ -15748,6 +17800,268 @@ namespace Example
 ### Return type
 
 [**ActivityPlanResponse**](ActivityPlanResponse)
+
+
+## PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery
+
+> [**CursorAdherenceAdjustmentsListing**](CursorAdherenceAdjustmentsListing) PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body, string before = null, string after = null, string pageSize = null)
+
+
+Query adherence adjustments for a business unit. Results will be returned using cursor pagination
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new BuQueryAdherenceAdjustmentsRequest(); // BuQueryAdherenceAdjustmentsRequest | body
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | The page size for the listing. The maximum page size is 500. (optional)  (default to "25")
+
+            try
+            { 
+                // Query adherence adjustments for a business unit. Results will be returned using cursor pagination
+                CursorAdherenceAdjustmentsListing result = apiInstance.PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery(businessUnitId, body, before, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**BuQueryAdherenceAdjustmentsRequest**](BuQueryAdherenceAdjustmentsRequest)| body |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| The page size for the listing. The maximum page size is 500. | [optional] [default to "25"] |
+
+### Return type
+
+[**CursorAdherenceAdjustmentsListing**](CursorAdherenceAdjustmentsListing)
+
+
+## PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs
+
+> [**BuAdherenceAdjustmentsQueryJob**](BuAdherenceAdjustmentsQueryJob) PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs (string businessUnitId, BuQueryAdherenceAdjustmentsRequest body)
+
+
+Creates an async query job for adherence adjustments in a business unit.
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new BuQueryAdherenceAdjustmentsRequest(); // BuQueryAdherenceAdjustmentsRequest | body
+
+            try
+            { 
+                // Creates an async query job for adherence adjustments in a business unit.
+                BuAdherenceAdjustmentsQueryJob result = apiInstance.PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**BuQueryAdherenceAdjustmentsRequest**](BuQueryAdherenceAdjustmentsRequest)| body |  |
+
+### Return type
+
+[**BuAdherenceAdjustmentsQueryJob**](BuAdherenceAdjustmentsQueryJob)
+
+
+## PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes
+
+> [**AdherenceAdjustmentsReasonCode**](AdherenceAdjustmentsReasonCode) PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes (string businessUnitId, CreateAdherenceAdjustmentsReasonCodeRequest body)
+
+
+Create an adherence adjustment reason code for a business unit
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new CreateAdherenceAdjustmentsReasonCodeRequest(); // CreateAdherenceAdjustmentsReasonCodeRequest | body
+
+            try
+            { 
+                // Create an adherence adjustment reason code for a business unit
+                AdherenceAdjustmentsReasonCode result = apiInstance.PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**CreateAdherenceAdjustmentsReasonCodeRequest**](CreateAdherenceAdjustmentsReasonCodeRequest)| body |  |
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCode**](AdherenceAdjustmentsReasonCode)
+
+
+## PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk
+
+> [**AdherenceAdjustmentsReasonCodesListing**](AdherenceAdjustmentsReasonCodesListing) PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk (string businessUnitId, CreateAdherenceAdjustmentsReasonCodesBulkRequest body)
+
+
+Create adherence adjustment reason codes in bulk for a business unit
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new CreateAdherenceAdjustmentsReasonCodesBulkRequest(); // CreateAdherenceAdjustmentsReasonCodesBulkRequest | body
+
+            try
+            { 
+                // Create adherence adjustment reason codes in bulk for a business unit
+                AdherenceAdjustmentsReasonCodesListing result = apiInstance.PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**CreateAdherenceAdjustmentsReasonCodesBulkRequest**](CreateAdherenceAdjustmentsReasonCodesBulkRequest)| body |  |
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCodesListing**](AdherenceAdjustmentsReasonCodesListing)
 
 
 ## PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery
@@ -23542,4 +25856,4 @@ namespace Example
 [**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
 
 
-_PureCloudPlatform.Client.V2 273.0.0_
+_PureCloudPlatform.Client.V2 274.0.0_

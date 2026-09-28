@@ -68,7 +68,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneyViewsJobsMe**](#GetJourneyViewsJobsMe) | **Get** /api/v2/journey/views/jobs/me | Get my jobs |
 | [**GetJourneyViewsSchedules**](#GetJourneyViewsSchedules) | **Get** /api/v2/journey/views/schedules | Get the journey schedules for an organization. |
 | [**PatchJourneyActionmap**](#PatchJourneyActionmap) | **Patch** /api/v2/journey/actionmaps/{actionMapId} | Update single action map. |
-| [**PatchJourneyActiontarget**](#PatchJourneyActiontarget) | **Patch** /api/v2/journey/actiontargets/{actionTargetId} | Deprecated. Update a single action target. |
 | [**PatchJourneyActiontemplate**](#PatchJourneyActiontemplate) | **Patch** /api/v2/journey/actiontemplates/{actionTemplateId} | Update a single action template. |
 | [**PatchJourneyExternaleventsConfiguration**](#PatchJourneyExternaleventsConfiguration) | **Patch** /api/v2/journey/externalevents/configurations/{configId} | Update an external events configuration. |
 | [**PatchJourneyOutcome**](#PatchJourneyOutcome) | **Patch** /api/v2/journey/outcomes/{outcomeId} | Deprecated. Update an outcome. |
@@ -1523,7 +1522,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;name,-createdDate). | [optional]  |
-| **mediaType** | **string**| Media type | [optional] <br />**Values**: webchat, webMessagingOffer, contentOffer, integrationAction, architectFlow, openAction |
+| **mediaType** | **string**| Media type | [optional] <br />**Values**: webMessagingOffer, contentOffer, integrationAction, architectFlow, openAction |
 | **state** | **string**| Action template state. | [optional] <br />**Values**: Active, Inactive, Deleted |
 | **queryFields** | [**List<string>**](string)| ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
 | **queryValue** | **string**| Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. | [optional]  |
@@ -4106,75 +4105,6 @@ namespace Example
 [**ActionMap**](ActionMap)
 
 
-## PatchJourneyActiontarget
-
-> [**ActionTarget**](ActionTarget) PatchJourneyActiontarget (string actionTargetId, PatchActionTarget body = null)
-
-:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
-This resource has been deprecated
-:::
-
-Deprecated. Update a single action target.
-
-ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
-
-Requires ANY permissions: 
-
-* journey:actiontarget:edit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PatchJourneyActiontargetExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new JourneyApi();
-            var actionTargetId = actionTargetId_example;  // string | ID of the action target.
-            var body = new PatchActionTarget(); // PatchActionTarget |  (optional) 
-
-            try
-            { 
-                // Deprecated. Update a single action target.
-                ActionTarget result = apiInstance.PatchJourneyActiontarget(actionTargetId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling JourneyApi.PatchJourneyActiontarget: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **actionTargetId** | **string**| ID of the action target. |  |
-| **body** | [**PatchActionTarget**](PatchActionTarget)|  | [optional]  |
-
-### Return type
-
-[**ActionTarget**](ActionTarget)
-
-
 ## PatchJourneyActiontemplate
 
 > [**ActionTemplate**](ActionTemplate) PatchJourneyActiontemplate (string actionTemplateId, PatchActionTemplate body = null)
@@ -6213,4 +6143,4 @@ namespace Example
 [**ActivateExternalEventResponse**](ActivateExternalEventResponse)
 
 
-_PureCloudPlatform.Client.V2 273.0.0_
+_PureCloudPlatform.Client.V2 274.0.0_

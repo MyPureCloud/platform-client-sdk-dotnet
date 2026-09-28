@@ -8,9 +8,10 @@
 |------------ | ------------- | ------------- | -------------|
 | **Phrase** | [**TestTopicPhrasePhrase**](TestTopicPhrasePhrase) | The topic phrase to test | |
 | **Strictness** | **string** | The topic strictness, default value is 72 | [optional] |
+| **MatchingType** | **string** | The topic matching type Lexical or Semantic, default value is Semantic | [optional] |
 | **Dialect** | **string** | The topic dialect, default value is en-US | |
 | **Participants** | **string** | The topic participants, default value is both | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 273.0.0_
+_PureCloudPlatform.Client.V2 274.0.0_

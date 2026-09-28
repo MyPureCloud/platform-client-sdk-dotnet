@@ -26,12 +26,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsProgram**](#GetSpeechandtextanalyticsProgram) | **Get** /api/v2/speechandtextanalytics/programs/{programId} | Get a Speech &amp; Text Analytics program by id |
 | [**GetSpeechandtextanalyticsProgramMappings**](#GetSpeechandtextanalyticsProgramMappings) | **Get** /api/v2/speechandtextanalytics/programs/{programId}/mappings | Get Speech &amp; Text Analytics program mappings to queues and flows by id |
 | [**GetSpeechandtextanalyticsProgramSettingsInsights**](#GetSpeechandtextanalyticsProgramSettingsInsights) | **Get** /api/v2/speechandtextanalytics/programs/{programId}/settings/insights | Get AI Insights settings of a program |
+| [**GetSpeechandtextanalyticsProgramSettingsProcessing**](#GetSpeechandtextanalyticsProgramSettingsProcessing) | **Get** /api/v2/speechandtextanalytics/programs/{programId}/settings/processing | Get program processing settings |
 | [**GetSpeechandtextanalyticsProgramTranscriptionengines**](#GetSpeechandtextanalyticsProgramTranscriptionengines) | **Get** /api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines | Get transcription engine settings of a program |
 | [**GetSpeechandtextanalyticsPrograms**](#GetSpeechandtextanalyticsPrograms) | **Get** /api/v2/speechandtextanalytics/programs | Get the list of Speech &amp; Text Analytics programs |
 | [**GetSpeechandtextanalyticsProgramsGeneralJob**](#GetSpeechandtextanalyticsProgramsGeneralJob) | **Get** /api/v2/speechandtextanalytics/programs/general/jobs/{jobId} | Get a Speech &amp; Text Analytics general program job by id |
 | [**GetSpeechandtextanalyticsProgramsMappings**](#GetSpeechandtextanalyticsProgramsMappings) | **Get** /api/v2/speechandtextanalytics/programs/mappings | Get the list of Speech &amp; Text Analytics programs mappings to queues and flows |
 | [**GetSpeechandtextanalyticsProgramsPublishjob**](#GetSpeechandtextanalyticsProgramsPublishjob) | **Get** /api/v2/speechandtextanalytics/programs/publishjobs/{jobId} | Get a Speech &amp; Text Analytics publish programs job by id |
 | [**GetSpeechandtextanalyticsProgramsSettingsInsights**](#GetSpeechandtextanalyticsProgramsSettingsInsights) | **Get** /api/v2/speechandtextanalytics/programs/settings/insights | Get the list of program AI Insights settings for the organization |
+| [**GetSpeechandtextanalyticsProgramsSettingsProcessing**](#GetSpeechandtextanalyticsProgramsSettingsProcessing) | **Get** /api/v2/speechandtextanalytics/programs/settings/processing | Get the list of program processing settings for the organization |
 | [**GetSpeechandtextanalyticsProgramsTopiclinksJob**](#GetSpeechandtextanalyticsProgramsTopiclinksJob) | **Get** /api/v2/speechandtextanalytics/programs/topiclinks/jobs/{jobId} | Get a Speech &amp; Text Analytics program-topic links job by id |
 | [**GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects**](#GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects) | **Get** /api/v2/speechandtextanalytics/programs/transcriptionengines/dialects | Get supported dialects for each transcription engine |
 | [**GetSpeechandtextanalyticsProgramsUnpublished**](#GetSpeechandtextanalyticsProgramsUnpublished) | **Get** /api/v2/speechandtextanalytics/programs/unpublished | Get the list of Speech &amp; Text Analytics unpublished programs |
@@ -51,6 +53,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsTopicsTestphraseJob**](#GetSpeechandtextanalyticsTopicsTestphraseJob) | **Get** /api/v2/speechandtextanalytics/topics/testphrase/jobs/{jobId} | Get a Speech &amp; Text Analytics test topics phrase job by id |
 | [**GetSpeechandtextanalyticsTranslationsLanguageConversation**](#GetSpeechandtextanalyticsTranslationsLanguageConversation) | **Get** /api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId} | Translate a single interaction recording (or an email conversation) |
 | [**GetSpeechandtextanalyticsTranslationsLanguages**](#GetSpeechandtextanalyticsTranslationsLanguages) | **Get** /api/v2/speechandtextanalytics/translations/languages | Get supported translation languages |
+| [**PatchSpeechandtextanalyticsProgramSettingsProcessing**](#PatchSpeechandtextanalyticsProgramSettingsProcessing) | **Patch** /api/v2/speechandtextanalytics/programs/{programId}/settings/processing | Update program processing settings |
 | [**PatchSpeechandtextanalyticsSettings**](#PatchSpeechandtextanalyticsSettings) | **Patch** /api/v2/speechandtextanalytics/settings | Patch Speech And Text Analytics Settings |
 | [**PostSpeechandtextanalyticsCategories**](#PostSpeechandtextanalyticsCategories) | **Post** /api/v2/speechandtextanalytics/categories | Create new Speech &amp; Text Analytics category |
 | [**PostSpeechandtextanalyticsDictionaryfeedback**](#PostSpeechandtextanalyticsDictionaryfeedback) | **Post** /api/v2/speechandtextanalytics/dictionaryfeedback | Create a Speech &amp; Text Analytics DictionaryFeedback |
@@ -1336,6 +1339,69 @@ namespace Example
 [**ProgramInsightsSettings**](ProgramInsightsSettings)
 
 
+## GetSpeechandtextanalyticsProgramSettingsProcessing
+
+> [**ProgramProcessingSettings**](ProgramProcessingSettings) GetSpeechandtextanalyticsProgramSettingsProcessing (string programId)
+
+
+Get program processing settings
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+* speechAndTextAnalytics:processingSettings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsProgramSettingsProcessingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var programId = programId_example;  // string | The id of the program
+
+            try
+            { 
+                // Get program processing settings
+                ProgramProcessingSettings result = apiInstance.GetSpeechandtextanalyticsProgramSettingsProcessing(programId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsProgramSettingsProcessing: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **string**| The id of the program |  |
+
+### Return type
+
+[**ProgramProcessingSettings**](ProgramProcessingSettings)
+
+
 ## GetSpeechandtextanalyticsProgramTranscriptionengines
 
 > [**ProgramTranscriptionEngines**](ProgramTranscriptionEngines) GetSpeechandtextanalyticsProgramTranscriptionengines (string programId)
@@ -1728,6 +1794,73 @@ namespace Example
 ### Return type
 
 [**ProgramInsightsSettingsEntityListing**](ProgramInsightsSettingsEntityListing)
+
+
+## GetSpeechandtextanalyticsProgramsSettingsProcessing
+
+> [**ProgramProcessingSettingsEntityListing**](ProgramProcessingSettingsEntityListing) GetSpeechandtextanalyticsProgramsSettingsProcessing (int? pageSize = null, int? pageNumber = null, List<string> programIds = null)
+
+
+Get the list of program processing settings for the organization
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+* speechAndTextAnalytics:processingSettings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsProgramsSettingsProcessingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var pageSize = 56;  // int? | The page size for the listing. The max that will be returned is 100. (optional)  (default to 100)
+            var pageNumber = 56;  // int? | The page number for the listing (optional)  (default to 1)
+            var programIds = new List<string>(); // List<string> | Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional) 
+
+            try
+            { 
+                // Get the list of program processing settings for the organization
+                ProgramProcessingSettingsEntityListing result = apiInstance.GetSpeechandtextanalyticsProgramsSettingsProcessing(pageSize, pageNumber, programIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsProgramsSettingsProcessing: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| The page size for the listing. The max that will be returned is 100. | [optional] [default to 100] |
+| **pageNumber** | **int?**| The page number for the listing | [optional] [default to 1] |
+| **programIds** | [**List<string>**](string)| Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. | [optional]  |
+
+### Return type
+
+[**ProgramProcessingSettingsEntityListing**](ProgramProcessingSettingsEntityListing)
 
 
 ## GetSpeechandtextanalyticsProgramsTopiclinksJob
@@ -2914,6 +3047,71 @@ This endpoint does require any parameters.
 ### Return type
 
 [**TranslateSupportedLanguageList**](TranslateSupportedLanguageList)
+
+
+## PatchSpeechandtextanalyticsProgramSettingsProcessing
+
+> [**ProgramProcessingSettingsPatchResponse**](ProgramProcessingSettingsPatchResponse) PatchSpeechandtextanalyticsProgramSettingsProcessing (string programId, ProcessingSettingsRequest body)
+
+
+Update program processing settings
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:edit
+* speechAndTextAnalytics:processingSettings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchSpeechandtextanalyticsProgramSettingsProcessingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var programId = programId_example;  // string | The id of the program
+            var body = new ProcessingSettingsRequest(); // ProcessingSettingsRequest | Program processing settings
+
+            try
+            { 
+                // Update program processing settings
+                ProgramProcessingSettingsPatchResponse result = apiInstance.PatchSpeechandtextanalyticsProgramSettingsProcessing(programId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.PatchSpeechandtextanalyticsProgramSettingsProcessing: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **string**| The id of the program |  |
+| **body** | [**ProcessingSettingsRequest**](ProcessingSettingsRequest)| Program processing settings |  |
+
+### Return type
+
+[**ProgramProcessingSettingsPatchResponse**](ProgramProcessingSettingsPatchResponse)
 
 
 ## PatchSpeechandtextanalyticsSettings
@@ -4240,4 +4438,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 273.0.0_
+_PureCloudPlatform.Client.V2 274.0.0_
