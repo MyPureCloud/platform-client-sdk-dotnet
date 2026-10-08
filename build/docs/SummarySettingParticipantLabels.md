@@ -8,7 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **Internal** | **string** | Specify how to refer the internal participant of the interaction. | [optional] |
 | **External** | **string** | Specify how to refer the external participant of the interaction. | [optional] |
+| **VirtualAgent** | **string** | Specify how to refer the virtual agent of the interaction. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_

@@ -31,12 +31,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AcceptableIntervals">Time frames when the initiating user is willing to accept a shift in exchange. Empty means giving up the shift without taking on another one.</param>
         /// <param name="Target">Optional shift trade target, can be used for example for direct user to user trade.</param>
         /// <param name="ExpirationDate">When this shift trade will expire. Date time is represented as an ISO-8601 string.</param>
-        public AddShiftTradeJobRequest(InitiatingShiftRequestItem InitiatingShift = null, List<RequiredDateRange> AcceptableIntervals = null, ShiftTradeTargetRequestItem Target = null, DateTime? ExpirationDate = null)
+        /// <param name="ReviewNote">Optional note from the initiating user for shift trade review.</param>
+        public AddShiftTradeJobRequest(InitiatingShiftRequestItem InitiatingShift = null, List<RequiredDateRange> AcceptableIntervals = null, ShiftTradeTargetRequestItem Target = null, DateTime? ExpirationDate = null, string ReviewNote = null)
         {
             this.InitiatingShift = InitiatingShift;
             this.AcceptableIntervals = AcceptableIntervals;
             this.Target = Target;
             this.ExpirationDate = ExpirationDate;
+            this.ReviewNote = ReviewNote;
             
         }
         
@@ -77,6 +79,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? ExpirationDate { get; set; }
 
 
+
+        /// <summary>
+        /// Optional note from the initiating user for shift trade review
+        /// </summary>
+        /// <value>Optional note from the initiating user for shift trade review</value>
+        [DataMember(Name="reviewNote", EmitDefaultValue=false)]
+        public string ReviewNote { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AcceptableIntervals: ").Append(AcceptableIntervals).Append("\n");
             sb.Append("  Target: ").Append(Target).Append("\n");
             sb.Append("  ExpirationDate: ").Append(ExpirationDate).Append("\n");
+            sb.Append("  ReviewNote: ").Append(ReviewNote).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,6 +161,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExpirationDate == other.ExpirationDate ||
                     this.ExpirationDate != null &&
                     this.ExpirationDate.Equals(other.ExpirationDate)
+                ) &&
+                (
+                    this.ReviewNote == other.ReviewNote ||
+                    this.ReviewNote != null &&
+                    this.ReviewNote.Equals(other.ReviewNote)
                 );
         }
 
@@ -174,6 +191,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExpirationDate != null)
                     hash = hash * 59 + this.ExpirationDate.GetHashCode();
+
+                if (this.ReviewNote != null)
+                    hash = hash * 59 + this.ReviewNote.GetHashCode();
 
                 return hash;
             }

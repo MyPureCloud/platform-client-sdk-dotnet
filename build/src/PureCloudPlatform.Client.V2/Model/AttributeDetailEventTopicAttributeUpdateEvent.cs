@@ -28,7 +28,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
         /// <param name="Communications">Communications.</param>
-        public AttributeDetailEventTopicAttributeUpdateEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, Dictionary<string, string> Attributes = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, List<AttributeDetailEventTopicCommunication> Communications = null)
+        /// <param name="ParticipantStartTime">ParticipantStartTime.</param>
+        public AttributeDetailEventTopicAttributeUpdateEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, Dictionary<string, string> Attributes = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, List<AttributeDetailEventTopicCommunication> Communications = null, long? ParticipantStartTime = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationExternalContactIds = ConversationExternalContactIds;
             this.ConversationExternalOrganizationIds = ConversationExternalOrganizationIds;
             this.Communications = Communications;
+            this.ParticipantStartTime = ParticipantStartTime;
             
         }
         
@@ -97,6 +99,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<AttributeDetailEventTopicCommunication> Communications { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets ParticipantStartTime
+        /// </summary>
+        [DataMember(Name="participantStartTime", EmitDefaultValue=false)]
+        public long? ParticipantStartTime { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationExternalContactIds: ").Append(ConversationExternalContactIds).Append("\n");
             sb.Append("  ConversationExternalOrganizationIds: ").Append(ConversationExternalOrganizationIds).Append("\n");
             sb.Append("  Communications: ").Append(Communications).Append("\n");
+            sb.Append("  ParticipantStartTime: ").Append(ParticipantStartTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -187,6 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Communications == other.Communications ||
                     this.Communications != null &&
                     this.Communications.SequenceEqual(other.Communications)
+                ) &&
+                (
+                    this.ParticipantStartTime == other.ParticipantStartTime ||
+                    this.ParticipantStartTime != null &&
+                    this.ParticipantStartTime.Equals(other.ParticipantStartTime)
                 );
         }
 
@@ -221,6 +237,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Communications != null)
                     hash = hash * 59 + this.Communications.GetHashCode();
+
+                if (this.ParticipantStartTime != null)
+                    hash = hash * 59 + this.ParticipantStartTime.GetHashCode();
 
                 return hash;
             }

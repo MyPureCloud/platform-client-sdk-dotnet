@@ -10,7 +10,8 @@
 | **ManagementUnit** | [**ManagementUnitReference**](ManagementUnitReference) | The management unit of the user who initiated this trade | |
 | **Schedule** | [**ScheduleReferenceWithBusinessUnit**](ScheduleReferenceWithBusinessUnit) | Associated schedule information for the initiating user | |
 | **Shift** | [**ShiftTradeShiftResponseItem**](ShiftTradeShiftResponseItem) | The shift offered for trade by the initiating user | |
+| **ReviewNote** | **string** | Optional note from the initiating user for shift trade review | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_

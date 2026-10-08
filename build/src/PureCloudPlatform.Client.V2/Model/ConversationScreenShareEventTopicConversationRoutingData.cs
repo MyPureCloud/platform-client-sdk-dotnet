@@ -26,8 +26,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">The priority of the conversation to use for routing decisions.</param>
         /// <param name="Skills">The skills to use for routing decisions.</param>
         /// <param name="ScoredAgents">A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents.</param>
-        /// <param name="SkillExpressionId">A UriReference for a resource.</param>
-        public ConversationScreenShareEventTopicConversationRoutingData(ConversationScreenShareEventTopicUriReference Queue = null, ConversationScreenShareEventTopicUriReference Language = null, long? Priority = null, List<ConversationScreenShareEventTopicUriReference> Skills = null, List<ConversationScreenShareEventTopicScoredAgent> ScoredAgents = null, ConversationScreenShareEventTopicUriReference SkillExpressionId = null)
+        /// <param name="SkillExpressionId">The skill expression to use for routing decisions. If specified, it takes priority over skills..</param>
+        public ConversationScreenShareEventTopicConversationRoutingData(ConversationScreenShareEventTopicUriReference Queue = null, ConversationScreenShareEventTopicUriReference Language = null, long? Priority = null, List<ConversationScreenShareEventTopicUriReference> Skills = null, List<ConversationScreenShareEventTopicScoredAgent> ScoredAgents = null, string SkillExpressionId = null)
         {
             this.Queue = Queue;
             this.Language = Language;
@@ -86,11 +86,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A UriReference for a resource
+        /// The skill expression to use for routing decisions. If specified, it takes priority over skills.
         /// </summary>
-        /// <value>A UriReference for a resource</value>
+        /// <value>The skill expression to use for routing decisions. If specified, it takes priority over skills.</value>
         [DataMember(Name="skillExpressionId", EmitDefaultValue=false)]
-        public ConversationScreenShareEventTopicUriReference SkillExpressionId { get; set; }
+        public string SkillExpressionId { get; set; }
 
 
         /// <summary>

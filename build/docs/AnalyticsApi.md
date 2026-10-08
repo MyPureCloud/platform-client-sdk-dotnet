@@ -585,8 +585,6 @@ void (empty response body)
 
 Delete/cancel an async request for copilot aggregates
 
-DeleteAnalyticsCopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:copilotsAggregate:view
@@ -2750,8 +2748,6 @@ This endpoint does require any parameters.
 
 Get status for async query for copilot aggregates
 
-GetAnalyticsCopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:copilotsAggregate:view
@@ -2813,8 +2809,6 @@ namespace Example
 
 
 Fetch a page of results for an async aggregates query
-
-GetAnalyticsCopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6296,8 +6290,6 @@ namespace Example
 
 Query for copilot aggregates asynchronously
 
-PostAnalyticsCopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:copilotsAggregate:view
@@ -6359,8 +6351,6 @@ namespace Example
 
 
 Query for copilot aggregates
-
-PostAnalyticsCopilotsAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -8858,4 +8848,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_

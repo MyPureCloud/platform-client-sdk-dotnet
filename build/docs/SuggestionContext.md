@@ -14,7 +14,8 @@
 | **Utterance** | [**Entity**](Entity) | The utterance in the voice conversation, after which the suggestion was raised, if any. | [optional] |
 | **Message** | [**AddressableEntityRef**](AddressableEntityRef) | The message in the digital conversation, after which the suggestion was raised, if any. | [optional] |
 | **QueryStatement** | **string** | The query statement used when generating the suggestion, if any. | [optional] |
+| **Language** | **string** | The language of the conversation for which the suggestion was generated, in lower case, for example: &#39;en-us&#39;. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_

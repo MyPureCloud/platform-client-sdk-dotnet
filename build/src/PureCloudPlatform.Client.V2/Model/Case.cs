@@ -180,7 +180,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Case" /> class.
         /// </summary>
-        /// <param name="Name">The name of the Case..</param>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Version">The version of the Case..</param>
         /// <param name="Reference">The reference identifier of the Case..</param>
@@ -202,9 +201,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreationStatus">The creation status of the Case..</param>
         /// <param name="TtlSeconds">The time-to-live in seconds for the lifetime of the Case..</param>
         /// <param name="FailureReason">The reason the Case failed, if applicable..</param>
-        public Case(string Name = null, StarrableDivision Division = null, int? Version = null, string Reference = null, string ExternalId = null, CaseplanReference Caseplan = null, string Summary = null, string Description = null, CaseUserReference Owner = null, StatusEnum? Status = null, PriorityEnum? Priority = null, DateTime? DateDue = null, DateTime? DateStarted = null, DateTime? DateClosed = null, DateTime? DateCreated = null, DateTime? DateModified = null, CaseUserReference ModifiedBy = null, CaseExternalContactReference ExternalContact = null, CustomerIntentReference CustomerIntent = null, CreationStatusEnum? CreationStatus = null, int? TtlSeconds = null, FailureReason FailureReason = null)
+        public Case(StarrableDivision Division = null, int? Version = null, string Reference = null, string ExternalId = null, CaseplanReference Caseplan = null, string Summary = null, string Description = null, CaseUserReference Owner = null, StatusEnum? Status = null, PriorityEnum? Priority = null, DateTime? DateDue = null, DateTime? DateStarted = null, DateTime? DateClosed = null, DateTime? DateCreated = null, DateTime? DateModified = null, CaseUserReference ModifiedBy = null, CaseExternalContactReference ExternalContact = null, CustomerIntentReference CustomerIntent = null, CreationStatusEnum? CreationStatus = null, int? TtlSeconds = null, FailureReason FailureReason = null)
         {
-            this.Name = Name;
             this.Division = Division;
             this.Version = Version;
             this.Reference = Reference;
@@ -237,15 +235,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-
-
-
-        /// <summary>
-        /// The name of the Case.
-        /// </summary>
-        /// <value>The name of the Case.</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
 
 
 
@@ -435,7 +424,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class Case {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Reference: ").Append(Reference).Append("\n");
@@ -502,11 +490,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
                 ) &&
                 (
                     this.Division == other.Division ||
@@ -633,9 +616,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
 
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();

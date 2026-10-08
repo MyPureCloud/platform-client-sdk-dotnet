@@ -31,13 +31,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Target">Target of the shift trade, if applicable.</param>
         /// <param name="ExpirationDate">When this shift trade will expire. Date time is represented as an ISO-8601 string.</param>
         /// <param name="AcceptableIntervals">Time frames when the initiating user is willing to accept a shift in exchange. Setting the enclosed list to empty will make this a one sided trade request..</param>
+        /// <param name="ReviewNote">Optional note from the initiating user for shift trade review.</param>
         /// <param name="Metadata">Version metadata for the shift trade (required).</param>
-        public UpdateShiftTradeJobRequest(String WeekDate = null, ValueWrapperShiftTradeTargetRequestItem Target = null, ValueWrapperDate ExpirationDate = null, ListWrapperRequiredDateRange AcceptableIntervals = null, WfmVersionedEntityMetadata Metadata = null)
+        public UpdateShiftTradeJobRequest(String WeekDate = null, ValueWrapperShiftTradeTargetRequestItem Target = null, ValueWrapperDate ExpirationDate = null, ListWrapperRequiredDateRange AcceptableIntervals = null, ValueWrapperString ReviewNote = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.WeekDate = WeekDate;
             this.Target = Target;
             this.ExpirationDate = ExpirationDate;
             this.AcceptableIntervals = AcceptableIntervals;
+            this.ReviewNote = ReviewNote;
             this.Metadata = Metadata;
             
         }
@@ -81,6 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Optional note from the initiating user for shift trade review
+        /// </summary>
+        /// <value>Optional note from the initiating user for shift trade review</value>
+        [DataMember(Name="reviewNote", EmitDefaultValue=false)]
+        public ValueWrapperString ReviewNote { get; set; }
+
+
+
+        /// <summary>
         /// Version metadata for the shift trade
         /// </summary>
         /// <value>Version metadata for the shift trade</value>
@@ -101,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Target: ").Append(Target).Append("\n");
             sb.Append("  ExpirationDate: ").Append(ExpirationDate).Append("\n");
             sb.Append("  AcceptableIntervals: ").Append(AcceptableIntervals).Append("\n");
+            sb.Append("  ReviewNote: ").Append(ReviewNote).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -163,6 +175,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AcceptableIntervals.Equals(other.AcceptableIntervals)
                 ) &&
                 (
+                    this.ReviewNote == other.ReviewNote ||
+                    this.ReviewNote != null &&
+                    this.ReviewNote.Equals(other.ReviewNote)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -191,6 +208,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AcceptableIntervals != null)
                     hash = hash * 59 + this.AcceptableIntervals.GetHashCode();
+
+                if (this.ReviewNote != null)
+                    hash = hash * 59 + this.ReviewNote.GetHashCode();
 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

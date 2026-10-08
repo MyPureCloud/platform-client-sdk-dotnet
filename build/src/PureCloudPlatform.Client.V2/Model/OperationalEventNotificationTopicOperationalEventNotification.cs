@@ -34,8 +34,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EntityToken">EntityToken.</param>
         /// <param name="PhoneNumber">PhoneNumber.</param>
         /// <param name="ExternalContactId">ExternalContactId.</param>
+        /// <param name="EntityModifiedDate">EntityModifiedDate.</param>
+        /// <param name="EntityModifiedBy">EntityModifiedBy.</param>
         /// <param name="Timestamp">Timestamp.</param>
-        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, Guid? EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string Version = null, Guid? ParentEntity = null, string EntityType = null, Guid? ConversationId = null, string EntityToken = null, string PhoneNumber = null, string ExternalContactId = null, long? Timestamp = null)
+        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, Guid? EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string Version = null, Guid? ParentEntity = null, string EntityType = null, Guid? ConversationId = null, string EntityToken = null, string PhoneNumber = null, string ExternalContactId = null, DateTime? EntityModifiedDate = null, Guid? EntityModifiedBy = null, long? Timestamp = null)
         {
             this.EventEntity = EventEntity;
             this.EntityId = EntityId;
@@ -50,6 +52,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EntityToken = EntityToken;
             this.PhoneNumber = PhoneNumber;
             this.ExternalContactId = ExternalContactId;
+            this.EntityModifiedDate = EntityModifiedDate;
+            this.EntityModifiedBy = EntityModifiedBy;
             this.Timestamp = Timestamp;
             
         }
@@ -161,6 +165,22 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets EntityModifiedDate
+        /// </summary>
+        [DataMember(Name="entityModifiedDate", EmitDefaultValue=false)]
+        public DateTime? EntityModifiedDate { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets EntityModifiedBy
+        /// </summary>
+        [DataMember(Name="entityModifiedBy", EmitDefaultValue=false)]
+        public Guid? EntityModifiedBy { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Timestamp
         /// </summary>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
@@ -189,6 +209,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EntityToken: ").Append(EntityToken).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
+            sb.Append("  EntityModifiedDate: ").Append(EntityModifiedDate).Append("\n");
+            sb.Append("  EntityModifiedBy: ").Append(EntityModifiedBy).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -296,6 +318,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalContactId.Equals(other.ExternalContactId)
                 ) &&
                 (
+                    this.EntityModifiedDate == other.EntityModifiedDate ||
+                    this.EntityModifiedDate != null &&
+                    this.EntityModifiedDate.Equals(other.EntityModifiedDate)
+                ) &&
+                (
+                    this.EntityModifiedBy == other.EntityModifiedBy ||
+                    this.EntityModifiedBy != null &&
+                    this.EntityModifiedBy.Equals(other.EntityModifiedBy)
+                ) &&
+                (
                     this.Timestamp == other.Timestamp ||
                     this.Timestamp != null &&
                     this.Timestamp.Equals(other.Timestamp)
@@ -351,6 +383,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
+
+                if (this.EntityModifiedDate != null)
+                    hash = hash * 59 + this.EntityModifiedDate.GetHashCode();
+
+                if (this.EntityModifiedBy != null)
+                    hash = hash * 59 + this.EntityModifiedBy.GetHashCode();
 
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();

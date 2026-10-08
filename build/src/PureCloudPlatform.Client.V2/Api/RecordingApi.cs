@@ -432,7 +432,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Recording> GetOrphanrecordingMediaWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
-        /// Gets all orphan recordings
+        /// Gets all orphan recordings. When querying without &#39;hasConversation &#x3D; true&#39;, the results are capped at 500 orphan recordings
         /// </summary>
         /// <remarks>
         /// 
@@ -444,14 +444,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
+        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>OrphanRecordingListing</returns>
         
         OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
 
         /// <summary>
-        /// Gets all orphan recordings
+        /// Gets all orphan recordings. When querying without &#39;hasConversation &#x3D; true&#39;, the results are capped at 500 orphan recordings
         /// </summary>
         /// <remarks>
         /// 
@@ -463,7 +463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
+        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
         
@@ -1966,7 +1966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Recording>> GetOrphanrecordingMediaAsyncWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
-        /// Gets all orphan recordings
+        /// Gets all orphan recordings. When querying without &#39;hasConversation &#x3D; true&#39;, the results are capped at 500 orphan recordings
         /// </summary>
         /// <remarks>
         /// 
@@ -1978,14 +1978,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
+        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>Task of OrphanRecordingListing</returns>
         
         System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
 
         /// <summary>
-        /// Gets all orphan recordings
+        /// Gets all orphan recordings. When querying without &#39;hasConversation &#x3D; true&#39;, the results are capped at 500 orphan recordings
         /// </summary>
         /// <remarks>
         /// 
@@ -1997,7 +1997,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
+        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
         
@@ -6452,7 +6452,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets all orphan recordings 
+        /// Gets all orphan recordings. When querying without &#39;hasConversation &#x3D; true&#39;, the results are capped at 500 orphan recordings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6462,7 +6462,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
+        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>OrphanRecordingListing</returns>
         
@@ -6473,7 +6473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets all orphan recordings 
+        /// Gets all orphan recordings. When querying without &#39;hasConversation &#x3D; true&#39;, the results are capped at 500 orphan recordings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6483,7 +6483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
+        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
         
@@ -6571,7 +6571,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Gets all orphan recordings 
+        /// Gets all orphan recordings. When querying without &#39;hasConversation &#x3D; true&#39;, the results are capped at 500 orphan recordings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6581,7 +6581,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
+        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>Task of OrphanRecordingListing</returns>
         
@@ -6593,7 +6593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets all orphan recordings 
+        /// Gets all orphan recordings. When querying without &#39;hasConversation &#x3D; true&#39;, the results are capped at 500 orphan recordings 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6603,7 +6603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
+        /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
         

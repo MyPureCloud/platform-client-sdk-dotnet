@@ -16,9 +16,8 @@
 | **EventType** | **string** |  | [optional] |
 | **WebEvent** | [**JourneyWebEventsNotificationWebMessage**](JourneyWebEventsNotificationWebMessage) |  | [optional] |
 | **WebActionEvent** | [**JourneyWebEventsNotificationWebActionMessage**](JourneyWebEventsNotificationWebActionMessage) |  | [optional] |
-| **OutcomeAchievedEvent** | [**JourneyWebEventsNotificationOutcomeAchievedMessage**](JourneyWebEventsNotificationOutcomeAchievedMessage) |  | [optional] |
 | **SegmentAssignmentEvent** | [**JourneyWebEventsNotificationSegmentAssignmentMessage**](JourneyWebEventsNotificationSegmentAssignmentMessage) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_

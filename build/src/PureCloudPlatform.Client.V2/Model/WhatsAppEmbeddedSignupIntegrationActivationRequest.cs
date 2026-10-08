@@ -27,10 +27,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WhatsAppEmbeddedSignupIntegrationActivationRequest" /> class.
         /// </summary>
+        /// <param name="Name">The WhatsApp integration name. Required for Embedded Signup v4 activation; not used in v2..</param>
         /// <param name="PhoneNumber">E.164 phone number to associate with the WhatsApp integration. Not required for embedded signup v4 or later..</param>
         /// <param name="Pin">Specify the two-step verification PIN for that phone number (required).</param>
-        public WhatsAppEmbeddedSignupIntegrationActivationRequest(string PhoneNumber = null, string Pin = null)
+        public WhatsAppEmbeddedSignupIntegrationActivationRequest(string Name = null, string PhoneNumber = null, string Pin = null)
         {
+            this.Name = Name;
             this.PhoneNumber = PhoneNumber;
             this.Pin = Pin;
             
@@ -48,11 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// WhatsApp Integration name
+        /// The WhatsApp integration name. Required for Embedded Signup v4 activation; not used in v2.
         /// </summary>
-        /// <value>WhatsApp Integration name</value>
+        /// <value>The WhatsApp integration name. Required for Embedded Signup v4 activation; not used in v2.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; private set; }
+        public string Name { get; set; }
 
 
 

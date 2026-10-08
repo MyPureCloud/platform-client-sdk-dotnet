@@ -163,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">The user who submitted the trade request (required).</param>
         /// <param name="WeekDate">The start week date of the associated schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="ExpirationDate">The date when the trade will expire in ISO-8601 format. The trade cannot be approved after expiration.</param>
+        /// <param name="ReviewNote">Optional note from the initiating user for shift trade review.</param>
         /// <param name="State">The state of this alternative shift trade (required).</param>
         /// <param name="ProcessingStatus">The processing status of this alternative shift trade.</param>
         /// <param name="SystemDateReviewed">The timestamp of when the trade request was reviewed by the system in ISO-8601 format.</param>
@@ -170,7 +171,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AdminReviewedBy">The admin who reviewed this alternative shift trade after system denial.</param>
         /// <param name="Violations">A list of trade match violations (required).</param>
         /// <param name="Metadata">Version metadata for this alternative shift trade (required).</param>
-        public AlternativeShiftTradeResponse(string ShiftOfferJobId = null, List<AlternativeShiftAgentScheduledShift> ExistingShifts = null, List<AlternativeShiftAgentScheduledShift> OfferedShifts = null, AlternativeShiftScheduleLookup Schedule = null, ManagementUnitReference ManagementUnit = null, UserReference User = null, String WeekDate = null, DateTime? ExpirationDate = null, StateEnum? State = null, ProcessingStatusEnum? ProcessingStatus = null, DateTime? SystemDateReviewed = null, DateTime? AdminDateReviewed = null, UserReference AdminReviewedBy = null, List<ViolationsEnum> Violations = null, WfmVersionedEntityMetadata Metadata = null)
+        public AlternativeShiftTradeResponse(string ShiftOfferJobId = null, List<AlternativeShiftAgentScheduledShift> ExistingShifts = null, List<AlternativeShiftAgentScheduledShift> OfferedShifts = null, AlternativeShiftScheduleLookup Schedule = null, ManagementUnitReference ManagementUnit = null, UserReference User = null, String WeekDate = null, DateTime? ExpirationDate = null, string ReviewNote = null, StateEnum? State = null, ProcessingStatusEnum? ProcessingStatus = null, DateTime? SystemDateReviewed = null, DateTime? AdminDateReviewed = null, UserReference AdminReviewedBy = null, List<ViolationsEnum> Violations = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.ShiftOfferJobId = ShiftOfferJobId;
             this.ExistingShifts = ExistingShifts;
@@ -180,6 +181,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.User = User;
             this.WeekDate = WeekDate;
             this.ExpirationDate = ExpirationDate;
+            this.ReviewNote = ReviewNote;
             this.State = State;
             this.ProcessingStatus = ProcessingStatus;
             this.SystemDateReviewed = SystemDateReviewed;
@@ -273,6 +275,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Optional note from the initiating user for shift trade review
+        /// </summary>
+        /// <value>Optional note from the initiating user for shift trade review</value>
+        [DataMember(Name="reviewNote", EmitDefaultValue=false)]
+        public string ReviewNote { get; set; }
+
+
+
 
 
 
@@ -348,6 +359,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
             sb.Append("  ExpirationDate: ").Append(ExpirationDate).Append("\n");
+            sb.Append("  ReviewNote: ").Append(ReviewNote).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  ProcessingStatus: ").Append(ProcessingStatus).Append("\n");
             sb.Append("  SystemDateReviewed: ").Append(SystemDateReviewed).Append("\n");
@@ -442,6 +454,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExpirationDate.Equals(other.ExpirationDate)
                 ) &&
                 (
+                    this.ReviewNote == other.ReviewNote ||
+                    this.ReviewNote != null &&
+                    this.ReviewNote.Equals(other.ReviewNote)
+                ) &&
+                (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
@@ -520,6 +537,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExpirationDate != null)
                     hash = hash * 59 + this.ExpirationDate.GetHashCode();
+
+                if (this.ReviewNote != null)
+                    hash = hash * 59 + this.ReviewNote.GetHashCode();
 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();

@@ -1705,7 +1705,7 @@ namespace Example
 
 ## GetAuthorizationSubject
 
-> [**AuthzSubject**](AuthzSubject) GetAuthorizationSubject (string subjectId, bool? includeDuplicates = null)
+> [**AuthzSubject**](AuthzSubject) GetAuthorizationSubject (string subjectId, bool? includeDuplicates = null, bool? includeFullRoles = null)
 
 
 Returns a listing of roles and permissions for a user.
@@ -1738,11 +1738,12 @@ namespace Example
             var apiInstance = new UsersApi();
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
             var includeDuplicates = includeDuplicates_example;  // bool? | Include multiple entries with the same role and division but different subjects (optional)  (default to false)
+            var includeFullRoles = includeFullRoles_example;  // bool? | Include full role data with permission policies for each grant (optional)  (default to true)
 
             try
             { 
                 // Returns a listing of roles and permissions for a user.
-                AuthzSubject result = apiInstance.GetAuthorizationSubject(subjectId, includeDuplicates);
+                AuthzSubject result = apiInstance.GetAuthorizationSubject(subjectId, includeDuplicates, includeFullRoles);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1761,6 +1762,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **includeDuplicates** | **bool?**| Include multiple entries with the same role and division but different subjects | [optional] [default to false]<br />**Values**: true, false |
+| **includeFullRoles** | **bool?**| Include full role data with permission policies for each grant | [optional] [default to true]<br />**Values**: true, false |
 
 ### Return type
 
@@ -1769,7 +1771,7 @@ namespace Example
 
 ## GetAuthorizationSubjectsMe
 
-> [**AuthzSubject**](AuthzSubject) GetAuthorizationSubjectsMe (bool? includeDuplicates = null)
+> [**AuthzSubject**](AuthzSubject) GetAuthorizationSubjectsMe (bool? includeDuplicates = null, bool? includeFullRoles = null)
 
 
 Returns a listing of roles and permissions for the currently authenticated user.
@@ -1800,11 +1802,12 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var includeDuplicates = includeDuplicates_example;  // bool? | Include multiple entries with the same role and division but different subjects (optional)  (default to false)
+            var includeFullRoles = includeFullRoles_example;  // bool? | Include full role data with permission policies for each grant (optional)  (default to true)
 
             try
             { 
                 // Returns a listing of roles and permissions for the currently authenticated user.
-                AuthzSubject result = apiInstance.GetAuthorizationSubjectsMe(includeDuplicates);
+                AuthzSubject result = apiInstance.GetAuthorizationSubjectsMe(includeDuplicates, includeFullRoles);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1822,6 +1825,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **includeDuplicates** | **bool?**| Include multiple entries with the same role and division but different subjects | [optional] [default to false]<br />**Values**: true, false |
+| **includeFullRoles** | **bool?**| Include full role data with permission policies for each grant | [optional] [default to true]<br />**Values**: true, false |
 
 ### Return type
 
@@ -8471,4 +8475,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_

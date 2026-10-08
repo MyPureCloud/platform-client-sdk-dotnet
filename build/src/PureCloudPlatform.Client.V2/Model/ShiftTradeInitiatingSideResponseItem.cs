@@ -31,12 +31,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ManagementUnit">The management unit of the user who initiated this trade (required).</param>
         /// <param name="Schedule">Associated schedule information for the initiating user (required).</param>
         /// <param name="Shift">The shift offered for trade by the initiating user (required).</param>
-        public ShiftTradeInitiatingSideResponseItem(UserReference User = null, ManagementUnitReference ManagementUnit = null, ScheduleReferenceWithBusinessUnit Schedule = null, ShiftTradeShiftResponseItem Shift = null)
+        /// <param name="ReviewNote">Optional note from the initiating user for shift trade review.</param>
+        public ShiftTradeInitiatingSideResponseItem(UserReference User = null, ManagementUnitReference ManagementUnit = null, ScheduleReferenceWithBusinessUnit Schedule = null, ShiftTradeShiftResponseItem Shift = null, string ReviewNote = null)
         {
             this.User = User;
             this.ManagementUnit = ManagementUnit;
             this.Schedule = Schedule;
             this.Shift = Shift;
+            this.ReviewNote = ReviewNote;
             
         }
         
@@ -77,6 +79,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ShiftTradeShiftResponseItem Shift { get; set; }
 
 
+
+        /// <summary>
+        /// Optional note from the initiating user for shift trade review
+        /// </summary>
+        /// <value>Optional note from the initiating user for shift trade review</value>
+        [DataMember(Name="reviewNote", EmitDefaultValue=false)]
+        public string ReviewNote { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
             sb.Append("  Schedule: ").Append(Schedule).Append("\n");
             sb.Append("  Shift: ").Append(Shift).Append("\n");
+            sb.Append("  ReviewNote: ").Append(ReviewNote).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,6 +161,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Shift == other.Shift ||
                     this.Shift != null &&
                     this.Shift.Equals(other.Shift)
+                ) &&
+                (
+                    this.ReviewNote == other.ReviewNote ||
+                    this.ReviewNote != null &&
+                    this.ReviewNote.Equals(other.ReviewNote)
                 );
         }
 
@@ -174,6 +191,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Shift != null)
                     hash = hash * 59 + this.Shift.GetHashCode();
+
+                if (this.ReviewNote != null)
+                    hash = hash * 59 + this.ReviewNote.GetHashCode();
 
                 return hash;
             }

@@ -365,7 +365,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapupPrompt">The wrap-up prompt indicating the type of wrap-up to be performed..</param>
         /// <param name="MediaRoles">List of roles this participant&#39;s media has had on the conversation, ie monitor, coach, etc.</param>
         /// <param name="User">The PureCloud user for this participant..</param>
-        /// <param name="Queue">The PureCloud queue for this participant..</param>
+        /// <param name="Queue">The PureCloud queue for this participant. Id and selfUri will be populated, name is optional..</param>
         /// <param name="Team">The PureCloud team for this participant..</param>
         /// <param name="Attributes">A list of ad-hoc attributes for the participant..</param>
         /// <param name="ErrorInfo">If the conversation ends in error, contains additional error details..</param>
@@ -604,9 +604,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The PureCloud queue for this participant.
+        /// The PureCloud queue for this participant. Id and selfUri will be populated, name is optional.
         /// </summary>
-        /// <value>The PureCloud queue for this participant.</value>
+        /// <value>The PureCloud queue for this participant. Id and selfUri will be populated, name is optional.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public DomainEntityRef Queue { get; set; }
 

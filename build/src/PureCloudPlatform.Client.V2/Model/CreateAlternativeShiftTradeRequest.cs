@@ -59,13 +59,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PickupShiftReferenceKeys">A list of offered shift reference keys an agent wants to pick up.</param>
         /// <param name="AlternativeShiftTradeGranularity">The granularity of alternative shifts to be traded (required).</param>
         /// <param name="ExpirationDate">The date when the trade will expire in ISO-8601 format. The trade cannot be approved after expiration.</param>
-        public CreateAlternativeShiftTradeRequest(string JobId = null, List<string> DropShiftReferenceKeys = null, List<string> PickupShiftReferenceKeys = null, AlternativeShiftTradeGranularityEnum? AlternativeShiftTradeGranularity = null, DateTime? ExpirationDate = null)
+        /// <param name="ReviewNote">Optional note for supervisors to review during alternative shift trade approval.</param>
+        public CreateAlternativeShiftTradeRequest(string JobId = null, List<string> DropShiftReferenceKeys = null, List<string> PickupShiftReferenceKeys = null, AlternativeShiftTradeGranularityEnum? AlternativeShiftTradeGranularity = null, DateTime? ExpirationDate = null, string ReviewNote = null)
         {
             this.JobId = JobId;
             this.DropShiftReferenceKeys = DropShiftReferenceKeys;
             this.PickupShiftReferenceKeys = PickupShiftReferenceKeys;
             this.AlternativeShiftTradeGranularity = AlternativeShiftTradeGranularity;
             this.ExpirationDate = ExpirationDate;
+            this.ReviewNote = ReviewNote;
             
         }
         
@@ -108,6 +110,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? ExpirationDate { get; set; }
 
 
+
+        /// <summary>
+        /// Optional note for supervisors to review during alternative shift trade approval
+        /// </summary>
+        /// <value>Optional note for supervisors to review during alternative shift trade approval</value>
+        [DataMember(Name="reviewNote", EmitDefaultValue=false)]
+        public string ReviewNote { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,6 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PickupShiftReferenceKeys: ").Append(PickupShiftReferenceKeys).Append("\n");
             sb.Append("  AlternativeShiftTradeGranularity: ").Append(AlternativeShiftTradeGranularity).Append("\n");
             sb.Append("  ExpirationDate: ").Append(ExpirationDate).Append("\n");
+            sb.Append("  ReviewNote: ").Append(ReviewNote).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -186,6 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExpirationDate == other.ExpirationDate ||
                     this.ExpirationDate != null &&
                     this.ExpirationDate.Equals(other.ExpirationDate)
+                ) &&
+                (
+                    this.ReviewNote == other.ReviewNote ||
+                    this.ReviewNote != null &&
+                    this.ReviewNote.Equals(other.ReviewNote)
                 );
         }
 
@@ -214,6 +231,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExpirationDate != null)
                     hash = hash * 59 + this.ExpirationDate.GetHashCode();
+
+                if (this.ReviewNote != null)
+                    hash = hash * 59 + this.ReviewNote.GetHashCode();
 
                 return hash;
             }

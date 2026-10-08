@@ -142,7 +142,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Apple for "apple"
             /// </summary>
             [EnumMember(Value = "apple")]
-            Apple
+            Apple,
+            
+            /// <summary>
+            /// Enum Linkedin for "linkedin"
+            /// </summary>
+            [EnumMember(Value = "linkedin")]
+            Linkedin
         }
         /// <summary>
         /// The type of Open Messaging Integration Extension. Only present when 'messengerType' is 'open' and the Open Integration has an extension

@@ -70,9 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Chat">Chat.</param>
         /// <param name="Department">Department.</param>
         /// <param name="Email">Email.</param>
-        /// <param name="Addresses">Email address, phone number, and/or extension for this user. One entry is allowed per media type.</param>
+        /// <param name="Addresses">Email address, phone number, and/or extension for this user. One entry is allowed per media type. The PRIMARY email address cannot be changed through this field; submitting a modified value for the PRIMARY entry returns a 400 error..</param>
         /// <param name="Title">Title.</param>
-        /// <param name="Username">Username.</param>
+        /// <param name="Username">This value is ignored; the username cannot be changed through this endpoint..</param>
         /// <param name="PreferredName">Preferred full name of agent.</param>
         /// <param name="Manager">Manager.</param>
         /// <param name="Images">Images.</param>
@@ -162,9 +162,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Email address, phone number, and/or extension for this user. One entry is allowed per media type
+        /// Email address, phone number, and/or extension for this user. One entry is allowed per media type. The PRIMARY email address cannot be changed through this field; submitting a modified value for the PRIMARY entry returns a 400 error.
         /// </summary>
-        /// <value>Email address, phone number, and/or extension for this user. One entry is allowed per media type</value>
+        /// <value>Email address, phone number, and/or extension for this user. One entry is allowed per media type. The PRIMARY email address cannot be changed through this field; submitting a modified value for the PRIMARY entry returns a 400 error.</value>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<Contact> Addresses { get; set; }
 
@@ -179,8 +179,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Username
+        /// This value is ignored; the username cannot be changed through this endpoint.
         /// </summary>
+        /// <value>This value is ignored; the username cannot be changed through this endpoint.</value>
         [DataMember(Name="username", EmitDefaultValue=false)]
         public string Username { get; set; }
 

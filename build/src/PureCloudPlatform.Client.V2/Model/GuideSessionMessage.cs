@@ -13,16 +13,17 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// JourneyWebEventsNotificationAssociatedValue
+    /// A message in the conversation history provided to a guide session turn.
     /// </summary>
     [DataContract]
-    public partial class JourneyWebEventsNotificationAssociatedValue :  IEquatable<JourneyWebEventsNotificationAssociatedValue>
+    public partial class GuideSessionMessage :  IEquatable<GuideSessionMessage>
     {
         /// <summary>
-        /// Gets or Sets DataType
+        /// The role of the message author.
         /// </summary>
+        /// <value>The role of the message author.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum DataTypeEnum
+        public enum RoleEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -33,31 +34,38 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Number for "Number"
+            /// Enum User for "User"
             /// </summary>
-            [EnumMember(Value = "Number")]
-            Number,
+            [EnumMember(Value = "User")]
+            User,
             
             /// <summary>
-            /// Enum Integer for "Integer"
+            /// Enum Assistant for "Assistant"
             /// </summary>
-            [EnumMember(Value = "Integer")]
-            Integer
+            [EnumMember(Value = "Assistant")]
+            Assistant
         }
         /// <summary>
-        /// Gets or Sets DataType
+        /// The role of the message author.
         /// </summary>
-        [DataMember(Name="dataType", EmitDefaultValue=false)]
-        public DataTypeEnum? DataType { get; set; }
+        /// <value>The role of the message author.</value>
+        [DataMember(Name="role", EmitDefaultValue=false)]
+        public RoleEnum? Role { get; set; }
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="JourneyWebEventsNotificationAssociatedValue" /> class.
+        /// Initializes a new instance of the <see cref="GuideSessionMessage" /> class.
         /// </summary>
-        /// <param name="DataType">DataType.</param>
-        /// <param name="Value">Value.</param>
-        public JourneyWebEventsNotificationAssociatedValue(DataTypeEnum? DataType = null, double? Value = null)
+        [JsonConstructorAttribute]
+        protected GuideSessionMessage() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GuideSessionMessage" /> class.
+        /// </summary>
+        /// <param name="Role">The role of the message author. (required).</param>
+        /// <param name="Content">The content of the message. (required).</param>
+        public GuideSessionMessage(RoleEnum? Role = null, string Content = null)
         {
-            this.DataType = DataType;
-            this.Value = Value;
+            this.Role = Role;
+            this.Content = Content;
             
         }
         
@@ -66,10 +74,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Value
+        /// The content of the message.
         /// </summary>
-        [DataMember(Name="value", EmitDefaultValue=false)]
-        public double? Value { get; set; }
+        /// <value>The content of the message.</value>
+        [DataMember(Name="content", EmitDefaultValue=false)]
+        public string Content { get; set; }
 
 
         /// <summary>
@@ -79,10 +88,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class JourneyWebEventsNotificationAssociatedValue {\n");
+            sb.Append("class GuideSessionMessage {\n");
 
-            sb.Append("  DataType: ").Append(DataType).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Role: ").Append(Role).Append("\n");
+            sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,15 +117,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as JourneyWebEventsNotificationAssociatedValue);
+            return this.Equals(obj as GuideSessionMessage);
         }
 
         /// <summary>
-        /// Returns true if JourneyWebEventsNotificationAssociatedValue instances are equal
+        /// Returns true if GuideSessionMessage instances are equal
         /// </summary>
-        /// <param name="other">Instance of JourneyWebEventsNotificationAssociatedValue to be compared</param>
+        /// <param name="other">Instance of GuideSessionMessage to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(JourneyWebEventsNotificationAssociatedValue other)
+        public bool Equals(GuideSessionMessage other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -124,14 +133,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.DataType == other.DataType ||
-                    this.DataType != null &&
-                    this.DataType.Equals(other.DataType)
+                    this.Role == other.Role ||
+                    this.Role != null &&
+                    this.Role.Equals(other.Role)
                 ) &&
                 (
-                    this.Value == other.Value ||
-                    this.Value != null &&
-                    this.Value.Equals(other.Value)
+                    this.Content == other.Content ||
+                    this.Content != null &&
+                    this.Content.Equals(other.Content)
                 );
         }
 
@@ -146,11 +155,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.DataType != null)
-                    hash = hash * 59 + this.DataType.GetHashCode();
+                if (this.Role != null)
+                    hash = hash * 59 + this.Role.GetHashCode();
 
-                if (this.Value != null)
-                    hash = hash * 59 + this.Value.GetHashCode();
+                if (this.Content != null)
+                    hash = hash * 59 + this.Content.GetHashCode();
 
                 return hash;
             }

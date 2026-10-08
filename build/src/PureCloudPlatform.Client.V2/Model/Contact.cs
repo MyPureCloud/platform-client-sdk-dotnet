@@ -51,8 +51,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Sms
         }
         /// <summary>
-        /// Gets or Sets Type
+        /// The type of this contact entry. Note: the PRIMARY email address cannot be changed via PATCH /api/v2/users/{userId}; submitting a modified value for the PRIMARY entry returns a 400 error.
         /// </summary>
+        /// <value>The type of this contact entry. Note: the PRIMARY email address cannot be changed via PATCH /api/v2/users/{userId}; submitting a modified value for the PRIMARY entry returns a 400 error.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -124,8 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
         /// <summary>
-        /// Gets or Sets Type
+        /// The type of this contact entry. Note: the PRIMARY email address cannot be changed via PATCH /api/v2/users/{userId}; submitting a modified value for the PRIMARY entry returns a 400 error.
         /// </summary>
+        /// <value>The type of this contact entry. Note: the PRIMARY email address cannot be changed via PATCH /api/v2/users/{userId}; submitting a modified value for the PRIMARY entry returns a 400 error.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
@@ -133,7 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Address">Email address or phone number for this contact type.</param>
         /// <param name="MediaType">MediaType.</param>
-        /// <param name="Type">Type.</param>
+        /// <param name="Type">The type of this contact entry. Note: the PRIMARY email address cannot be changed via PATCH /api/v2/users/{userId}; submitting a modified value for the PRIMARY entry returns a 400 error..</param>
         /// <param name="Extension">Use internal extension instead of address. Mutually exclusive with the address field..</param>
         /// <param name="CountryCode">CountryCode.</param>
         /// <param name="Integration">Integration tag value if this number is associated with an external integration..</param>

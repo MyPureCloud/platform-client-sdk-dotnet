@@ -844,9 +844,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>AuthzSubject</returns>
         
-        AuthzSubject GetAuthorizationSubject (string subjectId, bool? includeDuplicates = null);
+        AuthzSubject GetAuthorizationSubject (string subjectId, bool? includeDuplicates = null, bool? includeFullRoles = null);
 
         /// <summary>
         /// Returns a listing of roles and permissions for a user.
@@ -857,9 +858,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>ApiResponse of AuthzSubject</returns>
         
-        ApiResponse<AuthzSubject> GetAuthorizationSubjectWithHttpInfo (string subjectId, bool? includeDuplicates = null);
+        ApiResponse<AuthzSubject> GetAuthorizationSubjectWithHttpInfo (string subjectId, bool? includeDuplicates = null, bool? includeFullRoles = null);
 
         /// <summary>
         /// Returns a listing of roles and permissions for the currently authenticated user.
@@ -869,9 +871,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>AuthzSubject</returns>
         
-        AuthzSubject GetAuthorizationSubjectsMe (bool? includeDuplicates = null);
+        AuthzSubject GetAuthorizationSubjectsMe (bool? includeDuplicates = null, bool? includeFullRoles = null);
 
         /// <summary>
         /// Returns a listing of roles and permissions for the currently authenticated user.
@@ -881,9 +884,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>ApiResponse of AuthzSubject</returns>
         
-        ApiResponse<AuthzSubject> GetAuthorizationSubjectsMeWithHttpInfo (bool? includeDuplicates = null);
+        ApiResponse<AuthzSubject> GetAuthorizationSubjectsMeWithHttpInfo (bool? includeDuplicates = null, bool? includeFullRoles = null);
 
         /// <summary>
         /// Get the count of roles granted to a list of subjects
@@ -2424,9 +2428,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>Task of AuthzSubject</returns>
         
-        System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId, bool? includeDuplicates = null);
+        System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId, bool? includeDuplicates = null, bool? includeFullRoles = null);
 
         /// <summary>
         /// Returns a listing of roles and permissions for a user.
@@ -2437,9 +2442,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId, bool? includeDuplicates = null);
+        System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId, bool? includeDuplicates = null, bool? includeFullRoles = null);
 
         /// <summary>
         /// Returns a listing of roles and permissions for the currently authenticated user.
@@ -2449,9 +2455,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>Task of AuthzSubject</returns>
         
-        System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync (bool? includeDuplicates = null);
+        System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync (bool? includeDuplicates = null, bool? includeFullRoles = null);
 
         /// <summary>
         /// Returns a listing of roles and permissions for the currently authenticated user.
@@ -2461,9 +2468,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo (bool? includeDuplicates = null);
+        System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo (bool? includeDuplicates = null, bool? includeFullRoles = null);
 
         /// <summary>
         /// Get the count of roles granted to a list of subjects
@@ -9670,11 +9678,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>AuthzSubject</returns>
         
-        public AuthzSubject GetAuthorizationSubject (string subjectId, bool? includeDuplicates = null)
+        public AuthzSubject GetAuthorizationSubject (string subjectId, bool? includeDuplicates = null, bool? includeFullRoles = null)
         {
-             ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectWithHttpInfo(subjectId, includeDuplicates);
+             ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectWithHttpInfo(subjectId, includeDuplicates, includeFullRoles);
              return localVarResponse.Data;
         }
 
@@ -9685,9 +9694,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>ApiResponse of AuthzSubject</returns>
         
-        public ApiResponse< AuthzSubject > GetAuthorizationSubjectWithHttpInfo (string subjectId, bool? includeDuplicates = null)
+        public ApiResponse< AuthzSubject > GetAuthorizationSubjectWithHttpInfo (string subjectId, bool? includeDuplicates = null, bool? includeFullRoles = null)
         { 
             // verify the required parameter 'subjectId' is set
             if (subjectId == null)
@@ -9728,6 +9738,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (includeDuplicates != null) localVarQueryParams.Add(new Tuple<string, string>("includeDuplicates", this.Configuration.ApiClient.ParameterToString(includeDuplicates)));
+            if (includeFullRoles != null) localVarQueryParams.Add(new Tuple<string, string>("includeFullRoles", this.Configuration.ApiClient.ParameterToString(includeFullRoles)));
 
             // Header params
 
@@ -9774,11 +9785,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>Task of AuthzSubject</returns>
         
-        public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId, bool? includeDuplicates = null)
+        public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId, bool? includeDuplicates = null, bool? includeFullRoles = null)
         {
-             ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectAsyncWithHttpInfo(subjectId, includeDuplicates);
+             ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectAsyncWithHttpInfo(subjectId, includeDuplicates, includeFullRoles);
              return localVarResponse.Data;
 
         }
@@ -9790,9 +9802,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId, bool? includeDuplicates = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId, bool? includeDuplicates = null, bool? includeFullRoles = null)
         { 
             // verify the required parameter 'subjectId' is set
             if (subjectId == null)
@@ -9834,6 +9847,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (includeDuplicates != null) localVarQueryParams.Add(new Tuple<string, string>("includeDuplicates", this.Configuration.ApiClient.ParameterToString(includeDuplicates)));
+            if (includeFullRoles != null) localVarQueryParams.Add(new Tuple<string, string>("includeFullRoles", this.Configuration.ApiClient.ParameterToString(includeFullRoles)));
 
             // Header params
 
@@ -9880,11 +9894,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>AuthzSubject</returns>
         
-        public AuthzSubject GetAuthorizationSubjectsMe (bool? includeDuplicates = null)
+        public AuthzSubject GetAuthorizationSubjectsMe (bool? includeDuplicates = null, bool? includeFullRoles = null)
         {
-             ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectsMeWithHttpInfo(includeDuplicates);
+             ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectsMeWithHttpInfo(includeDuplicates, includeFullRoles);
              return localVarResponse.Data;
         }
 
@@ -9894,9 +9909,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>ApiResponse of AuthzSubject</returns>
         
-        public ApiResponse< AuthzSubject > GetAuthorizationSubjectsMeWithHttpInfo (bool? includeDuplicates = null)
+        public ApiResponse< AuthzSubject > GetAuthorizationSubjectsMeWithHttpInfo (bool? includeDuplicates = null, bool? includeFullRoles = null)
         { 
 
             var localVarPath = "/api/v2/authorization/subjects/me";
@@ -9933,6 +9949,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (includeDuplicates != null) localVarQueryParams.Add(new Tuple<string, string>("includeDuplicates", this.Configuration.ApiClient.ParameterToString(includeDuplicates)));
+            if (includeFullRoles != null) localVarQueryParams.Add(new Tuple<string, string>("includeFullRoles", this.Configuration.ApiClient.ParameterToString(includeFullRoles)));
 
             // Header params
 
@@ -9978,11 +9995,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>Task of AuthzSubject</returns>
         
-        public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync (bool? includeDuplicates = null)
+        public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync (bool? includeDuplicates = null, bool? includeFullRoles = null)
         {
-             ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectsMeAsyncWithHttpInfo(includeDuplicates);
+             ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectsMeAsyncWithHttpInfo(includeDuplicates, includeFullRoles);
              return localVarResponse.Data;
 
         }
@@ -9993,9 +10011,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
+        /// <param name="includeFullRoles">Include full role data with permission policies for each grant (optional, default to true)</param>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo (bool? includeDuplicates = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo (bool? includeDuplicates = null, bool? includeFullRoles = null)
         { 
 
             var localVarPath = "/api/v2/authorization/subjects/me";
@@ -10032,6 +10051,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (includeDuplicates != null) localVarQueryParams.Add(new Tuple<string, string>("includeDuplicates", this.Configuration.ApiClient.ParameterToString(includeDuplicates)));
+            if (includeFullRoles != null) localVarQueryParams.Add(new Tuple<string, string>("includeFullRoles", this.Configuration.ApiClient.ParameterToString(includeFullRoles)));
 
             // Header params
 

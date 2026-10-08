@@ -390,7 +390,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Genesyscloudcopilot for "GenesysCloudCopilot"
             /// </summary>
             [EnumMember(Value = "GenesysCloudCopilot")]
-            Genesyscloudcopilot
+            Genesyscloudcopilot,
+            
+            /// <summary>
+            /// Enum Conversationrefinement for "ConversationRefinement"
+            /// </summary>
+            [EnumMember(Value = "ConversationRefinement")]
+            Conversationrefinement
         }
         /// <summary>
         /// Gets or Sets Action
@@ -2950,7 +2956,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Graphsettings for "GraphSettings"
             /// </summary>
             [EnumMember(Value = "GraphSettings")]
-            Graphsettings
+            Graphsettings,
+            
+            /// <summary>
+            /// Enum Refinementconfiguration for "RefinementConfiguration"
+            /// </summary>
+            [EnumMember(Value = "RefinementConfiguration")]
+            Refinementconfiguration
         }
         /// <summary>
         /// Gets or Sets ServiceName

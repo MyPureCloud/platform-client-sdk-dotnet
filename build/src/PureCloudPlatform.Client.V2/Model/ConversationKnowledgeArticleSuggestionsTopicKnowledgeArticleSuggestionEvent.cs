@@ -122,7 +122,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Intent for "Intent"
             /// </summary>
             [EnumMember(Value = "Intent")]
-            Intent
+            Intent,
+            
+            /// <summary>
+            /// Enum Sentiment for "Sentiment"
+            /// </summary>
+            [EnumMember(Value = "Sentiment")]
+            Sentiment
         }
         /// <summary>
         /// Gets or Sets EngagementType

@@ -15,10 +15,9 @@
 | **Session** | [**JourneyAppEventsNotificationSession**](JourneyAppEventsNotificationSession) |  | [optional] |
 | **EventType** | **string** |  | [optional] |
 | **AppEvent** | [**JourneyAppEventsNotificationAppMessage**](JourneyAppEventsNotificationAppMessage) |  | [optional] |
-| **OutcomeAchievedEvent** | [**JourneyAppEventsNotificationOutcomeAchievedMessage**](JourneyAppEventsNotificationOutcomeAchievedMessage) |  | [optional] |
 | **SegmentAssignmentEvent** | [**JourneyAppEventsNotificationSegmentAssignmentMessage**](JourneyAppEventsNotificationSegmentAssignmentMessage) |  | [optional] |
 | **WebActionEvent** | [**JourneyAppEventsNotificationWebActionMessage**](JourneyAppEventsNotificationWebActionMessage) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_

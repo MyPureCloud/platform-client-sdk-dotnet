@@ -7,11 +7,11 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** | WhatsApp Integration name | [optional] |
+| **Name** | **string** | The WhatsApp integration name. Required for Embedded Signup v4 activation; not used in v2. | [optional] |
 | **PhoneNumber** | **string** | E.164 phone number to associate with the WhatsApp integration. Not required for embedded signup v4 or later. | [optional] |
 | **Pin** | **string** | Specify the two-step verification PIN for that phone number | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_

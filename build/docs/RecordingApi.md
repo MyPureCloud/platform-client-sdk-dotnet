@@ -21,7 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationRecordings**](#GetConversationRecordings) | **Get** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
 | [**GetOrphanrecording**](#GetOrphanrecording) | **Get** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
 | [**GetOrphanrecordingMedia**](#GetOrphanrecordingMedia) | **Get** /api/v2/orphanrecordings/{orphanId}/media | Gets the media of a single orphan recording |
-| [**GetOrphanrecordings**](#GetOrphanrecordings) | **Get** /api/v2/orphanrecordings | Gets all orphan recordings |
+| [**GetOrphanrecordings**](#GetOrphanrecordings) | **Get** /api/v2/orphanrecordings | Gets all orphan recordings. When querying without &#39;hasConversation &#x3D; true&#39;, the results are capped at 500 orphan recordings |
 | [**GetRecordingBatchrequest**](#GetRecordingBatchrequest) | **Get** /api/v2/recording/batchrequests/{jobId} | Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results. |
 | [**GetRecordingCrossplatformMediaretentionpolicies**](#GetRecordingCrossplatformMediaretentionpolicies) | **Get** /api/v2/recording/crossplatform/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
 | [**GetRecordingCrossplatformMediaretentionpolicy**](#GetRecordingCrossplatformMediaretentionpolicy) | **Get** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Get a media retention policy |
@@ -1085,7 +1085,7 @@ namespace Example
 > [**OrphanRecordingListing**](OrphanRecordingListing) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
 
 
-Gets all orphan recordings
+Gets all orphan recordings. When querying without 'hasConversation = true', the results are capped at 500 orphan recordings
 
 Requires ANY permissions: 
 
@@ -1119,12 +1119,12 @@ namespace Example
             var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            var hasConversation = true;  // bool? | Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional)  (default to false)
+            var hasConversation = true;  // bool? | Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results. (optional)  (default to false)
             var media = media_example;  // string | Filter resulting orphans based on their media type (optional) 
 
             try
             { 
-                // Gets all orphan recordings
+                // Gets all orphan recordings. When querying without 'hasConversation = true', the results are capped at 500 orphan recordings
                 OrphanRecordingListing result = apiInstance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation, media);
                 Debug.WriteLine(result);
             }
@@ -1148,7 +1148,7 @@ namespace Example
 | **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-| **hasConversation** | **bool?**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false] |
+| **hasConversation** | **bool?**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results. | [optional] [default to false] |
 | **media** | **string**| Filter resulting orphans based on their media type | [optional] <br />**Values**: Call, Screen |
 
 ### Return type
@@ -3824,4 +3824,4 @@ namespace Example
 [**ManageDeleteProtectionResult**](ManageDeleteProtectionResult)
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_

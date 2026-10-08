@@ -163,6 +163,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string QueryStatement { get; private set; }
 
 
+
+        /// <summary>
+        /// The language of the conversation for which the suggestion was generated, in lower case, for example: &#39;en-us&#39;.
+        /// </summary>
+        /// <value>The language of the conversation for which the suggestion was generated, in lower case, for example: &#39;en-us&#39;.</value>
+        [DataMember(Name="language", EmitDefaultValue=false)]
+        public string Language { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -180,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Utterance: ").Append(Utterance).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  QueryStatement: ").Append(QueryStatement).Append("\n");
+            sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -259,6 +269,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueryStatement == other.QueryStatement ||
                     this.QueryStatement != null &&
                     this.QueryStatement.Equals(other.QueryStatement)
+                ) &&
+                (
+                    this.Language == other.Language ||
+                    this.Language != null &&
+                    this.Language.Equals(other.Language)
                 );
         }
 
@@ -296,6 +311,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QueryStatement != null)
                     hash = hash * 59 + this.QueryStatement.GetHashCode();
+
+                if (this.Language != null)
+                    hash = hash * 59 + this.Language.GetHashCode();
 
                 return hash;
             }

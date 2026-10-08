@@ -1096,6 +1096,7 @@ docs/ChecklistInferenceJobCreationResponse.md
 docs/ChecklistInferenceJobPayload.md
 docs/ChecklistInferenceJobResponse.md
 docs/ChecklistItem.md
+docs/ChecklistTransferConfig.md
 docs/ChunkSearchRegisterRequest.md
 docs/ClientApp.md
 docs/ClientAppConfigurationInfo.md
@@ -1498,6 +1499,7 @@ docs/ConversationContentRichLinkHeader.md
 docs/ConversationContentRoadsideAssistance.md
 docs/ConversationContentStory.md
 docs/ConversationContentText.md
+docs/ConversationContentThumbnail.md
 docs/ConversationContentWheelPicker.md
 docs/ConversationContentWheelPickerItem.md
 docs/ConversationContext.md
@@ -1970,6 +1972,9 @@ docs/CustomAttributesIdResponse.md
 docs/CustomAttributesListing.md
 docs/CustomAttributesPatchRequest.md
 docs/CustomAttributesUpdateRequest.md
+docs/CustomConversationAttributeInput.md
+docs/CustomConversationAttributeOutput.md
+docs/CustomConversationAttributeUpdate.md
 docs/CustomEventAttribute.md
 docs/CustomEventAttributeList.md
 docs/CustomI18nLabels.md
@@ -5019,11 +5024,14 @@ docs/GuideContentGenerationJob.md
 docs/GuideEntityListing.md
 docs/GuideJob.md
 docs/GuideSessionInputEvent.md
+docs/GuideSessionMessage.md
 docs/GuideSessionTurnInvocationData.md
 docs/GuideSessionTurnInvocationParameters.md
 docs/GuideSessionTurnInvocationResponse.md
 docs/GuideSessionTurnRequest.md
+docs/GuideSessionTurnRequestContext.md
 docs/GuideSessionTurnResponse.md
+docs/GuideSessionTurnResponseContext.md
 docs/GuideSessionTurnResponseData.md
 docs/GuideSessionVariable.md
 docs/GuideVersion.md
@@ -5233,7 +5241,6 @@ docs/JourneyAppEventsNotificationActionTarget.md
 docs/JourneyAppEventsNotificationApp.md
 docs/JourneyAppEventsNotificationAppEventsNotification.md
 docs/JourneyAppEventsNotificationAppMessage.md
-docs/JourneyAppEventsNotificationAssociatedValue.md
 docs/JourneyAppEventsNotificationBrowser.md
 docs/JourneyAppEventsNotificationCustomEventAttribute.md
 docs/JourneyAppEventsNotificationDevice.md
@@ -5242,8 +5249,6 @@ docs/JourneyAppEventsNotificationExternalContact.md
 docs/JourneyAppEventsNotificationGeoLocation.md
 docs/JourneyAppEventsNotificationMktCampaign.md
 docs/JourneyAppEventsNotificationNetworkConnectivity.md
-docs/JourneyAppEventsNotificationOutcome.md
-docs/JourneyAppEventsNotificationOutcomeAchievedMessage.md
 docs/JourneyAppEventsNotificationReferrer.md
 docs/JourneyAppEventsNotificationSdkLibrary.md
 docs/JourneyAppEventsNotificationSegment.md
@@ -5267,18 +5272,12 @@ docs/JourneyJsonSchemaDocument.md
 docs/JourneyJsonSchemaRequest.md
 docs/JourneyOutcomeEventsNotificationActionMap.md
 docs/JourneyOutcomeEventsNotificationAssociatedValue.md
-docs/JourneyOutcomeEventsNotificationBrowser.md
-docs/JourneyOutcomeEventsNotificationDevice.md
 docs/JourneyOutcomeEventsNotificationExternalContact.md
-docs/JourneyOutcomeEventsNotificationGeoLocation.md
-docs/JourneyOutcomeEventsNotificationMktCampaign.md
 docs/JourneyOutcomeEventsNotificationOutcome.md
-docs/JourneyOutcomeEventsNotificationOutcomeAchievedMessage.md
 docs/JourneyOutcomeEventsNotificationOutcomeAttributionMessage.md
 docs/JourneyOutcomeEventsNotificationOutcomeEventsNotification.md
 docs/JourneyOutcomeEventsNotificationOutcomeTouchpoint.md
 docs/JourneyOutcomeEventsNotificationOutcomeTouchpointChannel.md
-docs/JourneyOutcomeEventsNotificationReferrer.md
 docs/JourneyOutcomeEventsNotificationSegment.md
 docs/JourneyOutcomeEventsNotificationSession.md
 docs/JourneyPage.md
@@ -5362,7 +5361,6 @@ docs/JourneyWebActionEventsNotificationWebActionEventsNotification.md
 docs/JourneyWebActionEventsNotificationWebActionMessage.md
 docs/JourneyWebEventsNotificationActionMap.md
 docs/JourneyWebEventsNotificationActionTarget.md
-docs/JourneyWebEventsNotificationAssociatedValue.md
 docs/JourneyWebEventsNotificationBrowser.md
 docs/JourneyWebEventsNotificationCustomEventAttribute.md
 docs/JourneyWebEventsNotificationDevice.md
@@ -5370,8 +5368,6 @@ docs/JourneyWebEventsNotificationEventAction.md
 docs/JourneyWebEventsNotificationExternalContact.md
 docs/JourneyWebEventsNotificationGeoLocation.md
 docs/JourneyWebEventsNotificationMktCampaign.md
-docs/JourneyWebEventsNotificationOutcome.md
-docs/JourneyWebEventsNotificationOutcomeAchievedMessage.md
 docs/JourneyWebEventsNotificationPage.md
 docs/JourneyWebEventsNotificationReferrer.md
 docs/JourneyWebEventsNotificationSegment.md
@@ -6019,6 +6015,7 @@ docs/OneOnOne.md
 docs/OpenActionFields.md
 docs/OpenActionProperties.md
 docs/OpenContentAttachment.md
+docs/OpenContentThumbnail.md
 docs/OpenDataIngestionRuleRequest.md
 docs/OpenDataIngestionRuleResponse.md
 docs/OpenDataIngestionRuleVersionResponse.md
@@ -9036,6 +9033,7 @@ docs/SummarySettingEntityListing.md
 docs/SummarySettingPII.md
 docs/SummarySettingParticipantLabels.md
 docs/SummarySettingWithTranscript.md
+docs/SummaryTransferConfig.md
 docs/SupportCenterCategory.md
 docs/SupportCenterCompactCategoryModuleTemplate.md
 docs/SupportCenterCustomMessage.md
@@ -9736,6 +9734,7 @@ docs/V2WemEngagementCelebrationUpdatesTopicEngagementCelebration.md
 docs/V2WemEngagementCelebrationUpdatesTopicSourceEntity.md
 docs/V2WemEngagementCelebrationUpdatesTopicUserId.md
 docs/V2WfmAgentOpportunityTopicAgentOpportunityNotification.md
+docs/V2WfmContinuousForecastSessionEventContinuousForecastSessionNotification.md
 docs/V2WfmMainForecastExportForecastEventMainForecastErrorBody.md
 docs/V2WfmMainForecastExportForecastEventMainForecastExportNotification.md
 docs/V2WfmMainForecastExportHistoricalEventMainForecastErrorBody.md
@@ -11497,6 +11496,7 @@ src/PureCloudPlatform.Client.V2/Model/ChecklistInferenceJobCreationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ChecklistInferenceJobPayload.cs
 src/PureCloudPlatform.Client.V2/Model/ChecklistInferenceJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ChecklistItem.cs
+src/PureCloudPlatform.Client.V2/Model/ChecklistTransferConfig.cs
 src/PureCloudPlatform.Client.V2/Model/ChunkSearchRegisterRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ClientApp.cs
 src/PureCloudPlatform.Client.V2/Model/ClientAppConfigurationInfo.cs
@@ -11895,6 +11895,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationContentRichLinkHeader.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentRoadsideAssistance.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentStory.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentText.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationContentThumbnail.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentWheelPicker.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentWheelPickerItem.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContext.cs
@@ -12365,6 +12366,9 @@ src/PureCloudPlatform.Client.V2/Model/CustomAttributesIdResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CustomAttributesListing.cs
 src/PureCloudPlatform.Client.V2/Model/CustomAttributesPatchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CustomAttributesUpdateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CustomConversationAttributeInput.cs
+src/PureCloudPlatform.Client.V2/Model/CustomConversationAttributeOutput.cs
+src/PureCloudPlatform.Client.V2/Model/CustomConversationAttributeUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/CustomEventAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/CustomEventAttributeList.cs
 src/PureCloudPlatform.Client.V2/Model/CustomI18nLabels.cs
@@ -13388,11 +13392,14 @@ src/PureCloudPlatform.Client.V2/Model/GuideContentGenerationJob.cs
 src/PureCloudPlatform.Client.V2/Model/GuideEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/GuideJob.cs
 src/PureCloudPlatform.Client.V2/Model/GuideSessionInputEvent.cs
+src/PureCloudPlatform.Client.V2/Model/GuideSessionMessage.cs
 src/PureCloudPlatform.Client.V2/Model/GuideSessionTurnInvocationData.cs
 src/PureCloudPlatform.Client.V2/Model/GuideSessionTurnInvocationParameters.cs
 src/PureCloudPlatform.Client.V2/Model/GuideSessionTurnInvocationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/GuideSessionTurnRequest.cs
+src/PureCloudPlatform.Client.V2/Model/GuideSessionTurnRequestContext.cs
 src/PureCloudPlatform.Client.V2/Model/GuideSessionTurnResponse.cs
+src/PureCloudPlatform.Client.V2/Model/GuideSessionTurnResponseContext.cs
 src/PureCloudPlatform.Client.V2/Model/GuideSessionTurnResponseData.cs
 src/PureCloudPlatform.Client.V2/Model/GuideSessionVariable.cs
 src/PureCloudPlatform.Client.V2/Model/GuideVersion.cs
@@ -13590,7 +13597,6 @@ src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationActionTarget.c
 src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationApp.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationAppEventsNotification.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationAppMessage.cs
-src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationAssociatedValue.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationBrowser.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationCustomEventAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationDevice.cs
@@ -13599,8 +13605,6 @@ src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationExternalContac
 src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationGeoLocation.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationMktCampaign.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationNetworkConnectivity.cs
-src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationOutcome.cs
-src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationOutcomeAchievedMessage.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationReferrer.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationSdkLibrary.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationSegment.cs
@@ -13624,18 +13628,12 @@ src/PureCloudPlatform.Client.V2/Model/JourneyJsonSchemaDocument.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyJsonSchemaRequest.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationActionMap.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationAssociatedValue.cs
-src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationBrowser.cs
-src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationDevice.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationExternalContact.cs
-src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationGeoLocation.cs
-src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationMktCampaign.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationOutcome.cs
-src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationOutcomeAchievedMessage.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationOutcomeAttributionMessage.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationOutcomeEventsNotification.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationOutcomeTouchpoint.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationOutcomeTouchpointChannel.cs
-src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationReferrer.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationSegment.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationSession.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyPage.cs
@@ -13719,7 +13717,6 @@ src/PureCloudPlatform.Client.V2/Model/JourneyWebActionEventsNotificationWebActio
 src/PureCloudPlatform.Client.V2/Model/JourneyWebActionEventsNotificationWebActionMessage.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationActionMap.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationActionTarget.cs
-src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationAssociatedValue.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationBrowser.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationCustomEventAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationDevice.cs
@@ -13727,8 +13724,6 @@ src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationEventAction.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationExternalContact.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationGeoLocation.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationMktCampaign.cs
-src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationOutcome.cs
-src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationOutcomeAchievedMessage.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationPage.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationReferrer.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationSegment.cs
@@ -14352,6 +14347,7 @@ src/PureCloudPlatform.Client.V2/Model/OneOnOne.cs
 src/PureCloudPlatform.Client.V2/Model/OpenActionFields.cs
 src/PureCloudPlatform.Client.V2/Model/OpenActionProperties.cs
 src/PureCloudPlatform.Client.V2/Model/OpenContentAttachment.cs
+src/PureCloudPlatform.Client.V2/Model/OpenContentThumbnail.cs
 src/PureCloudPlatform.Client.V2/Model/OpenDataIngestionRuleRequest.cs
 src/PureCloudPlatform.Client.V2/Model/OpenDataIngestionRuleResponse.cs
 src/PureCloudPlatform.Client.V2/Model/OpenDataIngestionRuleVersionResponse.cs
@@ -15821,6 +15817,7 @@ src/PureCloudPlatform.Client.V2/Model/SummarySettingEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SummarySettingPII.cs
 src/PureCloudPlatform.Client.V2/Model/SummarySettingParticipantLabels.cs
 src/PureCloudPlatform.Client.V2/Model/SummarySettingWithTranscript.cs
+src/PureCloudPlatform.Client.V2/Model/SummaryTransferConfig.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterCategory.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterCompactCategoryModuleTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterCustomMessage.cs
@@ -16497,6 +16494,7 @@ src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicEnga
 src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicSourceEntity.cs
 src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicUserId.cs
 src/PureCloudPlatform.Client.V2/Model/V2WfmAgentOpportunityTopicAgentOpportunityNotification.cs
+src/PureCloudPlatform.Client.V2/Model/V2WfmContinuousForecastSessionEventContinuousForecastSessionNotification.cs
 src/PureCloudPlatform.Client.V2/Model/V2WfmMainForecastExportForecastEventMainForecastErrorBody.cs
 src/PureCloudPlatform.Client.V2/Model/V2WfmMainForecastExportForecastEventMainForecastExportNotification.cs
 src/PureCloudPlatform.Client.V2/Model/V2WfmMainForecastExportHistoricalEventMainForecastErrorBody.cs

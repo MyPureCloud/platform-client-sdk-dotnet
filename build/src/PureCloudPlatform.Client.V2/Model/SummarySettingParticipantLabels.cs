@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Internal">Specify how to refer the internal participant of the interaction..</param>
         /// <param name="External">Specify how to refer the external participant of the interaction..</param>
-        public SummarySettingParticipantLabels(string Internal = null, string External = null)
+        /// <param name="VirtualAgent">Specify how to refer the virtual agent of the interaction..</param>
+        public SummarySettingParticipantLabels(string Internal = null, string External = null, string VirtualAgent = null)
         {
             this.Internal = Internal;
             this.External = External;
+            this.VirtualAgent = VirtualAgent;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string External { get; set; }
 
 
+
+        /// <summary>
+        /// Specify how to refer the virtual agent of the interaction.
+        /// </summary>
+        /// <value>Specify how to refer the virtual agent of the interaction.</value>
+        [DataMember(Name="virtualAgent", EmitDefaultValue=false)]
+        public string VirtualAgent { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Internal: ").Append(Internal).Append("\n");
             sb.Append("  External: ").Append(External).Append("\n");
+            sb.Append("  VirtualAgent: ").Append(VirtualAgent).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.External == other.External ||
                     this.External != null &&
                     this.External.Equals(other.External)
+                ) &&
+                (
+                    this.VirtualAgent == other.VirtualAgent ||
+                    this.VirtualAgent != null &&
+                    this.VirtualAgent.Equals(other.VirtualAgent)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.External != null)
                     hash = hash * 59 + this.External.GetHashCode();
+
+                if (this.VirtualAgent != null)
+                    hash = hash * 59 + this.VirtualAgent.GetHashCode();
 
                 return hash;
             }

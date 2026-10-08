@@ -238,6 +238,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.workforcemanagement.businessunits.{id}.main.forecast.export.forecast", typeof(V2WfmMainForecastExportForecastEventMainForecastExportNotification)},
               {"v2.workforcemanagement.businessunits.{id}.main.forecast.export.historical", typeof(V2WfmMainForecastExportHistoricalEventMainForecastExportNotification)},
               {"v2.workforcemanagement.businessunits.{id}.main.forecast.export.snapshot", typeof(V2WfmMainForecastExportSnapshotEventMainForecastExportNotification)},
+              {"v2.workforcemanagement.businessunits.{id}.mainforecast.continuousforecast.session", typeof(V2WfmContinuousForecastSessionEventContinuousForecastSessionNotification)},
               {"v2.workforcemanagement.businessunits.{id}.opportunities", typeof(V2WfmOpportunityTopicOpportunityNotification)},
               {"v2.workforcemanagement.businessunits.{id}.schedulebids.{id}", typeof(ScheduleBiddingAdminNotificationTopicScheduleBiddingNotification)},
               {"v2.workforcemanagement.businessunits.{id}.schedules", typeof(WfmBuScheduleTopicBuScheduleNotification)},

@@ -117,7 +117,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutputVariables">The output variables for this turn..</param>
         /// <param name="InvocationId">Invocation ID for this turn..</param>
         /// <param name="Invocations">The invocations for this turn..</param>
-        public GuideSessionTurnResponse(GuideSessionTurnResponseData Response = null, StatusEnum? Status = null, ResultEnum? Result = null, List<GuideSessionVariable> OutputVariables = null, string InvocationId = null, List<GuideSessionTurnInvocationResponse> Invocations = null)
+        /// <param name="Context">The context for this turn, including conversation custom attribute updates..</param>
+        public GuideSessionTurnResponse(GuideSessionTurnResponseData Response = null, StatusEnum? Status = null, ResultEnum? Result = null, List<GuideSessionVariable> OutputVariables = null, string InvocationId = null, List<GuideSessionTurnInvocationResponse> Invocations = null, GuideSessionTurnResponseContext Context = null)
         {
             this.Response = Response;
             this.Status = Status;
@@ -125,6 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OutputVariables = OutputVariables;
             this.InvocationId = InvocationId;
             this.Invocations = Invocations;
+            this.Context = Context;
             
         }
         
@@ -169,6 +171,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<GuideSessionTurnInvocationResponse> Invocations { get; set; }
 
 
+
+        /// <summary>
+        /// The context for this turn, including conversation custom attribute updates.
+        /// </summary>
+        /// <value>The context for this turn, including conversation custom attribute updates.</value>
+        [DataMember(Name="context", EmitDefaultValue=false)]
+        public GuideSessionTurnResponseContext Context { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -184,6 +195,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OutputVariables: ").Append(OutputVariables).Append("\n");
             sb.Append("  InvocationId: ").Append(InvocationId).Append("\n");
             sb.Append("  Invocations: ").Append(Invocations).Append("\n");
+            sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -253,6 +265,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Invocations == other.Invocations ||
                     this.Invocations != null &&
                     this.Invocations.SequenceEqual(other.Invocations)
+                ) &&
+                (
+                    this.Context == other.Context ||
+                    this.Context != null &&
+                    this.Context.Equals(other.Context)
                 );
         }
 
@@ -284,6 +301,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Invocations != null)
                     hash = hash * 59 + this.Invocations.GetHashCode();
+
+                if (this.Context != null)
+                    hash = hash * 59 + this.Context.GetHashCode();
 
                 return hash;
             }

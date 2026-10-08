@@ -55,15 +55,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="AgentUpdateAlternativeShiftTradeRequest" /> class.
         /// </summary>
         /// <param name="State">The new state of this alternative shift trade.</param>
+        /// <param name="ReviewNote">Optional note for supervisors to review during alternative shift trade approval.</param>
         /// <param name="Metadata">Version metadata for this alternative shift trade (required).</param>
-        public AgentUpdateAlternativeShiftTradeRequest(StateEnum? State = null, WfmVersionedEntityMetadata Metadata = null)
+        public AgentUpdateAlternativeShiftTradeRequest(StateEnum? State = null, string ReviewNote = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.State = State;
+            this.ReviewNote = ReviewNote;
             this.Metadata = Metadata;
             
         }
         
 
+
+
+
+        /// <summary>
+        /// Optional note for supervisors to review during alternative shift trade approval
+        /// </summary>
+        /// <value>Optional note for supervisors to review during alternative shift trade approval</value>
+        [DataMember(Name="reviewNote", EmitDefaultValue=false)]
+        public string ReviewNote { get; set; }
 
 
 
@@ -85,6 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AgentUpdateAlternativeShiftTradeRequest {\n");
 
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  ReviewNote: ").Append(ReviewNote).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -132,6 +144,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.State.Equals(other.State)
                 ) &&
                 (
+                    this.ReviewNote == other.ReviewNote ||
+                    this.ReviewNote != null &&
+                    this.ReviewNote.Equals(other.ReviewNote)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -151,6 +168,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+
+                if (this.ReviewNote != null)
+                    hash = hash * 59 + this.ReviewNote.GetHashCode();
 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

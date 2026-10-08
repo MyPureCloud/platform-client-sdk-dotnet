@@ -67,7 +67,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Gemini for "Gemini"
             /// </summary>
             [EnumMember(Value = "Gemini")]
-            Gemini
+            Gemini,
+            
+            /// <summary>
+            /// Enum Longform for "LongForm"
+            /// </summary>
+            [EnumMember(Value = "LongForm")]
+            Longform,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
         }
         /// <summary>
         /// The type of the TTS voice

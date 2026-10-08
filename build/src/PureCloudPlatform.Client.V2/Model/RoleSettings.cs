@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="BackfillEnabled">Boolean showing if organization is opted in or not to role backfills.</param>
         /// <param name="AuthorizationGrantDivisionAware">Boolean enabling enforcement of division aware for authorization grant add and delete.</param>
-        public RoleSettings(bool? BackfillEnabled = null, bool? AuthorizationGrantDivisionAware = null)
+        /// <param name="GenesysOrgPolicyBypass">Boolean enabling skip of attribute-based access control policy enforcement when enabled and the organization is on the Genesys bypass list.</param>
+        public RoleSettings(bool? BackfillEnabled = null, bool? AuthorizationGrantDivisionAware = null, bool? GenesysOrgPolicyBypass = null)
         {
             this.BackfillEnabled = BackfillEnabled;
             this.AuthorizationGrantDivisionAware = AuthorizationGrantDivisionAware;
+            this.GenesysOrgPolicyBypass = GenesysOrgPolicyBypass;
             
         }
         
@@ -60,6 +62,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Boolean enabling skip of attribute-based access control policy enforcement when enabled and the organization is on the Genesys bypass list
+        /// </summary>
+        /// <value>Boolean enabling skip of attribute-based access control policy enforcement when enabled and the organization is on the Genesys bypass list</value>
+        [DataMember(Name="genesysOrgPolicyBypass", EmitDefaultValue=false)]
+        public bool? GenesysOrgPolicyBypass { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -79,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  BackfillEnabled: ").Append(BackfillEnabled).Append("\n");
             sb.Append("  AuthorizationGrantDivisionAware: ").Append(AuthorizationGrantDivisionAware).Append("\n");
+            sb.Append("  GenesysOrgPolicyBypass: ").Append(GenesysOrgPolicyBypass).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -136,6 +148,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AuthorizationGrantDivisionAware.Equals(other.AuthorizationGrantDivisionAware)
                 ) &&
                 (
+                    this.GenesysOrgPolicyBypass == other.GenesysOrgPolicyBypass ||
+                    this.GenesysOrgPolicyBypass != null &&
+                    this.GenesysOrgPolicyBypass.Equals(other.GenesysOrgPolicyBypass)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -161,6 +178,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AuthorizationGrantDivisionAware != null)
                     hash = hash * 59 + this.AuthorizationGrantDivisionAware.GetHashCode();
+
+                if (this.GenesysOrgPolicyBypass != null)
+                    hash = hash * 59 + this.GenesysOrgPolicyBypass.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

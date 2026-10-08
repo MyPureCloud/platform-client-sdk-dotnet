@@ -33,12 +33,6 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Outcomeachievedevent for "OutcomeAchievedEvent"
-            /// </summary>
-            [EnumMember(Value = "OutcomeAchievedEvent")]
-            Outcomeachievedevent,
-            
-            /// <summary>
             /// Enum Outcomeattributionevent for "OutcomeAttributionEvent"
             /// </summary>
             [EnumMember(Value = "OutcomeAttributionEvent")]
@@ -60,9 +54,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomerIdType">CustomerIdType.</param>
         /// <param name="Session">Session.</param>
         /// <param name="EventType">EventType.</param>
-        /// <param name="OutcomeAchievedEvent">OutcomeAchievedEvent.</param>
         /// <param name="OutcomeAttributionEventMessage">OutcomeAttributionEventMessage.</param>
-        public JourneyOutcomeEventsNotificationOutcomeEventsNotification(string Id = null, string CorrelationId = null, JourneyOutcomeEventsNotificationExternalContact ExternalContact = null, DateTime? CreatedDate = null, string CustomerId = null, string CustomerIdType = null, JourneyOutcomeEventsNotificationSession Session = null, EventTypeEnum? EventType = null, JourneyOutcomeEventsNotificationOutcomeAchievedMessage OutcomeAchievedEvent = null, JourneyOutcomeEventsNotificationOutcomeAttributionMessage OutcomeAttributionEventMessage = null)
+        public JourneyOutcomeEventsNotificationOutcomeEventsNotification(string Id = null, string CorrelationId = null, JourneyOutcomeEventsNotificationExternalContact ExternalContact = null, DateTime? CreatedDate = null, string CustomerId = null, string CustomerIdType = null, JourneyOutcomeEventsNotificationSession Session = null, EventTypeEnum? EventType = null, JourneyOutcomeEventsNotificationOutcomeAttributionMessage OutcomeAttributionEventMessage = null)
         {
             this.Id = Id;
             this.CorrelationId = CorrelationId;
@@ -72,7 +65,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CustomerIdType = CustomerIdType;
             this.Session = Session;
             this.EventType = EventType;
-            this.OutcomeAchievedEvent = OutcomeAchievedEvent;
             this.OutcomeAttributionEventMessage = OutcomeAttributionEventMessage;
             
         }
@@ -138,14 +130,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets OutcomeAchievedEvent
-        /// </summary>
-        [DataMember(Name="outcomeAchievedEvent", EmitDefaultValue=false)]
-        public JourneyOutcomeEventsNotificationOutcomeAchievedMessage OutcomeAchievedEvent { get; set; }
-
-
-
-        /// <summary>
         /// Gets or Sets OutcomeAttributionEventMessage
         /// </summary>
         [DataMember(Name="outcomeAttributionEventMessage", EmitDefaultValue=false)]
@@ -169,7 +153,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CustomerIdType: ").Append(CustomerIdType).Append("\n");
             sb.Append("  Session: ").Append(Session).Append("\n");
             sb.Append("  EventType: ").Append(EventType).Append("\n");
-            sb.Append("  OutcomeAchievedEvent: ").Append(OutcomeAchievedEvent).Append("\n");
             sb.Append("  OutcomeAttributionEventMessage: ").Append(OutcomeAttributionEventMessage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -252,11 +235,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EventType.Equals(other.EventType)
                 ) &&
                 (
-                    this.OutcomeAchievedEvent == other.OutcomeAchievedEvent ||
-                    this.OutcomeAchievedEvent != null &&
-                    this.OutcomeAchievedEvent.Equals(other.OutcomeAchievedEvent)
-                ) &&
-                (
                     this.OutcomeAttributionEventMessage == other.OutcomeAttributionEventMessage ||
                     this.OutcomeAttributionEventMessage != null &&
                     this.OutcomeAttributionEventMessage.Equals(other.OutcomeAttributionEventMessage)
@@ -297,9 +275,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EventType != null)
                     hash = hash * 59 + this.EventType.GetHashCode();
-
-                if (this.OutcomeAchievedEvent != null)
-                    hash = hash * 59 + this.OutcomeAchievedEvent.GetHashCode();
 
                 if (this.OutcomeAttributionEventMessage != null)
                     hash = hash * 59 + this.OutcomeAttributionEventMessage.GetHashCode();

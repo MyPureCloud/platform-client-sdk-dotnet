@@ -1803,7 +1803,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Googlebusinessprofile for "GoogleBusinessProfile"
             /// </summary>
             [EnumMember(Value = "GoogleBusinessProfile")]
-            Googlebusinessprofile
+            Googlebusinessprofile,
+            
+            /// <summary>
+            /// Enum Linkedin for "LinkedIn"
+            /// </summary>
+            [EnumMember(Value = "LinkedIn")]
+            Linkedin
         }
         /// <summary>
         /// Gets or Sets SocialSentimentCategory

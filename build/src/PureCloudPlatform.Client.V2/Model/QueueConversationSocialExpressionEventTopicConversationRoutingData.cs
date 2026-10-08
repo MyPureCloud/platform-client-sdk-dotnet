@@ -26,8 +26,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">The priority of the conversation to use for routing decisions.</param>
         /// <param name="Skills">The skills to use for routing decisions.</param>
         /// <param name="ScoredAgents">A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents.</param>
-        /// <param name="SkillExpressionId">A UriReference for a resource.</param>
-        public QueueConversationSocialExpressionEventTopicConversationRoutingData(QueueConversationSocialExpressionEventTopicUriReference Queue = null, QueueConversationSocialExpressionEventTopicUriReference Language = null, long? Priority = null, List<QueueConversationSocialExpressionEventTopicUriReference> Skills = null, List<QueueConversationSocialExpressionEventTopicScoredAgent> ScoredAgents = null, QueueConversationSocialExpressionEventTopicUriReference SkillExpressionId = null)
+        /// <param name="SkillExpressionId">The skill expression to use for routing decisions. If specified, it takes priority over skills..</param>
+        public QueueConversationSocialExpressionEventTopicConversationRoutingData(QueueConversationSocialExpressionEventTopicUriReference Queue = null, QueueConversationSocialExpressionEventTopicUriReference Language = null, long? Priority = null, List<QueueConversationSocialExpressionEventTopicUriReference> Skills = null, List<QueueConversationSocialExpressionEventTopicScoredAgent> ScoredAgents = null, string SkillExpressionId = null)
         {
             this.Queue = Queue;
             this.Language = Language;
@@ -85,11 +85,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A UriReference for a resource
+        /// The skill expression to use for routing decisions. If specified, it takes priority over skills.
         /// </summary>
-        /// <value>A UriReference for a resource</value>
+        /// <value>The skill expression to use for routing decisions. If specified, it takes priority over skills.</value>
         [DataMember(Name="skillExpressionId", EmitDefaultValue=false)]
-        public QueueConversationSocialExpressionEventTopicUriReference SkillExpressionId { get; set; }
+        public string SkillExpressionId { get; set; }
 
 
         /// <summary>
