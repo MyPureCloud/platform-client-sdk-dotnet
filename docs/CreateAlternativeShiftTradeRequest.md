@@ -11,7 +11,8 @@
 | **PickupShiftReferenceKeys** | **List&lt;string&gt;** | A list of offered shift reference keys an agent wants to pick up | [optional] |
 | **AlternativeShiftTradeGranularity** | **string** | The granularity of alternative shifts to be traded | |
 | **ExpirationDate** | **DateTime?** | The date when the trade will expire in ISO-8601 format. The trade cannot be approved after expiration | [optional] |
+| **ReviewNote** | **string** | Optional note for supervisors to review during alternative shift trade approval | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_

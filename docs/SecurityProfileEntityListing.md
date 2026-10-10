@@ -10,13 +10,13 @@
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_

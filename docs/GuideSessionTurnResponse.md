@@ -12,7 +12,8 @@
 | **OutputVariables** | [**List&lt;GuideSessionVariable&gt;**](GuideSessionVariable) | The output variables for this turn. | [optional] |
 | **InvocationId** | **string** | Invocation ID for this turn. | [optional] |
 | **Invocations** | [**List&lt;GuideSessionTurnInvocationResponse&gt;**](GuideSessionTurnInvocationResponse) | The invocations for this turn. | [optional] |
+| **Context** | [**GuideSessionTurnResponseContext**](GuideSessionTurnResponseContext) | The context for this turn, including conversation custom attribute updates. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_

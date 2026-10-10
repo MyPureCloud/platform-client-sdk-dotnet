@@ -13,7 +13,8 @@
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 | **Communications** | [**List&lt;AttributeDetailEventTopicCommunication&gt;**](AttributeDetailEventTopicCommunication) |  | [optional] |
+| **ParticipantStartTime** | **long?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_

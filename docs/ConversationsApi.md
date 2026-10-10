@@ -11836,7 +11836,7 @@ namespace Example
 
 Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow
 
-Supply the two-step verification PIN. Embedded Signup v2: phoneNumber (E.164 from availablePhoneNumbers) and pin. Embedded Signup v4: pin only. Poll GET until status is Active.
+Supply the two-step verification PIN. Embedded Signup v2: phoneNumber (E.164 from availablePhoneNumbers) and pin. Embedded Signup v4: pin and name are required; the name replaces the temporary name the backend assigned at creation with the desired integration name. Poll GET until status is Active.
 
 Requires ALL permissions: 
 
@@ -20563,4 +20563,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 274.0.0_
+_PureCloudPlatform.Client.V2 275.0.0_
