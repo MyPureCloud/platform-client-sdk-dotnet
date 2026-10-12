@@ -1,0 +1,35 @@
+# WfmTimeOffRequestUpdateMuTopicTimeOffRequestUpdate
+
+## ININ.PureCloudApi.Model.WfmTimeOffRequestUpdateMuTopicTimeOffRequestUpdate
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Id** | **string** |  | [optional] |
+| **MuId** | **string** |  | [optional] |
+| **User** | [**WfmTimeOffRequestUpdateMuTopicUserReference**](WfmTimeOffRequestUpdateMuTopicUserReference) |  | [optional] |
+| **IsFullDayRequest** | **bool?** |  | [optional] |
+| **MarkedAsRead** | **bool?** |  | [optional] |
+| **ActivityCodeId** | **string** |  | [optional] |
+| **Paid** | **bool?** |  | [optional] |
+| **Status** | **string** |  | [optional] |
+| **Substatus** | **string** |  | [optional] |
+| **PartialDayStartDateTimes** | **List&lt;string&gt;** |  | [optional] |
+| **FullDayManagementUnitDates** | **List&lt;string&gt;** |  | [optional] |
+| **FullDayEarliestStartOffsetMinutes** | **List&lt;long?&gt;** |  | [optional] |
+| **FullDayLatestEndOffsetMinutes** | **List&lt;long?&gt;** |  | [optional] |
+| **DailyDurationMinutes** | **long?** |  | [optional] |
+| **DurationMinutes** | **List&lt;long?&gt;** |  | [optional] |
+| **PayableMinutes** | **List&lt;long?&gt;** |  | [optional] |
+| **Notes** | **string** |  | [optional] |
+| **ReviewedDate** | **string** |  | [optional] |
+| **ReviewedBy** | **string** |  | [optional] |
+| **SubmittedDate** | **string** |  | [optional] |
+| **SubmittedBy** | **string** |  | [optional] |
+| **ModifiedDate** | **string** |  | [optional] |
+| **ModifiedBy** | **string** |  | [optional] |
+
+
+
+_PureCloudPlatform.Client.V2 275.0.0_

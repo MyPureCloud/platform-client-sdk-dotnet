@@ -7,6 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
+| **MuId** | **string** |  | [optional] |
 | **User** | [**WfmTimeOffRequestUpdateTopicUserReference**](WfmTimeOffRequestUpdateTopicUserReference) |  | [optional] |
 | **IsFullDayRequest** | **bool?** |  | [optional] |
 | **MarkedAsRead** | **bool?** |  | [optional] |

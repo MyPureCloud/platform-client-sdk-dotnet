@@ -14,8 +14,11 @@
 | **EngagementType** | **string** |  | [optional] |
 | **Feedback** | [**ConversationThirdPartyActionSuggestionsTopicSuggestionFeedback**](ConversationThirdPartyActionSuggestionsTopicSuggestionFeedback) |  | [optional] |
 | **ActiveIntent** | [**ConversationThirdPartyActionSuggestionsTopicSuggestedIntent**](ConversationThirdPartyActionSuggestionsTopicSuggestedIntent) |  | [optional] |
+| **ActiveSentiment** | [**ConversationThirdPartyActionSuggestionsTopicActiveSentiment**](ConversationThirdPartyActionSuggestionsTopicActiveSentiment) |  | [optional] |
 | **Context** | [**ConversationThirdPartyActionSuggestionsTopicSuggestionContext**](ConversationThirdPartyActionSuggestionsTopicSuggestionContext) |  | [optional] |
+| **ConversationTurns** | [**List&lt;ConversationThirdPartyActionSuggestionsTopicConversationTurn&gt;**](ConversationThirdPartyActionSuggestionsTopicConversationTurn) |  | [optional] |
 | **ThirdPartySuggestion** | [**ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion**](ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion) |  | [optional] |
+| **CopilotContext** | [**List&lt;ConversationThirdPartyActionSuggestionsTopicCopilotContextEntry&gt;**](ConversationThirdPartyActionSuggestionsTopicCopilotContextEntry) |  | [optional] |
 
 
 

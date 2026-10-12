@@ -30,6 +30,11 @@
 | **RoutingPriority** | **long?** |  | [optional] |
 | **RequestedRoutingSkillIds** | **List&lt;Guid?&gt;** |  | [optional] |
 | **SkillExpressionApplied** | **bool?** |  | [optional] |
+| **RequestedLanguageId** | **string** |  | [optional] |
+| **PreferredAgentIds** | **List&lt;Guid?&gt;** |  | [optional] |
+| **OutboundCampaignId** | **string** |  | [optional] |
+| **OutboundContactListId** | **string** |  | [optional] |
+| **OutboundContactId** | **string** |  | [optional] |
 
 
 

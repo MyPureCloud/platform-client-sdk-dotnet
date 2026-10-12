@@ -16,6 +16,7 @@
 | **Feedback** | [**ConversationScriptSuggestionsTopicSuggestionFeedback**](ConversationScriptSuggestionsTopicSuggestionFeedback) |  | [optional] |
 | **Script** | [**ConversationScriptSuggestionsTopicSuggestedScript**](ConversationScriptSuggestionsTopicSuggestedScript) |  | [optional] |
 | **ActiveIntent** | [**ConversationScriptSuggestionsTopicSuggestedIntent**](ConversationScriptSuggestionsTopicSuggestedIntent) |  | [optional] |
+| **ActiveSentiment** | [**ConversationScriptSuggestionsTopicActiveSentiment**](ConversationScriptSuggestionsTopicActiveSentiment) |  | [optional] |
 
 
 

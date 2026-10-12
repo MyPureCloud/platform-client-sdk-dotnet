@@ -29,6 +29,9 @@
 | **JourneyContext** | [**CustomerStartDetailEventTopicJourneyContext**](CustomerStartDetailEventTopicJourneyContext) |  | [optional] |
 | **DivisionId** | **string** |  | [optional] |
 | **UtilizationLabel** | **string** |  | [optional] |
+| **OutboundCampaignId** | **string** |  | [optional] |
+| **OutboundContactListId** | **string** |  | [optional] |
+| **OutboundContactId** | **string** |  | [optional] |
 
 
 

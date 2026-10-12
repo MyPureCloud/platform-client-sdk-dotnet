@@ -30,6 +30,9 @@
 | **ExitReason** | **string** |  | [optional] |
 | **TransferType** | **string** |  | [optional] |
 | **UtilizationLabel** | **string** |  | [optional] |
+| **OutboundCampaignId** | **string** |  | [optional] |
+| **OutboundContactListId** | **string** |  | [optional] |
+| **OutboundContactId** | **string** |  | [optional] |
 
 
 

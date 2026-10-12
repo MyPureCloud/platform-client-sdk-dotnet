@@ -16,6 +16,7 @@
 | **Feedback** | [**ConversationKnowledgeArticleSuggestionsTopicSuggestionFeedback**](ConversationKnowledgeArticleSuggestionsTopicSuggestionFeedback) |  | [optional] |
 | **KnowledgeArticle** | [**ConversationKnowledgeArticleSuggestionsTopicSuggestedArticle**](ConversationKnowledgeArticleSuggestionsTopicSuggestedArticle) |  | [optional] |
 | **ActiveIntent** | [**ConversationKnowledgeArticleSuggestionsTopicSuggestedIntent**](ConversationKnowledgeArticleSuggestionsTopicSuggestedIntent) |  | [optional] |
+| **ActiveSentiment** | [**ConversationKnowledgeArticleSuggestionsTopicActiveSentiment**](ConversationKnowledgeArticleSuggestionsTopicActiveSentiment) |  | [optional] |
 
 
 

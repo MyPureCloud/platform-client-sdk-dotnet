@@ -23,6 +23,9 @@
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 | **UtilizationLabel** | **string** |  | [optional] |
+| **OutboundCampaignId** | **string** |  | [optional] |
+| **OutboundContactListId** | **string** |  | [optional] |
+| **OutboundContactId** | **string** |  | [optional] |
 
 
 

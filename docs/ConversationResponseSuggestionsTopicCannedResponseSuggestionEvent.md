@@ -16,6 +16,7 @@
 | **Feedback** | [**ConversationResponseSuggestionsTopicSuggestionFeedback**](ConversationResponseSuggestionsTopicSuggestionFeedback) |  | [optional] |
 | **CannedResponse** | [**ConversationResponseSuggestionsTopicSuggestedCannedResponse**](ConversationResponseSuggestionsTopicSuggestedCannedResponse) |  | [optional] |
 | **ActiveIntent** | [**ConversationResponseSuggestionsTopicSuggestedIntent**](ConversationResponseSuggestionsTopicSuggestedIntent) |  | [optional] |
+| **ActiveSentiment** | [**ConversationResponseSuggestionsTopicActiveSentiment**](ConversationResponseSuggestionsTopicActiveSentiment) |  | [optional] |
 
 
 
