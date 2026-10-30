@@ -11,10 +11,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGroupsSearch**](#GetGroupsSearch) | **Get** /api/v2/groups/search | Search groups using the q64 value returned from a previous search |
 | [**GetLocationsSearch**](#GetLocationsSearch) | **Get** /api/v2/locations/search | Search locations using the q64 value returned from a previous search |
 | [**GetSearch**](#GetSearch) | **Get** /api/v2/search | Search using the q64 value returned from a previous search. |
+| [**GetSearchSettings**](#GetSearchSettings) | **Get** /api/v2/search/settings | Get the organization&#39;s search settings |
 | [**GetSearchSuggest**](#GetSearchSuggest) | **Get** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
 | [**GetTelephonyProvidersEdgesSitesSearch**](#GetTelephonyProvidersEdgesSitesSearch) | **Get** /api/v2/telephony/providers/edges/sites/search | Search sites using the q64 value returned from a previous search |
 | [**GetUsersSearch**](#GetUsersSearch) | **Get** /api/v2/users/search | Search users using the q64 value returned from a previous search |
 | [**GetVoicemailSearch**](#GetVoicemailSearch) | **Get** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
+| [**PatchSearchSettings**](#PatchSearchSettings) | **Patch** /api/v2/search/settings | Patch the organization&#39;s search settings |
+| [**PatchSearchSettingsContentsearch**](#PatchSearchSettingsContentsearch) | **Patch** /api/v2/search/settings/contentsearch | Patch the organization&#39;s content search settings |
 | [**PostConversationsCustomattributesSearch**](#PostConversationsCustomattributesSearch) | **Post** /api/v2/conversations/customattributes/search | Search resources. |
 | [**PostConversationsParticipantsAttributesSearch**](#PostConversationsParticipantsAttributesSearch) | **Post** /api/v2/conversations/participants/attributes/search | Search conversations |
 | [**PostDocumentationAllSearch**](#PostDocumentationAllSearch) | **Post** /api/v2/documentation/all/search | Search all documents |
@@ -337,6 +340,66 @@ namespace Example
 [**JsonNodeSearchResponse**](JsonNodeSearchResponse)
 
 
+## GetSearchSettings
+
+> [**OrgSettings**](OrgSettings) GetSearchSettings ()
+
+
+Get the organization's search settings
+
+GetSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+* analytics:transcriptsearchsetting:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSearchSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SearchApi();
+
+            try
+            { 
+                // Get the organization's search settings
+                OrgSettings result = apiInstance.GetSearchSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.GetSearchSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**OrgSettings**](OrgSettings)
+
+
 ## GetSearchSuggest
 
 > [**JsonNodeSearchResponse**](JsonNodeSearchResponse) GetSearchSuggest (string q64, List<string> expand = null, bool? profile = null)
@@ -595,6 +658,134 @@ namespace Example
 ### Return type
 
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
+
+
+## PatchSearchSettings
+
+> [**OrgSettings**](OrgSettings) PatchSearchSettings (OrgSettings body)
+
+
+Patch the organization's search settings
+
+PatchSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchSearchSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SearchApi();
+            var body = new OrgSettings(); // OrgSettings | Search Settings
+
+            try
+            { 
+                // Patch the organization's search settings
+                OrgSettings result = apiInstance.PatchSearchSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PatchSearchSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OrgSettings**](OrgSettings)| Search Settings |  |
+
+### Return type
+
+[**OrgSettings**](OrgSettings)
+
+
+## PatchSearchSettingsContentsearch
+
+> [**ContentSearchSetting**](ContentSearchSetting) PatchSearchSettingsContentsearch (ContentSearchSetting body)
+
+
+Patch the organization's content search settings
+
+PatchSearchSettingsContentsearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:transcriptsearchsetting:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchSearchSettingsContentsearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SearchApi();
+            var body = new ContentSearchSetting(); // ContentSearchSetting | Content search setting
+
+            try
+            { 
+                // Patch the organization's content search settings
+                ContentSearchSetting result = apiInstance.PatchSearchSettingsContentsearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PatchSearchSettingsContentsearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContentSearchSetting**](ContentSearchSetting)| Content search setting |  |
+
+### Return type
+
+[**ContentSearchSetting**](ContentSearchSetting)
 
 
 ## PostConversationsCustomattributesSearch
@@ -1151,6 +1342,8 @@ Requires ANY permissions:
 * analytics:conversationDetail:view
 * recording:recording:view
 * recording:recordingSegment:view
+* analytics:transcriptcontent:search
+* speechAndTextAnalytics:data:view
 
 ### Example
 ```{"language":"csharp"}
@@ -1642,4 +1835,4 @@ namespace Example
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+_PureCloudPlatform.Client.V2 276.0.0_

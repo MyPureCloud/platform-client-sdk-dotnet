@@ -16,8 +16,9 @@
 | **TimeZoneId** | **string** | If the resetPeriod is TODAY, this specifies the timezone in which TODAY occurs. Required if the resetPeriod is TODAY. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London | [optional] |
 | **ResetPeriod** | **string** | After how long the number of attempts will be set back to 0. Defaults to NEVER. | [optional] |
 | **RecallEntries** | [**Dictionary&lt;string, RecallEntry&gt;**](RecallEntry) | Configuration for recall attempts. | [optional] |
+| **PhoneTypeRecallEntries** | **Dictionary&lt;string, Dictionary&lt;string, RecallEntry&gt;&gt;** | Configuration for recall attempts per phone type | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+_PureCloudPlatform.Client.V2 276.0.0_

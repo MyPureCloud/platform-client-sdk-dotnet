@@ -320,8 +320,6 @@ namespace Example
 
 Delete a Stageplan from a draft Caseplan.
 
-DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * caseManagement:stageplan:delete
@@ -2812,8 +2810,6 @@ namespace Example
 
 Reposition a Stageplan within a draft Caseplan.
 
-PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * caseManagement:stageplan:reposition
@@ -2879,8 +2875,6 @@ namespace Example
 
 
 Create a Stageplan on a draft Caseplan.
-
-PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3443,4 +3437,4 @@ namespace Example
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+_PureCloudPlatform.Client.V2 276.0.0_

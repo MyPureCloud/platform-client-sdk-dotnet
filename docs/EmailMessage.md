@@ -23,8 +23,9 @@
 | **DraftType** | **string** | The type of draft that need to be treated. | [optional] |
 | **EmailSizeBytes** | **int?** | Indicates an estimation of the size of the current email as a whole, in its final, ready to be sent form. | [optional] |
 | **MaxEmailSizeBytes** | **int?** | Indicates the maximum allowed size for an email to be send via SMTP server, based on the email domain configuration | [optional] |
+| **RecipientWarnings** | [**List&lt;RecipientWarning&gt;**](RecipientWarning) | The recipients that failed validation. Advisory only; recipient policy is enforced at send time. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+_PureCloudPlatform.Client.V2 276.0.0_

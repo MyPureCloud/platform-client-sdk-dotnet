@@ -6168,6 +6168,7 @@ Requires ANY permissions:
 
 * analytics:conversationDetail:view
 * analytics:agentConversationDetail:view
+* externalContacts:conversation:viewAll
 
 ### Example
 ```{"language":"csharp"}
@@ -6231,6 +6232,7 @@ Requires ANY permissions:
 
 * analytics:conversationDetail:view
 * analytics:agentConversationDetail:view
+* externalContacts:conversation:viewAll
 
 ### Example
 ```{"language":"csharp"}
@@ -8848,4 +8850,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+_PureCloudPlatform.Client.V2 276.0.0_

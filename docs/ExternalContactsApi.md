@@ -2007,8 +2007,6 @@ namespace Example
 
 Returns a single cluster scan
 
-GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * externalContacts:graphClusterScan:view
@@ -2073,8 +2071,6 @@ namespace Example
 
 Returns a single cluster found by a scan
 
-GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * externalContacts:graphCluster:view
@@ -2138,8 +2134,6 @@ namespace Example
 
 
 Returns a list of clusters found by a scan
-
-GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2211,8 +2205,6 @@ namespace Example
 
 Returns the statistics about a single cluster scan
 
-GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * externalContacts:graphClusterScan:view
@@ -2275,8 +2267,6 @@ namespace Example
 
 Returns a list of cluster scans
 
-GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * externalContacts:graphClusterScan:view
@@ -2338,12 +2328,10 @@ namespace Example
 
 ## GetExternalcontactsGraphsClusterscansLatest
 
-> [**ClusterScan**](ClusterScan) GetExternalcontactsGraphsClusterscansLatest (List<string> expand = null)
+> [**LatestClusterScan**](LatestClusterScan) GetExternalcontactsGraphsClusterscansLatest (List<string> expand = null)
 
 
 Returns the latest cluster scan
-
-GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2376,7 +2364,7 @@ namespace Example
             try
             { 
                 // Returns the latest cluster scan
-                ClusterScan result = apiInstance.GetExternalcontactsGraphsClusterscansLatest(expand);
+                LatestClusterScan result = apiInstance.GetExternalcontactsGraphsClusterscansLatest(expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2393,11 +2381,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: statistics.aggregated |
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: statistics.aggregated, settings |
 
 ### Return type
 
-[**ClusterScan**](ClusterScan)
+[**LatestClusterScan**](LatestClusterScan)
 
 
 ## GetExternalcontactsGraphsClusterscansLatestStatistics
@@ -2406,8 +2394,6 @@ namespace Example
 
 
 Returns the statistics about the latest cluster scan
-
-GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2465,8 +2451,6 @@ This endpoint does require any parameters.
 
 
 Returns the org-wide settings for ExternalContact graph operations
-
-GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -8815,8 +8799,6 @@ namespace Example
 
 Merge a single cluster found by a scan
 
-PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * externalContacts:graphCluster:merge
@@ -8880,8 +8862,6 @@ namespace Example
 
 
 Updates the org-wide settings for ExternalContact graph operations
-
-PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -9455,4 +9435,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+_PureCloudPlatform.Client.V2 276.0.0_
