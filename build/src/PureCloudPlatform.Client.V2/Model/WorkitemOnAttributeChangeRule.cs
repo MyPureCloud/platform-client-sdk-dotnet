@@ -64,14 +64,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The type of the rule..</param>
         /// <param name="Action">The rules action. If the condition criteria is met this action will be executed..</param>
         /// <param name="Worktype">The Worktype containing the rule..</param>
-        /// <param name="Condition">The rules condition. If the condition criteria is met the rules action will be executed..</param>
-        public WorkitemOnAttributeChangeRule(string Name = null, TypeEnum? Type = null, WorkitemRuleAction Action = null, WorktypeReference Worktype = null, WorkitemOnAttributeChangeCondition Condition = null)
+        /// <param name="Condition">The rules condition. If the condition criteria is met the rules action will be executed. Mutually exclusive with match; a rule carries exactly one of condition or match..</param>
+        /// <param name="Match">Grouped match criteria combined with logical operators. Mutually exclusive with condition; a rule carries exactly one of condition or match..</param>
+        public WorkitemOnAttributeChangeRule(string Name = null, TypeEnum? Type = null, WorkitemRuleAction Action = null, WorktypeReference Worktype = null, WorkitemOnAttributeChangeCondition Condition = null, WorkitemOnAttributeChangeMatch Match = null)
         {
             this.Name = Name;
             this.Type = Type;
             this.Action = Action;
             this.Worktype = Worktype;
             this.Condition = Condition;
+            this.Match = Match;
             
         }
         
@@ -115,11 +117,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The rules condition. If the condition criteria is met the rules action will be executed.
+        /// The rules condition. If the condition criteria is met the rules action will be executed. Mutually exclusive with match; a rule carries exactly one of condition or match.
         /// </summary>
-        /// <value>The rules condition. If the condition criteria is met the rules action will be executed.</value>
+        /// <value>The rules condition. If the condition criteria is met the rules action will be executed. Mutually exclusive with match; a rule carries exactly one of condition or match.</value>
         [DataMember(Name="condition", EmitDefaultValue=false)]
         public WorkitemOnAttributeChangeCondition Condition { get; set; }
+
+
+
+        /// <summary>
+        /// Grouped match criteria combined with logical operators. Mutually exclusive with condition; a rule carries exactly one of condition or match.
+        /// </summary>
+        /// <value>Grouped match criteria combined with logical operators. Mutually exclusive with condition; a rule carries exactly one of condition or match.</value>
+        [DataMember(Name="match", EmitDefaultValue=false)]
+        public WorkitemOnAttributeChangeMatch Match { get; set; }
 
 
 
@@ -146,6 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  Worktype: ").Append(Worktype).Append("\n");
             sb.Append("  Condition: ").Append(Condition).Append("\n");
+            sb.Append("  Match: ").Append(Match).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -218,6 +230,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Condition.Equals(other.Condition)
                 ) &&
                 (
+                    this.Match == other.Match ||
+                    this.Match != null &&
+                    this.Match.Equals(other.Match)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -252,6 +269,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Condition != null)
                     hash = hash * 59 + this.Condition.GetHashCode();
+
+                if (this.Match != null)
+                    hash = hash * 59 + this.Match.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

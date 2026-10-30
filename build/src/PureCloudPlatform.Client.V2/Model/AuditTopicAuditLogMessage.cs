@@ -396,7 +396,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Conversationrefinement for "ConversationRefinement"
             /// </summary>
             [EnumMember(Value = "ConversationRefinement")]
-            Conversationrefinement
+            Conversationrefinement,
+            
+            /// <summary>
+            /// Enum Casemanagement for "CaseManagement"
+            /// </summary>
+            [EnumMember(Value = "CaseManagement")]
+            Casemanagement
         }
         /// <summary>
         /// Gets or Sets Action
@@ -1837,6 +1843,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Forecast,
             
             /// <summary>
+            /// Enum Forecastscenario for "ForecastScenario"
+            /// </summary>
+            [EnumMember(Value = "ForecastScenario")]
+            Forecastscenario,
+            
+            /// <summary>
             /// Enum Managementunit for "ManagementUnit"
             /// </summary>
             [EnumMember(Value = "ManagementUnit")]
@@ -1955,6 +1967,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "DecisionMetrics")]
             Decisionmetrics,
+            
+            /// <summary>
+            /// Enum Schedulechangeconstraint for "ScheduleChangeConstraint"
+            /// </summary>
+            [EnumMember(Value = "ScheduleChangeConstraint")]
+            Schedulechangeconstraint,
+            
+            /// <summary>
+            /// Enum Shiftactivityrule for "ShiftActivityRule"
+            /// </summary>
+            [EnumMember(Value = "ShiftActivityRule")]
+            Shiftactivityrule,
             
             /// <summary>
             /// Enum Trigger for "Trigger"
@@ -2363,6 +2387,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "AnalyticsLakehouseSettings")]
             Analyticslakehousesettings,
+            
+            /// <summary>
+            /// Enum Dashboardslideshow for "DashboardSlideShow"
+            /// </summary>
+            [EnumMember(Value = "DashboardSlideShow")]
+            Dashboardslideshow,
             
             /// <summary>
             /// Enum Users for "Users"
@@ -2962,7 +2992,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Refinementconfiguration for "RefinementConfiguration"
             /// </summary>
             [EnumMember(Value = "RefinementConfiguration")]
-            Refinementconfiguration
+            Refinementconfiguration,
+            
+            /// <summary>
+            /// Enum Programconversationhealthsettings for "ProgramConversationHealthSettings"
+            /// </summary>
+            [EnumMember(Value = "ProgramConversationHealthSettings")]
+            Programconversationhealthsettings,
+            
+            /// <summary>
+            /// Enum Caseplan for "Caseplan"
+            /// </summary>
+            [EnumMember(Value = "Caseplan")]
+            Caseplan,
+            
+            /// <summary>
+            /// Enum Stageplan for "Stageplan"
+            /// </summary>
+            [EnumMember(Value = "Stageplan")]
+            Stageplan,
+            
+            /// <summary>
+            /// Enum Stepplan for "Stepplan"
+            /// </summary>
+            [EnumMember(Value = "Stepplan")]
+            Stepplan
         }
         /// <summary>
         /// Gets or Sets ServiceName

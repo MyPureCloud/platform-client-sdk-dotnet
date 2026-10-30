@@ -762,7 +762,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -776,7 +775,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -790,7 +788,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -804,7 +801,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -818,7 +814,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -835,7 +830,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -852,7 +846,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -865,7 +858,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -878,7 +870,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
@@ -893,7 +884,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
@@ -908,33 +898,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <returns>ClusterScan</returns>
+        /// <returns>LatestClusterScan</returns>
         
-        ClusterScan GetExternalcontactsGraphsClusterscansLatest (List<string> expand = null);
+        LatestClusterScan GetExternalcontactsGraphsClusterscansLatest (List<string> expand = null);
 
         /// <summary>
         /// Returns the latest cluster scan
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <returns>ApiResponse of ClusterScan</returns>
+        /// <returns>ApiResponse of LatestClusterScan</returns>
         
-        ApiResponse<ClusterScan> GetExternalcontactsGraphsClusterscansLatestWithHttpInfo (List<string> expand = null);
+        ApiResponse<LatestClusterScan> GetExternalcontactsGraphsClusterscansLatestWithHttpInfo (List<string> expand = null);
 
         /// <summary>
         /// Returns the statistics about the latest cluster scan
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ClusterScanStatistics</returns>
@@ -946,7 +933,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ClusterScanStatistics</returns>
@@ -958,7 +944,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GraphSettings</returns>
@@ -970,7 +955,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GraphSettings</returns>
@@ -3490,7 +3474,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -3504,7 +3487,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -3518,7 +3500,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OrgConfiguration</param>
@@ -3531,7 +3512,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OrgConfiguration</param>
@@ -4500,7 +4480,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -4514,7 +4493,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -4528,7 +4506,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -4542,7 +4519,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -4556,7 +4532,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -4573,7 +4548,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -4590,7 +4564,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -4603,7 +4576,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -4616,7 +4588,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
@@ -4631,7 +4602,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
@@ -4646,33 +4616,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ClusterScan</returns>
+        /// <returns>Task of LatestClusterScan</returns>
         
-        System.Threading.Tasks.Task<ClusterScan> GetExternalcontactsGraphsClusterscansLatestAsync (List<string> expand = null);
+        System.Threading.Tasks.Task<LatestClusterScan> GetExternalcontactsGraphsClusterscansLatestAsync (List<string> expand = null);
 
         /// <summary>
         /// Returns the latest cluster scan
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ApiResponse (ClusterScan)</returns>
+        /// <returns>Task of ApiResponse (LatestClusterScan)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ClusterScan>> GetExternalcontactsGraphsClusterscansLatestAsyncWithHttpInfo (List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<LatestClusterScan>> GetExternalcontactsGraphsClusterscansLatestAsyncWithHttpInfo (List<string> expand = null);
 
         /// <summary>
         /// Returns the statistics about the latest cluster scan
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ClusterScanStatistics</returns>
@@ -4684,7 +4651,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ClusterScanStatistics)</returns>
@@ -4696,7 +4662,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GraphSettings</returns>
@@ -4708,7 +4673,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GraphSettings)</returns>
@@ -7228,7 +7192,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -7242,7 +7205,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -7256,7 +7218,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OrgConfiguration</param>
@@ -7269,7 +7230,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OrgConfiguration</param>
@@ -13643,7 +13603,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a single cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -13659,7 +13618,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a single cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -13749,7 +13707,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a single cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -13766,7 +13723,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a single cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -13858,7 +13814,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a single cluster found by a scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -13874,7 +13829,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a single cluster found by a scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -13967,7 +13921,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a single cluster found by a scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -13984,7 +13937,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a single cluster found by a scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscanCluster is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -14080,7 +14032,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a list of clusters found by a scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -14099,7 +14050,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a list of clusters found by a scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -14195,7 +14145,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a list of clusters found by a scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -14215,7 +14164,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a list of clusters found by a scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscanClusters is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -14313,7 +14261,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the statistics about a single cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -14328,7 +14275,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the statistics about a single cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -14416,7 +14362,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the statistics about a single cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -14432,7 +14377,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the statistics about a single cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscanStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -14522,7 +14466,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a list of cluster scans 
         /// 
-        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
@@ -14539,7 +14482,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a list of cluster scans 
         /// 
-        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
@@ -14628,7 +14570,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a list of cluster scans 
         /// 
-        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
@@ -14646,7 +14587,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns a list of cluster scans 
         /// 
-        /// GetExternalcontactsGraphsClusterscans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Max number of records to return (must be between 1 and 100) (optional, default to 20)</param>
@@ -14736,28 +14676,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the latest cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <returns>ClusterScan</returns>
+        /// <returns>LatestClusterScan</returns>
         
-        public ClusterScan GetExternalcontactsGraphsClusterscansLatest (List<string> expand = null)
+        public LatestClusterScan GetExternalcontactsGraphsClusterscansLatest (List<string> expand = null)
         {
-             ApiResponse<ClusterScan> localVarResponse = GetExternalcontactsGraphsClusterscansLatestWithHttpInfo(expand);
+             ApiResponse<LatestClusterScan> localVarResponse = GetExternalcontactsGraphsClusterscansLatestWithHttpInfo(expand);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Returns the latest cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <returns>ApiResponse of ClusterScan</returns>
+        /// <returns>ApiResponse of LatestClusterScan</returns>
         
-        public ApiResponse< ClusterScan > GetExternalcontactsGraphsClusterscansLatestWithHttpInfo (List<string> expand = null)
+        public ApiResponse< LatestClusterScan > GetExternalcontactsGraphsClusterscansLatestWithHttpInfo (List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/latest";
@@ -14825,9 +14763,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscansLatest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ClusterScan>(localVarStatusCode,
+            return new ApiResponse<LatestClusterScan>(localVarStatusCode,
                 localVarHeaders,
-                (ClusterScan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterScan)),
+                (LatestClusterScan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LatestClusterScan)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -14836,15 +14774,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the latest cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ClusterScan</returns>
+        /// <returns>Task of LatestClusterScan</returns>
         
-        public async System.Threading.Tasks.Task<ClusterScan> GetExternalcontactsGraphsClusterscansLatestAsync (List<string> expand = null)
+        public async System.Threading.Tasks.Task<LatestClusterScan> GetExternalcontactsGraphsClusterscansLatestAsync (List<string> expand = null)
         {
-             ApiResponse<ClusterScan> localVarResponse = await GetExternalcontactsGraphsClusterscansLatestAsyncWithHttpInfo(expand);
+             ApiResponse<LatestClusterScan> localVarResponse = await GetExternalcontactsGraphsClusterscansLatestAsyncWithHttpInfo(expand);
              return localVarResponse.Data;
 
         }
@@ -14852,13 +14789,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the latest cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <returns>Task of ApiResponse (ClusterScan)</returns>
+        /// <returns>Task of ApiResponse (LatestClusterScan)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ClusterScan>> GetExternalcontactsGraphsClusterscansLatestAsyncWithHttpInfo (List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LatestClusterScan>> GetExternalcontactsGraphsClusterscansLatestAsyncWithHttpInfo (List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/externalcontacts/graphs/clusterscans/latest";
@@ -14926,9 +14862,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsGraphsClusterscansLatest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ClusterScan>(localVarStatusCode,
+            return new ApiResponse<LatestClusterScan>(localVarStatusCode,
                 localVarHeaders,
-                (ClusterScan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClusterScan)),
+                (LatestClusterScan) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LatestClusterScan)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -14938,7 +14874,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the statistics about the latest cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ClusterScanStatistics</returns>
@@ -14952,7 +14887,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the statistics about the latest cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ClusterScanStatistics</returns>
@@ -15035,7 +14969,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the statistics about the latest cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ClusterScanStatistics</returns>
@@ -15050,7 +14983,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the statistics about the latest cluster scan 
         /// 
-        /// GetExternalcontactsGraphsClusterscansLatestStatistics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ClusterScanStatistics)</returns>
@@ -15134,7 +15066,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the org-wide settings for ExternalContact graph operations 
         /// 
-        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GraphSettings</returns>
@@ -15148,7 +15079,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the org-wide settings for ExternalContact graph operations 
         /// 
-        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GraphSettings</returns>
@@ -15231,7 +15161,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the org-wide settings for ExternalContact graph operations 
         /// 
-        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GraphSettings</returns>
@@ -15246,7 +15175,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Returns the org-wide settings for ExternalContact graph operations 
         /// 
-        /// GetExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GraphSettings)</returns>
@@ -36483,7 +36411,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Merge a single cluster found by a scan 
         /// 
-        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -36499,7 +36426,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Merge a single cluster found by a scan 
         /// 
-        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -36592,7 +36518,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Merge a single cluster found by a scan 
         /// 
-        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -36609,7 +36534,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Merge a single cluster found by a scan 
         /// 
-        /// PutExternalcontactsGraphsClusterscanClusterMerge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scanId">Cluster scan ID</param>
@@ -36705,7 +36629,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates the org-wide settings for ExternalContact graph operations 
         /// 
-        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OrgConfiguration</param>
@@ -36720,7 +36643,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates the org-wide settings for ExternalContact graph operations 
         /// 
-        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OrgConfiguration</param>
@@ -36813,7 +36735,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates the org-wide settings for ExternalContact graph operations 
         /// 
-        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OrgConfiguration</param>
@@ -36829,7 +36750,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates the org-wide settings for ExternalContact graph operations 
         /// 
-        /// PutExternalcontactsGraphsSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">OrgConfiguration</param>

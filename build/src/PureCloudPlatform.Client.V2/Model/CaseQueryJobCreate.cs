@@ -45,6 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Reference,
             
             /// <summary>
+            /// Enum Externalid for "externalId"
+            /// </summary>
+            [EnumMember(Value = "externalId")]
+            Externalid,
+            
+            /// <summary>
             /// Enum Caseplanid for "caseplanId"
             /// </summary>
             [EnumMember(Value = "caseplanId")]
@@ -135,6 +141,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Summary,
             
             /// <summary>
+            /// Enum Description for "description"
+            /// </summary>
+            [EnumMember(Value = "description")]
+            Description,
+            
+            /// <summary>
             /// Enum Version for "version"
             /// </summary>
             [EnumMember(Value = "version")]
@@ -208,14 +220,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PageSize">The total page size requested (default 25)..</param>
         /// <param name="PageNumber">The requested page number..</param>
         /// <param name="Filters">List of filter objects to be used in the search. Use an empty list to run the query with no filters. (required).</param>
+        /// <param name="FilterGroups">List of filter groups to be used in the search. The filters within a group are combined using the group operator; groups are combined with each other and with the top-level filters using AND. .</param>
         /// <param name="Sort">Sort order for results..</param>
         /// <param name="Attributes">List of entity attributes to be retrieved in the result..</param>
         /// <param name="Expands">Attributes to expand on each case in the job results. Expands are stored on the job and enriched by PubAPI when results are fetched..</param>
-        public CaseQueryJobCreate(int? PageSize = null, int? PageNumber = null, List<CaseQueryJobFilter> Filters = null, CaseQueryJobSort Sort = null, List<AttributesEnum> Attributes = null, List<ExpandsEnum> Expands = null)
+        public CaseQueryJobCreate(int? PageSize = null, int? PageNumber = null, List<CaseQueryJobFilter> Filters = null, List<CaseQueryJobFilterGroup> FilterGroups = null, CaseQueryJobSort Sort = null, List<AttributesEnum> Attributes = null, List<ExpandsEnum> Expands = null)
         {
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
             this.Filters = Filters;
+            this.FilterGroups = FilterGroups;
             this.Sort = Sort;
             this.Attributes = Attributes;
             this.Expands = Expands;
@@ -248,6 +262,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>List of filter objects to be used in the search. Use an empty list to run the query with no filters.</value>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<CaseQueryJobFilter> Filters { get; set; }
+
+
+
+        /// <summary>
+        /// List of filter groups to be used in the search. The filters within a group are combined using the group operator; groups are combined with each other and with the top-level filters using AND. 
+        /// </summary>
+        /// <value>List of filter groups to be used in the search. The filters within a group are combined using the group operator; groups are combined with each other and with the top-level filters using AND. </value>
+        [DataMember(Name="filterGroups", EmitDefaultValue=false)]
+        public List<CaseQueryJobFilterGroup> FilterGroups { get; set; }
 
 
 
@@ -289,6 +312,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
+            sb.Append("  FilterGroups: ").Append(FilterGroups).Append("\n");
             sb.Append("  Sort: ").Append(Sort).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  Expands: ").Append(Expands).Append("\n");
@@ -348,6 +372,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Filters.SequenceEqual(other.Filters)
                 ) &&
                 (
+                    this.FilterGroups == other.FilterGroups ||
+                    this.FilterGroups != null &&
+                    this.FilterGroups.SequenceEqual(other.FilterGroups)
+                ) &&
+                (
                     this.Sort == other.Sort ||
                     this.Sort != null &&
                     this.Sort.Equals(other.Sort)
@@ -383,6 +412,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
+
+                if (this.FilterGroups != null)
+                    hash = hash * 59 + this.FilterGroups.GetHashCode();
 
                 if (this.Sort != null)
                     hash = hash * 59 + this.Sort.GetHashCode();

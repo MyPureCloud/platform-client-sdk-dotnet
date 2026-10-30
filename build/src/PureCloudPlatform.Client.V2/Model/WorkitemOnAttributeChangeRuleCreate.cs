@@ -28,11 +28,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WorkitemOnAttributeChangeRuleCreate" /> class.
         /// </summary>
         /// <param name="Name">The name of the rule. (required).</param>
-        /// <param name="Condition">The rules condition. If the condition criteria is met the rules action will be executed. (required).</param>
-        public WorkitemOnAttributeChangeRuleCreate(string Name = null, WorkitemOnAttributeChangeCondition Condition = null)
+        /// <param name="Condition">The rules condition. If the condition criteria is met the rules action will be executed. Mutually exclusive with match; exactly one of condition or match must be provided..</param>
+        /// <param name="Match">Grouped match criteria combined with logical operators. Mutually exclusive with condition; exactly one of condition or match must be provided..</param>
+        public WorkitemOnAttributeChangeRuleCreate(string Name = null, WorkitemOnAttributeChangeCondition Condition = null, WorkitemOnAttributeChangeMatch Match = null)
         {
             this.Name = Name;
             this.Condition = Condition;
+            this.Match = Match;
             
         }
         
@@ -48,11 +50,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The rules condition. If the condition criteria is met the rules action will be executed.
+        /// The rules condition. If the condition criteria is met the rules action will be executed. Mutually exclusive with match; exactly one of condition or match must be provided.
         /// </summary>
-        /// <value>The rules condition. If the condition criteria is met the rules action will be executed.</value>
+        /// <value>The rules condition. If the condition criteria is met the rules action will be executed. Mutually exclusive with match; exactly one of condition or match must be provided.</value>
         [DataMember(Name="condition", EmitDefaultValue=false)]
         public WorkitemOnAttributeChangeCondition Condition { get; set; }
+
+
+
+        /// <summary>
+        /// Grouped match criteria combined with logical operators. Mutually exclusive with condition; exactly one of condition or match must be provided.
+        /// </summary>
+        /// <value>Grouped match criteria combined with logical operators. Mutually exclusive with condition; exactly one of condition or match must be provided.</value>
+        [DataMember(Name="match", EmitDefaultValue=false)]
+        public WorkitemOnAttributeChangeMatch Match { get; set; }
 
 
         /// <summary>
@@ -66,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Condition: ").Append(Condition).Append("\n");
+            sb.Append("  Match: ").Append(Match).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +127,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Condition == other.Condition ||
                     this.Condition != null &&
                     this.Condition.Equals(other.Condition)
+                ) &&
+                (
+                    this.Match == other.Match ||
+                    this.Match != null &&
+                    this.Match.Equals(other.Match)
                 );
         }
 
@@ -134,6 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Condition != null)
                     hash = hash * 59 + this.Condition.GetHashCode();
+
+                if (this.Match != null)
+                    hash = hash * 59 + this.Match.GetHashCode();
 
                 return hash;
             }

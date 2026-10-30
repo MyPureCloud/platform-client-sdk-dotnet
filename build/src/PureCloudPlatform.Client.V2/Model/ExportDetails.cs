@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Yaml for "Yaml"
             /// </summary>
             [EnumMember(Value = "Yaml")]
-            Yaml
+            Yaml,
+            
+            /// <summary>
+            /// Enum Flowinfospec for "FlowInfoSpec"
+            /// </summary>
+            [EnumMember(Value = "FlowInfoSpec")]
+            Flowinfospec
         }
         /// <summary>
         /// The export type for the flow. Default: 'Yaml'.

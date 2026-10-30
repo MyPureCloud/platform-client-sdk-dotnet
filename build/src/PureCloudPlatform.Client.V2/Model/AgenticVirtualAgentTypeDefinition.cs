@@ -118,7 +118,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Dataactionhttperror for "DataActionHttpError"
             /// </summary>
             [EnumMember(Value = "DataActionHttpError")]
-            Dataactionhttperror
+            Dataactionhttperror,
+            
+            /// <summary>
+            /// Enum A2aerror for "A2AError"
+            /// </summary>
+            [EnumMember(Value = "A2AError")]
+            A2aerror
         }
         /// <summary>
         /// Intended direction of use for this type.
@@ -150,7 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Properties">Properties of this object type. Applies when type is object..</param>
         /// <param name="Items">Type of items in this array type. Applies when type is array..</param>
         /// <param name="StatusCodes">HTTP 4xx or 5xx status codes this error type can handle. Applies when type is DataActionHttpError..</param>
-        /// <param name="DefaultInstruction">Default instruction for how the virtual agent should handle this error type when a tool references it without its own error instruction. Applies when type is DataActionHttpError..</param>
+        /// <param name="DefaultInstruction">Default instruction for how the virtual agent should handle this error type when a tool references it without its own error instruction. Applies when type is DataActionHttpError or A2AError..</param>
         /// <param name="Enum">Allowed enum values. Applies to enum types..</param>
         public AgenticVirtualAgentTypeDefinition(string Name = null, string Description = null, DirectionEnum? Direction = null, TypeEnum? Type = null, bool? UserUtteranceSubstring = null, bool? Undisclosed = null, List<AgenticVirtualAgentPropertyDefinition> Properties = null, string Items = null, List<int?> StatusCodes = null, string DefaultInstruction = null, List<string> Enum = null)
         {
@@ -238,9 +244,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Default instruction for how the virtual agent should handle this error type when a tool references it without its own error instruction. Applies when type is DataActionHttpError.
+        /// Default instruction for how the virtual agent should handle this error type when a tool references it without its own error instruction. Applies when type is DataActionHttpError or A2AError.
         /// </summary>
-        /// <value>Default instruction for how the virtual agent should handle this error type when a tool references it without its own error instruction. Applies when type is DataActionHttpError.</value>
+        /// <value>Default instruction for how the virtual agent should handle this error type when a tool references it without its own error instruction. Applies when type is DataActionHttpError or A2AError.</value>
         [DataMember(Name="defaultInstruction", EmitDefaultValue=false)]
         public string DefaultInstruction { get; set; }
 

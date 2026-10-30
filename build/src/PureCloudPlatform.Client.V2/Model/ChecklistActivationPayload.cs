@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Conversationstart for "ConversationStart"
             /// </summary>
             [EnumMember(Value = "ConversationStart")]
-            Conversationstart
+            Conversationstart,
+            
+            /// <summary>
+            /// Enum Sentiment for "Sentiment"
+            /// </summary>
+            [EnumMember(Value = "Sentiment")]
+            Sentiment
         }
         /// <summary>
         /// Media type.

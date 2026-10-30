@@ -118,7 +118,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Removed for "Removed"
             /// </summary>
             [EnumMember(Value = "Removed")]
-            Removed
+            Removed,
+            
+            /// <summary>
+            /// Enum Modified for "Modified"
+            /// </summary>
+            [EnumMember(Value = "Modified")]
+            Modified
         }
         /// <summary>
         /// Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies.

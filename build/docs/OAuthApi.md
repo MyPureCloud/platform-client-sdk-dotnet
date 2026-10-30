@@ -275,8 +275,13 @@ namespace Example
 
 > [**ApiUsageQueryResult**](ApiUsageQueryResult) GetOauthClientUsageQueryResult (string executionId, string clientId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the results of a usage query
+
+Deprecated - use GET /api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId} instead.
 
 Requires ANY permissions: 
 
@@ -340,10 +345,13 @@ namespace Example
 
 > [**UsageExecutionResult**](UsageExecutionResult) GetOauthClientUsageSummary (string clientId, string days = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get a summary of OAuth client API usage
 
-After calling this method, you will then need to poll for the query results based on the returned execution Id
+Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
 
 Requires ANY permissions: 
 
@@ -652,10 +660,13 @@ namespace Example
 
 > [**UsageExecutionResult**](UsageExecutionResult) PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Query for OAuth client API usage
 
-After calling this method, you will then need to poll for the query results based on the returned execution Id
+Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
 
 Requires ANY permissions: 
 
@@ -843,4 +854,4 @@ namespace Example
 [**OAuthClient**](OAuthClient)
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+_PureCloudPlatform.Client.V2 276.0.0_

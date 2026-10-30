@@ -27,7 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecordingPlaybackUrlTtl">The duration in minutes for which the generated URL for recording playback remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes..</param>
         /// <param name="RecordingBatchDownloadUrlTtl">The duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes..</param>
         /// <param name="StopRecordingWhenOnlyExternalParticipants">Whether to stop recording in conference when only external participants remain.</param>
-        public RecordingSettings(int? MaxSimultaneousStreams = null, int? MaxConfigurableScreenRecordingStreams = null, bool? RegionalRecordingStorageEnabled = null, int? RecordingPlaybackUrlTtl = null, int? RecordingBatchDownloadUrlTtl = null, bool? StopRecordingWhenOnlyExternalParticipants = null)
+        /// <param name="HierarchyAccessControlEnabled">Whether hierarchy access control using the Reports To management chain is enabled for the organization.</param>
+        public RecordingSettings(int? MaxSimultaneousStreams = null, int? MaxConfigurableScreenRecordingStreams = null, bool? RegionalRecordingStorageEnabled = null, int? RecordingPlaybackUrlTtl = null, int? RecordingBatchDownloadUrlTtl = null, bool? StopRecordingWhenOnlyExternalParticipants = null, bool? HierarchyAccessControlEnabled = null)
         {
             this.MaxSimultaneousStreams = MaxSimultaneousStreams;
             this.MaxConfigurableScreenRecordingStreams = MaxConfigurableScreenRecordingStreams;
@@ -35,6 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RecordingPlaybackUrlTtl = RecordingPlaybackUrlTtl;
             this.RecordingBatchDownloadUrlTtl = RecordingBatchDownloadUrlTtl;
             this.StopRecordingWhenOnlyExternalParticipants = StopRecordingWhenOnlyExternalParticipants;
+            this.HierarchyAccessControlEnabled = HierarchyAccessControlEnabled;
             
         }
         
@@ -93,6 +95,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? StopRecordingWhenOnlyExternalParticipants { get; set; }
 
 
+
+        /// <summary>
+        /// Whether hierarchy access control using the Reports To management chain is enabled for the organization
+        /// </summary>
+        /// <value>Whether hierarchy access control using the Reports To management chain is enabled for the organization</value>
+        [DataMember(Name="hierarchyAccessControlEnabled", EmitDefaultValue=false)]
+        public bool? HierarchyAccessControlEnabled { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RecordingPlaybackUrlTtl: ").Append(RecordingPlaybackUrlTtl).Append("\n");
             sb.Append("  RecordingBatchDownloadUrlTtl: ").Append(RecordingBatchDownloadUrlTtl).Append("\n");
             sb.Append("  StopRecordingWhenOnlyExternalParticipants: ").Append(StopRecordingWhenOnlyExternalParticipants).Append("\n");
+            sb.Append("  HierarchyAccessControlEnabled: ").Append(HierarchyAccessControlEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,6 +189,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StopRecordingWhenOnlyExternalParticipants == other.StopRecordingWhenOnlyExternalParticipants ||
                     this.StopRecordingWhenOnlyExternalParticipants != null &&
                     this.StopRecordingWhenOnlyExternalParticipants.Equals(other.StopRecordingWhenOnlyExternalParticipants)
+                ) &&
+                (
+                    this.HierarchyAccessControlEnabled == other.HierarchyAccessControlEnabled ||
+                    this.HierarchyAccessControlEnabled != null &&
+                    this.HierarchyAccessControlEnabled.Equals(other.HierarchyAccessControlEnabled)
                 );
         }
 
@@ -208,6 +225,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.StopRecordingWhenOnlyExternalParticipants != null)
                     hash = hash * 59 + this.StopRecordingWhenOnlyExternalParticipants.GetHashCode();
+
+                if (this.HierarchyAccessControlEnabled != null)
+                    hash = hash * 59 + this.HierarchyAccessControlEnabled.GetHashCode();
 
                 return hash;
             }

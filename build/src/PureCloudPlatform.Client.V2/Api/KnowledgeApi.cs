@@ -1884,6 +1884,64 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<V3SynchronizationListing> GetKnowledgeSourcesSynchronizationsWithHttpInfo (string before = null, string after = null, string pageSize = null);
 
         /// <summary>
+        /// Get tags across sources for the organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <param name="sourceIds">Optional comma-separated source IDs to scope tags. (optional)</param>
+        /// <returns>OrgV3SourcesTagsResponse</returns>
+        
+        OrgV3SourcesTagsResponse GetKnowledgeSourcesTags (int? pageNumber = null, int? pageSize = null, string tagName = null, string sourceIds = null);
+
+        /// <summary>
+        /// Get tags across sources for the organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <param name="sourceIds">Optional comma-separated source IDs to scope tags. (optional)</param>
+        /// <returns>ApiResponse of OrgV3SourcesTagsResponse</returns>
+        
+        ApiResponse<OrgV3SourcesTagsResponse> GetKnowledgeSourcesTagsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string tagName = null, string sourceIds = null);
+
+        /// <summary>
+        /// Get tags grouped by source for the organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <returns>V3SourceTagsGroupedResponse</returns>
+        
+        V3SourceTagsGroupedResponse GetKnowledgeSourcesTagsGrouped (int? pageNumber = null, int? pageSize = null, string tagName = null);
+
+        /// <summary>
+        /// Get tags grouped by source for the organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <returns>ApiResponse of V3SourceTagsGroupedResponse</returns>
+        
+        ApiResponse<V3SourceTagsGroupedResponse> GetKnowledgeSourcesTagsGroupedWithHttpInfo (int? pageNumber = null, int? pageSize = null, string tagName = null);
+
+        /// <summary>
         /// Update connection
         /// </summary>
         /// <remarks>
@@ -3516,6 +3574,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of V3SourceDetailedResponse</returns>
         
         ApiResponse<V3SourceDetailedResponse> PostKnowledgeSourcesWithHttpInfo (V3SourceCreateRequest body);
+
+        /// <summary>
+        /// Get per-source file counts for the selected tag filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>V3SourceFileCountsResponse</returns>
+        
+        V3SourceFileCountsResponse PostKnowledgeSourcesFilesCounts (V3SourceFileCountsRequest body = null);
+
+        /// <summary>
+        /// Get per-source file counts for the selected tag filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of V3SourceFileCountsResponse</returns>
+        
+        ApiResponse<V3SourceFileCountsResponse> PostKnowledgeSourcesFilesCountsWithHttpInfo (V3SourceFileCountsRequest body = null);
 
         /// <summary>
         /// Update Salesforce Knowledge integration source
@@ -5472,6 +5554,64 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<V3SynchronizationListing>> GetKnowledgeSourcesSynchronizationsAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null);
 
         /// <summary>
+        /// Get tags across sources for the organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <param name="sourceIds">Optional comma-separated source IDs to scope tags. (optional)</param>
+        /// <returns>Task of OrgV3SourcesTagsResponse</returns>
+        
+        System.Threading.Tasks.Task<OrgV3SourcesTagsResponse> GetKnowledgeSourcesTagsAsync (int? pageNumber = null, int? pageSize = null, string tagName = null, string sourceIds = null);
+
+        /// <summary>
+        /// Get tags across sources for the organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <param name="sourceIds">Optional comma-separated source IDs to scope tags. (optional)</param>
+        /// <returns>Task of ApiResponse (OrgV3SourcesTagsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OrgV3SourcesTagsResponse>> GetKnowledgeSourcesTagsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string tagName = null, string sourceIds = null);
+
+        /// <summary>
+        /// Get tags grouped by source for the organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <returns>Task of V3SourceTagsGroupedResponse</returns>
+        
+        System.Threading.Tasks.Task<V3SourceTagsGroupedResponse> GetKnowledgeSourcesTagsGroupedAsync (int? pageNumber = null, int? pageSize = null, string tagName = null);
+
+        /// <summary>
+        /// Get tags grouped by source for the organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <returns>Task of ApiResponse (V3SourceTagsGroupedResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<V3SourceTagsGroupedResponse>> GetKnowledgeSourcesTagsGroupedAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string tagName = null);
+
+        /// <summary>
         /// Update connection
         /// </summary>
         /// <remarks>
@@ -7104,6 +7244,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (V3SourceDetailedResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<V3SourceDetailedResponse>> PostKnowledgeSourcesAsyncWithHttpInfo (V3SourceCreateRequest body);
+
+        /// <summary>
+        /// Get per-source file counts for the selected tag filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of V3SourceFileCountsResponse</returns>
+        
+        System.Threading.Tasks.Task<V3SourceFileCountsResponse> PostKnowledgeSourcesFilesCountsAsync (V3SourceFileCountsRequest body = null);
+
+        /// <summary>
+        /// Get per-source file counts for the selected tag filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (V3SourceFileCountsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<V3SourceFileCountsResponse>> PostKnowledgeSourcesFilesCountsAsyncWithHttpInfo (V3SourceFileCountsRequest body = null);
 
         /// <summary>
         /// Update Salesforce Knowledge integration source
@@ -21507,6 +21671,432 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get tags across sources for the organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <param name="sourceIds">Optional comma-separated source IDs to scope tags. (optional)</param>
+        /// <returns>OrgV3SourcesTagsResponse</returns>
+        
+        public OrgV3SourcesTagsResponse GetKnowledgeSourcesTags (int? pageNumber = null, int? pageSize = null, string tagName = null, string sourceIds = null)
+        {
+             ApiResponse<OrgV3SourcesTagsResponse> localVarResponse = GetKnowledgeSourcesTagsWithHttpInfo(pageNumber, pageSize, tagName, sourceIds);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get tags across sources for the organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <param name="sourceIds">Optional comma-separated source IDs to scope tags. (optional)</param>
+        /// <returns>ApiResponse of OrgV3SourcesTagsResponse</returns>
+        
+        public ApiResponse< OrgV3SourcesTagsResponse > GetKnowledgeSourcesTagsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string tagName = null, string sourceIds = null)
+        { 
+
+            var localVarPath = "/api/v2/knowledge/sources/tags";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (tagName != null) localVarQueryParams.Add(new Tuple<string, string>("tagName", this.Configuration.ApiClient.ParameterToString(tagName)));
+            if (sourceIds != null) localVarQueryParams.Add(new Tuple<string, string>("sourceIds", this.Configuration.ApiClient.ParameterToString(sourceIds)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourcesTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeSourcesTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourcesTags: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrgV3SourcesTagsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (OrgV3SourcesTagsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrgV3SourcesTagsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get tags across sources for the organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <param name="sourceIds">Optional comma-separated source IDs to scope tags. (optional)</param>
+        /// <returns>Task of OrgV3SourcesTagsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<OrgV3SourcesTagsResponse> GetKnowledgeSourcesTagsAsync (int? pageNumber = null, int? pageSize = null, string tagName = null, string sourceIds = null)
+        {
+             ApiResponse<OrgV3SourcesTagsResponse> localVarResponse = await GetKnowledgeSourcesTagsAsyncWithHttpInfo(pageNumber, pageSize, tagName, sourceIds);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get tags across sources for the organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <param name="sourceIds">Optional comma-separated source IDs to scope tags. (optional)</param>
+        /// <returns>Task of ApiResponse (OrgV3SourcesTagsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OrgV3SourcesTagsResponse>> GetKnowledgeSourcesTagsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string tagName = null, string sourceIds = null)
+        { 
+
+            var localVarPath = "/api/v2/knowledge/sources/tags";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (tagName != null) localVarQueryParams.Add(new Tuple<string, string>("tagName", this.Configuration.ApiClient.ParameterToString(tagName)));
+            if (sourceIds != null) localVarQueryParams.Add(new Tuple<string, string>("sourceIds", this.Configuration.ApiClient.ParameterToString(sourceIds)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourcesTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeSourcesTags: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourcesTags: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrgV3SourcesTagsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (OrgV3SourcesTagsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrgV3SourcesTagsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get tags grouped by source for the organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <returns>V3SourceTagsGroupedResponse</returns>
+        
+        public V3SourceTagsGroupedResponse GetKnowledgeSourcesTagsGrouped (int? pageNumber = null, int? pageSize = null, string tagName = null)
+        {
+             ApiResponse<V3SourceTagsGroupedResponse> localVarResponse = GetKnowledgeSourcesTagsGroupedWithHttpInfo(pageNumber, pageSize, tagName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get tags grouped by source for the organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <returns>ApiResponse of V3SourceTagsGroupedResponse</returns>
+        
+        public ApiResponse< V3SourceTagsGroupedResponse > GetKnowledgeSourcesTagsGroupedWithHttpInfo (int? pageNumber = null, int? pageSize = null, string tagName = null)
+        { 
+
+            var localVarPath = "/api/v2/knowledge/sources/tags/grouped";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (tagName != null) localVarQueryParams.Add(new Tuple<string, string>("tagName", this.Configuration.ApiClient.ParameterToString(tagName)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourcesTagsGrouped: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeSourcesTagsGrouped: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourcesTagsGrouped: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SourceTagsGroupedResponse>(localVarStatusCode,
+                localVarHeaders,
+                (V3SourceTagsGroupedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SourceTagsGroupedResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get tags grouped by source for the organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <returns>Task of V3SourceTagsGroupedResponse</returns>
+        
+        public async System.Threading.Tasks.Task<V3SourceTagsGroupedResponse> GetKnowledgeSourcesTagsGroupedAsync (int? pageNumber = null, int? pageSize = null, string tagName = null)
+        {
+             ApiResponse<V3SourceTagsGroupedResponse> localVarResponse = await GetKnowledgeSourcesTagsGroupedAsyncWithHttpInfo(pageNumber, pageSize, tagName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get tags grouped by source for the organization 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of items per page. Maximum is 200. (optional, default to 100)</param>
+        /// <param name="tagName">Optional substring filter for tag names. (optional)</param>
+        /// <returns>Task of ApiResponse (V3SourceTagsGroupedResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<V3SourceTagsGroupedResponse>> GetKnowledgeSourcesTagsGroupedAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string tagName = null)
+        { 
+
+            var localVarPath = "/api/v2/knowledge/sources/tags/grouped";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (tagName != null) localVarQueryParams.Add(new Tuple<string, string>("tagName", this.Configuration.ApiClient.ParameterToString(tagName)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourcesTagsGrouped: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetKnowledgeSourcesTagsGrouped: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSourcesTagsGrouped: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SourceTagsGroupedResponse>(localVarStatusCode,
+                localVarHeaders,
+                (V3SourceTagsGroupedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SourceTagsGroupedResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update connection 
         /// 
         /// </summary>
@@ -35383,6 +35973,214 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<V3SourceDetailedResponse>(localVarStatusCode,
                 localVarHeaders,
                 (V3SourceDetailedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SourceDetailedResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get per-source file counts for the selected tag filter 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>V3SourceFileCountsResponse</returns>
+        
+        public V3SourceFileCountsResponse PostKnowledgeSourcesFilesCounts (V3SourceFileCountsRequest body = null)
+        {
+             ApiResponse<V3SourceFileCountsResponse> localVarResponse = PostKnowledgeSourcesFilesCountsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get per-source file counts for the selected tag filter 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of V3SourceFileCountsResponse</returns>
+        
+        public ApiResponse< V3SourceFileCountsResponse > PostKnowledgeSourcesFilesCountsWithHttpInfo (V3SourceFileCountsRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/knowledge/sources/files/counts";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeSourcesFilesCounts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostKnowledgeSourcesFilesCounts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeSourcesFilesCounts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SourceFileCountsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (V3SourceFileCountsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SourceFileCountsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get per-source file counts for the selected tag filter 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of V3SourceFileCountsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<V3SourceFileCountsResponse> PostKnowledgeSourcesFilesCountsAsync (V3SourceFileCountsRequest body = null)
+        {
+             ApiResponse<V3SourceFileCountsResponse> localVarResponse = await PostKnowledgeSourcesFilesCountsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get per-source file counts for the selected tag filter 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (V3SourceFileCountsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<V3SourceFileCountsResponse>> PostKnowledgeSourcesFilesCountsAsyncWithHttpInfo (V3SourceFileCountsRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/knowledge/sources/files/counts";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeSourcesFilesCounts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostKnowledgeSourcesFilesCounts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeSourcesFilesCounts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<V3SourceFileCountsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (V3SourceFileCountsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SourceFileCountsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

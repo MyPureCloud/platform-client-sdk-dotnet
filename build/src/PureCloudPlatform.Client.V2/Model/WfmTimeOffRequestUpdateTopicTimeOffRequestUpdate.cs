@@ -150,6 +150,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
+        /// <param name="MuId">MuId.</param>
         /// <param name="User">User.</param>
         /// <param name="IsFullDayRequest">IsFullDayRequest.</param>
         /// <param name="MarkedAsRead">MarkedAsRead.</param>
@@ -171,9 +172,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SubmittedBy">SubmittedBy.</param>
         /// <param name="ModifiedDate">ModifiedDate.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        public WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate(string Id = null, WfmTimeOffRequestUpdateTopicUserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<string> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, List<long?> FullDayEarliestStartOffsetMinutes = null, List<long?> FullDayLatestEndOffsetMinutes = null, long? DailyDurationMinutes = null, List<long?> DurationMinutes = null, List<long?> PayableMinutes = null, string Notes = null, string ReviewedDate = null, string ReviewedBy = null, string SubmittedDate = null, string SubmittedBy = null, string ModifiedDate = null, string ModifiedBy = null)
+        public WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate(string Id = null, string MuId = null, WfmTimeOffRequestUpdateTopicUserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<string> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, List<long?> FullDayEarliestStartOffsetMinutes = null, List<long?> FullDayLatestEndOffsetMinutes = null, long? DailyDurationMinutes = null, List<long?> DurationMinutes = null, List<long?> PayableMinutes = null, string Notes = null, string ReviewedDate = null, string ReviewedBy = null, string SubmittedDate = null, string SubmittedBy = null, string ModifiedDate = null, string ModifiedBy = null)
         {
             this.Id = Id;
+            this.MuId = MuId;
             this.User = User;
             this.IsFullDayRequest = IsFullDayRequest;
             this.MarkedAsRead = MarkedAsRead;
@@ -205,6 +207,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets MuId
+        /// </summary>
+        [DataMember(Name="muId", EmitDefaultValue=false)]
+        public string MuId { get; set; }
 
 
 
@@ -373,6 +383,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  MuId: ").Append(MuId).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  IsFullDayRequest: ").Append(IsFullDayRequest).Append("\n");
             sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
@@ -438,6 +449,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.MuId == other.MuId ||
+                    this.MuId != null &&
+                    this.MuId.Equals(other.MuId)
                 ) &&
                 (
                     this.User == other.User ||
@@ -559,6 +575,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.MuId != null)
+                    hash = hash * 59 + this.MuId.GetHashCode();
 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();

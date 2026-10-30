@@ -19,52 +19,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the results of a usage query
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         ApiUsageQueryResult GetOauthClientUsageQueryResult (string executionId, string clientId);
 
         /// <summary>
         /// Get the results of a usage query
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         ApiResponse<ApiUsageQueryResult> GetOauthClientUsageQueryResultWithHttpInfo (string executionId, string clientId);
 
         /// <summary>
         /// Get a summary of OAuth client API usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>UsageExecutionResult</returns>
-        
+        [Obsolete]
         UsageExecutionResult GetOauthClientUsageSummary (string clientId, string days = null);
 
         /// <summary>
         /// Get a summary of OAuth client API usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
-        
+        [Obsolete]
         ApiResponse<UsageExecutionResult> GetOauthClientUsageSummaryWithHttpInfo (string clientId, string days = null);
 
         /// <summary>
@@ -129,78 +129,78 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the results of a usage query
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         ApiUsageQueryResult GetUsageQueryExecutionIdResults (string executionId);
 
         /// <summary>
         /// Get the results of a usage query
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         ApiResponse<ApiUsageQueryResult> GetUsageQueryExecutionIdResultsWithHttpInfo (string executionId);
 
         /// <summary>
         /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
         /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         ApiUsageQueryResult GetUsageSimplesearchExecutionIdResults (string executionId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
         /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         ApiResponse<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsWithHttpInfo (string executionId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Query for OAuth client API usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
-        
+        [Obsolete]
         UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
         /// Query for OAuth client API usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
-        
+        [Obsolete]
         ApiResponse<UsageExecutionResult> PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
@@ -257,48 +257,48 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query organization API Usage - 
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
-        
+        [Obsolete]
         UsageExecutionResult PostUsageQuery (ApiUsageOrganizationQuery body);
 
         /// <summary>
         /// Query organization API Usage - 
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
-        
+        [Obsolete]
         ApiResponse<UsageExecutionResult> PostUsageQueryWithHttpInfo (ApiUsageOrganizationQuery body);
 
         /// <summary>
         /// Search organization API Usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
         /// <returns>UsageExecutionResult</returns>
-        
+        [Obsolete]
         UsageExecutionResult PostUsageSimplesearch (ApiUsageSimpleSearch body);
 
         /// <summary>
         /// Search organization API Usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
-        
+        [Obsolete]
         ApiResponse<UsageExecutionResult> PostUsageSimplesearchWithHttpInfo (ApiUsageSimpleSearch body);
 
         #endregion Synchronous Operations
@@ -309,52 +309,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the results of a usage query
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiUsageQueryResult> GetOauthClientUsageQueryResultAsync (string executionId, string clientId);
 
         /// <summary>
         /// Get the results of a usage query
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetOauthClientUsageQueryResultAsyncWithHttpInfo (string executionId, string clientId);
 
         /// <summary>
         /// Get a summary of OAuth client API usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of UsageExecutionResult</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<UsageExecutionResult> GetOauthClientUsageSummaryAsync (string clientId, string days = null);
 
         /// <summary>
         /// Get a summary of OAuth client API usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> GetOauthClientUsageSummaryAsyncWithHttpInfo (string clientId, string days = null);
 
         /// <summary>
@@ -419,78 +419,78 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the results of a usage query
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageQueryExecutionIdResultsAsync (string executionId);
 
         /// <summary>
         /// Get the results of a usage query
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageQueryExecutionIdResultsAsyncWithHttpInfo (string executionId);
 
         /// <summary>
         /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
         /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsAsync (string executionId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
         /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo (string executionId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Query for OAuth client API usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
         /// Query for OAuth client API usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
@@ -547,48 +547,48 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query organization API Usage - 
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<UsageExecutionResult> PostUsageQueryAsync (ApiUsageOrganizationQuery body);
 
         /// <summary>
         /// Query organization API Usage - 
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageQueryAsyncWithHttpInfo (ApiUsageOrganizationQuery body);
 
         /// <summary>
         /// Search organization API Usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
         /// <returns>Task of UsageExecutionResult</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<UsageExecutionResult> PostUsageSimplesearchAsync (ApiUsageSimpleSearch body);
 
         /// <summary>
         /// Search organization API Usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageSimplesearchAsyncWithHttpInfo (ApiUsageSimpleSearch body);
 
         #endregion Asynchronous Operations
@@ -685,13 +685,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the results of a usage query 
-        /// 
+        /// Deprecated - use GET /api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         public ApiUsageQueryResult GetOauthClientUsageQueryResult (string executionId, string clientId)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = GetOauthClientUsageQueryResultWithHttpInfo(executionId, clientId);
@@ -700,13 +700,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the results of a usage query 
-        /// 
+        /// Deprecated - use GET /api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         public ApiResponse< ApiUsageQueryResult > GetOauthClientUsageQueryResultWithHttpInfo (string executionId, string clientId)
         { 
             // verify the required parameter 'executionId' is set
@@ -792,13 +792,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the results of a usage query 
-        /// 
+        /// Deprecated - use GET /api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiUsageQueryResult> GetOauthClientUsageQueryResultAsync (string executionId, string clientId)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = await GetOauthClientUsageQueryResultAsyncWithHttpInfo(executionId, clientId);
@@ -808,13 +808,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the results of a usage query 
-        /// 
+        /// Deprecated - use GET /api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetOauthClientUsageQueryResultAsyncWithHttpInfo (string executionId, string clientId)
         { 
             // verify the required parameter 'executionId' is set
@@ -903,13 +903,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a summary of OAuth client API usage 
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>UsageExecutionResult</returns>
-        
+        [Obsolete]
         public UsageExecutionResult GetOauthClientUsageSummary (string clientId, string days = null)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = GetOauthClientUsageSummaryWithHttpInfo(clientId, days);
@@ -918,13 +918,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a summary of OAuth client API usage 
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
-        
+        [Obsolete]
         public ApiResponse< UsageExecutionResult > GetOauthClientUsageSummaryWithHttpInfo (string clientId, string days = null)
         { 
             // verify the required parameter 'clientId' is set
@@ -1007,13 +1007,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a summary of OAuth client API usage 
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of UsageExecutionResult</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<UsageExecutionResult> GetOauthClientUsageSummaryAsync (string clientId, string days = null)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = await GetOauthClientUsageSummaryAsyncWithHttpInfo(clientId, days);
@@ -1023,13 +1023,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a summary of OAuth client API usage 
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="days">Previous number of days to query (optional, default to "7")</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> GetOauthClientUsageSummaryAsyncWithHttpInfo (string clientId, string days = null)
         { 
             // verify the required parameter 'clientId' is set
@@ -1561,12 +1561,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the results of a usage query 
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         public ApiUsageQueryResult GetUsageQueryExecutionIdResults (string executionId)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = GetUsageQueryExecutionIdResultsWithHttpInfo(executionId);
@@ -1575,12 +1575,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the results of a usage query 
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         public ApiResponse< ApiUsageQueryResult > GetUsageQueryExecutionIdResultsWithHttpInfo (string executionId)
         { 
             // verify the required parameter 'executionId' is set
@@ -1662,12 +1662,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the results of a usage query 
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageQueryExecutionIdResultsAsync (string executionId)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = await GetUsageQueryExecutionIdResultsAsyncWithHttpInfo(executionId);
@@ -1677,12 +1677,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the results of a usage query 
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the query execution</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageQueryExecutionIdResultsAsyncWithHttpInfo (string executionId)
         { 
             // verify the required parameter 'executionId' is set
@@ -1766,14 +1766,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results. 
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
         /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         public ApiUsageQueryResult GetUsageSimplesearchExecutionIdResults (string executionId, string after = null, int? pageSize = null)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = GetUsageSimplesearchExecutionIdResultsWithHttpInfo(executionId, after, pageSize);
@@ -1782,14 +1782,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results. 
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
         /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         public ApiResponse< ApiUsageQueryResult > GetUsageSimplesearchExecutionIdResultsWithHttpInfo (string executionId, string after = null, int? pageSize = null)
         { 
             // verify the required parameter 'executionId' is set
@@ -1873,14 +1873,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results. 
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
         /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsAsync (string executionId, string after = null, int? pageSize = null)
         {
              ApiResponse<ApiUsageQueryResult> localVarResponse = await GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo(executionId, after, pageSize);
@@ -1890,14 +1890,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results. 
-        /// 
+        /// Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
         /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo (string executionId, string after = null, int? pageSize = null)
         { 
             // verify the required parameter 'executionId' is set
@@ -1983,13 +1983,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for OAuth client API usage 
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
-        
+        [Obsolete]
         public UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = PostOauthClientUsageQueryWithHttpInfo(clientId, body);
@@ -1998,13 +1998,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for OAuth client API usage 
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
-        
+        [Obsolete]
         public ApiResponse< UsageExecutionResult > PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageClientQuery body)
         { 
             // verify the required parameter 'clientId' is set
@@ -2095,13 +2095,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for OAuth client API usage 
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageClientQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = await PostOauthClientUsageQueryAsyncWithHttpInfo(clientId, body);
@@ -2111,13 +2111,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for OAuth client API usage 
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageClientQuery body)
         { 
             // verify the required parameter 'clientId' is set
@@ -2654,12 +2654,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query organization API Usage -  
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
-        
+        [Obsolete]
         public UsageExecutionResult PostUsageQuery (ApiUsageOrganizationQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = PostUsageQueryWithHttpInfo(body);
@@ -2668,12 +2668,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query organization API Usage -  
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
-        
+        [Obsolete]
         public ApiResponse< UsageExecutionResult > PostUsageQueryWithHttpInfo (ApiUsageOrganizationQuery body)
         { 
             // verify the required parameter 'body' is set
@@ -2760,12 +2760,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query organization API Usage -  
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<UsageExecutionResult> PostUsageQueryAsync (ApiUsageOrganizationQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = await PostUsageQueryAsyncWithHttpInfo(body);
@@ -2775,12 +2775,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query organization API Usage -  
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageQueryAsyncWithHttpInfo (ApiUsageOrganizationQuery body)
         { 
             // verify the required parameter 'body' is set
@@ -2869,12 +2869,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search organization API Usage 
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
         /// <returns>UsageExecutionResult</returns>
-        
+        [Obsolete]
         public UsageExecutionResult PostUsageSimplesearch (ApiUsageSimpleSearch body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = PostUsageSimplesearchWithHttpInfo(body);
@@ -2883,12 +2883,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search organization API Usage 
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
-        
+        [Obsolete]
         public ApiResponse< UsageExecutionResult > PostUsageSimplesearchWithHttpInfo (ApiUsageSimpleSearch body)
         { 
             // verify the required parameter 'body' is set
@@ -2975,12 +2975,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search organization API Usage 
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
         /// <returns>Task of UsageExecutionResult</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<UsageExecutionResult> PostUsageSimplesearchAsync (ApiUsageSimpleSearch body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = await PostUsageSimplesearchAsyncWithHttpInfo(body);
@@ -2990,12 +2990,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Search organization API Usage 
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
+        /// Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageSimplesearchAsyncWithHttpInfo (ApiUsageSimpleSearch body)
         { 
             // verify the required parameter 'body' is set

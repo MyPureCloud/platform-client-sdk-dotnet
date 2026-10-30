@@ -154,6 +154,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Uploading,
             
             /// <summary>
+            /// Enum Video for "video"
+            /// </summary>
+            [EnumMember(Value = "video")]
+            Video,
+            
+            /// <summary>
             /// Enum Voicemail for "voicemail"
             /// </summary>
             [EnumMember(Value = "voicemail")]

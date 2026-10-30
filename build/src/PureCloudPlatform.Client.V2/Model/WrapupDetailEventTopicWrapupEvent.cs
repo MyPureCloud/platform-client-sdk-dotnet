@@ -251,7 +251,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
         /// <param name="UtilizationLabel">UtilizationLabel.</param>
-        public WrapupDetailEventTopicWrapupEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, long? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string WrapupCode = null, string WrapupNotes = null, long? WrapupDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, string UtilizationLabel = null)
+        /// <param name="OutboundCampaignId">OutboundCampaignId.</param>
+        /// <param name="OutboundContactListId">OutboundContactListId.</param>
+        /// <param name="OutboundContactId">OutboundContactId.</param>
+        public WrapupDetailEventTopicWrapupEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, long? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string WrapupCode = null, string WrapupNotes = null, long? WrapupDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, string UtilizationLabel = null, string OutboundCampaignId = null, string OutboundContactListId = null, string OutboundContactId = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -276,6 +279,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationExternalContactIds = ConversationExternalContactIds;
             this.ConversationExternalOrganizationIds = ConversationExternalOrganizationIds;
             this.UtilizationLabel = UtilizationLabel;
+            this.OutboundCampaignId = OutboundCampaignId;
+            this.OutboundContactListId = OutboundContactListId;
+            this.OutboundContactId = OutboundContactId;
             
         }
         
@@ -446,6 +452,30 @@ namespace PureCloudPlatform.Client.V2.Model
         public string UtilizationLabel { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets OutboundCampaignId
+        /// </summary>
+        [DataMember(Name="outboundCampaignId", EmitDefaultValue=false)]
+        public string OutboundCampaignId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets OutboundContactListId
+        /// </summary>
+        [DataMember(Name="outboundContactListId", EmitDefaultValue=false)]
+        public string OutboundContactListId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets OutboundContactId
+        /// </summary>
+        [DataMember(Name="outboundContactId", EmitDefaultValue=false)]
+        public string OutboundContactId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -478,6 +508,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationExternalContactIds: ").Append(ConversationExternalContactIds).Append("\n");
             sb.Append("  ConversationExternalOrganizationIds: ").Append(ConversationExternalOrganizationIds).Append("\n");
             sb.Append("  UtilizationLabel: ").Append(UtilizationLabel).Append("\n");
+            sb.Append("  OutboundCampaignId: ").Append(OutboundCampaignId).Append("\n");
+            sb.Append("  OutboundContactListId: ").Append(OutboundContactListId).Append("\n");
+            sb.Append("  OutboundContactId: ").Append(OutboundContactId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -632,6 +665,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UtilizationLabel == other.UtilizationLabel ||
                     this.UtilizationLabel != null &&
                     this.UtilizationLabel.Equals(other.UtilizationLabel)
+                ) &&
+                (
+                    this.OutboundCampaignId == other.OutboundCampaignId ||
+                    this.OutboundCampaignId != null &&
+                    this.OutboundCampaignId.Equals(other.OutboundCampaignId)
+                ) &&
+                (
+                    this.OutboundContactListId == other.OutboundContactListId ||
+                    this.OutboundContactListId != null &&
+                    this.OutboundContactListId.Equals(other.OutboundContactListId)
+                ) &&
+                (
+                    this.OutboundContactId == other.OutboundContactId ||
+                    this.OutboundContactId != null &&
+                    this.OutboundContactId.Equals(other.OutboundContactId)
                 );
         }
 
@@ -714,6 +762,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UtilizationLabel != null)
                     hash = hash * 59 + this.UtilizationLabel.GetHashCode();
+
+                if (this.OutboundCampaignId != null)
+                    hash = hash * 59 + this.OutboundCampaignId.GetHashCode();
+
+                if (this.OutboundContactListId != null)
+                    hash = hash * 59 + this.OutboundContactListId.GetHashCode();
+
+                if (this.OutboundContactId != null)
+                    hash = hash * 59 + this.OutboundContactId.GetHashCode();
 
                 return hash;
             }

@@ -150,6 +150,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ExternalContactsSettings> GetExternalcontactsSettingsWithHttpInfo ();
 
         /// <summary>
+        /// Get the organization&#39;s search settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>OrgSettings</returns>
+        
+        OrgSettings GetSearchSettings ();
+
+        /// <summary>
+        /// Get the organization&#39;s search settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of OrgSettings</returns>
+        
+        ApiResponse<OrgSettings> GetSearchSettingsWithHttpInfo ();
+
+        /// <summary>
         /// Get the execution history enabled setting.
         /// </summary>
         /// <remarks>
@@ -242,6 +266,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of EmailThreadingSettings</returns>
         
         ApiResponse<EmailThreadingSettings> PatchEmailsSettingsThreadingWithHttpInfo (EmailThreadingSettings body = null);
+
+        /// <summary>
+        /// Patch the organization&#39;s search settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search Settings</param>
+        /// <returns>OrgSettings</returns>
+        
+        OrgSettings PatchSearchSettings (OrgSettings body);
+
+        /// <summary>
+        /// Patch the organization&#39;s search settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search Settings</param>
+        /// <returns>ApiResponse of OrgSettings</returns>
+        
+        ApiResponse<OrgSettings> PatchSearchSettingsWithHttpInfo (OrgSettings body);
+
+        /// <summary>
+        /// Patch the organization&#39;s content search settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchSearchSettingsContentsearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Content search setting</param>
+        /// <returns>ContentSearchSetting</returns>
+        
+        ContentSearchSetting PatchSearchSettingsContentsearch (ContentSearchSetting body);
+
+        /// <summary>
+        /// Patch the organization&#39;s content search settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchSearchSettingsContentsearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Content search setting</param>
+        /// <returns>ApiResponse of ContentSearchSetting</returns>
+        
+        ApiResponse<ContentSearchSetting> PatchSearchSettingsContentsearchWithHttpInfo (ContentSearchSetting body);
 
         /// <summary>
         /// Edit the execution history on off setting.
@@ -482,6 +558,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ExternalContactsSettings>> GetExternalcontactsSettingsAsyncWithHttpInfo ();
 
         /// <summary>
+        /// Get the organization&#39;s search settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of OrgSettings</returns>
+        
+        System.Threading.Tasks.Task<OrgSettings> GetSearchSettingsAsync ();
+
+        /// <summary>
+        /// Get the organization&#39;s search settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (OrgSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OrgSettings>> GetSearchSettingsAsyncWithHttpInfo ();
+
+        /// <summary>
         /// Get the execution history enabled setting.
         /// </summary>
         /// <remarks>
@@ -574,6 +674,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (EmailThreadingSettings)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<EmailThreadingSettings>> PatchEmailsSettingsThreadingAsyncWithHttpInfo (EmailThreadingSettings body = null);
+
+        /// <summary>
+        /// Patch the organization&#39;s search settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search Settings</param>
+        /// <returns>Task of OrgSettings</returns>
+        
+        System.Threading.Tasks.Task<OrgSettings> PatchSearchSettingsAsync (OrgSettings body);
+
+        /// <summary>
+        /// Patch the organization&#39;s search settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search Settings</param>
+        /// <returns>Task of ApiResponse (OrgSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OrgSettings>> PatchSearchSettingsAsyncWithHttpInfo (OrgSettings body);
+
+        /// <summary>
+        /// Patch the organization&#39;s content search settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchSearchSettingsContentsearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Content search setting</param>
+        /// <returns>Task of ContentSearchSetting</returns>
+        
+        System.Threading.Tasks.Task<ContentSearchSetting> PatchSearchSettingsContentsearchAsync (ContentSearchSetting body);
+
+        /// <summary>
+        /// Patch the organization&#39;s content search settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchSearchSettingsContentsearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Content search setting</param>
+        /// <returns>Task of ApiResponse (ContentSearchSetting)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContentSearchSetting>> PatchSearchSettingsContentsearchAsyncWithHttpInfo (ContentSearchSetting body);
 
         /// <summary>
         /// Edit the execution history on off setting.
@@ -1929,6 +2081,202 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get the organization&#39;s search settings 
+        /// 
+        /// GetSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>OrgSettings</returns>
+        
+        public OrgSettings GetSearchSettings ()
+        {
+             ApiResponse<OrgSettings> localVarResponse = GetSearchSettingsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the organization&#39;s search settings 
+        /// 
+        /// GetSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of OrgSettings</returns>
+        
+        public ApiResponse< OrgSettings > GetSearchSettingsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/search/settings";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSearchSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetSearchSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSearchSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrgSettings>(localVarStatusCode,
+                localVarHeaders,
+                (OrgSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrgSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the organization&#39;s search settings 
+        /// 
+        /// GetSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of OrgSettings</returns>
+        
+        public async System.Threading.Tasks.Task<OrgSettings> GetSearchSettingsAsync ()
+        {
+             ApiResponse<OrgSettings> localVarResponse = await GetSearchSettingsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the organization&#39;s search settings 
+        /// 
+        /// GetSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (OrgSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OrgSettings>> GetSearchSettingsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/search/settings";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSearchSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetSearchSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSearchSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrgSettings>(localVarStatusCode,
+                localVarHeaders,
+                (OrgSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrgSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get the execution history enabled setting. 
         /// Get the execution history enabled setting.
         /// </summary>
@@ -2735,6 +3083,444 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<EmailThreadingSettings>(localVarStatusCode,
                 localVarHeaders,
                 (EmailThreadingSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailThreadingSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Patch the organization&#39;s search settings 
+        /// 
+        /// PatchSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search Settings</param>
+        /// <returns>OrgSettings</returns>
+        
+        public OrgSettings PatchSearchSettings (OrgSettings body)
+        {
+             ApiResponse<OrgSettings> localVarResponse = PatchSearchSettingsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Patch the organization&#39;s search settings 
+        /// 
+        /// PatchSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search Settings</param>
+        /// <returns>ApiResponse of OrgSettings</returns>
+        
+        public ApiResponse< OrgSettings > PatchSearchSettingsWithHttpInfo (OrgSettings body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SettingsApi->PatchSearchSettings");
+
+            var localVarPath = "/api/v2/search/settings";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSearchSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchSearchSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSearchSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrgSettings>(localVarStatusCode,
+                localVarHeaders,
+                (OrgSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrgSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Patch the organization&#39;s search settings 
+        /// 
+        /// PatchSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search Settings</param>
+        /// <returns>Task of OrgSettings</returns>
+        
+        public async System.Threading.Tasks.Task<OrgSettings> PatchSearchSettingsAsync (OrgSettings body)
+        {
+             ApiResponse<OrgSettings> localVarResponse = await PatchSearchSettingsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Patch the organization&#39;s search settings 
+        /// 
+        /// PatchSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search Settings</param>
+        /// <returns>Task of ApiResponse (OrgSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OrgSettings>> PatchSearchSettingsAsyncWithHttpInfo (OrgSettings body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SettingsApi->PatchSearchSettings");
+            
+
+            var localVarPath = "/api/v2/search/settings";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSearchSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchSearchSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSearchSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrgSettings>(localVarStatusCode,
+                localVarHeaders,
+                (OrgSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrgSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Patch the organization&#39;s content search settings 
+        /// 
+        /// PatchSearchSettingsContentsearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Content search setting</param>
+        /// <returns>ContentSearchSetting</returns>
+        
+        public ContentSearchSetting PatchSearchSettingsContentsearch (ContentSearchSetting body)
+        {
+             ApiResponse<ContentSearchSetting> localVarResponse = PatchSearchSettingsContentsearchWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Patch the organization&#39;s content search settings 
+        /// 
+        /// PatchSearchSettingsContentsearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Content search setting</param>
+        /// <returns>ApiResponse of ContentSearchSetting</returns>
+        
+        public ApiResponse< ContentSearchSetting > PatchSearchSettingsContentsearchWithHttpInfo (ContentSearchSetting body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SettingsApi->PatchSearchSettingsContentsearch");
+
+            var localVarPath = "/api/v2/search/settings/contentsearch";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSearchSettingsContentsearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchSearchSettingsContentsearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSearchSettingsContentsearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContentSearchSetting>(localVarStatusCode,
+                localVarHeaders,
+                (ContentSearchSetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContentSearchSetting)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Patch the organization&#39;s content search settings 
+        /// 
+        /// PatchSearchSettingsContentsearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Content search setting</param>
+        /// <returns>Task of ContentSearchSetting</returns>
+        
+        public async System.Threading.Tasks.Task<ContentSearchSetting> PatchSearchSettingsContentsearchAsync (ContentSearchSetting body)
+        {
+             ApiResponse<ContentSearchSetting> localVarResponse = await PatchSearchSettingsContentsearchAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Patch the organization&#39;s content search settings 
+        /// 
+        /// PatchSearchSettingsContentsearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Content search setting</param>
+        /// <returns>Task of ApiResponse (ContentSearchSetting)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContentSearchSetting>> PatchSearchSettingsContentsearchAsyncWithHttpInfo (ContentSearchSetting body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SettingsApi->PatchSearchSettingsContentsearch");
+            
+
+            var localVarPath = "/api/v2/search/settings/contentsearch";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSearchSettingsContentsearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchSearchSettingsContentsearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSearchSettingsContentsearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContentSearchSetting>(localVarStatusCode,
+                localVarHeaders,
+                (ContentSearchSetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContentSearchSetting)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

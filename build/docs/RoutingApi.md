@@ -3822,7 +3822,7 @@ This endpoint does require any parameters.
 
 ## GetRoutingQueue
 
-> [**Queue**](Queue) GetRoutingQueue (string queueId, List<string> expand = null)
+> [**Queue**](Queue) GetRoutingQueue (string queueId, List<string> expand = null, bool? forceMemberRecount = null)
 
 
 Get details about this queue.
@@ -3855,11 +3855,12 @@ namespace Example
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | Queue ID
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            var forceMemberRecount = true;  // bool? | Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. (optional)  (default to false)
 
             try
             { 
                 // Get details about this queue.
-                Queue result = apiInstance.GetRoutingQueue(queueId, expand);
+                Queue result = apiInstance.GetRoutingQueue(queueId, expand, forceMemberRecount);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3878,6 +3879,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: identityresolution |
+| **forceMemberRecount** | **bool?**| Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. | [optional] [default to false] |
 
 ### Return type
 
@@ -11449,4 +11451,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+_PureCloudPlatform.Client.V2 276.0.0_

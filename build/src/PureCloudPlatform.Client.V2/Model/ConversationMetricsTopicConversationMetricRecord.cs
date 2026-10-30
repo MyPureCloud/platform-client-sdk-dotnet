@@ -232,6 +232,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Tactivecallbackcomplete,
             
             /// <summary>
+            /// Enum Tactivevideo for "tActiveVideo"
+            /// </summary>
+            [EnumMember(Value = "tActiveVideo")]
+            Tactivevideo,
+            
+            /// <summary>
             /// Enum Tacw for "tAcw"
             /// </summary>
             [EnumMember(Value = "tAcw")]

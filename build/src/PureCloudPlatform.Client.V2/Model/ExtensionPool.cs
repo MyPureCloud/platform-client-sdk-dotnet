@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">The current version of the resource..</param>
         /// <param name="StartNumber">The starting phone number for the range of this Extension pool. The number must be between 3 and 9 digits in length and the same length as the endNumber..</param>
         /// <param name="EndNumber">The ending phone number for the range of this Extension pool. The number must be between 3 and 9 digits in length and the same length as the startNumber..</param>
-        public ExtensionPool(string Name = null, Division Division = null, string Description = null, int? Version = null, string StartNumber = null, string EndNumber = null)
+        public ExtensionPool(string Name = null, WritableDivision Division = null, string Description = null, int? Version = null, string StartNumber = null, string EndNumber = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -108,7 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public Division Division { get; set; }
+        public WritableDivision Division { get; set; }
 
 
 

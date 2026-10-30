@@ -61,14 +61,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConversationCustomAttributesSearchRequest" /> class.
         /// </summary>
         /// <param name="Expand">Expand your search with bulk lookups.</param>
+        /// <param name="QueryReservedFields">The search criteria for reserved fields.</param>
+        /// <param name="QueryCustomAttributes">The search criteria for custom attributes.</param>
         /// <param name="PageSize">The number of results per page.</param>
         /// <param name="PageNumber">The page of resources you want to retrieve.</param>
         /// <param name="Sort">Multi-value sort order, list of multiple sort values.</param>
         /// <param name="SortBy">The field in the resource that you want to sort the results by.</param>
         /// <param name="SortOrder">The sort order for results.</param>
-        public ConversationCustomAttributesSearchRequest(List<string> Expand = null, int? PageSize = null, int? PageNumber = null, List<SearchSort> Sort = null, string SortBy = null, SortOrderEnum? SortOrder = null)
+        public ConversationCustomAttributesSearchRequest(List<string> Expand = null, List<ConversationCustomAttributesSearchCriteria> QueryReservedFields = null, List<ConversationCustomAttributesSearchCriteria> QueryCustomAttributes = null, int? PageSize = null, int? PageNumber = null, List<SearchSort> Sort = null, string SortBy = null, SortOrderEnum? SortOrder = null)
         {
             this.Expand = Expand;
+            this.QueryReservedFields = QueryReservedFields;
+            this.QueryCustomAttributes = QueryCustomAttributes;
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
             this.Sort = Sort;
@@ -85,6 +89,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Expand your search with bulk lookups</value>
         [DataMember(Name="expand", EmitDefaultValue=false)]
         public List<string> Expand { get; set; }
+
+
+
+        /// <summary>
+        /// The search criteria for reserved fields
+        /// </summary>
+        /// <value>The search criteria for reserved fields</value>
+        [DataMember(Name="queryReservedFields", EmitDefaultValue=false)]
+        public List<ConversationCustomAttributesSearchCriteria> QueryReservedFields { get; set; }
+
+
+
+        /// <summary>
+        /// The search criteria for custom attributes
+        /// </summary>
+        /// <value>The search criteria for custom attributes</value>
+        [DataMember(Name="queryCustomAttributes", EmitDefaultValue=false)]
+        public List<ConversationCustomAttributesSearchCriteria> QueryCustomAttributes { get; set; }
 
 
 
@@ -135,6 +157,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConversationCustomAttributesSearchRequest {\n");
 
             sb.Append("  Expand: ").Append(Expand).Append("\n");
+            sb.Append("  QueryReservedFields: ").Append(QueryReservedFields).Append("\n");
+            sb.Append("  QueryCustomAttributes: ").Append(QueryCustomAttributes).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  Sort: ").Append(Sort).Append("\n");
@@ -186,6 +210,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Expand.SequenceEqual(other.Expand)
                 ) &&
                 (
+                    this.QueryReservedFields == other.QueryReservedFields ||
+                    this.QueryReservedFields != null &&
+                    this.QueryReservedFields.SequenceEqual(other.QueryReservedFields)
+                ) &&
+                (
+                    this.QueryCustomAttributes == other.QueryCustomAttributes ||
+                    this.QueryCustomAttributes != null &&
+                    this.QueryCustomAttributes.SequenceEqual(other.QueryCustomAttributes)
+                ) &&
+                (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
@@ -225,6 +259,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Expand != null)
                     hash = hash * 59 + this.Expand.GetHashCode();
+
+                if (this.QueryReservedFields != null)
+                    hash = hash * 59 + this.QueryReservedFields.GetHashCode();
+
+                if (this.QueryCustomAttributes != null)
+                    hash = hash * 59 + this.QueryCustomAttributes.GetHashCode();
 
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();

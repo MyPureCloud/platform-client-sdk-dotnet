@@ -7,11 +7,10 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Attribute** | **string** | The name of the workitem attribute whose change will be evaluated as part of the rule. | |
-| **NewValue** | **string** | The new value of the attribute. If the attribute is updated to this value this part of the condition will be met. Required for exact-match conditions (when operator is not set). | [optional] |
-| **OldValue** | **string** | The old value of the attribute. If the attribute was updated from this value this part of the condition will be met. | [optional] |
-| **Operator** | **string** | The comparison operator used to evaluate the priority attribute against the value. Only supported for the priority attribute. | [optional] |
-| **Value** | **int?** | The numeric value compared against the priority attribute using the operator. Required when operator is set. Only supported for the priority attribute. | [optional] |
+| **NewValue** | **string** | The value the attribute&#39;s new value is compared against. Compared for equality unless an operator is supplied. Null matches the attribute having been cleared, on clearable attributes. | [optional] |
+| **OldValue** | **string** | The value the attribute is transitioning from. Not permitted for the priority attribute. Omitted or null matches any previous value. | [optional] |
+| **Operator** | **string** | How the attribute&#39;s new value is compared against newValue. Required for the priority attribute; not permitted otherwise. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+_PureCloudPlatform.Client.V2 276.0.0_

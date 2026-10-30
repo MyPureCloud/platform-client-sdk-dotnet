@@ -19,10 +19,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchIntentsCustomerintent**](#PatchIntentsCustomerintent) | **Patch** /api/v2/intents/customerintents/{customerIntentId} | Patch customer intent for customerIntentId |
 | [**PostIntentsAssignmentsExternalcontactCustomerintentAssignment**](#PostIntentsAssignmentsExternalcontactCustomerintentAssignment) | **Post** /api/v2/intents/assignments/externalcontacts/{externalContactId}/customerintents/{customerIntentId}/assignment | Create customer intent assignment for external contact |
 | [**PostIntentsCategories**](#PostIntentsCategories) | **Post** /api/v2/intents/categories | Create category |
+| [**PostIntentsCategoriesSimilar**](#PostIntentsCategoriesSimilar) | **Post** /api/v2/intents/categories/similar | Find similar categories |
 | [**PostIntentsCustomerintentSourceintentsBulkAdd**](#PostIntentsCustomerintentSourceintentsBulkAdd) | **Post** /api/v2/intents/customerintents/{customerIntentId}/sourceintents/bulk/add | Bulk add source intents to a customer intent |
 | [**PostIntentsCustomerintentSourceintentsBulkRemove**](#PostIntentsCustomerintentSourceintentsBulkRemove) | **Post** /api/v2/intents/customerintents/{customerIntentId}/sourceintents/bulk/remove | Bulk remove source intents mapped to a customer intent |
 | [**PostIntentsCustomerintents**](#PostIntentsCustomerintents) | **Post** /api/v2/intents/customerintents | Create customer intents |
 | [**PostIntentsCustomerintentsBulkRetrieve**](#PostIntentsCustomerintentsBulkRetrieve) | **Post** /api/v2/intents/customerintents/bulk/retrieve | Get customer intents by IDs |
+| [**PostIntentsCustomerintentsSimilar**](#PostIntentsCustomerintentsSimilar) | **Post** /api/v2/intents/customerintents/similar | Find similar customer intents |
 
 
 
@@ -864,6 +866,70 @@ namespace Example
 [**IntentsCategory**](IntentsCategory)
 
 
+## PostIntentsCategoriesSimilar
+
+> [**SimilarCategoriesResponse**](SimilarCategoriesResponse) PostIntentsCategoriesSimilar (IntentsCategory body)
+
+
+Find similar categories
+
+PostIntentsCategoriesSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:customerIntentTaxonomy:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntentsCategoriesSimilarExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntentsApi();
+            var body = new IntentsCategory(); // IntentsCategory | Similarity search criteria
+
+            try
+            { 
+                // Find similar categories
+                SimilarCategoriesResponse result = apiInstance.PostIntentsCategoriesSimilar(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntentsApi.PostIntentsCategoriesSimilar: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**IntentsCategory**](IntentsCategory)| Similarity search criteria |  |
+
+### Return type
+
+[**SimilarCategoriesResponse**](SimilarCategoriesResponse)
+
+
 ## PostIntentsCustomerintentSourceintentsBulkAdd
 
 > [**BulkSourceIntentsResponse**](BulkSourceIntentsResponse) PostIntentsCustomerintentSourceintentsBulkAdd (string customerIntentId, BulkAddSourceIntentsRequest body)
@@ -1116,4 +1182,68 @@ namespace Example
 [**List<CustomerIntentResponse>**](CustomerIntentResponse)
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+## PostIntentsCustomerintentsSimilar
+
+> [**SimilarCustomerIntentsResponse**](SimilarCustomerIntentsResponse) PostIntentsCustomerintentsSimilar (SimilarCustomerIntentsRequest body)
+
+
+Find similar customer intents
+
+PostIntentsCustomerintentsSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:customerIntentTaxonomy:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntentsCustomerintentsSimilarExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntentsApi();
+            var body = new SimilarCustomerIntentsRequest(); // SimilarCustomerIntentsRequest | Similarity search criteria
+
+            try
+            { 
+                // Find similar customer intents
+                SimilarCustomerIntentsResponse result = apiInstance.PostIntentsCustomerintentsSimilar(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntentsApi.PostIntentsCustomerintentsSimilar: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SimilarCustomerIntentsRequest**](SimilarCustomerIntentsRequest)| Similarity search criteria |  |
+
+### Return type
+
+[**SimilarCustomerIntentsResponse**](SimilarCustomerIntentsResponse)
+
+
+_PureCloudPlatform.Client.V2 276.0.0_

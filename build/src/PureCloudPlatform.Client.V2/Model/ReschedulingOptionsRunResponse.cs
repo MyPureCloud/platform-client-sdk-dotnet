@@ -19,6 +19,51 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ReschedulingOptionsRunResponse :  IEquatable<ReschedulingOptionsRunResponse>
     {
         /// <summary>
+        /// The activity smoothing type used for this reschedule run
+        /// </summary>
+        /// <value>The activity smoothing type used for this reschedule run</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ActivitySmoothingTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Reduceconcurrentactivitiesacrossbu for "ReduceConcurrentActivitiesAcrossBu"
+            /// </summary>
+            [EnumMember(Value = "ReduceConcurrentActivitiesAcrossBu")]
+            Reduceconcurrentactivitiesacrossbu,
+            
+            /// <summary>
+            /// Enum Reduceconcurrentactivitiesacrossmu for "ReduceConcurrentActivitiesAcrossMu"
+            /// </summary>
+            [EnumMember(Value = "ReduceConcurrentActivitiesAcrossMu")]
+            Reduceconcurrentactivitiesacrossmu,
+            
+            /// <summary>
+            /// Enum Consistentservicelevel for "ConsistentServiceLevel"
+            /// </summary>
+            [EnumMember(Value = "ConsistentServiceLevel")]
+            Consistentservicelevel
+        }
+        /// <summary>
+        /// The activity smoothing type used for this reschedule run
+        /// </summary>
+        /// <value>The activity smoothing type used for this reschedule run</value>
+        [DataMember(Name="activitySmoothingType", EmitDefaultValue=false)]
+        public ActivitySmoothingTypeEnum? ActivitySmoothingType { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ReschedulingOptionsRunResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ReschedulingOptionsRunResponse() { }
+        /// <summary>
         /// Initializes a new instance of the <see cref="ReschedulingOptionsRunResponse" /> class.
         /// </summary>
         /// <param name="ExistingSchedule">The existing schedule to which this reschedule run applies.</param>
@@ -27,11 +72,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ManagementUnits">Per-management unit rescheduling options.</param>
         /// <param name="AgentCount">The number of agents to be considered in the reschedule.</param>
         /// <param name="ActivityCodeIds">The IDs of the activity codes being considered for reschedule.</param>
-        /// <param name="DoNotChangeWeeklyPaidTime">Whether weekly paid time is allowed to be changed.</param>
-        /// <param name="DoNotChangeDailyPaidTime">Whether daily paid time is allowed to be changed.</param>
-        /// <param name="DoNotChangeShiftStartTimes">Whether shift start times are allowed to be changed.</param>
-        /// <param name="DoNotChangeManuallyEditedShifts">Whether manually edited shifts are allowed to be changed.</param>
-        public ReschedulingOptionsRunResponse(BuScheduleReference ExistingSchedule = null, DateTime? StartDate = null, DateTime? EndDate = null, List<ReschedulingManagementUnitResponse> ManagementUnits = null, int? AgentCount = null, List<string> ActivityCodeIds = null, bool? DoNotChangeWeeklyPaidTime = null, bool? DoNotChangeDailyPaidTime = null, bool? DoNotChangeShiftStartTimes = null, bool? DoNotChangeManuallyEditedShifts = null)
+        /// <param name="DoNotChangeWeeklyPaidTime">Whether weekly paid time is allowed to be changed (required).</param>
+        /// <param name="DoNotChangeDailyPaidTime">Whether daily paid time is allowed to be changed (required).</param>
+        /// <param name="DoNotChangeShiftStartTimes">Whether shift start times are allowed to be changed (required).</param>
+        /// <param name="DoNotChangeManuallyEditedShifts">Whether manually edited shifts are allowed to be changed (required).</param>
+        /// <param name="ActivitySmoothingType">The activity smoothing type used for this reschedule run (required).</param>
+        /// <param name="InduceScheduleVariability">Whether schedule variability was induced for this reschedule run (required).</param>
+        /// <param name="UseUnavailableTimesSnapshot">Whether original unavailable times from schedule generation were used instead of the latest saved unavailable times (required).</param>
+        public ReschedulingOptionsRunResponse(BuScheduleReference ExistingSchedule = null, DateTime? StartDate = null, DateTime? EndDate = null, List<ReschedulingManagementUnitResponse> ManagementUnits = null, int? AgentCount = null, List<string> ActivityCodeIds = null, bool? DoNotChangeWeeklyPaidTime = null, bool? DoNotChangeDailyPaidTime = null, bool? DoNotChangeShiftStartTimes = null, bool? DoNotChangeManuallyEditedShifts = null, ActivitySmoothingTypeEnum? ActivitySmoothingType = null, bool? InduceScheduleVariability = null, bool? UseUnavailableTimesSnapshot = null)
         {
             this.ExistingSchedule = ExistingSchedule;
             this.StartDate = StartDate;
@@ -43,6 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DoNotChangeDailyPaidTime = DoNotChangeDailyPaidTime;
             this.DoNotChangeShiftStartTimes = DoNotChangeShiftStartTimes;
             this.DoNotChangeManuallyEditedShifts = DoNotChangeManuallyEditedShifts;
+            this.ActivitySmoothingType = ActivitySmoothingType;
+            this.InduceScheduleVariability = InduceScheduleVariability;
+            this.UseUnavailableTimesSnapshot = UseUnavailableTimesSnapshot;
             
         }
         
@@ -137,6 +188,26 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? DoNotChangeManuallyEditedShifts { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// Whether schedule variability was induced for this reschedule run
+        /// </summary>
+        /// <value>Whether schedule variability was induced for this reschedule run</value>
+        [DataMember(Name="induceScheduleVariability", EmitDefaultValue=false)]
+        public bool? InduceScheduleVariability { get; set; }
+
+
+
+        /// <summary>
+        /// Whether original unavailable times from schedule generation were used instead of the latest saved unavailable times
+        /// </summary>
+        /// <value>Whether original unavailable times from schedule generation were used instead of the latest saved unavailable times</value>
+        [DataMember(Name="useUnavailableTimesSnapshot", EmitDefaultValue=false)]
+        public bool? UseUnavailableTimesSnapshot { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -156,6 +227,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DoNotChangeDailyPaidTime: ").Append(DoNotChangeDailyPaidTime).Append("\n");
             sb.Append("  DoNotChangeShiftStartTimes: ").Append(DoNotChangeShiftStartTimes).Append("\n");
             sb.Append("  DoNotChangeManuallyEditedShifts: ").Append(DoNotChangeManuallyEditedShifts).Append("\n");
+            sb.Append("  ActivitySmoothingType: ").Append(ActivitySmoothingType).Append("\n");
+            sb.Append("  InduceScheduleVariability: ").Append(InduceScheduleVariability).Append("\n");
+            sb.Append("  UseUnavailableTimesSnapshot: ").Append(UseUnavailableTimesSnapshot).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -245,6 +319,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DoNotChangeManuallyEditedShifts == other.DoNotChangeManuallyEditedShifts ||
                     this.DoNotChangeManuallyEditedShifts != null &&
                     this.DoNotChangeManuallyEditedShifts.Equals(other.DoNotChangeManuallyEditedShifts)
+                ) &&
+                (
+                    this.ActivitySmoothingType == other.ActivitySmoothingType ||
+                    this.ActivitySmoothingType != null &&
+                    this.ActivitySmoothingType.Equals(other.ActivitySmoothingType)
+                ) &&
+                (
+                    this.InduceScheduleVariability == other.InduceScheduleVariability ||
+                    this.InduceScheduleVariability != null &&
+                    this.InduceScheduleVariability.Equals(other.InduceScheduleVariability)
+                ) &&
+                (
+                    this.UseUnavailableTimesSnapshot == other.UseUnavailableTimesSnapshot ||
+                    this.UseUnavailableTimesSnapshot != null &&
+                    this.UseUnavailableTimesSnapshot.Equals(other.UseUnavailableTimesSnapshot)
                 );
         }
 
@@ -288,6 +377,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DoNotChangeManuallyEditedShifts != null)
                     hash = hash * 59 + this.DoNotChangeManuallyEditedShifts.GetHashCode();
+
+                if (this.ActivitySmoothingType != null)
+                    hash = hash * 59 + this.ActivitySmoothingType.GetHashCode();
+
+                if (this.InduceScheduleVariability != null)
+                    hash = hash * 59 + this.InduceScheduleVariability.GetHashCode();
+
+                if (this.UseUnavailableTimesSnapshot != null)
+                    hash = hash * 59 + this.UseUnavailableTimesSnapshot.GetHashCode();
 
                 return hash;
             }

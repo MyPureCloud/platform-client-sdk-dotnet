@@ -252,7 +252,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoutingPriority">RoutingPriority.</param>
         /// <param name="RequestedRoutingSkillIds">RequestedRoutingSkillIds.</param>
         /// <param name="SkillExpressionApplied">SkillExpressionApplied.</param>
-        public AcdStartDetailEventTopicAcdStartEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, long? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string DivisionId = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, string UtilizationLabel = null, long? RoutingPriority = null, List<Guid?> RequestedRoutingSkillIds = null, bool? SkillExpressionApplied = null)
+        /// <param name="RequestedLanguageId">RequestedLanguageId.</param>
+        /// <param name="PreferredAgentIds">PreferredAgentIds.</param>
+        /// <param name="OutboundCampaignId">OutboundCampaignId.</param>
+        /// <param name="OutboundContactListId">OutboundContactListId.</param>
+        /// <param name="OutboundContactId">OutboundContactId.</param>
+        public AcdStartDetailEventTopicAcdStartEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, long? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string DivisionId = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, string UtilizationLabel = null, long? RoutingPriority = null, List<Guid?> RequestedRoutingSkillIds = null, bool? SkillExpressionApplied = null, string RequestedLanguageId = null, List<Guid?> PreferredAgentIds = null, string OutboundCampaignId = null, string OutboundContactListId = null, string OutboundContactId = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -278,6 +283,11 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RoutingPriority = RoutingPriority;
             this.RequestedRoutingSkillIds = RequestedRoutingSkillIds;
             this.SkillExpressionApplied = SkillExpressionApplied;
+            this.RequestedLanguageId = RequestedLanguageId;
+            this.PreferredAgentIds = PreferredAgentIds;
+            this.OutboundCampaignId = OutboundCampaignId;
+            this.OutboundContactListId = OutboundContactListId;
+            this.OutboundContactId = OutboundContactId;
             
         }
         
@@ -456,6 +466,46 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? SkillExpressionApplied { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets RequestedLanguageId
+        /// </summary>
+        [DataMember(Name="requestedLanguageId", EmitDefaultValue=false)]
+        public string RequestedLanguageId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets PreferredAgentIds
+        /// </summary>
+        [DataMember(Name="preferredAgentIds", EmitDefaultValue=false)]
+        public List<Guid?> PreferredAgentIds { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets OutboundCampaignId
+        /// </summary>
+        [DataMember(Name="outboundCampaignId", EmitDefaultValue=false)]
+        public string OutboundCampaignId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets OutboundContactListId
+        /// </summary>
+        [DataMember(Name="outboundContactListId", EmitDefaultValue=false)]
+        public string OutboundContactListId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets OutboundContactId
+        /// </summary>
+        [DataMember(Name="outboundContactId", EmitDefaultValue=false)]
+        public string OutboundContactId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -489,6 +539,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RoutingPriority: ").Append(RoutingPriority).Append("\n");
             sb.Append("  RequestedRoutingSkillIds: ").Append(RequestedRoutingSkillIds).Append("\n");
             sb.Append("  SkillExpressionApplied: ").Append(SkillExpressionApplied).Append("\n");
+            sb.Append("  RequestedLanguageId: ").Append(RequestedLanguageId).Append("\n");
+            sb.Append("  PreferredAgentIds: ").Append(PreferredAgentIds).Append("\n");
+            sb.Append("  OutboundCampaignId: ").Append(OutboundCampaignId).Append("\n");
+            sb.Append("  OutboundContactListId: ").Append(OutboundContactListId).Append("\n");
+            sb.Append("  OutboundContactId: ").Append(OutboundContactId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -648,6 +703,31 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SkillExpressionApplied == other.SkillExpressionApplied ||
                     this.SkillExpressionApplied != null &&
                     this.SkillExpressionApplied.Equals(other.SkillExpressionApplied)
+                ) &&
+                (
+                    this.RequestedLanguageId == other.RequestedLanguageId ||
+                    this.RequestedLanguageId != null &&
+                    this.RequestedLanguageId.Equals(other.RequestedLanguageId)
+                ) &&
+                (
+                    this.PreferredAgentIds == other.PreferredAgentIds ||
+                    this.PreferredAgentIds != null &&
+                    this.PreferredAgentIds.SequenceEqual(other.PreferredAgentIds)
+                ) &&
+                (
+                    this.OutboundCampaignId == other.OutboundCampaignId ||
+                    this.OutboundCampaignId != null &&
+                    this.OutboundCampaignId.Equals(other.OutboundCampaignId)
+                ) &&
+                (
+                    this.OutboundContactListId == other.OutboundContactListId ||
+                    this.OutboundContactListId != null &&
+                    this.OutboundContactListId.Equals(other.OutboundContactListId)
+                ) &&
+                (
+                    this.OutboundContactId == other.OutboundContactId ||
+                    this.OutboundContactId != null &&
+                    this.OutboundContactId.Equals(other.OutboundContactId)
                 );
         }
 
@@ -733,6 +813,21 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SkillExpressionApplied != null)
                     hash = hash * 59 + this.SkillExpressionApplied.GetHashCode();
+
+                if (this.RequestedLanguageId != null)
+                    hash = hash * 59 + this.RequestedLanguageId.GetHashCode();
+
+                if (this.PreferredAgentIds != null)
+                    hash = hash * 59 + this.PreferredAgentIds.GetHashCode();
+
+                if (this.OutboundCampaignId != null)
+                    hash = hash * 59 + this.OutboundCampaignId.GetHashCode();
+
+                if (this.OutboundContactListId != null)
+                    hash = hash * 59 + this.OutboundContactListId.GetHashCode();
+
+                if (this.OutboundContactId != null)
+                    hash = hash * 59 + this.OutboundContactId.GetHashCode();
 
                 return hash;
             }

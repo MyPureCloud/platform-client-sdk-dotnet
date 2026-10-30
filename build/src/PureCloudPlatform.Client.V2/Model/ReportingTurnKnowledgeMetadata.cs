@@ -109,6 +109,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Timeout,
             
             /// <summary>
+            /// Enum Delegatedtoagenticvirtualagent for "DelegatedToAgenticVirtualAgent"
+            /// </summary>
+            [EnumMember(Value = "DelegatedToAgenticVirtualAgent")]
+            Delegatedtoagenticvirtualagent,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

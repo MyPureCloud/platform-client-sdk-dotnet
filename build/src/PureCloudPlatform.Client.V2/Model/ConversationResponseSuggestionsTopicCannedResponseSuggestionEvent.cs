@@ -202,7 +202,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Feedback">Feedback.</param>
         /// <param name="CannedResponse">CannedResponse.</param>
         /// <param name="ActiveIntent">ActiveIntent.</param>
-        public ConversationResponseSuggestionsTopicCannedResponseSuggestionEvent(DateTime? EventTime = null, Guid? ConversationId = null, Guid? SuggestionId = null, StateEnum? State = null, TriggerTypeEnum? TriggerType = null, EngagementTypeEnum? EngagementType = null, ConversationResponseSuggestionsTopicSuggestionContext Context = null, ConversationResponseSuggestionsTopicSuggestionFeedback Feedback = null, ConversationResponseSuggestionsTopicSuggestedCannedResponse CannedResponse = null, ConversationResponseSuggestionsTopicSuggestedIntent ActiveIntent = null)
+        /// <param name="ActiveSentiment">ActiveSentiment.</param>
+        public ConversationResponseSuggestionsTopicCannedResponseSuggestionEvent(DateTime? EventTime = null, Guid? ConversationId = null, Guid? SuggestionId = null, StateEnum? State = null, TriggerTypeEnum? TriggerType = null, EngagementTypeEnum? EngagementType = null, ConversationResponseSuggestionsTopicSuggestionContext Context = null, ConversationResponseSuggestionsTopicSuggestionFeedback Feedback = null, ConversationResponseSuggestionsTopicSuggestedCannedResponse CannedResponse = null, ConversationResponseSuggestionsTopicSuggestedIntent ActiveIntent = null, ConversationResponseSuggestionsTopicActiveSentiment ActiveSentiment = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -214,6 +215,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Feedback = Feedback;
             this.CannedResponse = CannedResponse;
             this.ActiveIntent = ActiveIntent;
+            this.ActiveSentiment = ActiveSentiment;
             
         }
         
@@ -280,6 +282,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationResponseSuggestionsTopicSuggestedIntent ActiveIntent { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets ActiveSentiment
+        /// </summary>
+        [DataMember(Name="activeSentiment", EmitDefaultValue=false)]
+        public ConversationResponseSuggestionsTopicActiveSentiment ActiveSentiment { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -299,6 +309,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Feedback: ").Append(Feedback).Append("\n");
             sb.Append("  CannedResponse: ").Append(CannedResponse).Append("\n");
             sb.Append("  ActiveIntent: ").Append(ActiveIntent).Append("\n");
+            sb.Append("  ActiveSentiment: ").Append(ActiveSentiment).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -388,6 +399,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActiveIntent == other.ActiveIntent ||
                     this.ActiveIntent != null &&
                     this.ActiveIntent.Equals(other.ActiveIntent)
+                ) &&
+                (
+                    this.ActiveSentiment == other.ActiveSentiment ||
+                    this.ActiveSentiment != null &&
+                    this.ActiveSentiment.Equals(other.ActiveSentiment)
                 );
         }
 
@@ -431,6 +447,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ActiveIntent != null)
                     hash = hash * 59 + this.ActiveIntent.GetHashCode();
+
+                if (this.ActiveSentiment != null)
+                    hash = hash * 59 + this.ActiveSentiment.GetHashCode();
 
                 return hash;
             }

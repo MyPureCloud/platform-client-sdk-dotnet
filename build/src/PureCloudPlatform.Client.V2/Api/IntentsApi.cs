@@ -362,6 +362,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<IntentsCategory> PostIntentsCategoriesWithHttpInfo (IntentsCategory body);
 
         /// <summary>
+        /// Find similar categories
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntentsCategoriesSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>SimilarCategoriesResponse</returns>
+        
+        SimilarCategoriesResponse PostIntentsCategoriesSimilar (IntentsCategory body);
+
+        /// <summary>
+        /// Find similar categories
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntentsCategoriesSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>ApiResponse of SimilarCategoriesResponse</returns>
+        
+        ApiResponse<SimilarCategoriesResponse> PostIntentsCategoriesSimilarWithHttpInfo (IntentsCategory body);
+
+        /// <summary>
         /// Bulk add source intents to a customer intent
         /// </summary>
         /// <remarks>
@@ -460,6 +486,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of List&lt;CustomerIntentResponse&gt;</returns>
         
         ApiResponse<List<CustomerIntentResponse>> PostIntentsCustomerintentsBulkRetrieveWithHttpInfo (BatchGetCustomerIntentsRequest body);
+
+        /// <summary>
+        /// Find similar customer intents
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntentsCustomerintentsSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>SimilarCustomerIntentsResponse</returns>
+        
+        SimilarCustomerIntentsResponse PostIntentsCustomerintentsSimilar (SimilarCustomerIntentsRequest body);
+
+        /// <summary>
+        /// Find similar customer intents
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntentsCustomerintentsSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>ApiResponse of SimilarCustomerIntentsResponse</returns>
+        
+        ApiResponse<SimilarCustomerIntentsResponse> PostIntentsCustomerintentsSimilarWithHttpInfo (SimilarCustomerIntentsRequest body);
 
         #endregion Synchronous Operations
 
@@ -812,6 +864,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<IntentsCategory>> PostIntentsCategoriesAsyncWithHttpInfo (IntentsCategory body);
 
         /// <summary>
+        /// Find similar categories
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntentsCategoriesSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>Task of SimilarCategoriesResponse</returns>
+        
+        System.Threading.Tasks.Task<SimilarCategoriesResponse> PostIntentsCategoriesSimilarAsync (IntentsCategory body);
+
+        /// <summary>
+        /// Find similar categories
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntentsCategoriesSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>Task of ApiResponse (SimilarCategoriesResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SimilarCategoriesResponse>> PostIntentsCategoriesSimilarAsyncWithHttpInfo (IntentsCategory body);
+
+        /// <summary>
         /// Bulk add source intents to a customer intent
         /// </summary>
         /// <remarks>
@@ -910,6 +988,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (List&lt;CustomerIntentResponse&gt;)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<List<CustomerIntentResponse>>> PostIntentsCustomerintentsBulkRetrieveAsyncWithHttpInfo (BatchGetCustomerIntentsRequest body);
+
+        /// <summary>
+        /// Find similar customer intents
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntentsCustomerintentsSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>Task of SimilarCustomerIntentsResponse</returns>
+        
+        System.Threading.Tasks.Task<SimilarCustomerIntentsResponse> PostIntentsCustomerintentsSimilarAsync (SimilarCustomerIntentsRequest body);
+
+        /// <summary>
+        /// Find similar customer intents
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntentsCustomerintentsSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>Task of ApiResponse (SimilarCustomerIntentsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SimilarCustomerIntentsResponse>> PostIntentsCustomerintentsSimilarAsyncWithHttpInfo (SimilarCustomerIntentsRequest body);
 
         #endregion Asynchronous Operations
 
@@ -3814,6 +3918,225 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Find similar categories 
+        /// 
+        /// PostIntentsCategoriesSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>SimilarCategoriesResponse</returns>
+        
+        public SimilarCategoriesResponse PostIntentsCategoriesSimilar (IntentsCategory body)
+        {
+             ApiResponse<SimilarCategoriesResponse> localVarResponse = PostIntentsCategoriesSimilarWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Find similar categories 
+        /// 
+        /// PostIntentsCategoriesSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>ApiResponse of SimilarCategoriesResponse</returns>
+        
+        public ApiResponse< SimilarCategoriesResponse > PostIntentsCategoriesSimilarWithHttpInfo (IntentsCategory body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntentsApi->PostIntentsCategoriesSimilar");
+
+            var localVarPath = "/api/v2/intents/categories/similar";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntentsCategoriesSimilar: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostIntentsCategoriesSimilar: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntentsCategoriesSimilar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SimilarCategoriesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SimilarCategoriesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SimilarCategoriesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Find similar categories 
+        /// 
+        /// PostIntentsCategoriesSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>Task of SimilarCategoriesResponse</returns>
+        
+        public async System.Threading.Tasks.Task<SimilarCategoriesResponse> PostIntentsCategoriesSimilarAsync (IntentsCategory body)
+        {
+             ApiResponse<SimilarCategoriesResponse> localVarResponse = await PostIntentsCategoriesSimilarAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Find similar categories 
+        /// 
+        /// PostIntentsCategoriesSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>Task of ApiResponse (SimilarCategoriesResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SimilarCategoriesResponse>> PostIntentsCategoriesSimilarAsyncWithHttpInfo (IntentsCategory body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntentsApi->PostIntentsCategoriesSimilar");
+            
+
+            var localVarPath = "/api/v2/intents/categories/similar";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntentsCategoriesSimilar: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostIntentsCategoriesSimilar: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntentsCategoriesSimilar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SimilarCategoriesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SimilarCategoriesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SimilarCategoriesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Bulk add source intents to a customer intent 
         /// 
         /// </summary>
@@ -4693,6 +5016,225 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<List<CustomerIntentResponse>>(localVarStatusCode,
                 localVarHeaders,
                 (List<CustomerIntentResponse>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CustomerIntentResponse>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Find similar customer intents 
+        /// 
+        /// PostIntentsCustomerintentsSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>SimilarCustomerIntentsResponse</returns>
+        
+        public SimilarCustomerIntentsResponse PostIntentsCustomerintentsSimilar (SimilarCustomerIntentsRequest body)
+        {
+             ApiResponse<SimilarCustomerIntentsResponse> localVarResponse = PostIntentsCustomerintentsSimilarWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Find similar customer intents 
+        /// 
+        /// PostIntentsCustomerintentsSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>ApiResponse of SimilarCustomerIntentsResponse</returns>
+        
+        public ApiResponse< SimilarCustomerIntentsResponse > PostIntentsCustomerintentsSimilarWithHttpInfo (SimilarCustomerIntentsRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntentsApi->PostIntentsCustomerintentsSimilar");
+
+            var localVarPath = "/api/v2/intents/customerintents/similar";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntentsCustomerintentsSimilar: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostIntentsCustomerintentsSimilar: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntentsCustomerintentsSimilar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SimilarCustomerIntentsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SimilarCustomerIntentsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SimilarCustomerIntentsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Find similar customer intents 
+        /// 
+        /// PostIntentsCustomerintentsSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>Task of SimilarCustomerIntentsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<SimilarCustomerIntentsResponse> PostIntentsCustomerintentsSimilarAsync (SimilarCustomerIntentsRequest body)
+        {
+             ApiResponse<SimilarCustomerIntentsResponse> localVarResponse = await PostIntentsCustomerintentsSimilarAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Find similar customer intents 
+        /// 
+        /// PostIntentsCustomerintentsSimilar is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Similarity search criteria</param>
+        /// <returns>Task of ApiResponse (SimilarCustomerIntentsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SimilarCustomerIntentsResponse>> PostIntentsCustomerintentsSimilarAsyncWithHttpInfo (SimilarCustomerIntentsRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntentsApi->PostIntentsCustomerintentsSimilar");
+            
+
+            var localVarPath = "/api/v2/intents/customerintents/similar";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntentsCustomerintentsSimilar: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostIntentsCustomerintentsSimilar: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntentsCustomerintentsSimilar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SimilarCustomerIntentsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (SimilarCustomerIntentsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SimilarCustomerIntentsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

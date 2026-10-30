@@ -11,6 +11,7 @@
 | **UserId** | **Guid?** |  | [optional] |
 | **ExternalContactId** | **Guid?** |  | [optional] |
 | **AssistantId** | **Guid?** |  | [optional] |
+| **VariationId** | **Guid?** |  | [optional] |
 | **UtteranceId** | **Guid?** |  | [optional] |
 | **MessageId** | **string** |  | [optional] |
 | **QueryStatement** | **string** |  | [optional] |
@@ -20,4 +21,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+_PureCloudPlatform.Client.V2 276.0.0_

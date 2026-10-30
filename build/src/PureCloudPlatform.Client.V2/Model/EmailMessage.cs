@@ -279,6 +279,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The recipients that failed validation. Advisory only; recipient policy is enforced at send time.
+        /// </summary>
+        /// <value>The recipients that failed validation. Advisory only; recipient policy is enforced at send time.</value>
+        [DataMember(Name="recipientWarnings", EmitDefaultValue=false)]
+        public List<RecipientWarning> RecipientWarnings { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -312,6 +321,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DraftType: ").Append(DraftType).Append("\n");
             sb.Append("  EmailSizeBytes: ").Append(EmailSizeBytes).Append("\n");
             sb.Append("  MaxEmailSizeBytes: ").Append(MaxEmailSizeBytes).Append("\n");
+            sb.Append("  RecipientWarnings: ").Append(RecipientWarnings).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -439,6 +449,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxEmailSizeBytes.Equals(other.MaxEmailSizeBytes)
                 ) &&
                 (
+                    this.RecipientWarnings == other.RecipientWarnings ||
+                    this.RecipientWarnings != null &&
+                    this.RecipientWarnings.SequenceEqual(other.RecipientWarnings)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -506,6 +521,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MaxEmailSizeBytes != null)
                     hash = hash * 59 + this.MaxEmailSizeBytes.GetHashCode();
+
+                if (this.RecipientWarnings != null)
+                    hash = hash * 59 + this.RecipientWarnings.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

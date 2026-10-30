@@ -3790,6 +3790,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DecisionMetricsResponse> GetWorkforcemanagementManagementunitDecisionmetricsWithHttpInfo (string managementUnitId);
 
         /// <summary>
+        /// Get admin self-scheduling settings for a management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <returns>SelfScheduleManagementUnitSettings</returns>
+        
+        SelfScheduleManagementUnitSettings GetWorkforcemanagementManagementunitSelfscheduleSettings (string managementUnitId);
+
+        /// <summary>
+        /// Get admin self-scheduling settings for a management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <returns>ApiResponse of SelfScheduleManagementUnitSettings</returns>
+        
+        ApiResponse<SelfScheduleManagementUnitSettings> GetWorkforcemanagementManagementunitSelfscheduleSettingsWithHttpInfo (string managementUnitId);
+
+        /// <summary>
         /// Gets a summary of all shift trades in the matched state
         /// </summary>
         /// <remarks>
@@ -4229,9 +4253,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>WorkPlanListResponse</returns>
         
-        WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null, List<string> exclude = null);
+        WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null, List<string> exclude = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get work plans
@@ -4243,9 +4268,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of WorkPlanListResponse</returns>
         
-        ApiResponse<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, List<string> expand = null, List<string> exclude = null);
+        ApiResponse<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, List<string> expand = null, List<string> exclude = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get management units
@@ -4442,6 +4468,122 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of BusinessUnitSchedulingPreferencesSettingsResponse</returns>
         
         ApiResponse<BusinessUnitSchedulingPreferencesSettingsResponse> GetWorkforcemanagementSchedulingpreferencesSettingsWithHttpInfo ();
+
+        /// <summary>
+        /// Lookup a single agent activity move based on its identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityMoveId">The ID of the activity move</param>
+        /// <returns>SelfScheduleActivityMoveListItem</returns>
+        
+        SelfScheduleActivityMoveListItem GetWorkforcemanagementSelfscheduleActivitymove (string activityMoveId);
+
+        /// <summary>
+        /// Lookup a single agent activity move based on its identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityMoveId">The ID of the activity move</param>
+        /// <returns>ApiResponse of SelfScheduleActivityMoveListItem</returns>
+        
+        ApiResponse<SelfScheduleActivityMoveListItem> GetWorkforcemanagementSelfscheduleActivitymoveWithHttpInfo (string activityMoveId);
+
+        /// <summary>
+        /// View result of create self-schedule activity move operation. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>SelfScheduleJob</returns>
+        
+        SelfScheduleJob GetWorkforcemanagementSelfscheduleJob (string jobId);
+
+        /// <summary>
+        /// View result of create self-schedule activity move operation. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>ApiResponse of SelfScheduleJob</returns>
+        
+        ApiResponse<SelfScheduleJob> GetWorkforcemanagementSelfscheduleJobWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// View result of self-schedule search for best time for offer operation. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the offer job</param>
+        /// <returns>SelfScheduleOffersJob</returns>
+        
+        SelfScheduleOffersJob GetWorkforcemanagementSelfscheduleOffersJob (string jobId);
+
+        /// <summary>
+        /// View result of self-schedule search for best time for offer operation. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the offer job</param>
+        /// <returns>ApiResponse of SelfScheduleOffersJob</returns>
+        
+        ApiResponse<SelfScheduleOffersJob> GetWorkforcemanagementSelfscheduleOffersJobWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Query self-schedule activity moves for agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>SelfScheduleQuery</returns>
+        
+        SelfScheduleQuery GetWorkforcemanagementSelfscheduleQuery ();
+
+        /// <summary>
+        /// Query self-schedule activity moves for agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of SelfScheduleQuery</returns>
+        
+        ApiResponse<SelfScheduleQuery> GetWorkforcemanagementSelfscheduleQueryWithHttpInfo ();
+
+        /// <summary>
+        /// Agent gets the self-schedule management unit settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>SelfScheduleAgentManagementUnitSettings</returns>
+        
+        SelfScheduleAgentManagementUnitSettings GetWorkforcemanagementSelfscheduleSettings ();
+
+        /// <summary>
+        /// Agent gets the self-schedule management unit settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of SelfScheduleAgentManagementUnitSettings</returns>
+        
+        ApiResponse<SelfScheduleAgentManagementUnitSettings> GetWorkforcemanagementSelfscheduleSettingsWithHttpInfo ();
 
         /// <summary>
         /// Gets all of my shift trades
@@ -5802,6 +5944,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of UpdateMuAgentWorkPlansBatchResponse</returns>
         
         ApiResponse<UpdateMuAgentWorkPlansBatchResponse> PatchWorkforcemanagementManagementunitAgentsWorkplansBulkWithHttpInfo (string managementUnitId, UpdateMuAgentWorkPlansBatchRequest body);
+
+        /// <summary>
+        /// Update admin self-scheduling settings for a management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <param name="body">body</param>
+        /// <returns>SelfScheduleManagementUnitSettings</returns>
+        
+        SelfScheduleManagementUnitSettings PatchWorkforcemanagementManagementunitSelfscheduleSettings (string managementUnitId, SelfScheduleManagementUnitSettingsRequest body);
+
+        /// <summary>
+        /// Update admin self-scheduling settings for a management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of SelfScheduleManagementUnitSettings</returns>
+        
+        ApiResponse<SelfScheduleManagementUnitSettings> PatchWorkforcemanagementManagementunitSelfscheduleSettingsWithHttpInfo (string managementUnitId, SelfScheduleManagementUnitSettingsRequest body);
 
         /// <summary>
         /// Updates a time off limit object.
@@ -9774,6 +9942,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of AgentSchedulingPreferenceListing</returns>
         
         ApiResponse<AgentSchedulingPreferenceListing> PostWorkforcemanagementSchedulingpreferencesQueryWithHttpInfo (QueryAgentSchedulingPreferencesRequest body);
+
+        /// <summary>
+        /// Agent starts an async job to edit a shift request by updating the start time of one or more activities.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>SelfScheduleJob</returns>
+        
+        SelfScheduleJob PostWorkforcemanagementSelfscheduleJobs (SelfScheduleJobRequest body);
+
+        /// <summary>
+        /// Agent starts an async job to edit a shift request by updating the start time of one or more activities.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>ApiResponse of SelfScheduleJob</returns>
+        
+        ApiResponse<SelfScheduleJob> PostWorkforcemanagementSelfscheduleJobsWithHttpInfo (SelfScheduleJobRequest body);
+
+        /// <summary>
+        /// Agent starts async job to search for best time for offers
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>SelfScheduleOffersJob</returns>
+        
+        SelfScheduleOffersJob PostWorkforcemanagementSelfscheduleOffersJobs (SelfScheduleOffersJobRequest body);
+
+        /// <summary>
+        /// Agent starts async job to search for best time for offers
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>ApiResponse of SelfScheduleOffersJob</returns>
+        
+        ApiResponse<SelfScheduleOffersJob> PostWorkforcemanagementSelfscheduleOffersJobsWithHttpInfo (SelfScheduleOffersJobRequest body);
 
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating user
@@ -14046,6 +14262,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DecisionMetricsResponse>> GetWorkforcemanagementManagementunitDecisionmetricsAsyncWithHttpInfo (string managementUnitId);
 
         /// <summary>
+        /// Get admin self-scheduling settings for a management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <returns>Task of SelfScheduleManagementUnitSettings</returns>
+        
+        System.Threading.Tasks.Task<SelfScheduleManagementUnitSettings> GetWorkforcemanagementManagementunitSelfscheduleSettingsAsync (string managementUnitId);
+
+        /// <summary>
+        /// Get admin self-scheduling settings for a management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <returns>Task of ApiResponse (SelfScheduleManagementUnitSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SelfScheduleManagementUnitSettings>> GetWorkforcemanagementManagementunitSelfscheduleSettingsAsyncWithHttpInfo (string managementUnitId);
+
+        /// <summary>
         /// Gets a summary of all shift trades in the matched state
         /// </summary>
         /// <remarks>
@@ -14485,9 +14725,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of WorkPlanListResponse</returns>
         
-        System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, List<string> expand = null, List<string> exclude = null);
+        System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, List<string> expand = null, List<string> exclude = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get work plans
@@ -14499,9 +14740,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanListResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, List<string> expand = null, List<string> exclude = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, List<string> expand = null, List<string> exclude = null, bool? forceDownloadService = null);
 
         /// <summary>
         /// Get management units
@@ -14698,6 +14940,122 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (BusinessUnitSchedulingPreferencesSettingsResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<BusinessUnitSchedulingPreferencesSettingsResponse>> GetWorkforcemanagementSchedulingpreferencesSettingsAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Lookup a single agent activity move based on its identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityMoveId">The ID of the activity move</param>
+        /// <returns>Task of SelfScheduleActivityMoveListItem</returns>
+        
+        System.Threading.Tasks.Task<SelfScheduleActivityMoveListItem> GetWorkforcemanagementSelfscheduleActivitymoveAsync (string activityMoveId);
+
+        /// <summary>
+        /// Lookup a single agent activity move based on its identifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityMoveId">The ID of the activity move</param>
+        /// <returns>Task of ApiResponse (SelfScheduleActivityMoveListItem)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SelfScheduleActivityMoveListItem>> GetWorkforcemanagementSelfscheduleActivitymoveAsyncWithHttpInfo (string activityMoveId);
+
+        /// <summary>
+        /// View result of create self-schedule activity move operation. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>Task of SelfScheduleJob</returns>
+        
+        System.Threading.Tasks.Task<SelfScheduleJob> GetWorkforcemanagementSelfscheduleJobAsync (string jobId);
+
+        /// <summary>
+        /// View result of create self-schedule activity move operation. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>Task of ApiResponse (SelfScheduleJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SelfScheduleJob>> GetWorkforcemanagementSelfscheduleJobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// View result of self-schedule search for best time for offer operation. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the offer job</param>
+        /// <returns>Task of SelfScheduleOffersJob</returns>
+        
+        System.Threading.Tasks.Task<SelfScheduleOffersJob> GetWorkforcemanagementSelfscheduleOffersJobAsync (string jobId);
+
+        /// <summary>
+        /// View result of self-schedule search for best time for offer operation. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the offer job</param>
+        /// <returns>Task of ApiResponse (SelfScheduleOffersJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SelfScheduleOffersJob>> GetWorkforcemanagementSelfscheduleOffersJobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Query self-schedule activity moves for agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of SelfScheduleQuery</returns>
+        
+        System.Threading.Tasks.Task<SelfScheduleQuery> GetWorkforcemanagementSelfscheduleQueryAsync ();
+
+        /// <summary>
+        /// Query self-schedule activity moves for agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (SelfScheduleQuery)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SelfScheduleQuery>> GetWorkforcemanagementSelfscheduleQueryAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Agent gets the self-schedule management unit settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of SelfScheduleAgentManagementUnitSettings</returns>
+        
+        System.Threading.Tasks.Task<SelfScheduleAgentManagementUnitSettings> GetWorkforcemanagementSelfscheduleSettingsAsync ();
+
+        /// <summary>
+        /// Agent gets the self-schedule management unit settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (SelfScheduleAgentManagementUnitSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SelfScheduleAgentManagementUnitSettings>> GetWorkforcemanagementSelfscheduleSettingsAsyncWithHttpInfo ();
 
         /// <summary>
         /// Gets all of my shift trades
@@ -16058,6 +16416,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (UpdateMuAgentWorkPlansBatchResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<UpdateMuAgentWorkPlansBatchResponse>> PatchWorkforcemanagementManagementunitAgentsWorkplansBulkAsyncWithHttpInfo (string managementUnitId, UpdateMuAgentWorkPlansBatchRequest body);
+
+        /// <summary>
+        /// Update admin self-scheduling settings for a management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of SelfScheduleManagementUnitSettings</returns>
+        
+        System.Threading.Tasks.Task<SelfScheduleManagementUnitSettings> PatchWorkforcemanagementManagementunitSelfscheduleSettingsAsync (string managementUnitId, SelfScheduleManagementUnitSettingsRequest body);
+
+        /// <summary>
+        /// Update admin self-scheduling settings for a management unit
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (SelfScheduleManagementUnitSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SelfScheduleManagementUnitSettings>> PatchWorkforcemanagementManagementunitSelfscheduleSettingsAsyncWithHttpInfo (string managementUnitId, SelfScheduleManagementUnitSettingsRequest body);
 
         /// <summary>
         /// Updates a time off limit object.
@@ -20030,6 +20414,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (AgentSchedulingPreferenceListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<AgentSchedulingPreferenceListing>> PostWorkforcemanagementSchedulingpreferencesQueryAsyncWithHttpInfo (QueryAgentSchedulingPreferencesRequest body);
+
+        /// <summary>
+        /// Agent starts an async job to edit a shift request by updating the start time of one or more activities.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>Task of SelfScheduleJob</returns>
+        
+        System.Threading.Tasks.Task<SelfScheduleJob> PostWorkforcemanagementSelfscheduleJobsAsync (SelfScheduleJobRequest body);
+
+        /// <summary>
+        /// Agent starts an async job to edit a shift request by updating the start time of one or more activities.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>Task of ApiResponse (SelfScheduleJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SelfScheduleJob>> PostWorkforcemanagementSelfscheduleJobsAsyncWithHttpInfo (SelfScheduleJobRequest body);
+
+        /// <summary>
+        /// Agent starts async job to search for best time for offers
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>Task of SelfScheduleOffersJob</returns>
+        
+        System.Threading.Tasks.Task<SelfScheduleOffersJob> PostWorkforcemanagementSelfscheduleOffersJobsAsync (SelfScheduleOffersJobRequest body);
+
+        /// <summary>
+        /// Agent starts async job to search for best time for offers
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>Task of ApiResponse (SelfScheduleOffersJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SelfScheduleOffersJob>> PostWorkforcemanagementSelfscheduleOffersJobsAsyncWithHttpInfo (SelfScheduleOffersJobRequest body);
 
         /// <summary>
         /// Updates a shift trade. This route can only be called by the initiating user
@@ -51806,6 +52238,211 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get admin self-scheduling settings for a management unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <returns>SelfScheduleManagementUnitSettings</returns>
+        
+        public SelfScheduleManagementUnitSettings GetWorkforcemanagementManagementunitSelfscheduleSettings (string managementUnitId)
+        {
+             ApiResponse<SelfScheduleManagementUnitSettings> localVarResponse = GetWorkforcemanagementManagementunitSelfscheduleSettingsWithHttpInfo(managementUnitId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get admin self-scheduling settings for a management unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <returns>ApiResponse of SelfScheduleManagementUnitSettings</returns>
+        
+        public ApiResponse< SelfScheduleManagementUnitSettings > GetWorkforcemanagementManagementunitSelfscheduleSettingsWithHttpInfo (string managementUnitId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitSelfscheduleSettings");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/selfschedule/settings";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSelfscheduleSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementManagementunitSelfscheduleSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSelfscheduleSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleManagementUnitSettings>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleManagementUnitSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleManagementUnitSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get admin self-scheduling settings for a management unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <returns>Task of SelfScheduleManagementUnitSettings</returns>
+        
+        public async System.Threading.Tasks.Task<SelfScheduleManagementUnitSettings> GetWorkforcemanagementManagementunitSelfscheduleSettingsAsync (string managementUnitId)
+        {
+             ApiResponse<SelfScheduleManagementUnitSettings> localVarResponse = await GetWorkforcemanagementManagementunitSelfscheduleSettingsAsyncWithHttpInfo(managementUnitId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get admin self-scheduling settings for a management unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <returns>Task of ApiResponse (SelfScheduleManagementUnitSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SelfScheduleManagementUnitSettings>> GetWorkforcemanagementManagementunitSelfscheduleSettingsAsyncWithHttpInfo (string managementUnitId)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitSelfscheduleSettings");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/selfschedule/settings";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSelfscheduleSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementManagementunitSelfscheduleSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitSelfscheduleSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleManagementUnitSettings>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleManagementUnitSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleManagementUnitSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Gets a summary of all shift trades in the matched state 
         /// Deprecated. Use new route instead (/businessunits/{businessUnitId}/shifttrading/weeks/summary/jobs)
         /// </summary>
@@ -55322,11 +55959,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>WorkPlanListResponse</returns>
         
-        public WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null, List<string> exclude = null)
+        public WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null, List<string> exclude = null, bool? forceDownloadService = null)
         {
-             ApiResponse<WorkPlanListResponse> localVarResponse = GetWorkforcemanagementManagementunitWorkplansWithHttpInfo(managementUnitId, expand, exclude);
+             ApiResponse<WorkPlanListResponse> localVarResponse = GetWorkforcemanagementManagementunitWorkplansWithHttpInfo(managementUnitId, expand, exclude, forceDownloadService);
              return localVarResponse.Data;
         }
 
@@ -55338,9 +55976,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>ApiResponse of WorkPlanListResponse</returns>
         
-        public ApiResponse< WorkPlanListResponse > GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, List<string> expand = null, List<string> exclude = null)
+        public ApiResponse< WorkPlanListResponse > GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, List<string> expand = null, List<string> exclude = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -55382,6 +56021,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (exclude != null) exclude.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("exclude", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -55429,11 +56069,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of WorkPlanListResponse</returns>
         
-        public async System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, List<string> expand = null, List<string> exclude = null)
+        public async System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, List<string> expand = null, List<string> exclude = null, bool? forceDownloadService = null)
         {
-             ApiResponse<WorkPlanListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo(managementUnitId, expand, exclude);
+             ApiResponse<WorkPlanListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo(managementUnitId, expand, exclude, forceDownloadService);
              return localVarResponse.Data;
 
         }
@@ -55446,9 +56087,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
         /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
+        /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanListResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, List<string> expand = null, List<string> exclude = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, List<string> expand = null, List<string> exclude = null, bool? forceDownloadService = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -55491,6 +56133,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (exclude != null) exclude.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("exclude", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (forceDownloadService != null) localVarQueryParams.Add(new Tuple<string, string>("forceDownloadService", this.Configuration.ApiClient.ParameterToString(forceDownloadService)));
 
             // Header params
 
@@ -57140,6 +57783,1005 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<BusinessUnitSchedulingPreferencesSettingsResponse>(localVarStatusCode,
                 localVarHeaders,
                 (BusinessUnitSchedulingPreferencesSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnitSchedulingPreferencesSettingsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Lookup a single agent activity move based on its identifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityMoveId">The ID of the activity move</param>
+        /// <returns>SelfScheduleActivityMoveListItem</returns>
+        
+        public SelfScheduleActivityMoveListItem GetWorkforcemanagementSelfscheduleActivitymove (string activityMoveId)
+        {
+             ApiResponse<SelfScheduleActivityMoveListItem> localVarResponse = GetWorkforcemanagementSelfscheduleActivitymoveWithHttpInfo(activityMoveId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lookup a single agent activity move based on its identifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityMoveId">The ID of the activity move</param>
+        /// <returns>ApiResponse of SelfScheduleActivityMoveListItem</returns>
+        
+        public ApiResponse< SelfScheduleActivityMoveListItem > GetWorkforcemanagementSelfscheduleActivitymoveWithHttpInfo (string activityMoveId)
+        { 
+            // verify the required parameter 'activityMoveId' is set
+            if (activityMoveId == null)
+                throw new ApiException(400, "Missing required parameter 'activityMoveId' when calling WorkforceManagementApi->GetWorkforcemanagementSelfscheduleActivitymove");
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/activitymoves/{activityMoveId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (activityMoveId != null) localVarPathParams.Add("activityMoveId", this.Configuration.ApiClient.ParameterToString(activityMoveId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleActivitymove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementSelfscheduleActivitymove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleActivitymove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleActivityMoveListItem>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleActivityMoveListItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleActivityMoveListItem)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Lookup a single agent activity move based on its identifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityMoveId">The ID of the activity move</param>
+        /// <returns>Task of SelfScheduleActivityMoveListItem</returns>
+        
+        public async System.Threading.Tasks.Task<SelfScheduleActivityMoveListItem> GetWorkforcemanagementSelfscheduleActivitymoveAsync (string activityMoveId)
+        {
+             ApiResponse<SelfScheduleActivityMoveListItem> localVarResponse = await GetWorkforcemanagementSelfscheduleActivitymoveAsyncWithHttpInfo(activityMoveId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lookup a single agent activity move based on its identifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityMoveId">The ID of the activity move</param>
+        /// <returns>Task of ApiResponse (SelfScheduleActivityMoveListItem)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SelfScheduleActivityMoveListItem>> GetWorkforcemanagementSelfscheduleActivitymoveAsyncWithHttpInfo (string activityMoveId)
+        { 
+            // verify the required parameter 'activityMoveId' is set
+            if (activityMoveId == null)
+                throw new ApiException(400, "Missing required parameter 'activityMoveId' when calling WorkforceManagementApi->GetWorkforcemanagementSelfscheduleActivitymove");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/activitymoves/{activityMoveId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (activityMoveId != null) localVarPathParams.Add("activityMoveId", this.Configuration.ApiClient.ParameterToString(activityMoveId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleActivitymove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementSelfscheduleActivitymove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleActivitymove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleActivityMoveListItem>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleActivityMoveListItem) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleActivityMoveListItem)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// View result of create self-schedule activity move operation. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>SelfScheduleJob</returns>
+        
+        public SelfScheduleJob GetWorkforcemanagementSelfscheduleJob (string jobId)
+        {
+             ApiResponse<SelfScheduleJob> localVarResponse = GetWorkforcemanagementSelfscheduleJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// View result of create self-schedule activity move operation. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>ApiResponse of SelfScheduleJob</returns>
+        
+        public ApiResponse< SelfScheduleJob > GetWorkforcemanagementSelfscheduleJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementSelfscheduleJob");
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementSelfscheduleJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleJob>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// View result of create self-schedule activity move operation. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>Task of SelfScheduleJob</returns>
+        
+        public async System.Threading.Tasks.Task<SelfScheduleJob> GetWorkforcemanagementSelfscheduleJobAsync (string jobId)
+        {
+             ApiResponse<SelfScheduleJob> localVarResponse = await GetWorkforcemanagementSelfscheduleJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// View result of create self-schedule activity move operation. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>Task of ApiResponse (SelfScheduleJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SelfScheduleJob>> GetWorkforcemanagementSelfscheduleJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementSelfscheduleJob");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementSelfscheduleJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleJob>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// View result of self-schedule search for best time for offer operation. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the offer job</param>
+        /// <returns>SelfScheduleOffersJob</returns>
+        
+        public SelfScheduleOffersJob GetWorkforcemanagementSelfscheduleOffersJob (string jobId)
+        {
+             ApiResponse<SelfScheduleOffersJob> localVarResponse = GetWorkforcemanagementSelfscheduleOffersJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// View result of self-schedule search for best time for offer operation. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the offer job</param>
+        /// <returns>ApiResponse of SelfScheduleOffersJob</returns>
+        
+        public ApiResponse< SelfScheduleOffersJob > GetWorkforcemanagementSelfscheduleOffersJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementSelfscheduleOffersJob");
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/offers/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleOffersJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementSelfscheduleOffersJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleOffersJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleOffersJob>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleOffersJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleOffersJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// View result of self-schedule search for best time for offer operation. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the offer job</param>
+        /// <returns>Task of SelfScheduleOffersJob</returns>
+        
+        public async System.Threading.Tasks.Task<SelfScheduleOffersJob> GetWorkforcemanagementSelfscheduleOffersJobAsync (string jobId)
+        {
+             ApiResponse<SelfScheduleOffersJob> localVarResponse = await GetWorkforcemanagementSelfscheduleOffersJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// View result of self-schedule search for best time for offer operation. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the offer job</param>
+        /// <returns>Task of ApiResponse (SelfScheduleOffersJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SelfScheduleOffersJob>> GetWorkforcemanagementSelfscheduleOffersJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementSelfscheduleOffersJob");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/offers/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleOffersJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementSelfscheduleOffersJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleOffersJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleOffersJob>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleOffersJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleOffersJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query self-schedule activity moves for agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>SelfScheduleQuery</returns>
+        
+        public SelfScheduleQuery GetWorkforcemanagementSelfscheduleQuery ()
+        {
+             ApiResponse<SelfScheduleQuery> localVarResponse = GetWorkforcemanagementSelfscheduleQueryWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query self-schedule activity moves for agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of SelfScheduleQuery</returns>
+        
+        public ApiResponse< SelfScheduleQuery > GetWorkforcemanagementSelfscheduleQueryWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/query";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementSelfscheduleQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleQuery>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleQuery) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleQuery)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query self-schedule activity moves for agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of SelfScheduleQuery</returns>
+        
+        public async System.Threading.Tasks.Task<SelfScheduleQuery> GetWorkforcemanagementSelfscheduleQueryAsync ()
+        {
+             ApiResponse<SelfScheduleQuery> localVarResponse = await GetWorkforcemanagementSelfscheduleQueryAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query self-schedule activity moves for agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (SelfScheduleQuery)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SelfScheduleQuery>> GetWorkforcemanagementSelfscheduleQueryAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/query";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementSelfscheduleQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleQuery>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleQuery) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleQuery)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Agent gets the self-schedule management unit settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>SelfScheduleAgentManagementUnitSettings</returns>
+        
+        public SelfScheduleAgentManagementUnitSettings GetWorkforcemanagementSelfscheduleSettings ()
+        {
+             ApiResponse<SelfScheduleAgentManagementUnitSettings> localVarResponse = GetWorkforcemanagementSelfscheduleSettingsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Agent gets the self-schedule management unit settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of SelfScheduleAgentManagementUnitSettings</returns>
+        
+        public ApiResponse< SelfScheduleAgentManagementUnitSettings > GetWorkforcemanagementSelfscheduleSettingsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/settings";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementSelfscheduleSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleAgentManagementUnitSettings>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleAgentManagementUnitSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleAgentManagementUnitSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Agent gets the self-schedule management unit settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of SelfScheduleAgentManagementUnitSettings</returns>
+        
+        public async System.Threading.Tasks.Task<SelfScheduleAgentManagementUnitSettings> GetWorkforcemanagementSelfscheduleSettingsAsync ()
+        {
+             ApiResponse<SelfScheduleAgentManagementUnitSettings> localVarResponse = await GetWorkforcemanagementSelfscheduleSettingsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Agent gets the self-schedule management unit settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (SelfScheduleAgentManagementUnitSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SelfScheduleAgentManagementUnitSettings>> GetWorkforcemanagementSelfscheduleSettingsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/settings";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementSelfscheduleSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementSelfscheduleSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleAgentManagementUnitSettings>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleAgentManagementUnitSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleAgentManagementUnitSettings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -68848,6 +70490,234 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UpdateMuAgentWorkPlansBatchResponse>(localVarStatusCode,
                 localVarHeaders,
                 (UpdateMuAgentWorkPlansBatchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdateMuAgentWorkPlansBatchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update admin self-scheduling settings for a management unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <param name="body">body</param>
+        /// <returns>SelfScheduleManagementUnitSettings</returns>
+        
+        public SelfScheduleManagementUnitSettings PatchWorkforcemanagementManagementunitSelfscheduleSettings (string managementUnitId, SelfScheduleManagementUnitSettingsRequest body)
+        {
+             ApiResponse<SelfScheduleManagementUnitSettings> localVarResponse = PatchWorkforcemanagementManagementunitSelfscheduleSettingsWithHttpInfo(managementUnitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update admin self-scheduling settings for a management unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of SelfScheduleManagementUnitSettings</returns>
+        
+        public ApiResponse< SelfScheduleManagementUnitSettings > PatchWorkforcemanagementManagementunitSelfscheduleSettingsWithHttpInfo (string managementUnitId, SelfScheduleManagementUnitSettingsRequest body)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitSelfscheduleSettings");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitSelfscheduleSettings");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/selfschedule/settings";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSelfscheduleSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementManagementunitSelfscheduleSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSelfscheduleSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleManagementUnitSettings>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleManagementUnitSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleManagementUnitSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update admin self-scheduling settings for a management unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of SelfScheduleManagementUnitSettings</returns>
+        
+        public async System.Threading.Tasks.Task<SelfScheduleManagementUnitSettings> PatchWorkforcemanagementManagementunitSelfscheduleSettingsAsync (string managementUnitId, SelfScheduleManagementUnitSettingsRequest body)
+        {
+             ApiResponse<SelfScheduleManagementUnitSettings> localVarResponse = await PatchWorkforcemanagementManagementunitSelfscheduleSettingsAsyncWithHttpInfo(managementUnitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update admin self-scheduling settings for a management unit 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (SelfScheduleManagementUnitSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SelfScheduleManagementUnitSettings>> PatchWorkforcemanagementManagementunitSelfscheduleSettingsAsyncWithHttpInfo (string managementUnitId, SelfScheduleManagementUnitSettingsRequest body)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitSelfscheduleSettings");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitSelfscheduleSettings");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/selfschedule/settings";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSelfscheduleSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchWorkforcemanagementManagementunitSelfscheduleSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitSelfscheduleSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleManagementUnitSettings>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleManagementUnitSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleManagementUnitSettings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -102796,6 +104666,436 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AgentSchedulingPreferenceListing>(localVarStatusCode,
                 localVarHeaders,
                 (AgentSchedulingPreferenceListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentSchedulingPreferenceListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Agent starts an async job to edit a shift request by updating the start time of one or more activities. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>SelfScheduleJob</returns>
+        
+        public SelfScheduleJob PostWorkforcemanagementSelfscheduleJobs (SelfScheduleJobRequest body)
+        {
+             ApiResponse<SelfScheduleJob> localVarResponse = PostWorkforcemanagementSelfscheduleJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Agent starts an async job to edit a shift request by updating the start time of one or more activities. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>ApiResponse of SelfScheduleJob</returns>
+        
+        public ApiResponse< SelfScheduleJob > PostWorkforcemanagementSelfscheduleJobsWithHttpInfo (SelfScheduleJobRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementSelfscheduleJobs");
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementSelfscheduleJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementSelfscheduleJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementSelfscheduleJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleJob>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Agent starts an async job to edit a shift request by updating the start time of one or more activities. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>Task of SelfScheduleJob</returns>
+        
+        public async System.Threading.Tasks.Task<SelfScheduleJob> PostWorkforcemanagementSelfscheduleJobsAsync (SelfScheduleJobRequest body)
+        {
+             ApiResponse<SelfScheduleJob> localVarResponse = await PostWorkforcemanagementSelfscheduleJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Agent starts an async job to edit a shift request by updating the start time of one or more activities. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>Task of ApiResponse (SelfScheduleJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SelfScheduleJob>> PostWorkforcemanagementSelfscheduleJobsAsyncWithHttpInfo (SelfScheduleJobRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementSelfscheduleJobs");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementSelfscheduleJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementSelfscheduleJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementSelfscheduleJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleJob>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Agent starts async job to search for best time for offers 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>SelfScheduleOffersJob</returns>
+        
+        public SelfScheduleOffersJob PostWorkforcemanagementSelfscheduleOffersJobs (SelfScheduleOffersJobRequest body)
+        {
+             ApiResponse<SelfScheduleOffersJob> localVarResponse = PostWorkforcemanagementSelfscheduleOffersJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Agent starts async job to search for best time for offers 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>ApiResponse of SelfScheduleOffersJob</returns>
+        
+        public ApiResponse< SelfScheduleOffersJob > PostWorkforcemanagementSelfscheduleOffersJobsWithHttpInfo (SelfScheduleOffersJobRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementSelfscheduleOffersJobs");
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/offers/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementSelfscheduleOffersJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementSelfscheduleOffersJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementSelfscheduleOffersJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleOffersJob>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleOffersJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleOffersJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Agent starts async job to search for best time for offers 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>Task of SelfScheduleOffersJob</returns>
+        
+        public async System.Threading.Tasks.Task<SelfScheduleOffersJob> PostWorkforcemanagementSelfscheduleOffersJobsAsync (SelfScheduleOffersJobRequest body)
+        {
+             ApiResponse<SelfScheduleOffersJob> localVarResponse = await PostWorkforcemanagementSelfscheduleOffersJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Agent starts async job to search for best time for offers 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The request body</param>
+        /// <returns>Task of ApiResponse (SelfScheduleOffersJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SelfScheduleOffersJob>> PostWorkforcemanagementSelfscheduleOffersJobsAsyncWithHttpInfo (SelfScheduleOffersJobRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementSelfscheduleOffersJobs");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/selfschedule/offers/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementSelfscheduleOffersJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementSelfscheduleOffersJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementSelfscheduleOffersJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SelfScheduleOffersJob>(localVarStatusCode,
+                localVarHeaders,
+                (SelfScheduleOffersJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SelfScheduleOffersJob)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

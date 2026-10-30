@@ -22,13 +22,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WfmShiftTradingJobCompleteEventWfmVersionMetadata" /> class.
         /// </summary>
         /// <param name="Version">Version.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="DateCreated">DateCreated.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="DateModified">DateModified.</param>
-        public WfmShiftTradingJobCompleteEventWfmVersionMetadata(long? Version = null, string ModifiedBy = null, string DateModified = null)
+        /// <param name="DeletedBy">DeletedBy.</param>
+        /// <param name="DateDeleted">DateDeleted.</param>
+        public WfmShiftTradingJobCompleteEventWfmVersionMetadata(long? Version = null, string CreatedBy = null, string DateCreated = null, string ModifiedBy = null, string DateModified = null, string DeletedBy = null, string DateDeleted = null)
         {
             this.Version = Version;
+            this.CreatedBy = CreatedBy;
+            this.DateCreated = DateCreated;
             this.ModifiedBy = ModifiedBy;
             this.DateModified = DateModified;
+            this.DeletedBy = DeletedBy;
+            this.DateDeleted = DateDeleted;
             
         }
         
@@ -39,6 +47,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public long? Version { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets CreatedBy
+        /// </summary>
+        [DataMember(Name="createdBy", EmitDefaultValue=false)]
+        public string CreatedBy { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets DateCreated
+        /// </summary>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public string DateCreated { get; set; }
 
 
 
@@ -57,6 +81,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public string DateModified { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets DeletedBy
+        /// </summary>
+        [DataMember(Name="deletedBy", EmitDefaultValue=false)]
+        public string DeletedBy { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets DateDeleted
+        /// </summary>
+        [DataMember(Name="dateDeleted", EmitDefaultValue=false)]
+        public string DateDeleted { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -67,8 +107,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class WfmShiftTradingJobCompleteEventWfmVersionMetadata {\n");
 
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  DeletedBy: ").Append(DeletedBy).Append("\n");
+            sb.Append("  DateDeleted: ").Append(DateDeleted).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +159,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
+                    this.CreatedBy == other.CreatedBy ||
+                    this.CreatedBy != null &&
+                    this.CreatedBy.Equals(other.CreatedBy)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
@@ -123,6 +177,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.DeletedBy == other.DeletedBy ||
+                    this.DeletedBy != null &&
+                    this.DeletedBy.Equals(other.DeletedBy)
+                ) &&
+                (
+                    this.DateDeleted == other.DateDeleted ||
+                    this.DateDeleted != null &&
+                    this.DateDeleted.Equals(other.DateDeleted)
                 );
         }
 
@@ -140,11 +204,23 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
 
+                if (this.CreatedBy != null)
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
+
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
+
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+
+                if (this.DeletedBy != null)
+                    hash = hash * 59 + this.DeletedBy.GetHashCode();
+
+                if (this.DateDeleted != null)
+                    hash = hash * 59 + this.DateDeleted.GetHashCode();
 
                 return hash;
             }

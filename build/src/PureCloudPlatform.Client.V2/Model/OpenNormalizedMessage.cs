@@ -94,7 +94,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Removed for "Removed"
             /// </summary>
             [EnumMember(Value = "Removed")]
-            Removed
+            Removed,
+            
+            /// <summary>
+            /// Enum Modified for "Modified"
+            /// </summary>
+            [EnumMember(Value = "Modified")]
+            Modified
         }
         /// <summary>
         /// The direction of the message.

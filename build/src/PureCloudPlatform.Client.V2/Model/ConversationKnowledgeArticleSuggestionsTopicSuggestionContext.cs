@@ -106,19 +106,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserId">UserId.</param>
         /// <param name="ExternalContactId">ExternalContactId.</param>
         /// <param name="AssistantId">AssistantId.</param>
+        /// <param name="VariationId">VariationId.</param>
         /// <param name="UtteranceId">UtteranceId.</param>
         /// <param name="MessageId">MessageId.</param>
         /// <param name="QueryStatement">QueryStatement.</param>
         /// <param name="Language">Language.</param>
         /// <param name="QueryReformulationContext">QueryReformulationContext.</param>
         /// <param name="ParticipantType">ParticipantType.</param>
-        public ConversationKnowledgeArticleSuggestionsTopicSuggestionContext(Guid? QueueId = null, MediaTypeEnum? MediaType = null, Guid? UserId = null, Guid? ExternalContactId = null, Guid? AssistantId = null, Guid? UtteranceId = null, string MessageId = null, string QueryStatement = null, string Language = null, ConversationKnowledgeArticleSuggestionsTopicQueryReformulationContext QueryReformulationContext = null, ParticipantTypeEnum? ParticipantType = null)
+        public ConversationKnowledgeArticleSuggestionsTopicSuggestionContext(Guid? QueueId = null, MediaTypeEnum? MediaType = null, Guid? UserId = null, Guid? ExternalContactId = null, Guid? AssistantId = null, Guid? VariationId = null, Guid? UtteranceId = null, string MessageId = null, string QueryStatement = null, string Language = null, ConversationKnowledgeArticleSuggestionsTopicQueryReformulationContext QueryReformulationContext = null, ParticipantTypeEnum? ParticipantType = null)
         {
             this.QueueId = QueueId;
             this.MediaType = MediaType;
             this.UserId = UserId;
             this.ExternalContactId = ExternalContactId;
             this.AssistantId = AssistantId;
+            this.VariationId = VariationId;
             this.UtteranceId = UtteranceId;
             this.MessageId = MessageId;
             this.QueryStatement = QueryStatement;
@@ -161,6 +163,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="assistantId", EmitDefaultValue=false)]
         public Guid? AssistantId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets VariationId
+        /// </summary>
+        [DataMember(Name="variationId", EmitDefaultValue=false)]
+        public Guid? VariationId { get; set; }
 
 
 
@@ -219,6 +229,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  AssistantId: ").Append(AssistantId).Append("\n");
+            sb.Append("  VariationId: ").Append(VariationId).Append("\n");
             sb.Append("  UtteranceId: ").Append(UtteranceId).Append("\n");
             sb.Append("  MessageId: ").Append(MessageId).Append("\n");
             sb.Append("  QueryStatement: ").Append(QueryStatement).Append("\n");
@@ -291,6 +302,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AssistantId.Equals(other.AssistantId)
                 ) &&
                 (
+                    this.VariationId == other.VariationId ||
+                    this.VariationId != null &&
+                    this.VariationId.Equals(other.VariationId)
+                ) &&
+                (
                     this.UtteranceId == other.UtteranceId ||
                     this.UtteranceId != null &&
                     this.UtteranceId.Equals(other.UtteranceId)
@@ -347,6 +363,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AssistantId != null)
                     hash = hash * 59 + this.AssistantId.GetHashCode();
+
+                if (this.VariationId != null)
+                    hash = hash * 59 + this.VariationId.GetHashCode();
 
                 if (this.UtteranceId != null)
                     hash = hash * 59 + this.UtteranceId.GetHashCode();

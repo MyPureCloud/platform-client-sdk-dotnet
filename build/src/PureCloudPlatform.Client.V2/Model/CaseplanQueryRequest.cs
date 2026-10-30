@@ -57,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Filter by Caseplan name (case-insensitive, partial match). Omitting name returns all Caseplans (subject to pagination)..</param>
         /// <param name="NameSearchType">Type of name search to perform. Default is BEGINS_WITH..</param>
         /// <param name="DivisionIds">Divisions to filter by. Accepts a list of UUIDs and/or &#39;*&#39;..</param>
-        /// <param name="Filters">List of filter objects to be used in the search. Valid filter names are: &#39;id&#39;, &#39;name&#39;, &#39;divisionId&#39;. Multiple filters are combined with AND logic..</param>
+        /// <param name="Filters">List of filter objects to be used in the search. Valid filter names are: &#39;id&#39;, &#39;name&#39;, &#39;divisionId&#39;, &#39;published&#39;. Multiple filters are combined with AND logic..</param>
         /// <param name="Attributes">List of entity attributes to be retrieved in the result..</param>
         /// <param name="PageSize">Number of results per page. Maximum is 200. Default is 25..</param>
         /// <param name="After">Cursor for pagination. Use the \&quot;after\&quot; value from the previous response..</param>
@@ -96,9 +96,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of filter objects to be used in the search. Valid filter names are: &#39;id&#39;, &#39;name&#39;, &#39;divisionId&#39;. Multiple filters are combined with AND logic.
+        /// List of filter objects to be used in the search. Valid filter names are: &#39;id&#39;, &#39;name&#39;, &#39;divisionId&#39;, &#39;published&#39;. Multiple filters are combined with AND logic.
         /// </summary>
-        /// <value>List of filter objects to be used in the search. Valid filter names are: &#39;id&#39;, &#39;name&#39;, &#39;divisionId&#39;. Multiple filters are combined with AND logic.</value>
+        /// <value>List of filter objects to be used in the search. Valid filter names are: &#39;id&#39;, &#39;name&#39;, &#39;divisionId&#39;, &#39;published&#39;. Multiple filters are combined with AND logic.</value>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<CaseplanFilter> Filters { get; set; }
 

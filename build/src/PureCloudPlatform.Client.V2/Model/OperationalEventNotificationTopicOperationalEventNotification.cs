@@ -19,6 +19,37 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class OperationalEventNotificationTopicOperationalEventNotification :  IEquatable<OperationalEventNotificationTopicOperationalEventNotification>
     {
         /// <summary>
+        /// Gets or Sets ReferenceType
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ReferenceTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "UNKNOWN"
+            /// </summary>
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Salesforce for "SALESFORCE"
+            /// </summary>
+            [EnumMember(Value = "SALESFORCE")]
+            Salesforce
+        }
+        /// <summary>
+        /// Gets or Sets ReferenceType
+        /// </summary>
+        [DataMember(Name="referenceType", EmitDefaultValue=false)]
+        public ReferenceTypeEnum? ReferenceType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="OperationalEventNotificationTopicOperationalEventNotification" /> class.
         /// </summary>
         /// <param name="EventEntity">EventEntity.</param>
@@ -34,10 +65,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EntityToken">EntityToken.</param>
         /// <param name="PhoneNumber">PhoneNumber.</param>
         /// <param name="ExternalContactId">ExternalContactId.</param>
+        /// <param name="ReferenceId">ReferenceId.</param>
+        /// <param name="ReferenceType">ReferenceType.</param>
         /// <param name="EntityModifiedDate">EntityModifiedDate.</param>
         /// <param name="EntityModifiedBy">EntityModifiedBy.</param>
         /// <param name="Timestamp">Timestamp.</param>
-        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, Guid? EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string Version = null, Guid? ParentEntity = null, string EntityType = null, Guid? ConversationId = null, string EntityToken = null, string PhoneNumber = null, string ExternalContactId = null, DateTime? EntityModifiedDate = null, Guid? EntityModifiedBy = null, long? Timestamp = null)
+        public OperationalEventNotificationTopicOperationalEventNotification(OperationalEventNotificationTopicEventEntity EventEntity = null, Guid? EntityId = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string Version = null, Guid? ParentEntity = null, string EntityType = null, Guid? ConversationId = null, string EntityToken = null, string PhoneNumber = null, string ExternalContactId = null, string ReferenceId = null, ReferenceTypeEnum? ReferenceType = null, DateTime? EntityModifiedDate = null, Guid? EntityModifiedBy = null, long? Timestamp = null)
         {
             this.EventEntity = EventEntity;
             this.EntityId = EntityId;
@@ -52,6 +85,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EntityToken = EntityToken;
             this.PhoneNumber = PhoneNumber;
             this.ExternalContactId = ExternalContactId;
+            this.ReferenceId = ReferenceId;
+            this.ReferenceType = ReferenceType;
             this.EntityModifiedDate = EntityModifiedDate;
             this.EntityModifiedBy = EntityModifiedBy;
             this.Timestamp = Timestamp;
@@ -165,6 +200,16 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ReferenceId
+        /// </summary>
+        [DataMember(Name="referenceId", EmitDefaultValue=false)]
+        public string ReferenceId { get; set; }
+
+
+
+
+
+        /// <summary>
         /// Gets or Sets EntityModifiedDate
         /// </summary>
         [DataMember(Name="entityModifiedDate", EmitDefaultValue=false)]
@@ -209,6 +254,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EntityToken: ").Append(EntityToken).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
+            sb.Append("  ReferenceId: ").Append(ReferenceId).Append("\n");
+            sb.Append("  ReferenceType: ").Append(ReferenceType).Append("\n");
             sb.Append("  EntityModifiedDate: ").Append(EntityModifiedDate).Append("\n");
             sb.Append("  EntityModifiedBy: ").Append(EntityModifiedBy).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
@@ -318,6 +365,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalContactId.Equals(other.ExternalContactId)
                 ) &&
                 (
+                    this.ReferenceId == other.ReferenceId ||
+                    this.ReferenceId != null &&
+                    this.ReferenceId.Equals(other.ReferenceId)
+                ) &&
+                (
+                    this.ReferenceType == other.ReferenceType ||
+                    this.ReferenceType != null &&
+                    this.ReferenceType.Equals(other.ReferenceType)
+                ) &&
+                (
                     this.EntityModifiedDate == other.EntityModifiedDate ||
                     this.EntityModifiedDate != null &&
                     this.EntityModifiedDate.Equals(other.EntityModifiedDate)
@@ -383,6 +440,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
+
+                if (this.ReferenceId != null)
+                    hash = hash * 59 + this.ReferenceId.GetHashCode();
+
+                if (this.ReferenceType != null)
+                    hash = hash * 59 + this.ReferenceType.GetHashCode();
 
                 if (this.EntityModifiedDate != null)
                     hash = hash * 59 + this.EntityModifiedDate.GetHashCode();

@@ -1809,7 +1809,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Linkedin for "LinkedIn"
             /// </summary>
             [EnumMember(Value = "LinkedIn")]
-            Linkedin
+            Linkedin,
+            
+            /// <summary>
+            /// Enum Youtube for "YouTube"
+            /// </summary>
+            [EnumMember(Value = "YouTube")]
+            Youtube
         }
         /// <summary>
         /// Gets or Sets SocialSentimentCategory
@@ -3445,6 +3451,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "uploading")]
             Uploading,
+            
+            /// <summary>
+            /// Enum Video for "video"
+            /// </summary>
+            [EnumMember(Value = "video")]
+            Video,
             
             /// <summary>
             /// Enum Voicemail for "voicemail"

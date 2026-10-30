@@ -18,6 +18,39 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CsvMappingEntry :  IEquatable<CsvMappingEntry>
     {
+        /// <summary>
+        /// How the CSV cell value is interpreted at the target path. When omitted, the cell is treated as a string.
+        /// </summary>
+        /// <value>How the CSV cell value is interpreted at the target path. When omitted, the cell is treated as a string.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ValueFormatEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum String for "String"
+            /// </summary>
+            [EnumMember(Value = "String")]
+            String,
+            
+            /// <summary>
+            /// Enum Json for "Json"
+            /// </summary>
+            [EnumMember(Value = "Json")]
+            Json
+        }
+        /// <summary>
+        /// How the CSV cell value is interpreted at the target path. When omitted, the cell is treated as a string.
+        /// </summary>
+        /// <value>How the CSV cell value is interpreted at the target path. When omitted, the cell is treated as a string.</value>
+        [DataMember(Name="valueFormat", EmitDefaultValue=false)]
+        public ValueFormatEnum? ValueFormat { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CsvMappingEntry" /> class.
@@ -29,10 +62,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="SourceField">CSV field to map data from (required).</param>
         /// <param name="TargetField">Json path to map data to (required).</param>
-        public CsvMappingEntry(string SourceField = null, string TargetField = null)
+        /// <param name="ValueFormat">How the CSV cell value is interpreted at the target path. When omitted, the cell is treated as a string..</param>
+        public CsvMappingEntry(string SourceField = null, string TargetField = null, ValueFormatEnum? ValueFormat = null)
         {
             this.SourceField = SourceField;
             this.TargetField = TargetField;
+            this.ValueFormat = ValueFormat;
             
         }
         
@@ -55,6 +90,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public string TargetField { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  SourceField: ").Append(SourceField).Append("\n");
             sb.Append("  TargetField: ").Append(TargetField).Append("\n");
+            sb.Append("  ValueFormat: ").Append(ValueFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TargetField == other.TargetField ||
                     this.TargetField != null &&
                     this.TargetField.Equals(other.TargetField)
+                ) &&
+                (
+                    this.ValueFormat == other.ValueFormat ||
+                    this.ValueFormat != null &&
+                    this.ValueFormat.Equals(other.ValueFormat)
                 );
         }
 
@@ -134,6 +177,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TargetField != null)
                     hash = hash * 59 + this.TargetField.GetHashCode();
+
+                if (this.ValueFormat != null)
+                    hash = hash * 59 + this.ValueFormat.GetHashCode();
 
                 return hash;
             }

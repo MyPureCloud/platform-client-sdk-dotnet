@@ -39,7 +39,11 @@
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 | **UtilizationLabel** | **string** |  | [optional] |
 | **FlowType** | **string** |  | [optional] |
+| **PreferredAgentIds** | **List&lt;Guid?&gt;** |  | [optional] |
+| **OutboundCampaignId** | **string** |  | [optional] |
+| **OutboundContactListId** | **string** |  | [optional] |
+| **OutboundContactId** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+_PureCloudPlatform.Client.V2 276.0.0_

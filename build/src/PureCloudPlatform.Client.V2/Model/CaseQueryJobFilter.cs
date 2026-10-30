@@ -108,23 +108,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CaseQueryJobFilter" /> class.
         /// </summary>
-        /// <param name="Name">Attribute name. Valid filter names are: &#39;caseplanId&#39;, &#39;ownerId&#39;, &#39;status&#39;, &#39;priority&#39;, &#39;dateDue&#39;, &#39;externalContactId&#39;, &#39;customerIntentId&#39;, &#39;dateCreated&#39;, &#39;divisionId&#39;, &#39;reference&#39;. (required).</param>
+        /// <param name="Name">Attribute name. Valid filter names are: &#39;caseplanId&#39;, &#39;ownerId&#39;, &#39;status&#39;, &#39;priority&#39;, &#39;dateDue&#39;, &#39;externalContactId&#39;, &#39;customerIntentId&#39;, &#39;dateCreated&#39;, &#39;divisionId&#39;, &#39;reference&#39;, &#39;externalId&#39;. (required).</param>
         /// <param name="Operator">Filter operator. (required).</param>
         /// <param name="Values">List of values to be used in the filter. (required).</param>
-        public CaseQueryJobFilter(string Name = null, OperatorEnum? Operator = null, List<string> Values = null)
+        /// <param name="CaseSensitive">Whether the filter matches letter case exactly. Only valid for &#39;reference&#39; and &#39;externalId&#39; filters. Defaults to true..</param>
+        public CaseQueryJobFilter(string Name = null, OperatorEnum? Operator = null, List<string> Values = null, bool? CaseSensitive = null)
         {
             this.Name = Name;
             this.Operator = Operator;
             this.Values = Values;
+            this.CaseSensitive = CaseSensitive;
             
         }
         
 
 
         /// <summary>
-        /// Attribute name. Valid filter names are: &#39;caseplanId&#39;, &#39;ownerId&#39;, &#39;status&#39;, &#39;priority&#39;, &#39;dateDue&#39;, &#39;externalContactId&#39;, &#39;customerIntentId&#39;, &#39;dateCreated&#39;, &#39;divisionId&#39;, &#39;reference&#39;.
+        /// Attribute name. Valid filter names are: &#39;caseplanId&#39;, &#39;ownerId&#39;, &#39;status&#39;, &#39;priority&#39;, &#39;dateDue&#39;, &#39;externalContactId&#39;, &#39;customerIntentId&#39;, &#39;dateCreated&#39;, &#39;divisionId&#39;, &#39;reference&#39;, &#39;externalId&#39;.
         /// </summary>
-        /// <value>Attribute name. Valid filter names are: &#39;caseplanId&#39;, &#39;ownerId&#39;, &#39;status&#39;, &#39;priority&#39;, &#39;dateDue&#39;, &#39;externalContactId&#39;, &#39;customerIntentId&#39;, &#39;dateCreated&#39;, &#39;divisionId&#39;, &#39;reference&#39;.</value>
+        /// <value>Attribute name. Valid filter names are: &#39;caseplanId&#39;, &#39;ownerId&#39;, &#39;status&#39;, &#39;priority&#39;, &#39;dateDue&#39;, &#39;externalContactId&#39;, &#39;customerIntentId&#39;, &#39;dateCreated&#39;, &#39;divisionId&#39;, &#39;reference&#39;, &#39;externalId&#39;.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
@@ -140,6 +142,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> Values { get; set; }
 
 
+
+        /// <summary>
+        /// Whether the filter matches letter case exactly. Only valid for &#39;reference&#39; and &#39;externalId&#39; filters. Defaults to true.
+        /// </summary>
+        /// <value>Whether the filter matches letter case exactly. Only valid for &#39;reference&#39; and &#39;externalId&#39; filters. Defaults to true.</value>
+        [DataMember(Name="caseSensitive", EmitDefaultValue=false)]
+        public bool? CaseSensitive { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
+            sb.Append("  CaseSensitive: ").Append(CaseSensitive).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -206,6 +218,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Values == other.Values ||
                     this.Values != null &&
                     this.Values.SequenceEqual(other.Values)
+                ) &&
+                (
+                    this.CaseSensitive == other.CaseSensitive ||
+                    this.CaseSensitive != null &&
+                    this.CaseSensitive.Equals(other.CaseSensitive)
                 );
         }
 
@@ -228,6 +245,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
+
+                if (this.CaseSensitive != null)
+                    hash = hash * 59 + this.CaseSensitive.GetHashCode();
 
                 return hash;
             }

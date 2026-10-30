@@ -120,7 +120,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -134,7 +133,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -1168,7 +1166,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -1183,7 +1180,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -1198,7 +1194,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -1212,7 +1207,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -1528,7 +1522,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -1542,7 +1535,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -2576,7 +2568,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -2591,7 +2582,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -2606,7 +2596,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -2620,7 +2609,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -3768,7 +3756,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Stageplan from a draft Caseplan. 
         /// 
-        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -3784,7 +3771,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Stageplan from a draft Caseplan. 
         /// 
-        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -3877,7 +3863,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Stageplan from a draft Caseplan. 
         /// 
-        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -3894,7 +3879,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Stageplan from a draft Caseplan. 
         /// 
-        /// DeleteCasemanagementCaseplanStageplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -12311,7 +12295,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Reposition a Stageplan within a draft Caseplan. 
         /// 
-        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -12328,7 +12311,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Reposition a Stageplan within a draft Caseplan. 
         /// 
-        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -12431,7 +12413,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Reposition a Stageplan within a draft Caseplan. 
         /// 
-        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -12449,7 +12430,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Reposition a Stageplan within a draft Caseplan. 
         /// 
-        /// PostCasemanagementCaseplanStageplanReposition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -12556,7 +12536,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Stageplan on a draft Caseplan. 
         /// 
-        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -12572,7 +12551,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Stageplan on a draft Caseplan. 
         /// 
-        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -12670,7 +12648,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Stageplan on a draft Caseplan. 
         /// 
-        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
@@ -12687,7 +12664,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a Stageplan on a draft Caseplan. 
         /// 
-        /// PostCasemanagementCaseplanStageplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>

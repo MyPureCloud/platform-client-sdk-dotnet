@@ -23,6 +23,8 @@ build/
 
 # NuGet Packages
 *.nupkg
+*.nuspec
+**/package/*
 # The packages folder can be ignored because of Package Restore
 **/packages/*
 # except build/, which is used as an MSBuild target.
@@ -31,6 +33,7 @@ build/
 #!**/packages/repositories.config
 
 # MSTest test Results
+TestResult.xml
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 

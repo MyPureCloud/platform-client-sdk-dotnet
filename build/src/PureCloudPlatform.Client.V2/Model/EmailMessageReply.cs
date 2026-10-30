@@ -172,6 +172,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? MaxEmailSizeBytes { get; private set; }
 
 
+
+        /// <summary>
+        /// The recipients that failed validation. Advisory only; recipient policy is enforced at send time.
+        /// </summary>
+        /// <value>The recipients that failed validation. Advisory only; recipient policy is enforced at send time.</value>
+        [DataMember(Name="recipientWarnings", EmitDefaultValue=false)]
+        public List<RecipientWarning> RecipientWarnings { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -194,6 +203,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HistoryIncluded: ").Append(HistoryIncluded).Append("\n");
             sb.Append("  EmailSizeBytes: ").Append(EmailSizeBytes).Append("\n");
             sb.Append("  MaxEmailSizeBytes: ").Append(MaxEmailSizeBytes).Append("\n");
+            sb.Append("  RecipientWarnings: ").Append(RecipientWarnings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -298,6 +308,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxEmailSizeBytes == other.MaxEmailSizeBytes ||
                     this.MaxEmailSizeBytes != null &&
                     this.MaxEmailSizeBytes.Equals(other.MaxEmailSizeBytes)
+                ) &&
+                (
+                    this.RecipientWarnings == other.RecipientWarnings ||
+                    this.RecipientWarnings != null &&
+                    this.RecipientWarnings.SequenceEqual(other.RecipientWarnings)
                 );
         }
 
@@ -350,6 +365,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MaxEmailSizeBytes != null)
                     hash = hash * 59 + this.MaxEmailSizeBytes.GetHashCode();
+
+                if (this.RecipientWarnings != null)
+                    hash = hash * 59 + this.RecipientWarnings.GetHashCode();
 
                 return hash;
             }

@@ -69,6 +69,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetKnowledgeSourceSynchronizations**](#GetKnowledgeSourceSynchronizations) | **Get** /api/v2/knowledge/sources/{sourceId}/synchronizations | Get synchronizations of a source. |
 | [**GetKnowledgeSources**](#GetKnowledgeSources) | **Get** /api/v2/knowledge/sources | List sources |
 | [**GetKnowledgeSourcesSynchronizations**](#GetKnowledgeSourcesSynchronizations) | **Get** /api/v2/knowledge/sources/synchronizations | Get synchronizations of all sources of the organization. |
+| [**GetKnowledgeSourcesTags**](#GetKnowledgeSourcesTags) | **Get** /api/v2/knowledge/sources/tags | Get tags across sources for the organization |
+| [**GetKnowledgeSourcesTagsGrouped**](#GetKnowledgeSourcesTagsGrouped) | **Get** /api/v2/knowledge/sources/tags/grouped | Get tags grouped by source for the organization |
 | [**PatchKnowledgeConnection**](#PatchKnowledgeConnection) | **Patch** /api/v2/knowledge/connections/{connectionId} | Update connection |
 | [**PatchKnowledgeGuestSessionDocumentsSearchSearchId**](#PatchKnowledgeGuestSessionDocumentsSearchSearchId) | **Patch** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search/{searchId} | Update search result. |
 | [**PatchKnowledgeKnowledgebase**](#PatchKnowledgeKnowledgebase) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Update knowledge base |
@@ -130,6 +132,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostKnowledgeSourceSynchronizationUploads**](#PostKnowledgeSourceSynchronizationUploads) | **Post** /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads | Create presigned URL for uploading a file in the synchronization. |
 | [**PostKnowledgeSourceSynchronizations**](#PostKnowledgeSourceSynchronizations) | **Post** /api/v2/knowledge/sources/{sourceId}/synchronizations | Start a manual synchronization from a source. |
 | [**PostKnowledgeSources**](#PostKnowledgeSources) | **Post** /api/v2/knowledge/sources | Create a new source |
+| [**PostKnowledgeSourcesFilesCounts**](#PostKnowledgeSourcesFilesCounts) | **Post** /api/v2/knowledge/sources/files/counts | Get per-source file counts for the selected tag filter |
 | [**PutKnowledgeKnowledgebaseSourcesSalesforceSourceId**](#PutKnowledgeKnowledgebaseSourcesSalesforceSourceId) | **Put** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId} | Update Salesforce Knowledge integration source |
 | [**PutKnowledgeKnowledgebaseSourcesServicenowSourceId**](#PutKnowledgeKnowledgebaseSourcesServicenowSourceId) | **Put** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId} | Update ServiceNow Knowledge integration source |
 | [**PutKnowledgeSource**](#PutKnowledgeSource) | **Put** /api/v2/knowledge/sources/{sourceId} | Update the source |
@@ -4364,6 +4367,140 @@ namespace Example
 [**V3SynchronizationListing**](V3SynchronizationListing)
 
 
+## GetKnowledgeSourcesTags
+
+> [**OrgV3SourcesTagsResponse**](OrgV3SourcesTagsResponse) GetKnowledgeSourcesTags (int? pageNumber = null, int? pageSize = null, string tagName = null, string sourceIds = null)
+
+
+Get tags across sources for the organization
+
+Requires ALL permissions: 
+
+* knowledge:sourceTagList:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeSourcesTagsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Number of items per page. Maximum is 200. (optional)  (default to 100)
+            var tagName = tagName_example;  // string | Optional substring filter for tag names. (optional) 
+            var sourceIds = sourceIds_example;  // string | Optional comma-separated source IDs to scope tags. (optional) 
+
+            try
+            { 
+                // Get tags across sources for the organization
+                OrgV3SourcesTagsResponse result = apiInstance.GetKnowledgeSourcesTags(pageNumber, pageSize, tagName, sourceIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeSourcesTags: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Number of items per page. Maximum is 200. | [optional] [default to 100] |
+| **tagName** | **string**| Optional substring filter for tag names. | [optional]  |
+| **sourceIds** | **string**| Optional comma-separated source IDs to scope tags. | [optional]  |
+
+### Return type
+
+[**OrgV3SourcesTagsResponse**](OrgV3SourcesTagsResponse)
+
+
+## GetKnowledgeSourcesTagsGrouped
+
+> [**V3SourceTagsGroupedResponse**](V3SourceTagsGroupedResponse) GetKnowledgeSourcesTagsGrouped (int? pageNumber = null, int? pageSize = null, string tagName = null)
+
+
+Get tags grouped by source for the organization
+
+Requires ALL permissions: 
+
+* knowledge:sourceTagList:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeSourcesTagsGroupedExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Number of items per page. Maximum is 200. (optional)  (default to 100)
+            var tagName = tagName_example;  // string | Optional substring filter for tag names. (optional) 
+
+            try
+            { 
+                // Get tags grouped by source for the organization
+                V3SourceTagsGroupedResponse result = apiInstance.GetKnowledgeSourcesTagsGrouped(pageNumber, pageSize, tagName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeSourcesTagsGrouped: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Number of items per page. Maximum is 200. | [optional] [default to 100] |
+| **tagName** | **string**| Optional substring filter for tag names. | [optional]  |
+
+### Return type
+
+[**V3SourceTagsGroupedResponse**](V3SourceTagsGroupedResponse)
+
+
 ## PatchKnowledgeConnection
 
 > [**ConnectionResponse**](ConnectionResponse) PatchKnowledgeConnection (string connectionId, ConnectionUpdateRequest body = null)
@@ -8245,6 +8382,68 @@ namespace Example
 [**V3SourceDetailedResponse**](V3SourceDetailedResponse)
 
 
+## PostKnowledgeSourcesFilesCounts
+
+> [**V3SourceFileCountsResponse**](V3SourceFileCountsResponse) PostKnowledgeSourcesFilesCounts (V3SourceFileCountsRequest body = null)
+
+
+Get per-source file counts for the selected tag filter
+
+Requires ALL permissions: 
+
+* knowledge:sourceFileCount:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeSourcesFilesCountsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var body = new V3SourceFileCountsRequest(); // V3SourceFileCountsRequest |  (optional) 
+
+            try
+            { 
+                // Get per-source file counts for the selected tag filter
+                V3SourceFileCountsResponse result = apiInstance.PostKnowledgeSourcesFilesCounts(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeSourcesFilesCounts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**V3SourceFileCountsRequest**](V3SourceFileCountsRequest)|  | [optional]  |
+
+### Return type
+
+[**V3SourceFileCountsResponse**](V3SourceFileCountsResponse)
+
+
 ## PutKnowledgeKnowledgebaseSourcesSalesforceSourceId
 
 > [**SalesforceSourceResponse**](SalesforceSourceResponse) PutKnowledgeKnowledgebaseSourcesSalesforceSourceId (string knowledgeBaseId, string sourceId, SalesforceSourceRequest body)
@@ -8441,4 +8640,4 @@ namespace Example
 [**V3SourceDetailedResponse**](V3SourceDetailedResponse)
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+_PureCloudPlatform.Client.V2 276.0.0_

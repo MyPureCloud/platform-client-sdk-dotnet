@@ -67,7 +67,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Linkedin for "LinkedIn"
             /// </summary>
             [EnumMember(Value = "LinkedIn")]
-            Linkedin
+            Linkedin,
+            
+            /// <summary>
+            /// Enum Youtube for "YouTube"
+            /// </summary>
+            [EnumMember(Value = "YouTube")]
+            Youtube
         }
         /// <summary>
         /// The effective platform for the data ingestion rule.

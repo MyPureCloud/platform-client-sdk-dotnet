@@ -236,7 +236,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum RateLimited for "RATE_LIMITED"
             /// </summary>
             [EnumMember(Value = "RATE_LIMITED")]
-            RateLimited
+            RateLimited,
+            
+            /// <summary>
+            /// Enum ExternalServiceTimeout for "EXTERNAL_SERVICE_TIMEOUT"
+            /// </summary>
+            [EnumMember(Value = "EXTERNAL_SERVICE_TIMEOUT")]
+            ExternalServiceTimeout
         }
         /// <summary>
         /// Gets or Sets MessageType
@@ -283,6 +289,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FollowupActions">FollowupActions.</param>
         /// <param name="ExtractedEntities">ExtractedEntities.</param>
         /// <param name="WrapUpCodes">WrapUpCodes.</param>
+        /// <param name="WrapUpCodePredictionEnabled">WrapUpCodePredictionEnabled.</param>
         /// <param name="TriggerSource">TriggerSource.</param>
         /// <param name="SummarySourceType">SummarySourceType.</param>
         /// <param name="TriggerType">TriggerType.</param>
@@ -290,7 +297,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ErrorType">ErrorType.</param>
         /// <param name="DurationMs">DurationMs.</param>
         /// <param name="Labels">Labels.</param>
-        public ConversationSummaryTopicConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, Guid? LatestCommunicationId = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicConversationSummary Summary = null, ConversationSummaryTopicConversationHeadline Headline = null, ConversationSummaryTopicConversationReason Reason = null, ConversationSummaryTopicConversationResolution Resolution = null, List<ConversationSummaryTopicConversationFollowupAction> FollowupActions = null, List<ConversationSummaryTopicSummaryExtractedCustomEntity> ExtractedEntities = null, List<ConversationSummaryTopicConversationWrapUpCode> WrapUpCodes = null, ConversationSummaryTopicTriggerSource TriggerSource = null, SummarySourceTypeEnum? SummarySourceType = null, TriggerTypeEnum? TriggerType = null, ConversationSummaryTopicConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null, List<ConversationSummaryTopicConversationSummaryLabel> Labels = null)
+        public ConversationSummaryTopicConversationSummaryEvent(Guid? ConversationId = null, Guid? QueueId = null, List<ConversationSummaryTopicConversationSummaryParticipant> Participants = null, List<string> CommunicationIds = null, Guid? LatestCommunicationId = null, DateTime? CreatedDate = null, MessageTypeEnum? MessageType = null, MediaTypeEnum? MediaType = null, Guid? SummaryId = null, string Language = null, ConversationSummaryTopicConversationSummary Summary = null, ConversationSummaryTopicConversationHeadline Headline = null, ConversationSummaryTopicConversationReason Reason = null, ConversationSummaryTopicConversationResolution Resolution = null, List<ConversationSummaryTopicConversationFollowupAction> FollowupActions = null, List<ConversationSummaryTopicSummaryExtractedCustomEntity> ExtractedEntities = null, List<ConversationSummaryTopicConversationWrapUpCode> WrapUpCodes = null, bool? WrapUpCodePredictionEnabled = null, ConversationSummaryTopicTriggerSource TriggerSource = null, SummarySourceTypeEnum? SummarySourceType = null, TriggerTypeEnum? TriggerType = null, ConversationSummaryTopicConversationSummaryParticipant LastEditedBy = null, ErrorTypeEnum? ErrorType = null, long? DurationMs = null, List<ConversationSummaryTopicConversationSummaryLabel> Labels = null)
         {
             this.ConversationId = ConversationId;
             this.QueueId = QueueId;
@@ -309,6 +316,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FollowupActions = FollowupActions;
             this.ExtractedEntities = ExtractedEntities;
             this.WrapUpCodes = WrapUpCodes;
+            this.WrapUpCodePredictionEnabled = WrapUpCodePredictionEnabled;
             this.TriggerSource = TriggerSource;
             this.SummarySourceType = SummarySourceType;
             this.TriggerType = TriggerType;
@@ -446,6 +454,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets WrapUpCodePredictionEnabled
+        /// </summary>
+        [DataMember(Name="wrapUpCodePredictionEnabled", EmitDefaultValue=false)]
+        public bool? WrapUpCodePredictionEnabled { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets TriggerSource
         /// </summary>
         [DataMember(Name="triggerSource", EmitDefaultValue=false)]
@@ -508,6 +524,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FollowupActions: ").Append(FollowupActions).Append("\n");
             sb.Append("  ExtractedEntities: ").Append(ExtractedEntities).Append("\n");
             sb.Append("  WrapUpCodes: ").Append(WrapUpCodes).Append("\n");
+            sb.Append("  WrapUpCodePredictionEnabled: ").Append(WrapUpCodePredictionEnabled).Append("\n");
             sb.Append("  TriggerSource: ").Append(TriggerSource).Append("\n");
             sb.Append("  SummarySourceType: ").Append(SummarySourceType).Append("\n");
             sb.Append("  TriggerType: ").Append(TriggerType).Append("\n");
@@ -641,6 +658,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WrapUpCodes.SequenceEqual(other.WrapUpCodes)
                 ) &&
                 (
+                    this.WrapUpCodePredictionEnabled == other.WrapUpCodePredictionEnabled ||
+                    this.WrapUpCodePredictionEnabled != null &&
+                    this.WrapUpCodePredictionEnabled.Equals(other.WrapUpCodePredictionEnabled)
+                ) &&
+                (
                     this.TriggerSource == other.TriggerSource ||
                     this.TriggerSource != null &&
                     this.TriggerSource.Equals(other.TriggerSource)
@@ -738,6 +760,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.WrapUpCodes != null)
                     hash = hash * 59 + this.WrapUpCodes.GetHashCode();
+
+                if (this.WrapUpCodePredictionEnabled != null)
+                    hash = hash * 59 + this.WrapUpCodePredictionEnabled.GetHashCode();
 
                 if (this.TriggerSource != null)
                     hash = hash * 59 + this.TriggerSource.GetHashCode();

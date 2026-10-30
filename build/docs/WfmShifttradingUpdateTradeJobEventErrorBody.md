@@ -1,0 +1,16 @@
+# WfmShifttradingUpdateTradeJobEventErrorBody
+
+## ININ.PureCloudApi.Model.WfmShifttradingUpdateTradeJobEventErrorBody
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Status** | **long?** |  | [optional] |
+| **Code** | **string** |  | [optional] |
+| **Message** | **string** |  | [optional] |
+| **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
+
+
+
+_PureCloudPlatform.Client.V2 276.0.0_

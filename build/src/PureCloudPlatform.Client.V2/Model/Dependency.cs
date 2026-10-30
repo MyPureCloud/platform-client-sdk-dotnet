@@ -225,6 +225,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Emergencygroup,
             
             /// <summary>
+            /// Enum Externalmcpserverintegration for "EXTERNALMCPSERVERINTEGRATION"
+            /// </summary>
+            [EnumMember(Value = "EXTERNALMCPSERVERINTEGRATION")]
+            Externalmcpserverintegration,
+            
+            /// <summary>
             /// Enum File for "FILE"
             /// </summary>
             [EnumMember(Value = "FILE")]

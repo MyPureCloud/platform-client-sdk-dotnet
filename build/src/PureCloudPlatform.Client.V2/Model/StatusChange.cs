@@ -220,22 +220,28 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Usage for "usage"
+            /// </summary>
+            [EnumMember(Value = "usage")]
+            Usage,
+            
+            /// <summary>
             /// Enum Usersrules for "users.rules"
             /// </summary>
             [EnumMember(Value = "users.rules")]
             Usersrules,
             
             /// <summary>
-            /// Enum Voicetranscription for "voice.transcription"
-            /// </summary>
-            [EnumMember(Value = "voice.transcription")]
-            Voicetranscription,
-            
-            /// <summary>
             /// Enum Agentassistant for "agent.assistant"
             /// </summary>
             [EnumMember(Value = "agent.assistant")]
             Agentassistant,
+            
+            /// <summary>
+            /// Enum Agenticintentclassifier for "agentic.intent.classifier"
+            /// </summary>
+            [EnumMember(Value = "agentic.intent.classifier")]
+            Agenticintentclassifier,
             
             /// <summary>
             /// Enum Agenticvirtualagents for "agentic.virtual.agents"
@@ -706,16 +712,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Telephonyconfiguration,
             
             /// <summary>
-            /// Enum Usage for "usage"
-            /// </summary>
-            [EnumMember(Value = "usage")]
-            Usage,
-            
-            /// <summary>
             /// Enum Users for "users"
             /// </summary>
             [EnumMember(Value = "users")]
             Users,
+            
+            /// <summary>
+            /// Enum Voicetranscription for "voice.transcription"
+            /// </summary>
+            [EnumMember(Value = "voice.transcription")]
+            Voicetranscription,
             
             /// <summary>
             /// Enum Webdeployments for "web.deployments"

@@ -22,11 +22,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WorkitemOnAttributeChangeRuleUpdate" /> class.
         /// </summary>
         /// <param name="Name">The name of the rule..</param>
-        /// <param name="Condition">The rules condition. If the condition criteria is met the rules action will be executed..</param>
-        public WorkitemOnAttributeChangeRuleUpdate(string Name = null, WorkitemOnAttributeChangeConditionUpdate Condition = null)
+        /// <param name="Condition">The rules condition. If the condition criteria is met the rules action will be executed. Mutually exclusive with match; supplying either replaces the rule&#39;s existing match criteria in full..</param>
+        /// <param name="Match">Grouped match criteria combined with logical operators. Mutually exclusive with condition; the supplied object replaces the rule&#39;s existing match criteria in full..</param>
+        public WorkitemOnAttributeChangeRuleUpdate(string Name = null, WorkitemOnAttributeChangeConditionUpdate Condition = null, WorkitemOnAttributeChangeMatch Match = null)
         {
             this.Name = Name;
             this.Condition = Condition;
+            this.Match = Match;
             
         }
         
@@ -42,11 +44,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The rules condition. If the condition criteria is met the rules action will be executed.
+        /// The rules condition. If the condition criteria is met the rules action will be executed. Mutually exclusive with match; supplying either replaces the rule&#39;s existing match criteria in full.
         /// </summary>
-        /// <value>The rules condition. If the condition criteria is met the rules action will be executed.</value>
+        /// <value>The rules condition. If the condition criteria is met the rules action will be executed. Mutually exclusive with match; supplying either replaces the rule&#39;s existing match criteria in full.</value>
         [DataMember(Name="condition", EmitDefaultValue=false)]
         public WorkitemOnAttributeChangeConditionUpdate Condition { get; set; }
+
+
+
+        /// <summary>
+        /// Grouped match criteria combined with logical operators. Mutually exclusive with condition; the supplied object replaces the rule&#39;s existing match criteria in full.
+        /// </summary>
+        /// <value>Grouped match criteria combined with logical operators. Mutually exclusive with condition; the supplied object replaces the rule&#39;s existing match criteria in full.</value>
+        [DataMember(Name="match", EmitDefaultValue=false)]
+        public WorkitemOnAttributeChangeMatch Match { get; set; }
 
 
         /// <summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Condition: ").Append(Condition).Append("\n");
+            sb.Append("  Match: ").Append(Match).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Condition == other.Condition ||
                     this.Condition != null &&
                     this.Condition.Equals(other.Condition)
+                ) &&
+                (
+                    this.Match == other.Match ||
+                    this.Match != null &&
+                    this.Match.Equals(other.Match)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Condition != null)
                     hash = hash * 59 + this.Condition.GetHashCode();
+
+                if (this.Match != null)
+                    hash = hash * 59 + this.Match.GetHashCode();
 
                 return hash;
             }

@@ -1492,9 +1492,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="forceMemberRecount">Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. (optional, default to false)</param>
         /// <returns>Queue</returns>
         
-        Queue GetRoutingQueue (string queueId, List<string> expand = null);
+        Queue GetRoutingQueue (string queueId, List<string> expand = null, bool? forceMemberRecount = null);
 
         /// <summary>
         /// Get details about this queue.
@@ -1505,9 +1506,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="forceMemberRecount">Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. (optional, default to false)</param>
         /// <returns>ApiResponse of Queue</returns>
         
-        ApiResponse<Queue> GetRoutingQueueWithHttpInfo (string queueId, List<string> expand = null);
+        ApiResponse<Queue> GetRoutingQueueWithHttpInfo (string queueId, List<string> expand = null, bool? forceMemberRecount = null);
 
         /// <summary>
         /// Get an assistant associated with a queue.
@@ -6106,9 +6108,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="forceMemberRecount">Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. (optional, default to false)</param>
         /// <returns>Task of Queue</returns>
         
-        System.Threading.Tasks.Task<Queue> GetRoutingQueueAsync (string queueId, List<string> expand = null);
+        System.Threading.Tasks.Task<Queue> GetRoutingQueueAsync (string queueId, List<string> expand = null, bool? forceMemberRecount = null);
 
         /// <summary>
         /// Get details about this queue.
@@ -6119,9 +6122,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="forceMemberRecount">Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Queue>> GetRoutingQueueAsyncWithHttpInfo (string queueId, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Queue>> GetRoutingQueueAsyncWithHttpInfo (string queueId, List<string> expand = null, bool? forceMemberRecount = null);
 
         /// <summary>
         /// Get an assistant associated with a queue.
@@ -21346,11 +21350,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="forceMemberRecount">Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. (optional, default to false)</param>
         /// <returns>Queue</returns>
         
-        public Queue GetRoutingQueue (string queueId, List<string> expand = null)
+        public Queue GetRoutingQueue (string queueId, List<string> expand = null, bool? forceMemberRecount = null)
         {
-             ApiResponse<Queue> localVarResponse = GetRoutingQueueWithHttpInfo(queueId, expand);
+             ApiResponse<Queue> localVarResponse = GetRoutingQueueWithHttpInfo(queueId, expand, forceMemberRecount);
              return localVarResponse.Data;
         }
 
@@ -21361,9 +21366,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="forceMemberRecount">Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. (optional, default to false)</param>
         /// <returns>ApiResponse of Queue</returns>
         
-        public ApiResponse< Queue > GetRoutingQueueWithHttpInfo (string queueId, List<string> expand = null)
+        public ApiResponse< Queue > GetRoutingQueueWithHttpInfo (string queueId, List<string> expand = null, bool? forceMemberRecount = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -21404,6 +21410,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (forceMemberRecount != null) localVarQueryParams.Add(new Tuple<string, string>("forceMemberRecount", this.Configuration.ApiClient.ParameterToString(forceMemberRecount)));
 
             // Header params
 
@@ -21450,11 +21457,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="forceMemberRecount">Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. (optional, default to false)</param>
         /// <returns>Task of Queue</returns>
         
-        public async System.Threading.Tasks.Task<Queue> GetRoutingQueueAsync (string queueId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<Queue> GetRoutingQueueAsync (string queueId, List<string> expand = null, bool? forceMemberRecount = null)
         {
-             ApiResponse<Queue> localVarResponse = await GetRoutingQueueAsyncWithHttpInfo(queueId, expand);
+             ApiResponse<Queue> localVarResponse = await GetRoutingQueueAsyncWithHttpInfo(queueId, expand, forceMemberRecount);
              return localVarResponse.Data;
 
         }
@@ -21466,9 +21474,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="forceMemberRecount">Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Queue>> GetRoutingQueueAsyncWithHttpInfo (string queueId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Queue>> GetRoutingQueueAsyncWithHttpInfo (string queueId, List<string> expand = null, bool? forceMemberRecount = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -21510,6 +21519,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (forceMemberRecount != null) localVarQueryParams.Add(new Tuple<string, string>("forceMemberRecount", this.Configuration.ApiClient.ParameterToString(forceMemberRecount)));
 
             // Header params
 

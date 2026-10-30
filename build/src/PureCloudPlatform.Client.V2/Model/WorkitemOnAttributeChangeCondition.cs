@@ -73,18 +73,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Externaltag for "externalTag"
             /// </summary>
             [EnumMember(Value = "externalTag")]
-            Externaltag,
-            
-            /// <summary>
-            /// Enum Wrapup for "wrapup"
-            /// </summary>
-            [EnumMember(Value = "wrapup")]
-            Wrapup
+            Externaltag
         }
         /// <summary>
-        /// The comparison operator used to evaluate the priority attribute against the value. Only supported for the priority attribute.
+        /// How the attribute's new value is compared against newValue. Required for the priority attribute; not permitted otherwise.
         /// </summary>
-        /// <value>The comparison operator used to evaluate the priority attribute against the value. Only supported for the priority attribute.</value>
+        /// <value>How the attribute's new value is compared against newValue. Required for the priority attribute; not permitted otherwise.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
         {
@@ -133,9 +127,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="attribute", EmitDefaultValue=false)]
         public AttributeEnum? Attribute { get; set; }
         /// <summary>
-        /// The comparison operator used to evaluate the priority attribute against the value. Only supported for the priority attribute.
+        /// How the attribute's new value is compared against newValue. Required for the priority attribute; not permitted otherwise.
         /// </summary>
-        /// <value>The comparison operator used to evaluate the priority attribute against the value. Only supported for the priority attribute.</value>
+        /// <value>How the attribute's new value is compared against newValue. Required for the priority attribute; not permitted otherwise.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? Operator { get; set; }
 
@@ -148,17 +142,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WorkitemOnAttributeChangeCondition" /> class.
         /// </summary>
         /// <param name="Attribute">The name of the workitem attribute whose change will be evaluated as part of the rule. (required).</param>
-        /// <param name="NewValue">The new value of the attribute. If the attribute is updated to this value this part of the condition will be met. Required for exact-match conditions (when operator is not set)..</param>
-        /// <param name="OldValue">The old value of the attribute. If the attribute was updated from this value this part of the condition will be met..</param>
-        /// <param name="Operator">The comparison operator used to evaluate the priority attribute against the value. Only supported for the priority attribute..</param>
-        /// <param name="Value">The numeric value compared against the priority attribute using the operator. Required when operator is set. Only supported for the priority attribute..</param>
-        public WorkitemOnAttributeChangeCondition(AttributeEnum? Attribute = null, string NewValue = null, string OldValue = null, OperatorEnum? Operator = null, int? Value = null)
+        /// <param name="NewValue">The value the attribute&#39;s new value is compared against. Compared for equality unless an operator is supplied. Null matches the attribute having been cleared, on clearable attributes..</param>
+        /// <param name="OldValue">The value the attribute is transitioning from. Not permitted for the priority attribute. Omitted or null matches any previous value..</param>
+        /// <param name="Operator">How the attribute&#39;s new value is compared against newValue. Required for the priority attribute; not permitted otherwise..</param>
+        public WorkitemOnAttributeChangeCondition(AttributeEnum? Attribute = null, string NewValue = null, string OldValue = null, OperatorEnum? Operator = null)
         {
             this.Attribute = Attribute;
             this.NewValue = NewValue;
             this.OldValue = OldValue;
             this.Operator = Operator;
-            this.Value = Value;
             
         }
         
@@ -167,31 +159,22 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The new value of the attribute. If the attribute is updated to this value this part of the condition will be met. Required for exact-match conditions (when operator is not set).
+        /// The value the attribute&#39;s new value is compared against. Compared for equality unless an operator is supplied. Null matches the attribute having been cleared, on clearable attributes.
         /// </summary>
-        /// <value>The new value of the attribute. If the attribute is updated to this value this part of the condition will be met. Required for exact-match conditions (when operator is not set).</value>
+        /// <value>The value the attribute&#39;s new value is compared against. Compared for equality unless an operator is supplied. Null matches the attribute having been cleared, on clearable attributes.</value>
         [DataMember(Name="newValue", EmitDefaultValue=false)]
         public string NewValue { get; set; }
 
 
 
         /// <summary>
-        /// The old value of the attribute. If the attribute was updated from this value this part of the condition will be met.
+        /// The value the attribute is transitioning from. Not permitted for the priority attribute. Omitted or null matches any previous value.
         /// </summary>
-        /// <value>The old value of the attribute. If the attribute was updated from this value this part of the condition will be met.</value>
+        /// <value>The value the attribute is transitioning from. Not permitted for the priority attribute. Omitted or null matches any previous value.</value>
         [DataMember(Name="oldValue", EmitDefaultValue=false)]
         public string OldValue { get; set; }
 
 
-
-
-
-        /// <summary>
-        /// The numeric value compared against the priority attribute using the operator. Required when operator is set. Only supported for the priority attribute.
-        /// </summary>
-        /// <value>The numeric value compared against the priority attribute using the operator. Required when operator is set. Only supported for the priority attribute.</value>
-        [DataMember(Name="value", EmitDefaultValue=false)]
-        public int? Value { get; set; }
 
 
         /// <summary>
@@ -207,7 +190,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NewValue: ").Append(NewValue).Append("\n");
             sb.Append("  OldValue: ").Append(OldValue).Append("\n");
             sb.Append("  Operator: ").Append(Operator).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -267,11 +249,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Operator == other.Operator ||
                     this.Operator != null &&
                     this.Operator.Equals(other.Operator)
-                ) &&
-                (
-                    this.Value == other.Value ||
-                    this.Value != null &&
-                    this.Value.Equals(other.Value)
                 );
         }
 
@@ -297,9 +274,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Operator != null)
                     hash = hash * 59 + this.Operator.GetHashCode();
-
-                if (this.Value != null)
-                    hash = hash * 59 + this.Value.GetHashCode();
 
                 return hash;
             }

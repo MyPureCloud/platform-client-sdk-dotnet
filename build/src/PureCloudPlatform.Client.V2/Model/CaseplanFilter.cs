@@ -34,6 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Eq for "EQ"
+            /// </summary>
+            [EnumMember(Value = "EQ")]
+            Eq,
+            
+            /// <summary>
             /// Enum In for "IN"
             /// </summary>
             [EnumMember(Value = "IN")]
@@ -66,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CaseplanFilter" /> class.
         /// </summary>
-        /// <param name="Name">Attribute name. Valid values: id, name, divisionId. (required).</param>
+        /// <param name="Name">Attribute name. Valid values: id, name, divisionId, published. The published filter requires the EQ operator and exactly one value: &#39;true&#39; (Caseplans that have a published version) or &#39;false&#39; (Caseplans that have never been published). (required).</param>
         /// <param name="Operator">Filter operator. (required).</param>
         /// <param name="Values">List of values to be used in the filter. (required).</param>
         public CaseplanFilter(string Name = null, OperatorEnum? Operator = null, List<string> Values = null)
@@ -80,9 +86,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Attribute name. Valid values: id, name, divisionId.
+        /// Attribute name. Valid values: id, name, divisionId, published. The published filter requires the EQ operator and exactly one value: &#39;true&#39; (Caseplans that have a published version) or &#39;false&#39; (Caseplans that have never been published).
         /// </summary>
-        /// <value>Attribute name. Valid values: id, name, divisionId.</value>
+        /// <value>Attribute name. Valid values: id, name, divisionId, published. The published filter requires the EQ operator and exactly one value: &#39;true&#39; (Caseplans that have a published version) or &#39;false&#39; (Caseplans that have never been published).</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 

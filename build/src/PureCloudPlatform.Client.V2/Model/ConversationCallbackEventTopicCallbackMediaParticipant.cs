@@ -465,7 +465,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
         /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
-        public ConversationCallbackEventTopicCallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationCallbackEventTopicUriReference User = null, ConversationCallbackEventTopicUriReference Queue = null, ConversationCallbackEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationCallbackEventTopicErrorBody ErrorInfo = null, ConversationCallbackEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, ConversationCallbackEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, ConversationCallbackEventTopicUriReference ExternalOrganization = null, ConversationCallbackEventTopicWrapup Wrapup = null, ConversationCallbackEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationCallbackEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, ConversationCallbackEventTopicQueueMediaSettings QueueMediaSettings = null, ConversationCallbackEventTopicDialerPreview OutboundPreview = null, ConversationCallbackEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, bool? ExternalCampaign = null, long? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
+        /// <param name="PublicIpAddress">PublicIpAddress.</param>
+        public ConversationCallbackEventTopicCallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationCallbackEventTopicUriReference User = null, ConversationCallbackEventTopicUriReference Queue = null, ConversationCallbackEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationCallbackEventTopicErrorBody ErrorInfo = null, ConversationCallbackEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, ConversationCallbackEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, ConversationCallbackEventTopicUriReference ExternalOrganization = null, ConversationCallbackEventTopicWrapup Wrapup = null, ConversationCallbackEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationCallbackEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, ConversationCallbackEventTopicQueueMediaSettings QueueMediaSettings = null, ConversationCallbackEventTopicDialerPreview OutboundPreview = null, ConversationCallbackEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, bool? ExternalCampaign = null, long? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, string PublicIpAddress = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -516,6 +517,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TimeoutSeconds = TimeoutSeconds;
             this.CallbackScheduledTime = CallbackScheduledTime;
             this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
+            this.PublicIpAddress = PublicIpAddress;
             
         }
         
@@ -882,6 +884,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string AutomatedCallbackConfigId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets PublicIpAddress
+        /// </summary>
+        [DataMember(Name="publicIpAddress", EmitDefaultValue=false)]
+        public string PublicIpAddress { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -940,6 +950,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
             sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
+            sb.Append("  PublicIpAddress: ").Append(PublicIpAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1224,6 +1235,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AutomatedCallbackConfigId == other.AutomatedCallbackConfigId ||
                     this.AutomatedCallbackConfigId != null &&
                     this.AutomatedCallbackConfigId.Equals(other.AutomatedCallbackConfigId)
+                ) &&
+                (
+                    this.PublicIpAddress == other.PublicIpAddress ||
+                    this.PublicIpAddress != null &&
+                    this.PublicIpAddress.Equals(other.PublicIpAddress)
                 );
         }
 
@@ -1384,6 +1400,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AutomatedCallbackConfigId != null)
                     hash = hash * 59 + this.AutomatedCallbackConfigId.GetHashCode();
+
+                if (this.PublicIpAddress != null)
+                    hash = hash * 59 + this.PublicIpAddress.GetHashCode();
 
                 return hash;
             }

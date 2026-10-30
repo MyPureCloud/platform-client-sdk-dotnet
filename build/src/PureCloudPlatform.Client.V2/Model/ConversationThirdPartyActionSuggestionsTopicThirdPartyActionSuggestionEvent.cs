@@ -200,9 +200,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EngagementType">EngagementType.</param>
         /// <param name="Feedback">Feedback.</param>
         /// <param name="ActiveIntent">ActiveIntent.</param>
+        /// <param name="ActiveSentiment">ActiveSentiment.</param>
         /// <param name="Context">Context.</param>
+        /// <param name="ConversationTurns">ConversationTurns.</param>
         /// <param name="ThirdPartySuggestion">ThirdPartySuggestion.</param>
-        public ConversationThirdPartyActionSuggestionsTopicThirdPartyActionSuggestionEvent(DateTime? EventTime = null, Guid? ConversationId = null, Guid? SuggestionId = null, StateEnum? State = null, TriggerTypeEnum? TriggerType = null, EngagementTypeEnum? EngagementType = null, ConversationThirdPartyActionSuggestionsTopicSuggestionFeedback Feedback = null, ConversationThirdPartyActionSuggestionsTopicSuggestedIntent ActiveIntent = null, ConversationThirdPartyActionSuggestionsTopicSuggestionContext Context = null, ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion ThirdPartySuggestion = null)
+        /// <param name="CopilotContext">CopilotContext.</param>
+        public ConversationThirdPartyActionSuggestionsTopicThirdPartyActionSuggestionEvent(DateTime? EventTime = null, Guid? ConversationId = null, Guid? SuggestionId = null, StateEnum? State = null, TriggerTypeEnum? TriggerType = null, EngagementTypeEnum? EngagementType = null, ConversationThirdPartyActionSuggestionsTopicSuggestionFeedback Feedback = null, ConversationThirdPartyActionSuggestionsTopicSuggestedIntent ActiveIntent = null, ConversationThirdPartyActionSuggestionsTopicActiveSentiment ActiveSentiment = null, ConversationThirdPartyActionSuggestionsTopicSuggestionContext Context = null, List<ConversationThirdPartyActionSuggestionsTopicConversationTurn> ConversationTurns = null, ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion ThirdPartySuggestion = null, List<ConversationThirdPartyActionSuggestionsTopicCopilotContextEntry> CopilotContext = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -212,8 +215,11 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EngagementType = EngagementType;
             this.Feedback = Feedback;
             this.ActiveIntent = ActiveIntent;
+            this.ActiveSentiment = ActiveSentiment;
             this.Context = Context;
+            this.ConversationTurns = ConversationTurns;
             this.ThirdPartySuggestion = ThirdPartySuggestion;
+            this.CopilotContext = CopilotContext;
             
         }
         
@@ -266,6 +272,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ActiveSentiment
+        /// </summary>
+        [DataMember(Name="activeSentiment", EmitDefaultValue=false)]
+        public ConversationThirdPartyActionSuggestionsTopicActiveSentiment ActiveSentiment { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Context
         /// </summary>
         [DataMember(Name="context", EmitDefaultValue=false)]
@@ -274,10 +288,26 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ConversationTurns
+        /// </summary>
+        [DataMember(Name="conversationTurns", EmitDefaultValue=false)]
+        public List<ConversationThirdPartyActionSuggestionsTopicConversationTurn> ConversationTurns { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets ThirdPartySuggestion
         /// </summary>
         [DataMember(Name="thirdPartySuggestion", EmitDefaultValue=false)]
         public ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion ThirdPartySuggestion { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets CopilotContext
+        /// </summary>
+        [DataMember(Name="copilotContext", EmitDefaultValue=false)]
+        public List<ConversationThirdPartyActionSuggestionsTopicCopilotContextEntry> CopilotContext { get; set; }
 
 
         /// <summary>
@@ -297,8 +327,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EngagementType: ").Append(EngagementType).Append("\n");
             sb.Append("  Feedback: ").Append(Feedback).Append("\n");
             sb.Append("  ActiveIntent: ").Append(ActiveIntent).Append("\n");
+            sb.Append("  ActiveSentiment: ").Append(ActiveSentiment).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
+            sb.Append("  ConversationTurns: ").Append(ConversationTurns).Append("\n");
             sb.Append("  ThirdPartySuggestion: ").Append(ThirdPartySuggestion).Append("\n");
+            sb.Append("  CopilotContext: ").Append(CopilotContext).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -380,14 +413,29 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActiveIntent.Equals(other.ActiveIntent)
                 ) &&
                 (
+                    this.ActiveSentiment == other.ActiveSentiment ||
+                    this.ActiveSentiment != null &&
+                    this.ActiveSentiment.Equals(other.ActiveSentiment)
+                ) &&
+                (
                     this.Context == other.Context ||
                     this.Context != null &&
                     this.Context.Equals(other.Context)
                 ) &&
                 (
+                    this.ConversationTurns == other.ConversationTurns ||
+                    this.ConversationTurns != null &&
+                    this.ConversationTurns.SequenceEqual(other.ConversationTurns)
+                ) &&
+                (
                     this.ThirdPartySuggestion == other.ThirdPartySuggestion ||
                     this.ThirdPartySuggestion != null &&
                     this.ThirdPartySuggestion.Equals(other.ThirdPartySuggestion)
+                ) &&
+                (
+                    this.CopilotContext == other.CopilotContext ||
+                    this.CopilotContext != null &&
+                    this.CopilotContext.SequenceEqual(other.CopilotContext)
                 );
         }
 
@@ -426,11 +474,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ActiveIntent != null)
                     hash = hash * 59 + this.ActiveIntent.GetHashCode();
 
+                if (this.ActiveSentiment != null)
+                    hash = hash * 59 + this.ActiveSentiment.GetHashCode();
+
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
 
+                if (this.ConversationTurns != null)
+                    hash = hash * 59 + this.ConversationTurns.GetHashCode();
+
                 if (this.ThirdPartySuggestion != null)
                     hash = hash * 59 + this.ThirdPartySuggestion.GetHashCode();
+
+                if (this.CopilotContext != null)
+                    hash = hash * 59 + this.CopilotContext.GetHashCode();
 
                 return hash;
             }

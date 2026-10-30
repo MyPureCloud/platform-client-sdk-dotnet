@@ -12,10 +12,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetEmailsSettings**](#GetEmailsSettings) | **Get** /api/v2/emails/settings | Get email Contact Center settings |
 | [**GetEmailsSettingsThreading**](#GetEmailsSettingsThreading) | **Get** /api/v2/emails/settings/threading | Get email threading settings |
 | [**GetExternalcontactsSettings**](#GetExternalcontactsSettings) | **Get** /api/v2/externalcontacts/settings | Get settings |
+| [**GetSearchSettings**](#GetSearchSettings) | **Get** /api/v2/search/settings | Get the organization&#39;s search settings |
 | [**GetSettingsExecutiondata**](#GetSettingsExecutiondata) | **Get** /api/v2/settings/executiondata | Get the execution history enabled setting. |
 | [**GetUsersAgentuiAgentsAutoanswerAgentIdSettings**](#GetUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Get** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Get agent auto answer settings |
 | [**PatchEmailsSettings**](#PatchEmailsSettings) | **Patch** /api/v2/emails/settings | Patch email Contact Center settings |
 | [**PatchEmailsSettingsThreading**](#PatchEmailsSettingsThreading) | **Patch** /api/v2/emails/settings/threading | Patch email threading settings |
+| [**PatchSearchSettings**](#PatchSearchSettings) | **Patch** /api/v2/search/settings | Patch the organization&#39;s search settings |
+| [**PatchSearchSettingsContentsearch**](#PatchSearchSettingsContentsearch) | **Patch** /api/v2/search/settings/contentsearch | Patch the organization&#39;s content search settings |
 | [**PatchSettingsExecutiondata**](#PatchSettingsExecutiondata) | **Patch** /api/v2/settings/executiondata | Edit the execution history on off setting. |
 | [**PatchUsersAgentuiAgentsAutoanswerAgentIdSettings**](#PatchUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Patch** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Update agent auto answer settings |
 | [**PutExternalcontactsSettings**](#PutExternalcontactsSettings) | **Put** /api/v2/externalcontacts/settings | Set settings |
@@ -368,6 +371,66 @@ This endpoint does require any parameters.
 [**ExternalContactsSettings**](ExternalContactsSettings)
 
 
+## GetSearchSettings
+
+> [**OrgSettings**](OrgSettings) GetSearchSettings ()
+
+
+Get the organization's search settings
+
+GetSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+* analytics:transcriptsearchsetting:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSearchSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SettingsApi();
+
+            try
+            { 
+                // Get the organization's search settings
+                OrgSettings result = apiInstance.GetSearchSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SettingsApi.GetSearchSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**OrgSettings**](OrgSettings)
+
+
 ## GetSettingsExecutiondata
 
 > [**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse) GetSettingsExecutiondata ()
@@ -611,6 +674,134 @@ namespace Example
 ### Return type
 
 [**EmailThreadingSettings**](EmailThreadingSettings)
+
+
+## PatchSearchSettings
+
+> [**OrgSettings**](OrgSettings) PatchSearchSettings (OrgSettings body)
+
+
+Patch the organization's search settings
+
+PatchSearchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchSearchSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SettingsApi();
+            var body = new OrgSettings(); // OrgSettings | Search Settings
+
+            try
+            { 
+                // Patch the organization's search settings
+                OrgSettings result = apiInstance.PatchSearchSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SettingsApi.PatchSearchSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OrgSettings**](OrgSettings)| Search Settings |  |
+
+### Return type
+
+[**OrgSettings**](OrgSettings)
+
+
+## PatchSearchSettingsContentsearch
+
+> [**ContentSearchSetting**](ContentSearchSetting) PatchSearchSettingsContentsearch (ContentSearchSetting body)
+
+
+Patch the organization's content search settings
+
+PatchSearchSettingsContentsearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:transcriptsearchsetting:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchSearchSettingsContentsearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SettingsApi();
+            var body = new ContentSearchSetting(); // ContentSearchSetting | Content search setting
+
+            try
+            { 
+                // Patch the organization's content search settings
+                ContentSearchSetting result = apiInstance.PatchSearchSettingsContentsearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SettingsApi.PatchSearchSettingsContentsearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContentSearchSetting**](ContentSearchSetting)| Content search setting |  |
+
+### Return type
+
+[**ContentSearchSetting**](ContentSearchSetting)
 
 
 ## PatchSettingsExecutiondata
@@ -867,4 +1058,4 @@ namespace Example
 [**AutoAnswerSettings**](AutoAnswerSettings)
 
 
-_PureCloudPlatform.Client.V2 275.0.0_
+_PureCloudPlatform.Client.V2 276.0.0_
