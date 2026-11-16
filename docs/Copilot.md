@@ -11,6 +11,7 @@
 | **DefaultLanguage** | **string** | Copilot default language, e.g. [en-US, es-US, es-ES]. Once set, it can not be modified. | |
 | **KnowledgeAnswerConfig** | [**KnowledgeAnswerConfig**](KnowledgeAnswerConfig) | Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead. | [optional] |
 | **SummaryGenerationConfig** | [**SummaryGenerationConfig**](SummaryGenerationConfig) | Copilot generated summary configuration. | [optional] |
+| **EmailSummaryGenerationConfig** | [**EmailSummaryGenerationConfig**](EmailSummaryGenerationConfig) | Email summary configuration. | [optional] |
 | **WrapupCodePredictionConfig** | [**WrapupCodePredictionConfig**](WrapupCodePredictionConfig) | Copilot generated wrapup code prediction configuration. | [optional] |
 | **AnswerGenerationConfig** | [**AnswerGenerationConfig**](AnswerGenerationConfig) | Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead. | [optional] |
 | **NluEngineType** | **string** | Language understanding engine type. | [optional] |
@@ -22,4 +23,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

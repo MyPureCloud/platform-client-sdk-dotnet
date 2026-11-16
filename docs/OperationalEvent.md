@@ -21,7 +21,9 @@
 | **EntityVersion** | **string** | The version of the entity in the providing service | [optional] |
 | **PhoneNumber** | **string** | The phone number associated with the event | [optional] |
 | **ExternalContactId** | **string** | The external contact ID associated with the event | [optional] |
+| **ReferenceId** | **string** | The identifier of an external record that provides additional information or context related to the event | [optional] |
+| **ReferenceType** | **string** | The type of external record that referenceId refers to | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

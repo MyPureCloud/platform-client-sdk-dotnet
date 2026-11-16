@@ -54,8 +54,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitActivityplan**](#GetWorkforcemanagementBusinessunitActivityplan) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId} | Get an activity plan |
 | [**GetWorkforcemanagementBusinessunitActivityplanDeletionsJob**](#GetWorkforcemanagementBusinessunitActivityplanDeletionsJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs/{jobId} | Gets an activity plan deletion job |
 | [**GetWorkforcemanagementBusinessunitActivityplanJobs**](#GetWorkforcemanagementBusinessunitActivityplanJobs) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/jobs | Gets the latest job for an activity plan in the business unit |
+| [**GetWorkforcemanagementBusinessunitActivityplanOccurrence**](#GetWorkforcemanagementBusinessunitActivityplanOccurrence) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId} | Get a specific occurrence for the activity plan |
+| [**GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob**](#GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/deletions/jobs/{jobId} | Gets an occurrence deletion job |
 | [**GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob**](#GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs/{jobId} | Gets a session users deletion job |
 | [**GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob**](#GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs/{jobId} | Gets an activity plan sessions deletion job |
+| [**GetWorkforcemanagementBusinessunitActivityplanOccurrences**](#GetWorkforcemanagementBusinessunitActivityplanOccurrences) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences | Get all occurrences for an activity plan |
 | [**GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob**](#GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs/{jobId} | Gets an occurrences deletion job |
 | [**GetWorkforcemanagementBusinessunitActivityplanRunsJob**](#GetWorkforcemanagementBusinessunitActivityplanRunsJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs/{jobId} | Gets an activity plan run job |
 | [**GetWorkforcemanagementBusinessunitActivityplans**](#GetWorkforcemanagementBusinessunitActivityplans) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans | Get activity plans |
@@ -272,6 +275,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementAlternativeshiftsTrades**](#PostWorkforcemanagementAlternativeshiftsTrades) | **Post** /api/v2/workforcemanagement/alternativeshifts/trades | Create my alternative shift trade using an existing offer&#39;s jobId |
 | [**PostWorkforcemanagementBusinessunitActivitycodes**](#PostWorkforcemanagementBusinessunitActivitycodes) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes | Create a new activity code |
 | [**PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs**](#PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs | Delete an activity plan |
+| [**PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs**](#PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/deletions/jobs | Delete an occurrence for the activity plan |
 | [**PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs**](#PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs | Triggers a job to delete users from a session in the activity plan occurrence |
 | [**PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs**](#PostWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs | Triggers a job to delete sessions for the activity plan occurrence |
 | [**PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs**](#PostWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs | Delete occurrences for the activity plan |
@@ -291,6 +295,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate**](#PostWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}/forceregenerate | Force regenerate the latest long term staffing requirements for a business unit |
 | [**PostWorkforcemanagementBusinessunitCapacityplans**](#PostWorkforcemanagementBusinessunitCapacityplans) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans | Create a new capacity plan |
 | [**PostWorkforcemanagementBusinessunitCapacityplansBulkRemove**](#PostWorkforcemanagementBusinessunitCapacityplansBulkRemove) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/bulk/remove | Delete capacity plans in a business unit |
+| [**PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls**](#PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/forecast/uploadurls | Creates signed upload URLs for importing hourly and daily forecasts for a capacity plan |
 | [**PostWorkforcemanagementBusinessunitDecisionmetricsUpdate**](#PostWorkforcemanagementBusinessunitDecisionmetricsUpdate) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/update | Initiates the decision metrics update process |
 | [**PostWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl**](#PostWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/update/uploadurl | Creates a signed upload URL for updating decision metrics |
 | [**PostWorkforcemanagementBusinessunitIntraday**](#PostWorkforcemanagementBusinessunitIntraday) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday | Get intraday data for the given date for the requested planningGroupIds |
@@ -3652,6 +3657,140 @@ namespace Example
 [**ActivityPlanJobResponse**](ActivityPlanJobResponse)
 
 
+## GetWorkforcemanagementBusinessunitActivityplanOccurrence
+
+> [**ActivityPlanOccurrenceResponse**](ActivityPlanOccurrenceResponse) GetWorkforcemanagementBusinessunitActivityplanOccurrence (string businessUnitId, string activityPlanId, string occurrenceId)
+
+
+Get a specific occurrence for the activity plan
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitActivityplanOccurrenceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan
+            var occurrenceId = occurrenceId_example;  // string | The ID of the activity plan occurrence
+
+            try
+            { 
+                // Get a specific occurrence for the activity plan
+                ActivityPlanOccurrenceResponse result = apiInstance.GetWorkforcemanagementBusinessunitActivityplanOccurrence(businessUnitId, activityPlanId, occurrenceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitActivityplanOccurrence: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan |  |
+| **occurrenceId** | **string**| The ID of the activity plan occurrence |  |
+
+### Return type
+
+[**ActivityPlanOccurrenceResponse**](ActivityPlanOccurrenceResponse)
+
+
+## GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob
+
+> [**ActivityPlanJobResponse**](ActivityPlanJobResponse) GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob (string businessUnitId, string activityPlanId, string occurrenceId, string jobId)
+
+
+Gets an occurrence deletion job
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceDeletionJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan
+            var occurrenceId = occurrenceId_example;  // string | The ID of the activity plan occurrence
+            var jobId = jobId_example;  // string | The ID of the activity plan occurrence deletion job
+
+            try
+            { 
+                // Gets an occurrence deletion job
+                ActivityPlanJobResponse result = apiInstance.GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob(businessUnitId, activityPlanId, occurrenceId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan |  |
+| **occurrenceId** | **string**| The ID of the activity plan occurrence |  |
+| **jobId** | **string**| The ID of the activity plan occurrence deletion job |  |
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
 ## GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob
 
 > [**ActivityPlanJobResponse**](ActivityPlanJobResponse) GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob (string businessUnitId, string activityPlanId, string occurrenceId, string sessionId, string jobId)
@@ -3788,6 +3927,70 @@ namespace Example
 ### Return type
 
 [**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## GetWorkforcemanagementBusinessunitActivityplanOccurrences
+
+> [**ActivityPlanOccurrenceListing**](ActivityPlanOccurrenceListing) GetWorkforcemanagementBusinessunitActivityplanOccurrences (string businessUnitId, string activityPlanId)
+
+
+Get all occurrences for an activity plan
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitActivityplanOccurrencesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan
+
+            try
+            { 
+                // Get all occurrences for an activity plan
+                ActivityPlanOccurrenceListing result = apiInstance.GetWorkforcemanagementBusinessunitActivityplanOccurrences(businessUnitId, activityPlanId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitActivityplanOccurrences: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan |  |
+
+### Return type
+
+[**ActivityPlanOccurrenceListing**](ActivityPlanOccurrenceListing)
 
 
 ## GetWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob
@@ -5649,7 +5852,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
-| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentAdherenceAdjustments, AgentTimeOffRequest, AgentWorkPlanBid, AgentScheduleBid, AgentShiftTrade, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, AgentSelfScheduleJob, AgentSelfScheduleOffers, AgentSelfScheduleQuery, AgentSelfScheduleActivityMove, SelfScheduleSettings, AgentSelfScheduleSettings, AgentOpportunitiesQuery, AgentOpportunitiesEnrollments, AgentOpportunitiesEnrollmentsStatuses, AgentSchedulingPreferencesQuery, AgentSchedulingPreferences, AgentSchedulingPreferencesSettings, ActivityCodes, ActivityPlans, AdherenceAdjustmentsSettings, AdherenceAdjustmentsReasonCodes, AdherenceAdjustments, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, CapacityPlanForecast, CapacityPlanForecastInputs, CapacityPlanPerformancePrediction, ContinuousForecast, MainForecastDiagnostics, PredictionsForecastingScenarioJobs, PredictionsForecastingScenarios, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans, ScheduleBid, ScheduleBidGroup, Opportunities, OpportunitiesQuery, OpportunitiesEnrollmentsQuery, OpportunitiesExternalActivitiesQuery, OpportunitiesStatuses, OpportunitiesEnrollmentsStatuses, SchedulingPreferencesQuery, SchedulingPreferencesSettings, SchedulingPreferencesSchedulesQuery, SchedulingPreferencesSettingsQuery, DecisionMetrics |
+| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentAdherenceAdjustments, AgentTimeOffRequest, AgentWorkPlanBid, AgentScheduleBid, AgentScheduleChangeConstraint, AgentShiftActivityRule, AgentShiftTrade, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, AgentSelfScheduleJob, AgentSelfScheduleOffers, AgentSelfScheduleQuery, AgentSelfScheduleActivityMove, SelfScheduleSettings, AgentSelfScheduleSettings, AgentOpportunitiesQuery, AgentOpportunitiesEnrollments, AgentOpportunitiesEnrollmentsStatuses, AgentOpportunitySettings, AgentSchedulingPreferencesQuery, AgentSchedulingPreferences, AgentSchedulingPreferencesSettings, ActivityCodes, ActivityPlans, AdherenceAdjustmentsSettings, AdherenceAdjustmentsReasonCodes, AdherenceAdjustments, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, CapacityPlanForecast, CapacityPlanForecastInputs, CapacityPlanPerformancePrediction, ContinuousForecast, MainForecastDiagnostics, PredictionsForecastingScenarioJobs, PredictionsForecastingScenarios, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, PlanningGroupsRoutePathsActuals, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans, ScheduleBid, ScheduleBidGroup, ScheduleChangeConstraint, ScheduleChangeConstraintBulk, ScheduleChangeConstraintListing, ScheduleChangeConstraintWorkPlans, ShiftActivityRule, ShiftActivityRuleBulk, ShiftActivityRuleListing, ShiftActivityRuleWorkPlans, Opportunities, OpportunitySettings, OpportunitiesQuery, OpportunitiesEnrollmentsQuery, OpportunitiesExternalActivitiesQuery, OpportunitiesStatuses, OpportunitiesEnrollmentsStatuses, SchedulingPreferencesQuery, SchedulingPreferencesSettings, SchedulingPreferencesSchedulesQuery, SchedulingPreferencesSettingsQuery, DecisionMetrics |
 | **divisionId** | **string**| If specified, the list of management units belonging to the specified division will be returned | [optional]  |
 
 ### Return type
@@ -8962,7 +9165,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **feature** | **string**| If specified, the list of business units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentAdherenceAdjustments, AgentTimeOffRequest, AgentWorkPlanBid, AgentScheduleBid, AgentShiftTrade, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, AgentSelfScheduleJob, AgentSelfScheduleOffers, AgentSelfScheduleQuery, AgentSelfScheduleActivityMove, SelfScheduleSettings, AgentSelfScheduleSettings, AgentOpportunitiesQuery, AgentOpportunitiesEnrollments, AgentOpportunitiesEnrollmentsStatuses, AgentSchedulingPreferencesQuery, AgentSchedulingPreferences, AgentSchedulingPreferencesSettings, ActivityCodes, ActivityPlans, AdherenceAdjustmentsSettings, AdherenceAdjustmentsReasonCodes, AdherenceAdjustments, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, CapacityPlanForecast, CapacityPlanForecastInputs, CapacityPlanPerformancePrediction, ContinuousForecast, MainForecastDiagnostics, PredictionsForecastingScenarioJobs, PredictionsForecastingScenarios, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans, ScheduleBid, ScheduleBidGroup, Opportunities, OpportunitiesQuery, OpportunitiesEnrollmentsQuery, OpportunitiesExternalActivitiesQuery, OpportunitiesStatuses, OpportunitiesEnrollmentsStatuses, SchedulingPreferencesQuery, SchedulingPreferencesSettings, SchedulingPreferencesSchedulesQuery, SchedulingPreferencesSettingsQuery, DecisionMetrics |
+| **feature** | **string**| If specified, the list of business units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentAdherenceAdjustments, AgentTimeOffRequest, AgentWorkPlanBid, AgentScheduleBid, AgentScheduleChangeConstraint, AgentShiftActivityRule, AgentShiftTrade, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, AgentSelfScheduleJob, AgentSelfScheduleOffers, AgentSelfScheduleQuery, AgentSelfScheduleActivityMove, SelfScheduleSettings, AgentSelfScheduleSettings, AgentOpportunitiesQuery, AgentOpportunitiesEnrollments, AgentOpportunitiesEnrollmentsStatuses, AgentOpportunitySettings, AgentSchedulingPreferencesQuery, AgentSchedulingPreferences, AgentSchedulingPreferencesSettings, ActivityCodes, ActivityPlans, AdherenceAdjustmentsSettings, AdherenceAdjustmentsReasonCodes, AdherenceAdjustments, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, CapacityPlanForecast, CapacityPlanForecastInputs, CapacityPlanPerformancePrediction, ContinuousForecast, MainForecastDiagnostics, PredictionsForecastingScenarioJobs, PredictionsForecastingScenarios, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, PlanningGroupsRoutePathsActuals, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans, ScheduleBid, ScheduleBidGroup, ScheduleChangeConstraint, ScheduleChangeConstraintBulk, ScheduleChangeConstraintListing, ScheduleChangeConstraintWorkPlans, ShiftActivityRule, ShiftActivityRuleBulk, ShiftActivityRuleListing, ShiftActivityRuleWorkPlans, Opportunities, OpportunitySettings, OpportunitiesQuery, OpportunitiesEnrollmentsQuery, OpportunitiesExternalActivitiesQuery, OpportunitiesStatuses, OpportunitiesEnrollmentsStatuses, SchedulingPreferencesQuery, SchedulingPreferencesSettings, SchedulingPreferencesSchedulesQuery, SchedulingPreferencesSettingsQuery, DecisionMetrics |
 | **divisionId** | **string**| If specified, the list of business units belonging to the specified division will be returned | [optional]  |
 
 ### Return type
@@ -11299,7 +11502,7 @@ namespace Example
 | **pageSize** | **int?**| Deprecated, paging is not supported | [optional]  |
 | **pageNumber** | **int?**| Deprecated, paging is not supported | [optional]  |
 | **expand** | **string**| Deprecated, expand settings on the single MU route | [optional] <br />**Values**: details |
-| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentAdherenceAdjustments, AgentTimeOffRequest, AgentWorkPlanBid, AgentScheduleBid, AgentShiftTrade, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, AgentSelfScheduleJob, AgentSelfScheduleOffers, AgentSelfScheduleQuery, AgentSelfScheduleActivityMove, SelfScheduleSettings, AgentSelfScheduleSettings, AgentOpportunitiesQuery, AgentOpportunitiesEnrollments, AgentOpportunitiesEnrollmentsStatuses, AgentSchedulingPreferencesQuery, AgentSchedulingPreferences, AgentSchedulingPreferencesSettings, ActivityCodes, ActivityPlans, AdherenceAdjustmentsSettings, AdherenceAdjustmentsReasonCodes, AdherenceAdjustments, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, CapacityPlanForecast, CapacityPlanForecastInputs, CapacityPlanPerformancePrediction, ContinuousForecast, MainForecastDiagnostics, PredictionsForecastingScenarioJobs, PredictionsForecastingScenarios, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans, ScheduleBid, ScheduleBidGroup, Opportunities, OpportunitiesQuery, OpportunitiesEnrollmentsQuery, OpportunitiesExternalActivitiesQuery, OpportunitiesStatuses, OpportunitiesEnrollmentsStatuses, SchedulingPreferencesQuery, SchedulingPreferencesSettings, SchedulingPreferencesSchedulesQuery, SchedulingPreferencesSettingsQuery, DecisionMetrics |
+| **feature** | **string**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional] <br />**Values**: AgentHistoricalAdherence, AgentHistoricalAdherenceConformance, AgentSchedule, AgentAdherenceAdjustments, AgentTimeOffRequest, AgentWorkPlanBid, AgentScheduleBid, AgentScheduleChangeConstraint, AgentShiftActivityRule, AgentShiftTrade, AlternativeShift, Coaching, Learning, AgentUnavailableTimes, AgentSelfScheduleJob, AgentSelfScheduleOffers, AgentSelfScheduleQuery, AgentSelfScheduleActivityMove, SelfScheduleSettings, AgentSelfScheduleSettings, AgentOpportunitiesQuery, AgentOpportunitiesEnrollments, AgentOpportunitiesEnrollmentsStatuses, AgentOpportunitySettings, AgentSchedulingPreferencesQuery, AgentSchedulingPreferences, AgentSchedulingPreferencesSettings, ActivityCodes, ActivityPlans, AdherenceAdjustmentsSettings, AdherenceAdjustmentsReasonCodes, AdherenceAdjustments, UnavailableTimes, Agents, BuActivityCodes, BusinessUnits, CapacityPlan, CapacityPlanForecast, CapacityPlanForecastInputs, CapacityPlanPerformancePrediction, ContinuousForecast, MainForecastDiagnostics, PredictionsForecastingScenarioJobs, PredictionsForecastingScenarios, HistoricalAdherence, HistoricalShrinkage, IntradayMonitoring, BuIntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, BuSchedules, ServiceGoalTemplates, PlanningGroups, PlanningGroupsRoutePathsActuals, LongTermStaffing, ShiftTrading, ShortTermForecasts, BuShortTermForecasts, StaffingGroups, TimeOffPlans, TimeOffRequests, TimeOffLimits, WorkPlanBids, WorkPlanBidGroups, WorkPlanRotations, WorkPlans, ScheduleBid, ScheduleBidGroup, ScheduleChangeConstraint, ScheduleChangeConstraintBulk, ScheduleChangeConstraintListing, ScheduleChangeConstraintWorkPlans, ShiftActivityRule, ShiftActivityRuleBulk, ShiftActivityRuleListing, ShiftActivityRuleWorkPlans, Opportunities, OpportunitySettings, OpportunitiesQuery, OpportunitiesEnrollmentsQuery, OpportunitiesExternalActivitiesQuery, OpportunitiesStatuses, OpportunitiesEnrollmentsStatuses, SchedulingPreferencesQuery, SchedulingPreferencesSettings, SchedulingPreferencesSchedulesQuery, SchedulingPreferencesSettingsQuery, DecisionMetrics |
 | **divisionId** | **string**| If specified, the list of management units belonging to the specified division will be returned | [optional]  |
 
 ### Return type
@@ -17541,7 +17744,7 @@ namespace Example
 
 ## PostWorkforcemanagementAgentschedulesMine
 
-> [**BuCurrentAgentScheduleSearchResponse**](BuCurrentAgentScheduleSearchResponse) PostWorkforcemanagementAgentschedulesMine (BuGetCurrentAgentScheduleRequest body)
+> [**BuCurrentAgentScheduleSearchResponse**](BuCurrentAgentScheduleSearchResponse) PostWorkforcemanagementAgentschedulesMine (BuGetCurrentAgentScheduleRequest body, List<string> expand = null)
 
 
 Get published schedule for the current user
@@ -17573,11 +17776,12 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var body = new BuGetCurrentAgentScheduleRequest(); // BuGetCurrentAgentScheduleRequest | body
+            var expand = new List<string>(); // List<string> | Include to access additional data on the agent schedules (optional) 
 
             try
             { 
                 // Get published schedule for the current user
-                BuCurrentAgentScheduleSearchResponse result = apiInstance.PostWorkforcemanagementAgentschedulesMine(body);
+                BuCurrentAgentScheduleSearchResponse result = apiInstance.PostWorkforcemanagementAgentschedulesMine(body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -17595,6 +17799,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BuGetCurrentAgentScheduleRequest**](BuGetCurrentAgentScheduleRequest)| body |  |
+| **expand** | [**List<string>**](string)| Include to access additional data on the agent schedules | [optional] <br />**Values**: agentSchedules.workPlansPerWeek |
 
 ### Return type
 
@@ -17911,6 +18116,74 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
 | **activityPlanId** | **string**| The ID of the activity plan to delete |  |
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs
+
+> [**ActivityPlanJobResponse**](ActivityPlanJobResponse) PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs (string businessUnitId, string activityPlanId, string occurrenceId)
+
+
+Delete an occurrence for the activity plan
+
+Triggers a job to delete an occurrence of the activity plan. The activity plan cannot be updated until the job completes
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceDeletionJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan
+            var occurrenceId = occurrenceId_example;  // string | The ID of the activity plan occurrence
+
+            try
+            { 
+                // Delete an occurrence for the activity plan
+                ActivityPlanJobResponse result = apiInstance.PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs(businessUnitId, activityPlanId, occurrenceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan |  |
+| **occurrenceId** | **string**| The ID of the activity plan occurrence |  |
 
 ### Return type
 
@@ -19171,6 +19444,72 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+
+## PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls
+
+> [**CapacityPlanForecastImportUploadResponse**](CapacityPlanForecastImportUploadResponse) PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls (string businessUnitId, CapacityPlanForecastImportUploadRequest body)
+
+
+Creates signed upload URLs for importing hourly and daily forecasts for a capacity plan
+
+Returns two upload URLs, one for the hourly forecast and one for the daily forecast. Once both uploads are complete, call POST /capacityplans (new capacity plan) or PATCH /capacityplans/{capacityPlanId} (existing capacity plan) or POST /capacityplans/{capacityPlanId}/copy (copy capacity plan) with both upload keys in importedForecast
+
+Requires ANY permissions: 
+
+* wfm:capacityPlanForecast:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurlsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new CapacityPlanForecastImportUploadRequest(); // CapacityPlanForecastImportUploadRequest | body
+
+            try
+            { 
+                // Creates signed upload URLs for importing hourly and daily forecasts for a capacity plan
+                CapacityPlanForecastImportUploadResponse result = apiInstance.PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**CapacityPlanForecastImportUploadRequest**](CapacityPlanForecastImportUploadRequest)| body |  |
+
+### Return type
+
+[**CapacityPlanForecastImportUploadResponse**](CapacityPlanForecastImportUploadResponse)
 
 
 ## PostWorkforcemanagementBusinessunitDecisionmetricsUpdate
@@ -26431,4 +26770,4 @@ namespace Example
 [**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

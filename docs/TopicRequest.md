@@ -8,7 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The topic name | |
 | **Description** | **string** | The topic description | [optional] |
-| **Strictness** | **string** | The topic strictness, default value is 72 | [optional] |
+| **Strictness** | **int?** | The topic strictness, default value is 72 | [optional] |
 | **ProgramIds** | **List&lt;string&gt;** | The ids of programs associated to the topic | [optional] |
 | **MatchingType** | **string** | The topic matching type Lexical or Semantic, default value is Semantic | [optional] |
 | **Tags** | **List&lt;string&gt;** | The topic tags | [optional] |
@@ -18,4 +18,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

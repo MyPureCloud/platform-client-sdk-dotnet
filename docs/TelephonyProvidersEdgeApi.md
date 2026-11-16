@@ -91,6 +91,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesTrunks**](#GetTelephonyProvidersEdgesTrunks) | **Get** /api/v2/telephony/providers/edges/trunks | Get the list of available trunks. |
 | [**GetTelephonyProvidersEdgesTrunksMetrics**](#GetTelephonyProvidersEdgesTrunksMetrics) | **Get** /api/v2/telephony/providers/edges/trunks/metrics | Get the metrics for a list of trunks. |
 | [**GetTelephonyProvidersEdgesTrunkswithrecording**](#GetTelephonyProvidersEdgesTrunkswithrecording) | **Get** /api/v2/telephony/providers/edges/trunkswithrecording | Get Counts of trunks that have recording disabled or enabled |
+| [**GetTelephonyTrunkbasesettingMetrics**](#GetTelephonyTrunkbasesettingMetrics) | **Get** /api/v2/telephony/trunkbasesettings/{trunkBaseId}/metrics | Get the trunkbase metrics. |
+| [**GetTelephonyTrunkbasesettingsMetrics**](#GetTelephonyTrunkbasesettingsMetrics) | **Get** /api/v2/telephony/trunkbasesettings/metrics | Get the trunkbase metrics for the specified ids. |
 | [**PatchTelephonyProvidersEdgesSiteSiteconnections**](#PatchTelephonyProvidersEdgesSiteSiteconnections) | **Patch** /api/v2/telephony/providers/edges/sites/{siteId}/siteconnections | Disable site connections for a site. |
 | [**PostTelephonyProvidersEdgeDiagnosticNslookup**](#PostTelephonyProvidersEdgeDiagnosticNslookup) | **Post** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup | Nslookup request command to collect networking-related information from an Edge for a target IP or host. |
 | [**PostTelephonyProvidersEdgeDiagnosticPing**](#PostTelephonyProvidersEdgeDiagnosticPing) | **Post** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping | Ping Request command to collect networking-related information from an Edge for a target IP or host. |
@@ -5662,6 +5664,130 @@ namespace Example
 [**TrunkRecordingEnabledCount**](TrunkRecordingEnabledCount)
 
 
+## GetTelephonyTrunkbasesettingMetrics
+
+> [**TrunkBaseMetrics**](TrunkBaseMetrics) GetTelephonyTrunkbasesettingMetrics (string trunkBaseId)
+
+
+Get the trunkbase metrics.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyTrunkbasesettingMetricsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var trunkBaseId = trunkBaseId_example;  // string | TrunkBase Id
+
+            try
+            { 
+                // Get the trunkbase metrics.
+                TrunkBaseMetrics result = apiInstance.GetTelephonyTrunkbasesettingMetrics(trunkBaseId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyTrunkbasesettingMetrics: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trunkBaseId** | **string**| TrunkBase Id |  |
+
+### Return type
+
+[**TrunkBaseMetrics**](TrunkBaseMetrics)
+
+
+## GetTelephonyTrunkbasesettingsMetrics
+
+> [**TrunkBaseMetricsEntityListing**](TrunkBaseMetricsEntityListing) GetTelephonyTrunkbasesettingsMetrics (string ids)
+
+
+Get the trunkbase metrics for the specified ids.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyTrunkbasesettingsMetricsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var ids = ids_example;  // string | TrunkBase Ids
+
+            try
+            { 
+                // Get the trunkbase metrics for the specified ids.
+                TrunkBaseMetricsEntityListing result = apiInstance.GetTelephonyTrunkbasesettingsMetrics(ids);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyTrunkbasesettingsMetrics: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ids** | **string**| TrunkBase Ids |  |
+
+### Return type
+
+[**TrunkBaseMetricsEntityListing**](TrunkBaseMetricsEntityListing)
+
+
 ## PatchTelephonyProvidersEdgesSiteSiteconnections
 
 > [**SiteConnections**](SiteConnections) PatchTelephonyProvidersEdgesSiteSiteconnections (string siteId, DisableSiteConnectionsRequest body)
@@ -8451,4 +8577,4 @@ namespace Example
 [**TrunkBase**](TrunkBase)
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

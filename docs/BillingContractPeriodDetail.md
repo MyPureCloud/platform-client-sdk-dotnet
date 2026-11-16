@@ -11,8 +11,7 @@
 | **DateEnd** | **String** | The date when the Billing Period starts. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **Status** | **string** | The type of address. | [optional] |
 | **Charges** | [**List&lt;BillingCharge&gt;**](BillingCharge) | Represents usage metrics including prepaid, actual, and overage quantities along with associated charges. | [optional] |
-| **Wallets** | [**List&lt;BillingWallet&gt;**](BillingWallet) | Represents usage metrics including prepaid, actual, and overage quantities along with associated charges. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

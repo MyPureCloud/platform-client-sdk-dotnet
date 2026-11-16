@@ -507,7 +507,7 @@ namespace Example
 
 ## GetCasemanagementCaseAssociations
 
-> [**CaseAssociationListing**](CaseAssociationListing) GetCasemanagementCaseAssociations (string caseId, string before = null, string after = null, string pageSize = null)
+> [**CaseAssociationListing**](CaseAssociationListing) GetCasemanagementCaseAssociations (string caseId, string after = null, int? pageSize = null)
 
 
 Get a list of Case associations for the Case.
@@ -539,14 +539,13 @@ namespace Example
 
             var apiInstance = new CaseManagementApi();
             var caseId = caseId_example;  // string | Case identifier.
-            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
-            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var after = after_example;  // string | Cursor that points to the end of the previously returned page. (optional) 
+            var pageSize = 56;  // int? | Number of entities to return. Maximum is 200. (optional) 
 
             try
             { 
                 // Get a list of Case associations for the Case.
-                CaseAssociationListing result = apiInstance.GetCasemanagementCaseAssociations(caseId, before, after, pageSize);
+                CaseAssociationListing result = apiInstance.GetCasemanagementCaseAssociations(caseId, after, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -564,9 +563,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **caseId** | **string**| Case identifier. |  |
-| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
-| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **after** | **string**| Cursor that points to the end of the previously returned page. | [optional]  |
+| **pageSize** | **int?**| Number of entities to return. Maximum is 200. | [optional]  |
 
 ### Return type
 
@@ -837,7 +835,7 @@ namespace Example
 
 ## GetCasemanagementCaseStageSteps
 
-> [**StepListing**](StepListing) GetCasemanagementCaseStageSteps (string caseId, string stageId, string before = null, string after = null, string pageSize = null)
+> [**StepListing**](StepListing) GetCasemanagementCaseStageSteps (string caseId, string stageId, string after = null, int? pageSize = null)
 
 
 Get a list of Steps.
@@ -870,14 +868,13 @@ namespace Example
             var apiInstance = new CaseManagementApi();
             var caseId = caseId_example;  // string | Case identifier.
             var stageId = stageId_example;  // string | Stage identifier.
-            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
-            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var after = after_example;  // string | Cursor that points to the end of the previously returned page. (optional) 
+            var pageSize = 56;  // int? | Number of entities to return. Maximum is 200. (optional) 
 
             try
             { 
                 // Get a list of Steps.
-                StepListing result = apiInstance.GetCasemanagementCaseStageSteps(caseId, stageId, before, after, pageSize);
+                StepListing result = apiInstance.GetCasemanagementCaseStageSteps(caseId, stageId, after, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -896,9 +893,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **caseId** | **string**| Case identifier. |  |
 | **stageId** | **string**| Stage identifier. |  |
-| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
-| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **after** | **string**| Cursor that points to the end of the previously returned page. | [optional]  |
+| **pageSize** | **int?**| Number of entities to return. Maximum is 200. | [optional]  |
 
 ### Return type
 
@@ -907,7 +903,7 @@ namespace Example
 
 ## GetCasemanagementCaseStages
 
-> [**StageListing**](StageListing) GetCasemanagementCaseStages (string caseId, string before = null, string after = null, string pageSize = null)
+> [**StageListing**](StageListing) GetCasemanagementCaseStages (string caseId, string after = null, int? pageSize = null)
 
 
 Get a list of Stages.
@@ -939,14 +935,13 @@ namespace Example
 
             var apiInstance = new CaseManagementApi();
             var caseId = caseId_example;  // string | Case identifier.
-            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
-            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var after = after_example;  // string | Cursor that points to the end of the previously returned page. (optional) 
+            var pageSize = 56;  // int? | Number of entities to return. Maximum is 200. (optional) 
 
             try
             { 
                 // Get a list of Stages.
-                StageListing result = apiInstance.GetCasemanagementCaseStages(caseId, before, after, pageSize);
+                StageListing result = apiInstance.GetCasemanagementCaseStages(caseId, after, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -964,9 +959,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **caseId** | **string**| Case identifier. |  |
-| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
-| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **after** | **string**| Cursor that points to the end of the previously returned page. | [optional]  |
+| **pageSize** | **int?**| Number of entities to return. Maximum is 200. | [optional]  |
 
 ### Return type
 
@@ -1431,7 +1425,7 @@ namespace Example
 
 ## GetCasemanagementCaseplanVersionStageplanStepplans
 
-> [**StepplanListing**](StepplanListing) GetCasemanagementCaseplanVersionStageplanStepplans (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
+> [**StepplanListing**](StepplanListing) GetCasemanagementCaseplanVersionStageplanStepplans (string caseplanId, string versionId, string stageplanId, string after = null, int? pageSize = null, List<string> expands = null)
 
 
 Get a list of Stepplans.
@@ -1465,15 +1459,14 @@ namespace Example
             var caseplanId = caseplanId_example;  // string | Caseplan identifier.
             var versionId = versionId_example;  // string | Caseplan version identifier.
             var stageplanId = stageplanId_example;  // string | Stageplan identifier.
-            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
-            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var after = after_example;  // string | Cursor that points to the end of the previously returned page. (optional) 
+            var pageSize = 56;  // int? | Number of entities to return. Maximum is 200. (optional) 
             var expands = new List<string>(); // List<string> | Fields to expand. (optional) 
 
             try
             { 
                 // Get a list of Stepplans.
-                StepplanListing result = apiInstance.GetCasemanagementCaseplanVersionStageplanStepplans(caseplanId, versionId, stageplanId, before, after, pageSize, expands);
+                StepplanListing result = apiInstance.GetCasemanagementCaseplanVersionStageplanStepplans(caseplanId, versionId, stageplanId, after, pageSize, expands);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1493,9 +1486,8 @@ namespace Example
 | **caseplanId** | **string**| Caseplan identifier. |  |
 | **versionId** | **string**| Caseplan version identifier. |  |
 | **stageplanId** | **string**| Stageplan identifier. |  |
-| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
-| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **after** | **string**| Cursor that points to the end of the previously returned page. | [optional]  |
+| **pageSize** | **int?**| Number of entities to return. Maximum is 200. | [optional]  |
 | **expands** | [**List<string>**](string)| Fields to expand. | [optional] <br />**Values**: caseplan, stageplan, worktype |
 
 ### Return type
@@ -1505,7 +1497,7 @@ namespace Example
 
 ## GetCasemanagementCaseplanVersionStageplans
 
-> [**StageplanListing**](StageplanListing) GetCasemanagementCaseplanVersionStageplans (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
+> [**StageplanListing**](StageplanListing) GetCasemanagementCaseplanVersionStageplans (string caseplanId, string versionId, string after = null, int? pageSize = null, List<string> expands = null)
 
 
 Get a list of Stageplans.
@@ -1538,15 +1530,14 @@ namespace Example
             var apiInstance = new CaseManagementApi();
             var caseplanId = caseplanId_example;  // string | Caseplan identifier.
             var versionId = versionId_example;  // string | Caseplan version identifier.
-            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
-            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var after = after_example;  // string | Cursor that points to the end of the previously returned page. (optional) 
+            var pageSize = 56;  // int? | Number of entities to return. Maximum is 200. (optional) 
             var expands = new List<string>(); // List<string> | Fields to expand. (optional) 
 
             try
             { 
                 // Get a list of Stageplans.
-                StageplanListing result = apiInstance.GetCasemanagementCaseplanVersionStageplans(caseplanId, versionId, before, after, pageSize, expands);
+                StageplanListing result = apiInstance.GetCasemanagementCaseplanVersionStageplans(caseplanId, versionId, after, pageSize, expands);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1565,9 +1556,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **caseplanId** | **string**| Caseplan identifier. |  |
 | **versionId** | **string**| Caseplan version identifier. |  |
-| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
-| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **after** | **string**| Cursor that points to the end of the previously returned page. | [optional]  |
+| **pageSize** | **int?**| Number of entities to return. Maximum is 200. | [optional]  |
 | **expands** | [**List<string>**](string)| Fields to expand. | [optional] <br />**Values**: caseplan |
 
 ### Return type
@@ -3437,4 +3427,4 @@ namespace Example
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

@@ -856,7 +856,7 @@ namespace Example
 
 ## GetExternalcontactsContactJourneySegments
 
-> [**SegmentAssignmentListing**](SegmentAssignmentListing) GetExternalcontactsContactJourneySegments (string contactId, bool? includeMerged = null, int? limit = null)
+> [**SegmentAssignmentListing**](SegmentAssignmentListing) GetExternalcontactsContactJourneySegments (string contactId, bool? includeMerged = null, int? limit = null, List<string> expand = null, List<string> segmentIds = null)
 
 
 Retrieve segment assignments by external contact ID.
@@ -890,11 +890,13 @@ namespace Example
             var contactId = contactId_example;  // string | ExternalContact ID
             var includeMerged = true;  // bool? | Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional) 
             var limit = 56;  // int? | Number of entities to return. Default of 25, maximum of 500. (optional) 
+            var expand = new List<string>(); // List<string> | Expand the response with additional fields. (optional) 
+            var segmentIds = new List<string>(); // List<string> | IDs of segments to return. Maximum of 5 (optional) 
 
             try
             { 
                 // Retrieve segment assignments by external contact ID.
-                SegmentAssignmentListing result = apiInstance.GetExternalcontactsContactJourneySegments(contactId, includeMerged, limit);
+                SegmentAssignmentListing result = apiInstance.GetExternalcontactsContactJourneySegments(contactId, includeMerged, limit, expand, segmentIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -914,6 +916,8 @@ namespace Example
 | **contactId** | **string**| ExternalContact ID |  |
 | **includeMerged** | **bool?**| Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. | [optional]  |
 | **limit** | **int?**| Number of entities to return. Default of 25, maximum of 500. | [optional]  |
+| **expand** | [**List<string>**](string)| Expand the response with additional fields. | [optional] <br />**Values**: segment |
+| **segmentIds** | [**List<string>**](string)| IDs of segments to return. Maximum of 5 | [optional]  |
 
 ### Return type
 
@@ -2621,7 +2625,7 @@ namespace Example
 
 ## GetJourneySegments
 
-> [**SegmentListing**](SegmentListing) GetJourneySegments (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null)
+> [**SegmentListing**](SegmentListing) GetJourneySegments (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null, List<string> displayNames = null)
 
 
 Retrieve all segments.
@@ -2659,11 +2663,12 @@ namespace Example
             var segmentIds = new List<string>(); // List<string> | IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional) 
             var queryFields = new List<string>(); // List<string> | Segment field(s) to query on. Requires 'queryValue' to also be set. (optional) 
             var queryValue = queryValue_example;  // string | Value to query on using fuzzy matching. Requires 'queryFields' to also be set. (optional) 
+            var displayNames = new List<string>(); // List<string> | Display names of segments to return. Case-insensitive matching. Maximum of 5. Must not contain exact duplicates (case-sensitive). Use of this parameter is not compatible with pagination or sorting or querying or segmentIds. (optional) 
 
             try
             { 
                 // Retrieve all segments.
-                SegmentListing result = apiInstance.GetJourneySegments(sortBy, pageSize, pageNumber, isActive, segmentIds, queryFields, queryValue);
+                SegmentListing result = apiInstance.GetJourneySegments(sortBy, pageSize, pageNumber, isActive, segmentIds, queryFields, queryValue, displayNames);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2687,6 +2692,7 @@ namespace Example
 | **segmentIds** | [**List<string>**](string)| IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. | [optional]  |
 | **queryFields** | [**List<string>**](string)| Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
 | **queryValue** | **string**| Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. | [optional]  |
+| **displayNames** | [**List<string>**](string)| Display names of segments to return. Case-insensitive matching. Maximum of 5. Must not contain exact duplicates (case-sensitive). Use of this parameter is not compatible with pagination or sorting or querying or segmentIds. | [optional]  |
 
 ### Return type
 
@@ -6143,4 +6149,4 @@ namespace Example
 [**ActivateExternalEventResponse**](ActivateExternalEventResponse)
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

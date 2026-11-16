@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsCategory**](#GetSpeechandtextanalyticsCategory) | **Get** /api/v2/speechandtextanalytics/categories/{categoryId} | Get a Speech &amp; Text Analytics Category by ID |
 | [**GetSpeechandtextanalyticsConversation**](#GetSpeechandtextanalyticsConversation) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId} | Get Speech and Text Analytics for a specific conversation |
 | [**GetSpeechandtextanalyticsConversationCategories**](#GetSpeechandtextanalyticsConversationCategories) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/categories | Get the list of detected Speech and Text Analytics categories of conversation |
+| [**GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline**](#GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcriptoutline | Get the transcript outline for a specific conversation and communication. |
 | [**GetSpeechandtextanalyticsConversationCommunicationTranscripturl**](#GetSpeechandtextanalyticsConversationCommunicationTranscripturl) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturl | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
 | [**GetSpeechandtextanalyticsConversationCommunicationTranscripturls**](#GetSpeechandtextanalyticsConversationCommunicationTranscripturls) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturls | Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation |
 | [**GetSpeechandtextanalyticsConversationSentiments**](#GetSpeechandtextanalyticsConversationSentiments) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/sentiments | Get sentiment data |
@@ -766,6 +767,70 @@ namespace Example
 ### Return type
 
 [**ConversationCategoriesEntityListing**](ConversationCategoriesEntityListing)
+
+
+## GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline
+
+> [**TranscriptOutlineResponse**](TranscriptOutlineResponse) GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline (string conversationId, string communicationId)
+
+
+Get the transcript outline for a specific conversation and communication.
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:aiOutline:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsConversationCommunicationTranscriptoutlineExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var conversationId = conversationId_example;  // string | The ID of the conversation
+            var communicationId = communicationId_example;  // string | The ID of the communication
+
+            try
+            { 
+                // Get the transcript outline for a specific conversation and communication.
+                TranscriptOutlineResponse result = apiInstance.GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline(conversationId, communicationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| The ID of the conversation |  |
+| **communicationId** | **string**| The ID of the communication |  |
+
+### Return type
+
+[**TranscriptOutlineResponse**](TranscriptOutlineResponse)
 
 
 ## GetSpeechandtextanalyticsConversationCommunicationTranscripturl
@@ -4440,4 +4505,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

@@ -19,8 +19,10 @@
 | **DateRampStart** | **String** | the date when the first revenue or quantity in a ramped deal begins. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **DateRampEnd** | **String** | the date when the first revenue or quantity in a ramped deal ends. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **BillingPeriods** | [**List&lt;BillingContractPeriod&gt;**](BillingContractPeriod) | List of billing periods for the contract. | [optional] |
+| **Organizations** | [**List&lt;NamedEntity&gt;**](NamedEntity) | Organizations associated with the contract, deduplicated from plan associations. | [optional] |
 | **Plans** | [**List&lt;BillingPlan&gt;**](BillingPlan) | The collection of prices for the related organizations. | [optional] |
+| **Wallets** | [**List&lt;BillingWallet&gt;**](BillingWallet) | Wallet balances for the contract. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

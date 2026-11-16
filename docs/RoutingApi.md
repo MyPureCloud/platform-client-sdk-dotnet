@@ -3878,7 +3878,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: identityresolution |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: identityresolution, outboundblendingstatus |
 | **forceMemberRecount** | **bool?**| Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. | [optional] [default to false] |
 
 ### Return type
@@ -8217,7 +8217,7 @@ namespace Example
 
 Assign multiple routing skills to a user
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -11394,7 +11394,7 @@ namespace Example
 
 Assign multiple routing skills to a user, replacing any current assignments
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -11451,4 +11451,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

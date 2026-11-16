@@ -10,7 +10,7 @@
 | **Name** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **Published** | **bool?** |  | [optional] |
-| **Strictness** | **string** |  | [optional] |
+| **Strictness** | **int?** | The topic strictness, default value is 72 | [optional] |
 | **MatchingType** | **string** |  | [optional] |
 | **ProgramsCount** | **int?** |  | [optional] |
 | **Tags** | **List&lt;string&gt;** |  | [optional] |
@@ -23,4 +23,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

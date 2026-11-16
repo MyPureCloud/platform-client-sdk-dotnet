@@ -908,7 +908,7 @@ namespace Example
 
 ## GetExternalcontactsContactJourneySegments
 
-> [**SegmentAssignmentListing**](SegmentAssignmentListing) GetExternalcontactsContactJourneySegments (string contactId, bool? includeMerged = null, int? limit = null)
+> [**SegmentAssignmentListing**](SegmentAssignmentListing) GetExternalcontactsContactJourneySegments (string contactId, bool? includeMerged = null, int? limit = null, List<string> expand = null, List<string> segmentIds = null)
 
 
 Retrieve segment assignments by external contact ID.
@@ -942,11 +942,13 @@ namespace Example
             var contactId = contactId_example;  // string | ExternalContact ID
             var includeMerged = true;  // bool? | Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional) 
             var limit = 56;  // int? | Number of entities to return. Default of 25, maximum of 500. (optional) 
+            var expand = new List<string>(); // List<string> | Expand the response with additional fields. (optional) 
+            var segmentIds = new List<string>(); // List<string> | IDs of segments to return. Maximum of 5 (optional) 
 
             try
             { 
                 // Retrieve segment assignments by external contact ID.
-                SegmentAssignmentListing result = apiInstance.GetExternalcontactsContactJourneySegments(contactId, includeMerged, limit);
+                SegmentAssignmentListing result = apiInstance.GetExternalcontactsContactJourneySegments(contactId, includeMerged, limit, expand, segmentIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -966,6 +968,8 @@ namespace Example
 | **contactId** | **string**| ExternalContact ID |  |
 | **includeMerged** | **bool?**| Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. | [optional]  |
 | **limit** | **int?**| Number of entities to return. Default of 25, maximum of 500. | [optional]  |
+| **expand** | [**List<string>**](string)| Expand the response with additional fields. | [optional] <br />**Values**: segment |
+| **segmentIds** | [**List<string>**](string)| IDs of segments to return. Maximum of 5 | [optional]  |
 
 ### Return type
 
@@ -9435,4 +9439,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

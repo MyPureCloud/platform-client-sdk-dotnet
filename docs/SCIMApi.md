@@ -1321,7 +1321,7 @@ namespace Example
 
 ## PatchScimGroup
 
-> [**ScimV2Group**](ScimV2Group) PatchScimGroup (string groupId, ScimV2PatchRequest body, string ifMatch = null)
+> [**ScimV2Group**](ScimV2Group) PatchScimGroup (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null)
 
 
 Modify a group
@@ -1355,11 +1355,13 @@ namespace Example
             var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/groups.
             var body = new ScimV2PatchRequest(); // ScimV2PatchRequest | The information used to modify a group.
             var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
+            var attributes = new List<string>(); // List<string> | Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. (optional) 
+            var excludedAttributes = new List<string>(); // List<string> | Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. (optional) 
 
             try
             { 
                 // Modify a group
-                ScimV2Group result = apiInstance.PatchScimGroup(groupId, body, ifMatch);
+                ScimV2Group result = apiInstance.PatchScimGroup(groupId, body, ifMatch, attributes, excludedAttributes);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1379,6 +1381,8 @@ namespace Example
 | **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/groups. |  |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest)| The information used to modify a group. |  |
 | **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
+| **attributes** | [**List<string>**](string)| Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:meta, urn:ietf:params:scim:schemas:core:2.0:Group:meta.version, urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
+| **excludedAttributes** | [**List<string>**](string)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:meta, urn:ietf:params:scim:schemas:core:2.0:Group:meta.version, urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
 
 ### Return type
 
@@ -1459,7 +1463,7 @@ namespace Example
 
 ## PatchScimV2Group
 
-> [**ScimV2Group**](ScimV2Group) PatchScimV2Group (string groupId, ScimV2PatchRequest body, string ifMatch = null)
+> [**ScimV2Group**](ScimV2Group) PatchScimV2Group (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null)
 
 
 Modify a group
@@ -1493,11 +1497,13 @@ namespace Example
             var groupId = groupId_example;  // string | The ID of a group. Returned with GET /api/v2/scim/v2/groups.
             var body = new ScimV2PatchRequest(); // ScimV2PatchRequest | The information used to modify a group.
             var ifMatch = ifMatch_example;  // string | The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". (optional) 
+            var attributes = new List<string>(); // List<string> | Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. (optional) 
+            var excludedAttributes = new List<string>(); // List<string> | Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. (optional) 
 
             try
             { 
                 // Modify a group
-                ScimV2Group result = apiInstance.PatchScimV2Group(groupId, body, ifMatch);
+                ScimV2Group result = apiInstance.PatchScimV2Group(groupId, body, ifMatch, attributes, excludedAttributes);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1517,6 +1523,8 @@ namespace Example
 | **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. |  |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest)| The information used to modify a group. |  |
 | **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
+| **attributes** | [**List<string>**](string)| Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:meta, urn:ietf:params:scim:schemas:core:2.0:Group:meta.version, urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
+| **excludedAttributes** | [**List<string>**](string)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:meta, urn:ietf:params:scim:schemas:core:2.0:Group:meta.version, urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
 
 ### Return type
 
@@ -2005,4 +2013,4 @@ namespace Example
 [**ScimV2User**](ScimV2User)
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

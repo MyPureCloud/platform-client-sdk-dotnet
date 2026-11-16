@@ -12,7 +12,8 @@
 | **InputVariables** | [**List&lt;GuideSessionVariable&gt;**](GuideSessionVariable) | The input variables for this turn. | [optional] |
 | **KnowledgeSettings** | [**KnowledgeSettings**](KnowledgeSettings) | The knowledge settings for this turn. | [optional] |
 | **Context** | [**GuideSessionTurnRequestContext**](GuideSessionTurnRequestContext) | The context for this turn, including conversation custom attributes and messages. | [optional] |
+| **ConversationId** | **string** | The ID of the conversation this turn belongs to. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_
