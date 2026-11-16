@@ -49,6 +49,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? CampaignReservationPercentage { get; set; }
 
 
+
+        /// <summary>
+        /// Whether Enhanced Blending is currently active for the queue. Only populated when getting a single queue with expand&#x3D;outboundblendingstatus.
+        /// </summary>
+        /// <value>Whether Enhanced Blending is currently active for the queue. Only populated when getting a single queue with expand&#x3D;outboundblendingstatus.</value>
+        [DataMember(Name="active", EmitDefaultValue=false)]
+        public bool? Active { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  CampaignReservationPercentage: ").Append(CampaignReservationPercentage).Append("\n");
+            sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +119,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CampaignReservationPercentage == other.CampaignReservationPercentage ||
                     this.CampaignReservationPercentage != null &&
                     this.CampaignReservationPercentage.Equals(other.CampaignReservationPercentage)
+                ) &&
+                (
+                    this.Active == other.Active ||
+                    this.Active != null &&
+                    this.Active.Equals(other.Active)
                 );
         }
 
@@ -128,6 +143,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CampaignReservationPercentage != null)
                     hash = hash * 59 + this.CampaignReservationPercentage.GetHashCode();
+
+                if (this.Active != null)
+                    hash = hash * 59 + this.Active.GetHashCode();
 
                 return hash;
             }

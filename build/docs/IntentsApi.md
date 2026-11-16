@@ -284,7 +284,7 @@ namespace Example
 
 ## GetIntentsCategory
 
-> [**IntentsCategory**](IntentsCategory) GetIntentsCategory (string categoryId)
+> [**IntentsCategory**](IntentsCategory) GetIntentsCategory (string categoryId, bool? includeUsage = null)
 
 
 Get category for categoryId
@@ -316,11 +316,12 @@ namespace Example
 
             var apiInstance = new IntentsApi();
             var categoryId = categoryId_example;  // string | Category id
+            var includeUsage = true;  // bool? | When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional) 
 
             try
             { 
                 // Get category for categoryId
-                IntentsCategory result = apiInstance.GetIntentsCategory(categoryId);
+                IntentsCategory result = apiInstance.GetIntentsCategory(categoryId, includeUsage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -338,6 +339,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **categoryId** | **string**| Category id |  |
+| **includeUsage** | **bool?**| When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. | [optional]  |
 
 ### Return type
 
@@ -346,7 +348,7 @@ namespace Example
 
 ## GetIntentsCustomerintent
 
-> [**CustomerIntentResponse**](CustomerIntentResponse) GetIntentsCustomerintent (string customerIntentId)
+> [**CustomerIntentResponse**](CustomerIntentResponse) GetIntentsCustomerintent (string customerIntentId, bool? includeUsage = null)
 
 
 Get customer intent for customerIntentId
@@ -378,11 +380,12 @@ namespace Example
 
             var apiInstance = new IntentsApi();
             var customerIntentId = customerIntentId_example;  // string | Customer Intent id
+            var includeUsage = true;  // bool? | When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional) 
 
             try
             { 
                 // Get customer intent for customerIntentId
-                CustomerIntentResponse result = apiInstance.GetIntentsCustomerintent(customerIntentId);
+                CustomerIntentResponse result = apiInstance.GetIntentsCustomerintent(customerIntentId, includeUsage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -400,6 +403,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **customerIntentId** | **string**| Customer Intent id |  |
+| **includeUsage** | **bool?**| When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. | [optional]  |
 
 ### Return type
 
@@ -1246,4 +1250,4 @@ namespace Example
 [**SimilarCustomerIntentsResponse**](SimilarCustomerIntentsResponse)
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

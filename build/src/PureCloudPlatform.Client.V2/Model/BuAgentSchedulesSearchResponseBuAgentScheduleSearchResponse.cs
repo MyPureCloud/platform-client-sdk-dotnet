@@ -13,18 +13,18 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// BuAgentSchedulesSearchResponse
+    /// BuAgentSchedulesSearchResponseBuAgentScheduleSearchResponse
     /// </summary>
     [DataContract]
-    public partial class BuAgentSchedulesSearchResponse :  IEquatable<BuAgentSchedulesSearchResponse>
+    public partial class BuAgentSchedulesSearchResponseBuAgentScheduleSearchResponse :  IEquatable<BuAgentSchedulesSearchResponseBuAgentScheduleSearchResponse>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BuAgentSchedulesSearchResponse" /> class.
+        /// Initializes a new instance of the <see cref="BuAgentSchedulesSearchResponseBuAgentScheduleSearchResponse" /> class.
         /// </summary>
         /// <param name="AgentSchedules">The requested agent schedules.</param>
         /// <param name="BusinessUnitTimeZone">The time zone configured for the business unit to which this schedule applies.</param>
         /// <param name="PublishedSchedules">References to all published week schedules overlapping the start/end date query parameters.</param>
-        public BuAgentSchedulesSearchResponse(List<BuAgentScheduleSearchResponse> AgentSchedules = null, string BusinessUnitTimeZone = null, List<BuAgentSchedulePublishedScheduleReference> PublishedSchedules = null)
+        public BuAgentSchedulesSearchResponseBuAgentScheduleSearchResponse(List<BuAgentScheduleSearchResponse> AgentSchedules = null, string BusinessUnitTimeZone = null, List<BuAgentSchedulePublishedScheduleReference> PublishedSchedules = null)
         {
             this.AgentSchedules = AgentSchedules;
             this.BusinessUnitTimeZone = BusinessUnitTimeZone;
@@ -67,7 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BuAgentSchedulesSearchResponse {\n");
+            sb.Append("class BuAgentSchedulesSearchResponseBuAgentScheduleSearchResponse {\n");
 
             sb.Append("  AgentSchedules: ").Append(AgentSchedules).Append("\n");
             sb.Append("  BusinessUnitTimeZone: ").Append(BusinessUnitTimeZone).Append("\n");
@@ -97,15 +97,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BuAgentSchedulesSearchResponse);
+            return this.Equals(obj as BuAgentSchedulesSearchResponseBuAgentScheduleSearchResponse);
         }
 
         /// <summary>
-        /// Returns true if BuAgentSchedulesSearchResponse instances are equal
+        /// Returns true if BuAgentSchedulesSearchResponseBuAgentScheduleSearchResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of BuAgentSchedulesSearchResponse to be compared</param>
+        /// <param name="other">Instance of BuAgentSchedulesSearchResponseBuAgentScheduleSearchResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BuAgentSchedulesSearchResponse other)
+        public bool Equals(BuAgentSchedulesSearchResponseBuAgentScheduleSearchResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

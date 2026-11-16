@@ -27,7 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartDate">The start date of the schedules. Only populated on notifications. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndDate">The end date of the schedules. Only populated on notifications. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Updates">The list of updates for the schedule. Only used in notifications.</param>
-        public BuCurrentAgentScheduleSearchResponse(List<BuAgentScheduleSearchResponse> AgentSchedules = null, string BusinessUnitTimeZone = null, List<BuAgentSchedulePublishedScheduleReference> PublishedSchedules = null, DateTime? StartDate = null, DateTime? EndDate = null, List<BuAgentScheduleUpdate> Updates = null)
+        /// <param name="VisibilityRange">The schedule visibility range.</param>
+        public BuCurrentAgentScheduleSearchResponse(List<BuScheduleSearchAgentScheduleResponse> AgentSchedules = null, string BusinessUnitTimeZone = null, List<BuAgentSchedulePublishedScheduleReference> PublishedSchedules = null, DateTime? StartDate = null, DateTime? EndDate = null, List<BuAgentScheduleUpdate> Updates = null, ScheduleVisibilityRange VisibilityRange = null)
         {
             this.AgentSchedules = AgentSchedules;
             this.BusinessUnitTimeZone = BusinessUnitTimeZone;
@@ -35,6 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.StartDate = StartDate;
             this.EndDate = EndDate;
             this.Updates = Updates;
+            this.VisibilityRange = VisibilityRange;
             
         }
         
@@ -45,7 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The requested agent schedules</value>
         [DataMember(Name="agentSchedules", EmitDefaultValue=false)]
-        public List<BuAgentScheduleSearchResponse> AgentSchedules { get; set; }
+        public List<BuScheduleSearchAgentScheduleResponse> AgentSchedules { get; set; }
 
 
 
@@ -93,6 +95,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<BuAgentScheduleUpdate> Updates { get; set; }
 
 
+
+        /// <summary>
+        /// The schedule visibility range
+        /// </summary>
+        /// <value>The schedule visibility range</value>
+        [DataMember(Name="visibilityRange", EmitDefaultValue=false)]
+        public ScheduleVisibilityRange VisibilityRange { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  Updates: ").Append(Updates).Append("\n");
+            sb.Append("  VisibilityRange: ").Append(VisibilityRange).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,6 +189,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Updates == other.Updates ||
                     this.Updates != null &&
                     this.Updates.SequenceEqual(other.Updates)
+                ) &&
+                (
+                    this.VisibilityRange == other.VisibilityRange ||
+                    this.VisibilityRange != null &&
+                    this.VisibilityRange.Equals(other.VisibilityRange)
                 );
         }
 
@@ -208,6 +225,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Updates != null)
                     hash = hash * 59 + this.Updates.GetHashCode();
+
+                if (this.VisibilityRange != null)
+                    hash = hash * 59 + this.VisibilityRange.GetHashCode();
 
                 return hash;
             }

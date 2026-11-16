@@ -33,7 +33,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InputVariables">The input variables for this turn..</param>
         /// <param name="KnowledgeSettings">The knowledge settings for this turn..</param>
         /// <param name="Context">The context for this turn, including conversation custom attributes and messages..</param>
-        public GuideSessionTurnRequest(GuideSessionInputEvent InputEvent = null, string LanguageCode = null, string Version = null, List<GuideSessionVariable> InputVariables = null, KnowledgeSettings KnowledgeSettings = null, GuideSessionTurnRequestContext Context = null)
+        /// <param name="ConversationId">The ID of the conversation this turn belongs to..</param>
+        public GuideSessionTurnRequest(GuideSessionInputEvent InputEvent = null, string LanguageCode = null, string Version = null, List<GuideSessionVariable> InputVariables = null, KnowledgeSettings KnowledgeSettings = null, GuideSessionTurnRequestContext Context = null, string ConversationId = null)
         {
             this.InputEvent = InputEvent;
             this.LanguageCode = LanguageCode;
@@ -41,6 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.InputVariables = InputVariables;
             this.KnowledgeSettings = KnowledgeSettings;
             this.Context = Context;
+            this.ConversationId = ConversationId;
             
         }
         
@@ -99,6 +101,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public GuideSessionTurnRequestContext Context { get; set; }
 
 
+
+        /// <summary>
+        /// The ID of the conversation this turn belongs to.
+        /// </summary>
+        /// <value>The ID of the conversation this turn belongs to.</value>
+        [DataMember(Name="conversationId", EmitDefaultValue=false)]
+        public string ConversationId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -114,6 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InputVariables: ").Append(InputVariables).Append("\n");
             sb.Append("  KnowledgeSettings: ").Append(KnowledgeSettings).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
+            sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -183,6 +195,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Context == other.Context ||
                     this.Context != null &&
                     this.Context.Equals(other.Context)
+                ) &&
+                (
+                    this.ConversationId == other.ConversationId ||
+                    this.ConversationId != null &&
+                    this.ConversationId.Equals(other.ConversationId)
                 );
         }
 
@@ -214,6 +231,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
+
+                if (this.ConversationId != null)
+                    hash = hash * 59 + this.ConversationId.GetHashCode();
 
                 return hash;
             }

@@ -34,40 +34,40 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum _1 for "1"
+            /// Enum NUMBER_1 for 1
             /// </summary>
             [EnumMember(Value = "1")]
-            _1,
+            NUMBER_1 = 1,
             
             /// <summary>
-            /// Enum _55 for "55"
+            /// Enum NUMBER_55 for 55
             /// </summary>
             [EnumMember(Value = "55")]
-            _55,
+            NUMBER_55 = 55,
             
             /// <summary>
-            /// Enum _65 for "65"
+            /// Enum NUMBER_65 for 65
             /// </summary>
             [EnumMember(Value = "65")]
-            _65,
+            NUMBER_65 = 65,
             
             /// <summary>
-            /// Enum _72 for "72"
+            /// Enum NUMBER_72 for 72
             /// </summary>
             [EnumMember(Value = "72")]
-            _72,
+            NUMBER_72 = 72,
             
             /// <summary>
-            /// Enum _85 for "85"
+            /// Enum NUMBER_85 for 85
             /// </summary>
             [EnumMember(Value = "85")]
-            _85,
+            NUMBER_85 = 85,
             
             /// <summary>
-            /// Enum _90 for "90"
+            /// Enum NUMBER_90 for 90
             /// </summary>
             [EnumMember(Value = "90")]
-            _90
+            NUMBER_90 = 90
         }
         /// <summary>
         /// The phrase strictness, default value is null

@@ -67,7 +67,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomerPoNumber">Purchase Order Number..</param>
         /// <param name="CustomerInvoiceType">Type of the invoice..</param>
         /// <param name="Amount">Amount..</param>
-        public BillingInvoice(Customer BillToCustomer = null, Customer ShipToCustomer = null, Customer SoldToCustomer = null, String DateInvoiced = null, InvoiceAddress BillToAddress = null, InvoiceAddress ShipToAddress = null, string CurrencyIsoCode = null, PaymentStatusEnum? PaymentStatus = null, string PaymentTerms = null, string PaymentLink = null, string CustomerPoNumber = null, string CustomerInvoiceType = null, double? Amount = null)
+        /// <param name="AgreementIds">Agreement IDs billed on this invoice, collected from its invoice lines..</param>
+        public BillingInvoice(Customer BillToCustomer = null, Customer ShipToCustomer = null, Customer SoldToCustomer = null, String DateInvoiced = null, InvoiceAddress BillToAddress = null, InvoiceAddress ShipToAddress = null, string CurrencyIsoCode = null, PaymentStatusEnum? PaymentStatus = null, string PaymentTerms = null, string PaymentLink = null, string CustomerPoNumber = null, string CustomerInvoiceType = null, double? Amount = null, List<string> AgreementIds = null)
         {
             this.BillToCustomer = BillToCustomer;
             this.ShipToCustomer = ShipToCustomer;
@@ -82,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CustomerPoNumber = CustomerPoNumber;
             this.CustomerInvoiceType = CustomerInvoiceType;
             this.Amount = Amount;
+            this.AgreementIds = AgreementIds;
             
         }
         
@@ -205,6 +207,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public double? Amount { get; set; }
 
 
+
+        /// <summary>
+        /// Agreement IDs billed on this invoice, collected from its invoice lines.
+        /// </summary>
+        /// <value>Agreement IDs billed on this invoice, collected from its invoice lines.</value>
+        [DataMember(Name="agreementIds", EmitDefaultValue=false)]
+        public List<string> AgreementIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -228,6 +239,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CustomerPoNumber: ").Append(CustomerPoNumber).Append("\n");
             sb.Append("  CustomerInvoiceType: ").Append(CustomerInvoiceType).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
+            sb.Append("  AgreementIds: ").Append(AgreementIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -337,6 +349,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Amount == other.Amount ||
                     this.Amount != null &&
                     this.Amount.Equals(other.Amount)
+                ) &&
+                (
+                    this.AgreementIds == other.AgreementIds ||
+                    this.AgreementIds != null &&
+                    this.AgreementIds.SequenceEqual(other.AgreementIds)
                 );
         }
 
@@ -392,6 +409,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Amount != null)
                     hash = hash * 59 + this.Amount.GetHashCode();
+
+                if (this.AgreementIds != null)
+                    hash = hash * 59 + this.AgreementIds.GetHashCode();
 
                 return hash;
             }

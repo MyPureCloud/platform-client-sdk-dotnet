@@ -66,8 +66,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateRampStart">the date when the first revenue or quantity in a ramped deal begins. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="DateRampEnd">the date when the first revenue or quantity in a ramped deal ends. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="BillingPeriods">List of billing periods for the contract..</param>
+        /// <param name="Organizations">Organizations associated with the contract, deduplicated from plan associations..</param>
         /// <param name="Plans">The collection of prices for the related organizations..</param>
-        public BillingContract(string ExternalNumber = null, StatusEnum? Status = null, string CommercialModel = null, List<string> PurchaseOrderNumbers = null, Customer BillToCustomer = null, Customer SoldToCustomer = null, Customer EndCustomer = null, String DateStart = null, String DateEnd = null, String DateRampStart = null, String DateRampEnd = null, List<BillingContractPeriod> BillingPeriods = null, List<BillingPlan> Plans = null)
+        /// <param name="Wallets">Wallet balances for the contract..</param>
+        public BillingContract(string ExternalNumber = null, StatusEnum? Status = null, string CommercialModel = null, List<string> PurchaseOrderNumbers = null, Customer BillToCustomer = null, Customer SoldToCustomer = null, Customer EndCustomer = null, String DateStart = null, String DateEnd = null, String DateRampStart = null, String DateRampEnd = null, List<BillingContractPeriod> BillingPeriods = null, List<NamedEntity> Organizations = null, List<BillingPlan> Plans = null, List<BillingWallet> Wallets = null)
         {
             this.ExternalNumber = ExternalNumber;
             this.Status = Status;
@@ -81,7 +83,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateRampStart = DateRampStart;
             this.DateRampEnd = DateRampEnd;
             this.BillingPeriods = BillingPeriods;
+            this.Organizations = Organizations;
             this.Plans = Plans;
+            this.Wallets = Wallets;
             
         }
         
@@ -198,11 +202,29 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Organizations associated with the contract, deduplicated from plan associations.
+        /// </summary>
+        /// <value>Organizations associated with the contract, deduplicated from plan associations.</value>
+        [DataMember(Name="organizations", EmitDefaultValue=false)]
+        public List<NamedEntity> Organizations { get; set; }
+
+
+
+        /// <summary>
         /// The collection of prices for the related organizations.
         /// </summary>
         /// <value>The collection of prices for the related organizations.</value>
         [DataMember(Name="plans", EmitDefaultValue=false)]
         public List<BillingPlan> Plans { get; set; }
+
+
+
+        /// <summary>
+        /// Wallet balances for the contract.
+        /// </summary>
+        /// <value>Wallet balances for the contract.</value>
+        [DataMember(Name="wallets", EmitDefaultValue=false)]
+        public List<BillingWallet> Wallets { get; set; }
 
 
         /// <summary>
@@ -227,7 +249,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateRampStart: ").Append(DateRampStart).Append("\n");
             sb.Append("  DateRampEnd: ").Append(DateRampEnd).Append("\n");
             sb.Append("  BillingPeriods: ").Append(BillingPeriods).Append("\n");
+            sb.Append("  Organizations: ").Append(Organizations).Append("\n");
             sb.Append("  Plans: ").Append(Plans).Append("\n");
+            sb.Append("  Wallets: ").Append(Wallets).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -334,9 +358,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.BillingPeriods.SequenceEqual(other.BillingPeriods)
                 ) &&
                 (
+                    this.Organizations == other.Organizations ||
+                    this.Organizations != null &&
+                    this.Organizations.SequenceEqual(other.Organizations)
+                ) &&
+                (
                     this.Plans == other.Plans ||
                     this.Plans != null &&
                     this.Plans.SequenceEqual(other.Plans)
+                ) &&
+                (
+                    this.Wallets == other.Wallets ||
+                    this.Wallets != null &&
+                    this.Wallets.SequenceEqual(other.Wallets)
                 );
         }
 
@@ -390,8 +424,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.BillingPeriods != null)
                     hash = hash * 59 + this.BillingPeriods.GetHashCode();
 
+                if (this.Organizations != null)
+                    hash = hash * 59 + this.Organizations.GetHashCode();
+
                 if (this.Plans != null)
                     hash = hash * 59 + this.Plans.GetHashCode();
+
+                if (this.Wallets != null)
+                    hash = hash * 59 + this.Wallets.GetHashCode();
 
                 return hash;
             }

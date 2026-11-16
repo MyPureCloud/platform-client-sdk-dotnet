@@ -121,6 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversationtransfer,
             
             /// <summary>
+            /// Enum Consultjoin for "ConsultJoin"
+            /// </summary>
+            [EnumMember(Value = "ConsultJoin")]
+            Consultjoin,
+            
+            /// <summary>
             /// Enum Conversationend for "ConversationEnd"
             /// </summary>
             [EnumMember(Value = "ConversationEnd")]
@@ -320,6 +326,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The generated knowledge answer that was provided as the suggestion.
+        /// </summary>
+        /// <value>The generated knowledge answer that was provided as the suggestion.</value>
+        [DataMember(Name="suggestedKnowledgeAnswer", EmitDefaultValue=false)]
+        public SuggestionGeneratedKnowledgeAnswer SuggestedKnowledgeAnswer { get; private set; }
+
+
+
+        /// <summary>
         /// The third-party suggestion.
         /// </summary>
         /// <value>The third-party suggestion.</value>
@@ -360,6 +375,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  KnowledgeArticle: ").Append(KnowledgeArticle).Append("\n");
             sb.Append("  CannedResponse: ").Append(CannedResponse).Append("\n");
             sb.Append("  Script: ").Append(Script).Append("\n");
+            sb.Append("  SuggestedKnowledgeAnswer: ").Append(SuggestedKnowledgeAnswer).Append("\n");
             sb.Append("  ThirdPartySuggestion: ").Append(ThirdPartySuggestion).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -478,6 +494,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Script.Equals(other.Script)
                 ) &&
                 (
+                    this.SuggestedKnowledgeAnswer == other.SuggestedKnowledgeAnswer ||
+                    this.SuggestedKnowledgeAnswer != null &&
+                    this.SuggestedKnowledgeAnswer.Equals(other.SuggestedKnowledgeAnswer)
+                ) &&
+                (
                     this.ThirdPartySuggestion == other.ThirdPartySuggestion ||
                     this.ThirdPartySuggestion != null &&
                     this.ThirdPartySuggestion.Equals(other.ThirdPartySuggestion)
@@ -544,6 +565,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Script != null)
                     hash = hash * 59 + this.Script.GetHashCode();
+
+                if (this.SuggestedKnowledgeAnswer != null)
+                    hash = hash * 59 + this.SuggestedKnowledgeAnswer.GetHashCode();
 
                 if (this.ThirdPartySuggestion != null)
                     hash = hash * 59 + this.ThirdPartySuggestion.GetHashCode();

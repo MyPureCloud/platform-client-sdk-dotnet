@@ -355,8 +355,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SkipEnabled">If true, the callback can be skipped..</param>
         /// <param name="TimeoutSeconds">Duration in seconds before the callback will be auto-dialed..</param>
         /// <param name="AutomatedCallbackConfigId">The id of the config for automatically placing the callback (and handling the disposition). If absent, the callback will not be placed automatically but routed to an agent as per normal..</param>
+        /// <param name="ClientIpAddress">The reported client IP of the phone for the call..</param>
         /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, string ExternalContactInitialDivisionId = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, DateTime? ResumeTime = null, DialerPreview OutboundPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string AutomatedCallbackConfigId = null, DateTime? CallbackScheduledTime = null)
+        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, string ExternalContactInitialDivisionId = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, DateTime? ResumeTime = null, DialerPreview OutboundPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string AutomatedCallbackConfigId = null, string ClientIpAddress = null, DateTime? CallbackScheduledTime = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -404,6 +405,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SkipEnabled = SkipEnabled;
             this.TimeoutSeconds = TimeoutSeconds;
             this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
+            this.ClientIpAddress = ClientIpAddress;
             this.CallbackScheduledTime = CallbackScheduledTime;
             
         }
@@ -797,6 +799,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The reported client IP of the phone for the call.
+        /// </summary>
+        /// <value>The reported client IP of the phone for the call.</value>
+        [DataMember(Name="clientIpAddress", EmitDefaultValue=false)]
+        public string ClientIpAddress { get; set; }
+
+
+
+        /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -859,6 +870,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
             sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
+            sb.Append("  ClientIpAddress: ").Append(ClientIpAddress).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -1131,6 +1143,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AutomatedCallbackConfigId.Equals(other.AutomatedCallbackConfigId)
                 ) &&
                 (
+                    this.ClientIpAddress == other.ClientIpAddress ||
+                    this.ClientIpAddress != null &&
+                    this.ClientIpAddress.Equals(other.ClientIpAddress)
+                ) &&
+                (
                     this.CallbackScheduledTime == other.CallbackScheduledTime ||
                     this.CallbackScheduledTime != null &&
                     this.CallbackScheduledTime.Equals(other.CallbackScheduledTime)
@@ -1285,6 +1302,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AutomatedCallbackConfigId != null)
                     hash = hash * 59 + this.AutomatedCallbackConfigId.GetHashCode();
+
+                if (this.ClientIpAddress != null)
+                    hash = hash * 59 + this.ClientIpAddress.GetHashCode();
 
                 if (this.CallbackScheduledTime != null)
                     hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();

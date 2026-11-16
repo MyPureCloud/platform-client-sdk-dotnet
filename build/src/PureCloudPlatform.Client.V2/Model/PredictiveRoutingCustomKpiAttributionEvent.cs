@@ -27,13 +27,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PredictiveRoutingCustomKpiAttributionEvent" /> class.
         /// </summary>
-        /// <param name="EventId">A unique (UUID) eventId for this event (required).</param>
-        /// <param name="EventDateTime">A timestamp as epoch representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        /// <param name="ExternalContactId">The UUID of the external contact associated with this event.</param>
-        /// <param name="ConversationId">The UUID of the conversation associated with this event.</param>
-        /// <param name="AgentId">The UUID of the agent associated with this event.</param>
-        /// <param name="KpiId">The UUID of the KPI associated with this event (required).</param>
-        /// <param name="AssociatedValue">The value associated with this outcome attribution (required).</param>
+        /// <param name="EventId">A unique UUID v4 used to identify each attribution event uniquely (required).</param>
+        /// <param name="EventDateTime">The date and time at which the attributed business result was achieved, in UTC, formatted as an ISO-8601 string. For example, 2023-01-07T08:30:00.123Z. Use the time the business result actually occurred or was confirmed, not a later ingestion, synchronisation, reporting, or batch-processing time. When conversationId is supplied, this timestamp must fall within the conversation attribution window, or the event is rejected. This means eventDateTime must be no earlier than the conversation start time, and no later than the conversation end time plus the grace period for the conversation&#39;s media type (1 hour for voice, message and email). (required).</param>
+        /// <param name="ExternalContactId">The id of the External Contact of the customer who was involved in the KPI attribution. If this field is populated, we will retrieve the relevant conversation internally - thus this field is not compatible with conversationId. You must chose to use either externalContactId or conversationId but not both on the same event..</param>
+        /// <param name="ConversationId">The id of the conversation. This field must be omitted if externalContactId is already populated on the event..</param>
+        /// <param name="AgentId">The id of the agent who achieved the KPI attribution that is getting the attribution..</param>
+        /// <param name="KpiId">The id of the relevant revenue KPI within the Genesys Platform - this id can be retrieved from the Revenue KPI Admin UI. (required).</param>
+        /// <param name="AssociatedValue">For Sales Conversion, Retention and Churn KPI type, the numeric value expected is \&quot;1\&quot;. For SalesValue KPI type, a numeric value representing the aggregated value of all KPI attributions achieved by an agent during a conversation, we do not allow multiple event uploads for the same conversationId and agentId pair. (required).</param>
         public PredictiveRoutingCustomKpiAttributionEvent(string EventId = null, DateTime? EventDateTime = null, string ExternalContactId = null, string ConversationId = null, string AgentId = null, string KpiId = null, double? AssociatedValue = null)
         {
             this.EventId = EventId;
@@ -49,63 +49,63 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A unique (UUID) eventId for this event
+        /// A unique UUID v4 used to identify each attribution event uniquely
         /// </summary>
-        /// <value>A unique (UUID) eventId for this event</value>
+        /// <value>A unique UUID v4 used to identify each attribution event uniquely</value>
         [DataMember(Name="eventId", EmitDefaultValue=false)]
         public string EventId { get; set; }
 
 
 
         /// <summary>
-        /// A timestamp as epoch representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// The date and time at which the attributed business result was achieved, in UTC, formatted as an ISO-8601 string. For example, 2023-01-07T08:30:00.123Z. Use the time the business result actually occurred or was confirmed, not a later ingestion, synchronisation, reporting, or batch-processing time. When conversationId is supplied, this timestamp must fall within the conversation attribution window, or the event is rejected. This means eventDateTime must be no earlier than the conversation start time, and no later than the conversation end time plus the grace period for the conversation&#39;s media type (1 hour for voice, message and email).
         /// </summary>
-        /// <value>A timestamp as epoch representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>The date and time at which the attributed business result was achieved, in UTC, formatted as an ISO-8601 string. For example, 2023-01-07T08:30:00.123Z. Use the time the business result actually occurred or was confirmed, not a later ingestion, synchronisation, reporting, or batch-processing time. When conversationId is supplied, this timestamp must fall within the conversation attribution window, or the event is rejected. This means eventDateTime must be no earlier than the conversation start time, and no later than the conversation end time plus the grace period for the conversation&#39;s media type (1 hour for voice, message and email).</value>
         [DataMember(Name="eventDateTime", EmitDefaultValue=false)]
         public DateTime? EventDateTime { get; set; }
 
 
 
         /// <summary>
-        /// The UUID of the external contact associated with this event
+        /// The id of the External Contact of the customer who was involved in the KPI attribution. If this field is populated, we will retrieve the relevant conversation internally - thus this field is not compatible with conversationId. You must chose to use either externalContactId or conversationId but not both on the same event.
         /// </summary>
-        /// <value>The UUID of the external contact associated with this event</value>
+        /// <value>The id of the External Contact of the customer who was involved in the KPI attribution. If this field is populated, we will retrieve the relevant conversation internally - thus this field is not compatible with conversationId. You must chose to use either externalContactId or conversationId but not both on the same event.</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
 
 
 
         /// <summary>
-        /// The UUID of the conversation associated with this event
+        /// The id of the conversation. This field must be omitted if externalContactId is already populated on the event.
         /// </summary>
-        /// <value>The UUID of the conversation associated with this event</value>
+        /// <value>The id of the conversation. This field must be omitted if externalContactId is already populated on the event.</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
 
 
 
         /// <summary>
-        /// The UUID of the agent associated with this event
+        /// The id of the agent who achieved the KPI attribution that is getting the attribution.
         /// </summary>
-        /// <value>The UUID of the agent associated with this event</value>
+        /// <value>The id of the agent who achieved the KPI attribution that is getting the attribution.</value>
         [DataMember(Name="agentId", EmitDefaultValue=false)]
         public string AgentId { get; set; }
 
 
 
         /// <summary>
-        /// The UUID of the KPI associated with this event
+        /// The id of the relevant revenue KPI within the Genesys Platform - this id can be retrieved from the Revenue KPI Admin UI.
         /// </summary>
-        /// <value>The UUID of the KPI associated with this event</value>
+        /// <value>The id of the relevant revenue KPI within the Genesys Platform - this id can be retrieved from the Revenue KPI Admin UI.</value>
         [DataMember(Name="kpiId", EmitDefaultValue=false)]
         public string KpiId { get; set; }
 
 
 
         /// <summary>
-        /// The value associated with this outcome attribution
+        /// For Sales Conversion, Retention and Churn KPI type, the numeric value expected is \&quot;1\&quot;. For SalesValue KPI type, a numeric value representing the aggregated value of all KPI attributions achieved by an agent during a conversation, we do not allow multiple event uploads for the same conversationId and agentId pair.
         /// </summary>
-        /// <value>The value associated with this outcome attribution</value>
+        /// <value>For Sales Conversion, Retention and Churn KPI type, the numeric value expected is \&quot;1\&quot;. For SalesValue KPI type, a numeric value representing the aggregated value of all KPI attributions achieved by an agent during a conversation, we do not allow multiple event uploads for the same conversationId and agentId pair.</value>
         [DataMember(Name="associatedValue", EmitDefaultValue=false)]
         public double? AssociatedValue { get; set; }
 

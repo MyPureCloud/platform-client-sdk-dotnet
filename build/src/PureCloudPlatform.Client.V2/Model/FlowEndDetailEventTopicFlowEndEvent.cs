@@ -715,7 +715,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundCampaignId">OutboundCampaignId.</param>
         /// <param name="OutboundContactListId">OutboundContactListId.</param>
         /// <param name="OutboundContactId">OutboundContactId.</param>
-        public FlowEndDetailEventTopicFlowEndEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, FlowTypeEnum? FlowType = null, string FlowId = null, string DivisionId = null, string FlowVersion = null, long? ConnectedDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, ExitReasonEnum? ExitReason = null, TransferTypeEnum? TransferType = null, string UtilizationLabel = null, string OutboundCampaignId = null, string OutboundContactListId = null, string OutboundContactId = null)
+        /// <param name="OutboundDivisionId">OutboundDivisionId.</param>
+        public FlowEndDetailEventTopicFlowEndEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, FlowTypeEnum? FlowType = null, string FlowId = null, string DivisionId = null, string FlowVersion = null, long? ConnectedDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, ExitReasonEnum? ExitReason = null, TransferTypeEnum? TransferType = null, string UtilizationLabel = null, string OutboundCampaignId = null, string OutboundContactListId = null, string OutboundContactId = null, string OutboundDivisionId = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -744,6 +745,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OutboundCampaignId = OutboundCampaignId;
             this.OutboundContactListId = OutboundContactListId;
             this.OutboundContactId = OutboundContactId;
+            this.OutboundDivisionId = OutboundDivisionId;
             
         }
         
@@ -922,6 +924,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string OutboundContactId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets OutboundDivisionId
+        /// </summary>
+        [DataMember(Name="outboundDivisionId", EmitDefaultValue=false)]
+        public string OutboundDivisionId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -958,6 +968,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OutboundCampaignId: ").Append(OutboundCampaignId).Append("\n");
             sb.Append("  OutboundContactListId: ").Append(OutboundContactListId).Append("\n");
             sb.Append("  OutboundContactId: ").Append(OutboundContactId).Append("\n");
+            sb.Append("  OutboundDivisionId: ").Append(OutboundDivisionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1132,6 +1143,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OutboundContactId == other.OutboundContactId ||
                     this.OutboundContactId != null &&
                     this.OutboundContactId.Equals(other.OutboundContactId)
+                ) &&
+                (
+                    this.OutboundDivisionId == other.OutboundDivisionId ||
+                    this.OutboundDivisionId != null &&
+                    this.OutboundDivisionId.Equals(other.OutboundDivisionId)
                 );
         }
 
@@ -1226,6 +1242,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OutboundContactId != null)
                     hash = hash * 59 + this.OutboundContactId.GetHashCode();
+
+                if (this.OutboundDivisionId != null)
+                    hash = hash * 59 + this.OutboundDivisionId.GetHashCode();
 
                 return hash;
             }

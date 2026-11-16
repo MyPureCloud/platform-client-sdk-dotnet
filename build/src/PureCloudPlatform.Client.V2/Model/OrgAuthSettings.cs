@@ -62,7 +62,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InactivityTimeoutExclusions">The list of exempt apis from inactivity timeout..</param>
         /// <param name="UniversalLogout">Indicates whether universal logout is enabled for the organization..</param>
         /// <param name="TokenStorageLocation">The browser storage location used for authentication tokens..</param>
-        public OrgAuthSettings(bool? MultifactorAuthenticationRequired = null, bool? DomainAllowlistEnabled = null, List<string> DomainAllowlist = null, List<string> IpAddressAllowlist = null, PasswordRequirements PasswordRequirements = null, List<string> InactivityTimeoutExclusions = null, bool? UniversalLogout = null, TokenStorageLocationEnum? TokenStorageLocation = null)
+        /// <param name="SsoLoginFirst">Indicates whether single sign-on is displayed before Genesys Cloud credentials on the login page..</param>
+        public OrgAuthSettings(bool? MultifactorAuthenticationRequired = null, bool? DomainAllowlistEnabled = null, List<string> DomainAllowlist = null, List<string> IpAddressAllowlist = null, PasswordRequirements PasswordRequirements = null, List<string> InactivityTimeoutExclusions = null, bool? UniversalLogout = null, TokenStorageLocationEnum? TokenStorageLocation = null, bool? SsoLoginFirst = null)
         {
             this.MultifactorAuthenticationRequired = MultifactorAuthenticationRequired;
             this.DomainAllowlistEnabled = DomainAllowlistEnabled;
@@ -72,6 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.InactivityTimeoutExclusions = InactivityTimeoutExclusions;
             this.UniversalLogout = UniversalLogout;
             this.TokenStorageLocation = TokenStorageLocation;
+            this.SsoLoginFirst = SsoLoginFirst;
             
         }
         
@@ -141,6 +143,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Indicates whether single sign-on is displayed before Genesys Cloud credentials on the login page.
+        /// </summary>
+        /// <value>Indicates whether single sign-on is displayed before Genesys Cloud credentials on the login page.</value>
+        [DataMember(Name="ssoLoginFirst", EmitDefaultValue=false)]
+        public bool? SsoLoginFirst { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -158,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InactivityTimeoutExclusions: ").Append(InactivityTimeoutExclusions).Append("\n");
             sb.Append("  UniversalLogout: ").Append(UniversalLogout).Append("\n");
             sb.Append("  TokenStorageLocation: ").Append(TokenStorageLocation).Append("\n");
+            sb.Append("  SsoLoginFirst: ").Append(SsoLoginFirst).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -237,6 +249,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TokenStorageLocation == other.TokenStorageLocation ||
                     this.TokenStorageLocation != null &&
                     this.TokenStorageLocation.Equals(other.TokenStorageLocation)
+                ) &&
+                (
+                    this.SsoLoginFirst == other.SsoLoginFirst ||
+                    this.SsoLoginFirst != null &&
+                    this.SsoLoginFirst.Equals(other.SsoLoginFirst)
                 );
         }
 
@@ -274,6 +291,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TokenStorageLocation != null)
                     hash = hash * 59 + this.TokenStorageLocation.GetHashCode();
+
+                if (this.SsoLoginFirst != null)
+                    hash = hash * 59 + this.SsoLoginFirst.GetHashCode();
 
                 return hash;
             }

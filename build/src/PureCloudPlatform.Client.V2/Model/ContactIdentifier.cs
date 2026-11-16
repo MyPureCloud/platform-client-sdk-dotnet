@@ -125,13 +125,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Value">The string value of the identifier. Will vary in syntax by type. Max: 255 characters. Leading and trailing whitespace stripped. (required).</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ExternalSource">The External Source ID of the identifier.</param>
-        public ContactIdentifier(WritableStarrableDivision Division = null, TypeEnum? Type = null, string Value = null, DateTime? DateCreated = null, ExternalSource ExternalSource = null)
+        /// <param name="PortfolioId">The portfolio id associated with the identifier. Only applicable to identifiers of type SocialWhatsappBsuid..</param>
+        public ContactIdentifier(WritableStarrableDivision Division = null, TypeEnum? Type = null, string Value = null, DateTime? DateCreated = null, ExternalSource ExternalSource = null, string PortfolioId = null)
         {
             this.Division = Division;
             this.Type = Type;
             this.Value = Value;
             this.DateCreated = DateCreated;
             this.ExternalSource = ExternalSource;
+            this.PortfolioId = PortfolioId;
             
         }
         
@@ -174,6 +176,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ExternalSource ExternalSource { get; set; }
 
 
+
+        /// <summary>
+        /// The portfolio id associated with the identifier. Only applicable to identifiers of type SocialWhatsappBsuid.
+        /// </summary>
+        /// <value>The portfolio id associated with the identifier. Only applicable to identifiers of type SocialWhatsappBsuid.</value>
+        [DataMember(Name="portfolioId", EmitDefaultValue=false)]
+        public string PortfolioId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,6 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  ExternalSource: ").Append(ExternalSource).Append("\n");
+            sb.Append("  PortfolioId: ").Append(PortfolioId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -252,6 +264,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalSource == other.ExternalSource ||
                     this.ExternalSource != null &&
                     this.ExternalSource.Equals(other.ExternalSource)
+                ) &&
+                (
+                    this.PortfolioId == other.PortfolioId ||
+                    this.PortfolioId != null &&
+                    this.PortfolioId.Equals(other.PortfolioId)
                 );
         }
 
@@ -280,6 +297,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalSource != null)
                     hash = hash * 59 + this.ExternalSource.GetHashCode();
+
+                if (this.PortfolioId != null)
+                    hash = hash * 59 + this.PortfolioId.GetHashCode();
 
                 return hash;
             }

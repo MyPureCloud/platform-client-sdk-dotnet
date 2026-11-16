@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// WfmScheduleTopicWfmScheduleNotification
+    /// V2QueueAnomalyExportJobEventQueueAnomalyExportJobNotification
     /// </summary>
     [DataContract]
-    public partial class WfmScheduleTopicWfmScheduleNotification :  IEquatable<WfmScheduleTopicWfmScheduleNotification>
+    public partial class V2QueueAnomalyExportJobEventQueueAnomalyExportJobNotification :  IEquatable<V2QueueAnomalyExportJobEventQueueAnomalyExportJobNotification>
     {
         /// <summary>
         /// Gets or Sets Status
@@ -33,6 +33,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
             /// Enum Processing for "Processing"
             /// </summary>
             [EnumMember(Value = "Processing")]
@@ -45,60 +51,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Complete,
             
             /// <summary>
-            /// Enum Canceled for "Canceled"
-            /// </summary>
-            [EnumMember(Value = "Canceled")]
-            Canceled,
-            
-            /// <summary>
             /// Enum Error for "Error"
             /// </summary>
             [EnumMember(Value = "Error")]
             Error
-        }
-        /// <summary>
-        /// Gets or Sets EventType
-        /// </summary>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum EventTypeEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Update for "Update"
-            /// </summary>
-            [EnumMember(Value = "Update")]
-            Update,
-            
-            /// <summary>
-            /// Enum Import for "Import"
-            /// </summary>
-            [EnumMember(Value = "Import")]
-            Import,
-            
-            /// <summary>
-            /// Enum Copy for "Copy"
-            /// </summary>
-            [EnumMember(Value = "Copy")]
-            Copy,
-            
-            /// <summary>
-            /// Enum Generate for "Generate"
-            /// </summary>
-            [EnumMember(Value = "Generate")]
-            Generate,
-            
-            /// <summary>
-            /// Enum Reschedule for "Reschedule"
-            /// </summary>
-            [EnumMember(Value = "Reschedule")]
-            Reschedule
         }
         /// <summary>
         /// Gets or Sets Status
@@ -106,37 +62,28 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
-        /// Gets or Sets EventType
+        /// Initializes a new instance of the <see cref="V2QueueAnomalyExportJobEventQueueAnomalyExportJobNotification" /> class.
         /// </summary>
-        [DataMember(Name="eventType", EmitDefaultValue=false)]
-        public EventTypeEnum? EventType { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WfmScheduleTopicWfmScheduleNotification" /> class.
-        /// </summary>
+        /// <param name="JobId">JobId.</param>
         /// <param name="Status">Status.</param>
-        /// <param name="OperationId">OperationId.</param>
         /// <param name="DownloadUrl">DownloadUrl.</param>
-        /// <param name="PercentComplete">PercentComplete.</param>
-        /// <param name="EventType">EventType.</param>
-        public WfmScheduleTopicWfmScheduleNotification(StatusEnum? Status = null, string OperationId = null, string DownloadUrl = null, long? PercentComplete = null, EventTypeEnum? EventType = null)
+        public V2QueueAnomalyExportJobEventQueueAnomalyExportJobNotification(string JobId = null, StatusEnum? Status = null, string DownloadUrl = null)
         {
+            this.JobId = JobId;
             this.Status = Status;
-            this.OperationId = OperationId;
             this.DownloadUrl = DownloadUrl;
-            this.PercentComplete = PercentComplete;
-            this.EventType = EventType;
             
         }
         
 
 
-
-
         /// <summary>
-        /// Gets or Sets OperationId
+        /// Gets or Sets JobId
         /// </summary>
-        [DataMember(Name="operationId", EmitDefaultValue=false)]
-        public string OperationId { get; set; }
+        [DataMember(Name="jobId", EmitDefaultValue=false)]
+        public string JobId { get; set; }
+
+
 
 
 
@@ -147,16 +94,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string DownloadUrl { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets PercentComplete
-        /// </summary>
-        [DataMember(Name="percentComplete", EmitDefaultValue=false)]
-        public long? PercentComplete { get; set; }
-
-
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -164,13 +101,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class WfmScheduleTopicWfmScheduleNotification {\n");
+            sb.Append("class V2QueueAnomalyExportJobEventQueueAnomalyExportJobNotification {\n");
 
+            sb.Append("  JobId: ").Append(JobId).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  OperationId: ").Append(OperationId).Append("\n");
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
-            sb.Append("  PercentComplete: ").Append(PercentComplete).Append("\n");
-            sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -196,15 +131,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WfmScheduleTopicWfmScheduleNotification);
+            return this.Equals(obj as V2QueueAnomalyExportJobEventQueueAnomalyExportJobNotification);
         }
 
         /// <summary>
-        /// Returns true if WfmScheduleTopicWfmScheduleNotification instances are equal
+        /// Returns true if V2QueueAnomalyExportJobEventQueueAnomalyExportJobNotification instances are equal
         /// </summary>
-        /// <param name="other">Instance of WfmScheduleTopicWfmScheduleNotification to be compared</param>
+        /// <param name="other">Instance of V2QueueAnomalyExportJobEventQueueAnomalyExportJobNotification to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WfmScheduleTopicWfmScheduleNotification other)
+        public bool Equals(V2QueueAnomalyExportJobEventQueueAnomalyExportJobNotification other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -212,29 +147,19 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.JobId == other.JobId ||
+                    this.JobId != null &&
+                    this.JobId.Equals(other.JobId)
+                ) &&
+                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
                 ) &&
                 (
-                    this.OperationId == other.OperationId ||
-                    this.OperationId != null &&
-                    this.OperationId.Equals(other.OperationId)
-                ) &&
-                (
                     this.DownloadUrl == other.DownloadUrl ||
                     this.DownloadUrl != null &&
                     this.DownloadUrl.Equals(other.DownloadUrl)
-                ) &&
-                (
-                    this.PercentComplete == other.PercentComplete ||
-                    this.PercentComplete != null &&
-                    this.PercentComplete.Equals(other.PercentComplete)
-                ) &&
-                (
-                    this.EventType == other.EventType ||
-                    this.EventType != null &&
-                    this.EventType.Equals(other.EventType)
                 );
         }
 
@@ -249,20 +174,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.JobId != null)
+                    hash = hash * 59 + this.JobId.GetHashCode();
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
 
-                if (this.OperationId != null)
-                    hash = hash * 59 + this.OperationId.GetHashCode();
-
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
-
-                if (this.PercentComplete != null)
-                    hash = hash * 59 + this.PercentComplete.GetHashCode();
-
-                if (this.EventType != null)
-                    hash = hash * 59 + this.EventType.GetHashCode();
 
                 return hash;
             }

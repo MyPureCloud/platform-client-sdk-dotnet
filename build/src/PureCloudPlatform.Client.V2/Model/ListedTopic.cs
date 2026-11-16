@@ -19,8 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ListedTopic :  IEquatable<ListedTopic>
     {
         /// <summary>
-        /// Gets or Sets Strictness
+        /// The topic strictness, default value is 72
         /// </summary>
+        /// <value>The topic strictness, default value is 72</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StrictnessEnum
         {
@@ -33,40 +34,40 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum _1 for "1"
+            /// Enum NUMBER_1 for 1
             /// </summary>
             [EnumMember(Value = "1")]
-            _1,
+            NUMBER_1 = 1,
             
             /// <summary>
-            /// Enum _55 for "55"
+            /// Enum NUMBER_55 for 55
             /// </summary>
             [EnumMember(Value = "55")]
-            _55,
+            NUMBER_55 = 55,
             
             /// <summary>
-            /// Enum _65 for "65"
+            /// Enum NUMBER_65 for 65
             /// </summary>
             [EnumMember(Value = "65")]
-            _65,
+            NUMBER_65 = 65,
             
             /// <summary>
-            /// Enum _72 for "72"
+            /// Enum NUMBER_72 for 72
             /// </summary>
             [EnumMember(Value = "72")]
-            _72,
+            NUMBER_72 = 72,
             
             /// <summary>
-            /// Enum _85 for "85"
+            /// Enum NUMBER_85 for 85
             /// </summary>
             [EnumMember(Value = "85")]
-            _85,
+            NUMBER_85 = 85,
             
             /// <summary>
-            /// Enum _90 for "90"
+            /// Enum NUMBER_90 for 90
             /// </summary>
             [EnumMember(Value = "90")]
-            _90
+            NUMBER_90 = 90
         }
         /// <summary>
         /// Gets or Sets MatchingType
@@ -127,8 +128,9 @@ namespace PureCloudPlatform.Client.V2.Model
             All
         }
         /// <summary>
-        /// Gets or Sets Strictness
+        /// The topic strictness, default value is 72
         /// </summary>
+        /// <value>The topic strictness, default value is 72</value>
         [DataMember(Name="strictness", EmitDefaultValue=false)]
         public StrictnessEnum? Strictness { get; set; }
         /// <summary>
@@ -147,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Published">Published.</param>
-        /// <param name="Strictness">Strictness.</param>
+        /// <param name="Strictness">The topic strictness, default value is 72.</param>
         /// <param name="MatchingType">MatchingType.</param>
         /// <param name="ProgramsCount">ProgramsCount.</param>
         /// <param name="Tags">Tags.</param>

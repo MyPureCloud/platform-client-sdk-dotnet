@@ -29,10 +29,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="PhoneNumber">The phone number associated with this WhatsApp account. Requires &#39;E164 without a leading plus&#39; phone number. (required).</param>
         /// <param name="DisplayName">The displayName of this person&#39;s account in WhatsApp. Max: 100 characters..</param>
-        public WhatsAppId(PhoneNumber PhoneNumber = null, string DisplayName = null)
+        /// <param name="Username">The username of the account..</param>
+        /// <param name="WhatsAppBusinessScopedIds">The set of Whatsapp Business Scoped Ids that this contact is associated with..</param>
+        public WhatsAppId(PhoneNumber PhoneNumber = null, string DisplayName = null, string Username = null, List<WhatsAppBusinessScopedId> WhatsAppBusinessScopedIds = null)
         {
             this.PhoneNumber = PhoneNumber;
             this.DisplayName = DisplayName;
+            this.Username = Username;
+            this.WhatsAppBusinessScopedIds = WhatsAppBusinessScopedIds;
             
         }
         
@@ -55,6 +59,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public string DisplayName { get; set; }
 
 
+
+        /// <summary>
+        /// The username of the account.
+        /// </summary>
+        /// <value>The username of the account.</value>
+        [DataMember(Name="username", EmitDefaultValue=false)]
+        public string Username { get; set; }
+
+
+
+        /// <summary>
+        /// The set of Whatsapp Business Scoped Ids that this contact is associated with.
+        /// </summary>
+        /// <value>The set of Whatsapp Business Scoped Ids that this contact is associated with.</value>
+        [DataMember(Name="whatsAppBusinessScopedIds", EmitDefaultValue=false)]
+        public List<WhatsAppBusinessScopedId> WhatsAppBusinessScopedIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +88,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  Username: ").Append(Username).Append("\n");
+            sb.Append("  WhatsAppBusinessScopedIds: ").Append(WhatsAppBusinessScopedIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +139,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
                     this.DisplayName.Equals(other.DisplayName)
+                ) &&
+                (
+                    this.Username == other.Username ||
+                    this.Username != null &&
+                    this.Username.Equals(other.Username)
+                ) &&
+                (
+                    this.WhatsAppBusinessScopedIds == other.WhatsAppBusinessScopedIds ||
+                    this.WhatsAppBusinessScopedIds != null &&
+                    this.WhatsAppBusinessScopedIds.SequenceEqual(other.WhatsAppBusinessScopedIds)
                 );
         }
 
@@ -134,6 +168,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
+
+                if (this.Username != null)
+                    hash = hash * 59 + this.Username.GetHashCode();
+
+                if (this.WhatsAppBusinessScopedIds != null)
+                    hash = hash * 59 + this.WhatsAppBusinessScopedIds.GetHashCode();
 
                 return hash;
             }

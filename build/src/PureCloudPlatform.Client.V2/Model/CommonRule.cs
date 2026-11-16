@@ -91,13 +91,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SendExitingAlarmNotifications">Indicates if the alert will send a notification when it is closed..</param>
         /// <param name="WaitBetweenNotificationMs">The amount of time in milliseconds to wait between notification..</param>
         /// <param name="Conditions">The set of metric conditions that would trigger an alert..</param>
+        /// <param name="Muted">Flag that indicates if the rule is muted..</param>
+        /// <param name="DateStartMute">Timestamp of when the mute status of the rule should start. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DateEndMute">Timestamp of when the mute status of the rule should end. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Type">The type of the rule. (required).</param>
         /// <param name="InAlarm">Indicates if the rule is in alarm state..</param>
         /// <param name="User">The entity that created the rule..</param>
         /// <param name="Version">The current version number of the rule..</param>
         /// <param name="DateCreated">The creation date of the rule when the rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateLastModified">The timestamp of the last update to the rule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public CommonRule(string Name = null, string Description = null, bool? Enabled = null, List<AlertNotification> Notifications = null, bool? SendExitingAlarmNotifications = null, long? WaitBetweenNotificationMs = null, CommonRuleConditions Conditions = null, TypeEnum? Type = null, bool? InAlarm = null, UserReference User = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateLastModified = null)
+        public CommonRule(string Name = null, string Description = null, bool? Enabled = null, List<AlertNotification> Notifications = null, bool? SendExitingAlarmNotifications = null, long? WaitBetweenNotificationMs = null, CommonRuleConditions Conditions = null, bool? Muted = null, DateTime? DateStartMute = null, DateTime? DateEndMute = null, TypeEnum? Type = null, bool? InAlarm = null, UserReference User = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateLastModified = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -106,6 +109,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SendExitingAlarmNotifications = SendExitingAlarmNotifications;
             this.WaitBetweenNotificationMs = WaitBetweenNotificationMs;
             this.Conditions = Conditions;
+            this.Muted = Muted;
+            this.DateStartMute = DateStartMute;
+            this.DateEndMute = DateEndMute;
             this.Type = Type;
             this.InAlarm = InAlarm;
             this.User = User;
@@ -189,6 +195,33 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Flag that indicates if the rule is muted.
+        /// </summary>
+        /// <value>Flag that indicates if the rule is muted.</value>
+        [DataMember(Name="muted", EmitDefaultValue=false)]
+        public bool? Muted { get; set; }
+
+
+
+        /// <summary>
+        /// Timestamp of when the mute status of the rule should start. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Timestamp of when the mute status of the rule should start. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateStartMute", EmitDefaultValue=false)]
+        public DateTime? DateStartMute { get; set; }
+
+
+
+        /// <summary>
+        /// Timestamp of when the mute status of the rule should end. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Timestamp of when the mute status of the rule should end. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateEndMute", EmitDefaultValue=false)]
+        public DateTime? DateEndMute { get; set; }
+
+
+
 
 
         /// <summary>
@@ -261,6 +294,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SendExitingAlarmNotifications: ").Append(SendExitingAlarmNotifications).Append("\n");
             sb.Append("  WaitBetweenNotificationMs: ").Append(WaitBetweenNotificationMs).Append("\n");
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
+            sb.Append("  Muted: ").Append(Muted).Append("\n");
+            sb.Append("  DateStartMute: ").Append(DateStartMute).Append("\n");
+            sb.Append("  DateEndMute: ").Append(DateEndMute).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  InAlarm: ").Append(InAlarm).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
@@ -349,6 +385,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Conditions.Equals(other.Conditions)
                 ) &&
                 (
+                    this.Muted == other.Muted ||
+                    this.Muted != null &&
+                    this.Muted.Equals(other.Muted)
+                ) &&
+                (
+                    this.DateStartMute == other.DateStartMute ||
+                    this.DateStartMute != null &&
+                    this.DateStartMute.Equals(other.DateStartMute)
+                ) &&
+                (
+                    this.DateEndMute == other.DateEndMute ||
+                    this.DateEndMute != null &&
+                    this.DateEndMute.Equals(other.DateEndMute)
+                ) &&
+                (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
@@ -419,6 +470,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
+
+                if (this.Muted != null)
+                    hash = hash * 59 + this.Muted.GetHashCode();
+
+                if (this.DateStartMute != null)
+                    hash = hash * 59 + this.DateStartMute.GetHashCode();
+
+                if (this.DateEndMute != null)
+                    hash = hash * 59 + this.DateEndMute.GetHashCode();
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();

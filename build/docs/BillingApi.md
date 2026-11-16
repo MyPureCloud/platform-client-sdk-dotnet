@@ -369,7 +369,7 @@ namespace Example
 
 ## GetBillingContractsInvoices
 
-> [**BillingInvoiceListing**](BillingInvoiceListing) GetBillingContractsInvoices (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null)
+> [**BillingInvoiceListing**](BillingInvoiceListing) GetBillingContractsInvoices (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null, string agreementId = null)
 
 
 Get invoices
@@ -410,11 +410,12 @@ namespace Example
             var dateStart = 2013-10-20;  // String | Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
             var dateEnd = 2013-10-20;  // String | End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
             var paymentStatus = paymentStatus_example;  // string | Payment Status (optional) 
+            var agreementId = agreementId_example;  // string | Filter invoices by agreement ID. (optional) 
 
             try
             { 
                 // Get invoices
-                BillingInvoiceListing result = apiInstance.GetBillingContractsInvoices(before, after, pageSize, dateStart, dateEnd, paymentStatus);
+                BillingInvoiceListing result = apiInstance.GetBillingContractsInvoices(before, after, pageSize, dateStart, dateEnd, paymentStatus, agreementId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -437,6 +438,7 @@ namespace Example
 | **dateStart** | **String**| Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **dateEnd** | **String**| End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **paymentStatus** | **string**| Payment Status | [optional] <br />**Values**: Paid, UnPaid |
+| **agreementId** | **string**| Filter invoices by agreement ID. | [optional]  |
 
 ### Return type
 
@@ -576,4 +578,4 @@ namespace Example
 [**TrusteeBillingOverview**](TrusteeBillingOverview)
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

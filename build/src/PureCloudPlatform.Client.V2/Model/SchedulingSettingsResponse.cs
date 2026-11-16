@@ -81,6 +81,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Start day of weekend for scheduling</value>
         [DataMember(Name="startDayOfWeekend", EmitDefaultValue=false)]
         public StartDayOfWeekendEnum? StartDayOfWeekend { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SchedulingSettingsResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected SchedulingSettingsResponse() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulingSettingsResponse" /> class.
         /// </summary>
@@ -90,7 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PlanningPeriod">Planning period settings for scheduling. Only one of planningPeriod or monthlyPlanningPeriod will be defined if applicable, but both can be null.</param>
         /// <param name="MonthlyPlanningPeriod">Monthly planning period settings for scheduling. Only one of planningPeriod or monthlyPlanningPeriod will be defined if applicable, but both can be null.</param>
         /// <param name="StartDayOfWeekend">Start day of weekend for scheduling.</param>
-        /// <param name="ScheduleVisibility">Schedule visibility settings for agents.</param>
+        /// <param name="ScheduleVisibility">Schedule visibility settings for agents (required).</param>
         public SchedulingSettingsResponse(int? MaxOccupancyPercentForDeferredWork = null, double? DefaultShrinkagePercent = null, ShrinkageOverrides ShrinkageOverrides = null, PlanningPeriodSettings PlanningPeriod = null, MonthlyPlanningPeriodSettings MonthlyPlanningPeriod = null, StartDayOfWeekendEnum? StartDayOfWeekend = null, ScheduleVisibilitySettingsResponse ScheduleVisibility = null)
         {
             this.MaxOccupancyPercentForDeferredWork = MaxOccupancyPercentForDeferredWork;

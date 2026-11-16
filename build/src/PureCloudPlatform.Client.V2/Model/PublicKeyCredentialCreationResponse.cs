@@ -33,7 +33,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AuthenticatorAttachment">The authenticator attachment modality used (&#39;platform&#39; or &#39;cross-platform&#39;)..</param>
         /// <param name="ClientExtensionResults">Outputs from client-side WebAuthn extensions..</param>
         /// <param name="Response">The authenticator&#39;s attestation response. (required).</param>
-        public PublicKeyCredentialCreationResponse(string Id = null, string Type = null, string RawId = null, string AuthenticatorAttachment = null, Dictionary<string, Object> ClientExtensionResults = null, AuthenticatorAttestationResponse Response = null)
+        public PublicKeyCredentialCreationResponse(string Id = null, string Type = null, string RawId = null, string AuthenticatorAttachment = null, ClientExtensionResults ClientExtensionResults = null, AuthenticatorAttestationResponse Response = null)
         {
             this.Id = Id;
             this.Type = Type;
@@ -87,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Outputs from client-side WebAuthn extensions.</value>
         [DataMember(Name="clientExtensionResults", EmitDefaultValue=false)]
-        public Dictionary<string, Object> ClientExtensionResults { get; set; }
+        public ClientExtensionResults ClientExtensionResults { get; set; }
 
 
 
@@ -177,7 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
                 (
                     this.ClientExtensionResults == other.ClientExtensionResults ||
                     this.ClientExtensionResults != null &&
-                    this.ClientExtensionResults.SequenceEqual(other.ClientExtensionResults)
+                    this.ClientExtensionResults.Equals(other.ClientExtensionResults)
                 ) &&
                 (
                     this.Response == other.Response ||

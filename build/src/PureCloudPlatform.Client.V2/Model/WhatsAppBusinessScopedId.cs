@@ -18,14 +18,53 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WhatsAppBusinessScopedId :  IEquatable<WhatsAppBusinessScopedId>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WhatsAppBusinessScopedId" /> class.
         /// </summary>
-        public WhatsAppBusinessScopedId()
+        [JsonConstructorAttribute]
+        protected WhatsAppBusinessScopedId() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WhatsAppBusinessScopedId" /> class.
+        /// </summary>
+        /// <param name="Bsuid">The Whatsapp Business Scoped Id associated with a WhatsApp User. (required).</param>
+        /// <param name="Parent">True if this is a parent BSUID, false if it is a regular BSUID..</param>
+        /// <param name="PortfolioId">The portfolio id associated with the WhatsApp bsuid..</param>
+        public WhatsAppBusinessScopedId(string Bsuid = null, bool? Parent = null, string PortfolioId = null)
         {
+            this.Bsuid = Bsuid;
+            this.Parent = Parent;
+            this.PortfolioId = PortfolioId;
             
         }
         
+
+
+        /// <summary>
+        /// The Whatsapp Business Scoped Id associated with a WhatsApp User.
+        /// </summary>
+        /// <value>The Whatsapp Business Scoped Id associated with a WhatsApp User.</value>
+        [DataMember(Name="bsuid", EmitDefaultValue=false)]
+        public string Bsuid { get; set; }
+
+
+
+        /// <summary>
+        /// True if this is a parent BSUID, false if it is a regular BSUID.
+        /// </summary>
+        /// <value>True if this is a parent BSUID, false if it is a regular BSUID.</value>
+        [DataMember(Name="parent", EmitDefaultValue=false)]
+        public bool? Parent { get; set; }
+
+
+
+        /// <summary>
+        /// The portfolio id associated with the WhatsApp bsuid.
+        /// </summary>
+        /// <value>The portfolio id associated with the WhatsApp bsuid.</value>
+        [DataMember(Name="portfolioId", EmitDefaultValue=false)]
+        public string PortfolioId { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +75,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class WhatsAppBusinessScopedId {\n");
 
+            sb.Append("  Bsuid: ").Append(Bsuid).Append("\n");
+            sb.Append("  Parent: ").Append(Parent).Append("\n");
+            sb.Append("  PortfolioId: ").Append(PortfolioId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +117,22 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.Bsuid == other.Bsuid ||
+                    this.Bsuid != null &&
+                    this.Bsuid.Equals(other.Bsuid)
+                ) &&
+                (
+                    this.Parent == other.Parent ||
+                    this.Parent != null &&
+                    this.Parent.Equals(other.Parent)
+                ) &&
+                (
+                    this.PortfolioId == other.PortfolioId ||
+                    this.PortfolioId != null &&
+                    this.PortfolioId.Equals(other.PortfolioId)
+                );
         }
 
         /// <summary>
@@ -89,6 +146,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Bsuid != null)
+                    hash = hash * 59 + this.Bsuid.GetHashCode();
+
+                if (this.Parent != null)
+                    hash = hash * 59 + this.Parent.GetHashCode();
+
+                if (this.PortfolioId != null)
+                    hash = hash * 59 + this.PortfolioId.GetHashCode();
+
                 return hash;
             }
         }

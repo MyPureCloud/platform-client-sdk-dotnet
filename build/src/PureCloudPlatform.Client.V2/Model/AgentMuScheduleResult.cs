@@ -29,10 +29,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ReferenceStartDate">The reference start date to use when calculating offsets for shifts and activities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="AgentSchedules">The list of agent schedules for the management unit (required).</param>
-        public AgentMuScheduleResult(DateTime? ReferenceStartDate = null, List<AgentMuScheduleItem> AgentSchedules = null)
+        /// <param name="VisibilityRange">The schedule visibility range.</param>
+        public AgentMuScheduleResult(DateTime? ReferenceStartDate = null, List<AgentMuScheduleItem> AgentSchedules = null, ScheduleVisibilityRange VisibilityRange = null)
         {
             this.ReferenceStartDate = ReferenceStartDate;
             this.AgentSchedules = AgentSchedules;
+            this.VisibilityRange = VisibilityRange;
             
         }
         
@@ -55,6 +57,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<AgentMuScheduleItem> AgentSchedules { get; set; }
 
 
+
+        /// <summary>
+        /// The schedule visibility range
+        /// </summary>
+        /// <value>The schedule visibility range</value>
+        [DataMember(Name="visibilityRange", EmitDefaultValue=false)]
+        public ScheduleVisibilityRange VisibilityRange { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  ReferenceStartDate: ").Append(ReferenceStartDate).Append("\n");
             sb.Append("  AgentSchedules: ").Append(AgentSchedules).Append("\n");
+            sb.Append("  VisibilityRange: ").Append(VisibilityRange).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +127,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentSchedules == other.AgentSchedules ||
                     this.AgentSchedules != null &&
                     this.AgentSchedules.SequenceEqual(other.AgentSchedules)
+                ) &&
+                (
+                    this.VisibilityRange == other.VisibilityRange ||
+                    this.VisibilityRange != null &&
+                    this.VisibilityRange.Equals(other.VisibilityRange)
                 );
         }
 
@@ -134,6 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AgentSchedules != null)
                     hash = hash * 59 + this.AgentSchedules.GetHashCode();
+
+                if (this.VisibilityRange != null)
+                    hash = hash * 59 + this.VisibilityRange.GetHashCode();
 
                 return hash;
             }

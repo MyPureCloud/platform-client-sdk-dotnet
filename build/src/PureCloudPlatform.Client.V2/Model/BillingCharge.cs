@@ -22,9 +22,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BillingCharge" /> class.
         /// </summary>
         /// <param name="Product">Represents the details of a product..</param>
-        /// <param name="Organizations">List of plans within the organization..</param>
+        /// <param name="Organizations">Organizations associated with this charge..</param>
         /// <param name="PrepaidQuantity">The quantity of usage that is prepaid..</param>
-        /// <param name="FairuseQuantity">The quantity of usage allowed under fair use policies..</param>
+        /// <param name="FairuseAllocation">Quantity of usage allowed under fair-use policies..</param>
+        /// <param name="FairuseAmount">Monetary value of the fair-use allocation, in the same currency as overageCurrency..</param>
         /// <param name="ActualQuantity">The actual quantity of usage..</param>
         /// <param name="OverageQuantity">The quantity of usage that exceeds prepaid or fair use limits..</param>
         /// <param name="OverageRate">The rate charged per unit of overage..</param>
@@ -32,12 +33,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OverageCurrency">The currency in which the overage charge is billed..</param>
         /// <param name="ConvertedTokenCount">AI Token Count after the conversion for AI Products..</param>
         /// <param name="TokenConversionRate">AI Token Conversion Rate — Units per token conversion ratio..</param>
-        public BillingCharge(BillingProduct Product = null, List<NamedEntity> Organizations = null, double? PrepaidQuantity = null, double? FairuseQuantity = null, double? ActualQuantity = null, double? OverageQuantity = null, double? OverageRate = null, double? OverageCharge = null, string OverageCurrency = null, double? ConvertedTokenCount = null, double? TokenConversionRate = null)
+        /// <param name="AiSubItems">Usage that makes up this AI parent bundle, including the bundle&#39;s own token usage and each child product&#39;s usage converted to tokens; the converted total is the parent&#39;s actual quantity..</param>
+        public BillingCharge(BillingProduct Product = null, List<NamedEntity> Organizations = null, double? PrepaidQuantity = null, double? FairuseAllocation = null, double? FairuseAmount = null, double? ActualQuantity = null, double? OverageQuantity = null, double? OverageRate = null, double? OverageCharge = null, string OverageCurrency = null, double? ConvertedTokenCount = null, double? TokenConversionRate = null, List<BillingAiSubItem> AiSubItems = null)
         {
             this.Product = Product;
             this.Organizations = Organizations;
             this.PrepaidQuantity = PrepaidQuantity;
-            this.FairuseQuantity = FairuseQuantity;
+            this.FairuseAllocation = FairuseAllocation;
+            this.FairuseAmount = FairuseAmount;
             this.ActualQuantity = ActualQuantity;
             this.OverageQuantity = OverageQuantity;
             this.OverageRate = OverageRate;
@@ -45,6 +48,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OverageCurrency = OverageCurrency;
             this.ConvertedTokenCount = ConvertedTokenCount;
             this.TokenConversionRate = TokenConversionRate;
+            this.AiSubItems = AiSubItems;
             
         }
         
@@ -78,9 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of plans within the organization.
+        /// Organizations associated with this charge.
         /// </summary>
-        /// <value>List of plans within the organization.</value>
+        /// <value>Organizations associated with this charge.</value>
         [DataMember(Name="organizations", EmitDefaultValue=false)]
         public List<NamedEntity> Organizations { get; set; }
 
@@ -96,11 +100,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The quantity of usage allowed under fair use policies.
+        /// Quantity of usage allowed under fair-use policies.
         /// </summary>
-        /// <value>The quantity of usage allowed under fair use policies.</value>
-        [DataMember(Name="fairuseQuantity", EmitDefaultValue=false)]
-        public double? FairuseQuantity { get; set; }
+        /// <value>Quantity of usage allowed under fair-use policies.</value>
+        [DataMember(Name="fairuseAllocation", EmitDefaultValue=false)]
+        public double? FairuseAllocation { get; set; }
+
+
+
+        /// <summary>
+        /// Monetary value of the fair-use allocation, in the same currency as overageCurrency.
+        /// </summary>
+        /// <value>Monetary value of the fair-use allocation, in the same currency as overageCurrency.</value>
+        [DataMember(Name="fairuseAmount", EmitDefaultValue=false)]
+        public double? FairuseAmount { get; set; }
 
 
 
@@ -166,6 +179,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public double? TokenConversionRate { get; set; }
 
 
+
+        /// <summary>
+        /// Usage that makes up this AI parent bundle, including the bundle&#39;s own token usage and each child product&#39;s usage converted to tokens; the converted total is the parent&#39;s actual quantity.
+        /// </summary>
+        /// <value>Usage that makes up this AI parent bundle, including the bundle&#39;s own token usage and each child product&#39;s usage converted to tokens; the converted total is the parent&#39;s actual quantity.</value>
+        [DataMember(Name="aiSubItems", EmitDefaultValue=false)]
+        public List<BillingAiSubItem> AiSubItems { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -180,7 +202,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Product: ").Append(Product).Append("\n");
             sb.Append("  Organizations: ").Append(Organizations).Append("\n");
             sb.Append("  PrepaidQuantity: ").Append(PrepaidQuantity).Append("\n");
-            sb.Append("  FairuseQuantity: ").Append(FairuseQuantity).Append("\n");
+            sb.Append("  FairuseAllocation: ").Append(FairuseAllocation).Append("\n");
+            sb.Append("  FairuseAmount: ").Append(FairuseAmount).Append("\n");
             sb.Append("  ActualQuantity: ").Append(ActualQuantity).Append("\n");
             sb.Append("  OverageQuantity: ").Append(OverageQuantity).Append("\n");
             sb.Append("  OverageRate: ").Append(OverageRate).Append("\n");
@@ -188,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OverageCurrency: ").Append(OverageCurrency).Append("\n");
             sb.Append("  ConvertedTokenCount: ").Append(ConvertedTokenCount).Append("\n");
             sb.Append("  TokenConversionRate: ").Append(TokenConversionRate).Append("\n");
+            sb.Append("  AiSubItems: ").Append(AiSubItems).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -254,9 +278,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PrepaidQuantity.Equals(other.PrepaidQuantity)
                 ) &&
                 (
-                    this.FairuseQuantity == other.FairuseQuantity ||
-                    this.FairuseQuantity != null &&
-                    this.FairuseQuantity.Equals(other.FairuseQuantity)
+                    this.FairuseAllocation == other.FairuseAllocation ||
+                    this.FairuseAllocation != null &&
+                    this.FairuseAllocation.Equals(other.FairuseAllocation)
+                ) &&
+                (
+                    this.FairuseAmount == other.FairuseAmount ||
+                    this.FairuseAmount != null &&
+                    this.FairuseAmount.Equals(other.FairuseAmount)
                 ) &&
                 (
                     this.ActualQuantity == other.ActualQuantity ||
@@ -292,6 +321,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TokenConversionRate == other.TokenConversionRate ||
                     this.TokenConversionRate != null &&
                     this.TokenConversionRate.Equals(other.TokenConversionRate)
+                ) &&
+                (
+                    this.AiSubItems == other.AiSubItems ||
+                    this.AiSubItems != null &&
+                    this.AiSubItems.SequenceEqual(other.AiSubItems)
                 );
         }
 
@@ -321,8 +355,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.PrepaidQuantity != null)
                     hash = hash * 59 + this.PrepaidQuantity.GetHashCode();
 
-                if (this.FairuseQuantity != null)
-                    hash = hash * 59 + this.FairuseQuantity.GetHashCode();
+                if (this.FairuseAllocation != null)
+                    hash = hash * 59 + this.FairuseAllocation.GetHashCode();
+
+                if (this.FairuseAmount != null)
+                    hash = hash * 59 + this.FairuseAmount.GetHashCode();
 
                 if (this.ActualQuantity != null)
                     hash = hash * 59 + this.ActualQuantity.GetHashCode();
@@ -344,6 +381,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TokenConversionRate != null)
                     hash = hash * 59 + this.TokenConversionRate.GetHashCode();
+
+                if (this.AiSubItems != null)
+                    hash = hash * 59 + this.AiSubItems.GetHashCode();
 
                 return hash;
             }

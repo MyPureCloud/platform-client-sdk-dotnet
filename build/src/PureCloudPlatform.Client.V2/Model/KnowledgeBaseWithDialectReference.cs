@@ -271,7 +271,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Elgr for "el-GR"
             /// </summary>
             [EnumMember(Value = "el-GR")]
-            Elgr
+            Elgr,
+            
+            /// <summary>
+            /// Enum Caes for "ca-ES"
+            /// </summary>
+            [EnumMember(Value = "ca-ES")]
+            Caes,
+            
+            /// <summary>
+            /// Enum Ennz for "en-NZ"
+            /// </summary>
+            [EnumMember(Value = "en-NZ")]
+            Ennz,
+            
+            /// <summary>
+            /// Enum Zhhk for "zh-HK"
+            /// </summary>
+            [EnumMember(Value = "zh-HK")]
+            Zhhk,
+            
+            /// <summary>
+            /// Enum Zhtw for "zh-TW"
+            /// </summary>
+            [EnumMember(Value = "zh-TW")]
+            Zhtw,
+            
+            /// <summary>
+            /// Enum Zhcn for "zh-CN"
+            /// </summary>
+            [EnumMember(Value = "zh-CN")]
+            Zhcn,
+            
+            /// <summary>
+            /// Enum Arsa for "ar-SA"
+            /// </summary>
+            [EnumMember(Value = "ar-SA")]
+            Arsa
         }
         /// <summary>
         /// The dialect for the knowledge base.

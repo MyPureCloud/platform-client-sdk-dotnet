@@ -201,12 +201,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>CaseAssociationListing</returns>
         
-        CaseAssociationListing GetCasemanagementCaseAssociations (string caseId, string before = null, string after = null, string pageSize = null);
+        CaseAssociationListing GetCasemanagementCaseAssociations (string caseId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a list of Case associations for the Case.
@@ -216,12 +215,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>ApiResponse of CaseAssociationListing</returns>
         
-        ApiResponse<CaseAssociationListing> GetCasemanagementCaseAssociationsWithHttpInfo (string caseId, string before = null, string after = null, string pageSize = null);
+        ApiResponse<CaseAssociationListing> GetCasemanagementCaseAssociationsWithHttpInfo (string caseId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a Comment.
@@ -342,12 +340,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
         /// <param name="stageId">Stage identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>StepListing</returns>
         
-        StepListing GetCasemanagementCaseStageSteps (string caseId, string stageId, string before = null, string after = null, string pageSize = null);
+        StepListing GetCasemanagementCaseStageSteps (string caseId, string stageId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a list of Steps.
@@ -358,12 +355,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
         /// <param name="stageId">Stage identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>ApiResponse of StepListing</returns>
         
-        ApiResponse<StepListing> GetCasemanagementCaseStageStepsWithHttpInfo (string caseId, string stageId, string before = null, string after = null, string pageSize = null);
+        ApiResponse<StepListing> GetCasemanagementCaseStageStepsWithHttpInfo (string caseId, string stageId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a list of Stages.
@@ -373,12 +369,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>StageListing</returns>
         
-        StageListing GetCasemanagementCaseStages (string caseId, string before = null, string after = null, string pageSize = null);
+        StageListing GetCasemanagementCaseStages (string caseId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a list of Stages.
@@ -388,12 +383,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>ApiResponse of StageListing</returns>
         
-        ApiResponse<StageListing> GetCasemanagementCaseStagesWithHttpInfo (string caseId, string before = null, string after = null, string pageSize = null);
+        ApiResponse<StageListing> GetCasemanagementCaseStagesWithHttpInfo (string caseId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a Terminate Job for a Case.
@@ -595,13 +589,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="stageplanId">Stageplan identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>StepplanListing</returns>
         
-        StepplanListing GetCasemanagementCaseplanVersionStageplanStepplans (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
+        StepplanListing GetCasemanagementCaseplanVersionStageplanStepplans (string caseplanId, string versionId, string stageplanId, string after = null, int? pageSize = null, List<string> expands = null);
 
         /// <summary>
         /// Get a list of Stepplans.
@@ -613,13 +606,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="stageplanId">Stageplan identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of StepplanListing</returns>
         
-        ApiResponse<StepplanListing> GetCasemanagementCaseplanVersionStageplanStepplansWithHttpInfo (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
+        ApiResponse<StepplanListing> GetCasemanagementCaseplanVersionStageplanStepplansWithHttpInfo (string caseplanId, string versionId, string stageplanId, string after = null, int? pageSize = null, List<string> expands = null);
 
         /// <summary>
         /// Get a list of Stageplans.
@@ -630,13 +622,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>StageplanListing</returns>
         
-        StageplanListing GetCasemanagementCaseplanVersionStageplans (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
+        StageplanListing GetCasemanagementCaseplanVersionStageplans (string caseplanId, string versionId, string after = null, int? pageSize = null, List<string> expands = null);
 
         /// <summary>
         /// Get a list of Stageplans.
@@ -647,13 +638,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of StageplanListing</returns>
         
-        ApiResponse<StageplanListing> GetCasemanagementCaseplanVersionStageplansWithHttpInfo (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
+        ApiResponse<StageplanListing> GetCasemanagementCaseplanVersionStageplansWithHttpInfo (string caseplanId, string versionId, string after = null, int? pageSize = null, List<string> expands = null);
 
         /// <summary>
         /// Get a list of Caseplans.
@@ -1603,12 +1593,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>Task of CaseAssociationListing</returns>
         
-        System.Threading.Tasks.Task<CaseAssociationListing> GetCasemanagementCaseAssociationsAsync (string caseId, string before = null, string after = null, string pageSize = null);
+        System.Threading.Tasks.Task<CaseAssociationListing> GetCasemanagementCaseAssociationsAsync (string caseId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a list of Case associations for the Case.
@@ -1618,12 +1607,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>Task of ApiResponse (CaseAssociationListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<CaseAssociationListing>> GetCasemanagementCaseAssociationsAsyncWithHttpInfo (string caseId, string before = null, string after = null, string pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<CaseAssociationListing>> GetCasemanagementCaseAssociationsAsyncWithHttpInfo (string caseId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a Comment.
@@ -1744,12 +1732,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
         /// <param name="stageId">Stage identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>Task of StepListing</returns>
         
-        System.Threading.Tasks.Task<StepListing> GetCasemanagementCaseStageStepsAsync (string caseId, string stageId, string before = null, string after = null, string pageSize = null);
+        System.Threading.Tasks.Task<StepListing> GetCasemanagementCaseStageStepsAsync (string caseId, string stageId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a list of Steps.
@@ -1760,12 +1747,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
         /// <param name="stageId">Stage identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>Task of ApiResponse (StepListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<StepListing>> GetCasemanagementCaseStageStepsAsyncWithHttpInfo (string caseId, string stageId, string before = null, string after = null, string pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<StepListing>> GetCasemanagementCaseStageStepsAsyncWithHttpInfo (string caseId, string stageId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a list of Stages.
@@ -1775,12 +1761,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>Task of StageListing</returns>
         
-        System.Threading.Tasks.Task<StageListing> GetCasemanagementCaseStagesAsync (string caseId, string before = null, string after = null, string pageSize = null);
+        System.Threading.Tasks.Task<StageListing> GetCasemanagementCaseStagesAsync (string caseId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a list of Stages.
@@ -1790,12 +1775,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>Task of ApiResponse (StageListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<StageListing>> GetCasemanagementCaseStagesAsyncWithHttpInfo (string caseId, string before = null, string after = null, string pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<StageListing>> GetCasemanagementCaseStagesAsyncWithHttpInfo (string caseId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get a Terminate Job for a Case.
@@ -1997,13 +1981,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="stageplanId">Stageplan identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of StepplanListing</returns>
         
-        System.Threading.Tasks.Task<StepplanListing> GetCasemanagementCaseplanVersionStageplanStepplansAsync (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
+        System.Threading.Tasks.Task<StepplanListing> GetCasemanagementCaseplanVersionStageplanStepplansAsync (string caseplanId, string versionId, string stageplanId, string after = null, int? pageSize = null, List<string> expands = null);
 
         /// <summary>
         /// Get a list of Stepplans.
@@ -2015,13 +1998,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="stageplanId">Stageplan identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (StepplanListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<StepplanListing>> GetCasemanagementCaseplanVersionStageplanStepplansAsyncWithHttpInfo (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
+        System.Threading.Tasks.Task<ApiResponse<StepplanListing>> GetCasemanagementCaseplanVersionStageplanStepplansAsyncWithHttpInfo (string caseplanId, string versionId, string stageplanId, string after = null, int? pageSize = null, List<string> expands = null);
 
         /// <summary>
         /// Get a list of Stageplans.
@@ -2032,13 +2014,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of StageplanListing</returns>
         
-        System.Threading.Tasks.Task<StageplanListing> GetCasemanagementCaseplanVersionStageplansAsync (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
+        System.Threading.Tasks.Task<StageplanListing> GetCasemanagementCaseplanVersionStageplansAsync (string caseplanId, string versionId, string after = null, int? pageSize = null, List<string> expands = null);
 
         /// <summary>
         /// Get a list of Stageplans.
@@ -2049,13 +2030,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (StageplanListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<StageplanListing>> GetCasemanagementCaseplanVersionStageplansAsyncWithHttpInfo (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null);
+        System.Threading.Tasks.Task<ApiResponse<StageplanListing>> GetCasemanagementCaseplanVersionStageplansAsyncWithHttpInfo (string caseplanId, string versionId, string after = null, int? pageSize = null, List<string> expands = null);
 
         /// <summary>
         /// Get a list of Caseplans.
@@ -4406,14 +4386,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>CaseAssociationListing</returns>
         
-        public CaseAssociationListing GetCasemanagementCaseAssociations (string caseId, string before = null, string after = null, string pageSize = null)
+        public CaseAssociationListing GetCasemanagementCaseAssociations (string caseId, string after = null, int? pageSize = null)
         {
-             ApiResponse<CaseAssociationListing> localVarResponse = GetCasemanagementCaseAssociationsWithHttpInfo(caseId, before, after, pageSize);
+             ApiResponse<CaseAssociationListing> localVarResponse = GetCasemanagementCaseAssociationsWithHttpInfo(caseId, after, pageSize);
              return localVarResponse.Data;
         }
 
@@ -4423,12 +4402,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>ApiResponse of CaseAssociationListing</returns>
         
-        public ApiResponse< CaseAssociationListing > GetCasemanagementCaseAssociationsWithHttpInfo (string caseId, string before = null, string after = null, string pageSize = null)
+        public ApiResponse< CaseAssociationListing > GetCasemanagementCaseAssociationsWithHttpInfo (string caseId, string after = null, int? pageSize = null)
         { 
             // verify the required parameter 'caseId' is set
             if (caseId == null)
@@ -4468,7 +4446,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
 
             // Query params
-            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
@@ -4516,14 +4493,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>Task of CaseAssociationListing</returns>
         
-        public async System.Threading.Tasks.Task<CaseAssociationListing> GetCasemanagementCaseAssociationsAsync (string caseId, string before = null, string after = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<CaseAssociationListing> GetCasemanagementCaseAssociationsAsync (string caseId, string after = null, int? pageSize = null)
         {
-             ApiResponse<CaseAssociationListing> localVarResponse = await GetCasemanagementCaseAssociationsAsyncWithHttpInfo(caseId, before, after, pageSize);
+             ApiResponse<CaseAssociationListing> localVarResponse = await GetCasemanagementCaseAssociationsAsyncWithHttpInfo(caseId, after, pageSize);
              return localVarResponse.Data;
 
         }
@@ -4534,12 +4510,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>Task of ApiResponse (CaseAssociationListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<CaseAssociationListing>> GetCasemanagementCaseAssociationsAsyncWithHttpInfo (string caseId, string before = null, string after = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CaseAssociationListing>> GetCasemanagementCaseAssociationsAsyncWithHttpInfo (string caseId, string after = null, int? pageSize = null)
         { 
             // verify the required parameter 'caseId' is set
             if (caseId == null)
@@ -4580,7 +4555,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
 
             // Query params
-            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
@@ -5520,14 +5494,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
         /// <param name="stageId">Stage identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>StepListing</returns>
         
-        public StepListing GetCasemanagementCaseStageSteps (string caseId, string stageId, string before = null, string after = null, string pageSize = null)
+        public StepListing GetCasemanagementCaseStageSteps (string caseId, string stageId, string after = null, int? pageSize = null)
         {
-             ApiResponse<StepListing> localVarResponse = GetCasemanagementCaseStageStepsWithHttpInfo(caseId, stageId, before, after, pageSize);
+             ApiResponse<StepListing> localVarResponse = GetCasemanagementCaseStageStepsWithHttpInfo(caseId, stageId, after, pageSize);
              return localVarResponse.Data;
         }
 
@@ -5538,12 +5511,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
         /// <param name="stageId">Stage identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>ApiResponse of StepListing</returns>
         
-        public ApiResponse< StepListing > GetCasemanagementCaseStageStepsWithHttpInfo (string caseId, string stageId, string before = null, string after = null, string pageSize = null)
+        public ApiResponse< StepListing > GetCasemanagementCaseStageStepsWithHttpInfo (string caseId, string stageId, string after = null, int? pageSize = null)
         { 
             // verify the required parameter 'caseId' is set
             if (caseId == null)
@@ -5587,7 +5559,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (stageId != null) localVarPathParams.Add("stageId", this.Configuration.ApiClient.ParameterToString(stageId));
 
             // Query params
-            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
@@ -5636,14 +5607,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
         /// <param name="stageId">Stage identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>Task of StepListing</returns>
         
-        public async System.Threading.Tasks.Task<StepListing> GetCasemanagementCaseStageStepsAsync (string caseId, string stageId, string before = null, string after = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<StepListing> GetCasemanagementCaseStageStepsAsync (string caseId, string stageId, string after = null, int? pageSize = null)
         {
-             ApiResponse<StepListing> localVarResponse = await GetCasemanagementCaseStageStepsAsyncWithHttpInfo(caseId, stageId, before, after, pageSize);
+             ApiResponse<StepListing> localVarResponse = await GetCasemanagementCaseStageStepsAsyncWithHttpInfo(caseId, stageId, after, pageSize);
              return localVarResponse.Data;
 
         }
@@ -5655,12 +5625,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
         /// <param name="stageId">Stage identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>Task of ApiResponse (StepListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<StepListing>> GetCasemanagementCaseStageStepsAsyncWithHttpInfo (string caseId, string stageId, string before = null, string after = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StepListing>> GetCasemanagementCaseStageStepsAsyncWithHttpInfo (string caseId, string stageId, string after = null, int? pageSize = null)
         { 
             // verify the required parameter 'caseId' is set
             if (caseId == null)
@@ -5706,7 +5675,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (stageId != null) localVarPathParams.Add("stageId", this.Configuration.ApiClient.ParameterToString(stageId));
 
             // Query params
-            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
@@ -5755,14 +5723,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>StageListing</returns>
         
-        public StageListing GetCasemanagementCaseStages (string caseId, string before = null, string after = null, string pageSize = null)
+        public StageListing GetCasemanagementCaseStages (string caseId, string after = null, int? pageSize = null)
         {
-             ApiResponse<StageListing> localVarResponse = GetCasemanagementCaseStagesWithHttpInfo(caseId, before, after, pageSize);
+             ApiResponse<StageListing> localVarResponse = GetCasemanagementCaseStagesWithHttpInfo(caseId, after, pageSize);
              return localVarResponse.Data;
         }
 
@@ -5772,12 +5739,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>ApiResponse of StageListing</returns>
         
-        public ApiResponse< StageListing > GetCasemanagementCaseStagesWithHttpInfo (string caseId, string before = null, string after = null, string pageSize = null)
+        public ApiResponse< StageListing > GetCasemanagementCaseStagesWithHttpInfo (string caseId, string after = null, int? pageSize = null)
         { 
             // verify the required parameter 'caseId' is set
             if (caseId == null)
@@ -5817,7 +5783,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
 
             // Query params
-            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
@@ -5865,14 +5830,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>Task of StageListing</returns>
         
-        public async System.Threading.Tasks.Task<StageListing> GetCasemanagementCaseStagesAsync (string caseId, string before = null, string after = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<StageListing> GetCasemanagementCaseStagesAsync (string caseId, string after = null, int? pageSize = null)
         {
-             ApiResponse<StageListing> localVarResponse = await GetCasemanagementCaseStagesAsyncWithHttpInfo(caseId, before, after, pageSize);
+             ApiResponse<StageListing> localVarResponse = await GetCasemanagementCaseStagesAsyncWithHttpInfo(caseId, after, pageSize);
              return localVarResponse.Data;
 
         }
@@ -5883,12 +5847,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseId">Case identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <returns>Task of ApiResponse (StageListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<StageListing>> GetCasemanagementCaseStagesAsyncWithHttpInfo (string caseId, string before = null, string after = null, string pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StageListing>> GetCasemanagementCaseStagesAsyncWithHttpInfo (string caseId, string after = null, int? pageSize = null)
         { 
             // verify the required parameter 'caseId' is set
             if (caseId == null)
@@ -5929,7 +5892,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (caseId != null) localVarPathParams.Add("caseId", this.Configuration.ApiClient.ParameterToString(caseId));
 
             // Query params
-            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
@@ -7544,15 +7506,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="stageplanId">Stageplan identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>StepplanListing</returns>
         
-        public StepplanListing GetCasemanagementCaseplanVersionStageplanStepplans (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
+        public StepplanListing GetCasemanagementCaseplanVersionStageplanStepplans (string caseplanId, string versionId, string stageplanId, string after = null, int? pageSize = null, List<string> expands = null)
         {
-             ApiResponse<StepplanListing> localVarResponse = GetCasemanagementCaseplanVersionStageplanStepplansWithHttpInfo(caseplanId, versionId, stageplanId, before, after, pageSize, expands);
+             ApiResponse<StepplanListing> localVarResponse = GetCasemanagementCaseplanVersionStageplanStepplansWithHttpInfo(caseplanId, versionId, stageplanId, after, pageSize, expands);
              return localVarResponse.Data;
         }
 
@@ -7564,13 +7525,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="stageplanId">Stageplan identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of StepplanListing</returns>
         
-        public ApiResponse< StepplanListing > GetCasemanagementCaseplanVersionStageplanStepplansWithHttpInfo (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
+        public ApiResponse< StepplanListing > GetCasemanagementCaseplanVersionStageplanStepplansWithHttpInfo (string caseplanId, string versionId, string stageplanId, string after = null, int? pageSize = null, List<string> expands = null)
         { 
             // verify the required parameter 'caseplanId' is set
             if (caseplanId == null)
@@ -7618,7 +7578,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (stageplanId != null) localVarPathParams.Add("stageplanId", this.Configuration.ApiClient.ParameterToString(stageplanId));
 
             // Query params
-            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (expands != null) expands.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(obj))); });
@@ -7669,15 +7628,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="stageplanId">Stageplan identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of StepplanListing</returns>
         
-        public async System.Threading.Tasks.Task<StepplanListing> GetCasemanagementCaseplanVersionStageplanStepplansAsync (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
+        public async System.Threading.Tasks.Task<StepplanListing> GetCasemanagementCaseplanVersionStageplanStepplansAsync (string caseplanId, string versionId, string stageplanId, string after = null, int? pageSize = null, List<string> expands = null)
         {
-             ApiResponse<StepplanListing> localVarResponse = await GetCasemanagementCaseplanVersionStageplanStepplansAsyncWithHttpInfo(caseplanId, versionId, stageplanId, before, after, pageSize, expands);
+             ApiResponse<StepplanListing> localVarResponse = await GetCasemanagementCaseplanVersionStageplanStepplansAsyncWithHttpInfo(caseplanId, versionId, stageplanId, after, pageSize, expands);
              return localVarResponse.Data;
 
         }
@@ -7690,13 +7648,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
         /// <param name="stageplanId">Stageplan identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (StepplanListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<StepplanListing>> GetCasemanagementCaseplanVersionStageplanStepplansAsyncWithHttpInfo (string caseplanId, string versionId, string stageplanId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StepplanListing>> GetCasemanagementCaseplanVersionStageplanStepplansAsyncWithHttpInfo (string caseplanId, string versionId, string stageplanId, string after = null, int? pageSize = null, List<string> expands = null)
         { 
             // verify the required parameter 'caseplanId' is set
             if (caseplanId == null)
@@ -7747,7 +7704,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (stageplanId != null) localVarPathParams.Add("stageplanId", this.Configuration.ApiClient.ParameterToString(stageplanId));
 
             // Query params
-            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (expands != null) expands.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(obj))); });
@@ -7798,15 +7754,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>StageplanListing</returns>
         
-        public StageplanListing GetCasemanagementCaseplanVersionStageplans (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
+        public StageplanListing GetCasemanagementCaseplanVersionStageplans (string caseplanId, string versionId, string after = null, int? pageSize = null, List<string> expands = null)
         {
-             ApiResponse<StageplanListing> localVarResponse = GetCasemanagementCaseplanVersionStageplansWithHttpInfo(caseplanId, versionId, before, after, pageSize, expands);
+             ApiResponse<StageplanListing> localVarResponse = GetCasemanagementCaseplanVersionStageplansWithHttpInfo(caseplanId, versionId, after, pageSize, expands);
              return localVarResponse.Data;
         }
 
@@ -7817,13 +7772,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>ApiResponse of StageplanListing</returns>
         
-        public ApiResponse< StageplanListing > GetCasemanagementCaseplanVersionStageplansWithHttpInfo (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
+        public ApiResponse< StageplanListing > GetCasemanagementCaseplanVersionStageplansWithHttpInfo (string caseplanId, string versionId, string after = null, int? pageSize = null, List<string> expands = null)
         { 
             // verify the required parameter 'caseplanId' is set
             if (caseplanId == null)
@@ -7867,7 +7821,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
 
             // Query params
-            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (expands != null) expands.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(obj))); });
@@ -7917,15 +7870,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of StageplanListing</returns>
         
-        public async System.Threading.Tasks.Task<StageplanListing> GetCasemanagementCaseplanVersionStageplansAsync (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
+        public async System.Threading.Tasks.Task<StageplanListing> GetCasemanagementCaseplanVersionStageplansAsync (string caseplanId, string versionId, string after = null, int? pageSize = null, List<string> expands = null)
         {
-             ApiResponse<StageplanListing> localVarResponse = await GetCasemanagementCaseplanVersionStageplansAsyncWithHttpInfo(caseplanId, versionId, before, after, pageSize, expands);
+             ApiResponse<StageplanListing> localVarResponse = await GetCasemanagementCaseplanVersionStageplansAsyncWithHttpInfo(caseplanId, versionId, after, pageSize, expands);
              return localVarResponse.Data;
 
         }
@@ -7937,13 +7889,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="caseplanId">Caseplan identifier.</param>
         /// <param name="versionId">Caseplan version identifier.</param>
-        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
-        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="after">Cursor that points to the end of the previously returned page. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum is 200. (optional)</param>
         /// <param name="expands">Fields to expand. (optional)</param>
         /// <returns>Task of ApiResponse (StageplanListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<StageplanListing>> GetCasemanagementCaseplanVersionStageplansAsyncWithHttpInfo (string caseplanId, string versionId, string before = null, string after = null, string pageSize = null, List<string> expands = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StageplanListing>> GetCasemanagementCaseplanVersionStageplansAsyncWithHttpInfo (string caseplanId, string versionId, string after = null, int? pageSize = null, List<string> expands = null)
         { 
             // verify the required parameter 'caseplanId' is set
             if (caseplanId == null)
@@ -7989,7 +7940,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
 
             // Query params
-            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (expands != null) expands.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(obj))); });

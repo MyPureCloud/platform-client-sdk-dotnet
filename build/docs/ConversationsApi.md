@@ -135,6 +135,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagingSupportedcontentDefault**](#GetConversationsMessagingSupportedcontentDefault) | **Get** /api/v2/conversations/messaging/supportedcontent/default | Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. |
 | [**GetConversationsMessagingSupportedcontentSupportedContentId**](#GetConversationsMessagingSupportedcontentSupportedContentId) | **Get** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Get a supported content profile |
 | [**GetConversationsMessagingThreadingtimeline**](#GetConversationsMessagingThreadingtimeline) | **Get** /api/v2/conversations/messaging/threadingtimeline | Get conversation threading window timeline for each messaging type |
+| [**GetConversationsScreenmonitor**](#GetConversationsScreenmonitor) | **Get** /api/v2/conversations/screenmonitors/{conversationId} | Get screen monitoring conversation |
+| [**GetConversationsScreenmonitors**](#GetConversationsScreenmonitors) | **Get** /api/v2/conversations/screenmonitors | Get active screen monitoring conversations for the logged in user |
 | [**GetConversationsScreenshareParticipantCommunicationWrapup**](#GetConversationsScreenshareParticipantCommunicationWrapup) | **Get** /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
 | [**GetConversationsSettings**](#GetConversationsSettings) | **Get** /api/v2/conversations/settings | Get Settings |
 | [**GetConversationsSocialParticipantCommunicationWrapup**](#GetConversationsSocialParticipantCommunicationWrapup) | **Get** /api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
@@ -259,7 +261,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsKeyconfigurations**](#PostConversationsKeyconfigurations) | **Post** /api/v2/conversations/keyconfigurations | Setup configurations for encryption key creation |
 | [**PostConversationsKeyconfigurationsValidate**](#PostConversationsKeyconfigurationsValidate) | **Post** /api/v2/conversations/keyconfigurations/validate | Validate encryption key configurations without saving it |
 | [**PostConversationsMessageCommunicationMessages**](#PostConversationsMessageCommunicationMessages) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages | Send message |
-| [**PostConversationsMessageCommunicationMessagesMedia**](#PostConversationsMessageCommunicationMessagesMedia) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media | Create media |
 | [**PostConversationsMessageCommunicationMessagesMediaUploads**](#PostConversationsMessageCommunicationMessagesMediaUploads) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/uploads | Create a URL to upload a message media file |
 | [**PostConversationsMessageCommunicationSocialmediaMessages**](#PostConversationsMessageCommunicationSocialmediaMessages) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/socialmedia/messages | Send a social media message |
 | [**PostConversationsMessageCommunicationTyping**](#PostConversationsMessageCommunicationTyping) | **Post** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/typing | Send message typing event |
@@ -8474,6 +8475,125 @@ This endpoint does require any parameters.
 [**ConversationThreadingWindow**](ConversationThreadingWindow)
 
 
+## GetConversationsScreenmonitor
+
+> [**ScreenMonitoringConversation**](ScreenMonitoringConversation) GetConversationsScreenmonitor (string conversationId)
+
+
+Get screen monitoring conversation
+
+Requires ANY permissions: 
+
+* conversation:screenMonitor:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsScreenmonitorExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+
+            try
+            { 
+                // Get screen monitoring conversation
+                ScreenMonitoringConversation result = apiInstance.GetConversationsScreenmonitor(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsScreenmonitor: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+
+### Return type
+
+[**ScreenMonitoringConversation**](ScreenMonitoringConversation)
+
+
+## GetConversationsScreenmonitors
+
+> [**ScreenMonitoringConversationEntityListing**](ScreenMonitoringConversationEntityListing) GetConversationsScreenmonitors ()
+
+
+Get active screen monitoring conversations for the logged in user
+
+Requires ANY permissions: 
+
+* conversation:screenMonitor:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsScreenmonitorsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+
+            try
+            { 
+                // Get active screen monitoring conversations for the logged in user
+                ScreenMonitoringConversationEntityListing result = apiInstance.GetConversationsScreenmonitors();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsScreenmonitors: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**ScreenMonitoringConversationEntityListing**](ScreenMonitoringConversationEntityListing)
+
+
 ## GetConversationsScreenshareParticipantCommunicationWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
@@ -8682,6 +8802,8 @@ GetConversationsVideoDetails is a preview method and is subject to both breaking
 Requires ANY permissions: 
 
 * video:video:access
+* conversation:video:add
+* conversation:videoVoice:add
 
 ### Example
 ```{"language":"csharp"}
@@ -16591,77 +16713,6 @@ namespace Example
 [**MessageData**](MessageData)
 
 
-## PostConversationsMessageCommunicationMessagesMedia
-
-> [**MessageMediaData**](MessageMediaData) PostConversationsMessageCommunicationMessagesMedia (string conversationId, string communicationId)
-
-:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
-This resource has been deprecated
-:::
-
-Create media
-
-See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
-
-Requires ANY permissions: 
-
-* conversation:message:create
-* conversation:webmessaging:create
-* conversation:socialmedia:create
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostConversationsMessageCommunicationMessagesMediaExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new ConversationsApi();
-            var conversationId = conversationId_example;  // string | conversationId
-            var communicationId = communicationId_example;  // string | communicationId
-
-            try
-            { 
-                // Create media
-                MessageMediaData result = apiInstance.PostConversationsMessageCommunicationMessagesMedia(conversationId, communicationId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageCommunicationMessagesMedia: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **conversationId** | **string**| conversationId |  |
-| **communicationId** | **string**| communicationId |  |
-
-### Return type
-
-[**MessageMediaData**](MessageMediaData)
-
-
 ## PostConversationsMessageCommunicationMessagesMediaUploads
 
 > [**MessageMediaUploadData**](MessageMediaUploadData) PostConversationsMessageCommunicationMessagesMediaUploads (string conversationId, string communicationId, UploadMediaRequest body)
@@ -18636,6 +18687,7 @@ PostConversationsVideoAgentconferenceCommunication is a preview method and is su
 Requires ANY permissions: 
 
 * conversation:video:add
+* conversation:videoVoice:add
 
 ### Example
 ```{"language":"csharp"}
@@ -20565,4 +20617,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

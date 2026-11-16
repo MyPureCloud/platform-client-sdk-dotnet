@@ -319,9 +319,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
         /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <param name="expand">Expand the response with additional fields. (optional)</param>
+        /// <param name="segmentIds">IDs of segments to return. Maximum of 5 (optional)</param>
         /// <returns>SegmentAssignmentListing</returns>
         
-        SegmentAssignmentListing GetExternalcontactsContactJourneySegments (string contactId, bool? includeMerged = null, int? limit = null);
+        SegmentAssignmentListing GetExternalcontactsContactJourneySegments (string contactId, bool? includeMerged = null, int? limit = null, List<string> expand = null, List<string> segmentIds = null);
 
         /// <summary>
         /// Retrieve segment assignments by external contact ID.
@@ -333,9 +335,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
         /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <param name="expand">Expand the response with additional fields. (optional)</param>
+        /// <param name="segmentIds">IDs of segments to return. Maximum of 5 (optional)</param>
         /// <returns>ApiResponse of SegmentAssignmentListing</returns>
         
-        ApiResponse<SegmentAssignmentListing> GetExternalcontactsContactJourneySegmentsWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null);
+        ApiResponse<SegmentAssignmentListing> GetExternalcontactsContactJourneySegmentsWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null, List<string> expand = null, List<string> segmentIds = null);
 
         /// <summary>
         /// Retrieve all sessions for a given external contact.
@@ -4037,9 +4041,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
         /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <param name="expand">Expand the response with additional fields. (optional)</param>
+        /// <param name="segmentIds">IDs of segments to return. Maximum of 5 (optional)</param>
         /// <returns>Task of SegmentAssignmentListing</returns>
         
-        System.Threading.Tasks.Task<SegmentAssignmentListing> GetExternalcontactsContactJourneySegmentsAsync (string contactId, bool? includeMerged = null, int? limit = null);
+        System.Threading.Tasks.Task<SegmentAssignmentListing> GetExternalcontactsContactJourneySegmentsAsync (string contactId, bool? includeMerged = null, int? limit = null, List<string> expand = null, List<string> segmentIds = null);
 
         /// <summary>
         /// Retrieve segment assignments by external contact ID.
@@ -4051,9 +4057,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
         /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <param name="expand">Expand the response with additional fields. (optional)</param>
+        /// <param name="segmentIds">IDs of segments to return. Maximum of 5 (optional)</param>
         /// <returns>Task of ApiResponse (SegmentAssignmentListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SegmentAssignmentListing>> GetExternalcontactsContactJourneySegmentsAsyncWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<SegmentAssignmentListing>> GetExternalcontactsContactJourneySegmentsAsyncWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null, List<string> expand = null, List<string> segmentIds = null);
 
         /// <summary>
         /// Retrieve all sessions for a given external contact.
@@ -10031,11 +10039,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
         /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <param name="expand">Expand the response with additional fields. (optional)</param>
+        /// <param name="segmentIds">IDs of segments to return. Maximum of 5 (optional)</param>
         /// <returns>SegmentAssignmentListing</returns>
         
-        public SegmentAssignmentListing GetExternalcontactsContactJourneySegments (string contactId, bool? includeMerged = null, int? limit = null)
+        public SegmentAssignmentListing GetExternalcontactsContactJourneySegments (string contactId, bool? includeMerged = null, int? limit = null, List<string> expand = null, List<string> segmentIds = null)
         {
-             ApiResponse<SegmentAssignmentListing> localVarResponse = GetExternalcontactsContactJourneySegmentsWithHttpInfo(contactId, includeMerged, limit);
+             ApiResponse<SegmentAssignmentListing> localVarResponse = GetExternalcontactsContactJourneySegmentsWithHttpInfo(contactId, includeMerged, limit, expand, segmentIds);
              return localVarResponse.Data;
         }
 
@@ -10047,9 +10057,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
         /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <param name="expand">Expand the response with additional fields. (optional)</param>
+        /// <param name="segmentIds">IDs of segments to return. Maximum of 5 (optional)</param>
         /// <returns>ApiResponse of SegmentAssignmentListing</returns>
         
-        public ApiResponse< SegmentAssignmentListing > GetExternalcontactsContactJourneySegmentsWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null)
+        public ApiResponse< SegmentAssignmentListing > GetExternalcontactsContactJourneySegmentsWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null, List<string> expand = null, List<string> segmentIds = null)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -10091,6 +10103,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (includeMerged != null) localVarQueryParams.Add(new Tuple<string, string>("includeMerged", this.Configuration.ApiClient.ParameterToString(includeMerged)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (segmentIds != null) segmentIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("segmentIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -10138,11 +10152,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
         /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <param name="expand">Expand the response with additional fields. (optional)</param>
+        /// <param name="segmentIds">IDs of segments to return. Maximum of 5 (optional)</param>
         /// <returns>Task of SegmentAssignmentListing</returns>
         
-        public async System.Threading.Tasks.Task<SegmentAssignmentListing> GetExternalcontactsContactJourneySegmentsAsync (string contactId, bool? includeMerged = null, int? limit = null)
+        public async System.Threading.Tasks.Task<SegmentAssignmentListing> GetExternalcontactsContactJourneySegmentsAsync (string contactId, bool? includeMerged = null, int? limit = null, List<string> expand = null, List<string> segmentIds = null)
         {
-             ApiResponse<SegmentAssignmentListing> localVarResponse = await GetExternalcontactsContactJourneySegmentsAsyncWithHttpInfo(contactId, includeMerged, limit);
+             ApiResponse<SegmentAssignmentListing> localVarResponse = await GetExternalcontactsContactJourneySegmentsAsyncWithHttpInfo(contactId, includeMerged, limit, expand, segmentIds);
              return localVarResponse.Data;
 
         }
@@ -10155,9 +10171,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
         /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <param name="expand">Expand the response with additional fields. (optional)</param>
+        /// <param name="segmentIds">IDs of segments to return. Maximum of 5 (optional)</param>
         /// <returns>Task of ApiResponse (SegmentAssignmentListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SegmentAssignmentListing>> GetExternalcontactsContactJourneySegmentsAsyncWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SegmentAssignmentListing>> GetExternalcontactsContactJourneySegmentsAsyncWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null, List<string> expand = null, List<string> segmentIds = null)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -10200,6 +10218,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (includeMerged != null) localVarQueryParams.Add(new Tuple<string, string>("includeMerged", this.Configuration.ApiClient.ParameterToString(includeMerged)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (segmentIds != null) segmentIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("segmentIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

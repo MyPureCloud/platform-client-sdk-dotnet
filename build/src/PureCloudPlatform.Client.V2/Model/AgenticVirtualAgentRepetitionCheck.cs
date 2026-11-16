@@ -46,9 +46,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Agent
         }
         /// <summary>
-        /// The similarity category compared to the Levenshtein result that triggers this check's instruction.
+        /// The similarity category compared to the comparison result that triggers this check's instruction. VeryLoose, Loose, and Strict require semantic comparison to be enabled for your organization; a request using one of these without that capability enabled fails with 501 Not Implemented.
         /// </summary>
-        /// <value>The similarity category compared to the Levenshtein result that triggers this check's instruction.</value>
+        /// <value>The similarity category compared to the comparison result that triggers this check's instruction. VeryLoose, Loose, and Strict require semantic comparison to be enabled for your organization; a request using one of these without that capability enabled fails with 501 Not Implemented.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SimilarityEnum
         {
@@ -59,6 +59,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OUTDATED_SDK_VERSION")]
             OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Veryloose for "VeryLoose"
+            /// </summary>
+            [EnumMember(Value = "VeryLoose")]
+            Veryloose,
             
             /// <summary>
             /// Enum Loose for "Loose"
@@ -91,9 +97,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
-        /// The similarity category compared to the Levenshtein result that triggers this check's instruction.
+        /// The similarity category compared to the comparison result that triggers this check's instruction. VeryLoose, Loose, and Strict require semantic comparison to be enabled for your organization; a request using one of these without that capability enabled fails with 501 Not Implemented.
         /// </summary>
-        /// <value>The similarity category compared to the Levenshtein result that triggers this check's instruction.</value>
+        /// <value>The similarity category compared to the comparison result that triggers this check's instruction. VeryLoose, Loose, and Strict require semantic comparison to be enabled for your organization; a request using one of these without that capability enabled fails with 501 Not Implemented.</value>
         [DataMember(Name="similarity", EmitDefaultValue=false)]
         public SimilarityEnum? Similarity { get; set; }
 
@@ -107,7 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Type">Whether this check looks for repetition in user messages or agent responses. (required).</param>
         /// <param name="Messages">The number of prior messages of the specified type to compare for repetition. (required).</param>
-        /// <param name="Similarity">The similarity category compared to the Levenshtein result that triggers this check&#39;s instruction. (required).</param>
+        /// <param name="Similarity">The similarity category compared to the comparison result that triggers this check&#39;s instruction. VeryLoose, Loose, and Strict require semantic comparison to be enabled for your organization; a request using one of these without that capability enabled fails with 501 Not Implemented. (required).</param>
         /// <param name="Instruction">The instruction added to the virtual agent&#39;s turn when message similarity matches the configured category. (required).</param>
         public AgenticVirtualAgentRepetitionCheck(TypeEnum? Type = null, int? Messages = null, SimilarityEnum? Similarity = null, string Instruction = null)
         {

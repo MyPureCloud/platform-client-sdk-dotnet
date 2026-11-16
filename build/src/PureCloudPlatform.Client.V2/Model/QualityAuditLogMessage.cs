@@ -226,7 +226,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Stop for "Stop"
             /// </summary>
             [EnumMember(Value = "Stop")]
-            Stop
+            Stop,
+            
+            /// <summary>
+            /// Enum Videoconsentgranted for "VideoConsentGranted"
+            /// </summary>
+            [EnumMember(Value = "VideoConsentGranted")]
+            Videoconsentgranted,
+            
+            /// <summary>
+            /// Enum Videoconsentdenied for "VideoConsentDenied"
+            /// </summary>
+            [EnumMember(Value = "VideoConsentDenied")]
+            Videoconsentdenied,
+            
+            /// <summary>
+            /// Enum Videoconsentnotcollected for "VideoConsentNotCollected"
+            /// </summary>
+            [EnumMember(Value = "VideoConsentNotCollected")]
+            Videoconsentnotcollected
         }
         /// <summary>
         /// Type of the entity that was impacted.

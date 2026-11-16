@@ -58,6 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultLanguage">Copilot default language, e.g. [en-US, es-US, es-ES]. Once set, it can not be modified. (required).</param>
         /// <param name="KnowledgeAnswerConfig">Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead..</param>
         /// <param name="SummaryGenerationConfig">Copilot generated summary configuration..</param>
+        /// <param name="EmailSummaryGenerationConfig">Email summary configuration..</param>
         /// <param name="WrapupCodePredictionConfig">Copilot generated wrapup code prediction configuration..</param>
         /// <param name="AnswerGenerationConfig">Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead..</param>
         /// <param name="NluEngineType">Language understanding engine type..</param>
@@ -65,12 +66,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RuleEngineConfig">Rule engine configuration..</param>
         /// <param name="AutoSearchConfig">Auto search configuration..</param>
         /// <param name="ManualSearchConfig">Manual Search configuration..</param>
-        public Copilot(bool? LiveOnQueue = null, string DefaultLanguage = null, KnowledgeAnswerConfig KnowledgeAnswerConfig = null, SummaryGenerationConfig SummaryGenerationConfig = null, WrapupCodePredictionConfig WrapupCodePredictionConfig = null, AnswerGenerationConfig AnswerGenerationConfig = null, NluEngineTypeEnum? NluEngineType = null, NluConfig NluConfig = null, RuleEngineConfig RuleEngineConfig = null, AutoSearchConfig AutoSearchConfig = null, ManualSearchConfig ManualSearchConfig = null)
+        public Copilot(bool? LiveOnQueue = null, string DefaultLanguage = null, KnowledgeAnswerConfig KnowledgeAnswerConfig = null, SummaryGenerationConfig SummaryGenerationConfig = null, EmailSummaryGenerationConfig EmailSummaryGenerationConfig = null, WrapupCodePredictionConfig WrapupCodePredictionConfig = null, AnswerGenerationConfig AnswerGenerationConfig = null, NluEngineTypeEnum? NluEngineType = null, NluConfig NluConfig = null, RuleEngineConfig RuleEngineConfig = null, AutoSearchConfig AutoSearchConfig = null, ManualSearchConfig ManualSearchConfig = null)
         {
             this.LiveOnQueue = LiveOnQueue;
             this.DefaultLanguage = DefaultLanguage;
             this.KnowledgeAnswerConfig = KnowledgeAnswerConfig;
             this.SummaryGenerationConfig = SummaryGenerationConfig;
+            this.EmailSummaryGenerationConfig = EmailSummaryGenerationConfig;
             this.WrapupCodePredictionConfig = WrapupCodePredictionConfig;
             this.AnswerGenerationConfig = AnswerGenerationConfig;
             this.NluEngineType = NluEngineType;
@@ -125,6 +127,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Copilot generated summary configuration.</value>
         [DataMember(Name="summaryGenerationConfig", EmitDefaultValue=false)]
         public SummaryGenerationConfig SummaryGenerationConfig { get; set; }
+
+
+
+        /// <summary>
+        /// Email summary configuration.
+        /// </summary>
+        /// <value>Email summary configuration.</value>
+        [DataMember(Name="emailSummaryGenerationConfig", EmitDefaultValue=false)]
+        public EmailSummaryGenerationConfig EmailSummaryGenerationConfig { get; set; }
 
 
 
@@ -206,6 +217,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DefaultLanguage: ").Append(DefaultLanguage).Append("\n");
             sb.Append("  KnowledgeAnswerConfig: ").Append(KnowledgeAnswerConfig).Append("\n");
             sb.Append("  SummaryGenerationConfig: ").Append(SummaryGenerationConfig).Append("\n");
+            sb.Append("  EmailSummaryGenerationConfig: ").Append(EmailSummaryGenerationConfig).Append("\n");
             sb.Append("  WrapupCodePredictionConfig: ").Append(WrapupCodePredictionConfig).Append("\n");
             sb.Append("  AnswerGenerationConfig: ").Append(AnswerGenerationConfig).Append("\n");
             sb.Append("  NluEngineType: ").Append(NluEngineType).Append("\n");
@@ -280,6 +292,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SummaryGenerationConfig.Equals(other.SummaryGenerationConfig)
                 ) &&
                 (
+                    this.EmailSummaryGenerationConfig == other.EmailSummaryGenerationConfig ||
+                    this.EmailSummaryGenerationConfig != null &&
+                    this.EmailSummaryGenerationConfig.Equals(other.EmailSummaryGenerationConfig)
+                ) &&
+                (
                     this.WrapupCodePredictionConfig == other.WrapupCodePredictionConfig ||
                     this.WrapupCodePredictionConfig != null &&
                     this.WrapupCodePredictionConfig.Equals(other.WrapupCodePredictionConfig)
@@ -346,6 +363,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SummaryGenerationConfig != null)
                     hash = hash * 59 + this.SummaryGenerationConfig.GetHashCode();
+
+                if (this.EmailSummaryGenerationConfig != null)
+                    hash = hash * 59 + this.EmailSummaryGenerationConfig.GetHashCode();
 
                 if (this.WrapupCodePredictionConfig != null)
                     hash = hash * 59 + this.WrapupCodePredictionConfig.GetHashCode();

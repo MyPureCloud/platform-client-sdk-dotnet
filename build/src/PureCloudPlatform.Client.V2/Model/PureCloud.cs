@@ -23,10 +23,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Disabled">Disabled.</param>
-        public PureCloud(string Name = null, bool? Disabled = null)
+        /// <param name="NativeLoginExceptionsEnabled">NativeLoginExceptionsEnabled.</param>
+        /// <param name="NativeLoginExceptionGroupIds">NativeLoginExceptionGroupIds.</param>
+        public PureCloud(string Name = null, bool? Disabled = null, bool? NativeLoginExceptionsEnabled = null, List<string> NativeLoginExceptionGroupIds = null)
         {
             this.Name = Name;
             this.Disabled = Disabled;
+            this.NativeLoginExceptionsEnabled = NativeLoginExceptionsEnabled;
+            this.NativeLoginExceptionGroupIds = NativeLoginExceptionGroupIds;
             
         }
         
@@ -58,6 +62,22 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets NativeLoginExceptionsEnabled
+        /// </summary>
+        [DataMember(Name="nativeLoginExceptionsEnabled", EmitDefaultValue=false)]
+        public bool? NativeLoginExceptionsEnabled { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets NativeLoginExceptionGroupIds
+        /// </summary>
+        [DataMember(Name="nativeLoginExceptionGroupIds", EmitDefaultValue=false)]
+        public List<string> NativeLoginExceptionGroupIds { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -77,6 +97,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
+            sb.Append("  NativeLoginExceptionsEnabled: ").Append(NativeLoginExceptionsEnabled).Append("\n");
+            sb.Append("  NativeLoginExceptionGroupIds: ").Append(NativeLoginExceptionGroupIds).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -134,6 +156,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Disabled.Equals(other.Disabled)
                 ) &&
                 (
+                    this.NativeLoginExceptionsEnabled == other.NativeLoginExceptionsEnabled ||
+                    this.NativeLoginExceptionsEnabled != null &&
+                    this.NativeLoginExceptionsEnabled.Equals(other.NativeLoginExceptionsEnabled)
+                ) &&
+                (
+                    this.NativeLoginExceptionGroupIds == other.NativeLoginExceptionGroupIds ||
+                    this.NativeLoginExceptionGroupIds != null &&
+                    this.NativeLoginExceptionGroupIds.SequenceEqual(other.NativeLoginExceptionGroupIds)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -159,6 +191,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Disabled != null)
                     hash = hash * 59 + this.Disabled.GetHashCode();
+
+                if (this.NativeLoginExceptionsEnabled != null)
+                    hash = hash * 59 + this.NativeLoginExceptionsEnabled.GetHashCode();
+
+                if (this.NativeLoginExceptionGroupIds != null)
+                    hash = hash * 59 + this.NativeLoginExceptionGroupIds.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

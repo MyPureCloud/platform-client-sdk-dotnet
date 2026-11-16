@@ -351,7 +351,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Authenticated">Indicates whether or not the session is authenticated. (required).</param>
         /// <param name="DivisionIds">List of division IDs associated with the session..</param>
         /// <param name="LastScreen">The app screen name where the customer&#39;s last app interaction occurred..</param>
-        /// <param name="CaseAssociations">Cases associated with the session - conversation only..</param>
+        /// <param name="CaseAssociations">Cases associated with the session - conversation and campaign only..</param>
         /// <param name="CaseEntity">The case this session refers to..</param>
         /// <param name="CaseReference">The reference for this case..</param>
         /// <param name="CaseStatus">The status of this case..</param>
@@ -774,9 +774,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Cases associated with the session - conversation only.
+        /// Cases associated with the session - conversation and campaign only.
         /// </summary>
-        /// <value>Cases associated with the session - conversation only.</value>
+        /// <value>Cases associated with the session - conversation and campaign only.</value>
         [DataMember(Name="caseAssociations", EmitDefaultValue=false)]
         public List<JourneyCaseAssociation> CaseAssociations { get; set; }
 

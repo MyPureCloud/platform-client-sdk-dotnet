@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EventId">A unique (V4 UUID) eventId for this event (required).</param>
         /// <param name="EventDateTime">A Date Time representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="UserId">The User ID of the user associated with this UserPresence (required).</param>
-        /// <param name="SourceId">The id (V4 UUID) of the presence source being updated (required).</param>
+        /// <param name="SourceId">The id (UUID) of the presence source being updated (required).</param>
         /// <param name="PresenceDefinitionId">The id (UUID) of the presence definition that the user presence is associated with.</param>
         /// <param name="Message">The message associated with the presence.</param>
         public UserPresenceEvent(string EventId = null, DateTime? EventDateTime = null, string UserId = null, string SourceId = null, string PresenceDefinitionId = null, string Message = null)
@@ -74,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The id (V4 UUID) of the presence source being updated
+        /// The id (UUID) of the presence source being updated
         /// </summary>
-        /// <value>The id (V4 UUID) of the presence source being updated</value>
+        /// <value>The id (UUID) of the presence source being updated</value>
         [DataMember(Name="sourceId", EmitDefaultValue=false)]
         public string SourceId { get; set; }
 

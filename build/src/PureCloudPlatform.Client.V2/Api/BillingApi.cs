@@ -179,9 +179,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="paymentStatus">Payment Status (optional)</param>
+        /// <param name="agreementId">Filter invoices by agreement ID. (optional)</param>
         /// <returns>BillingInvoiceListing</returns>
         
-        BillingInvoiceListing GetBillingContractsInvoices (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null);
+        BillingInvoiceListing GetBillingContractsInvoices (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null, string agreementId = null);
 
         /// <summary>
         /// Get invoices
@@ -197,9 +198,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="paymentStatus">Payment Status (optional)</param>
+        /// <param name="agreementId">Filter invoices by agreement ID. (optional)</param>
         /// <returns>ApiResponse of BillingInvoiceListing</returns>
         
-        ApiResponse<BillingInvoiceListing> GetBillingContractsInvoicesWithHttpInfo (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null);
+        ApiResponse<BillingInvoiceListing> GetBillingContractsInvoicesWithHttpInfo (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null, string agreementId = null);
 
         /// <summary>
         /// Get a report of the billable license usages
@@ -421,9 +423,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="paymentStatus">Payment Status (optional)</param>
+        /// <param name="agreementId">Filter invoices by agreement ID. (optional)</param>
         /// <returns>Task of BillingInvoiceListing</returns>
         
-        System.Threading.Tasks.Task<BillingInvoiceListing> GetBillingContractsInvoicesAsync (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null);
+        System.Threading.Tasks.Task<BillingInvoiceListing> GetBillingContractsInvoicesAsync (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null, string agreementId = null);
 
         /// <summary>
         /// Get invoices
@@ -439,9 +442,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="paymentStatus">Payment Status (optional)</param>
+        /// <param name="agreementId">Filter invoices by agreement ID. (optional)</param>
         /// <returns>Task of ApiResponse (BillingInvoiceListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<BillingInvoiceListing>> GetBillingContractsInvoicesAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null);
+        System.Threading.Tasks.Task<ApiResponse<BillingInvoiceListing>> GetBillingContractsInvoicesAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null, string agreementId = null);
 
         /// <summary>
         /// Get a report of the billable license usages
@@ -1704,11 +1708,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="paymentStatus">Payment Status (optional)</param>
+        /// <param name="agreementId">Filter invoices by agreement ID. (optional)</param>
         /// <returns>BillingInvoiceListing</returns>
         
-        public BillingInvoiceListing GetBillingContractsInvoices (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null)
+        public BillingInvoiceListing GetBillingContractsInvoices (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null, string agreementId = null)
         {
-             ApiResponse<BillingInvoiceListing> localVarResponse = GetBillingContractsInvoicesWithHttpInfo(before, after, pageSize, dateStart, dateEnd, paymentStatus);
+             ApiResponse<BillingInvoiceListing> localVarResponse = GetBillingContractsInvoicesWithHttpInfo(before, after, pageSize, dateStart, dateEnd, paymentStatus, agreementId);
              return localVarResponse.Data;
         }
 
@@ -1724,9 +1729,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="paymentStatus">Payment Status (optional)</param>
+        /// <param name="agreementId">Filter invoices by agreement ID. (optional)</param>
         /// <returns>ApiResponse of BillingInvoiceListing</returns>
         
-        public ApiResponse< BillingInvoiceListing > GetBillingContractsInvoicesWithHttpInfo (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null)
+        public ApiResponse< BillingInvoiceListing > GetBillingContractsInvoicesWithHttpInfo (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null, string agreementId = null)
         { 
 
             var localVarPath = "/api/v2/billing/contracts/invoices";
@@ -1768,6 +1774,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (dateStart != null) localVarQueryParams.Add(new Tuple<string, string>("dateStart", this.Configuration.ApiClient.ParameterToString(dateStart)));
             if (dateEnd != null) localVarQueryParams.Add(new Tuple<string, string>("dateEnd", this.Configuration.ApiClient.ParameterToString(dateEnd)));
             if (paymentStatus != null) localVarQueryParams.Add(new Tuple<string, string>("paymentStatus", this.Configuration.ApiClient.ParameterToString(paymentStatus)));
+            if (agreementId != null) localVarQueryParams.Add(new Tuple<string, string>("agreementId", this.Configuration.ApiClient.ParameterToString(agreementId)));
 
             // Header params
 
@@ -1819,11 +1826,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="paymentStatus">Payment Status (optional)</param>
+        /// <param name="agreementId">Filter invoices by agreement ID. (optional)</param>
         /// <returns>Task of BillingInvoiceListing</returns>
         
-        public async System.Threading.Tasks.Task<BillingInvoiceListing> GetBillingContractsInvoicesAsync (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null)
+        public async System.Threading.Tasks.Task<BillingInvoiceListing> GetBillingContractsInvoicesAsync (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null, string agreementId = null)
         {
-             ApiResponse<BillingInvoiceListing> localVarResponse = await GetBillingContractsInvoicesAsyncWithHttpInfo(before, after, pageSize, dateStart, dateEnd, paymentStatus);
+             ApiResponse<BillingInvoiceListing> localVarResponse = await GetBillingContractsInvoicesAsyncWithHttpInfo(before, after, pageSize, dateStart, dateEnd, paymentStatus, agreementId);
              return localVarResponse.Data;
 
         }
@@ -1840,9 +1848,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dateStart">Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="dateEnd">End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="paymentStatus">Payment Status (optional)</param>
+        /// <param name="agreementId">Filter invoices by agreement ID. (optional)</param>
         /// <returns>Task of ApiResponse (BillingInvoiceListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<BillingInvoiceListing>> GetBillingContractsInvoicesAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BillingInvoiceListing>> GetBillingContractsInvoicesAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null, string agreementId = null)
         { 
 
             var localVarPath = "/api/v2/billing/contracts/invoices";
@@ -1884,6 +1893,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (dateStart != null) localVarQueryParams.Add(new Tuple<string, string>("dateStart", this.Configuration.ApiClient.ParameterToString(dateStart)));
             if (dateEnd != null) localVarQueryParams.Add(new Tuple<string, string>("dateEnd", this.Configuration.ApiClient.ParameterToString(dateEnd)));
             if (paymentStatus != null) localVarQueryParams.Add(new Tuple<string, string>("paymentStatus", this.Configuration.ApiClient.ParameterToString(paymentStatus)));
+            if (agreementId != null) localVarQueryParams.Add(new Tuple<string, string>("agreementId", this.Configuration.ApiClient.ParameterToString(agreementId)));
 
             // Header params
 

@@ -58,6 +58,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Externala2aserver,
             
             /// <summary>
+            /// Enum Mcp for "MCP"
+            /// </summary>
+            [EnumMember(Value = "MCP")]
+            Mcp,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

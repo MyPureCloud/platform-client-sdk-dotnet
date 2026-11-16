@@ -19,6 +19,39 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class OperationalEvent :  IEquatable<OperationalEvent>
     {
         /// <summary>
+        /// The type of external record that referenceId refers to
+        /// </summary>
+        /// <value>The type of external record that referenceId refers to</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ReferenceTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Salesforce for "Salesforce"
+            /// </summary>
+            [EnumMember(Value = "Salesforce")]
+            Salesforce
+        }
+        /// <summary>
+        /// The type of external record that referenceId refers to
+        /// </summary>
+        /// <value>The type of external record that referenceId refers to</value>
+        [DataMember(Name="referenceType", EmitDefaultValue=false)]
+        public ReferenceTypeEnum? ReferenceType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="OperationalEvent" /> class.
         /// </summary>
         /// <param name="EventDefinition">The event that occurred..</param>
@@ -36,7 +69,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EntityVersion">The version of the entity in the providing service.</param>
         /// <param name="PhoneNumber">The phone number associated with the event.</param>
         /// <param name="ExternalContactId">The external contact ID associated with the event.</param>
-        public OperationalEvent(AddressableEntityRef EventDefinition = null, string EntityId = null, string EntityToken = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string ParentEntityId = null, AddressableEntityRef Conversation = null, DateTime? DateCreated = null, DateTime? DateModified = null, string EntityModifiedBy = null, string EntityVersion = null, string PhoneNumber = null, string ExternalContactId = null)
+        /// <param name="ReferenceId">The identifier of an external record that provides additional information or context related to the event.</param>
+        /// <param name="ReferenceType">The type of external record that referenceId refers to.</param>
+        public OperationalEvent(AddressableEntityRef EventDefinition = null, string EntityId = null, string EntityToken = null, string EntityName = null, string PreviousValue = null, string CurrentValue = null, string ErrorCode = null, string ParentEntityId = null, AddressableEntityRef Conversation = null, DateTime? DateCreated = null, DateTime? DateModified = null, string EntityModifiedBy = null, string EntityVersion = null, string PhoneNumber = null, string ExternalContactId = null, string ReferenceId = null, ReferenceTypeEnum? ReferenceType = null)
         {
             this.EventDefinition = EventDefinition;
             this.EntityId = EntityId;
@@ -53,6 +88,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EntityVersion = EntityVersion;
             this.PhoneNumber = PhoneNumber;
             this.ExternalContactId = ExternalContactId;
+            this.ReferenceId = ReferenceId;
+            this.ReferenceType = ReferenceType;
             
         }
         
@@ -192,6 +229,17 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ExternalContactId { get; set; }
 
 
+
+        /// <summary>
+        /// The identifier of an external record that provides additional information or context related to the event
+        /// </summary>
+        /// <value>The identifier of an external record that provides additional information or context related to the event</value>
+        [DataMember(Name="referenceId", EmitDefaultValue=false)]
+        public string ReferenceId { get; set; }
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -216,6 +264,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EntityVersion: ").Append(EntityVersion).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
+            sb.Append("  ReferenceId: ").Append(ReferenceId).Append("\n");
+            sb.Append("  ReferenceType: ").Append(ReferenceType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -330,6 +380,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalContactId == other.ExternalContactId ||
                     this.ExternalContactId != null &&
                     this.ExternalContactId.Equals(other.ExternalContactId)
+                ) &&
+                (
+                    this.ReferenceId == other.ReferenceId ||
+                    this.ReferenceId != null &&
+                    this.ReferenceId.Equals(other.ReferenceId)
+                ) &&
+                (
+                    this.ReferenceType == other.ReferenceType ||
+                    this.ReferenceType != null &&
+                    this.ReferenceType.Equals(other.ReferenceType)
                 );
         }
 
@@ -388,6 +448,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
+
+                if (this.ReferenceId != null)
+                    hash = hash * 59 + this.ReferenceId.GetHashCode();
+
+                if (this.ReferenceType != null)
+                    hash = hash * 59 + this.ReferenceType.GetHashCode();
 
                 return hash;
             }

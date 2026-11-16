@@ -85,7 +85,37 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Adherencedate for "adherenceDate"
             /// </summary>
             [EnumMember(Value = "adherenceDate")]
-            Adherencedate
+            Adherencedate,
+            
+            /// <summary>
+            /// Enum Workitemdatedue for "workitemDateDue"
+            /// </summary>
+            [EnumMember(Value = "workitemDateDue")]
+            Workitemdatedue,
+            
+            /// <summary>
+            /// Enum Workitemdateexpires for "workitemDateExpires"
+            /// </summary>
+            [EnumMember(Value = "workitemDateExpires")]
+            Workitemdateexpires,
+            
+            /// <summary>
+            /// Enum Workitemdatestatuschanged for "workitemDateStatusChanged"
+            /// </summary>
+            [EnumMember(Value = "workitemDateStatusChanged")]
+            Workitemdatestatuschanged,
+            
+            /// <summary>
+            /// Enum Workitemdateassignmentstatechanged for "workitemDateAssignmentStateChanged"
+            /// </summary>
+            [EnumMember(Value = "workitemDateAssignmentStateChanged")]
+            Workitemdateassignmentstatechanged,
+            
+            /// <summary>
+            /// Enum Workitemdatecreated for "workitemDateCreated"
+            /// </summary>
+            [EnumMember(Value = "workitemDateCreated")]
+            Workitemdatecreated
         }
         /// <summary>
         /// Search user order direction; default to asc

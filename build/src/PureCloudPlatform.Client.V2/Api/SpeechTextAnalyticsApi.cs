@@ -296,6 +296,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ConversationCategoriesEntityListing> GetSpeechandtextanalyticsConversationCategoriesWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
+        /// Get the transcript outline for a specific conversation and communication.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The ID of the conversation</param>
+        /// <param name="communicationId">The ID of the communication</param>
+        /// <returns>TranscriptOutlineResponse</returns>
+        
+        TranscriptOutlineResponse GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline (string conversationId, string communicationId);
+
+        /// <summary>
+        /// Get the transcript outline for a specific conversation and communication.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The ID of the conversation</param>
+        /// <param name="communicationId">The ID of the communication</param>
+        /// <returns>ApiResponse of TranscriptOutlineResponse</returns>
+        
+        ApiResponse<TranscriptOutlineResponse> GetSpeechandtextanalyticsConversationCommunicationTranscriptoutlineWithHttpInfo (string conversationId, string communicationId);
+
+        /// <summary>
         /// Get the pre-signed S3 URL for the transcript of a specific communication of a conversation
         /// </summary>
         /// <remarks>
@@ -2046,6 +2072,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ConversationCategoriesEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ConversationCategoriesEntityListing>> GetSpeechandtextanalyticsConversationCategoriesAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get the transcript outline for a specific conversation and communication.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The ID of the conversation</param>
+        /// <param name="communicationId">The ID of the communication</param>
+        /// <returns>Task of TranscriptOutlineResponse</returns>
+        
+        System.Threading.Tasks.Task<TranscriptOutlineResponse> GetSpeechandtextanalyticsConversationCommunicationTranscriptoutlineAsync (string conversationId, string communicationId);
+
+        /// <summary>
+        /// Get the transcript outline for a specific conversation and communication.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The ID of the conversation</param>
+        /// <param name="communicationId">The ID of the communication</param>
+        /// <returns>Task of ApiResponse (TranscriptOutlineResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TranscriptOutlineResponse>> GetSpeechandtextanalyticsConversationCommunicationTranscriptoutlineAsyncWithHttpInfo (string conversationId, string communicationId);
 
         /// <summary>
         /// Get the pre-signed S3 URL for the transcript of a specific communication of a conversation
@@ -5876,6 +5928,224 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ConversationCategoriesEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (ConversationCategoriesEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationCategoriesEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the transcript outline for a specific conversation and communication. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The ID of the conversation</param>
+        /// <param name="communicationId">The ID of the communication</param>
+        /// <returns>TranscriptOutlineResponse</returns>
+        
+        public TranscriptOutlineResponse GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline (string conversationId, string communicationId)
+        {
+             ApiResponse<TranscriptOutlineResponse> localVarResponse = GetSpeechandtextanalyticsConversationCommunicationTranscriptoutlineWithHttpInfo(conversationId, communicationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the transcript outline for a specific conversation and communication. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The ID of the conversation</param>
+        /// <param name="communicationId">The ID of the communication</param>
+        /// <returns>ApiResponse of TranscriptOutlineResponse</returns>
+        
+        public ApiResponse< TranscriptOutlineResponse > GetSpeechandtextanalyticsConversationCommunicationTranscriptoutlineWithHttpInfo (string conversationId, string communicationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline");
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcriptoutline";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TranscriptOutlineResponse>(localVarStatusCode,
+                localVarHeaders,
+                (TranscriptOutlineResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TranscriptOutlineResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the transcript outline for a specific conversation and communication. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The ID of the conversation</param>
+        /// <param name="communicationId">The ID of the communication</param>
+        /// <returns>Task of TranscriptOutlineResponse</returns>
+        
+        public async System.Threading.Tasks.Task<TranscriptOutlineResponse> GetSpeechandtextanalyticsConversationCommunicationTranscriptoutlineAsync (string conversationId, string communicationId)
+        {
+             ApiResponse<TranscriptOutlineResponse> localVarResponse = await GetSpeechandtextanalyticsConversationCommunicationTranscriptoutlineAsyncWithHttpInfo(conversationId, communicationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the transcript outline for a specific conversation and communication. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The ID of the conversation</param>
+        /// <param name="communicationId">The ID of the communication</param>
+        /// <returns>Task of ApiResponse (TranscriptOutlineResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TranscriptOutlineResponse>> GetSpeechandtextanalyticsConversationCommunicationTranscriptoutlineAsyncWithHttpInfo (string conversationId, string communicationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline");
+            
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcriptoutline";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsConversationCommunicationTranscriptoutline: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TranscriptOutlineResponse>(localVarStatusCode,
+                localVarHeaders,
+                (TranscriptOutlineResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TranscriptOutlineResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

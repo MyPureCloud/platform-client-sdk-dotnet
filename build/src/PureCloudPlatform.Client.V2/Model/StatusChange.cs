@@ -220,18 +220,6 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Usage for "usage"
-            /// </summary>
-            [EnumMember(Value = "usage")]
-            Usage,
-            
-            /// <summary>
-            /// Enum Usersrules for "users.rules"
-            /// </summary>
-            [EnumMember(Value = "users.rules")]
-            Usersrules,
-            
-            /// <summary>
             /// Enum Agentassistant for "agent.assistant"
             /// </summary>
             [EnumMember(Value = "agent.assistant")]
@@ -712,10 +700,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Telephonyconfiguration,
             
             /// <summary>
+            /// Enum Usage for "usage"
+            /// </summary>
+            [EnumMember(Value = "usage")]
+            Usage,
+            
+            /// <summary>
             /// Enum Users for "users"
             /// </summary>
             [EnumMember(Value = "users")]
             Users,
+            
+            /// <summary>
+            /// Enum Usersrules for "users.rules"
+            /// </summary>
+            [EnumMember(Value = "users.rules")]
+            Usersrules,
             
             /// <summary>
             /// Enum Voicetranscription for "voice.transcription"

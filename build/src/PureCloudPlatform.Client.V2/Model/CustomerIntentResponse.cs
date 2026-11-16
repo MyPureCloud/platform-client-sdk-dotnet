@@ -95,6 +95,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Places where the customer intent is used. Omitted when usage tracking is off or includeUsage is false or omitted. Otherwise, empty when unused or populated with usage entries.
+        /// </summary>
+        /// <value>Places where the customer intent is used. Omitted when usage tracking is off or includeUsage is false or omitted. Otherwise, empty when unused or populated with usage entries.</value>
+        [DataMember(Name="usage", EmitDefaultValue=false)]
+        public List<CustomerIntentUsage> Usage { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -117,6 +126,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExpiryTime: ").Append(ExpiryTime).Append("\n");
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  Usage: ").Append(Usage).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -189,6 +199,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.Usage == other.Usage ||
+                    this.Usage != null &&
+                    this.Usage.SequenceEqual(other.Usage)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -223,6 +238,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.Usage != null)
+                    hash = hash * 59 + this.Usage.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

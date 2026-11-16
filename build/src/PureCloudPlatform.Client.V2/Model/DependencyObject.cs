@@ -483,6 +483,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Surveyform,
             
             /// <summary>
+            /// Enum Surveyformcontext for "SURVEYFORMCONTEXT"
+            /// </summary>
+            [EnumMember(Value = "SURVEYFORMCONTEXT")]
+            Surveyformcontext,
+            
+            /// <summary>
             /// Enum Surveyinviteflow for "SURVEYINVITEFLOW"
             /// </summary>
             [EnumMember(Value = "SURVEYINVITEFLOW")]

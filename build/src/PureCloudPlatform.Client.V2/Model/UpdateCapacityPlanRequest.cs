@@ -31,17 +31,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Description of the capacity plan.</param>
         /// <param name="StartBusinessUnitDate">The start date for the capacity plan relative to the business unit time zone in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="EndBusinessUnitDate">The end date for the capacity plan relative to the business unit time zone in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
-        /// <param name="Forecast">The selected forecast for this capacity plan.</param>
+        /// <param name="Forecast">The generated forecast for this capacity plan. When switching from an imported forecast, provide a value for forecast.</param>
+        /// <param name="ImportedForecast">The externally imported forecast for this capacity plan. When switching from a forecast, provide a value for importedForecast.</param>
         /// <param name="FullTimeEquivalentWeeklyHours">The weekly hours used to calculate full time equivalent agents.</param>
         /// <param name="UseLatestPlanningGroupStaffingGroupAssociation">Whether to use latest staffing group to planning group association.</param>
         /// <param name="Metadata">The metadata of this capacity plan (required).</param>
-        public UpdateCapacityPlanRequest(string Name = null, string Description = null, String StartBusinessUnitDate = null, String EndBusinessUnitDate = null, ValueWrapperBuShortTermForecastReference Forecast = null, double? FullTimeEquivalentWeeklyHours = null, bool? UseLatestPlanningGroupStaffingGroupAssociation = null, CapacityPlanMetadata Metadata = null)
+        public UpdateCapacityPlanRequest(string Name = null, string Description = null, String StartBusinessUnitDate = null, String EndBusinessUnitDate = null, ValueWrapperBuShortTermForecastReference Forecast = null, ValueWrapperCapacityPlanImportedForecastRequest ImportedForecast = null, double? FullTimeEquivalentWeeklyHours = null, bool? UseLatestPlanningGroupStaffingGroupAssociation = null, CapacityPlanMetadata Metadata = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.StartBusinessUnitDate = StartBusinessUnitDate;
             this.EndBusinessUnitDate = EndBusinessUnitDate;
             this.Forecast = Forecast;
+            this.ImportedForecast = ImportedForecast;
             this.FullTimeEquivalentWeeklyHours = FullTimeEquivalentWeeklyHours;
             this.UseLatestPlanningGroupStaffingGroupAssociation = UseLatestPlanningGroupStaffingGroupAssociation;
             this.Metadata = Metadata;
@@ -87,11 +89,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The selected forecast for this capacity plan
+        /// The generated forecast for this capacity plan. When switching from an imported forecast, provide a value for forecast
         /// </summary>
-        /// <value>The selected forecast for this capacity plan</value>
+        /// <value>The generated forecast for this capacity plan. When switching from an imported forecast, provide a value for forecast</value>
         [DataMember(Name="forecast", EmitDefaultValue=false)]
         public ValueWrapperBuShortTermForecastReference Forecast { get; set; }
+
+
+
+        /// <summary>
+        /// The externally imported forecast for this capacity plan. When switching from a forecast, provide a value for importedForecast
+        /// </summary>
+        /// <value>The externally imported forecast for this capacity plan. When switching from a forecast, provide a value for importedForecast</value>
+        [DataMember(Name="importedForecast", EmitDefaultValue=false)]
+        public ValueWrapperCapacityPlanImportedForecastRequest ImportedForecast { get; set; }
 
 
 
@@ -135,6 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartBusinessUnitDate: ").Append(StartBusinessUnitDate).Append("\n");
             sb.Append("  EndBusinessUnitDate: ").Append(EndBusinessUnitDate).Append("\n");
             sb.Append("  Forecast: ").Append(Forecast).Append("\n");
+            sb.Append("  ImportedForecast: ").Append(ImportedForecast).Append("\n");
             sb.Append("  FullTimeEquivalentWeeklyHours: ").Append(FullTimeEquivalentWeeklyHours).Append("\n");
             sb.Append("  UseLatestPlanningGroupStaffingGroupAssociation: ").Append(UseLatestPlanningGroupStaffingGroupAssociation).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
@@ -204,6 +216,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Forecast.Equals(other.Forecast)
                 ) &&
                 (
+                    this.ImportedForecast == other.ImportedForecast ||
+                    this.ImportedForecast != null &&
+                    this.ImportedForecast.Equals(other.ImportedForecast)
+                ) &&
+                (
                     this.FullTimeEquivalentWeeklyHours == other.FullTimeEquivalentWeeklyHours ||
                     this.FullTimeEquivalentWeeklyHours != null &&
                     this.FullTimeEquivalentWeeklyHours.Equals(other.FullTimeEquivalentWeeklyHours)
@@ -245,6 +262,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Forecast != null)
                     hash = hash * 59 + this.Forecast.GetHashCode();
+
+                if (this.ImportedForecast != null)
+                    hash = hash * 59 + this.ImportedForecast.GetHashCode();
 
                 if (this.FullTimeEquivalentWeeklyHours != null)
                     hash = hash * 59 + this.FullTimeEquivalentWeeklyHours.GetHashCode();

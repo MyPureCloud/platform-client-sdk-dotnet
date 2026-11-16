@@ -854,4 +854,4 @@ namespace Example
 [**OAuthClient**](OAuthClient)
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

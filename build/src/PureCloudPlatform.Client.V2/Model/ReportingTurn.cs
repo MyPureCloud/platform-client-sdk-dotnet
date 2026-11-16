@@ -164,11 +164,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Intent">The intent and associated slots detected during this reporting turn..</param>
         /// <param name="Knowledge">The knowledge data captured during this reporting turn..</param>
         /// <param name="KnowledgeBaseEvents">The knowledge data captured during this reporting turn..</param>
+        /// <param name="BotFlowInvocationEvents">The details related to the invoking and invoked flows of the bot flow session..</param>
+        /// <param name="DateInputStarted">Timestamp indicating the datetime when the input came from the user. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateCreated">Timestamp indicating when the original turn was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateCompleted">Timestamp indicating when the original turn was completed. Note: The &#39;interval&#39; query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AskActionResult">Result of the bot flow &#39;ask&#39; action..</param>
         /// <param name="SessionEndDetails">The details related to end of bot flow session..</param>
-        public ReportingTurn(string UserInput = null, List<string> BotPrompts = null, string SessionId = null, AddressableEntityRef Conversation = null, ReportingTurnAction AskAction = null, ReportingTurnIntent Intent = null, ReportingTurnKnowledge Knowledge = null, ReportingTurnKnowledgeEvents KnowledgeBaseEvents = null, DateTime? DateCreated = null, DateTime? DateCompleted = null, AskActionResultEnum? AskActionResult = null, SessionEndDetails SessionEndDetails = null)
+        /// <param name="ToolCalls">Metadata of tool calls carried out in the reporting turn..</param>
+        /// <param name="GuardrailEvents">Metadata of any Guardrail events that occurred in the reporting turn..</param>
+        /// <param name="ExecutionFrameId">The executionFrameId of the ask action within the reportingTurn..</param>
+        public ReportingTurn(string UserInput = null, List<string> BotPrompts = null, string SessionId = null, AddressableEntityRef Conversation = null, ReportingTurnAction AskAction = null, ReportingTurnIntent Intent = null, ReportingTurnKnowledge Knowledge = null, ReportingTurnKnowledgeEvents KnowledgeBaseEvents = null, List<ReportingTurnBotFlowInvocationEvent> BotFlowInvocationEvents = null, DateTime? DateInputStarted = null, DateTime? DateCreated = null, DateTime? DateCompleted = null, AskActionResultEnum? AskActionResult = null, SessionEndDetails SessionEndDetails = null, List<ReportingTurnToolCall> ToolCalls = null, List<ReportingTurnGuardrailEvent> GuardrailEvents = null, string ExecutionFrameId = null)
         {
             this.UserInput = UserInput;
             this.BotPrompts = BotPrompts;
@@ -178,10 +183,15 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Intent = Intent;
             this.Knowledge = Knowledge;
             this.KnowledgeBaseEvents = KnowledgeBaseEvents;
+            this.BotFlowInvocationEvents = BotFlowInvocationEvents;
+            this.DateInputStarted = DateInputStarted;
             this.DateCreated = DateCreated;
             this.DateCompleted = DateCompleted;
             this.AskActionResult = AskActionResult;
             this.SessionEndDetails = SessionEndDetails;
+            this.ToolCalls = ToolCalls;
+            this.GuardrailEvents = GuardrailEvents;
+            this.ExecutionFrameId = ExecutionFrameId;
             
         }
         
@@ -260,6 +270,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The details related to the invoking and invoked flows of the bot flow session.
+        /// </summary>
+        /// <value>The details related to the invoking and invoked flows of the bot flow session.</value>
+        [DataMember(Name="botFlowInvocationEvents", EmitDefaultValue=false)]
+        public List<ReportingTurnBotFlowInvocationEvent> BotFlowInvocationEvents { get; set; }
+
+
+
+        /// <summary>
+        /// Timestamp indicating the datetime when the input came from the user. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Timestamp indicating the datetime when the input came from the user. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateInputStarted", EmitDefaultValue=false)]
+        public DateTime? DateInputStarted { get; set; }
+
+
+
+        /// <summary>
         /// Timestamp indicating when the original turn was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Timestamp indicating when the original turn was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -287,6 +315,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public SessionEndDetails SessionEndDetails { get; set; }
 
 
+
+        /// <summary>
+        /// Metadata of tool calls carried out in the reporting turn.
+        /// </summary>
+        /// <value>Metadata of tool calls carried out in the reporting turn.</value>
+        [DataMember(Name="toolCalls", EmitDefaultValue=false)]
+        public List<ReportingTurnToolCall> ToolCalls { get; set; }
+
+
+
+        /// <summary>
+        /// Metadata of any Guardrail events that occurred in the reporting turn.
+        /// </summary>
+        /// <value>Metadata of any Guardrail events that occurred in the reporting turn.</value>
+        [DataMember(Name="guardrailEvents", EmitDefaultValue=false)]
+        public List<ReportingTurnGuardrailEvent> GuardrailEvents { get; set; }
+
+
+
+        /// <summary>
+        /// The executionFrameId of the ask action within the reportingTurn.
+        /// </summary>
+        /// <value>The executionFrameId of the ask action within the reportingTurn.</value>
+        [DataMember(Name="executionFrameId", EmitDefaultValue=false)]
+        public string ExecutionFrameId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -304,10 +359,15 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Intent: ").Append(Intent).Append("\n");
             sb.Append("  Knowledge: ").Append(Knowledge).Append("\n");
             sb.Append("  KnowledgeBaseEvents: ").Append(KnowledgeBaseEvents).Append("\n");
+            sb.Append("  BotFlowInvocationEvents: ").Append(BotFlowInvocationEvents).Append("\n");
+            sb.Append("  DateInputStarted: ").Append(DateInputStarted).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("  AskActionResult: ").Append(AskActionResult).Append("\n");
             sb.Append("  SessionEndDetails: ").Append(SessionEndDetails).Append("\n");
+            sb.Append("  ToolCalls: ").Append(ToolCalls).Append("\n");
+            sb.Append("  GuardrailEvents: ").Append(GuardrailEvents).Append("\n");
+            sb.Append("  ExecutionFrameId: ").Append(ExecutionFrameId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -389,6 +449,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.KnowledgeBaseEvents.Equals(other.KnowledgeBaseEvents)
                 ) &&
                 (
+                    this.BotFlowInvocationEvents == other.BotFlowInvocationEvents ||
+                    this.BotFlowInvocationEvents != null &&
+                    this.BotFlowInvocationEvents.SequenceEqual(other.BotFlowInvocationEvents)
+                ) &&
+                (
+                    this.DateInputStarted == other.DateInputStarted ||
+                    this.DateInputStarted != null &&
+                    this.DateInputStarted.Equals(other.DateInputStarted)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -407,6 +477,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SessionEndDetails == other.SessionEndDetails ||
                     this.SessionEndDetails != null &&
                     this.SessionEndDetails.Equals(other.SessionEndDetails)
+                ) &&
+                (
+                    this.ToolCalls == other.ToolCalls ||
+                    this.ToolCalls != null &&
+                    this.ToolCalls.SequenceEqual(other.ToolCalls)
+                ) &&
+                (
+                    this.GuardrailEvents == other.GuardrailEvents ||
+                    this.GuardrailEvents != null &&
+                    this.GuardrailEvents.SequenceEqual(other.GuardrailEvents)
+                ) &&
+                (
+                    this.ExecutionFrameId == other.ExecutionFrameId ||
+                    this.ExecutionFrameId != null &&
+                    this.ExecutionFrameId.Equals(other.ExecutionFrameId)
                 );
         }
 
@@ -445,6 +530,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.KnowledgeBaseEvents != null)
                     hash = hash * 59 + this.KnowledgeBaseEvents.GetHashCode();
 
+                if (this.BotFlowInvocationEvents != null)
+                    hash = hash * 59 + this.BotFlowInvocationEvents.GetHashCode();
+
+                if (this.DateInputStarted != null)
+                    hash = hash * 59 + this.DateInputStarted.GetHashCode();
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
 
@@ -456,6 +547,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SessionEndDetails != null)
                     hash = hash * 59 + this.SessionEndDetails.GetHashCode();
+
+                if (this.ToolCalls != null)
+                    hash = hash * 59 + this.ToolCalls.GetHashCode();
+
+                if (this.GuardrailEvents != null)
+                    hash = hash * 59 + this.GuardrailEvents.GetHashCode();
+
+                if (this.ExecutionFrameId != null)
+                    hash = hash * 59 + this.ExecutionFrameId.GetHashCode();
 
                 return hash;
             }

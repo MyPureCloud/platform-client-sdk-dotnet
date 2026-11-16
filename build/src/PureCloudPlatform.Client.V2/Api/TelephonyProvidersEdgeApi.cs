@@ -2314,6 +2314,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TrunkRecordingEnabledCount> GetTelephonyProvidersEdgesTrunkswithrecordingWithHttpInfo (string trunkType = null);
 
         /// <summary>
+        /// Get the trunkbase metrics.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkBaseId">TrunkBase Id</param>
+        /// <returns>TrunkBaseMetrics</returns>
+        
+        TrunkBaseMetrics GetTelephonyTrunkbasesettingMetrics (string trunkBaseId);
+
+        /// <summary>
+        /// Get the trunkbase metrics.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkBaseId">TrunkBase Id</param>
+        /// <returns>ApiResponse of TrunkBaseMetrics</returns>
+        
+        ApiResponse<TrunkBaseMetrics> GetTelephonyTrunkbasesettingMetricsWithHttpInfo (string trunkBaseId);
+
+        /// <summary>
+        /// Get the trunkbase metrics for the specified ids.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">TrunkBase Ids</param>
+        /// <returns>TrunkBaseMetricsEntityListing</returns>
+        
+        TrunkBaseMetricsEntityListing GetTelephonyTrunkbasesettingsMetrics (string ids);
+
+        /// <summary>
+        /// Get the trunkbase metrics for the specified ids.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">TrunkBase Ids</param>
+        /// <returns>ApiResponse of TrunkBaseMetricsEntityListing</returns>
+        
+        ApiResponse<TrunkBaseMetricsEntityListing> GetTelephonyTrunkbasesettingsMetricsWithHttpInfo (string ids);
+
+        /// <summary>
         /// Disable site connections for a site.
         /// </summary>
         /// <remarks>
@@ -5732,6 +5780,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (TrunkRecordingEnabledCount)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TrunkRecordingEnabledCount>> GetTelephonyProvidersEdgesTrunkswithrecordingAsyncWithHttpInfo (string trunkType = null);
+
+        /// <summary>
+        /// Get the trunkbase metrics.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkBaseId">TrunkBase Id</param>
+        /// <returns>Task of TrunkBaseMetrics</returns>
+        
+        System.Threading.Tasks.Task<TrunkBaseMetrics> GetTelephonyTrunkbasesettingMetricsAsync (string trunkBaseId);
+
+        /// <summary>
+        /// Get the trunkbase metrics.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkBaseId">TrunkBase Id</param>
+        /// <returns>Task of ApiResponse (TrunkBaseMetrics)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TrunkBaseMetrics>> GetTelephonyTrunkbasesettingMetricsAsyncWithHttpInfo (string trunkBaseId);
+
+        /// <summary>
+        /// Get the trunkbase metrics for the specified ids.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">TrunkBase Ids</param>
+        /// <returns>Task of TrunkBaseMetricsEntityListing</returns>
+        
+        System.Threading.Tasks.Task<TrunkBaseMetricsEntityListing> GetTelephonyTrunkbasesettingsMetricsAsync (string ids);
+
+        /// <summary>
+        /// Get the trunkbase metrics for the specified ids.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">TrunkBase Ids</param>
+        /// <returns>Task of ApiResponse (TrunkBaseMetricsEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TrunkBaseMetricsEntityListing>> GetTelephonyTrunkbasesettingsMetricsAsyncWithHttpInfo (string ids);
 
         /// <summary>
         /// Disable site connections for a site.
@@ -25001,6 +25097,416 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TrunkRecordingEnabledCount>(localVarStatusCode,
                 localVarHeaders,
                 (TrunkRecordingEnabledCount) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkRecordingEnabledCount)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the trunkbase metrics. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkBaseId">TrunkBase Id</param>
+        /// <returns>TrunkBaseMetrics</returns>
+        
+        public TrunkBaseMetrics GetTelephonyTrunkbasesettingMetrics (string trunkBaseId)
+        {
+             ApiResponse<TrunkBaseMetrics> localVarResponse = GetTelephonyTrunkbasesettingMetricsWithHttpInfo(trunkBaseId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the trunkbase metrics. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkBaseId">TrunkBase Id</param>
+        /// <returns>ApiResponse of TrunkBaseMetrics</returns>
+        
+        public ApiResponse< TrunkBaseMetrics > GetTelephonyTrunkbasesettingMetricsWithHttpInfo (string trunkBaseId)
+        { 
+            // verify the required parameter 'trunkBaseId' is set
+            if (trunkBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'trunkBaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyTrunkbasesettingMetrics");
+
+            var localVarPath = "/api/v2/telephony/trunkbasesettings/{trunkBaseId}/metrics";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trunkBaseId != null) localVarPathParams.Add("trunkBaseId", this.Configuration.ApiClient.ParameterToString(trunkBaseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyTrunkbasesettingMetrics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetTelephonyTrunkbasesettingMetrics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyTrunkbasesettingMetrics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkBaseMetrics>(localVarStatusCode,
+                localVarHeaders,
+                (TrunkBaseMetrics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkBaseMetrics)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the trunkbase metrics. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkBaseId">TrunkBase Id</param>
+        /// <returns>Task of TrunkBaseMetrics</returns>
+        
+        public async System.Threading.Tasks.Task<TrunkBaseMetrics> GetTelephonyTrunkbasesettingMetricsAsync (string trunkBaseId)
+        {
+             ApiResponse<TrunkBaseMetrics> localVarResponse = await GetTelephonyTrunkbasesettingMetricsAsyncWithHttpInfo(trunkBaseId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the trunkbase metrics. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trunkBaseId">TrunkBase Id</param>
+        /// <returns>Task of ApiResponse (TrunkBaseMetrics)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBaseMetrics>> GetTelephonyTrunkbasesettingMetricsAsyncWithHttpInfo (string trunkBaseId)
+        { 
+            // verify the required parameter 'trunkBaseId' is set
+            if (trunkBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'trunkBaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyTrunkbasesettingMetrics");
+            
+
+            var localVarPath = "/api/v2/telephony/trunkbasesettings/{trunkBaseId}/metrics";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trunkBaseId != null) localVarPathParams.Add("trunkBaseId", this.Configuration.ApiClient.ParameterToString(trunkBaseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyTrunkbasesettingMetrics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetTelephonyTrunkbasesettingMetrics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyTrunkbasesettingMetrics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkBaseMetrics>(localVarStatusCode,
+                localVarHeaders,
+                (TrunkBaseMetrics) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkBaseMetrics)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the trunkbase metrics for the specified ids. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">TrunkBase Ids</param>
+        /// <returns>TrunkBaseMetricsEntityListing</returns>
+        
+        public TrunkBaseMetricsEntityListing GetTelephonyTrunkbasesettingsMetrics (string ids)
+        {
+             ApiResponse<TrunkBaseMetricsEntityListing> localVarResponse = GetTelephonyTrunkbasesettingsMetricsWithHttpInfo(ids);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the trunkbase metrics for the specified ids. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">TrunkBase Ids</param>
+        /// <returns>ApiResponse of TrunkBaseMetricsEntityListing</returns>
+        
+        public ApiResponse< TrunkBaseMetricsEntityListing > GetTelephonyTrunkbasesettingsMetricsWithHttpInfo (string ids)
+        { 
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling TelephonyProvidersEdgeApi->GetTelephonyTrunkbasesettingsMetrics");
+
+            var localVarPath = "/api/v2/telephony/trunkbasesettings/metrics";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (ids != null) localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(ids)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyTrunkbasesettingsMetrics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetTelephonyTrunkbasesettingsMetrics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyTrunkbasesettingsMetrics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkBaseMetricsEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TrunkBaseMetricsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkBaseMetricsEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the trunkbase metrics for the specified ids. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">TrunkBase Ids</param>
+        /// <returns>Task of TrunkBaseMetricsEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<TrunkBaseMetricsEntityListing> GetTelephonyTrunkbasesettingsMetricsAsync (string ids)
+        {
+             ApiResponse<TrunkBaseMetricsEntityListing> localVarResponse = await GetTelephonyTrunkbasesettingsMetricsAsyncWithHttpInfo(ids);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the trunkbase metrics for the specified ids. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ids">TrunkBase Ids</param>
+        /// <returns>Task of ApiResponse (TrunkBaseMetricsEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBaseMetricsEntityListing>> GetTelephonyTrunkbasesettingsMetricsAsyncWithHttpInfo (string ids)
+        { 
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling TelephonyProvidersEdgeApi->GetTelephonyTrunkbasesettingsMetrics");
+            
+
+            var localVarPath = "/api/v2/telephony/trunkbasesettings/metrics";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (ids != null) localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(ids)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyTrunkbasesettingsMetrics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetTelephonyTrunkbasesettingsMetrics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyTrunkbasesettingsMetrics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkBaseMetricsEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TrunkBaseMetricsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkBaseMetricsEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">The user to whom this agent schedule applies.</param>
         /// <param name="Shifts">The shift definitions for this agent schedule.</param>
         /// <param name="FullDayTimeOffMarkers">Full day time off markers which apply to this agent schedule.</param>
-        public BuAgentScheduleSearchResponse(UserReference User = null, List<BuAgentScheduleShift> Shifts = null, List<BuFullDayTimeOffMarker> FullDayTimeOffMarkers = null)
+        /// <param name="WorkPlansPerWeek">The work plans per week for this user from the work plan rotation. Null values in the list denotes that user is not part of any work plan for that week.</param>
+        public BuAgentScheduleSearchResponse(UserReference User = null, List<BuAgentScheduleShift> Shifts = null, List<BuFullDayTimeOffMarker> FullDayTimeOffMarkers = null, List<WorkPlanReference> WorkPlansPerWeek = null)
         {
             this.User = User;
             this.Shifts = Shifts;
             this.FullDayTimeOffMarkers = FullDayTimeOffMarkers;
+            this.WorkPlansPerWeek = WorkPlansPerWeek;
             
         }
         
@@ -60,6 +62,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<BuFullDayTimeOffMarker> FullDayTimeOffMarkers { get; set; }
 
 
+
+        /// <summary>
+        /// The work plans per week for this user from the work plan rotation. Null values in the list denotes that user is not part of any work plan for that week
+        /// </summary>
+        /// <value>The work plans per week for this user from the work plan rotation. Null values in the list denotes that user is not part of any work plan for that week</value>
+        [DataMember(Name="workPlansPerWeek", EmitDefaultValue=false)]
+        public List<WorkPlanReference> WorkPlansPerWeek { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Shifts: ").Append(Shifts).Append("\n");
             sb.Append("  FullDayTimeOffMarkers: ").Append(FullDayTimeOffMarkers).Append("\n");
+            sb.Append("  WorkPlansPerWeek: ").Append(WorkPlansPerWeek).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +138,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FullDayTimeOffMarkers == other.FullDayTimeOffMarkers ||
                     this.FullDayTimeOffMarkers != null &&
                     this.FullDayTimeOffMarkers.SequenceEqual(other.FullDayTimeOffMarkers)
+                ) &&
+                (
+                    this.WorkPlansPerWeek == other.WorkPlansPerWeek ||
+                    this.WorkPlansPerWeek != null &&
+                    this.WorkPlansPerWeek.SequenceEqual(other.WorkPlansPerWeek)
                 );
         }
 
@@ -148,6 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FullDayTimeOffMarkers != null)
                     hash = hash * 59 + this.FullDayTimeOffMarkers.GetHashCode();
+
+                if (this.WorkPlansPerWeek != null)
+                    hash = hash * 59 + this.WorkPlansPerWeek.GetHashCode();
 
                 return hash;
             }

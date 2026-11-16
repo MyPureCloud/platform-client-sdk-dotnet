@@ -880,7 +880,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum CallbackQueuePerformanceDetailView for "CALLBACK_QUEUE_PERFORMANCE_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "CALLBACK_QUEUE_PERFORMANCE_DETAIL_VIEW")]
-            CallbackQueuePerformanceDetailView
+            CallbackQueuePerformanceDetailView,
+            
+            /// <summary>
+            /// Enum CasePerformanceSummaryView for "CASE_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CASE_PERFORMANCE_SUMMARY_VIEW")]
+            CasePerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum CasePerformanceDetailView for "CASE_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CASE_PERFORMANCE_DETAIL_VIEW")]
+            CasePerformanceDetailView,
+            
+            /// <summary>
+            /// Enum AgentCasePerformanceSummaryView for "AGENT_CASE_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_CASE_PERFORMANCE_SUMMARY_VIEW")]
+            AgentCasePerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum AgentCasePerformanceDetailView for "AGENT_CASE_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_CASE_PERFORMANCE_DETAIL_VIEW")]
+            AgentCasePerformanceDetailView
         }
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request

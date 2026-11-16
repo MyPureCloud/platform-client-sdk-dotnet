@@ -402,7 +402,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Casemanagement for "CaseManagement"
             /// </summary>
             [EnumMember(Value = "CaseManagement")]
-            Casemanagement
+            Casemanagement,
+            
+            /// <summary>
+            /// Enum Organizationpairing for "OrganizationPairing"
+            /// </summary>
+            [EnumMember(Value = "OrganizationPairing")]
+            Organizationpairing
         }
         /// <summary>
         /// Gets or Sets Action
@@ -843,6 +849,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Recycle")]
             Recycle,
+            
+            /// <summary>
+            /// Enum Partialrecycle for "PartialRecycle"
+            /// </summary>
+            [EnumMember(Value = "PartialRecycle")]
+            Partialrecycle,
             
             /// <summary>
             /// Enum Append for "Append"
@@ -3016,7 +3028,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Stepplan for "Stepplan"
             /// </summary>
             [EnumMember(Value = "Stepplan")]
-            Stepplan
+            Stepplan,
+            
+            /// <summary>
+            /// Enum Organizationpairing for "OrganizationPairing"
+            /// </summary>
+            [EnumMember(Value = "OrganizationPairing")]
+            Organizationpairing
         }
         /// <summary>
         /// Gets or Sets ServiceName

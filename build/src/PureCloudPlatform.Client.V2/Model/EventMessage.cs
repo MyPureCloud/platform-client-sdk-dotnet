@@ -39,6 +39,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ActiveCampaignsLimitExceeded,
             
             /// <summary>
+            /// Enum AgentApproachingActiveCampaignsLimit for "AGENT_APPROACHING_ACTIVE_CAMPAIGNS_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "AGENT_APPROACHING_ACTIVE_CAMPAIGNS_LIMIT")]
+            AgentApproachingActiveCampaignsLimit,
+            
+            /// <summary>
             /// Enum AllCampaignsBlacklisted for "ALL_CAMPAIGNS_BLACKLISTED"
             /// </summary>
             [EnumMember(Value = "ALL_CAMPAIGNS_BLACKLISTED")]
@@ -193,6 +199,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_STOPPED")]
             CampaignStopped,
+            
+            /// <summary>
+            /// Enum CampaignStoppedAgentActiveLimitExceeded for "CAMPAIGN_STOPPED_AGENT_ACTIVE_LIMIT_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_STOPPED_AGENT_ACTIVE_LIMIT_EXCEEDED")]
+            CampaignStoppedAgentActiveLimitExceeded,
             
             /// <summary>
             /// Enum CampaignThrottled for "CAMPAIGN_THROTTLED"

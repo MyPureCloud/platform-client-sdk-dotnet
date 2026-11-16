@@ -3324,6 +3324,52 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ConversationThreadingWindow> GetConversationsMessagingThreadingtimelineWithHttpInfo ();
 
         /// <summary>
+        /// Get screen monitoring conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>ScreenMonitoringConversation</returns>
+        
+        ScreenMonitoringConversation GetConversationsScreenmonitor (string conversationId);
+
+        /// <summary>
+        /// Get screen monitoring conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>ApiResponse of ScreenMonitoringConversation</returns>
+        
+        ApiResponse<ScreenMonitoringConversation> GetConversationsScreenmonitorWithHttpInfo (string conversationId);
+
+        /// <summary>
+        /// Get active screen monitoring conversations for the logged in user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ScreenMonitoringConversationEntityListing</returns>
+        
+        ScreenMonitoringConversationEntityListing GetConversationsScreenmonitors ();
+
+        /// <summary>
+        /// Get active screen monitoring conversations for the logged in user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ScreenMonitoringConversationEntityListing</returns>
+        
+        ApiResponse<ScreenMonitoringConversationEntityListing> GetConversationsScreenmonitorsWithHttpInfo ();
+
+        /// <summary>
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
@@ -6672,32 +6718,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of MessageData</returns>
         
         ApiResponse<MessageData> PostConversationsMessageCommunicationMessagesWithHttpInfo (string conversationId, string communicationId, AdditionalMessage body);
-
-        /// <summary>
-        /// Create media
-        /// </summary>
-        /// <remarks>
-        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="communicationId">communicationId</param>
-        /// <returns>MessageMediaData</returns>
-        [Obsolete]
-        MessageMediaData PostConversationsMessageCommunicationMessagesMedia (string conversationId, string communicationId);
-
-        /// <summary>
-        /// Create media
-        /// </summary>
-        /// <remarks>
-        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="communicationId">communicationId</param>
-        /// <returns>ApiResponse of MessageMediaData</returns>
-        [Obsolete]
-        ApiResponse<MessageMediaData> PostConversationsMessageCommunicationMessagesMediaWithHttpInfo (string conversationId, string communicationId);
 
         /// <summary>
         /// Create a URL to upload a message media file
@@ -11576,6 +11596,52 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ConversationThreadingWindow>> GetConversationsMessagingThreadingtimelineAsyncWithHttpInfo ();
 
         /// <summary>
+        /// Get screen monitoring conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ScreenMonitoringConversation</returns>
+        
+        System.Threading.Tasks.Task<ScreenMonitoringConversation> GetConversationsScreenmonitorAsync (string conversationId);
+
+        /// <summary>
+        /// Get screen monitoring conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ApiResponse (ScreenMonitoringConversation)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ScreenMonitoringConversation>> GetConversationsScreenmonitorAsyncWithHttpInfo (string conversationId);
+
+        /// <summary>
+        /// Get active screen monitoring conversations for the logged in user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ScreenMonitoringConversationEntityListing</returns>
+        
+        System.Threading.Tasks.Task<ScreenMonitoringConversationEntityListing> GetConversationsScreenmonitorsAsync ();
+
+        /// <summary>
+        /// Get active screen monitoring conversations for the logged in user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ScreenMonitoringConversationEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ScreenMonitoringConversationEntityListing>> GetConversationsScreenmonitorsAsyncWithHttpInfo ();
+
+        /// <summary>
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
@@ -14924,32 +14990,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (MessageData)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<MessageData>> PostConversationsMessageCommunicationMessagesAsyncWithHttpInfo (string conversationId, string communicationId, AdditionalMessage body);
-
-        /// <summary>
-        /// Create media
-        /// </summary>
-        /// <remarks>
-        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="communicationId">communicationId</param>
-        /// <returns>Task of MessageMediaData</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<MessageMediaData> PostConversationsMessageCommunicationMessagesMediaAsync (string conversationId, string communicationId);
-
-        /// <summary>
-        /// Create media
-        /// </summary>
-        /// <remarks>
-        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="communicationId">communicationId</param>
-        /// <returns>Task of ApiResponse (MessageMediaData)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<MessageMediaData>> PostConversationsMessageCommunicationMessagesMediaAsyncWithHttpInfo (string conversationId, string communicationId);
 
         /// <summary>
         /// Create a URL to upload a message media file
@@ -43749,6 +43789,403 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get screen monitoring conversation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>ScreenMonitoringConversation</returns>
+        
+        public ScreenMonitoringConversation GetConversationsScreenmonitor (string conversationId)
+        {
+             ApiResponse<ScreenMonitoringConversation> localVarResponse = GetConversationsScreenmonitorWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get screen monitoring conversation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>ApiResponse of ScreenMonitoringConversation</returns>
+        
+        public ApiResponse< ScreenMonitoringConversation > GetConversationsScreenmonitorWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsScreenmonitor");
+
+            var localVarPath = "/api/v2/conversations/screenmonitors/{conversationId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsScreenmonitor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetConversationsScreenmonitor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsScreenmonitor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScreenMonitoringConversation>(localVarStatusCode,
+                localVarHeaders,
+                (ScreenMonitoringConversation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScreenMonitoringConversation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get screen monitoring conversation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ScreenMonitoringConversation</returns>
+        
+        public async System.Threading.Tasks.Task<ScreenMonitoringConversation> GetConversationsScreenmonitorAsync (string conversationId)
+        {
+             ApiResponse<ScreenMonitoringConversation> localVarResponse = await GetConversationsScreenmonitorAsyncWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get screen monitoring conversation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ApiResponse (ScreenMonitoringConversation)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ScreenMonitoringConversation>> GetConversationsScreenmonitorAsyncWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsScreenmonitor");
+            
+
+            var localVarPath = "/api/v2/conversations/screenmonitors/{conversationId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsScreenmonitor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetConversationsScreenmonitor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsScreenmonitor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScreenMonitoringConversation>(localVarStatusCode,
+                localVarHeaders,
+                (ScreenMonitoringConversation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScreenMonitoringConversation)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get active screen monitoring conversations for the logged in user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ScreenMonitoringConversationEntityListing</returns>
+        
+        public ScreenMonitoringConversationEntityListing GetConversationsScreenmonitors ()
+        {
+             ApiResponse<ScreenMonitoringConversationEntityListing> localVarResponse = GetConversationsScreenmonitorsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get active screen monitoring conversations for the logged in user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ScreenMonitoringConversationEntityListing</returns>
+        
+        public ApiResponse< ScreenMonitoringConversationEntityListing > GetConversationsScreenmonitorsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/conversations/screenmonitors";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsScreenmonitors: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetConversationsScreenmonitors: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsScreenmonitors: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScreenMonitoringConversationEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ScreenMonitoringConversationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScreenMonitoringConversationEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get active screen monitoring conversations for the logged in user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ScreenMonitoringConversationEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<ScreenMonitoringConversationEntityListing> GetConversationsScreenmonitorsAsync ()
+        {
+             ApiResponse<ScreenMonitoringConversationEntityListing> localVarResponse = await GetConversationsScreenmonitorsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get active screen monitoring conversations for the logged in user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ScreenMonitoringConversationEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ScreenMonitoringConversationEntityListing>> GetConversationsScreenmonitorsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/conversations/screenmonitors";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsScreenmonitors: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetConversationsScreenmonitors: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsScreenmonitors: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScreenMonitoringConversationEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ScreenMonitoringConversationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScreenMonitoringConversationEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get the wrap-up for this conversation communication.  
         /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
@@ -72414,224 +72851,6 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<MessageData>(localVarStatusCode,
                 localVarHeaders,
                 (MessageData) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessageData)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Create media 
-        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="communicationId">communicationId</param>
-        /// <returns>MessageMediaData</returns>
-        [Obsolete]
-        public MessageMediaData PostConversationsMessageCommunicationMessagesMedia (string conversationId, string communicationId)
-        {
-             ApiResponse<MessageMediaData> localVarResponse = PostConversationsMessageCommunicationMessagesMediaWithHttpInfo(conversationId, communicationId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create media 
-        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="communicationId">communicationId</param>
-        /// <returns>ApiResponse of MessageMediaData</returns>
-        [Obsolete]
-        public ApiResponse< MessageMediaData > PostConversationsMessageCommunicationMessagesMediaWithHttpInfo (string conversationId, string communicationId)
-        { 
-            // verify the required parameter 'conversationId' is set
-            if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsMessageCommunicationMessagesMedia");
-            // verify the required parameter 'communicationId' is set
-            if (communicationId == null)
-                throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsMessageCommunicationMessagesMedia");
-
-            var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media";
-            var localVarHttpMethod = "Post";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
-            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationMessagesMedia: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
-                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostConversationsMessageCommunicationMessagesMedia: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationMessagesMedia: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<MessageMediaData>(localVarStatusCode,
-                localVarHeaders,
-                (MessageMediaData) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessageMediaData)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Create media 
-        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="communicationId">communicationId</param>
-        /// <returns>Task of MessageMediaData</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<MessageMediaData> PostConversationsMessageCommunicationMessagesMediaAsync (string conversationId, string communicationId)
-        {
-             ApiResponse<MessageMediaData> localVarResponse = await PostConversationsMessageCommunicationMessagesMediaAsyncWithHttpInfo(conversationId, communicationId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Create media 
-        /// See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationId">conversationId</param>
-        /// <param name="communicationId">communicationId</param>
-        /// <returns>Task of ApiResponse (MessageMediaData)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<MessageMediaData>> PostConversationsMessageCommunicationMessagesMediaAsyncWithHttpInfo (string conversationId, string communicationId)
-        { 
-            // verify the required parameter 'conversationId' is set
-            if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsMessageCommunicationMessagesMedia");
-            
-            // verify the required parameter 'communicationId' is set
-            if (communicationId == null)
-                throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsMessageCommunicationMessagesMedia");
-            
-
-            var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media";
-            var localVarHttpMethod = "Post";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
-            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationMessagesMedia: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
-                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostConversationsMessageCommunicationMessagesMedia: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationMessagesMedia: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<MessageMediaData>(localVarStatusCode,
-                localVarHeaders,
-                (MessageMediaData) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessageMediaData)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

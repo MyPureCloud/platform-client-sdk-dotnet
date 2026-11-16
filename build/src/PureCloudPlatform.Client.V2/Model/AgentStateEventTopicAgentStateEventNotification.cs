@@ -162,7 +162,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Terminated for "TERMINATED"
             /// </summary>
             [EnumMember(Value = "TERMINATED")]
-            Terminated
+            Terminated,
+            
+            /// <summary>
+            /// Enum Video for "VIDEO"
+            /// </summary>
+            [EnumMember(Value = "VIDEO")]
+            Video
         }
         /// <summary>
         /// Gets or Sets OriginatingDirection

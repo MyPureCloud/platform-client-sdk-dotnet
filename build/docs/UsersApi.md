@@ -61,6 +61,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserStation**](#GetUserStation) | **Get** /api/v2/users/{userId}/station | Get station information for user |
 | [**GetUserSuperiors**](#GetUserSuperiors) | **Get** /api/v2/users/{userId}/superiors | Get superiors |
 | [**GetUserTrustors**](#GetUserTrustors) | **Get** /api/v2/users/{userId}/trustors | List the organizations that have authorized/trusted the user. |
+| [**GetUserVerifier**](#GetUserVerifier) | **Get** /api/v2/users/{userId}/verifiers/{verifierId} | Get a verifier |
 | [**GetUserVerifiers**](#GetUserVerifiers) | **Get** /api/v2/users/{userId}/verifiers | Get a list of verifiers |
 | [**GetUsers**](#GetUsers) | **Get** /api/v2/users | Get the list of available users. |
 | [**GetUsersChatsMe**](#GetUsersChatsMe) | **Get** /api/v2/users/chats/me | Get chats for a user |
@@ -1073,7 +1074,7 @@ void (empty response body)
 
 ## DeleteUsersMeVerifier
 
-> void DeleteUsersMeVerifier (string verifierId)
+> [**DeleteVerifierResponse**](DeleteVerifierResponse) DeleteUsersMeVerifier (string verifierId, string replacementDefaultVerifierId = null)
 
 
 Delete a verifier
@@ -1104,11 +1105,13 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var verifierId = verifierId_example;  // string | Verifier ID
+            var replacementDefaultVerifierId = replacementDefaultVerifierId_example;  // string | The ID of an enabled verifier to make the default after deleting the current default (optional) 
 
             try
             { 
                 // Delete a verifier
-                apiInstance.DeleteUsersMeVerifier(verifierId);
+                DeleteVerifierResponse result = apiInstance.DeleteUsersMeVerifier(verifierId, replacementDefaultVerifierId);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -1125,10 +1128,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **verifierId** | **string**| Verifier ID |  |
+| **replacementDefaultVerifierId** | **string**| The ID of an enabled verifier to make the default after deleting the current default | [optional]  |
 
 ### Return type
 
-void (empty response body)
+[**DeleteVerifierResponse**](DeleteVerifierResponse)
 
 
 ## DeleteUsersStationsMeAssociatedstation
@@ -3643,6 +3647,70 @@ namespace Example
 [**TrustorEntityListing**](TrustorEntityListing)
 
 
+## GetUserVerifier
+
+> [**Verifier**](Verifier) GetUserVerifier (string userId, string verifierId)
+
+
+Get a verifier
+
+Requires ANY permissions: 
+
+* mfa:verifier:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUserVerifierExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var verifierId = verifierId_example;  // string | Verifier ID
+
+            try
+            { 
+                // Get a verifier
+                Verifier result = apiInstance.GetUserVerifier(userId, verifierId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserVerifier: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **verifierId** | **string**| Verifier ID |  |
+
+### Return type
+
+[**Verifier**](Verifier)
+
+
 ## GetUserVerifiers
 
 > [**VerifierEntityListing**](VerifierEntityListing) GetUserVerifiers (string userId)
@@ -5498,7 +5566,7 @@ namespace Example
 
 Assign multiple routing skills to a user
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -7910,7 +7978,7 @@ namespace Example
 
 Assign multiple routing skills to a user, replacing any current assignments
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -8475,4 +8543,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

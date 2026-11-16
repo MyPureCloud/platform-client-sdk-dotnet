@@ -267,7 +267,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Quantity">Quantity of the item..</param>
         /// <param name="UnitOfMeasure">Unit of Measure..</param>
         /// <param name="Amount">Amount..</param>
-        public BillingInvoiceItem(BillingProduct Product = null, string Description = null, String DateTransacted = null, String DateStart = null, String DateEnd = null, NamedEntity Organization = null, int? Quantity = null, UnitOfMeasureEnum? UnitOfMeasure = null, double? Amount = null)
+        public BillingInvoiceItem(BillingProduct Product = null, string Description = null, String DateTransacted = null, String DateStart = null, String DateEnd = null, NamedEntity Organization = null, double? Quantity = null, UnitOfMeasureEnum? UnitOfMeasure = null, double? Amount = null)
         {
             this.Product = Product;
             this.Description = Description;
@@ -351,7 +351,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Quantity of the item.</value>
         [DataMember(Name="quantity", EmitDefaultValue=false)]
-        public int? Quantity { get; set; }
+        public double? Quantity { get; set; }
 
 
 

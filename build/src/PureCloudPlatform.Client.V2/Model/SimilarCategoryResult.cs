@@ -77,6 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Places where the category is used. Omitted when usage tracking is off or includeUsage is false or omitted. Otherwise, empty when unused or populated with usage entries.
+        /// </summary>
+        /// <value>Places where the category is used. Omitted when usage tracking is off or includeUsage is false or omitted. Otherwise, empty when unused or populated with usage entries.</value>
+        [DataMember(Name="usage", EmitDefaultValue=false)]
+        public List<CustomerIntentUsage> Usage { get; private set; }
+
+
+
+        /// <summary>
         /// The distance score indicating similarity (lower is more similar)
         /// </summary>
         /// <value>The distance score indicating similarity (lower is more similar)</value>
@@ -106,6 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  Usage: ").Append(Usage).Append("\n");
             sb.Append("  Distance: ").Append(Distance).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -169,6 +179,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.Usage == other.Usage ||
+                    this.Usage != null &&
+                    this.Usage.SequenceEqual(other.Usage)
+                ) &&
+                (
                     this.Distance == other.Distance ||
                     this.Distance != null &&
                     this.Distance.Equals(other.Distance)
@@ -202,6 +217,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.Usage != null)
+                    hash = hash * 59 + this.Usage.GetHashCode();
 
                 if (this.Distance != null)
                     hash = hash * 59 + this.Distance.GetHashCode();

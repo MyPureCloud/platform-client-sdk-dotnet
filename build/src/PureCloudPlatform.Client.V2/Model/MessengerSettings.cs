@@ -61,7 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Apps">The apps embedded in the messenger.</param>
         /// <param name="HomeScreen">The homescreen settings for messenger.</param>
         /// <param name="SessionPersistenceType">The session persistence type for messenger.</param>
-        public MessengerSettings(bool? Enabled = null, MessengerStyles Styles = null, LauncherButtonSettings LauncherButton = null, FileUploadSettings FileUpload = null, MessengerApps Apps = null, MessengerHomeScreen HomeScreen = null, SessionPersistenceTypeEnum? SessionPersistenceType = null)
+        /// <param name="RichSurveyEnabled">Whether or not rich in-app surveys are enabled for messenger.</param>
+        public MessengerSettings(bool? Enabled = null, MessengerStyles Styles = null, LauncherButtonSettings LauncherButton = null, FileUploadSettings FileUpload = null, MessengerApps Apps = null, MessengerHomeScreen HomeScreen = null, SessionPersistenceTypeEnum? SessionPersistenceType = null, bool? RichSurveyEnabled = null)
         {
             this.Enabled = Enabled;
             this.Styles = Styles;
@@ -70,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Apps = Apps;
             this.HomeScreen = HomeScreen;
             this.SessionPersistenceType = SessionPersistenceType;
+            this.RichSurveyEnabled = RichSurveyEnabled;
             
         }
         
@@ -130,6 +132,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Whether or not rich in-app surveys are enabled for messenger
+        /// </summary>
+        /// <value>Whether or not rich in-app surveys are enabled for messenger</value>
+        [DataMember(Name="richSurveyEnabled", EmitDefaultValue=false)]
+        public bool? RichSurveyEnabled { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -146,6 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Apps: ").Append(Apps).Append("\n");
             sb.Append("  HomeScreen: ").Append(HomeScreen).Append("\n");
             sb.Append("  SessionPersistenceType: ").Append(SessionPersistenceType).Append("\n");
+            sb.Append("  RichSurveyEnabled: ").Append(RichSurveyEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -220,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SessionPersistenceType == other.SessionPersistenceType ||
                     this.SessionPersistenceType != null &&
                     this.SessionPersistenceType.Equals(other.SessionPersistenceType)
+                ) &&
+                (
+                    this.RichSurveyEnabled == other.RichSurveyEnabled ||
+                    this.RichSurveyEnabled != null &&
+                    this.RichSurveyEnabled.Equals(other.RichSurveyEnabled)
                 );
         }
 
@@ -254,6 +271,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SessionPersistenceType != null)
                     hash = hash * 59 + this.SessionPersistenceType.GetHashCode();
+
+                if (this.RichSurveyEnabled != null)
+                    hash = hash * 59 + this.RichSurveyEnabled.GetHashCode();
 
                 return hash;
             }

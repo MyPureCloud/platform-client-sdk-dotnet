@@ -127,9 +127,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Category id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>IntentsCategory</returns>
         
-        IntentsCategory GetIntentsCategory (string categoryId);
+        IntentsCategory GetIntentsCategory (string categoryId, bool? includeUsage = null);
 
         /// <summary>
         /// Get category for categoryId
@@ -139,9 +140,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Category id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>ApiResponse of IntentsCategory</returns>
         
-        ApiResponse<IntentsCategory> GetIntentsCategoryWithHttpInfo (string categoryId);
+        ApiResponse<IntentsCategory> GetIntentsCategoryWithHttpInfo (string categoryId, bool? includeUsage = null);
 
         /// <summary>
         /// Get customer intent for customerIntentId
@@ -151,9 +153,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerIntentId">Customer Intent id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>CustomerIntentResponse</returns>
         
-        CustomerIntentResponse GetIntentsCustomerintent (string customerIntentId);
+        CustomerIntentResponse GetIntentsCustomerintent (string customerIntentId, bool? includeUsage = null);
 
         /// <summary>
         /// Get customer intent for customerIntentId
@@ -163,9 +166,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerIntentId">Customer Intent id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>ApiResponse of CustomerIntentResponse</returns>
         
-        ApiResponse<CustomerIntentResponse> GetIntentsCustomerintentWithHttpInfo (string customerIntentId);
+        ApiResponse<CustomerIntentResponse> GetIntentsCustomerintentWithHttpInfo (string customerIntentId, bool? includeUsage = null);
 
         /// <summary>
         /// Get source intents mapped to a customer intent
@@ -629,9 +633,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Category id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>Task of IntentsCategory</returns>
         
-        System.Threading.Tasks.Task<IntentsCategory> GetIntentsCategoryAsync (string categoryId);
+        System.Threading.Tasks.Task<IntentsCategory> GetIntentsCategoryAsync (string categoryId, bool? includeUsage = null);
 
         /// <summary>
         /// Get category for categoryId
@@ -641,9 +646,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Category id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>Task of ApiResponse (IntentsCategory)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IntentsCategory>> GetIntentsCategoryAsyncWithHttpInfo (string categoryId);
+        System.Threading.Tasks.Task<ApiResponse<IntentsCategory>> GetIntentsCategoryAsyncWithHttpInfo (string categoryId, bool? includeUsage = null);
 
         /// <summary>
         /// Get customer intent for customerIntentId
@@ -653,9 +659,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerIntentId">Customer Intent id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>Task of CustomerIntentResponse</returns>
         
-        System.Threading.Tasks.Task<CustomerIntentResponse> GetIntentsCustomerintentAsync (string customerIntentId);
+        System.Threading.Tasks.Task<CustomerIntentResponse> GetIntentsCustomerintentAsync (string customerIntentId, bool? includeUsage = null);
 
         /// <summary>
         /// Get customer intent for customerIntentId
@@ -665,9 +672,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerIntentId">Customer Intent id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>Task of ApiResponse (CustomerIntentResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<CustomerIntentResponse>> GetIntentsCustomerintentAsyncWithHttpInfo (string customerIntentId);
+        System.Threading.Tasks.Task<ApiResponse<CustomerIntentResponse>> GetIntentsCustomerintentAsyncWithHttpInfo (string customerIntentId, bool? includeUsage = null);
 
         /// <summary>
         /// Get source intents mapped to a customer intent
@@ -1946,11 +1954,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Category id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>IntentsCategory</returns>
         
-        public IntentsCategory GetIntentsCategory (string categoryId)
+        public IntentsCategory GetIntentsCategory (string categoryId, bool? includeUsage = null)
         {
-             ApiResponse<IntentsCategory> localVarResponse = GetIntentsCategoryWithHttpInfo(categoryId);
+             ApiResponse<IntentsCategory> localVarResponse = GetIntentsCategoryWithHttpInfo(categoryId, includeUsage);
              return localVarResponse.Data;
         }
 
@@ -1960,9 +1969,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Category id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>ApiResponse of IntentsCategory</returns>
         
-        public ApiResponse< IntentsCategory > GetIntentsCategoryWithHttpInfo (string categoryId)
+        public ApiResponse< IntentsCategory > GetIntentsCategoryWithHttpInfo (string categoryId, bool? includeUsage = null)
         { 
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -2002,6 +2012,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (categoryId != null) localVarPathParams.Add("categoryId", this.Configuration.ApiClient.ParameterToString(categoryId));
 
             // Query params
+            if (includeUsage != null) localVarQueryParams.Add(new Tuple<string, string>("includeUsage", this.Configuration.ApiClient.ParameterToString(includeUsage)));
 
             // Header params
 
@@ -2047,11 +2058,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Category id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>Task of IntentsCategory</returns>
         
-        public async System.Threading.Tasks.Task<IntentsCategory> GetIntentsCategoryAsync (string categoryId)
+        public async System.Threading.Tasks.Task<IntentsCategory> GetIntentsCategoryAsync (string categoryId, bool? includeUsage = null)
         {
-             ApiResponse<IntentsCategory> localVarResponse = await GetIntentsCategoryAsyncWithHttpInfo(categoryId);
+             ApiResponse<IntentsCategory> localVarResponse = await GetIntentsCategoryAsyncWithHttpInfo(categoryId, includeUsage);
              return localVarResponse.Data;
 
         }
@@ -2062,9 +2074,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryId">Category id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>Task of ApiResponse (IntentsCategory)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IntentsCategory>> GetIntentsCategoryAsyncWithHttpInfo (string categoryId)
+        public async System.Threading.Tasks.Task<ApiResponse<IntentsCategory>> GetIntentsCategoryAsyncWithHttpInfo (string categoryId, bool? includeUsage = null)
         { 
             // verify the required parameter 'categoryId' is set
             if (categoryId == null)
@@ -2105,6 +2118,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (categoryId != null) localVarPathParams.Add("categoryId", this.Configuration.ApiClient.ParameterToString(categoryId));
 
             // Query params
+            if (includeUsage != null) localVarQueryParams.Add(new Tuple<string, string>("includeUsage", this.Configuration.ApiClient.ParameterToString(includeUsage)));
 
             // Header params
 
@@ -2151,11 +2165,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerIntentId">Customer Intent id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>CustomerIntentResponse</returns>
         
-        public CustomerIntentResponse GetIntentsCustomerintent (string customerIntentId)
+        public CustomerIntentResponse GetIntentsCustomerintent (string customerIntentId, bool? includeUsage = null)
         {
-             ApiResponse<CustomerIntentResponse> localVarResponse = GetIntentsCustomerintentWithHttpInfo(customerIntentId);
+             ApiResponse<CustomerIntentResponse> localVarResponse = GetIntentsCustomerintentWithHttpInfo(customerIntentId, includeUsage);
              return localVarResponse.Data;
         }
 
@@ -2165,9 +2180,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerIntentId">Customer Intent id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>ApiResponse of CustomerIntentResponse</returns>
         
-        public ApiResponse< CustomerIntentResponse > GetIntentsCustomerintentWithHttpInfo (string customerIntentId)
+        public ApiResponse< CustomerIntentResponse > GetIntentsCustomerintentWithHttpInfo (string customerIntentId, bool? includeUsage = null)
         { 
             // verify the required parameter 'customerIntentId' is set
             if (customerIntentId == null)
@@ -2207,6 +2223,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (customerIntentId != null) localVarPathParams.Add("customerIntentId", this.Configuration.ApiClient.ParameterToString(customerIntentId));
 
             // Query params
+            if (includeUsage != null) localVarQueryParams.Add(new Tuple<string, string>("includeUsage", this.Configuration.ApiClient.ParameterToString(includeUsage)));
 
             // Header params
 
@@ -2252,11 +2269,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerIntentId">Customer Intent id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>Task of CustomerIntentResponse</returns>
         
-        public async System.Threading.Tasks.Task<CustomerIntentResponse> GetIntentsCustomerintentAsync (string customerIntentId)
+        public async System.Threading.Tasks.Task<CustomerIntentResponse> GetIntentsCustomerintentAsync (string customerIntentId, bool? includeUsage = null)
         {
-             ApiResponse<CustomerIntentResponse> localVarResponse = await GetIntentsCustomerintentAsyncWithHttpInfo(customerIntentId);
+             ApiResponse<CustomerIntentResponse> localVarResponse = await GetIntentsCustomerintentAsyncWithHttpInfo(customerIntentId, includeUsage);
              return localVarResponse.Data;
 
         }
@@ -2267,9 +2285,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="customerIntentId">Customer Intent id</param>
+        /// <param name="includeUsage">When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)</param>
         /// <returns>Task of ApiResponse (CustomerIntentResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<CustomerIntentResponse>> GetIntentsCustomerintentAsyncWithHttpInfo (string customerIntentId)
+        public async System.Threading.Tasks.Task<ApiResponse<CustomerIntentResponse>> GetIntentsCustomerintentAsyncWithHttpInfo (string customerIntentId, bool? includeUsage = null)
         { 
             // verify the required parameter 'customerIntentId' is set
             if (customerIntentId == null)
@@ -2310,6 +2329,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (customerIntentId != null) localVarPathParams.Add("customerIntentId", this.Configuration.ApiClient.ParameterToString(customerIntentId));
 
             // Query params
+            if (includeUsage != null) localVarQueryParams.Add(new Tuple<string, string>("includeUsage", this.Configuration.ApiClient.ParameterToString(includeUsage)));
 
             // Header params
 

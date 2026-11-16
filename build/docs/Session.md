@@ -48,7 +48,7 @@
 | **Authenticated** | **bool?** | Indicates whether or not the session is authenticated. | |
 | **DivisionIds** | **List&lt;string&gt;** | List of division IDs associated with the session. | [optional] |
 | **LastScreen** | **string** | The app screen name where the customer&#39;s last app interaction occurred. | [optional] |
-| **CaseAssociations** | [**List&lt;JourneyCaseAssociation&gt;**](JourneyCaseAssociation) | Cases associated with the session - conversation only. | [optional] |
+| **CaseAssociations** | [**List&lt;JourneyCaseAssociation&gt;**](JourneyCaseAssociation) | Cases associated with the session - conversation and campaign only. | [optional] |
 | **CaseEntity** | [**AddressableEntityRef**](AddressableEntityRef) | The case this session refers to. | [optional] |
 | **CaseReference** | **string** | The reference for this case. | [optional] |
 | **CaseStatus** | **string** | The status of this case. | [optional] |
@@ -60,4 +60,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 276.0.0_
+_PureCloudPlatform.Client.V2 277.0.0_

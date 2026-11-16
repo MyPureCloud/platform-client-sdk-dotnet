@@ -52,6 +52,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversationtransfer,
             
             /// <summary>
+            /// Enum Consultjoin for "ConsultJoin"
+            /// </summary>
+            [EnumMember(Value = "ConsultJoin")]
+            Consultjoin,
+            
+            /// <summary>
             /// Enum Conversationend for "ConversationEnd"
             /// </summary>
             [EnumMember(Value = "ConversationEnd")]

@@ -77,14 +77,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Source">Source of the input value. (required).</param>
         /// <param name="Required">Whether this input must be supplied..</param>
         /// <param name="FallbackToUser">Whether the virtual agent should ask the user for this input value when it is not available from the configured source..</param>
+        /// <param name="DependencyOnly">Whether this input is used for gating/preconditions only and is not sent with the underlying tool at runtime..</param>
         /// <param name="Mapping">Path used to extract this input from a previous tool output. Only valid when source is &#39;ToolOutput&#39;. The path starts with a tool output type name, may contain only string property names or integer array indexes, and must resolve to a primitive value..</param>
-        public AgenticVirtualAgentToolInput(string TargetName = null, string Type = null, SourceEnum? Source = null, bool? Required = null, bool? FallbackToUser = null, List<Object> Mapping = null)
+        public AgenticVirtualAgentToolInput(string TargetName = null, string Type = null, SourceEnum? Source = null, bool? Required = null, bool? FallbackToUser = null, bool? DependencyOnly = null, List<Object> Mapping = null)
         {
             this.TargetName = TargetName;
             this.Type = Type;
             this.Source = Source;
             this.Required = Required;
             this.FallbackToUser = FallbackToUser;
+            this.DependencyOnly = DependencyOnly;
             this.Mapping = Mapping;
             
         }
@@ -130,6 +132,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether this input is used for gating/preconditions only and is not sent with the underlying tool at runtime.
+        /// </summary>
+        /// <value>Whether this input is used for gating/preconditions only and is not sent with the underlying tool at runtime.</value>
+        [DataMember(Name="dependencyOnly", EmitDefaultValue=false)]
+        public bool? DependencyOnly { get; set; }
+
+
+
+        /// <summary>
         /// Path used to extract this input from a previous tool output. Only valid when source is &#39;ToolOutput&#39;. The path starts with a tool output type name, may contain only string property names or integer array indexes, and must resolve to a primitive value.
         /// </summary>
         /// <value>Path used to extract this input from a previous tool output. Only valid when source is &#39;ToolOutput&#39;. The path starts with a tool output type name, may contain only string property names or integer array indexes, and must resolve to a primitive value.</value>
@@ -151,6 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  Required: ").Append(Required).Append("\n");
             sb.Append("  FallbackToUser: ").Append(FallbackToUser).Append("\n");
+            sb.Append("  DependencyOnly: ").Append(DependencyOnly).Append("\n");
             sb.Append("  Mapping: ").Append(Mapping).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -218,6 +230,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FallbackToUser.Equals(other.FallbackToUser)
                 ) &&
                 (
+                    this.DependencyOnly == other.DependencyOnly ||
+                    this.DependencyOnly != null &&
+                    this.DependencyOnly.Equals(other.DependencyOnly)
+                ) &&
+                (
                     this.Mapping == other.Mapping ||
                     this.Mapping != null &&
                     this.Mapping.SequenceEqual(other.Mapping)
@@ -249,6 +266,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FallbackToUser != null)
                     hash = hash * 59 + this.FallbackToUser.GetHashCode();
+
+                if (this.DependencyOnly != null)
+                    hash = hash * 59 + this.DependencyOnly.GetHashCode();
 
                 if (this.Mapping != null)
                     hash = hash * 59 + this.Mapping.GetHashCode();

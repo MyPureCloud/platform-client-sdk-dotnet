@@ -397,9 +397,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifierId">Verifier ID</param>
-        /// <returns></returns>
+        /// <param name="replacementDefaultVerifierId">The ID of an enabled verifier to make the default after deleting the current default (optional)</param>
+        /// <returns>DeleteVerifierResponse</returns>
         
-        void DeleteUsersMeVerifier (string verifierId);
+        DeleteVerifierResponse DeleteUsersMeVerifier (string verifierId, string replacementDefaultVerifierId = null);
 
         /// <summary>
         /// Delete a verifier
@@ -409,9 +410,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifierId">Verifier ID</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <param name="replacementDefaultVerifierId">The ID of an enabled verifier to make the default after deleting the current default (optional)</param>
+        /// <returns>ApiResponse of DeleteVerifierResponse</returns>
         
-        ApiResponse<Object> DeleteUsersMeVerifierWithHttpInfo (string verifierId);
+        ApiResponse<DeleteVerifierResponse> DeleteUsersMeVerifierWithHttpInfo (string verifierId, string replacementDefaultVerifierId = null);
 
         /// <summary>
         /// Clear self associated station
@@ -1442,6 +1444,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of TrustorEntityListing</returns>
         
         ApiResponse<TrustorEntityListing> GetUserTrustorsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>Verifier</returns>
+        
+        Verifier GetUserVerifier (string userId, string verifierId);
+
+        /// <summary>
+        /// Get a verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>ApiResponse of Verifier</returns>
+        
+        ApiResponse<Verifier> GetUserVerifierWithHttpInfo (string userId, string verifierId);
 
         /// <summary>
         /// Get a list of verifiers
@@ -3809,9 +3837,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifierId">Verifier ID</param>
-        /// <returns>Task of void</returns>
+        /// <param name="replacementDefaultVerifierId">The ID of an enabled verifier to make the default after deleting the current default (optional)</param>
+        /// <returns>Task of DeleteVerifierResponse</returns>
         
-        System.Threading.Tasks.Task DeleteUsersMeVerifierAsync (string verifierId);
+        System.Threading.Tasks.Task<DeleteVerifierResponse> DeleteUsersMeVerifierAsync (string verifierId, string replacementDefaultVerifierId = null);
 
         /// <summary>
         /// Delete a verifier
@@ -3821,9 +3850,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifierId">Verifier ID</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <param name="replacementDefaultVerifierId">The ID of an enabled verifier to make the default after deleting the current default (optional)</param>
+        /// <returns>Task of ApiResponse (DeleteVerifierResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersMeVerifierAsyncWithHttpInfo (string verifierId);
+        System.Threading.Tasks.Task<ApiResponse<DeleteVerifierResponse>> DeleteUsersMeVerifierAsyncWithHttpInfo (string verifierId, string replacementDefaultVerifierId = null);
 
         /// <summary>
         /// Clear self associated station
@@ -4854,6 +4884,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (TrustorEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TrustorEntityListing>> GetUserTrustorsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>Task of Verifier</returns>
+        
+        System.Threading.Tasks.Task<Verifier> GetUserVerifierAsync (string userId, string verifierId);
+
+        /// <summary>
+        /// Get a verifier
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>Task of ApiResponse (Verifier)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Verifier>> GetUserVerifierAsyncWithHttpInfo (string userId, string verifierId);
 
         /// <summary>
         /// Get a list of verifiers
@@ -10071,11 +10127,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifierId">Verifier ID</param>
-        /// <returns></returns>
+        /// <param name="replacementDefaultVerifierId">The ID of an enabled verifier to make the default after deleting the current default (optional)</param>
+        /// <returns>DeleteVerifierResponse</returns>
         
-        public void DeleteUsersMeVerifier (string verifierId)
+        public DeleteVerifierResponse DeleteUsersMeVerifier (string verifierId, string replacementDefaultVerifierId = null)
         {
-             DeleteUsersMeVerifierWithHttpInfo(verifierId);
+             ApiResponse<DeleteVerifierResponse> localVarResponse = DeleteUsersMeVerifierWithHttpInfo(verifierId, replacementDefaultVerifierId);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -10084,9 +10142,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifierId">Verifier ID</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <param name="replacementDefaultVerifierId">The ID of an enabled verifier to make the default after deleting the current default (optional)</param>
+        /// <returns>ApiResponse of DeleteVerifierResponse</returns>
         
-        public ApiResponse<Object> DeleteUsersMeVerifierWithHttpInfo (string verifierId)
+        public ApiResponse< DeleteVerifierResponse > DeleteUsersMeVerifierWithHttpInfo (string verifierId, string replacementDefaultVerifierId = null)
         { 
             // verify the required parameter 'verifierId' is set
             if (verifierId == null)
@@ -10126,6 +10185,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (verifierId != null) localVarPathParams.Add("verifierId", this.Configuration.ApiClient.ParameterToString(verifierId));
 
             // Query params
+            if (replacementDefaultVerifierId != null) localVarQueryParams.Add(new Tuple<string, string>("replacementDefaultVerifierId", this.Configuration.ApiClient.ParameterToString(replacementDefaultVerifierId)));
 
             // Header params
 
@@ -10157,9 +10217,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUsersMeVerifier: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<DeleteVerifierResponse>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (DeleteVerifierResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteVerifierResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10171,11 +10231,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifierId">Verifier ID</param>
-        /// <returns>Task of void</returns>
+        /// <param name="replacementDefaultVerifierId">The ID of an enabled verifier to make the default after deleting the current default (optional)</param>
+        /// <returns>Task of DeleteVerifierResponse</returns>
         
-        public async System.Threading.Tasks.Task DeleteUsersMeVerifierAsync (string verifierId)
+        public async System.Threading.Tasks.Task<DeleteVerifierResponse> DeleteUsersMeVerifierAsync (string verifierId, string replacementDefaultVerifierId = null)
         {
-             await DeleteUsersMeVerifierAsyncWithHttpInfo(verifierId);
+             ApiResponse<DeleteVerifierResponse> localVarResponse = await DeleteUsersMeVerifierAsyncWithHttpInfo(verifierId, replacementDefaultVerifierId);
+             return localVarResponse.Data;
 
         }
 
@@ -10185,9 +10247,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="verifierId">Verifier ID</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <param name="replacementDefaultVerifierId">The ID of an enabled verifier to make the default after deleting the current default (optional)</param>
+        /// <returns>Task of ApiResponse (DeleteVerifierResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersMeVerifierAsyncWithHttpInfo (string verifierId)
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteVerifierResponse>> DeleteUsersMeVerifierAsyncWithHttpInfo (string verifierId, string replacementDefaultVerifierId = null)
         { 
             // verify the required parameter 'verifierId' is set
             if (verifierId == null)
@@ -10228,6 +10291,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (verifierId != null) localVarPathParams.Add("verifierId", this.Configuration.ApiClient.ParameterToString(verifierId));
 
             // Query params
+            if (replacementDefaultVerifierId != null) localVarQueryParams.Add(new Tuple<string, string>("replacementDefaultVerifierId", this.Configuration.ApiClient.ParameterToString(replacementDefaultVerifierId)));
 
             // Header params
 
@@ -10259,9 +10323,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUsersMeVerifier: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<DeleteVerifierResponse>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (DeleteVerifierResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteVerifierResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -18537,6 +18601,224 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TrustorEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (TrustorEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustorEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>Verifier</returns>
+        
+        public Verifier GetUserVerifier (string userId, string verifierId)
+        {
+             ApiResponse<Verifier> localVarResponse = GetUserVerifierWithHttpInfo(userId, verifierId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>ApiResponse of Verifier</returns>
+        
+        public ApiResponse< Verifier > GetUserVerifierWithHttpInfo (string userId, string verifierId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserVerifier");
+            // verify the required parameter 'verifierId' is set
+            if (verifierId == null)
+                throw new ApiException(400, "Missing required parameter 'verifierId' when calling UsersApi->GetUserVerifier");
+
+            var localVarPath = "/api/v2/users/{userId}/verifiers/{verifierId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (verifierId != null) localVarPathParams.Add("verifierId", this.Configuration.ApiClient.ParameterToString(verifierId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserVerifier: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetUserVerifier: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserVerifier: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Verifier>(localVarStatusCode,
+                localVarHeaders,
+                (Verifier) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Verifier)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>Task of Verifier</returns>
+        
+        public async System.Threading.Tasks.Task<Verifier> GetUserVerifierAsync (string userId, string verifierId)
+        {
+             ApiResponse<Verifier> localVarResponse = await GetUserVerifierAsyncWithHttpInfo(userId, verifierId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a verifier 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="verifierId">Verifier ID</param>
+        /// <returns>Task of ApiResponse (Verifier)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Verifier>> GetUserVerifierAsyncWithHttpInfo (string userId, string verifierId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserVerifier");
+            
+            // verify the required parameter 'verifierId' is set
+            if (verifierId == null)
+                throw new ApiException(400, "Missing required parameter 'verifierId' when calling UsersApi->GetUserVerifier");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/verifiers/{verifierId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (verifierId != null) localVarPathParams.Add("verifierId", this.Configuration.ApiClient.ParameterToString(verifierId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserVerifier: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetUserVerifier: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserVerifier: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Verifier>(localVarStatusCode,
+                localVarHeaders,
+                (Verifier) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Verifier)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

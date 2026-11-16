@@ -19,14 +19,129 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class KnowledgeSearchResult :  IEquatable<KnowledgeSearchResult>
     {
         /// <summary>
+        /// Reason the search request did not produce an answer or relevant content.
+        /// </summary>
+        /// <value>Reason the search request did not produce an answer or relevant content.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FailureReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum EMPTY for ""
+            /// </summary>
+            [EnumMember(Value = "")]
+            EMPTY,
+            
+            /// <summary>
+            /// Enum Unknown for "unknown"
+            /// </summary>
+            [EnumMember(Value = "unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Invalidquery for "invalidQuery"
+            /// </summary>
+            [EnumMember(Value = "invalidQuery")]
+            Invalidquery,
+            
+            /// <summary>
+            /// Enum Ratelimitexceeded for "rateLimitExceeded"
+            /// </summary>
+            [EnumMember(Value = "rateLimitExceeded")]
+            Ratelimitexceeded,
+            
+            /// <summary>
+            /// Enum Modeltimeout for "modelTimeout"
+            /// </summary>
+            [EnumMember(Value = "modelTimeout")]
+            Modeltimeout,
+            
+            /// <summary>
+            /// Enum Promptinjection for "promptInjection"
+            /// </summary>
+            [EnumMember(Value = "promptInjection")]
+            Promptinjection,
+            
+            /// <summary>
+            /// Enum Nocitations for "noCitations"
+            /// </summary>
+            [EnumMember(Value = "noCitations")]
+            Nocitations,
+            
+            /// <summary>
+            /// Enum Invalidanswerformat for "invalidAnswerFormat"
+            /// </summary>
+            [EnumMember(Value = "invalidAnswerFormat")]
+            Invalidanswerformat,
+            
+            /// <summary>
+            /// Enum Unanswerable for "unanswerable"
+            /// </summary>
+            [EnumMember(Value = "unanswerable")]
+            Unanswerable,
+            
+            /// <summary>
+            /// Enum Postprocessingrejected for "postProcessingRejected"
+            /// </summary>
+            [EnumMember(Value = "postProcessingRejected")]
+            Postprocessingrejected,
+            
+            /// <summary>
+            /// Enum Similartoconversation for "similarToConversation"
+            /// </summary>
+            [EnumMember(Value = "similarToConversation")]
+            Similartoconversation,
+            
+            /// <summary>
+            /// Enum Ignorablephrase for "ignorablePhrase"
+            /// </summary>
+            [EnumMember(Value = "ignorablePhrase")]
+            Ignorablephrase,
+            
+            /// <summary>
+            /// Enum Modelerror for "modelError"
+            /// </summary>
+            [EnumMember(Value = "modelError")]
+            Modelerror,
+            
+            /// <summary>
+            /// Enum Nochunksfound for "noChunksFound"
+            /// </summary>
+            [EnumMember(Value = "noChunksFound")]
+            Nochunksfound,
+            
+            /// <summary>
+            /// Enum Answergenerationtimeout for "answerGenerationTimeout"
+            /// </summary>
+            [EnumMember(Value = "answerGenerationTimeout")]
+            Answergenerationtimeout
+        }
+        /// <summary>
+        /// Reason the search request did not produce an answer or relevant content.
+        /// </summary>
+        /// <value>Reason the search request did not produce an answer or relevant content.</value>
+        [DataMember(Name="failureReason", EmitDefaultValue=false)]
+        public FailureReasonEnum? FailureReason { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeSearchResult" /> class.
         /// </summary>
         /// <param name="GeneratedAnswer">The generated answer for search query..</param>
         /// <param name="RetrievedReferences">The retrieved references for the search query..</param>
-        public KnowledgeSearchResult(string GeneratedAnswer = null, List<KnowledgeRetrievedReference> RetrievedReferences = null)
+        /// <param name="FailureReason">Reason the search request did not produce an answer or relevant content..</param>
+        /// <param name="Message">A detailed error message describing the failureReason..</param>
+        public KnowledgeSearchResult(string GeneratedAnswer = null, List<KnowledgeRetrievedReference> RetrievedReferences = null, FailureReasonEnum? FailureReason = null, string Message = null)
         {
             this.GeneratedAnswer = GeneratedAnswer;
             this.RetrievedReferences = RetrievedReferences;
+            this.FailureReason = FailureReason;
+            this.Message = Message;
             
         }
         
@@ -49,6 +164,17 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<KnowledgeRetrievedReference> RetrievedReferences { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// A detailed error message describing the failureReason.
+        /// </summary>
+        /// <value>A detailed error message describing the failureReason.</value>
+        [DataMember(Name="message", EmitDefaultValue=false)]
+        public string Message { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +186,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  GeneratedAnswer: ").Append(GeneratedAnswer).Append("\n");
             sb.Append("  RetrievedReferences: ").Append(RetrievedReferences).Append("\n");
+            sb.Append("  FailureReason: ").Append(FailureReason).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +237,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RetrievedReferences == other.RetrievedReferences ||
                     this.RetrievedReferences != null &&
                     this.RetrievedReferences.SequenceEqual(other.RetrievedReferences)
+                ) &&
+                (
+                    this.FailureReason == other.FailureReason ||
+                    this.FailureReason != null &&
+                    this.FailureReason.Equals(other.FailureReason)
+                ) &&
+                (
+                    this.Message == other.Message ||
+                    this.Message != null &&
+                    this.Message.Equals(other.Message)
                 );
         }
 
@@ -128,6 +266,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RetrievedReferences != null)
                     hash = hash * 59 + this.RetrievedReferences.GetHashCode();
+
+                if (this.FailureReason != null)
+                    hash = hash * 59 + this.FailureReason.GetHashCode();
+
+                if (this.Message != null)
+                    hash = hash * 59 + this.Message.GetHashCode();
 
                 return hash;
             }

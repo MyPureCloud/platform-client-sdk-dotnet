@@ -298,6 +298,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Line,
             
             /// <summary>
+            /// Enum Linkedin for "linkedin"
+            /// </summary>
+            [EnumMember(Value = "linkedin")]
+            Linkedin,
+            
+            /// <summary>
             /// Enum Open for "open"
             /// </summary>
             [EnumMember(Value = "open")]

@@ -561,9 +561,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>ScimV2Group</returns>
         
-        ScimV2Group PatchScimGroup (string groupId, ScimV2PatchRequest body, string ifMatch = null);
+        ScimV2Group PatchScimGroup (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null);
 
         /// <summary>
         /// Modify a group
@@ -575,9 +577,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         
-        ApiResponse<ScimV2Group> PatchScimGroupWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null);
+        ApiResponse<ScimV2Group> PatchScimGroupWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null);
 
         /// <summary>
         /// Modify a user
@@ -617,9 +621,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>ScimV2Group</returns>
         
-        ScimV2Group PatchScimV2Group (string groupId, ScimV2PatchRequest body, string ifMatch = null);
+        ScimV2Group PatchScimV2Group (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null);
 
         /// <summary>
         /// Modify a group
@@ -631,9 +637,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         
-        ApiResponse<ScimV2Group> PatchScimV2GroupWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null);
+        ApiResponse<ScimV2Group> PatchScimV2GroupWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null);
 
         /// <summary>
         /// Modify a user
@@ -1373,9 +1381,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         
-        System.Threading.Tasks.Task<ScimV2Group> PatchScimGroupAsync (string groupId, ScimV2PatchRequest body, string ifMatch = null);
+        System.Threading.Tasks.Task<ScimV2Group> PatchScimGroupAsync (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null);
 
         /// <summary>
         /// Modify a group
@@ -1387,9 +1397,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PatchScimGroupAsyncWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null);
+        System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PatchScimGroupAsyncWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null);
 
         /// <summary>
         /// Modify a user
@@ -1429,9 +1441,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         
-        System.Threading.Tasks.Task<ScimV2Group> PatchScimV2GroupAsync (string groupId, ScimV2PatchRequest body, string ifMatch = null);
+        System.Threading.Tasks.Task<ScimV2Group> PatchScimV2GroupAsync (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null);
 
         /// <summary>
         /// Modify a group
@@ -1443,9 +1457,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PatchScimV2GroupAsyncWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null);
+        System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PatchScimV2GroupAsyncWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null);
 
         /// <summary>
         /// Modify a user
@@ -6040,11 +6056,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>ScimV2Group</returns>
         
-        public ScimV2Group PatchScimGroup (string groupId, ScimV2PatchRequest body, string ifMatch = null)
+        public ScimV2Group PatchScimGroup (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null)
         {
-             ApiResponse<ScimV2Group> localVarResponse = PatchScimGroupWithHttpInfo(groupId, body, ifMatch);
+             ApiResponse<ScimV2Group> localVarResponse = PatchScimGroupWithHttpInfo(groupId, body, ifMatch, attributes, excludedAttributes);
              return localVarResponse.Data;
         }
 
@@ -6056,9 +6074,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         
-        public ApiResponse< ScimV2Group > PatchScimGroupWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null)
+        public ApiResponse< ScimV2Group > PatchScimGroupWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null)
         { 
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -6105,6 +6125,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (groupId != null) localVarPathParams.Add("groupId", this.Configuration.ApiClient.ParameterToString(groupId));
 
             // Query params
+            if (attributes != null) attributes.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("attributes", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (excludedAttributes != null) excludedAttributes.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("excludedAttributes", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
             if (ifMatch != null) localVarHeaderParams.Add("If-Match", this.Configuration.ApiClient.ParameterToString(ifMatch)); // header parameter
@@ -6158,11 +6180,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         
-        public async System.Threading.Tasks.Task<ScimV2Group> PatchScimGroupAsync (string groupId, ScimV2PatchRequest body, string ifMatch = null)
+        public async System.Threading.Tasks.Task<ScimV2Group> PatchScimGroupAsync (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null)
         {
-             ApiResponse<ScimV2Group> localVarResponse = await PatchScimGroupAsyncWithHttpInfo(groupId, body, ifMatch);
+             ApiResponse<ScimV2Group> localVarResponse = await PatchScimGroupAsyncWithHttpInfo(groupId, body, ifMatch, attributes, excludedAttributes);
              return localVarResponse.Data;
 
         }
@@ -6175,9 +6199,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PatchScimGroupAsyncWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PatchScimGroupAsyncWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null)
         { 
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -6227,6 +6253,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (groupId != null) localVarPathParams.Add("groupId", this.Configuration.ApiClient.ParameterToString(groupId));
 
             // Query params
+            if (attributes != null) attributes.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("attributes", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (excludedAttributes != null) excludedAttributes.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("excludedAttributes", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
             if (ifMatch != null) localVarHeaderParams.Add("If-Match", this.Configuration.ApiClient.ParameterToString(ifMatch)); // header parameter
@@ -6522,11 +6550,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>ScimV2Group</returns>
         
-        public ScimV2Group PatchScimV2Group (string groupId, ScimV2PatchRequest body, string ifMatch = null)
+        public ScimV2Group PatchScimV2Group (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null)
         {
-             ApiResponse<ScimV2Group> localVarResponse = PatchScimV2GroupWithHttpInfo(groupId, body, ifMatch);
+             ApiResponse<ScimV2Group> localVarResponse = PatchScimV2GroupWithHttpInfo(groupId, body, ifMatch, attributes, excludedAttributes);
              return localVarResponse.Data;
         }
 
@@ -6538,9 +6568,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>ApiResponse of ScimV2Group</returns>
         
-        public ApiResponse< ScimV2Group > PatchScimV2GroupWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null)
+        public ApiResponse< ScimV2Group > PatchScimV2GroupWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null)
         { 
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -6587,6 +6619,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (groupId != null) localVarPathParams.Add("groupId", this.Configuration.ApiClient.ParameterToString(groupId));
 
             // Query params
+            if (attributes != null) attributes.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("attributes", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (excludedAttributes != null) excludedAttributes.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("excludedAttributes", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
             if (ifMatch != null) localVarHeaderParams.Add("If-Match", this.Configuration.ApiClient.ParameterToString(ifMatch)); // header parameter
@@ -6640,11 +6674,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>Task of ScimV2Group</returns>
         
-        public async System.Threading.Tasks.Task<ScimV2Group> PatchScimV2GroupAsync (string groupId, ScimV2PatchRequest body, string ifMatch = null)
+        public async System.Threading.Tasks.Task<ScimV2Group> PatchScimV2GroupAsync (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null)
         {
-             ApiResponse<ScimV2Group> localVarResponse = await PatchScimV2GroupAsyncWithHttpInfo(groupId, body, ifMatch);
+             ApiResponse<ScimV2Group> localVarResponse = await PatchScimV2GroupAsyncWithHttpInfo(groupId, body, ifMatch, attributes, excludedAttributes);
              return localVarResponse.Data;
 
         }
@@ -6657,9 +6693,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">The ID of a group. Returned with GET /api/v2/scim/v2/groups.</param>
         /// <param name="body">The information used to modify a group.</param>
         /// <param name="ifMatch">The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)</param>
+        /// <param name="attributes">Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
+        /// <param name="excludedAttributes">Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)</param>
         /// <returns>Task of ApiResponse (ScimV2Group)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PatchScimV2GroupAsyncWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScimV2Group>> PatchScimV2GroupAsyncWithHttpInfo (string groupId, ScimV2PatchRequest body, string ifMatch = null, List<string> attributes = null, List<string> excludedAttributes = null)
         { 
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -6709,6 +6747,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (groupId != null) localVarPathParams.Add("groupId", this.Configuration.ApiClient.ParameterToString(groupId));
 
             // Query params
+            if (attributes != null) attributes.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("attributes", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (excludedAttributes != null) excludedAttributes.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("excludedAttributes", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
             if (ifMatch != null) localVarHeaderParams.Add("If-Match", this.Configuration.ApiClient.ParameterToString(ifMatch)); // header parameter

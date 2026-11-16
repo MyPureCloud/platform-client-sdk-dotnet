@@ -216,7 +216,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Apple for "apple"
             /// </summary>
             [EnumMember(Value = "apple")]
-            Apple
+            Apple,
+            
+            /// <summary>
+            /// Enum Linkedin for "linkedin"
+            /// </summary>
+            [EnumMember(Value = "linkedin")]
+            Linkedin
         }
         /// <summary>
         /// Gets or Sets FlowOutcomeValues
@@ -981,6 +987,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Apple")]
             Apple,
+            
+            /// <summary>
+            /// Enum Linkedin for "LinkedIn"
+            /// </summary>
+            [EnumMember(Value = "LinkedIn")]
+            Linkedin,
             
             /// <summary>
             /// Enum Other for "Other"

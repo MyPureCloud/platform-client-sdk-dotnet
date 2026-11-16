@@ -58,14 +58,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateEnd">The date when the Billing Period starts. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="Status">The type of address..</param>
         /// <param name="Charges">Represents usage metrics including prepaid, actual, and overage quantities along with associated charges..</param>
-        /// <param name="Wallets">Represents usage metrics including prepaid, actual, and overage quantities along with associated charges..</param>
-        public BillingContractPeriodDetail(String DateStart = null, String DateEnd = null, StatusEnum? Status = null, List<BillingCharge> Charges = null, List<BillingWallet> Wallets = null)
+        public BillingContractPeriodDetail(String DateStart = null, String DateEnd = null, StatusEnum? Status = null, List<BillingCharge> Charges = null)
         {
             this.DateStart = DateStart;
             this.DateEnd = DateEnd;
             this.Status = Status;
             this.Charges = Charges;
-            this.Wallets = Wallets;
             
         }
         
@@ -108,15 +106,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<BillingCharge> Charges { get; set; }
 
 
-
-        /// <summary>
-        /// Represents usage metrics including prepaid, actual, and overage quantities along with associated charges.
-        /// </summary>
-        /// <value>Represents usage metrics including prepaid, actual, and overage quantities along with associated charges.</value>
-        [DataMember(Name="wallets", EmitDefaultValue=false)]
-        public List<BillingWallet> Wallets { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -131,7 +120,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateEnd: ").Append(DateEnd).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Charges: ").Append(Charges).Append("\n");
-            sb.Append("  Wallets: ").Append(Wallets).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -196,11 +184,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Charges == other.Charges ||
                     this.Charges != null &&
                     this.Charges.SequenceEqual(other.Charges)
-                ) &&
-                (
-                    this.Wallets == other.Wallets ||
-                    this.Wallets != null &&
-                    this.Wallets.SequenceEqual(other.Wallets)
                 );
         }
 
@@ -229,9 +212,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Charges != null)
                     hash = hash * 59 + this.Charges.GetHashCode();
-
-                if (this.Wallets != null)
-                    hash = hash * 59 + this.Wallets.GetHashCode();
 
                 return hash;
             }

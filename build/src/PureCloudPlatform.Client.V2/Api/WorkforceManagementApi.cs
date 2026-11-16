@@ -1232,6 +1232,64 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanJobsWithHttpInfo (string businessUnitId, string activityPlanId);
 
         /// <summary>
+        /// Get a specific occurrence for the activity plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>ActivityPlanOccurrenceResponse</returns>
+        
+        ActivityPlanOccurrenceResponse GetWorkforcemanagementBusinessunitActivityplanOccurrence (string businessUnitId, string activityPlanId, string occurrenceId);
+
+        /// <summary>
+        /// Get a specific occurrence for the activity plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>ApiResponse of ActivityPlanOccurrenceResponse</returns>
+        
+        ApiResponse<ActivityPlanOccurrenceResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrenceWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId);
+
+        /// <summary>
+        /// Gets an occurrence deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan occurrence deletion job</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        ActivityPlanJobResponse GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob (string businessUnitId, string activityPlanId, string occurrenceId, string jobId);
+
+        /// <summary>
+        /// Gets an occurrence deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan occurrence deletion job</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        ApiResponse<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string jobId);
+
+        /// <summary>
         /// Gets a session users deletion job
         /// </summary>
         /// <remarks>
@@ -1292,6 +1350,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
         
         ApiResponse<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string jobId);
+
+        /// <summary>
+        /// Get all occurrences for an activity plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <returns>ActivityPlanOccurrenceListing</returns>
+        
+        ActivityPlanOccurrenceListing GetWorkforcemanagementBusinessunitActivityplanOccurrences (string businessUnitId, string activityPlanId);
+
+        /// <summary>
+        /// Get all occurrences for an activity plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <returns>ApiResponse of ActivityPlanOccurrenceListing</returns>
+        
+        ApiResponse<ActivityPlanOccurrenceListing> GetWorkforcemanagementBusinessunitActivityplanOccurrencesWithHttpInfo (string businessUnitId, string activityPlanId);
 
         /// <summary>
         /// Gets an occurrences deletion job
@@ -6835,9 +6919,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body</param>
+        /// <param name="expand">Include to access additional data on the agent schedules (optional)</param>
         /// <returns>BuCurrentAgentScheduleSearchResponse</returns>
         
-        BuCurrentAgentScheduleSearchResponse PostWorkforcemanagementAgentschedulesMine (BuGetCurrentAgentScheduleRequest body);
+        BuCurrentAgentScheduleSearchResponse PostWorkforcemanagementAgentschedulesMine (BuGetCurrentAgentScheduleRequest body, List<string> expand = null);
 
         /// <summary>
         /// Get published schedule for the current user
@@ -6847,9 +6932,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body</param>
+        /// <param name="expand">Include to access additional data on the agent schedules (optional)</param>
         /// <returns>ApiResponse of BuCurrentAgentScheduleSearchResponse</returns>
         
-        ApiResponse<BuCurrentAgentScheduleSearchResponse> PostWorkforcemanagementAgentschedulesMineWithHttpInfo (BuGetCurrentAgentScheduleRequest body);
+        ApiResponse<BuCurrentAgentScheduleSearchResponse> PostWorkforcemanagementAgentschedulesMineWithHttpInfo (BuGetCurrentAgentScheduleRequest body, List<string> expand = null);
 
         /// <summary>
         /// Request a list of alternative shift offers for a given schedule
@@ -6974,6 +7060,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
         
         ApiResponse<ActivityPlanJobResponse> PostWorkforcemanagementBusinessunitActivityplanDeletionsJobsWithHttpInfo (string businessUnitId, string activityPlanId);
+
+        /// <summary>
+        /// Delete an occurrence for the activity plan
+        /// </summary>
+        /// <remarks>
+        /// Triggers a job to delete an occurrence of the activity plan. The activity plan cannot be updated until the job completes
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        ActivityPlanJobResponse PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs (string businessUnitId, string activityPlanId, string occurrenceId);
+
+        /// <summary>
+        /// Delete an occurrence for the activity plan
+        /// </summary>
+        /// <remarks>
+        /// Triggers a job to delete an occurrence of the activity plan. The activity plan cannot be updated until the job completes
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        ApiResponse<ActivityPlanJobResponse> PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobsWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId);
 
         /// <summary>
         /// Triggers a job to delete users from a session in the activity plan occurrence
@@ -7504,6 +7618,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         
         ApiResponse<Object> PostWorkforcemanagementBusinessunitCapacityplansBulkRemoveWithHttpInfo (string businessUnitId, CapacityPlanDeleteRequest body);
+
+        /// <summary>
+        /// Creates signed upload URLs for importing hourly and daily forecasts for a capacity plan
+        /// </summary>
+        /// <remarks>
+        /// Returns two upload URLs, one for the hourly forecast and one for the daily forecast. Once both uploads are complete, call POST /capacityplans (new capacity plan) or PATCH /capacityplans/{capacityPlanId} (existing capacity plan) or POST /capacityplans/{capacityPlanId}/copy (copy capacity plan) with both upload keys in importedForecast
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>CapacityPlanForecastImportUploadResponse</returns>
+        
+        CapacityPlanForecastImportUploadResponse PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls (string businessUnitId, CapacityPlanForecastImportUploadRequest body);
+
+        /// <summary>
+        /// Creates signed upload URLs for importing hourly and daily forecasts for a capacity plan
+        /// </summary>
+        /// <remarks>
+        /// Returns two upload URLs, one for the hourly forecast and one for the daily forecast. Once both uploads are complete, call POST /capacityplans (new capacity plan) or PATCH /capacityplans/{capacityPlanId} (existing capacity plan) or POST /capacityplans/{capacityPlanId}/copy (copy capacity plan) with both upload keys in importedForecast
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of CapacityPlanForecastImportUploadResponse</returns>
+        
+        ApiResponse<CapacityPlanForecastImportUploadResponse> PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurlsWithHttpInfo (string businessUnitId, CapacityPlanForecastImportUploadRequest body);
 
         /// <summary>
         /// Initiates the decision metrics update process
@@ -11704,6 +11844,64 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId);
 
         /// <summary>
+        /// Get a specific occurrence for the activity plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>Task of ActivityPlanOccurrenceResponse</returns>
+        
+        System.Threading.Tasks.Task<ActivityPlanOccurrenceResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrenceAsync (string businessUnitId, string activityPlanId, string occurrenceId);
+
+        /// <summary>
+        /// Get a specific occurrence for the activity plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>Task of ApiResponse (ActivityPlanOccurrenceResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivityPlanOccurrenceResponse>> GetWorkforcemanagementBusinessunitActivityplanOccurrenceAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId);
+
+        /// <summary>
+        /// Gets an occurrence deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan occurrence deletion job</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        System.Threading.Tasks.Task<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobAsync (string businessUnitId, string activityPlanId, string occurrenceId, string jobId);
+
+        /// <summary>
+        /// Gets an occurrence deletion job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan occurrence deletion job</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string jobId);
+
+        /// <summary>
         /// Gets a session users deletion job
         /// </summary>
         /// <remarks>
@@ -11764,6 +11962,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string jobId);
+
+        /// <summary>
+        /// Get all occurrences for an activity plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <returns>Task of ActivityPlanOccurrenceListing</returns>
+        
+        System.Threading.Tasks.Task<ActivityPlanOccurrenceListing> GetWorkforcemanagementBusinessunitActivityplanOccurrencesAsync (string businessUnitId, string activityPlanId);
+
+        /// <summary>
+        /// Get all occurrences for an activity plan
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <returns>Task of ApiResponse (ActivityPlanOccurrenceListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivityPlanOccurrenceListing>> GetWorkforcemanagementBusinessunitActivityplanOccurrencesAsyncWithHttpInfo (string businessUnitId, string activityPlanId);
 
         /// <summary>
         /// Gets an occurrences deletion job
@@ -17307,9 +17531,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body</param>
+        /// <param name="expand">Include to access additional data on the agent schedules (optional)</param>
         /// <returns>Task of BuCurrentAgentScheduleSearchResponse</returns>
         
-        System.Threading.Tasks.Task<BuCurrentAgentScheduleSearchResponse> PostWorkforcemanagementAgentschedulesMineAsync (BuGetCurrentAgentScheduleRequest body);
+        System.Threading.Tasks.Task<BuCurrentAgentScheduleSearchResponse> PostWorkforcemanagementAgentschedulesMineAsync (BuGetCurrentAgentScheduleRequest body, List<string> expand = null);
 
         /// <summary>
         /// Get published schedule for the current user
@@ -17319,9 +17544,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body</param>
+        /// <param name="expand">Include to access additional data on the agent schedules (optional)</param>
         /// <returns>Task of ApiResponse (BuCurrentAgentScheduleSearchResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<BuCurrentAgentScheduleSearchResponse>> PostWorkforcemanagementAgentschedulesMineAsyncWithHttpInfo (BuGetCurrentAgentScheduleRequest body);
+        System.Threading.Tasks.Task<ApiResponse<BuCurrentAgentScheduleSearchResponse>> PostWorkforcemanagementAgentschedulesMineAsyncWithHttpInfo (BuGetCurrentAgentScheduleRequest body, List<string> expand = null);
 
         /// <summary>
         /// Request a list of alternative shift offers for a given schedule
@@ -17446,6 +17672,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> PostWorkforcemanagementBusinessunitActivityplanDeletionsJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId);
+
+        /// <summary>
+        /// Delete an occurrence for the activity plan
+        /// </summary>
+        /// <remarks>
+        /// Triggers a job to delete an occurrence of the activity plan. The activity plan cannot be updated until the job completes
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        System.Threading.Tasks.Task<ActivityPlanJobResponse> PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobsAsync (string businessUnitId, string activityPlanId, string occurrenceId);
+
+        /// <summary>
+        /// Delete an occurrence for the activity plan
+        /// </summary>
+        /// <remarks>
+        /// Triggers a job to delete an occurrence of the activity plan. The activity plan cannot be updated until the job completes
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId);
 
         /// <summary>
         /// Triggers a job to delete users from a session in the activity plan occurrence
@@ -17976,6 +18230,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostWorkforcemanagementBusinessunitCapacityplansBulkRemoveAsyncWithHttpInfo (string businessUnitId, CapacityPlanDeleteRequest body);
+
+        /// <summary>
+        /// Creates signed upload URLs for importing hourly and daily forecasts for a capacity plan
+        /// </summary>
+        /// <remarks>
+        /// Returns two upload URLs, one for the hourly forecast and one for the daily forecast. Once both uploads are complete, call POST /capacityplans (new capacity plan) or PATCH /capacityplans/{capacityPlanId} (existing capacity plan) or POST /capacityplans/{capacityPlanId}/copy (copy capacity plan) with both upload keys in importedForecast
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of CapacityPlanForecastImportUploadResponse</returns>
+        
+        System.Threading.Tasks.Task<CapacityPlanForecastImportUploadResponse> PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurlsAsync (string businessUnitId, CapacityPlanForecastImportUploadRequest body);
+
+        /// <summary>
+        /// Creates signed upload URLs for importing hourly and daily forecasts for a capacity plan
+        /// </summary>
+        /// <remarks>
+        /// Returns two upload URLs, one for the hourly forecast and one for the daily forecast. Once both uploads are complete, call POST /capacityplans (new capacity plan) or PATCH /capacityplans/{capacityPlanId} (existing capacity plan) or POST /capacityplans/{capacityPlanId}/copy (copy capacity plan) with both upload keys in importedForecast
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (CapacityPlanForecastImportUploadResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CapacityPlanForecastImportUploadResponse>> PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurlsAsyncWithHttpInfo (string businessUnitId, CapacityPlanForecastImportUploadRequest body);
 
         /// <summary>
         /// Initiates the decision metrics update process
@@ -31223,6 +31503,481 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a specific occurrence for the activity plan 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>ActivityPlanOccurrenceResponse</returns>
+        
+        public ActivityPlanOccurrenceResponse GetWorkforcemanagementBusinessunitActivityplanOccurrence (string businessUnitId, string activityPlanId, string occurrenceId)
+        {
+             ApiResponse<ActivityPlanOccurrenceResponse> localVarResponse = GetWorkforcemanagementBusinessunitActivityplanOccurrenceWithHttpInfo(businessUnitId, activityPlanId, occurrenceId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a specific occurrence for the activity plan 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>ApiResponse of ActivityPlanOccurrenceResponse</returns>
+        
+        public ApiResponse< ActivityPlanOccurrenceResponse > GetWorkforcemanagementBusinessunitActivityplanOccurrenceWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrence");
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrence");
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrence");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrence: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanOccurrence: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanOccurrenceResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanOccurrenceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanOccurrenceResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a specific occurrence for the activity plan 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>Task of ActivityPlanOccurrenceResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ActivityPlanOccurrenceResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrenceAsync (string businessUnitId, string activityPlanId, string occurrenceId)
+        {
+             ApiResponse<ActivityPlanOccurrenceResponse> localVarResponse = await GetWorkforcemanagementBusinessunitActivityplanOccurrenceAsyncWithHttpInfo(businessUnitId, activityPlanId, occurrenceId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a specific occurrence for the activity plan 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>Task of ApiResponse (ActivityPlanOccurrenceResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityPlanOccurrenceResponse>> GetWorkforcemanagementBusinessunitActivityplanOccurrenceAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrence");
+            
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrence");
+            
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrence");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrence: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanOccurrence: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanOccurrenceResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanOccurrenceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanOccurrenceResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Gets an occurrence deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan occurrence deletion job</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        public ActivityPlanJobResponse GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob (string businessUnitId, string activityPlanId, string occurrenceId, string jobId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobWithHttpInfo(businessUnitId, activityPlanId, occurrenceId, jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets an occurrence deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan occurrence deletion job</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        public ApiResponse< ActivityPlanJobResponse > GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string jobId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob");
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob");
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/deletions/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Gets an occurrence deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan occurrence deletion job</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ActivityPlanJobResponse> GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobAsync (string businessUnitId, string activityPlanId, string occurrenceId, string jobId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = await GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobAsyncWithHttpInfo(businessUnitId, activityPlanId, occurrenceId, jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets an occurrence deletion job 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <param name="jobId">The ID of the activity plan occurrence deletion job</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId, string jobId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob");
+            
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob");
+            
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/deletions/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Gets a session users deletion job 
         /// 
         /// </summary>
@@ -31717,6 +32472,224 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get all occurrences for an activity plan 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <returns>ActivityPlanOccurrenceListing</returns>
+        
+        public ActivityPlanOccurrenceListing GetWorkforcemanagementBusinessunitActivityplanOccurrences (string businessUnitId, string activityPlanId)
+        {
+             ApiResponse<ActivityPlanOccurrenceListing> localVarResponse = GetWorkforcemanagementBusinessunitActivityplanOccurrencesWithHttpInfo(businessUnitId, activityPlanId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all occurrences for an activity plan 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <returns>ApiResponse of ActivityPlanOccurrenceListing</returns>
+        
+        public ApiResponse< ActivityPlanOccurrenceListing > GetWorkforcemanagementBusinessunitActivityplanOccurrencesWithHttpInfo (string businessUnitId, string activityPlanId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrences");
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrences");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanOccurrences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanOccurrenceListing>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanOccurrenceListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanOccurrenceListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get all occurrences for an activity plan 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <returns>Task of ActivityPlanOccurrenceListing</returns>
+        
+        public async System.Threading.Tasks.Task<ActivityPlanOccurrenceListing> GetWorkforcemanagementBusinessunitActivityplanOccurrencesAsync (string businessUnitId, string activityPlanId)
+        {
+             ApiResponse<ActivityPlanOccurrenceListing> localVarResponse = await GetWorkforcemanagementBusinessunitActivityplanOccurrencesAsyncWithHttpInfo(businessUnitId, activityPlanId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all occurrences for an activity plan 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <returns>Task of ApiResponse (ActivityPlanOccurrenceListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityPlanOccurrenceListing>> GetWorkforcemanagementBusinessunitActivityplanOccurrencesAsyncWithHttpInfo (string businessUnitId, string activityPlanId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrences");
+            
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanOccurrences");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetWorkforcemanagementBusinessunitActivityplanOccurrences: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitActivityplanOccurrences: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanOccurrenceListing>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanOccurrenceListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanOccurrenceListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -78045,11 +79018,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body</param>
+        /// <param name="expand">Include to access additional data on the agent schedules (optional)</param>
         /// <returns>BuCurrentAgentScheduleSearchResponse</returns>
         
-        public BuCurrentAgentScheduleSearchResponse PostWorkforcemanagementAgentschedulesMine (BuGetCurrentAgentScheduleRequest body)
+        public BuCurrentAgentScheduleSearchResponse PostWorkforcemanagementAgentschedulesMine (BuGetCurrentAgentScheduleRequest body, List<string> expand = null)
         {
-             ApiResponse<BuCurrentAgentScheduleSearchResponse> localVarResponse = PostWorkforcemanagementAgentschedulesMineWithHttpInfo(body);
+             ApiResponse<BuCurrentAgentScheduleSearchResponse> localVarResponse = PostWorkforcemanagementAgentschedulesMineWithHttpInfo(body, expand);
              return localVarResponse.Data;
         }
 
@@ -78059,9 +79033,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body</param>
+        /// <param name="expand">Include to access additional data on the agent schedules (optional)</param>
         /// <returns>ApiResponse of BuCurrentAgentScheduleSearchResponse</returns>
         
-        public ApiResponse< BuCurrentAgentScheduleSearchResponse > PostWorkforcemanagementAgentschedulesMineWithHttpInfo (BuGetCurrentAgentScheduleRequest body)
+        public ApiResponse< BuCurrentAgentScheduleSearchResponse > PostWorkforcemanagementAgentschedulesMineWithHttpInfo (BuGetCurrentAgentScheduleRequest body, List<string> expand = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -78101,6 +79076,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -78151,11 +79127,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body</param>
+        /// <param name="expand">Include to access additional data on the agent schedules (optional)</param>
         /// <returns>Task of BuCurrentAgentScheduleSearchResponse</returns>
         
-        public async System.Threading.Tasks.Task<BuCurrentAgentScheduleSearchResponse> PostWorkforcemanagementAgentschedulesMineAsync (BuGetCurrentAgentScheduleRequest body)
+        public async System.Threading.Tasks.Task<BuCurrentAgentScheduleSearchResponse> PostWorkforcemanagementAgentschedulesMineAsync (BuGetCurrentAgentScheduleRequest body, List<string> expand = null)
         {
-             ApiResponse<BuCurrentAgentScheduleSearchResponse> localVarResponse = await PostWorkforcemanagementAgentschedulesMineAsyncWithHttpInfo(body);
+             ApiResponse<BuCurrentAgentScheduleSearchResponse> localVarResponse = await PostWorkforcemanagementAgentschedulesMineAsyncWithHttpInfo(body, expand);
              return localVarResponse.Data;
 
         }
@@ -78166,9 +79143,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body</param>
+        /// <param name="expand">Include to access additional data on the agent schedules (optional)</param>
         /// <returns>Task of ApiResponse (BuCurrentAgentScheduleSearchResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<BuCurrentAgentScheduleSearchResponse>> PostWorkforcemanagementAgentschedulesMineAsyncWithHttpInfo (BuGetCurrentAgentScheduleRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<BuCurrentAgentScheduleSearchResponse>> PostWorkforcemanagementAgentschedulesMineAsyncWithHttpInfo (BuGetCurrentAgentScheduleRequest body, List<string> expand = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -78209,6 +79187,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -79335,6 +80314,237 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanDeletionsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete an occurrence for the activity plan 
+        /// Triggers a job to delete an occurrence of the activity plan. The activity plan cannot be updated until the job completes
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>ActivityPlanJobResponse</returns>
+        
+        public ActivityPlanJobResponse PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs (string businessUnitId, string activityPlanId, string occurrenceId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobsWithHttpInfo(businessUnitId, activityPlanId, occurrenceId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an occurrence for the activity plan 
+        /// Triggers a job to delete an occurrence of the activity plan. The activity plan cannot be updated until the job completes
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>ApiResponse of ActivityPlanJobResponse</returns>
+        
+        public ApiResponse< ActivityPlanJobResponse > PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobsWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs");
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs");
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/deletions/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ActivityPlanJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityPlanJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an occurrence for the activity plan 
+        /// Triggers a job to delete an occurrence of the activity plan. The activity plan cannot be updated until the job completes
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>Task of ActivityPlanJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ActivityPlanJobResponse> PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobsAsync (string businessUnitId, string activityPlanId, string occurrenceId)
+        {
+             ApiResponse<ActivityPlanJobResponse> localVarResponse = await PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobsAsyncWithHttpInfo(businessUnitId, activityPlanId, occurrenceId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete an occurrence for the activity plan 
+        /// Triggers a job to delete an occurrence of the activity plan. The activity plan cannot be updated until the job completes
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="activityPlanId">The ID of the activity plan</param>
+        /// <param name="occurrenceId">The ID of the activity plan occurrence</param>
+        /// <returns>Task of ApiResponse (ActivityPlanJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActivityPlanJobResponse>> PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobsAsyncWithHttpInfo (string businessUnitId, string activityPlanId, string occurrenceId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs");
+            
+            // verify the required parameter 'activityPlanId' is set
+            if (activityPlanId == null)
+                throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs");
+            
+            // verify the required parameter 'occurrenceId' is set
+            if (occurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'occurrenceId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/deletions/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (activityPlanId != null) localVarPathParams.Add("activityPlanId", this.Configuration.ApiClient.ParameterToString(activityPlanId));
+            if (occurrenceId != null) localVarPathParams.Add("occurrenceId", this.Configuration.ApiClient.ParameterToString(occurrenceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ActivityPlanJobResponse>(localVarStatusCode,
                 localVarHeaders,
@@ -83817,6 +85027,234 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Creates signed upload URLs for importing hourly and daily forecasts for a capacity plan 
+        /// Returns two upload URLs, one for the hourly forecast and one for the daily forecast. Once both uploads are complete, call POST /capacityplans (new capacity plan) or PATCH /capacityplans/{capacityPlanId} (existing capacity plan) or POST /capacityplans/{capacityPlanId}/copy (copy capacity plan) with both upload keys in importedForecast
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>CapacityPlanForecastImportUploadResponse</returns>
+        
+        public CapacityPlanForecastImportUploadResponse PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls (string businessUnitId, CapacityPlanForecastImportUploadRequest body)
+        {
+             ApiResponse<CapacityPlanForecastImportUploadResponse> localVarResponse = PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurlsWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates signed upload URLs for importing hourly and daily forecasts for a capacity plan 
+        /// Returns two upload URLs, one for the hourly forecast and one for the daily forecast. Once both uploads are complete, call POST /capacityplans (new capacity plan) or PATCH /capacityplans/{capacityPlanId} (existing capacity plan) or POST /capacityplans/{capacityPlanId}/copy (copy capacity plan) with both upload keys in importedForecast
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of CapacityPlanForecastImportUploadResponse</returns>
+        
+        public ApiResponse< CapacityPlanForecastImportUploadResponse > PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurlsWithHttpInfo (string businessUnitId, CapacityPlanForecastImportUploadRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/forecast/uploadurls";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CapacityPlanForecastImportUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CapacityPlanForecastImportUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CapacityPlanForecastImportUploadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Creates signed upload URLs for importing hourly and daily forecasts for a capacity plan 
+        /// Returns two upload URLs, one for the hourly forecast and one for the daily forecast. Once both uploads are complete, call POST /capacityplans (new capacity plan) or PATCH /capacityplans/{capacityPlanId} (existing capacity plan) or POST /capacityplans/{capacityPlanId}/copy (copy capacity plan) with both upload keys in importedForecast
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of CapacityPlanForecastImportUploadResponse</returns>
+        
+        public async System.Threading.Tasks.Task<CapacityPlanForecastImportUploadResponse> PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurlsAsync (string businessUnitId, CapacityPlanForecastImportUploadRequest body)
+        {
+             ApiResponse<CapacityPlanForecastImportUploadResponse> localVarResponse = await PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurlsAsyncWithHttpInfo(businessUnitId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates signed upload URLs for importing hourly and daily forecasts for a capacity plan 
+        /// Returns two upload URLs, one for the hourly forecast and one for the daily forecast. Once both uploads are complete, call POST /capacityplans (new capacity plan) or PATCH /capacityplans/{capacityPlanId} (existing capacity plan) or POST /capacityplans/{capacityPlanId}/copy (copy capacity plan) with both upload keys in importedForecast
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit</param>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (CapacityPlanForecastImportUploadResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CapacityPlanForecastImportUploadResponse>> PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurlsAsyncWithHttpInfo (string businessUnitId, CapacityPlanForecastImportUploadRequest body)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/forecast/uploadurls";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitCapacityplansForecastUploadurls: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CapacityPlanForecastImportUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CapacityPlanForecastImportUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CapacityPlanForecastImportUploadResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

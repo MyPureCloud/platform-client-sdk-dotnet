@@ -31,14 +31,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Description of the new capacity plan.</param>
         /// <param name="StartBusinessUnitDate">The start date for the capacity plan relative to the business unit time zone in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="EndBusinessUnitDate">The end date for the capacity plan relative to the business unit time zone in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
-        /// <param name="Forecast">The selected forecast for this capacity plan. Uses forecast from original capacity plan if not specified.</param>
-        public CopyCapacityPlanRequest(string Name = null, string Description = null, String StartBusinessUnitDate = null, String EndBusinessUnitDate = null, ValueWrapperBuShortTermForecastReference Forecast = null)
+        /// <param name="Forecast">The generated forecast for the capacity plan. Uses forecast from original capacity plan if not specified.</param>
+        /// <param name="ImportedForecast">The externally imported forecast for the capacity plan. Uses forecast from original capacity plan if not specified.</param>
+        public CopyCapacityPlanRequest(string Name = null, string Description = null, String StartBusinessUnitDate = null, String EndBusinessUnitDate = null, ValueWrapperBuShortTermForecastReference Forecast = null, ValueWrapperCapacityPlanImportedForecastRequest ImportedForecast = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.StartBusinessUnitDate = StartBusinessUnitDate;
             this.EndBusinessUnitDate = EndBusinessUnitDate;
             this.Forecast = Forecast;
+            this.ImportedForecast = ImportedForecast;
             
         }
         
@@ -81,11 +83,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The selected forecast for this capacity plan. Uses forecast from original capacity plan if not specified
+        /// The generated forecast for the capacity plan. Uses forecast from original capacity plan if not specified
         /// </summary>
-        /// <value>The selected forecast for this capacity plan. Uses forecast from original capacity plan if not specified</value>
+        /// <value>The generated forecast for the capacity plan. Uses forecast from original capacity plan if not specified</value>
         [DataMember(Name="forecast", EmitDefaultValue=false)]
         public ValueWrapperBuShortTermForecastReference Forecast { get; set; }
+
+
+
+        /// <summary>
+        /// The externally imported forecast for the capacity plan. Uses forecast from original capacity plan if not specified
+        /// </summary>
+        /// <value>The externally imported forecast for the capacity plan. Uses forecast from original capacity plan if not specified</value>
+        [DataMember(Name="importedForecast", EmitDefaultValue=false)]
+        public ValueWrapperCapacityPlanImportedForecastRequest ImportedForecast { get; set; }
 
 
         /// <summary>
@@ -102,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartBusinessUnitDate: ").Append(StartBusinessUnitDate).Append("\n");
             sb.Append("  EndBusinessUnitDate: ").Append(EndBusinessUnitDate).Append("\n");
             sb.Append("  Forecast: ").Append(Forecast).Append("\n");
+            sb.Append("  ImportedForecast: ").Append(ImportedForecast).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -166,6 +178,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Forecast == other.Forecast ||
                     this.Forecast != null &&
                     this.Forecast.Equals(other.Forecast)
+                ) &&
+                (
+                    this.ImportedForecast == other.ImportedForecast ||
+                    this.ImportedForecast != null &&
+                    this.ImportedForecast.Equals(other.ImportedForecast)
                 );
         }
 
@@ -194,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Forecast != null)
                     hash = hash * 59 + this.Forecast.GetHashCode();
+
+                if (this.ImportedForecast != null)
+                    hash = hash * 59 + this.ImportedForecast.GetHashCode();
 
                 return hash;
             }
